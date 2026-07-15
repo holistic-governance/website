@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="google-site-verification" content="xQaU2XYDCkmb2zHbhZEEXQ-GUNJJt_5_ZrTTDT0fYHk" />
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-9PMGXF9Q9T"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-9PMGXF9Q9T');
+    gtag('config', 'AW-18073082985');
+  </script>
+  <title>Clinical Governance &amp; Risk Consultancy | Holistic Governance</title>
+  <meta name="description" content="Specialist clinical governance, risk and data consultancy for healthcare organisations across Australia and New Zealand. Strengthen frameworks, simplify regulation, turn data into confident decisions." />
+  <meta name="robots" content="index,follow" />
+  <meta name="author" content="Naomi Alefelder" />
+  <link rel="canonical" href="https://hg-au.com/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Holistic Governance" />
+  <meta property="og:locale" content="en_AU" />
+  <meta property="og:url" content="https://hg-au.com/" />
+  <meta property="og:title" content="Clinical Governance &amp; Risk Consultancy | Holistic Governance" />
+  <meta property="og:description" content="Specialist governance, risk, and data consultancy for healthcare organisations across Australia and New Zealand." />
+  <meta property="og:image" content="https://hg-au.com/og-image-v3.png" />
+  <meta property="og:image:width" content="2400" />
+  <meta property="og:image:height" content="1260" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Clinical Governance &amp; Risk Consultancy | Holistic Governance" />
+  <meta name="twitter:description" content="Specialist governance, risk, and data consultancy for healthcare organisations across Australia and New Zealand." />
+  <meta name="twitter:image" content="https://hg-au.com/og-image-v3.png" />
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="preload" as="image" href="logo-hg-trimmed.png" fetchpriority="high">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* ── ACCENT OVERRIDES ── */
+
+    /* ── HERO ── */
+    .hero {
+      display: flex; align-items: center;
+      min-height: 100vh; padding: 10rem 4rem 6rem;
+      position: relative; overflow: hidden;
+    }
+    .hero::before {
+      content: ''; position: absolute; inset: 0;
+      background:
+        radial-gradient(ellipse 50% 60% at 75% 45%, rgba(56,189,248,0.08) 0%, transparent 70%),
+        radial-gradient(ellipse 40% 50% at 20% 80%, rgba(56,189,248,0.04) 0%, transparent 60%);
+    }
+    /* Animated grid pattern */
+    .hero-grid {
+      display: block; position: absolute; inset: 0; opacity: 0.04;
+      background-image:
+        linear-gradient(rgba(56,189,248,0.3) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(56,189,248,0.3) 1px, transparent 1px);
+      background-size: 60px 60px;
+      animation: gridShift 20s linear infinite;
+    }
+    @keyframes gridShift {
+      0% { transform: translate(0, 0); }
+      100% { transform: translate(60px, 60px); }
+    }
+    .hero-content { position: relative; max-width: 780px; }
+    .hero-eyebrow { font-size: 0.75rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--sky); margin-bottom: 1.5rem; display: flex; align-items: center; gap: 1rem; }
+    .hero-eyebrow::before { content: ''; display: block; width: 50px; height: 1px; background: var(--sky); }
+    .hero h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2.8rem, 5.5vw, 5rem); font-weight: 300; line-height: 1.08; color: var(--white); margin-bottom: 2rem; }
+    h1 em { font-style: italic; color: var(--sky-light); }
+    .hero-sub { font-size: 1.1rem; line-height: 1.85; color: rgba(241,245,249,0.85); max-width: 540px; margin-bottom: 3rem; }
+    .hero-actions { display: flex; gap: 1.5rem; align-items: center; }
+    .btn-primary { display: inline-block; padding: 1.1rem 2.8rem; background: var(--sky); color: var(--navy); font-family: 'DM Sans', sans-serif; font-size: 0.82rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; text-decoration: none; border: none; border-radius: 2px; cursor: pointer; transition: all 0.3s; box-shadow: 0 4px 15px rgba(56,189,248,0.25); }
+    .btn-primary:hover { background: var(--sky-light); transform: translateY(-3px); box-shadow: 0 8px 25px rgba(56,189,248,0.35); }
+    .btn-ghost { display: inline-flex; align-items: center; gap: 0.6rem; padding: 1.1rem 2.4rem; border: 1px solid var(--border-mid); color: var(--text); text-decoration: none; font-size: 0.82rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; border-radius: 2px; transition: all 0.3s; }
+    .btn-ghost:hover { border-color: var(--sky); color: var(--sky); background: rgba(56,189,248,0.08); }
+
+    /* ── CREDENTIALS BAR ── */
+    .credentials-bar {
+      background: var(--navy-mid); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
+      padding: 4rem 4rem;
+    }
+    .credentials-grid {
+      display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem;
+      text-align: center;
+    }
+    .credential-item { position: relative; padding: 0 1rem; }
+    .credential-item:not(:last-child)::after {
+      content: ''; position: absolute; right: 0; top: 15%; bottom: 15%;
+      width: 1px; background: var(--border);
+    }
+    .credential-num {
+      font-family: 'Cormorant Garamond', serif; font-size: 3rem; font-weight: 300;
+      color: var(--sky); line-height: 1; margin-bottom: 0.5rem;
+    }
+    .credential-label {
+      font-size: 0.78rem; letter-spacing: 0.12em; text-transform: uppercase;
+      color: var(--text-mid); line-height: 1.5;
+    }
+
+    /* ── SERVICES ── */
+    #services { padding: 8rem 4rem; background: var(--navy); }
+    .section-intro { color: rgba(241,245,249,0.75); font-size: 1.05rem; line-height: 1.9; max-width: 560px; margin-bottom: 4rem; }
+    .services-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); border-radius: 2px; }
+    .service-card {
+      background: var(--navy); padding: 3.5rem; position: relative; overflow: hidden;
+      transition: background 0.5s, transform 0.3s;
+    }
+    .service-card::before { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 2px; background: var(--sky); transform: scaleX(0); transform-origin: left; transition: transform 0.5s; }
+    .service-card:hover { background: rgba(18,35,56,0.6); }
+    .service-card:hover::before { transform: scaleX(1); }
+    .service-card:hover .service-icon { opacity: 1; transform: scale(1.1); }
+    .service-icon { width: 48px; height: 48px; margin-bottom: 2rem; color: var(--sky); opacity: 0.7; transition: opacity 0.4s, transform 0.4s; }
+    .service-card h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.7rem; font-weight: 400; color: var(--white); margin-bottom: 1rem; }
+    .service-card p { color: rgba(241,245,249,0.8); font-size: 0.92rem; line-height: 1.85; }
+    .service-num { position: absolute; top: 2rem; right: 2.5rem; font-family: 'Cormorant Garamond', serif; font-size: 4.5rem; font-weight: 300; color: var(--border); line-height: 1; }
+
+    /* ── PROVEN IMPACT ── */
+    #impact { background: var(--navy-mid); padding: 8rem 4rem; }
+    .impact-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; margin-top: 3rem; }
+    .impact-item {
+      display: flex; gap: 1.5rem; align-items: flex-start; padding: 2.2rem;
+      border: 1px solid var(--border); border-radius: 2px;
+      transition: border-color 0.3s, box-shadow 0.3s, transform 0.3s;
+      background: rgba(15,23,42,0.5);
+    }
+    .impact-item:hover { border-color: var(--sky); box-shadow: 0 4px 20px rgba(0,0,0,0.2); transform: translateY(-2px); }
+    .impact-icon { width: 42px; height: 42px; background: var(--sky-pale); border: 1px solid var(--border); border-radius: 2px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .impact-icon svg { width: 20px; height: 20px; color: var(--sky); }
+    .impact-item p { font-size: 0.95rem; color: var(--white); line-height: 1.8; }
+
+    /* ── WHO WE WORK WITH ── */
+    #clients { background: var(--navy); padding: 8rem 4rem; }
+    #collaborate { background: var(--navy-mid); padding: 8rem 4rem; position: relative; z-index: 5; }
+    .clients-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-top: 3rem; }
+    .client-card {
+      text-align: center; padding: 2.5rem 2rem;
+      border: 1px solid var(--border); border-radius: 2px;
+      transition: border-color 0.3s, box-shadow 0.3s, transform 0.3s;
+      background: rgba(30,41,59,0.3);
+    }
+    .client-card:hover { border-color: var(--sky); box-shadow: 0 4px 20px rgba(0,0,0,0.2); transform: translateY(-3px); }
+    .client-card svg { width: 32px; height: 32px; color: var(--sky); margin-bottom: 1.2rem; opacity: 0.7; transition: opacity 0.3s; }
+    .client-card:hover svg { opacity: 1; }
+    .client-card p { font-size: 0.88rem; color: var(--white); line-height: 1.5; }
+
+    /* ── FRAMEWORKS & STANDARDS ── */
+    .fw-optionB {
+      background: var(--navy-mid); padding: 6rem 4rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .fwB-inner {
+      display: grid; grid-template-columns: 1fr 1.2fr; gap: 4rem;
+      max-width: 1100px; margin: 0 auto; align-items: center;
+    }
+    .fwB-tags { display: flex; flex-wrap: wrap; gap: 0.7rem; }
+    .fwB-tag {
+      padding: 0.6rem 1.4rem;
+      border: 1px solid var(--border); border-radius: 30px;
+      font-family: 'DM Sans', sans-serif; font-size: 0.82rem; font-weight: 400;
+      color: var(--text-mid); letter-spacing: 0.04em;
+      transition: all 0.3s; cursor: default;
+    }
+    .fwB-tag:hover {
+      border-color: var(--sky); color: var(--sky);
+      background: var(--sky-pale);
+    }
+
+    @media (max-width: 900px) {
+      .hero { min-height: auto; padding: 8rem 1.5rem 4rem; }
+      .hero-actions { flex-direction: column; gap: 1rem; }
+      .hero-actions .btn-primary,
+      .hero-actions .btn-ghost { width: 100%; text-align: center; justify-content: center; }
+      .fw-optionB { padding: 4rem 1.5rem; }
+      .fwB-inner { grid-template-columns: 1fr; gap: 2rem; }
+      .hero, #services, #impact, #clients, #collaborate { padding-left: 1.5rem; padding-right: 1.5rem; }
+      #services, #impact, #clients, #collaborate { padding-top: 5rem; padding-bottom: 3rem; }
+      .services-grid, .impact-grid { grid-template-columns: 1fr; }
+      .clients-grid { grid-template-columns: repeat(2, 1fr); }
+      .credentials-bar { padding: 3rem 1.5rem; }
+      .credentials-grid { grid-template-columns: repeat(2, 1fr); gap: 2rem; }
+      .credential-item:not(:last-child)::after { display: none; }
+    }
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "@id": "https://hg-au.com/#organization",
+    "name": "Holistic Governance",
+    "url": "https://hg-au.com/",
+    "logo": "https://hg-au.com/logo-hg-trimmed.png",
+    "image": "https://hg-au.com/logo-hg-trimmed.png",
+    "description": "Specialist governance, risk, and data consultancy for healthcare and regulated organisations across Australia and New Zealand.",
+    "email": "info@hg-au.com",
+    "telephone": "+61405515300",
+    "priceRange": "$$$",
+    "founder": {
+      "@type": "Person",
+      "name": "Naomi Alefelder",
+      "jobTitle": "Founding Director"
+    },
+    "areaServed": [
+      { "@type": "Country", "name": "Australia" },
+      { "@type": "Country", "name": "New Zealand" }
+    ],
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Heidelberg",
+      "addressRegion": "Victoria",
+      "addressCountry": "AU"
+    },
+    "knowsAbout": [
+      "Clinical Governance",
+      "Healthcare Risk Management",
+      "NSQHS Standards",
+      "Aged Care Quality Standards",
+      "FHIR Interoperability",
+      "AI Governance",
+      "Data Governance"
+    ],
+    "sameAs": [
+      "https://www.linkedin.com/company/hg-au/",
+      "https://www.youtube.com/@holisticgovernance",
+      "https://www.instagram.com/holisticgovernance/"
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": "https://hg-au.com/#website",
+    "url": "https://hg-au.com/",
+    "name": "Holistic Governance",
+    "alternateName": "HG",
+    "publisher": { "@id": "https://hg-au.com/#organization" },
+    "inLanguage": "en-AU",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://hg-au.com/resources.html?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SiteNavigationElement",
+    "name": ["About", "Solutions", "Resources", "Contact"],
+    "url": [
+      "https://hg-au.com/about.html",
+      "https://hg-au.com/healthcare.html",
+      "https://hg-au.com/resources.html",
+      "https://hg-au.com/proposal-enquiry.html"
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://hg-au.com/#webpage",
+    "url": "https://hg-au.com/",
+    "name": "Clinical Governance & Risk Consultancy | Holistic Governance",
+    "description": "Specialist clinical governance, risk and data consultancy for healthcare organisations across Australia and New Zealand.",
+    "isPartOf": { "@id": "https://hg-au.com/#website" },
+    "about": { "@id": "https://hg-au.com/#organization" },
+    "inLanguage": "en-AU",
+    "speakable": {
+      "@type": "SpeakableSpecification",
+      "cssSelector": [".hero h1", ".hero-sub"]
+    }
+  }
+  </script>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="logo"><img src="logo-hg-trimmed.png" alt="Holistic Governance" width="351" height="524"><span class="logo-name">Holistic <span>Governance</span></span></a>
+  <button class="hamburger" aria-label="Menu" onclick="this.nextElementSibling.classList.toggle('open')">&#9776;</button>
+  <ul>
+    <li><a href="about.html">About</a></li>
+    <li><a href="healthcare.html">Solutions</a></li>
+    <li><a href="resources.html">Resources</a></li>
+    <li class="nav-contact-wrapper">
+      <button class="nav-cta" onclick="this.nextElementSibling.classList.toggle('open')">Contact</button>
+      <div class="nav-contact-popup">
+        <a href="tel:0405515300"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>0405 515 300</a>
+        <a href="mailto:info@hg-au.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>info@hg-au.com</a>
+        <a href="proposal-enquiry.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>Submit a Proposal</a>
+      </div>
+    </li>
+  </ul>
+</nav>
+
+<section class="hero" id="home">
+  <div class="hero-grid"></div>
+  <div class="hero-content">
+    <div class="hero-eyebrow">Governance, Risk & Data Intelligence</div>
+    <h1>Navigate clinical governance, risk, and AI with <em>clarity</em> and confidence.</h1>
+    <p class="hero-sub">Supporting healthcare and regulated organisations to strengthen governance, assurance, and decision-making in complex environments.</p>
+    <div class="hero-actions">
+      <a href="proposal-enquiry.html" class="btn-primary">Request a Proposal</a>
+      <a href="healthcare.html" class="btn-ghost">Explore Our Solutions →</a>
+    </div>
+  </div>
+</section>
+
+<!-- FRAMEWORKS & STANDARDS -->
+<div class="fw-optionB fade-in">
+  <div class="fwB-inner">
+    <div class="fwB-left">
+      <div class="section-label">Our Expertise</div>
+      <h2 style="margin-bottom:1.5rem;">Frameworks & Standards</h2>
+      <p style="color:var(--text-mid); font-size:0.95rem; line-height:1.8; max-width:400px;">We work across the key regulatory and interoperability frameworks governing Australian healthcare — from aged care quality standards to digital health.</p>
+    </div>
+    <div class="fwB-right">
+      <div class="fwB-tags">
+        <span class="fwB-tag">NSQHS</span>
+        <span class="fwB-tag">ACQS</span>
+        <span class="fwB-tag">FHIR</span>
+        <span class="fwB-tag">ISO</span>
+        <span class="fwB-tag">NDIS</span>
+        <span class="fwB-tag">QI Program</span>
+        <span class="fwB-tag">SNOMED CT</span>
+        <span class="fwB-tag">SIRS</span>
+        <span class="fwB-tag">Clinical Care Standards</span>
+        <span class="fwB-tag">ELDAC</span>
+        <span class="fwB-tag">National Framework for Digital Health Standards</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<section id="services" class="fade-in">
+  <div class="section-label">Our Focus</div>
+  <h2>Why Choose Us</h2>
+  <p class="section-intro">We deliver end-to-end governance and data solutions that align with your strategic objectives, regulatory environment, and operational reality.</p>
+  <div class="services-grid">
+    <div class="service-card">
+      <div class="service-num">01</div>
+      <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+      <h3>Governance & Assurance</h3>
+      <p>Strengthen board oversight, accountability, and assurance visibility.</p>
+    </div>
+    <div class="service-card">
+      <div class="service-num">02</div>
+      <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      <h3>Risk & Compliance</h3>
+      <p>Achieve regulatory readiness and embed sustainable compliance systems.</p>
+    </div>
+    <div class="service-card">
+      <div class="service-num">03</div>
+      <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 3v18h18"/><path d="M7 16l4-4 4 4 4-8"/></svg>
+      <h3>Data & Intelligence</h3>
+      <p>Turn fragmented data into board-level insight and decision confidence.</p>
+    </div>
+    <div class="service-card">
+      <div class="service-num">04</div>
+      <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="3"/><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>
+      <h3>Technology & AI</h3>
+      <p>Govern digital transformation and AI adoption with risk-informed frameworks.</p>
+    </div>
+  </div>
+</section>
+
+
+<div class="section-divider"></div>
+
+<section id="clients" class="fade-in">
+  <div class="section-label">Our Clients</div>
+  <h2>Who We Work With</h2>
+  <div class="clients-grid">
+    <div class="client-card">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-4 0a1 1 0 01-1-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 01-1 1m-2 0h2"/></svg>
+      <p>Aged care providers</p>
+    </div>
+    <div class="client-card">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0H5m14 0h2m-16 0H3m4-8h2m4 0h2m-8 4h2m4 0h2m-8-8h2m4 0h2"/></svg>
+      <p>Hospitals &amp; day procedures</p>
+    </div>
+    <div class="client-card">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+      <p>Community &amp; disability services</p>
+    </div>
+    <div class="client-card">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
+      <p>Respite &amp; specialist services</p>
+    </div>
+    <div class="client-card">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+      <p>Digital Health Tech &amp; Software Vendors</p>
+    </div>
+    <div class="client-card">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
+      <p>Boards &amp; executive teams</p>
+    </div>
+  </div>
+</section>
+
+<section id="collaborate" class="fade-in">
+  <div class="section-label">Collaborate With Us</div>
+  <h2>Follow our work &mdash; and let's build better governance together</h2>
+  <p class="collab-intro">Governance insights, updates, and practical thinking across our channels. Reach out to explore working together.</p>
+  <div class="collab-socials">
+    <a href="https://www.linkedin.com/company/hg-au/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.48-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 11.01-4.12 2.06 2.06 0 010 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z"/></svg></a>
+    <a href="https://www.youtube.com/@holisticgovernance" target="_blank" rel="noopener" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.5 6.2a3.02 3.02 0 00-2.12-2.14C19.5 3.55 12 3.55 12 3.55s-7.5 0-9.38.51A3.02 3.02 0 00.5 6.2 31.5 31.5 0 000 12a31.5 31.5 0 00.5 5.8 3.02 3.02 0 002.12 2.14c1.88.51 9.38.51 9.38.51s7.5 0 9.38-.51a3.02 3.02 0 002.12-2.14A31.5 31.5 0 0024 12a31.5 31.5 0 00-.5-5.8zM9.55 15.57V8.43L15.82 12l-6.27 3.57z"/></svg></a>
+    <a href="https://www.instagram.com/holisticgovernance/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41-.56-.22-.96-.48-1.38-.9-.42-.42-.68-.82-.9-1.38-.16-.42-.36-1.06-.41-2.23C2.17 15.58 2.16 15.2 2.16 12s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.17 8.8 2.16 12 2.16zm0 1.62c-3.15 0-3.52.01-4.76.07-.9.04-1.39.19-1.71.32-.43.17-.74.37-1.06.69-.32.32-.52.63-.69 1.06-.13.32-.28.81-.32 1.71-.06 1.24-.07 1.61-.07 4.76s.01 3.52.07 4.76c.04.9.19 1.39.32 1.71.17.43.37.74.69 1.06.32.32.63.52 1.06.69.32.13.81.28 1.71.32 1.24.06 1.61.07 4.76.07s3.52-.01 4.76-.07c.9-.04 1.39-.19 1.71-.32.43-.17.74-.37 1.06-.69.32-.32.52-.63.69-1.06.13-.32.28-.81.32-1.71.06-1.24.07-1.61.07-4.76s-.01-3.52-.07-4.76c-.04-.9-.19-1.39-.32-1.71-.17-.43-.37-.74-.69-1.06-.32-.32-.63-.52-1.06-.69-.32-.13-.81-.28-1.71-.32-1.24-.06-1.61-.07-4.76-.07zm0 2.76a5.3 5.3 0 110 10.6 5.3 5.3 0 010-10.6zm0 1.62a3.68 3.68 0 100 7.36 3.68 3.68 0 000-7.36zm5.5-1.86a1.24 1.24 0 110 2.48 1.24 1.24 0 010-2.48z"/></svg></a>
+  </div>
+  <div class="contact-wrapper">
+    <button class="btn-primary" onclick="this.nextElementSibling.classList.toggle('open')">Collaborate With Us</button>
+    <div class="contact-popup">
+      <a href="tel:0405515300">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+        0405 515 300
+      </a>
+      <a href="mailto:info@hg-au.com">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        info@hg-au.com
+      </a>
+      <a href="proposal-enquiry.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+        Submit a Proposal
+      </a>
+    </div>
+  </div>
+</section>
+
+<div class="cta-band">
+  <h2>Bring clarity and assurance to your clinical and corporate governance</h2>
+  <div class="contact-wrapper">
+    <button class="btn-dark" onclick="this.nextElementSibling.classList.toggle('open')">Get in Touch</button>
+    <div class="contact-popup">
+      <a href="tel:0405515300">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+        0405 515 300
+      </a>
+      <a href="mailto:info@hg-au.com">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        info@hg-au.com
+      </a>
+      <a href="proposal-enquiry.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+        Submit a Proposal
+      </a>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div class="footer-logo"><img src="logo-hg-trimmed.png" alt="Holistic Governance" width="351" height="524"><span class="logo-name">Holistic <span>Governance</span></span></div>
+      <p class="footer-tagline">Improving clarity and confidence in governance through knowledge, data, and technology.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Navigate</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="healthcare.html">Solutions</a></li>
+        <li><a href="resources.html">Resources</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Get in Touch</h4>
+      <div class="footer-contact-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        <a href="mailto:info@hg-au.com">info@hg-au.com</a>
+      </div>
+      <div class="footer-contact-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+        <a href="tel:0405515300">0405 515 300</a>
+      </div>
+      <div class="footer-contact-item" style="margin-top: 0.5rem;">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+        <a href="proposal-enquiry.html">Request a Proposal</a>
+      </div>
+      <div class="footer-contact-item">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.48-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 11.01-4.12 2.06 2.06 0 010 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z"/></svg>
+        <a href="https://www.linkedin.com/company/hg-au/" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Where We Work</h4>
+      <address style="font-style:normal; font-size:0.85rem; line-height:1.6; color:var(--text); margin-bottom:0.6rem;">Heidelberg, Victoria, Australia</address>
+      <ul>
+        <li>Australia</li>
+        <li>New Zealand</li>
+      </ul>
+      <p style="font-size:0.8rem; color:var(--text-light); margin-top:0.8rem;">Remote & on-site delivery</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2026 Holistic Governance. All rights reserved. · <a href="privacy.html" style="color:rgba(255,255,255,0.5);text-decoration:none">Privacy Policy</a></p>
+  </div>
+</footer>
+
+<button class="back-to-top" aria-label="Scroll to top" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 15l-6-6-6 6"/></svg>
+</button>
+
+<script>
+document.addEventListener('click', function(e) {
+  document.querySelectorAll('.contact-popup.open, .nav-contact-popup.open').forEach(function(popup) {
+    if (!popup.parentElement.contains(e.target)) popup.classList.remove('open');
+  });
+});
+
+// Scroll animations
+const observer = new IntersectionObserver(function(entries) {
+  entries.forEach(function(entry) {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      observer.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.1 });
+document.querySelectorAll('.fade-in').forEach(function(el) { observer.observe(el); });
+
+// Nav shrink on scroll
+window.addEventListener('scroll', function() {
+  document.querySelector('nav').classList.toggle('scrolled', window.scrollY > 60);
+  document.querySelector('.back-to-top').classList.toggle('visible', window.scrollY > 400);
+});
+</script>
+</body>
+</html>

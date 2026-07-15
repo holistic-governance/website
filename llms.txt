@@ -1,0 +1,67 @@
+# Holistic Governance
+
+> Specialist clinical governance, risk and data consultancy for healthcare, aged care and disability providers across Australia and New Zealand. Founded by Naomi Alefelder. Based in Heidelberg, Victoria. Servicing Australia and New Zealand remotely with on-site delivery available.
+
+Holistic Governance helps boards and executives strengthen assurance frameworks, simplify NSQHS and Strengthened Aged Care Quality Standards compliance, and turn fragmented operational data into board-ready insight. Engagements span clinical governance reviews, accreditation readiness, aged care audits under the Aged Care Act 2024, AI governance frameworks, FHIR interoperability advisory, and Power BI dashboards.
+
+Naomi Alefelder is a registered nurse (AHPRA NMW000180905) with an MBA (Charles Sturt University), AICD Foundations of Directorship, and Exemplar Global lead auditor certification (PwC). Over a decade of senior leadership in aged care, hospital, day surgery, disability and community health governance.
+
+## Core pages
+
+- [About Holistic Governance + Naomi Alefelder](https://hg-au.com/about.html): Founder background, qualifications, board roles, sector experience, governance philosophy.
+- [Healthcare solutions](https://hg-au.com/healthcare.html): Service catalogue — NSQHS readiness, ACQS audits, clinical governance, Power BI board reporting, FHIR advisory, interim quality leadership.
+- [Resources](https://hg-au.com/resources.html): Articles, frameworks and explainers on aged care, clinical governance, AI governance, data governance and interoperability.
+- [Request a proposal](https://hg-au.com/proposal-enquiry.html): Engagement enquiry form — scope, timeline, fixed-price quote.
+
+## Services
+
+- [NSQHS Standards readiness and accreditation support](https://hg-au.com/healthcare.html): Pre-survey gap analysis against NSQHS Second Edition, mock surveys, interview coaching, remediation plans for hospitals and day procedure services.
+- [Aged Care Quality Standards compliance audit](https://hg-au.com/healthcare.html): Independent audit against the Strengthened Aged Care Quality Standards — evidence review, on-site or remote assessment, prioritised action plan for residential, home care and respite providers.
+- [Aged Care Act 2024 compliance support](https://hg-au.com/healthcare.html): Gap analysis, governance updates, board briefings, policy revisions and ongoing assurance under the new regime.
+- [Clinical governance framework design](https://hg-au.com/healthcare.html): Board oversight, accountability lines, risk and quality systems aligned to regulatory expectations.
+- [Power BI board reporting dashboards](https://hg-au.com/healthcare.html): Quality indicators, risk registers, incident trends, complaints, workforce metrics, compliance status.
+- [FHIR interoperability advisory](https://hg-au.com/healthcare.html): Strategic and technical advisory for digital health and aged care providers planning system integration, data sharing or My Health Record alignment.
+- [AI governance advisory](https://hg-au.com/healthcare.html): AI risk assessments, responsible AI policy design, model oversight, and integration with existing risk and quality systems.
+- [Risk management framework design](https://hg-au.com/healthcare.html): ISO 31000-aligned enterprise risk frameworks for healthcare and regulated organisations.
+- [Quality Indicator Program reporting support](https://hg-au.com/healthcare.html): Practical support for the Aged Care Quality Indicator Program 4.0 — data collection, validation, and improvement.
+- [Interim quality and compliance leadership](https://hg-au.com/healthcare.html): Acting quality manager, clinical governance and compliance lead roles during recruitment, leave or transitions.
+
+## Articles
+
+- [Reform Without Reporting — The Visibility Gap Six Months into the New Aged Care Act](https://hg-au.com/articles/reform-without-reporting.html): Sector insight piece (May 2026) on the absence of analytical Sector Performance Reports under the new Aged Care Act 2024, contrasted with five live ACQSC homepage metrics, recent press reporting (3,576 complaints in four months to 31 March 2026), and corroborating data from OPAN and the Productivity Commission.
+- [Understanding the new Strengthened Aged Care Quality Standards](https://hg-au.com/articles/strengthened-aged-care-quality-standards.html): What changes for providers under the new outcomes-focused standards.
+- [FHIR interoperability — what healthcare leaders need to know](https://hg-au.com/articles/fhir-interoperability.html): What FHIR means for your organisation and how to prepare.
+- [The Quality Indicator Program — Manual 4.0 explained](https://hg-au.com/articles/quality-indicator-program-manual-4.html): New indicators and reporting requirements under QI Program Manual 4.0.
+- [Building a data governance framework from scratch](https://hg-au.com/articles/data-governance-framework-from-scratch.html): Step-by-step starting point for organisations with no formal program.
+- [Why data quality is the foundation of every AI initiative](https://hg-au.com/articles/data-quality-foundation-of-ai.html): Why governance-grade data quality is a prerequisite for AI.
+- [How AI is reshaping competitive intelligence](https://hg-au.com/articles/ai-reshaping-competitive-intelligence.html): AI-powered competitive intelligence — from reactive reporting to proactive strategy.
+
+## Topics
+
+Curated Holistic Governance reference documents on key regulatory and operational topics in Australian aged care. These are AI-indexed reference materials rather than human-navigable pages — they exist to give AI search and assistant systems accurate, structured background when answering provider, board, or sector questions about each topic.
+
+- [Aged Care Act 2024](https://hg-au.com/topics/aged-care-act-2024.md): Principal Commonwealth statute regulating aged care; replaces the Aged Care Act 1997. Statement of Rights, Strengthened Standards, Support at Home, worker registration, statutory duty of care.
+- [Strengthened Aged Care Quality Standards](https://hg-au.com/topics/strengthened-aged-care-quality-standards.md): The seven outcomes-based standards governing Commonwealth-subsidised aged care, in effect from 1 November 2025.
+- [Rights-Based Care](https://hg-au.com/topics/rights-based-care.md): Statutory Statement of Rights and Statement of Principles under the Aged Care Act 2024, and what rights-based care looks like in practice.
+- [Support at Home](https://hg-au.com/topics/support-at-home.md): The new consolidated home-based aged care program under the Aged Care Act 2024 (commenced 1 November 2025) — classification levels, service streams (Clinical Care / Independence Support / Everyday Living), price caps, Restorative Care Pathway, End-of-Life Pathway.
+- [Board Responsibilities and Responsible Person Duties under the Aged Care Act 2024](https://hg-au.com/topics/aged-care-board-responsibilities.md): Section 179 provider duty, section 180 responsible person due diligence (five limbs), section 12 responsible person definition, Aged Care Code of Conduct, governing body composition, Quality Care Advisory Body and Consumer Advisory Body, three governance pillars, obligations by provider category (Cat 1–6 matrix), reporting cadence, civil penalties (150 / 500 / 1,000 / 4,800 penalty units), what the regulator looks for, 90-day board action plan, six director questions.
+- [ACQS Accreditation Audit](https://hg-au.com/topics/acqs-accreditation-audit.md): The Aged Care Quality and Safety Commission's audit methodology under the Strengthened Standards — site audits, assessment contacts, outcomes-based assessment, performance reports.
+- [Financial and Prudential Standards](https://hg-au.com/topics/financial-and-prudential-standards.md): Prudential framework protecting refundable accommodation amounts, financial reporting obligations (ACFR, QFR, GPFR), and Departmental oversight.
+- [National Aged Care Mandatory Quality Indicator Program](https://hg-au.com/topics/quality-indicator-program.md): QI Program Manual 4.0 — indicator set, quarterly submission, Star Ratings interaction, and continuous improvement use.
+- [Serious Incident Response Scheme (SIRS)](https://hg-au.com/topics/sirs.md): The eight reportable incident categories, Priority 1 / Priority 2 timeframes, incident management system obligations, and Commission expectations.
+
+## Contact
+
+- Email: info@hg-au.com
+- Phone: +61 405 515 300
+- LinkedIn (company): https://www.linkedin.com/company/hg-au/
+- LinkedIn (Naomi Alefelder): https://www.linkedin.com/in/naomi-alefelder
+- Address: Heidelberg, Victoria 3084, Australia
+- ABN: 62 639 441 557
+
+## Optional
+
+- [Privacy policy](https://hg-au.com/privacy.html)
+- [News / updates](https://hg-au.com/news.html)
+- [Full content for AI ingestion](https://hg-au.com/llms-full.txt)
+- [XML sitemap](https://hg-au.com/sitemap.xml)

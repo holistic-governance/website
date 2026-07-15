@@ -1,0 +1,712 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aged Care &amp; Healthcare Governance | Holistic Governance</title>
+    <meta name="description" content="Healthcare governance, compliance, and data solutions — from aged care audits and NSQHS readiness to Power BI dashboards and FHIR advisory. Practical support tailored to your organisation." />
+    <meta name="robots" content="index,follow" />
+    <meta name="author" content="Naomi Alefelder" />
+    <link rel="canonical" href="https://hg-au.com/healthcare.html" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Holistic Governance" />
+    <meta property="og:locale" content="en_AU" />
+    <meta property="og:url" content="https://hg-au.com/healthcare.html" />
+    <meta property="og:title" content="Aged Care &amp; Healthcare Governance | Holistic Governance" />
+    <meta property="og:description" content="Aged care audits, NSQHS readiness, Power BI dashboards, and FHIR advisory for Australian healthcare providers." />
+    <meta property="og:image" content="https://hg-au.com/og-image-v3.png" />
+  <meta property="og:image:width" content="2400" />
+  <meta property="og:image:height" content="1260" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Aged Care &amp; Healthcare Governance | Holistic Governance" />
+    <meta name="twitter:description" content="Aged care audits, NSQHS readiness, Power BI dashboards, and FHIR advisory for Australian healthcare providers." />
+    <meta name="twitter:image" content="https://hg-au.com/og-image-v3.png" />
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="preload" as="image" href="logo-hg-trimmed.png" fetchpriority="high">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=DM+Sans:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css">
+    <style>
+      .breadcrumb a:hover {
+        text-decoration: underline;
+      }
+
+      section {
+        padding: 5rem 4rem;
+      }
+      .section-intro {
+        color: #ffffff;
+        font-size: 1rem;
+        line-height: 1.8;
+        max-width: 600px;
+        margin-bottom: 3rem;
+      }
+
+      /* SERVICES GRID */
+      .hc-services {
+        background: var(--navy);
+      }
+      .hc-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+      }
+      .hc-card {
+        background: var(--navy-mid);
+        border: 1px solid var(--border);
+        padding: 2.5rem 2rem;
+        border-radius: 2px;
+        transition: border-color 0.3s;
+      }
+      .hc-card:hover {
+        border-color: var(--sky);
+      }
+      .hc-card svg {
+        width: 36px;
+        height: 36px;
+        color: var(--sky);
+        margin-bottom: 1.2rem;
+      }
+      .hc-card h3 {
+        font-family: "Cormorant Garamond", serif;
+        font-size: 1.4rem;
+        color: var(--white);
+        margin-bottom: 0.8rem;
+      }
+      .hc-card p {
+        color: #ffffff;
+        font-size: 0.88rem;
+        line-height: 1.75;
+        margin-bottom: 1rem;
+      }
+      .hc-card ul {
+        list-style: none;
+        padding: 0;
+      }
+      .hc-card ul li {
+        color: #ffffff;
+        font-size: 0.85rem;
+        line-height: 1.7;
+        padding-left: 1rem;
+        position: relative;
+      }
+      .hc-card ul li::before {
+        content: "—";
+        position: absolute;
+        left: 0;
+        color: var(--sky);
+        font-size: 0.7rem;
+        top: 0.15rem;
+      }
+
+      /* SPECIALTY */
+      .specialty {
+        background: var(--navy-mid);
+      }
+      .specialty-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+      }
+      .specialty-card {
+        text-align: center;
+        padding: 2.5rem 1.5rem;
+        border: 1px solid var(--border);
+        border-radius: 2px;
+      }
+      .specialty-card h4 {
+        font-family: "Cormorant Garamond", serif;
+        font-size: 1.2rem;
+        color: var(--white);
+        margin-bottom: 0.8rem;
+      }
+      .specialty-card p {
+        font-size: 0.82rem;
+        color: #ffffff;
+        line-height: 1.7;
+      }
+      .specialty-badge {
+        display: inline-block;
+        padding: 0.3rem 0.8rem;
+        background: rgba(56, 189, 248, 0.08);
+        border: 1px solid var(--sky);
+        color: var(--sky);
+        font-size: 0.72rem;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        border-radius: 2px;
+        margin-bottom: 1rem;
+      }
+
+      @media (max-width: 900px) {
+        .page-hero,
+        section {
+          padding: 6rem 1.5rem 3rem;
+        }
+        .hc-grid,
+        .specialty-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": "Healthcare Governance &amp; Compliance Consultancy",
+      "serviceType": "Healthcare Governance Consultancy",
+      "url": "https://hg-au.com/healthcare.html",
+      "description": "Aged care audits, NSQHS readiness, Power BI dashboards and FHIR advisory for Australian healthcare providers.",
+      "provider": { "@id": "https://hg-au.com/#organization" },
+      "areaServed": [
+        { "@type": "Country", "name": "Australia" },
+        { "@type": "Country", "name": "New Zealand" }
+      ],
+      "audience": {
+        "@type": "BusinessAudience",
+        "audienceType": "Aged care providers, hospitals, day procedures, disability services, digital health"
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Healthcare Governance Services",
+        "itemListElement": [
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "NSQHS Standards readiness &amp; accreditation support" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Aged Care Quality Standards audits &amp; gap analysis" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Clinical governance framework design" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Power BI dashboards &amp; board reporting" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "FHIR interoperability advisory" } }
+        ]
+      }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "@id": "https://hg-au.com/healthcare.html#webpage",
+      "url": "https://hg-au.com/healthcare.html",
+      "name": "Healthcare Governance Solutions | Holistic Governance",
+      "description": "Specialised governance, compliance, analytics and advisory services purpose-built for healthcare organisations across Australia and New Zealand.",
+      "isPartOf": { "@id": "https://hg-au.com/#website" },
+      "about": { "@id": "https://hg-au.com/#organization" },
+      "inLanguage": "en-AU",
+      "speakable": {
+        "@type": "SpeakableSpecification",
+        "cssSelector": [".page-hero h1", ".page-hero p", "section[aria-labelledby='hc-faq-heading'] details summary", "section[aria-labelledby='hc-faq-heading'] details > div"]
+      }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What types of aged care audits does Holistic Governance conduct?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We conduct independent audits against the Strengthened Aged Care Quality Standards, NSQHS Standards, and clinical governance frameworks. Our audits include gap analysis, accreditation readiness assessments, and continuous improvement reviews for residential aged care, home care, and Support at Home providers."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does Holistic Governance support accreditation readiness?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We provide end-to-end accreditation readiness support including gap analysis against current standards, policy and procedure development, staff education, mock assessments, clinical governance framework design, and ongoing compliance monitoring to ensure your organisation is audit-ready at all times."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What governance dashboards and reporting does Holistic Governance build?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We build Power BI and Excel-based dashboards tailored to your organisation, covering quality indicators, clinical incidents, complaints, risk registers, workforce metrics, care minutes compliance, and board reporting. Dashboards are designed to be board-ready and aligned to regulatory reporting requirements."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does Holistic Governance provide interim quality and compliance support?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, we offer flexible agency and interim support for quality, safety, and compliance leadership roles. This includes acting in quality manager, clinical governance, and compliance lead positions during recruitment, leave, or organisational transitions — ensuring continuity of governance oversight."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is FHIR advisory and how does Holistic Governance help?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "FHIR (Fast Healthcare Interoperability Resources) is the leading global standard for healthcare data exchange. We provide clinical-technical translation and advisory services to help healthcare organisations understand, plan for, and implement FHIR-based interoperability across their digital health systems."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What training does Holistic Governance offer for healthcare organisations?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We provide validated assessment tool training for consistent and accurate clinical assessments, bespoke education programs tailored to team-specific gaps, and governance training covering the Strengthened Aged Care Quality Standards, NSQHS Standards, clinical governance, and continuous improvement frameworks."
+          }
+        }
+      ]
+    }
+    </script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9PMGXF9Q9T"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-9PMGXF9Q9T');
+      gtag('config', 'AW-18073082985');
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://hg-au.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Solutions", "item": "https://hg-au.com/healthcare.html" }
+      ]
+    }
+    </script>
+  </head>
+  <body>
+    <nav>
+      <a href="index.html" class="logo"><img src="logo-hg-trimmed.png" alt="Holistic Governance" width="351" height="524"><span class="logo-name">Holistic <span>Governance</span></span></a>
+      <button class="hamburger" onclick="this.nextElementSibling.classList.toggle('open')">&#9776;</button>
+      <ul>
+        <li><a href="about.html">About</a></li>
+        <li><a href="healthcare.html" class="active">Solutions</a></li>
+        <li><a href="resources.html">Resources</a></li>
+        <li class="nav-contact-wrapper">
+          <button class="nav-cta" onclick="this.nextElementSibling.classList.toggle('open')">Contact</button>
+          <div class="nav-contact-popup">
+            <a href="tel:0405515300"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>0405 515 300</a>
+            <a href="mailto:info@hg-au.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>info@hg-au.com</a>
+            <a href="proposal-enquiry.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>Submit a Proposal</a>
+          </div>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="page-hero">
+      <div class="breadcrumb">
+        <a href="index.html">Home</a> / Solutions
+      </div>
+      <h1>Health Care Sector Specific Solutions</h1>
+      <p>
+        Specialised governance, compliance, analytics and advisory services
+        purpose-built for healthcare organisations — from aged care providers to
+        digital health innovators.
+      </p>
+    </div>
+
+    <!-- SERVICES -->
+    <section class="hc-services">
+      <div class="section-label">Health Care Services</div>
+      <h2>Our Health Care Offerings</h2>
+      <p class="section-intro">
+        Not sure where to start? Choose the service that matches your challenge — or
+        <a href="proposal-enquiry.html" style="color:var(--sky);text-decoration:underline;">request a proposal</a>
+        and we'll recommend the right fit.
+      </p>
+      <div class="hc-grid">
+        <div class="hc-card">
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+          >
+            <rect x="3" y="3" width="18" height="18" rx="2" />
+            <path d="M3 9h18M9 21V9" />
+          </svg>
+          <h3>Reporting & Dashboards</h3>
+          <p>
+            Struggling to turn scattered data into board-ready insight? We build
+            dashboards that surface what matters — quality, risk, incidents,
+            complaints, and workforce trends — in one clear view.
+          </p>
+          <ul>
+            <li>Power BI or Excel based builds depending on data maturity</li>
+            <li>Automated data inputs where possible</li>
+            <li>
+              Drill down functionality for root causes and high-risk areas
+            </li>
+            <li>Board ready reporting with traffic light indicators</li>
+            <li>Training to support interpreting and actioning insights</li>
+          </ul>
+        </div>
+        <div class="hc-card">
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+          >
+            <path
+              d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"
+            />
+          </svg>
+          <h3>Agency & Interim Support</h3>
+          <p>
+            Key role vacant or team capacity stretched? We step in with flexible
+            quality, safety and compliance leadership — so standards don't slip
+            while you recruit.
+          </p>
+          <ul>
+            <li>General & clinical management support</li>
+            <li>Coaching and mentoring for emerging leaders</li>
+            <li>Step-in support during transitions</li>
+          </ul>
+        </div>
+        <div class="hc-card">
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+          >
+            <path
+              d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
+            />
+          </svg>
+          <h3>FHIR Advisory</h3>
+          <p>
+            Clinical systems that don't talk to each other? We bridge the gap
+            between clinical workflows and digital health interoperability
+            standards.
+          </p>
+          <ul>
+            <li>Clinical-Technical Translation</li>
+            <li>Interoperability & Standards Advisory</li>
+            <li>Clinical Governance & Data Integrity</li>
+            <li>Digital Product & Solution Design</li>
+          </ul>
+        </div>
+        <div class="hc-card">
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+          >
+            <path
+              d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"
+            />
+          </svg>
+          <h3>Consultancy & Advisory</h3>
+          <p>
+            Facing accreditation, regulatory change, or a governance gap you
+            can't resource internally? We provide hands-on advisory across
+            governance, risk, compliance, and digital health.
+          </p>
+          <ul>
+            <li>Interim Governance Leadership</li>
+            <li>Accreditation & Compliance Readiness</li>
+            <li>Clinical Governance Oversight</li>
+            <li>Clinical Incident Review & RCA</li>
+            <li>Consumer engagement and feedback systems</li>
+            <li>Project-Based Support</li>
+            <li>Technical & Digital Health Advisory</li>
+          </ul>
+        </div>
+        <div class="hc-card">
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+          >
+            <path
+              d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"
+            />
+          </svg>
+          <h3>Audits</h3>
+          <p>
+            Unsure if your organisation would pass an audit today? We conduct
+            independent assessments against the standards that matter — so you
+            know exactly where you stand before the regulator does.
+          </p>
+          <ul>
+            <li>Aged Care Quality Standards (ACQS)</li>
+            <li>
+              National Safety and Quality Health Service Standards (NSQHS)
+            </li>
+            <li>Clinical Governance and Risk Management frameworks</li>
+            <li>Work Health & Safety and Infection Prevention requirements</li>
+            <li>Quality Indicator Program</li>
+          </ul>
+        </div>
+        <div class="hc-card">
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+          >
+            <path
+              d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
+            />
+          </svg>
+          <h3>Validated Assessment Tool Training</h3>
+          <p>
+            Staff unsure how to use validated assessment tools consistently?
+            We deliver structured training so your team assesses with
+            confidence and accuracy.
+          </p>
+        </div>
+        <div class="hc-card">
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+          >
+            <path
+              d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"
+            />
+          </svg>
+          <h3>Bespoke Education</h3>
+          <p>
+            Off-the-shelf training missing the mark? We design education
+            programs around your team's gaps, your regulatory context, and
+            your real-world operational challenges.
+          </p>
+        </div>
+        <div class="hc-card">
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+          >
+            <path
+              d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"
+            />
+          </svg>
+          <h3>Continuous Improvement</h3>
+          <p>
+            Improvement plans that stall after the audit? We help you embed
+            continuous improvement into daily operations — turning data insights
+            into sustained quality outcomes.
+          </p>
+        </div>
+        <div class="hc-card">
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+          >
+            <path
+              d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z"
+            />
+          </svg>
+          <h3>Policy and Procedure</h3>
+          <p>
+            Policies outdated or not reflecting current standards? We develop,
+            review, and align your policies and procedures to current regulatory
+            requirements and best practice — so they work in practice, not just
+            on paper.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- RESOURCES LINK -->
+    <section style="background:var(--navy); padding:4rem 4rem; text-align:center;" class="fade-in">
+      <div class="section-label" style="justify-content:center;">Evidence-Based Support</div>
+      <h2>Explore Our Resource Library</h2>
+      <p style="color:#ffffff; font-size:0.95rem; line-height:1.8; max-width:640px; margin:1rem auto 2rem;">Access curated standards, frameworks, and best practice documents to support your governance, quality, and compliance needs — all in one place.</p>
+      <a href="resources.html" style="display:inline-block; padding:0.8rem 2rem; background:var(--sky); color:var(--navy); font-size:0.82rem; font-weight:500; letter-spacing:0.08em; text-transform:uppercase; text-decoration:none; border-radius:2px; transition:background 0.3s;">Browse Resources &rarr;</a>
+    </section>
+
+    <!-- SPECIALTY AREAS -->
+    <section class="specialty">
+      <div class="section-label">Specialty Areas</div>
+      <h2>Regulatory Frameworks We Work In</h2>
+      <p class="section-intro">
+        Our team has deep expertise across the key standards and frameworks
+        governing Australian health care.
+      </p>
+      <div class="specialty-grid">
+        <div class="specialty-card">
+          <div class="specialty-badge">Aged Care</div>
+          <h4>Strengthened Quality Standards</h4>
+          <p>
+            Aged Care Quality and Safety Commission — new strengthened standards
+            for aged care providers.
+          </p>
+        </div>
+        <div class="specialty-card">
+          <div class="specialty-badge">Quality Indicator</div>
+          <h4>Quality Indicator Program</h4>
+          <p>
+            National Aged Care Mandatory Quality Indicator Program (QI Program)
+            Manual 4.0.
+          </p>
+        </div>
+        <div class="specialty-card">
+          <div class="specialty-badge">Interoperability</div>
+          <h4>FHIR Standards</h4>
+          <p>
+            Fast Healthcare Interoperability Resources — the standard for health
+            care data exchange published by HL7.
+          </p>
+        </div>
+        <div class="specialty-card">
+          <div class="specialty-badge">Safety & Quality</div>
+          <h4>NSQHS Standards</h4>
+          <p>
+            National Safety and Quality Health Service Standards Second edition
+            — 2021.
+          </p>
+        </div>
+        <div class="specialty-card">
+          <div class="specialty-badge">Clinical</div>
+          <h4>Clinical Care Standards</h4>
+          <p>
+            Standards that describe the care people can expect to be offered for
+            specific clinical conditions across Australia.
+          </p>
+        </div>
+        <div class="specialty-card">
+          <div class="specialty-badge">Bespoke</div>
+          <h4>Other</h4>
+          <p>
+            We work with you on a personalised approach to achieve your specific
+            goals and regulatory requirements.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section style="background:var(--navy); padding:5rem 4rem;" class="fade-in" aria-labelledby="hc-faq-heading">
+      <div class="section-label">Common Questions</div>
+      <h2 id="hc-faq-heading">Frequently Asked Questions</h2>
+      <div style="margin-top:2.5rem; max-width:760px;">
+        <details style="border:1px solid var(--border); border-radius:2px; margin-bottom:1rem;">
+          <summary style="padding:1.5rem 2rem; cursor:pointer; font-family:'Cormorant Garamond',serif; font-size:1.2rem; color:var(--white); font-weight:400; list-style:none;">What types of aged care audits does Holistic Governance conduct?</summary>
+          <div style="padding:0 2rem 1.5rem; font-size:0.92rem; color:var(--text-mid); line-height:1.8;">We conduct independent audits against the Strengthened Aged Care Quality Standards, NSQHS Standards, and clinical governance frameworks. Our audits include gap analysis, accreditation readiness assessments, and continuous improvement reviews for residential aged care, home care, and Support at Home providers.</div>
+        </details>
+        <details style="border:1px solid var(--border); border-radius:2px; margin-bottom:1rem;">
+          <summary style="padding:1.5rem 2rem; cursor:pointer; font-family:'Cormorant Garamond',serif; font-size:1.2rem; color:var(--white); font-weight:400; list-style:none;">How does Holistic Governance support accreditation readiness?</summary>
+          <div style="padding:0 2rem 1.5rem; font-size:0.92rem; color:var(--text-mid); line-height:1.8;">We provide end-to-end accreditation readiness support including gap analysis against current standards, policy and procedure development, staff education, mock assessments, clinical governance framework design, and ongoing compliance monitoring to ensure your organisation is audit-ready at all times.</div>
+        </details>
+        <details style="border:1px solid var(--border); border-radius:2px; margin-bottom:1rem;">
+          <summary style="padding:1.5rem 2rem; cursor:pointer; font-family:'Cormorant Garamond',serif; font-size:1.2rem; color:var(--white); font-weight:400; list-style:none;">What governance dashboards and reporting does Holistic Governance build?</summary>
+          <div style="padding:0 2rem 1.5rem; font-size:0.92rem; color:var(--text-mid); line-height:1.8;">We build Power BI and Excel-based dashboards tailored to your organisation, covering quality indicators, clinical incidents, complaints, risk registers, workforce metrics, care minutes compliance, and board reporting. Dashboards are designed to be board-ready and aligned to regulatory reporting requirements.</div>
+        </details>
+        <details style="border:1px solid var(--border); border-radius:2px; margin-bottom:1rem;">
+          <summary style="padding:1.5rem 2rem; cursor:pointer; font-family:'Cormorant Garamond',serif; font-size:1.2rem; color:var(--white); font-weight:400; list-style:none;">Does Holistic Governance provide interim quality and compliance support?</summary>
+          <div style="padding:0 2rem 1.5rem; font-size:0.92rem; color:var(--text-mid); line-height:1.8;">Yes, we offer flexible agency and interim support for quality, safety, and compliance leadership roles. This includes acting in quality manager, clinical governance, and compliance lead positions during recruitment, leave, or organisational transitions — ensuring continuity of governance oversight.</div>
+        </details>
+        <details style="border:1px solid var(--border); border-radius:2px; margin-bottom:1rem;">
+          <summary style="padding:1.5rem 2rem; cursor:pointer; font-family:'Cormorant Garamond',serif; font-size:1.2rem; color:var(--white); font-weight:400; list-style:none;">What is FHIR advisory and how does Holistic Governance help?</summary>
+          <div style="padding:0 2rem 1.5rem; font-size:0.92rem; color:var(--text-mid); line-height:1.8;">FHIR (Fast Healthcare Interoperability Resources) is the leading global standard for healthcare data exchange. We provide clinical-technical translation and advisory services to help healthcare organisations understand, plan for, and implement FHIR-based interoperability across their digital health systems.</div>
+        </details>
+        <details style="border:1px solid var(--border); border-radius:2px; margin-bottom:1rem;">
+          <summary style="padding:1.5rem 2rem; cursor:pointer; font-family:'Cormorant Garamond',serif; font-size:1.2rem; color:var(--white); font-weight:400; list-style:none;">What training does Holistic Governance offer for healthcare organisations?</summary>
+          <div style="padding:0 2rem 1.5rem; font-size:0.92rem; color:var(--text-mid); line-height:1.8;">We provide validated assessment tool training for consistent and accurate clinical assessments, bespoke education programs tailored to team-specific gaps, and governance training covering the Strengthened Aged Care Quality Standards, NSQHS Standards, clinical governance, and continuous improvement frameworks.</div>
+        </details>
+      </div>
+    </section>
+
+    <div class="cta-band">
+      <h2>Ready to strengthen your health care governance?</h2>
+      <div class="contact-wrapper">
+        <button class="btn-dark" onclick="this.nextElementSibling.classList.toggle('open')">Get in Touch</button>
+        <div class="contact-popup">
+          <a href="tel:0405515300">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+            0405 515 300
+          </a>
+          <a href="mailto:info@hg-au.com">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            info@hg-au.com
+          </a>
+          <a href="proposal-enquiry.html">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+            Submit a Proposal
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <div class="footer-logo"><img src="logo-hg-trimmed.png" alt="Holistic Governance" width="351" height="524"><span class="logo-name">Holistic <span>Governance</span></span></div>
+          <p class="footer-tagline">Improving clarity and confidence in governance through knowledge, data, and technology.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Navigate</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="healthcare.html">Solutions</a></li>
+            <li><a href="resources.html">Resources</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Get in Touch</h4>
+          <div class="footer-contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            <a href="mailto:info@hg-au.com">info@hg-au.com</a>
+          </div>
+          <div class="footer-contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+            <a href="tel:0405515300">0405 515 300</a>
+          </div>
+          <div class="footer-contact-item" style="margin-top: 0.5rem;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+            <a href="proposal-enquiry.html">Request a Proposal</a>
+          </div>
+          <div class="footer-contact-item">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.48-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 11.01-4.12 2.06 2.06 0 010 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z"/></svg>
+            <a href="https://www.linkedin.com/company/hg-au/" target="_blank" rel="noopener">LinkedIn</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Where We Work</h4>
+          <address style="font-style:normal; font-size:0.85rem; line-height:1.6; color:var(--text); margin-bottom:0.6rem;">Heidelberg, Victoria, Australia</address>
+          <ul>
+            <li>Australia</li>
+            <li>New Zealand</li>
+          </ul>
+          <p style="font-size:0.8rem; color:var(--text-light); margin-top:0.8rem;">Remote & on-site delivery</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Holistic Governance. All rights reserved. · <a href="/privacy.html" style="color:rgba(255,255,255,0.5);text-decoration:none">Privacy Policy</a></p>
+      </div>
+    </footer>
+
+    <button class="back-to-top" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 15l-6-6-6 6"/></svg>
+    </button>
+
+    <script>
+    document.addEventListener('click', function(e) {
+      document.querySelectorAll('.contact-popup.open, .nav-contact-popup.open').forEach(function(popup) {
+        if (!popup.parentElement.contains(e.target)) popup.classList.remove('open');
+      });
+    });
+    var observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) { if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); } });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.fade-in').forEach(function(el) { observer.observe(el); });
+    window.addEventListener('scroll', function() {
+      document.querySelector('nav').classList.toggle('scrolled', window.scrollY > 60);
+      document.querySelector('.back-to-top').classList.toggle('visible', window.scrollY > 400);
+    });
+    </script>
+  </body>
+</html>

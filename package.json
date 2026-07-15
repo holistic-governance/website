@@ -1,0 +1,31 @@
+{
+  "name": "holistic-governance",
+  "version": "1.0.0",
+  "description": "",
+  "main": "build-articles.js",
+  "scripts": {
+    "start": "node server.js",
+    "build": "node build-articles.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nalefelder/holistic-governance.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/nalefelder/holistic-governance/issues"
+  },
+  "homepage": "https://github.com/nalefelder/holistic-governance#readme",
+  "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "express-session": "^1.19.0"
+  },
+  "devDependencies": {
+    "sharp": "^0.35.2"
+  }
+}

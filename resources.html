@@ -1,0 +1,2088 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Governance Resources &amp; Frameworks for Board Directors | Holistic Governance</title>
+  <meta name="description" content="Evidence-based governance resources for board directors and governance professionals — standards, frameworks, white papers, and best practice documents for aged care, hospitals, digital health, and cyber security oversight." />
+  <meta name="robots" content="index,follow" />
+  <meta name="author" content="Naomi Alefelder" />
+  <link rel="canonical" href="https://hg-au.com/resources.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Holistic Governance" />
+  <meta property="og:locale" content="en_AU" />
+  <meta property="og:url" content="https://hg-au.com/resources.html" />
+  <meta property="og:title" content="Governance Resources &amp; Frameworks for Board Directors | Holistic Governance" />
+  <meta property="og:description" content="Standards, frameworks and best-practice resources for board directors — covering aged care, hospital, digital health, and cyber security governance." />
+  <meta property="og:image" content="https://hg-au.com/og-image-v3.png" />
+  <meta property="og:image:width" content="2400" />
+  <meta property="og:image:height" content="1260" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Governance Resources &amp; Frameworks for Board Directors | Holistic Governance" />
+  <meta name="twitter:description" content="Standards, frameworks and best-practice resources for board directors — covering aged care, hospital, digital health, and cyber security governance." />
+  <meta name="twitter:image" content="https://hg-au.com/og-image-v3.png" />
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="preload" as="image" href="logo-hg-trimmed.png" fetchpriority="high">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    section { padding: 5rem 4rem; }
+
+    /* FILTERS */
+    .resources-section { background: var(--navy); }
+    .filter-bar { display: flex; gap: 0.6rem; margin-bottom: 3rem; flex-wrap: wrap; align-items: center; }
+    .filter-btn { padding: 0.5rem 1.2rem; border: 1px solid var(--border); background: transparent; color: var(--text-light); font-size: 0.78rem; letter-spacing: 0.1em; text-transform: uppercase; cursor: pointer; border-radius: 2px; transition: all 0.3s; font-family: 'DM Sans', sans-serif; }
+    .filter-btn:hover, .filter-btn.active { border-color: var(--sky); color: var(--sky); background: rgba(56,189,248,0.08); }
+    .filter-divider { width: 100%; height: 1px; background: var(--border); margin: 0.5rem 0; }
+
+    /* RESOURCE CARDS */
+    .resources-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+    .resource-card { background: var(--navy-mid); border: 1px solid var(--border); border-radius: 2px; padding: 2rem; transition: border-color 0.3s; display: flex; flex-direction: column; }
+    .resource-card:hover { border-color: var(--sky); }
+    .resource-card-header { display: flex; align-items: flex-start; gap: 0.8rem; margin-bottom: 0.8rem; }
+    .resource-icon { width: 36px; height: 36px; background: rgba(56,189,248,0.08); border: 1px solid var(--border); border-radius: 2px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .resource-icon svg { width: 18px; height: 18px; color: var(--sky); }
+    .resource-type-label { display: inline-block; padding: 0.2rem 0.6rem; background: rgba(56,189,248,0.08); border: 1px solid var(--border); color: var(--sky); font-size: 0.65rem; letter-spacing: 0.1em; text-transform: uppercase; border-radius: 2px; margin-top: 0.2rem; }
+    .resource-card h4 { font-family: 'Cormorant Garamond', serif; font-size: 1.25rem; color: var(--white); font-weight: 400; margin-bottom: 0.6rem; line-height: 1.3; }
+    .resource-card p { font-size: 0.85rem; color: #ffffff; line-height: 1.75; margin-bottom: 1.2rem; flex: 1; }
+    .resource-meta { font-size: 0.75rem; color: var(--text-light); margin-bottom: 1rem; }
+    .resource-categories { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 1.2rem; }
+    .resource-cat { padding: 0.2rem 0.6rem; border: 1px solid var(--border); border-radius: 20px; font-size: 0.7rem; color: var(--text-mid); }
+    .resource-link { display: inline-flex; align-items: center; gap: 0.5rem; color: var(--sky); font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase; text-decoration: none; border-bottom: 1px solid var(--border); padding-bottom: 0.3rem; transition: border-color 0.3s; margin-top: auto; align-self: flex-start; }
+    .resource-link:hover { border-color: var(--sky); }
+
+    /* LOADING & EMPTY STATE */
+    .loading-state { text-align: center; padding: 4rem 2rem; }
+    .loading-state p { color: var(--text-light); font-size: 0.95rem; }
+    .loading-dots::after { content: ''; animation: dots 1.5s steps(4,end) infinite; }
+    @keyframes dots { 0% { content: ''; } 25% { content: '.'; } 50% { content: '..'; } 75% { content: '...'; } }
+    .no-results { text-align: center; padding: 4rem 2rem; border: 1px solid var(--border); border-radius: 2px; display: none; }
+    .no-results p { color: var(--text-mid); font-size: 0.95rem; }
+    .result-count { font-size: 0.8rem; color: var(--text-light); margin-bottom: 1.5rem; }
+
+    /* PREMIUM CTA */
+    .premium-section { background: var(--navy-mid); }
+    .premium-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; margin-top: 2.5rem; }
+    .premium-features { list-style: none; }
+    .premium-features li { font-size: 0.9rem; color: #ffffff; line-height: 1.8; padding-left: 1.5rem; position: relative; margin-bottom: 0.5rem; }
+    .premium-features li::before { content: ''; position: absolute; left: 0; top: 0.6rem; width: 6px; height: 6px; background: var(--sky); border-radius: 1px; }
+    .premium-card { background: var(--navy); border: 1px solid var(--border); border-radius: 2px; padding: 3rem; position: relative; overflow: hidden; }
+    .premium-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: var(--sky); }
+    .premium-card h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; color: var(--white); font-weight: 300; margin-bottom: 1rem; }
+    .premium-card p { font-size: 0.9rem; color: #ffffff; line-height: 1.8; margin-bottom: 1.5rem; }
+    .premium-card .btn-primary { display: inline-block; text-decoration: none; }
+    .interest-form { display: flex; gap: 0.8rem; margin-top: 1.5rem; }
+    .interest-form input { flex: 1; padding: 0.8rem 1rem; background: var(--navy-mid); border: 1px solid var(--border); color: var(--cream); font-size: 0.85rem; border-radius: 2px; font-family: 'DM Sans', sans-serif; outline: none; transition: border-color 0.3s; }
+    .interest-form input:focus { border-color: var(--sky); }
+    .interest-form input::placeholder { color: var(--text-light); }
+    .interest-form button { padding: 0.8rem 1.5rem; background: var(--sky); color: var(--navy); font-size: 0.78rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; border: none; border-radius: 2px; cursor: pointer; white-space: nowrap; font-family: 'DM Sans', sans-serif; transition: background 0.3s; }
+    .interest-form button:hover { background: var(--sky-light); }
+
+    @media (max-width: 900px) {
+      .page-hero, section { padding: 6rem 1.5rem 3rem; }
+      .resources-grid { grid-template-columns: 1fr; }
+      .premium-layout { grid-template-columns: 1fr; }
+      .interest-form { flex-direction: column; }
+    }
+  </style>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-9PMGXF9Q9T"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-9PMGXF9Q9T');
+    gtag('config', 'AW-18073082985');
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "CollectionPage",
+        "@id": "https://hg-au.com/resources.html#collection",
+        "url": "https://hg-au.com/resources.html",
+        "name": "Healthcare Governance Resources for Board Directors",
+        "description": "Standards, frameworks, white papers and articles for board directors, healthcare, aged care, digital health, and cyber security governance.",
+        "isPartOf": { "@id": "https://hg-au.com/#organization" },
+        "inLanguage": "en-AU",
+        "about": [
+          { "@type": "Thing", "name": "Clinical Governance" },
+          { "@type": "Thing", "name": "Aged Care Quality Standards" },
+          { "@type": "Thing", "name": "Strengthened Aged Care Quality Standards" },
+          { "@type": "Thing", "name": "Quality Standards Resource Centre" },
+          { "@type": "Thing", "name": "Data Governance" },
+          { "@type": "Thing", "name": "Board Director Governance" },
+          { "@type": "Thing", "name": "Cyber Security Governance" }
+        ],
+        "author": { "@id": "https://hg-au.com/about.html#naomi" }
+      },
+      {
+        "@type": "Person",
+        "@id": "https://hg-au.com/about.html#naomi",
+        "name": "Naomi Alefelder",
+        "jobTitle": "Founding Director",
+        "worksFor": { "@id": "https://hg-au.com/#organization" },
+        "url": "https://hg-au.com/about.html",
+        "sameAs": ["https://www.linkedin.com/in/naomi-alefelder"]
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://hg-au.com/#organization",
+        "name": "Holistic Governance",
+        "url": "https://hg-au.com/",
+        "logo": "https://hg-au.com/logo-hg-trimmed.png",
+        "sameAs": ["https://www.linkedin.com/company/hg-au/", "https://www.youtube.com/@holisticgovernance", "https://www.instagram.com/holisticgovernance/"]
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://hg-au.com/" },
+          { "@type": "ListItem", "position": 2, "name": "Resources", "item": "https://hg-au.com/resources.html" }
+        ]
+      }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What are the Strengthened Aged Care Quality Standards?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The Strengthened Aged Care Quality Standards are the updated quality standards applying across residential care, home care, and Support at Home in Australia. They place greater emphasis on clinical care, food and nutrition, diversity, and the aged care workforce. They commenced alongside the Aged Care Act 2024 reforms and are regulated by the Aged Care Quality and Safety Commission."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the Quality Standards Resource Centre?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The Quality Standards Resource Centre is the Aged Care Quality and Safety Commission's central hub of guidance materials supporting aged care providers, governing bodies, and clinical leaders to understand and implement the Strengthened Aged Care Quality Standards. It includes quick reference guides, evidence guidance, audit methodology, and self-assessment tools — covering all seven standards across residential care, home care, and Support at Home."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What are the NSQHS Standards?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The National Safety and Quality Health Service (NSQHS) Standards are eight standards that provide a nationally consistent framework for safety and quality in health service organisations across Australia. They are mandatory for hospital accreditation and cover areas including clinical governance, partnering with consumers, medication safety, infection prevention, and comprehensive care."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What governance resources are available for board directors in Australia?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Key governance resources for Australian board directors include the AICD Not-for-Profit Governance Principles, ASX Corporate Governance Principles and Recommendations, ACNC Governance Standards for charities, ASIC director duties guidance, the ASD Essential Eight Cyber Security Framework, and sector-specific resources such as the AICD Aged Care Governance Practice Guide and Aged Care Board Governance obligations under the Aged Care Act 2024."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the Essential Eight cyber security framework?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The Essential Eight is a set of baseline cyber security mitigation strategies developed by the Australian Signals Directorate (ASD). It covers eight key areas: application control, patching applications, configuring Microsoft Office macros, user application hardening, restricting administrative privileges, patching operating systems, multi-factor authentication, and regular backups. It is the recommended minimum cyber security baseline for all Australian organisations."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the Aged Care Act 2024?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The Aged Care Act 2024 is Australia's new rights-based aged care legislation, replacing the Aged Care Act 1997. It strengthens the rights of older Australians and reforms provider obligations, governance requirements, and regulatory frameworks. It introduced strengthened quality standards, new provider governance obligations, and enhanced enforcement powers for the Aged Care Quality and Safety Commission."
+        }
+      }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://hg-au.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Resources", "item": "https://hg-au.com/resources.html" }
+    ]
+  }
+  </script>
+
+  <!-- RESOURCES_JSONLD_START -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Holistic Governance Resource Library",
+  "description": "Curated standards, frameworks, white papers, and best practice documents for board directors, governance professionals, and healthcare leaders.",
+  "url": "https://hg-au.com/resources.html",
+  "numberOfItems": 47,
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "item": {
+        "@type": "LearningResource",
+        "name": "A New Aged Care Act — Summary of Key Changes",
+        "description": "Overview of the new rights-based Aged Care Act, replacing the Aged Care Act 1997. Covers strengthened quality standards, provider obligations, and consumer rights.",
+        "url": "https://www.health.gov.au/our-work/aged-care-act",
+        "learningResourceType": "Regulatory",
+        "about": [
+          "Aged Care",
+          "Governance"
+        ],
+        "provider": {
+          "@type": "Organization",
+          "name": "Australian Government Department of Health and Aged Care"
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "item": {
+        "@type": "LearningResource",
+        "name": "ACNC Governance Standards",
+        "description": "The five governance standards that registered charities must meet — covering purposes, accountability, compliance, suitability of responsible persons, and duties of responsible persons. Essential for not-for-profit board directors.",
+        "url": "https://www.acnc.gov.au/for-charities/manage-your-charity/governance-hub/governance-standards",
+        "learningResourceType": "Standard",
+        "about": [
+          "Board Director",
+          "Governance"
+        ],
+        "provider": {
+          "@type": "Organization",
+          "name": "Australian Charities and Not-for-profits Commission (ACNC)"
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "item": {
+        "@type": "LearningResource",
+        "name": "Aged Care Act 2024",
+        "description": "The full text of the Aged Care Act 2024 — the new rights-based legislation replacing the Aged Care Act 1997, strengthening the rights of older Australians and reforming provider obligations and regulatory requirements.",
+        "url": "https://www.legislation.gov.au/C2024A00104/latest/text",
+        "learningResourceType": "Regulatory",
+        "about": [
+          "Aged Care",
+          "Governance"
+        ],
+        "provider": {
+          "@type": "Organization",
+          "name": "Australian Government — Federal Register of Legislation"
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "item": {
+        "@type": "LearningResource",
+        "name": "Aged Care Board Governance — Provider Obligations",
+        "description": "Guidance on board governance obligations specific to aged care providers under the Aged Care Act 2024 — covering responsible person requirements, reporting obligations, and quality oversight duties for governing bodies.",
+        "url": "https://www.agedcarequality.gov.au/providers/provider-governance/provider-governance-obligations",
+        "learningResourceType": "Regulatory",
+        "about": [
+          "Board Director"
+        ],
+        "provider": {
+          "@type": "Organization",
+          "name": "Aged Care Quality and Safety Commission"
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 5,
+      "item": {
+        "@type": "LearningResource",
+        "name": "AICD Director Tools and Resources",
+        "description": "Practical resources for board directors including board evaluation templates, meeting guides, governance checklists, and director professional development pathways.",
+        "url": "https://www.aicd.com.au/tools-and-resources.html",
+        "learningResourceType": "Framework",
+        "about": [
+          "Board Director"
+        ],
+        "provider": {
+          "@type": "Organization",
+          "name": "Australian Institute of Company Directors (AICD)"
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 6,
+      "item": {
+        "@type": "LearningResource",
+        "name": "AICD Governance Practice Guide — Aged Care",
+        "description": "AICD’s dedicated governance practice guide for aged care board directors — covering the unique governance challenges in the aged care sector, board oversight of quality and safety, regulatory obligations, and practical guidance for directors navigating aged care reform.",
+        "url": "https://www.aicd.com.au/content/dam/aicd/images/covers-500x707px/231218-aicd-aged-care-final-for-web.pdf",
+        "learningResourceType": "Framework",
+        "about": [
+          "Board Director",
+          "Aged Care"
+        ],
+        "provider": {
+          "@type": "Organization",
+          "name": "Australian Institute of Company Directors (AICD)"
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 7,
+      "item": {
+        "@type": "LearningResource",
+        "name": "AICD Not-for-Profit Governance Principles",
+        "description": "Governance principles specifically designed for not-for-profit organisations, covering board composition, strategy, risk, performance, and accountability — widely adopted across aged care and health service boards.",
+        "url": "https://www.aicd.com.au/corporate-governance-sectors/not-for-profit/principles.html",
+        "learningResourceType": "Framework",
+        "about": [
+          "Board Director"
+        ],
+        "provider": {
+          "@type": "Organization",
+          "name": "Australian Institute of Company Directors (AICD)"
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 8,
+      "item": {
+        "@type": "LearningResource",
+        "name": "Antimicrobial Stewardship Clinical Care Standard",
+        "description": "Quality statements to guide appropriate antimicrobial use across health care settings, reducing resistance and improving patient outcomes.",
+        "url": "https://www.safetyandquality.gov.au/standards/clinical-care-standards/antimicrobial-stewardship-clinical-care-standard",
+        "learningResourceType": "Standard",
+        "about": [
+          "Aged Care",
+          "Governance"
+        ],
+        "provider": {
+          "@type": "Organization",
+          "name": "Australian Commission on Safety and Quality in Health Care"
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 9,
+      "item": {
+        "@type": "LearningResource",
+        "name": "ASD Essential Eight Cyber Security Framework",
+        "description": "The Australian Signals Directorate’s Essential Eight mitigation strategies — the baseline cyber security framework recommended for all Australian organisations. Covers application control, patching, macro restrictions, user application hardening, admin privilege restriction, multi-factor authentication, backups, and operating system hardening.",
+        "url": "https://www.cyber.gov.au/business-government/asds-cyber-security-frameworks/essential-eight",
+        "learningResourceType": "Framework",
+        "about": [
+          "Cybersecurity"
+        ],
+        "provider": {
+          "@type": "Organization",
+          "name": "Australian Signals Directorate (ASD)"
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 10,
+      "item": {
+        "@type": "LearningResource",
+        "name": "ASX Corporate Governance Principles and Recommendations",
+        "description": "The ASX Corporate Governance Council’s principles and recommendations — the benchmark for corporate governance in Australia, covering board structure, remuneration, risk management, and ethical decision-making.",
+        "url": "https://www.asx.com.au/about/regulation/asx-corporate-governance-council",
+        "learningResourceType": "Framework",
+        "about": [
+          "Board Director"
+        ],
+        "provider": {
+          "@type": "Organization",
+          "name": "ASX Corporate Governance Council"
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 11,
+      "item": {
+        "@type": "LearningResource",
+        "name": "Australian Charter of Healthcare Rights",
+        "description": "Describes the rights of patients and consumers when accessing health care services in Australia — a foundational document for consumer-centred governance and accreditation.",
+        "url": "https://www.safetyandquality.gov.au/our-work/partnering-consumers/australian-charter-healthcare-rights",
+        "learningResourceType": "Regulatory",
+        "about": [
+          "Hospital",
+          "Governance"
+        ],
+        "provider": {
+          "@type": "Organization",
+          "name": "Australian Commission on Safety and Quality in Health Care"
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 12,
+      "item": {
+        "@type": "LearningResource",
+        "name": "Best-practice cyber security governance",
+        "description": "An overview of how to incorporate cyber security policies and governance into your organisational processes. (Intermediate Level) ",
+        "url": "https://digitaltransformation.org.au/guides/cyber-security/best-practice-cyber-security-governance",
+        "learningResourceType": "Framework",
+        "about": [
+          "Cybersecurity"
+        ],
+        "provider": {
+          "@type": "Organization",
+          "name": "Infoxchange "
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 13,
+      "item": {
+        "@type": "LearningResource",
+        "name": "Care Minutes in Residential Aged Care",
+        "description": "Mandatory care minute targets requiring residential aged care providers to deliver a minimum amount of direct care time per resident per day — including registered nurse time. A key workforce and quality compliance obligation.",
+        "url": "https://www.health.gov.au/our-work/care-minutes-registered-nurses-aged-care/care-minutes",
+        "learningResourceType": "Regulatory",
+        "about": [
+          "Aged Care",
+          "Governance"
+        ],
+        "provider": {
+          "@type": "Organization",
+          "name": "Australian Government Department of Health and Aged Care"
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 14,
+      "item": {
+        "@type": "LearningResource",
+        "name": "Clinical Care Standards",
+        "description": "Evidence-based statements describing the care patients should be offered for specific clinical conditions. Designed to reduce unwarranted variation.",
+        "url": "https://www.safetyandquality.gov.au/standards/clinical-care-standards",
+        "learningResourceType": "Standard",
+        "about": [
+          "Hospital"
+        ],
+        "provider": {
+          "@type": "Organization",
+          "name": "Australian Commission on Safety and Quality in Health Care"
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 15,
+      "item": {
+        "@type": "LearningResource",
+        "name": "Clinical Coding Practice Framework",
+        "description": "National framework for clinical coding practice in Australia — setting out the principles, governance, workforce standards, and quality assurance requirements for accurate and consistent clinical coding.",
+        "url": "https://www.ihacpa.gov.au/resources/clinical-coding-practice-framework",
+        "learningResourceType": "Framework",
+        "about": [
+          "Hospital",
+          "Digital Health"
+        ],
+        "provider": {
+          "@type": "Organization",
+          "name": "Independent Health and Aged Care Pricing Authority (IHACPA)"
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 16,
+      "item": {
+        "@type": "LearningResource",
+        "name": "Clinical Governance Standard",
+        "description": "The national clinical governance standard covering clinical risk, quality oversight, safety culture, and performance monitoring across health service organisations.",
+        "url": "https://www.safetyandquality.gov.au/our-work/clinical-governance/clinical-governance-standard",
+        "learningResourceType": "Framework",
+        "about": [
+          "Hospital",
+          "Governance"
+        ],
+        "provider": {
+          "@type": "Organization",
+          "name": "Australian Commission on Safety and Quality in Health Care"
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 17,
+      "item": {
+        "@type": "LearningResource",
+        "name": "Code of Conduct for Aged Care",
+        "description": "The legislated code of conduct setting out the behaviour and standards expected of aged care workers and providers — covering safe, respectful, and person-centred care. Enforceable under the new Aged Care Act.",
+        "url": "https://www.agedcarequality.gov.au/for-providers/code-conduct",
+        "learningResourceType": "Regulatory",
+        "about": [
+          "Aged Care",
+          "Support at Home",
+          "Governance"
+        ],
+        "provider": {
+          "@type": "Organization",
+          "name": "Aged Care Quality and Safety Commission"
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 18,
+      "item": {
+        "@type": "LearningResource",
+        "name": "COSO Enterprise Risk Management Framework",
+        "description": "The globally recognised framework for enterprise risk management, integrating strategy and performance. Provides principles for designing, implementing, and evaluating risk management across an organisation.",
+        "url": "https://www.coso.org/guidance-on-ic",
+        "learningResourceType": "Framework",
+        "about": [
+          "Governance"
+        ],
+        "provider": {
+          "@type": "Organization",
+          "name": "Committee of Sponsoring Organizations of the Treadway Commission (COSO)"
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 19,
+      "item": {
+        "@type": "LearningResource",
+        "name": "Cyber security principles",
+        "description": "Strategic guidance on how an organisation can protect their information technology and operational technology systems from cyber threats. These cyber security principles are grouped into six functions.",
+        "url": "https://www.cyber.gov.au/business-government/asds-cyber-security-frameworks/ism/cyber-security-principles",
+        "learningResourceType": "Framework",
+        "about": [
+          "Cybersecurity"
+        ],
+        "provider": {
+          "@type": "Organization",
+          "name": "Australian Signals Directorate"
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 20,
+      "item": {
+        "@type": "LearningResource",
+        "name": "Director Duties and Responsibilities under the Corporations Act",
+        "description": "Summary of the key legal duties of directors under Australian law — including duty of care and diligence, good faith, proper purpose, and the duty not to trade while insolvent.",
+        "url": "https://asic.gov.au/for-business/running-a-company/company-officeholder-duties/",
+        "learningResourceType": "Regulatory",
+        "about": [
+          "Board Director"
+        ],
+        "provider": {
+          "@type": "Organization",
+          "name": "Australian Securities and Investments Commission (ASIC)"
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 21,
+      "item": {
+        "@type": "LearningResource",
+        "name": "ELDAC Palliative Care",
+        "description": "Evidence-based resources supporting aged care providers to deliver quality palliative care and end-of-life care within residential and community settings.",
+        "url": "https://www.eldac.com.au/",
+        "learningResourceType": "Framework",
+        "about": [
+          "Aged Care"
+        ],
+        "provider": {
+          "@type": "Organization",
+          "name": "End of Life Directions for Aged Care (ELDAC)"
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 22,
+      "item": {
+        "@type": "LearningResource",
+        "name": "FHIR (Fast Healthcare Interoperability Resources)",
+        "description": "The leading global standard for health care data exchange. FHIR defines how health information is structured, shared, and accessed across systems.",
+        "url": "https://www.hl7.org/fhir/",
+        "learningResourceType": "Framework",
+        "about": [
+          "Digital Health"
+        ],
+        "provider": {
+          "@type": "Organization",
+          "name": "HL7 International"
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 23,
+      "item": {
+        "@type": "LearningResource",
+        "name": "Financial & Prudential Standards - Aged Care",
+        "description": "Information on how registered providers must comply with the Financial and Prudential Standards that apply to them as a condition of their registration. ",
+        "url": "https://www.agedcarequality.gov.au/providers/financial-prudential-standards",
+        "learningResourceType": "Standard",
+        "about": [
+          "Aged Care",
+          "Governance",
+          "Support at Home",
+          "Board Director"
+        ],
+        "provider": {
+          "@type": "Organization",
+          "name": "Aged Care Quality and Safety Commission"
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 24,
+      "item": {
+        "@type": "LearningResource",
+        "name": "Governance Institute of Australia — Good Governance Guide",
+        "description": "Comprehensive governance guidance covering board roles and responsibilities, meeting procedures, conflicts of interest, and organisational governance frameworks for directors and company secretaries.",
+        "url": "https://www.governanceinstitute.com.au/resources/governance-directions/",
+        "learningResourceType": "Framework",
+        "about": [
+          "Board Director",
+          "Governance"
+        ],
+        "provider": {
+          "@type": "Organization",
+          "name": "Governance Institute of Australia"
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 25,
+      "item": {
+        "@type": "LearningResource",
+        "name": "Governance Toolkit: Cyber security",
+        "description": "This guidance defines cyber security, outlines your charity's legal obligations, and explains how to manage the risks of cyber attacks. There are also additional resources available, including a cyber security assessment and checklist, as well as templates for your charity's use.",
+        "url": "https://www.acnc.gov.au/for-charities/manage-your-charity/governance-hub/governance-toolkit/governance-toolkit-cyber-security",
+        "learningResourceType": "Framework",
+        "about": [
+          "Cybersecurity"
+        ],
+        "provider": {
+          "@type": "Organization",
+          "name": "ACNC"
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 26,
+      "item": {
+        "@type": "LearningResource",
+        "name": "Guidelines for Cyber Security Roles",
+        "description": "ASD’s guidelines defining cyber security roles and responsibilities within organisations — including the role of boards and executives in cyber security governance, oversight, and risk management.",
+        "url": "https://www.cyber.gov.au/business-government/asds-cyber-security-frameworks/ism/cyber-security-guidelines/guidelines-for-cyber-security-roles",
+        "learningResourceType": "Framework",
+        "about": [
+          "Cybersecurity"
+        ],
+        "provider": {
+          "@type": "Organization",
+          "name": "Australian Signals Directorate (ASD)"
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 27,
+      "item": {
+        "@type": "LearningResource",
+        "name": "HL7 International",
+        "description": "The global authority for health data interoperability standards — including HL7 v2 messaging, CDA clinical documents, and FHIR. Essential for any organisation working with digital health data exchange.",
+        "url": "https://www.hl7.org/",
+        "learningResourceType": "Standard",
+        "about": [
+          "Digital Health"
+        ],
+        "provider": {
+          "@type": "Organization",
+          "name": "Health Level Seven International"
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 28,
+      "item": {
+        "@type": "LearningResource",
+        "name": "Home-Level Care Minutes Performance in Residential Aged Care",
+        "description": "Reporting on individual residential aged care home performance against mandatory care minute targets — enabling providers, consumers, and regulators to monitor direct care delivery at the facility level.",
+        "url": "https://www.health.gov.au/resources/publications/home-level-care-minutes-performance-in-residential-aged-care",
+        "learningResourceType": "Regulatory",
+        "about": [
+          "Aged Care",
+          "Governance"
+        ],
+        "provider": {
+          "@type": "Organization",
+          "name": "Australian Government Department of Health and Aged Care"
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 29,
+      "item": {
+        "@type": "LearningResource",
+        "name": "ICD-10-AM / ACHI / ACS Classification (IHACPA)",
+        "description": "Australia’s official clinical coding classification system — covering ICD-10-AM (diagnosis coding), ACHI (procedure coding), and ACS (Australian Coding Standards). The national standard for hospital activity data and casemix funding.",
+        "url": "https://www.ihacpa.gov.au/resources/icd-10-amachiacs-thirteenth-edition",
+        "learningResourceType": "Standard",
+        "about": [
+          "Hospital",
+          "Digital Health"
+        ],
+        "provider": {
+          "@type": "Organization",
+          "name": "Independent Hospital Pricing Authority (IHPA)"
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 30,
+      "item": {
+        "@type": "LearningResource",
+        "name": "Independent Health and Aged Care Pricing Authority (IHACPA)",
+        "description": "The national authority responsible for health care and aged care pricing, classification, and costing — including casemix funding models, activity-based funding, and the ICD-10-AM classification system.",
+        "url": "https://www.ihacpa.gov.au/",
+        "learningResourceType": "Regulatory",
+        "about": [
+          "Hospital",
+          "Aged Care",
+          "Governance"
+        ],
+        "provider": {
+          "@type": "Organization",
+          "name": "Independent Health and Aged Care Pricing Authority"
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 31,
+      "item": {
+        "@type": "LearningResource",
+        "name": "Information security manual",
+        "description": "The ISM is intended for chief information security officers, chief information officers, cyber security professionals and information technology managers.",
+        "url": "https://www.cyber.gov.au/business-government/asds-cyber-security-frameworks/ism",
+        "learningResourceType": "Framework",
+        "about": [],
+        "provider": {
+          "@type": "Organization",
+          "name": "Australian Signals Directorate"
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 32,
+      "item": {
+        "@type": "LearningResource",
+        "name": "Integrated Health and Aged Care Services Module",
+        "description": "Module supporting integrated care across health and aged care settings — designed to complement the NSQHS Standards and Aged Care Quality Standards for organisations delivering services across both sectors.",
+        "url": "https://www.safetyandquality.gov.au/standards/integrated-health-and-aged-care-services-module",
+        "learningResourceType": "Standard",
+        "about": [
+          "Aged Care",
+          "Hospital",
+          "Governance"
+        ],
+        "provider": {
+          "@type": "Organization",
+          "name": "Australian Commission on Safety and Quality in Health Care"
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 33,
+      "item": {
+        "@type": "LearningResource",
+        "name": "International Organization for Standardization (ISO)",
+        "description": "The global body for developing and publishing international standards across industries — including quality management (ISO 9001), information security (ISO 27001), and risk management (ISO 31000) frameworks widely adopted in healthcare governance.",
+        "url": "https://www.iso.org/home.html",
+        "learningResourceType": "Standard",
+        "about": [
+          "Governance"
+        ],
+        "provider": {
+          "@type": "Organization",
+          "name": "International Organization for Standardization"
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 34,
+      "item": {
+        "@type": "LearningResource",
+        "name": "Interoperability Roadmap for Australian Healthcare",
+        "description": "Strategic roadmap for achieving seamless, secure data sharing across the Australian health system using FHIR and national standards.",
+        "url": "https://www.digitalhealth.gov.au/about-us/strategies-and-plans/national-healthcare-interoperability-plan",
+        "learningResourceType": "Framework",
+        "about": [
+          "Digital Health"
+        ],
+        "provider": {
+          "@type": "Organization",
+          "name": "Australian Digital Health Agency"
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 35,
+      "item": {
+        "@type": "LearningResource",
+        "name": "National Digital Health Strategy",
+        "description": "Australia’s framework for a digitally enabled health system — setting out priorities for secure, interoperable, and consumer-centred digital health.",
+        "url": "https://www.digitalhealth.gov.au/national-digital-health-strategy",
+        "learningResourceType": "Framework",
+        "about": [
+          "Digital Health",
+          "Governance"
+        ],
+        "provider": {
+          "@type": "Organization",
+          "name": "Australian Digital Health Agency"
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 36,
+      "item": {
+        "@type": "LearningResource",
+        "name": "National Framework for Digital Health Standards",
+        "description": "Establishes a coordinated approach to digital health standards adoption in Australia, including interoperability, terminology, and clinical information standards.",
+        "url": "https://www.digitalhealth.gov.au/about-us/strategies-and-plans",
+        "learningResourceType": "Framework",
+        "about": [
+          "Digital Health"
+        ],
+        "provider": {
+          "@type": "Organization",
+          "name": "Australian Digital Health Agency"
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 37,
+      "item": {
+        "@type": "LearningResource",
+        "name": "National Safety and Quality Health Service (NSQHS) Standards",
+        "description": "The eight NSQHS Standards provide a nationally consistent framework for safety and quality in health service organisations. Mandatory for accreditation.",
+        "url": "https://www.safetyandquality.gov.au/standards/nsqhs-standards",
+        "learningResourceType": "Standard",
+        "about": [
+          "Hospital",
+          "Governance"
+        ],
+        "provider": {
+          "@type": "Organization",
+          "name": "Australian Commission on Safety and Quality in Health Care"
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 38,
+      "item": {
+        "@type": "LearningResource",
+        "name": "NDIS Practice Standards",
+        "description": "Quality standards for NDIS providers covering rights and responsibilities, governance, service delivery, and the service environment.",
+        "url": "https://www.ndiscommission.gov.au/rules-and-standards/ndis-practice-standards",
+        "learningResourceType": "Standard",
+        "about": [
+          "Governance"
+        ],
+        "provider": {
+          "@type": "Organization",
+          "name": "NDIS Quality and Safeguards Commission"
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 39,
+      "item": {
+        "@type": "LearningResource",
+        "name": "Quality Indicator Program (QI Program)",
+        "description": "National program requiring residential aged care providers to collect and report quality indicator data across key care domains — driving transparency and continuous improvement.",
+        "url": "https://www.health.gov.au/our-work/national-aged-care-mandatory-quality-indicator-program-qi-program",
+        "learningResourceType": "Regulatory",
+        "about": [
+          "Aged Care",
+          "Governance"
+        ],
+        "provider": {
+          "@type": "Organization",
+          "name": "Australian Government Department of Health and Aged Care"
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 40,
+      "item": {
+        "@type": "LearningResource",
+        "name": "Quality Standards Resource Centre",
+        "description": "The Aged Care Quality and Safety Commission's central hub of guidance materials, quick reference guides, evidence guidance, audit methodology, and self-assessment tools to help aged care providers, governing bodies, and clinical leaders implement and demonstrate compliance with the Strengthened Aged Care Quality Standards.",
+        "url": "https://www.agedcarequality.gov.au/quality-standards",
+        "learningResourceType": "Framework",
+        "about": [
+          "Aged Care",
+          "Support at Home",
+          "Board Director",
+          "Governance"
+        ],
+        "provider": {
+          "@type": "Organization",
+          "name": "Aged Care Quality and Safety Commission"
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 41,
+      "item": {
+        "@type": "LearningResource",
+        "name": "Royal Commission into Aged Care — Final Report",
+        "description": "The landmark report with 148 recommendations for reforming aged care in Australia. Essential reading for providers navigating the reform landscape.",
+        "url": "https://www.royalcommission.gov.au/aged-care/final-report",
+        "learningResourceType": "Regulatory",
+        "about": [
+          "Aged Care",
+          "Governance"
+        ],
+        "provider": {
+          "@type": "Organization",
+          "name": "Royal Commission into Aged Care Quality and Safety"
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 42,
+      "item": {
+        "@type": "LearningResource",
+        "name": "Serious Incident Response Scheme (SIRS)",
+        "description": "Framework requiring aged care providers to identify, record, manage, resolve, and report serious incidents — a key compliance obligation.",
+        "url": "https://www.agedcarequality.gov.au/providers/serious-incident-response-scheme",
+        "learningResourceType": "Regulatory",
+        "about": [
+          "Aged Care",
+          "Governance"
+        ],
+        "provider": {
+          "@type": "Organization",
+          "name": "Aged Care Quality and Safety Commission"
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 43,
+      "item": {
+        "@type": "LearningResource",
+        "name": "Single Assessment System",
+        "description": "The single assessment system for aged care — streamlining how older Australians are assessed for Support at Home and residential care, replacing multiple assessment pathways with one consistent framework.",
+        "url": "https://www.health.gov.au/our-work/single-assessment-system?language=en",
+        "learningResourceType": "Regulatory",
+        "about": [
+          "Support at Home",
+          "Aged Care",
+          "Governance"
+        ],
+        "provider": {
+          "@type": "Organization",
+          "name": "Australian Government Department of Health and Aged Care"
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 44,
+      "item": {
+        "@type": "LearningResource",
+        "name": "SNOMED CT (Clinical Terminology)",
+        "description": "The international clinical terminology standard used for consistent, computable representation of clinical concepts across electronic health records and health information systems.",
+        "url": "https://www.healthterminologies.gov.au/access-clinical-terminology/access-snomed-ct-au/",
+        "learningResourceType": "Standard",
+        "about": [
+          "Digital Health",
+          "Hospital"
+        ],
+        "provider": {
+          "@type": "Organization",
+          "name": "National Clinical Terminology Service (NCTS)"
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 45,
+      "item": {
+        "@type": "LearningResource",
+        "name": "Strengthened Aged Care Quality Standards",
+        "description": "The strengthened standards applying across residential care, home care, and Support at Home — with greater emphasis on clinical care, food and nutrition, diversity, and the aged care workforce. Commenced alongside the Aged Care Act 2024 reforms.",
+        "url": "https://www.agedcarequality.gov.au/providers/quality-standards",
+        "learningResourceType": "Standard",
+        "about": [
+          "Aged Care",
+          "Support at Home",
+          "Governance"
+        ],
+        "provider": {
+          "@type": "Organization",
+          "name": "Aged Care Quality and Safety Commission"
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 46,
+      "item": {
+        "@type": "LearningResource",
+        "name": "Support at Home Program",
+        "description": "The new Support at Home program replacing the Commonwealth Home Support Programme (CHSP), Home Care Packages, and Short-Term Restorative Care. A single unified program for in-home aged care support from July 2025.",
+        "url": "https://www.health.gov.au/our-work/support-at-home",
+        "learningResourceType": "Regulatory",
+        "about": [
+          "Support at Home",
+          "Aged Care"
+        ],
+        "provider": {
+          "@type": "Organization",
+          "name": "Australian Government Department of Health and Aged Care"
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 47,
+      "item": {
+        "@type": "LearningResource",
+        "name": "Support at Home Program Manual",
+        "description": "Operational guidance for providers delivering services under the Support at Home program — covering eligibility, classification, funding, and service delivery requirements.",
+        "url": "https://www.health.gov.au/resources/publications/support-at-home-program-manual-a-guide-for-registered-providers",
+        "learningResourceType": "Regulatory",
+        "about": [
+          "Support at Home",
+          "Aged Care"
+        ],
+        "provider": {
+          "@type": "Organization",
+          "name": "Australian Government Department of Health and Aged Care"
+        }
+      }
+    }
+  ]
+}
+</script>
+  <!-- RESOURCES_JSONLD_END -->
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="logo"><img src="logo-hg-trimmed.png" alt="Holistic Governance" width="351" height="524"><span class="logo-name">Holistic <span>Governance</span></span></a>
+  <button class="hamburger" onclick="this.nextElementSibling.classList.toggle('open')">&#9776;</button>
+  <ul>
+    <li><a href="about.html">About</a></li>
+    <li><a href="healthcare.html">Solutions</a></li>
+    <li><a href="resources.html" class="active">Resources</a></li>
+    <li class="nav-contact-wrapper">
+      <button class="nav-cta" onclick="this.nextElementSibling.classList.toggle('open')">Contact</button>
+      <div class="nav-contact-popup">
+        <a href="tel:0405515300"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>0405 515 300</a>
+        <a href="mailto:info@hg-au.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>info@hg-au.com</a>
+        <a href="proposal-enquiry.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>Submit a Proposal</a>
+      </div>
+    </li>
+  </ul>
+</nav>
+
+<div class="page-hero">
+  <div class="breadcrumb"><a href="index.html">Home</a> / Resources</div>
+  <h1>Evidence-Based Resources</h1>
+  <p>Curated standards, frameworks, white papers, and best practice documents to support board directors, governance professionals, and healthcare leaders across quality, compliance, and cyber security.</p>
+</div>
+
+<!-- RESOURCES -->
+<section class="resources-section">
+  <div class="section-label">Resource Library</div>
+  <h2>Browse Resources</h2>
+
+  <!-- Combined filters -->
+  <div class="filter-bar" style="margin-top:2rem;" id="filterBar"></div>
+
+  <!-- Result count -->
+  <div class="result-count" id="resultCount"></div>
+
+  <!-- Loading state -->
+  <div class="loading-state" id="loadingState">
+    <p>Loading resources<span class="loading-dots"></span></p>
+  </div>
+
+  <!-- No results -->
+  <div class="no-results" id="noResults">
+    <p>No resources match the selected filters. Try a different combination.</p>
+  </div>
+
+  <!-- Resource grid (server-rendered at build time for AI crawlers; JS overwrites with live data for human filtering) -->
+  <!-- RESOURCES_GRID_START -->
+<div class="resources-grid" id="resourcesGrid">
+<div class="resource-card">
+  <div class="resource-card-header">
+    <div class="resource-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg></div>
+    <div><span class="resource-type-label">Regulatory</span></div>
+  </div>
+  <h4>A New Aged Care Act — Summary of Key Changes</h4>
+  <p>Overview of the new rights-based Aged Care Act, replacing the Aged Care Act 1997. Covers strengthened quality standards, provider obligations, and consumer rights.</p>
+  <div class="resource-meta">Australian Government Department of Health and Aged Care</div>
+  <div class="resource-categories"><span class="resource-cat">Aged Care</span><span class="resource-cat">Governance</span></div>
+  <a href="https://www.health.gov.au/our-work/aged-care-act" target="_blank" rel="noopener" class="resource-link">View Resource &rarr;</a>
+</div>
+<div class="resource-card">
+  <div class="resource-card-header">
+    <div class="resource-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg></div>
+    <div><span class="resource-type-label">Standard</span></div>
+  </div>
+  <h4>ACNC Governance Standards</h4>
+  <p>The five governance standards that registered charities must meet — covering purposes, accountability, compliance, suitability of responsible persons, and duties of responsible persons. Essential for not-for-profit board directors.</p>
+  <div class="resource-meta">Australian Charities and Not-for-profits Commission (ACNC)</div>
+  <div class="resource-categories"><span class="resource-cat">Board Director</span><span class="resource-cat">Governance</span></div>
+  <a href="https://www.acnc.gov.au/for-charities/manage-your-charity/governance-hub/governance-standards" target="_blank" rel="noopener" class="resource-link">View Resource &rarr;</a>
+</div>
+<div class="resource-card">
+  <div class="resource-card-header">
+    <div class="resource-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg></div>
+    <div><span class="resource-type-label">Regulatory</span></div>
+  </div>
+  <h4>Aged Care Act 2024</h4>
+  <p>The full text of the Aged Care Act 2024 — the new rights-based legislation replacing the Aged Care Act 1997, strengthening the rights of older Australians and reforming provider obligations and regulatory requirements.</p>
+  <div class="resource-meta">Australian Government — Federal Register of Legislation</div>
+  <div class="resource-categories"><span class="resource-cat">Aged Care</span><span class="resource-cat">Governance</span></div>
+  <a href="https://www.legislation.gov.au/C2024A00104/latest/text" target="_blank" rel="noopener" class="resource-link">View Resource &rarr;</a>
+</div>
+<div class="resource-card">
+  <div class="resource-card-header">
+    <div class="resource-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg></div>
+    <div><span class="resource-type-label">Regulatory</span></div>
+  </div>
+  <h4>Aged Care Board Governance — Provider Obligations</h4>
+  <p>Guidance on board governance obligations specific to aged care providers under the Aged Care Act 2024 — covering responsible person requirements, reporting obligations, and quality oversight duties for governing bodies.</p>
+  <div class="resource-meta">Aged Care Quality and Safety Commission</div>
+  <div class="resource-categories"><span class="resource-cat">Board Director</span></div>
+  <a href="https://www.agedcarequality.gov.au/providers/provider-governance/provider-governance-obligations" target="_blank" rel="noopener" class="resource-link">View Resource &rarr;</a>
+</div>
+<div class="resource-card">
+  <div class="resource-card-header">
+    <div class="resource-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg></div>
+    <div><span class="resource-type-label">Framework</span></div>
+  </div>
+  <h4>AICD Director Tools and Resources</h4>
+  <p>Practical resources for board directors including board evaluation templates, meeting guides, governance checklists, and director professional development pathways.</p>
+  <div class="resource-meta">Australian Institute of Company Directors (AICD)</div>
+  <div class="resource-categories"><span class="resource-cat">Board Director</span></div>
+  <a href="https://www.aicd.com.au/tools-and-resources.html" target="_blank" rel="noopener" class="resource-link">View Resource &rarr;</a>
+</div>
+<div class="resource-card">
+  <div class="resource-card-header">
+    <div class="resource-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg></div>
+    <div><span class="resource-type-label">Framework</span></div>
+  </div>
+  <h4>AICD Governance Practice Guide — Aged Care</h4>
+  <p>AICD’s dedicated governance practice guide for aged care board directors — covering the unique governance challenges in the aged care sector, board oversight of quality and safety, regulatory obligations, and practical guidance for directors navigating aged care reform.</p>
+  <div class="resource-meta">Australian Institute of Company Directors (AICD)</div>
+  <div class="resource-categories"><span class="resource-cat">Board Director</span><span class="resource-cat">Aged Care</span></div>
+  <a href="https://www.aicd.com.au/content/dam/aicd/images/covers-500x707px/231218-aicd-aged-care-final-for-web.pdf" target="_blank" rel="noopener" class="resource-link">View Resource &rarr;</a>
+</div>
+<div class="resource-card">
+  <div class="resource-card-header">
+    <div class="resource-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg></div>
+    <div><span class="resource-type-label">Framework</span></div>
+  </div>
+  <h4>AICD Not-for-Profit Governance Principles</h4>
+  <p>Governance principles specifically designed for not-for-profit organisations, covering board composition, strategy, risk, performance, and accountability — widely adopted across aged care and health service boards.</p>
+  <div class="resource-meta">Australian Institute of Company Directors (AICD)</div>
+  <div class="resource-categories"><span class="resource-cat">Board Director</span></div>
+  <a href="https://www.aicd.com.au/corporate-governance-sectors/not-for-profit/principles.html" target="_blank" rel="noopener" class="resource-link">View Resource &rarr;</a>
+</div>
+<div class="resource-card">
+  <div class="resource-card-header">
+    <div class="resource-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg></div>
+    <div><span class="resource-type-label">Standard</span></div>
+  </div>
+  <h4>Antimicrobial Stewardship Clinical Care Standard</h4>
+  <p>Quality statements to guide appropriate antimicrobial use across health care settings, reducing resistance and improving patient outcomes.</p>
+  <div class="resource-meta">Australian Commission on Safety and Quality in Health Care</div>
+  <div class="resource-categories"><span class="resource-cat">Aged Care</span><span class="resource-cat">Governance</span></div>
+  <a href="https://www.safetyandquality.gov.au/standards/clinical-care-standards/antimicrobial-stewardship-clinical-care-standard" target="_blank" rel="noopener" class="resource-link">View Resource &rarr;</a>
+</div>
+<div class="resource-card">
+  <div class="resource-card-header">
+    <div class="resource-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg></div>
+    <div><span class="resource-type-label">Framework</span></div>
+  </div>
+  <h4>ASD Essential Eight Cyber Security Framework</h4>
+  <p>The Australian Signals Directorate’s Essential Eight mitigation strategies — the baseline cyber security framework recommended for all Australian organisations. Covers application control, patching, macro restrictions, user application hardening, admin privilege restriction, multi-factor authentication, backups, and operating system hardening.</p>
+  <div class="resource-meta">Australian Signals Directorate (ASD)</div>
+  <div class="resource-categories"><span class="resource-cat">Cybersecurity</span></div>
+  <a href="https://www.cyber.gov.au/business-government/asds-cyber-security-frameworks/essential-eight" target="_blank" rel="noopener" class="resource-link">View Resource &rarr;</a>
+</div>
+<div class="resource-card">
+  <div class="resource-card-header">
+    <div class="resource-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg></div>
+    <div><span class="resource-type-label">Framework</span></div>
+  </div>
+  <h4>ASX Corporate Governance Principles and Recommendations</h4>
+  <p>The ASX Corporate Governance Council’s principles and recommendations — the benchmark for corporate governance in Australia, covering board structure, remuneration, risk management, and ethical decision-making.</p>
+  <div class="resource-meta">ASX Corporate Governance Council</div>
+  <div class="resource-categories"><span class="resource-cat">Board Director</span></div>
+  <a href="https://www.asx.com.au/about/regulation/asx-corporate-governance-council" target="_blank" rel="noopener" class="resource-link">View Resource &rarr;</a>
+</div>
+<div class="resource-card">
+  <div class="resource-card-header">
+    <div class="resource-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg></div>
+    <div><span class="resource-type-label">Regulatory</span></div>
+  </div>
+  <h4>Australian Charter of Healthcare Rights</h4>
+  <p>Describes the rights of patients and consumers when accessing health care services in Australia — a foundational document for consumer-centred governance and accreditation.</p>
+  <div class="resource-meta">Australian Commission on Safety and Quality in Health Care</div>
+  <div class="resource-categories"><span class="resource-cat">Hospital</span><span class="resource-cat">Governance</span></div>
+  <a href="https://www.safetyandquality.gov.au/our-work/partnering-consumers/australian-charter-healthcare-rights" target="_blank" rel="noopener" class="resource-link">View Resource &rarr;</a>
+</div>
+<div class="resource-card">
+  <div class="resource-card-header">
+    <div class="resource-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg></div>
+    <div><span class="resource-type-label">Framework</span></div>
+  </div>
+  <h4>Best-practice cyber security governance</h4>
+  <p>An overview of how to incorporate cyber security policies and governance into your organisational processes. (Intermediate Level) </p>
+  <div class="resource-meta">Infoxchange </div>
+  <div class="resource-categories"><span class="resource-cat">Cybersecurity</span></div>
+  <a href="https://digitaltransformation.org.au/guides/cyber-security/best-practice-cyber-security-governance" target="_blank" rel="noopener" class="resource-link">View Resource &rarr;</a>
+</div>
+<div class="resource-card">
+  <div class="resource-card-header">
+    <div class="resource-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg></div>
+    <div><span class="resource-type-label">Regulatory</span></div>
+  </div>
+  <h4>Care Minutes in Residential Aged Care</h4>
+  <p>Mandatory care minute targets requiring residential aged care providers to deliver a minimum amount of direct care time per resident per day — including registered nurse time. A key workforce and quality compliance obligation.</p>
+  <div class="resource-meta">Australian Government Department of Health and Aged Care</div>
+  <div class="resource-categories"><span class="resource-cat">Aged Care</span><span class="resource-cat">Governance</span></div>
+  <a href="https://www.health.gov.au/our-work/care-minutes-registered-nurses-aged-care/care-minutes" target="_blank" rel="noopener" class="resource-link">View Resource &rarr;</a>
+</div>
+<div class="resource-card">
+  <div class="resource-card-header">
+    <div class="resource-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg></div>
+    <div><span class="resource-type-label">Standard</span></div>
+  </div>
+  <h4>Clinical Care Standards</h4>
+  <p>Evidence-based statements describing the care patients should be offered for specific clinical conditions. Designed to reduce unwarranted variation.</p>
+  <div class="resource-meta">Australian Commission on Safety and Quality in Health Care</div>
+  <div class="resource-categories"><span class="resource-cat">Hospital</span></div>
+  <a href="https://www.safetyandquality.gov.au/standards/clinical-care-standards" target="_blank" rel="noopener" class="resource-link">View Resource &rarr;</a>
+</div>
+<div class="resource-card">
+  <div class="resource-card-header">
+    <div class="resource-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg></div>
+    <div><span class="resource-type-label">Framework</span></div>
+  </div>
+  <h4>Clinical Coding Practice Framework</h4>
+  <p>National framework for clinical coding practice in Australia — setting out the principles, governance, workforce standards, and quality assurance requirements for accurate and consistent clinical coding.</p>
+  <div class="resource-meta">Independent Health and Aged Care Pricing Authority (IHACPA)</div>
+  <div class="resource-categories"><span class="resource-cat">Hospital</span><span class="resource-cat">Digital Health</span></div>
+  <a href="https://www.ihacpa.gov.au/resources/clinical-coding-practice-framework" target="_blank" rel="noopener" class="resource-link">View Resource &rarr;</a>
+</div>
+<div class="resource-card">
+  <div class="resource-card-header">
+    <div class="resource-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg></div>
+    <div><span class="resource-type-label">Framework</span></div>
+  </div>
+  <h4>Clinical Governance Standard</h4>
+  <p>The national clinical governance standard covering clinical risk, quality oversight, safety culture, and performance monitoring across health service organisations.</p>
+  <div class="resource-meta">Australian Commission on Safety and Quality in Health Care</div>
+  <div class="resource-categories"><span class="resource-cat">Hospital</span><span class="resource-cat">Governance</span></div>
+  <a href="https://www.safetyandquality.gov.au/our-work/clinical-governance/clinical-governance-standard" target="_blank" rel="noopener" class="resource-link">View Resource &rarr;</a>
+</div>
+<div class="resource-card">
+  <div class="resource-card-header">
+    <div class="resource-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg></div>
+    <div><span class="resource-type-label">Regulatory</span></div>
+  </div>
+  <h4>Code of Conduct for Aged Care</h4>
+  <p>The legislated code of conduct setting out the behaviour and standards expected of aged care workers and providers — covering safe, respectful, and person-centred care. Enforceable under the new Aged Care Act.</p>
+  <div class="resource-meta">Aged Care Quality and Safety Commission</div>
+  <div class="resource-categories"><span class="resource-cat">Aged Care</span><span class="resource-cat">Support at Home</span><span class="resource-cat">Governance</span></div>
+  <a href="https://www.agedcarequality.gov.au/for-providers/code-conduct" target="_blank" rel="noopener" class="resource-link">View Resource &rarr;</a>
+</div>
+<div class="resource-card">
+  <div class="resource-card-header">
+    <div class="resource-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg></div>
+    <div><span class="resource-type-label">Framework</span></div>
+  </div>
+  <h4>COSO Enterprise Risk Management Framework</h4>
+  <p>The globally recognised framework for enterprise risk management, integrating strategy and performance. Provides principles for designing, implementing, and evaluating risk management across an organisation.</p>
+  <div class="resource-meta">Committee of Sponsoring Organizations of the Treadway Commission (COSO)</div>
+  <div class="resource-categories"><span class="resource-cat">Governance</span></div>
+  <a href="https://www.coso.org/guidance-on-ic" target="_blank" rel="noopener" class="resource-link">View Resource &rarr;</a>
+</div>
+<div class="resource-card">
+  <div class="resource-card-header">
+    <div class="resource-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg></div>
+    <div><span class="resource-type-label">Framework</span></div>
+  </div>
+  <h4>Cyber security principles</h4>
+  <p>Strategic guidance on how an organisation can protect their information technology and operational technology systems from cyber threats. These cyber security principles are grouped into six functions.</p>
+  <div class="resource-meta">Australian Signals Directorate</div>
+  <div class="resource-categories"><span class="resource-cat">Cybersecurity</span></div>
+  <a href="https://www.cyber.gov.au/business-government/asds-cyber-security-frameworks/ism/cyber-security-principles" target="_blank" rel="noopener" class="resource-link">View Resource &rarr;</a>
+</div>
+<div class="resource-card">
+  <div class="resource-card-header">
+    <div class="resource-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg></div>
+    <div><span class="resource-type-label">Regulatory</span></div>
+  </div>
+  <h4>Director Duties and Responsibilities under the Corporations Act</h4>
+  <p>Summary of the key legal duties of directors under Australian law — including duty of care and diligence, good faith, proper purpose, and the duty not to trade while insolvent.</p>
+  <div class="resource-meta">Australian Securities and Investments Commission (ASIC)</div>
+  <div class="resource-categories"><span class="resource-cat">Board Director</span></div>
+  <a href="https://asic.gov.au/for-business/running-a-company/company-officeholder-duties/" target="_blank" rel="noopener" class="resource-link">View Resource &rarr;</a>
+</div>
+<div class="resource-card">
+  <div class="resource-card-header">
+    <div class="resource-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg></div>
+    <div><span class="resource-type-label">Framework</span></div>
+  </div>
+  <h4>ELDAC Palliative Care</h4>
+  <p>Evidence-based resources supporting aged care providers to deliver quality palliative care and end-of-life care within residential and community settings.</p>
+  <div class="resource-meta">End of Life Directions for Aged Care (ELDAC)</div>
+  <div class="resource-categories"><span class="resource-cat">Aged Care</span></div>
+  <a href="https://www.eldac.com.au/" target="_blank" rel="noopener" class="resource-link">View Resource &rarr;</a>
+</div>
+<div class="resource-card">
+  <div class="resource-card-header">
+    <div class="resource-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg></div>
+    <div><span class="resource-type-label">Framework</span></div>
+  </div>
+  <h4>FHIR (Fast Healthcare Interoperability Resources)</h4>
+  <p>The leading global standard for health care data exchange. FHIR defines how health information is structured, shared, and accessed across systems.</p>
+  <div class="resource-meta">HL7 International</div>
+  <div class="resource-categories"><span class="resource-cat">Digital Health</span></div>
+  <a href="https://www.hl7.org/fhir/" target="_blank" rel="noopener" class="resource-link">View Resource &rarr;</a>
+</div>
+<div class="resource-card">
+  <div class="resource-card-header">
+    <div class="resource-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg></div>
+    <div><span class="resource-type-label">Standard</span></div>
+  </div>
+  <h4>Financial &amp; Prudential Standards - Aged Care</h4>
+  <p>Information on how registered providers must comply with the Financial and Prudential Standards that apply to them as a condition of their registration. </p>
+  <div class="resource-meta">Aged Care Quality and Safety Commission</div>
+  <div class="resource-categories"><span class="resource-cat">Aged Care</span><span class="resource-cat">Governance</span><span class="resource-cat">Support at Home</span><span class="resource-cat">Board Director</span></div>
+  <a href="https://www.agedcarequality.gov.au/providers/financial-prudential-standards" target="_blank" rel="noopener" class="resource-link">View Resource &rarr;</a>
+</div>
+<div class="resource-card">
+  <div class="resource-card-header">
+    <div class="resource-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg></div>
+    <div><span class="resource-type-label">Framework</span></div>
+  </div>
+  <h4>Governance Institute of Australia — Good Governance Guide</h4>
+  <p>Comprehensive governance guidance covering board roles and responsibilities, meeting procedures, conflicts of interest, and organisational governance frameworks for directors and company secretaries.</p>
+  <div class="resource-meta">Governance Institute of Australia</div>
+  <div class="resource-categories"><span class="resource-cat">Board Director</span><span class="resource-cat">Governance</span></div>
+  <a href="https://www.governanceinstitute.com.au/resources/governance-directions/" target="_blank" rel="noopener" class="resource-link">View Resource &rarr;</a>
+</div>
+<div class="resource-card">
+  <div class="resource-card-header">
+    <div class="resource-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg></div>
+    <div><span class="resource-type-label">Framework</span></div>
+  </div>
+  <h4>Governance Toolkit: Cyber security</h4>
+  <p>This guidance defines cyber security, outlines your charity&#39;s legal obligations, and explains how to manage the risks of cyber attacks. There are also additional resources available, including a cyber security assessment and checklist, as well as templates for your charity&#39;s use.</p>
+  <div class="resource-meta">ACNC</div>
+  <div class="resource-categories"><span class="resource-cat">Cybersecurity</span></div>
+  <a href="https://www.acnc.gov.au/for-charities/manage-your-charity/governance-hub/governance-toolkit/governance-toolkit-cyber-security" target="_blank" rel="noopener" class="resource-link">View Resource &rarr;</a>
+</div>
+<div class="resource-card">
+  <div class="resource-card-header">
+    <div class="resource-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg></div>
+    <div><span class="resource-type-label">Framework</span></div>
+  </div>
+  <h4>Guidelines for Cyber Security Roles</h4>
+  <p>ASD’s guidelines defining cyber security roles and responsibilities within organisations — including the role of boards and executives in cyber security governance, oversight, and risk management.</p>
+  <div class="resource-meta">Australian Signals Directorate (ASD)</div>
+  <div class="resource-categories"><span class="resource-cat">Cybersecurity</span></div>
+  <a href="https://www.cyber.gov.au/business-government/asds-cyber-security-frameworks/ism/cyber-security-guidelines/guidelines-for-cyber-security-roles" target="_blank" rel="noopener" class="resource-link">View Resource &rarr;</a>
+</div>
+<div class="resource-card">
+  <div class="resource-card-header">
+    <div class="resource-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg></div>
+    <div><span class="resource-type-label">Standard</span></div>
+  </div>
+  <h4>HL7 International</h4>
+  <p>The global authority for health data interoperability standards — including HL7 v2 messaging, CDA clinical documents, and FHIR. Essential for any organisation working with digital health data exchange.</p>
+  <div class="resource-meta">Health Level Seven International</div>
+  <div class="resource-categories"><span class="resource-cat">Digital Health</span></div>
+  <a href="https://www.hl7.org/" target="_blank" rel="noopener" class="resource-link">View Resource &rarr;</a>
+</div>
+<div class="resource-card">
+  <div class="resource-card-header">
+    <div class="resource-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg></div>
+    <div><span class="resource-type-label">Regulatory</span></div>
+  </div>
+  <h4>Home-Level Care Minutes Performance in Residential Aged Care</h4>
+  <p>Reporting on individual residential aged care home performance against mandatory care minute targets — enabling providers, consumers, and regulators to monitor direct care delivery at the facility level.</p>
+  <div class="resource-meta">Australian Government Department of Health and Aged Care</div>
+  <div class="resource-categories"><span class="resource-cat">Aged Care</span><span class="resource-cat">Governance</span></div>
+  <a href="https://www.health.gov.au/resources/publications/home-level-care-minutes-performance-in-residential-aged-care" target="_blank" rel="noopener" class="resource-link">View Resource &rarr;</a>
+</div>
+<div class="resource-card">
+  <div class="resource-card-header">
+    <div class="resource-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg></div>
+    <div><span class="resource-type-label">Standard</span></div>
+  </div>
+  <h4>ICD-10-AM / ACHI / ACS Classification (IHACPA)</h4>
+  <p>Australia’s official clinical coding classification system — covering ICD-10-AM (diagnosis coding), ACHI (procedure coding), and ACS (Australian Coding Standards). The national standard for hospital activity data and casemix funding.</p>
+  <div class="resource-meta">Independent Hospital Pricing Authority (IHPA)</div>
+  <div class="resource-categories"><span class="resource-cat">Hospital</span><span class="resource-cat">Digital Health</span></div>
+  <a href="https://www.ihacpa.gov.au/resources/icd-10-amachiacs-thirteenth-edition" target="_blank" rel="noopener" class="resource-link">View Resource &rarr;</a>
+</div>
+<div class="resource-card">
+  <div class="resource-card-header">
+    <div class="resource-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg></div>
+    <div><span class="resource-type-label">Regulatory</span></div>
+  </div>
+  <h4>Independent Health and Aged Care Pricing Authority (IHACPA)</h4>
+  <p>The national authority responsible for health care and aged care pricing, classification, and costing — including casemix funding models, activity-based funding, and the ICD-10-AM classification system.</p>
+  <div class="resource-meta">Independent Health and Aged Care Pricing Authority</div>
+  <div class="resource-categories"><span class="resource-cat">Hospital</span><span class="resource-cat">Aged Care</span><span class="resource-cat">Governance</span></div>
+  <a href="https://www.ihacpa.gov.au/" target="_blank" rel="noopener" class="resource-link">View Resource &rarr;</a>
+</div>
+<div class="resource-card">
+  <div class="resource-card-header">
+    <div class="resource-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg></div>
+    <div><span class="resource-type-label">Framework</span></div>
+  </div>
+  <h4>Information security manual</h4>
+  <p>The ISM is intended for chief information security officers, chief information officers, cyber security professionals and information technology managers.</p>
+  <div class="resource-meta">Australian Signals Directorate</div>
+  <div class="resource-categories"></div>
+  <a href="https://www.cyber.gov.au/business-government/asds-cyber-security-frameworks/ism" target="_blank" rel="noopener" class="resource-link">View Resource &rarr;</a>
+</div>
+<div class="resource-card">
+  <div class="resource-card-header">
+    <div class="resource-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg></div>
+    <div><span class="resource-type-label">Standard</span></div>
+  </div>
+  <h4>Integrated Health and Aged Care Services Module</h4>
+  <p>Module supporting integrated care across health and aged care settings — designed to complement the NSQHS Standards and Aged Care Quality Standards for organisations delivering services across both sectors.</p>
+  <div class="resource-meta">Australian Commission on Safety and Quality in Health Care</div>
+  <div class="resource-categories"><span class="resource-cat">Aged Care</span><span class="resource-cat">Hospital</span><span class="resource-cat">Governance</span></div>
+  <a href="https://www.safetyandquality.gov.au/standards/integrated-health-and-aged-care-services-module" target="_blank" rel="noopener" class="resource-link">View Resource &rarr;</a>
+</div>
+<div class="resource-card">
+  <div class="resource-card-header">
+    <div class="resource-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg></div>
+    <div><span class="resource-type-label">Standard</span></div>
+  </div>
+  <h4>International Organization for Standardization (ISO)</h4>
+  <p>The global body for developing and publishing international standards across industries — including quality management (ISO 9001), information security (ISO 27001), and risk management (ISO 31000) frameworks widely adopted in healthcare governance.</p>
+  <div class="resource-meta">International Organization for Standardization</div>
+  <div class="resource-categories"><span class="resource-cat">Governance</span></div>
+  <a href="https://www.iso.org/home.html" target="_blank" rel="noopener" class="resource-link">View Resource &rarr;</a>
+</div>
+<div class="resource-card">
+  <div class="resource-card-header">
+    <div class="resource-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg></div>
+    <div><span class="resource-type-label">Framework</span></div>
+  </div>
+  <h4>Interoperability Roadmap for Australian Healthcare</h4>
+  <p>Strategic roadmap for achieving seamless, secure data sharing across the Australian health system using FHIR and national standards.</p>
+  <div class="resource-meta">Australian Digital Health Agency</div>
+  <div class="resource-categories"><span class="resource-cat">Digital Health</span></div>
+  <a href="https://www.digitalhealth.gov.au/about-us/strategies-and-plans/national-healthcare-interoperability-plan" target="_blank" rel="noopener" class="resource-link">View Resource &rarr;</a>
+</div>
+<div class="resource-card">
+  <div class="resource-card-header">
+    <div class="resource-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg></div>
+    <div><span class="resource-type-label">Framework</span></div>
+  </div>
+  <h4>National Digital Health Strategy</h4>
+  <p>Australia’s framework for a digitally enabled health system — setting out priorities for secure, interoperable, and consumer-centred digital health.</p>
+  <div class="resource-meta">Australian Digital Health Agency</div>
+  <div class="resource-categories"><span class="resource-cat">Digital Health</span><span class="resource-cat">Governance</span></div>
+  <a href="https://www.digitalhealth.gov.au/national-digital-health-strategy" target="_blank" rel="noopener" class="resource-link">View Resource &rarr;</a>
+</div>
+<div class="resource-card">
+  <div class="resource-card-header">
+    <div class="resource-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg></div>
+    <div><span class="resource-type-label">Framework</span></div>
+  </div>
+  <h4>National Framework for Digital Health Standards</h4>
+  <p>Establishes a coordinated approach to digital health standards adoption in Australia, including interoperability, terminology, and clinical information standards.</p>
+  <div class="resource-meta">Australian Digital Health Agency</div>
+  <div class="resource-categories"><span class="resource-cat">Digital Health</span></div>
+  <a href="https://www.digitalhealth.gov.au/about-us/strategies-and-plans" target="_blank" rel="noopener" class="resource-link">View Resource &rarr;</a>
+</div>
+<div class="resource-card">
+  <div class="resource-card-header">
+    <div class="resource-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg></div>
+    <div><span class="resource-type-label">Standard</span></div>
+  </div>
+  <h4>National Safety and Quality Health Service (NSQHS) Standards</h4>
+  <p>The eight NSQHS Standards provide a nationally consistent framework for safety and quality in health service organisations. Mandatory for accreditation.</p>
+  <div class="resource-meta">Australian Commission on Safety and Quality in Health Care</div>
+  <div class="resource-categories"><span class="resource-cat">Hospital</span><span class="resource-cat">Governance</span></div>
+  <a href="https://www.safetyandquality.gov.au/standards/nsqhs-standards" target="_blank" rel="noopener" class="resource-link">View Resource &rarr;</a>
+</div>
+<div class="resource-card">
+  <div class="resource-card-header">
+    <div class="resource-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg></div>
+    <div><span class="resource-type-label">Standard</span></div>
+  </div>
+  <h4>NDIS Practice Standards</h4>
+  <p>Quality standards for NDIS providers covering rights and responsibilities, governance, service delivery, and the service environment.</p>
+  <div class="resource-meta">NDIS Quality and Safeguards Commission</div>
+  <div class="resource-categories"><span class="resource-cat">Governance</span></div>
+  <a href="https://www.ndiscommission.gov.au/rules-and-standards/ndis-practice-standards" target="_blank" rel="noopener" class="resource-link">View Resource &rarr;</a>
+</div>
+<div class="resource-card">
+  <div class="resource-card-header">
+    <div class="resource-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg></div>
+    <div><span class="resource-type-label">Regulatory</span></div>
+  </div>
+  <h4>Quality Indicator Program (QI Program)</h4>
+  <p>National program requiring residential aged care providers to collect and report quality indicator data across key care domains — driving transparency and continuous improvement.</p>
+  <div class="resource-meta">Australian Government Department of Health and Aged Care</div>
+  <div class="resource-categories"><span class="resource-cat">Aged Care</span><span class="resource-cat">Governance</span></div>
+  <a href="https://www.health.gov.au/our-work/national-aged-care-mandatory-quality-indicator-program-qi-program" target="_blank" rel="noopener" class="resource-link">View Resource &rarr;</a>
+</div>
+<div class="resource-card">
+  <div class="resource-card-header">
+    <div class="resource-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg></div>
+    <div><span class="resource-type-label">Framework</span></div>
+  </div>
+  <h4>Quality Standards Resource Centre</h4>
+  <p>The Aged Care Quality and Safety Commission&#39;s central hub of guidance materials, quick reference guides, evidence guidance, audit methodology, and self-assessment tools to help aged care providers, governing bodies, and clinical leaders implement and demonstrate compliance with the Strengthened Aged Care Quality Standards.</p>
+  <div class="resource-meta">Aged Care Quality and Safety Commission</div>
+  <div class="resource-categories"><span class="resource-cat">Aged Care</span><span class="resource-cat">Support at Home</span><span class="resource-cat">Board Director</span><span class="resource-cat">Governance</span></div>
+  <a href="https://www.agedcarequality.gov.au/quality-standards" target="_blank" rel="noopener" class="resource-link">View Resource &rarr;</a>
+</div>
+<div class="resource-card">
+  <div class="resource-card-header">
+    <div class="resource-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg></div>
+    <div><span class="resource-type-label">Regulatory</span></div>
+  </div>
+  <h4>Royal Commission into Aged Care — Final Report</h4>
+  <p>The landmark report with 148 recommendations for reforming aged care in Australia. Essential reading for providers navigating the reform landscape.</p>
+  <div class="resource-meta">Royal Commission into Aged Care Quality and Safety</div>
+  <div class="resource-categories"><span class="resource-cat">Aged Care</span><span class="resource-cat">Governance</span></div>
+  <a href="https://www.royalcommission.gov.au/aged-care/final-report" target="_blank" rel="noopener" class="resource-link">View Resource &rarr;</a>
+</div>
+<div class="resource-card">
+  <div class="resource-card-header">
+    <div class="resource-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg></div>
+    <div><span class="resource-type-label">Regulatory</span></div>
+  </div>
+  <h4>Serious Incident Response Scheme (SIRS)</h4>
+  <p>Framework requiring aged care providers to identify, record, manage, resolve, and report serious incidents — a key compliance obligation.</p>
+  <div class="resource-meta">Aged Care Quality and Safety Commission</div>
+  <div class="resource-categories"><span class="resource-cat">Aged Care</span><span class="resource-cat">Governance</span></div>
+  <a href="https://www.agedcarequality.gov.au/providers/serious-incident-response-scheme" target="_blank" rel="noopener" class="resource-link">View Resource &rarr;</a>
+</div>
+<div class="resource-card">
+  <div class="resource-card-header">
+    <div class="resource-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg></div>
+    <div><span class="resource-type-label">Regulatory</span></div>
+  </div>
+  <h4>Single Assessment System</h4>
+  <p>The single assessment system for aged care — streamlining how older Australians are assessed for Support at Home and residential care, replacing multiple assessment pathways with one consistent framework.</p>
+  <div class="resource-meta">Australian Government Department of Health and Aged Care</div>
+  <div class="resource-categories"><span class="resource-cat">Support at Home</span><span class="resource-cat">Aged Care</span><span class="resource-cat">Governance</span></div>
+  <a href="https://www.health.gov.au/our-work/single-assessment-system?language=en" target="_blank" rel="noopener" class="resource-link">View Resource &rarr;</a>
+</div>
+<div class="resource-card">
+  <div class="resource-card-header">
+    <div class="resource-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg></div>
+    <div><span class="resource-type-label">Standard</span></div>
+  </div>
+  <h4>SNOMED CT (Clinical Terminology)</h4>
+  <p>The international clinical terminology standard used for consistent, computable representation of clinical concepts across electronic health records and health information systems.</p>
+  <div class="resource-meta">National Clinical Terminology Service (NCTS)</div>
+  <div class="resource-categories"><span class="resource-cat">Digital Health</span><span class="resource-cat">Hospital</span></div>
+  <a href="https://www.healthterminologies.gov.au/access-clinical-terminology/access-snomed-ct-au/" target="_blank" rel="noopener" class="resource-link">View Resource &rarr;</a>
+</div>
+<div class="resource-card">
+  <div class="resource-card-header">
+    <div class="resource-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg></div>
+    <div><span class="resource-type-label">Standard</span></div>
+  </div>
+  <h4>Strengthened Aged Care Quality Standards</h4>
+  <p>The strengthened standards applying across residential care, home care, and Support at Home — with greater emphasis on clinical care, food and nutrition, diversity, and the aged care workforce. Commenced alongside the Aged Care Act 2024 reforms.</p>
+  <div class="resource-meta">Aged Care Quality and Safety Commission</div>
+  <div class="resource-categories"><span class="resource-cat">Aged Care</span><span class="resource-cat">Support at Home</span><span class="resource-cat">Governance</span></div>
+  <a href="https://www.agedcarequality.gov.au/providers/quality-standards" target="_blank" rel="noopener" class="resource-link">View Resource &rarr;</a>
+</div>
+<div class="resource-card">
+  <div class="resource-card-header">
+    <div class="resource-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg></div>
+    <div><span class="resource-type-label">Regulatory</span></div>
+  </div>
+  <h4>Support at Home Program</h4>
+  <p>The new Support at Home program replacing the Commonwealth Home Support Programme (CHSP), Home Care Packages, and Short-Term Restorative Care. A single unified program for in-home aged care support from July 2025.</p>
+  <div class="resource-meta">Australian Government Department of Health and Aged Care</div>
+  <div class="resource-categories"><span class="resource-cat">Support at Home</span><span class="resource-cat">Aged Care</span></div>
+  <a href="https://www.health.gov.au/our-work/support-at-home" target="_blank" rel="noopener" class="resource-link">View Resource &rarr;</a>
+</div>
+<div class="resource-card">
+  <div class="resource-card-header">
+    <div class="resource-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg></div>
+    <div><span class="resource-type-label">Regulatory</span></div>
+  </div>
+  <h4>Support at Home Program Manual</h4>
+  <p>Operational guidance for providers delivering services under the Support at Home program — covering eligibility, classification, funding, and service delivery requirements.</p>
+  <div class="resource-meta">Australian Government Department of Health and Aged Care</div>
+  <div class="resource-categories"><span class="resource-cat">Support at Home</span><span class="resource-cat">Aged Care</span></div>
+  <a href="https://www.health.gov.au/resources/publications/support-at-home-program-manual-a-guide-for-registered-providers" target="_blank" rel="noopener" class="resource-link">View Resource &rarr;</a>
+</div>
+  </div>
+  <!-- RESOURCES_GRID_END -->
+
+  <!-- Load more -->
+  <div style="text-align:center; margin-top:2rem;" id="loadMoreWrap">
+    <button class="filter-btn" id="loadMoreBtn" onclick="showMore()" style="padding:0.7rem 2.5rem;">Load More</button>
+  </div>
+</section>
+
+<!-- PREMIUM CTA -->
+<section class="premium-section fade-in">
+  <div class="section-label">Go Further</div>
+  <h2>Premium Resource Library</h2>
+  <div class="premium-layout">
+    <div>
+      <p style="color:#ffffff; font-size:0.95rem; line-height:1.8; margin-bottom:1.5rem;">Healthcare regulation in Australia is changing faster than ever. Between strengthened Aged Care Quality Standards, evolving NSQHS requirements, new legislative obligations, and shifting best practice guidelines — staying across what applies to your organisation is a very labour intensive job in itself.</p>
+      <p style="color:#ffffff; font-size:0.95rem; line-height:1.8; margin-bottom:1.5rem;">For nurses, case managers, quality managers, and governance leads already stretched thin, finding time to interpret regulatory updates and translate them into practice is one of the biggest challenges in the sector.</p>
+      <p style="color:#ffffff; font-size:0.95rem; line-height:1.8; margin-bottom:2rem;">Our premium library is designed to do that work for you — giving providers and clinicians a single, curated source to stay current, compliant, and confident.</p>
+      <ul class="premium-features">
+        <li>Plain-language regulatory summaries and change alerts</li>
+        <li>Implementation guides with step-by-step workflows</li>
+        <li>Audit-ready templates and self-assessment tools</li>
+        <li>Policy and procedure frameworks mapped to current standards</li>
+        <li>Board reporting guidance and templates</li>
+        <li>Sector-specific compliance checklists</li>
+        <li>Regular updates as regulations and best practice evolve</li>
+      </ul>
+    </div>
+    <div class="premium-card">
+      <h3>Stop Chasing Compliance. Stay Ahead of It.</h3>
+      <p>Built for providers, nurses, case managers, and quality leads who need to keep across regulatory and legislative requirements without drowning in documentation. One subscription — always current, always practical.</p>
+      <p style="font-size:0.85rem; color:var(--sky); font-style:italic;">Coming soon — watch this space.</p>
+      <p style="font-size:0.85rem; color:var(--text-mid); margin-bottom:0;">Register your interest and we'll notify you when it launches.</p>
+      <div class="interest-form">
+        <input type="email" id="interestEmail" placeholder="Your email address" autocomplete="email" onkeydown="if(event.key==='Enter'){event.preventDefault();registerInterest()}" />
+        <button type="button" onclick="registerInterest()">Notify Me</button>
+      </div>
+      <p id="interestMsg" style="display:none;margin-top:0.8rem;font-size:0.82rem;"></p>
+    </div>
+  </div>
+</section>
+
+<!-- ARTICLES & ANALYSIS -->
+<section class="articles-section fade-in" style="padding:4rem 4rem; background:var(--navy-mid);">
+  <div style="max-width:1100px; margin:0 auto;">
+    <div class="section-label">Articles &amp; Analysis</div>
+    <h2 style="margin-bottom:2rem;">Sector insights and explainers</h2>
+    <ul style="list-style:none; padding:0; margin:0; display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:1.25rem;">
+      <li><a href="articles/liquidity-standard-targeted-review.html" style="display:block; padding:1.25rem; border:1px solid var(--border); border-radius:3px; text-decoration:none; color:inherit; transition:border-color 0.2s;"><span style="font-size:0.7rem; letter-spacing:0.15em; text-transform:uppercase; color:var(--sky);">Industry News</span><h3 style="font-family:'Cormorant Garamond',serif; font-weight:400; font-size:1.2rem; margin:0.5rem 0; color:var(--white);">Targeted Review on the New Liquidity Standard — What Category 6 Providers Need to Know</h3><span style="font-size:0.78rem; color:var(--text-light);">2 July 2026</span></a></li>
+      <li><a href="articles/reform-without-reporting.html" style="display:block; padding:1.25rem; border:1px solid var(--border); border-radius:3px; text-decoration:none; color:inherit; transition:border-color 0.2s;"><span style="font-size:0.7rem; letter-spacing:0.15em; text-transform:uppercase; color:var(--sky);">Industry News</span><h3 style="font-family:'Cormorant Garamond',serif; font-weight:400; font-size:1.2rem; margin:0.5rem 0; color:var(--white);">Reform Without Reporting — The Visibility Gap Six Months into the New Aged Care Act</h3><span style="font-size:0.78rem; color:var(--text-light);">23 May 2026</span></a></li>
+      <li><a href="articles/strengthened-aged-care-quality-standards.html" style="display:block; padding:1.25rem; border:1px solid var(--border); border-radius:3px; text-decoration:none; color:inherit; transition:border-color 0.2s;"><span style="font-size:0.7rem; letter-spacing:0.15em; text-transform:uppercase; color:var(--sky);">Health Care</span><h3 style="font-family:'Cormorant Garamond',serif; font-weight:400; font-size:1.2rem; margin:0.5rem 0; color:var(--white);">Understanding the New Strengthened Aged Care Quality Standards</h3><span style="font-size:0.78rem; color:var(--text-light);">15 February 2025</span></a></li>
+      <li><a href="articles/ai-reshaping-competitive-intelligence.html" style="display:block; padding:1.25rem; border:1px solid var(--border); border-radius:3px; text-decoration:none; color:inherit;"><span style="font-size:0.7rem; letter-spacing:0.15em; text-transform:uppercase; color:var(--sky);">Competitor Analytics</span><h3 style="font-family:'Cormorant Garamond',serif; font-weight:400; font-size:1.2rem; margin:0.5rem 0; color:var(--white);">How AI is Reshaping Competitive Intelligence in 2025</h3><span style="font-size:0.78rem; color:var(--text-light);">20 January 2025</span></a></li>
+      <li><a href="articles/fhir-interoperability.html" style="display:block; padding:1.25rem; border:1px solid var(--border); border-radius:3px; text-decoration:none; color:inherit;"><span style="font-size:0.7rem; letter-spacing:0.15em; text-transform:uppercase; color:var(--sky);">Health Care</span><h3 style="font-family:'Cormorant Garamond',serif; font-weight:400; font-size:1.2rem; margin:0.5rem 0; color:var(--white);">FHIR Interoperability: What Healthcare Leaders Need to Know</h3><span style="font-size:0.78rem; color:var(--text-light);">18 December 2024</span></a></li>
+      <li><a href="articles/data-governance-framework-from-scratch.html" style="display:block; padding:1.25rem; border:1px solid var(--border); border-radius:3px; text-decoration:none; color:inherit;"><span style="font-size:0.7rem; letter-spacing:0.15em; text-transform:uppercase; color:var(--sky);">Data Governance</span><h3 style="font-family:'Cormorant Garamond',serif; font-weight:400; font-size:1.2rem; margin:0.5rem 0; color:var(--white);">Building a Data Governance Framework From Scratch</h3><span style="font-size:0.78rem; color:var(--text-light);">5 December 2024</span></a></li>
+      <li><a href="articles/quality-indicator-program-manual-4.html" style="display:block; padding:1.25rem; border:1px solid var(--border); border-radius:3px; text-decoration:none; color:inherit;"><span style="font-size:0.7rem; letter-spacing:0.15em; text-transform:uppercase; color:var(--sky);">Industry News</span><h3 style="font-family:'Cormorant Garamond',serif; font-weight:400; font-size:1.2rem; margin:0.5rem 0; color:var(--white);">The Quality Indicator Program — Manual 4.0 Explained</h3><span style="font-size:0.78rem; color:var(--text-light);">22 November 2024</span></a></li>
+      <li><a href="articles/data-quality-foundation-of-ai.html" style="display:block; padding:1.25rem; border:1px solid var(--border); border-radius:3px; text-decoration:none; color:inherit;"><span style="font-size:0.7rem; letter-spacing:0.15em; text-transform:uppercase; color:var(--sky);">Data Governance</span><h3 style="font-family:'Cormorant Garamond',serif; font-weight:400; font-size:1.2rem; margin:0.5rem 0; color:var(--white);">Why Data Quality Is the Foundation of Every AI Initiative</h3><span style="font-size:0.78rem; color:var(--text-light);">10 November 2024</span></a></li>
+    </ul>
+  </div>
+</section>
+
+<!-- STAY INFORMED -->
+<section style="background:var(--navy); padding:4rem 4rem;" class="fade-in">
+  <div style="max-width:600px; margin:0 auto; text-align:center;">
+    <div class="section-label" style="justify-content:center;">Stay Informed</div>
+    <h2>Get Sector Updates Delivered</h2>
+    <p style="color:#ffffff; font-size:0.95rem; line-height:1.8; margin-top:1rem; margin-bottom:2rem;">Subscribe to receive regulatory updates, sector insights, and new resource alerts directly to your inbox. No spam — just relevant, timely information.</p>
+    <div class="interest-form" style="justify-content:center;">
+      <input type="email" id="subscribeEmail" placeholder="Your email address" autocomplete="email" onkeydown="if(event.key==='Enter'){event.preventDefault();subscribeNewsletter()}" />
+      <button type="button" onclick="subscribeNewsletter()">Subscribe</button>
+    </div>
+    <p id="subscribeMsg" style="display:none;margin-top:0.8rem;font-size:0.82rem;"></p>
+  </div>
+</section>
+
+<div class="cta-band">
+  <h2>Need help applying these frameworks in your organisation?</h2>
+  <div class="contact-wrapper">
+    <button class="btn-dark" onclick="this.nextElementSibling.classList.toggle('open')">Get in Touch</button>
+    <div class="contact-popup">
+      <a href="tel:0405515300">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+        0405 515 300
+      </a>
+      <a href="mailto:info@hg-au.com">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        info@hg-au.com
+      </a>
+      <a href="proposal-enquiry.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+        Submit a Proposal
+      </a>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div class="footer-logo"><img src="logo-hg-trimmed.png" alt="Holistic Governance" width="351" height="524"><span class="logo-name">Holistic <span>Governance</span></span></div>
+      <p class="footer-tagline">Improving clarity and confidence in governance through knowledge, data, and technology.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Navigate</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="healthcare.html">Solutions</a></li>
+        <li><a href="resources.html">Resources</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Get in Touch</h4>
+      <div class="footer-contact-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        <a href="mailto:info@hg-au.com">info@hg-au.com</a>
+      </div>
+      <div class="footer-contact-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+        <a href="tel:0405515300">0405 515 300</a>
+      </div>
+      <div class="footer-contact-item" style="margin-top: 0.5rem;">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+        <a href="proposal-enquiry.html">Request a Proposal</a>
+      </div>
+      <div class="footer-contact-item">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.48-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 11.01-4.12 2.06 2.06 0 010 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z"/></svg>
+        <a href="https://www.linkedin.com/company/hg-au/" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Where We Work</h4>
+      <address style="font-style:normal; font-size:0.85rem; line-height:1.6; color:var(--text); margin-bottom:0.6rem;">Heidelberg, Victoria, Australia</address>
+      <ul>
+        <li>Australia</li>
+        <li>New Zealand</li>
+      </ul>
+      <p style="font-size:0.8rem; color:var(--text-light); margin-top:0.8rem;">Remote & on-site delivery</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2026 Holistic Governance. All rights reserved. · <a href="/privacy.html" style="color:rgba(255,255,255,0.5);text-decoration:none">Privacy Policy</a></p>
+  </div>
+</footer>
+
+<button class="back-to-top" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 15l-6-6-6 6"/></svg>
+</button>
+
+<script>
+var API_BASE = 'https://hg-proposals-1010766137344.australia-southeast1.run.app';
+
+var FALLBACK = [
+  {"title":"National Safety and Quality Health Service (NSQHS) Standards","description":"The eight NSQHS Standards provide a nationally consistent framework for safety and quality in health service organisations. Mandatory for accreditation.","type":"Standard","sectors":["Hospital","Governance"],"url":"https://www.safetyandquality.gov.au/standards/nsqhs-standards","source":"Australian Commission on Safety and Quality in Health Care"},
+  {"title":"Clinical Care Standards","description":"Evidence-based statements describing the care patients should be offered for specific clinical conditions. Designed to reduce unwarranted variation.","type":"Standard","sectors":["Hospital"],"url":"https://www.safetyandquality.gov.au/standards/clinical-care-standards","source":"Australian Commission on Safety and Quality in Health Care"},
+  {"title":"NDIS Practice Standards","description":"Quality standards for NDIS providers covering rights and responsibilities, governance, service delivery, and the service environment.","type":"Standard","sectors":["Governance"],"url":"https://www.ndiscommission.gov.au/rules-and-standards/ndis-practice-standards","source":"NDIS Quality and Safeguards Commission"},
+  {"title":"Strengthened Aged Care Quality Standards","description":"The strengthened standards applying across residential care, home care, and Support at Home \u2014 with greater emphasis on clinical care, food and nutrition, diversity, and the aged care workforce. Commenced alongside the Aged Care Act 2024 reforms.","type":"Standard","sectors":["Aged Care","Support at Home","Governance"],"url":"https://www.agedcarequality.gov.au/providers/quality-standards","source":"Aged Care Quality and Safety Commission"},
+  {"title":"Quality Standards Resource Centre","description":"The Aged Care Quality and Safety Commission\u2019s central hub of guidance materials, quick reference guides, evidence guidance, audit methodology, and self-assessment tools to help aged care providers, governing bodies, and clinical leaders implement and demonstrate compliance with the Strengthened Aged Care Quality Standards.","type":"Framework","sectors":["Aged Care","Support at Home","Board Director","Governance"],"url":"https://www.agedcarequality.gov.au/quality-standards","source":"Aged Care Quality and Safety Commission"},
+  {"title":"SNOMED CT (Clinical Terminology)","description":"The international clinical terminology standard used for consistent, computable representation of clinical concepts across electronic health records and health information systems.","type":"Standard","sectors":["Digital Health","Hospital"],"url":"https://www.healthterminologies.gov.au/access-clinical-terminology/access-snomed-ct-au/","source":"National Clinical Terminology Service (NCTS)"},
+  {"title":"National Digital Health Strategy","description":"Australia\u2019s framework for a digitally enabled health system \u2014 setting out priorities for secure, interoperable, and consumer-centred digital health.","type":"Framework","sectors":["Digital Health","Governance"],"url":"https://www.digitalhealth.gov.au/national-digital-health-strategy","source":"Australian Digital Health Agency"},
+  {"title":"National Framework for Digital Health Standards","description":"Establishes a coordinated approach to digital health standards adoption in Australia, including interoperability, terminology, and clinical information standards.","type":"Framework","sectors":["Digital Health"],"url":"https://www.digitalhealth.gov.au/about-us/strategies-and-plans","source":"Australian Digital Health Agency"},
+  {"title":"FHIR (Fast Healthcare Interoperability Resources)","description":"The leading global standard for health care data exchange. FHIR defines how health information is structured, shared, and accessed across systems.","type":"Framework","sectors":["Digital Health"],"url":"https://www.hl7.org/fhir/","source":"HL7 International"},
+  {"title":"ELDAC Palliative Care","description":"Evidence-based resources supporting aged care providers to deliver quality palliative care and end-of-life care within residential and community settings.","type":"Framework","sectors":["Aged Care"],"url":"https://www.eldac.com.au/","source":"End of Life Directions for Aged Care (ELDAC)"},
+  {"title":"Quality Indicator Program (QI Program)","description":"National program requiring residential aged care providers to collect and report quality indicator data across key care domains \u2014 driving transparency and continuous improvement.","type":"Regulatory","sectors":["Aged Care","Governance"],"url":"https://www.health.gov.au/our-work/national-aged-care-mandatory-quality-indicator-program-qi-program","source":"Australian Government Department of Health and Aged Care"},
+  {"title":"Antimicrobial Stewardship Clinical Care Standard","description":"Quality statements to guide appropriate antimicrobial use across health care settings, reducing resistance and improving patient outcomes.","type":"Standard","sectors":["Aged Care"],"url":"https://www.safetyandquality.gov.au/standards/clinical-care-standards/antimicrobial-stewardship-clinical-care-standard","source":"Australian Commission on Safety and Quality in Health Care"},
+  {"title":"Serious Incident Response Scheme (SIRS)","description":"Framework requiring aged care providers to identify, record, manage, resolve, and report serious incidents \u2014 a key compliance obligation.","type":"Regulatory","sectors":["Aged Care","Governance"],"url":"https://www.agedcarequality.gov.au/providers/serious-incident-response-scheme","source":"Aged Care Quality and Safety Commission"},
+  {"title":"Australian Charter of Healthcare Rights","description":"Describes the rights of patients and consumers when accessing health care services in Australia \u2014 a foundational document for consumer-centred governance and accreditation.","type":"Regulatory","sectors":["Hospital","Governance"],"url":"https://www.safetyandquality.gov.au/our-work/partnering-consumers/australian-charter-healthcare-rights","source":"Australian Commission on Safety and Quality in Health Care"},
+  {"title":"A New Aged Care Act \u2014 Summary of Key Changes","description":"Overview of the new rights-based Aged Care Act, replacing the Aged Care Act 1997. Covers strengthened quality standards, provider obligations, and consumer rights.","type":"Regulatory","sectors":["Aged Care","Governance"],"url":"https://www.health.gov.au/our-work/aged-care-act","source":"Australian Government Department of Health and Aged Care"},
+  {"title":"Royal Commission into Aged Care \u2014 Final Report","description":"The landmark report with 148 recommendations for reforming aged care in Australia. Essential reading for providers navigating the reform landscape.","type":"Regulatory","sectors":["Aged Care","Governance"],"url":"https://www.royalcommission.gov.au/aged-care/final-report","source":"Royal Commission into Aged Care Quality and Safety"},
+  {"title":"Interoperability Roadmap for Australian Healthcare","description":"Strategic roadmap for achieving seamless, secure data sharing across the Australian health system using FHIR and national standards.","type":"Framework","sectors":["Digital Health"],"url":"https://www.digitalhealth.gov.au/about-us/strategies-and-plans/national-healthcare-interoperability-plan","source":"Australian Digital Health Agency"},
+  {"title":"International Organization for Standardization (ISO)","description":"The global body for developing and publishing international standards across industries \u2014 including quality management (ISO 9001), information security (ISO 27001), and risk management (ISO 31000) frameworks widely adopted in healthcare governance.","type":"Standard","sectors":["Governance"],"url":"https://www.iso.org/home.html","source":"International Organization for Standardization"},
+  {"title":"HL7 International","description":"The global authority for health data interoperability standards \u2014 including HL7 v2 messaging, CDA clinical documents, and FHIR. Essential for any organisation working with digital health data exchange.","type":"Standard","sectors":["Digital Health"],"url":"https://www.hl7.org/","source":"Health Level Seven International"},
+  {"title":"COSO Enterprise Risk Management Framework","description":"The globally recognised framework for enterprise risk management, integrating strategy and performance. Provides principles for designing, implementing, and evaluating risk management across an organisation.","type":"Framework","sectors":["Governance"],"url":"https://www.coso.org/guidance-on-ic","source":"Committee of Sponsoring Organizations of the Treadway Commission (COSO)"},
+  {"title":"Support at Home Program","description":"The new Support at Home program replacing the Commonwealth Home Support Programme (CHSP), Home Care Packages, and Short-Term Restorative Care. A single unified program for in-home aged care support from July 2025.","type":"Regulatory","sectors":["Support at Home","Aged Care"],"url":"https://www.health.gov.au/our-work/support-at-home","source":"Australian Government Department of Health and Aged Care"},
+  {"title":"Support at Home Program Manual","description":"Operational guidance for providers delivering services under the Support at Home program \u2014 covering eligibility, classification, funding, and service delivery requirements.","type":"Regulatory","sectors":["Support at Home","Aged Care"],"url":"https://www.health.gov.au/resources/publications/support-at-home-program-manual-a-guide-for-registered-providers","source":"Australian Government Department of Health and Aged Care"},
+  {"title":"Single Assessment System","description":"The single assessment system for aged care \u2014 streamlining how older Australians are assessed for Support at Home and residential care, replacing multiple assessment pathways with one consistent framework.","type":"Regulatory","sectors":["Support at Home","Aged Care","Governance"],"url":"https://www.health.gov.au/our-work/single-assessment-system?language=en","source":"Australian Government Department of Health and Aged Care"},
+  {"title":"Code of Conduct for Aged Care","description":"The legislated code of conduct setting out the behaviour and standards expected of aged care workers and providers \u2014 covering safe, respectful, and person-centred care. Enforceable under the new Aged Care Act.","type":"Regulatory","sectors":["Aged Care","Support at Home","Governance"],"url":"https://www.agedcarequality.gov.au/for-providers/code-conduct","source":"Aged Care Quality and Safety Commission"},
+  {"title":"Aged Care Act 2024","description":"The full text of the Aged Care Act 2024 \u2014 the new rights-based legislation replacing the Aged Care Act 1997, strengthening the rights of older Australians and reforming provider obligations and regulatory requirements.","type":"Regulatory","sectors":["Aged Care","Governance"],"url":"https://www.legislation.gov.au/C2024A00104/latest/text","source":"Australian Government \u2014 Federal Register of Legislation"},
+  {"title":"Home-Level Care Minutes Performance in Residential Aged Care","description":"Reporting on individual residential aged care home performance against mandatory care minute targets \u2014 enabling providers, consumers, and regulators to monitor direct care delivery at the facility level.","type":"Regulatory","sectors":["Aged Care","Governance"],"url":"https://www.health.gov.au/resources/publications/home-level-care-minutes-performance-in-residential-aged-care","source":"Australian Government Department of Health and Aged Care"},
+  {"title":"Care Minutes in Residential Aged Care","description":"Mandatory care minute targets requiring residential aged care providers to deliver a minimum amount of direct care time per resident per day \u2014 including registered nurse time. A key workforce and quality compliance obligation.","type":"Regulatory","sectors":["Aged Care","Governance"],"url":"https://www.health.gov.au/our-work/care-minutes-registered-nurses-aged-care/care-minutes","source":"Australian Government Department of Health and Aged Care"},
+  {"title":"Independent Health and Aged Care Pricing Authority (IHACPA)","description":"The national authority responsible for health care and aged care pricing, classification, and costing \u2014 including casemix funding models, activity-based funding, and the ICD-10-AM classification system.","type":"Regulatory","sectors":["Hospital","Aged Care","Governance"],"url":"https://www.ihacpa.gov.au/","source":"Independent Health and Aged Care Pricing Authority"},
+  {"title":"Clinical Coding Practice Framework","description":"National framework for clinical coding practice in Australia \u2014 setting out the principles, governance, workforce standards, and quality assurance requirements for accurate and consistent clinical coding.","type":"Framework","sectors":["Hospital","Digital Health"],"url":"https://www.ihacpa.gov.au/resources/clinical-coding-practice-framework","source":"Independent Health and Aged Care Pricing Authority (IHACPA)"},
+  {"title":"ICD-10-AM / ACHI / ACS Classification (IHACPA)","description":"Australia\u2019s official clinical coding classification system \u2014 covering ICD-10-AM (diagnosis coding), ACHI (procedure coding), and ACS (Australian Coding Standards). The national standard for hospital activity data and casemix funding.","type":"Standard","sectors":["Hospital","Digital Health"],"url":"https://www.ihacpa.gov.au/resources/icd-10-amachiacs-thirteenth-edition","source":"Independent Hospital Pricing Authority (IHPA)"},
+  {"title":"Integrated Health and Aged Care Services Module","description":"Module supporting integrated care across health and aged care settings \u2014 designed to complement the NSQHS Standards and Aged Care Quality Standards for organisations delivering services across both sectors.","type":"Standard","sectors":["Aged Care","Hospital","Governance"],"url":"https://www.safetyandquality.gov.au/standards/integrated-health-and-aged-care-services-module","source":"Australian Commission on Safety and Quality in Health Care"},
+  {"title":"AICD Not-for-Profit Governance Principles","description":"Governance principles specifically designed for not-for-profit organisations, covering board composition, strategy, risk, performance, and accountability \u2014 widely adopted across aged care and health service boards.","type":"Framework","sectors":["Board Director","Governance"],"url":"https://www.aicd.com.au/corporate-governance-sectors/not-for-profit/principles.html","source":"Australian Institute of Company Directors (AICD)"},
+  {"title":"AICD Director Tools and Resources","description":"Practical resources for board directors including board evaluation templates, meeting guides, governance checklists, and director professional development pathways.","type":"Framework","sectors":["Board Director","Governance"],"url":"https://www.aicd.com.au/tools-and-resources.html","source":"Australian Institute of Company Directors (AICD)"},
+  {"title":"ASX Corporate Governance Principles and Recommendations","description":"The ASX Corporate Governance Council\u2019s principles and recommendations \u2014 the benchmark for corporate governance in Australia, covering board structure, remuneration, risk management, and ethical decision-making.","type":"Framework","sectors":["Board Director","Governance"],"url":"https://www.asx.com.au/about/regulation/asx-corporate-governance-council","source":"ASX Corporate Governance Council"},
+  {"title":"Governance Institute of Australia \u2014 Good Governance Guide","description":"Comprehensive governance guidance covering board roles and responsibilities, meeting procedures, conflicts of interest, and organisational governance frameworks for directors and company secretaries.","type":"Framework","sectors":["Board Director","Governance"],"url":"https://www.governanceinstitute.com.au/resources/governance-directions/","source":"Governance Institute of Australia"},
+  {"title":"ACNC Governance Standards","description":"The five governance standards that registered charities must meet \u2014 covering purposes, accountability, compliance, suitability of responsible persons, and duties of responsible persons. Essential for not-for-profit board directors.","type":"Standard","sectors":["Board Director","Governance"],"url":"https://www.acnc.gov.au/for-charities/manage-your-charity/governance-hub/governance-standards","source":"Australian Charities and Not-for-profits Commission (ACNC)"},
+  {"title":"Director Duties and Responsibilities under the Corporations Act","description":"Summary of the key legal duties of directors under Australian law \u2014 including duty of care and diligence, good faith, proper purpose, and the duty not to trade while insolvent.","type":"Regulatory","sectors":["Board Director","Governance"],"url":"https://asic.gov.au/for-business/running-a-company/company-officeholder-duties/","source":"Australian Securities and Investments Commission (ASIC)"},
+  {"title":"Aged Care Board Governance \u2014 Provider Obligations","description":"Guidance on board governance obligations specific to aged care providers under the Aged Care Act 2024 \u2014 covering responsible person requirements, reporting obligations, and quality oversight duties for governing bodies.","type":"Regulatory","sectors":["Board Director","Aged Care","Governance"],"url":"https://www.agedcarequality.gov.au/providers/provider-governance/provider-governance-obligations","source":"Aged Care Quality and Safety Commission"},
+  {"title":"Clinical Governance Standard","description":"The national clinical governance standard covering clinical risk, quality oversight, safety culture, and performance monitoring across health service organisations.","type":"Framework","sectors":["Hospital","Governance"],"url":"https://www.safetyandquality.gov.au/our-work/clinical-governance/clinical-governance-standard","source":"Australian Commission on Safety and Quality in Health Care"},
+  {"title":"AICD Governance Practice Guide \u2014 Aged Care","description":"AICD\u2019s dedicated governance practice guide for aged care board directors \u2014 covering the unique governance challenges in the aged care sector, board oversight of quality and safety, regulatory obligations, and practical guidance for directors navigating aged care reform.","type":"Framework","sectors":["Board Director","Aged Care","Governance"],"url":"https://www.aicd.com.au/content/dam/aicd/images/covers-500x707px/231218-aicd-aged-care-final-for-web.pdf","source":"Australian Institute of Company Directors (AICD)"},
+  {"title":"Guidelines for Cyber Security Roles","description":"ASD\u2019s guidelines defining cyber security roles and responsibilities within organisations \u2014 including the role of boards and executives in cyber security governance, oversight, and risk management.","type":"Framework","sectors":["Board Director","Cybersecurity","Governance"],"url":"https://www.cyber.gov.au/business-government/asds-cyber-security-frameworks/ism/cyber-security-guidelines/guidelines-for-cyber-security-roles","source":"Australian Signals Directorate (ASD)"},
+  {"title":"ASD Essential Eight Cyber Security Framework","description":"The Australian Signals Directorate\u2019s Essential Eight mitigation strategies \u2014 the baseline cyber security framework recommended for all Australian organisations. Covers application control, patching, macro restrictions, user application hardening, admin privilege restriction, multi-factor authentication, backups, and operating system hardening.","type":"Framework","sectors":["Board Director","Cybersecurity","Digital Health","Governance"],"url":"https://www.cyber.gov.au/business-government/asds-cyber-security-frameworks/essential-eight","source":"Australian Signals Directorate (ASD)"}
+];
+
+var SECTORS = ['All', 'Aged Care', 'Board Director', 'Cybersecurity', 'Digital Health', 'Governance', 'Hospital', 'Support at Home'];
+var TYPES = ['Standard', 'Framework', 'Regulatory'];
+
+var TYPE_ICONS = {
+  'Standard': '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>',
+  'Framework': '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>',
+  'Best Practice': '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>',
+  'White Paper': '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>',
+  'Regulatory': '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>'
+};
+
+var allResources = [];
+var activeSector = 'All';
+var activeType = '';
+var INITIAL_COUNT = 6;
+var showAll = false;
+
+// Fetch resources from dashboard API, fall back to embedded data
+fetch(API_BASE + '/api/holistic-governance/resources')
+  .then(function(r) { return r.json(); })
+  .then(function(data) {
+    allResources = data && data.length ? data : FALLBACK;
+    onLoaded();
+  })
+  .catch(function() {
+    allResources = FALLBACK;
+    onLoaded();
+  });
+
+function onLoaded() {
+  document.getElementById('loadingState').style.display = 'none';
+  buildFilters();
+  renderResources();
+}
+
+function buildFilters() {
+  var bar = document.getElementById('filterBar');
+  var html = '';
+
+  // Sector buttons
+  html += SECTORS.map(function(s) {
+    return '<button class="filter-btn' + (s === 'All' ? ' active' : '') + '" data-sector="' + s + '">' + s + '</button>';
+  }).join('');
+
+  // Divider
+  html += '<div class="filter-divider"></div>';
+
+  // Type buttons
+  html += TYPES.map(function(t) {
+    return '<button class="filter-btn" data-type="' + t + '">' + (t === 'Regulatory' ? t : t + 's') + '</button>';
+  }).join('');
+
+  bar.innerHTML = html;
+
+  bar.addEventListener('click', function(e) {
+    if (!e.target.classList.contains('filter-btn')) return;
+    var isSector = e.target.hasAttribute('data-sector');
+    var isType = e.target.hasAttribute('data-type');
+
+    if (isSector) {
+      bar.querySelectorAll('[data-sector]').forEach(function(b) { b.classList.remove('active'); });
+      e.target.classList.add('active');
+      activeSector = e.target.dataset.sector;
+    }
+    if (isType) {
+      var wasActive = e.target.classList.contains('active');
+      bar.querySelectorAll('[data-type]').forEach(function(b) { b.classList.remove('active'); });
+      if (!wasActive) { e.target.classList.add('active'); activeType = e.target.dataset.type; }
+      else { activeType = ''; }
+    }
+    showAll = false;
+    renderResources();
+  });
+}
+
+function showMore() {
+  showAll = true;
+  renderResources();
+}
+
+function renderResources() {
+  var filtered = allResources.filter(function(r) {
+    var sectorMatch = activeSector === 'All' || (r.sectors && r.sectors.indexOf(activeSector) !== -1);
+    var typeMatch = !activeType || r.type === activeType;
+    return sectorMatch && typeMatch;
+  });
+
+  var grid = document.getElementById('resourcesGrid');
+  var noResults = document.getElementById('noResults');
+  var countEl = document.getElementById('resultCount');
+  var loadMoreWrap = document.getElementById('loadMoreWrap');
+
+  if (allResources.length === 0) {
+    countEl.textContent = '';
+    grid.innerHTML = '';
+    noResults.style.display = 'block';
+    loadMoreWrap.style.display = 'none';
+    noResults.querySelector('p').textContent = 'No resources available yet. Check back soon.';
+    return;
+  }
+
+  if (filtered.length === 0) {
+    countEl.textContent = '';
+    grid.innerHTML = '';
+    noResults.style.display = 'block';
+    loadMoreWrap.style.display = 'none';
+    noResults.querySelector('p').textContent = 'No resources match the selected filters. Try a different combination.';
+    return;
+  }
+
+  noResults.style.display = 'none';
+  var visible = showAll ? filtered : filtered.slice(0, INITIAL_COUNT);
+  var hasMore = !showAll && filtered.length > INITIAL_COUNT;
+
+  countEl.textContent = 'Showing ' + visible.length + ' of ' + filtered.length + ' resources';
+  loadMoreWrap.style.display = hasMore ? 'block' : 'none';
+
+  grid.innerHTML = visible.map(function(r) {
+    var cats = (r.sectors || []).map(function(s) { return '<span class="resource-cat">' + s + '</span>'; }).join('');
+    var icon = TYPE_ICONS[r.type] || TYPE_ICONS['Standard'];
+    return '<div class="resource-card">' +
+      '<div class="resource-card-header">' +
+        '<div class="resource-icon">' + icon + '</div>' +
+        '<div><span class="resource-type-label">' + (r.type || 'Resource') + '</span></div>' +
+      '</div>' +
+      '<h4>' + r.title + '</h4>' +
+      '<p>' + (r.description || '') + '</p>' +
+      '<div class="resource-meta">' + (r.source || '') + '</div>' +
+      '<div class="resource-categories">' + cats + '</div>' +
+      '<a href="' + r.url + '" target="_blank" rel="noopener" class="resource-link">View Resource &rarr;</a>' +
+    '</div>';
+  }).join('');
+}
+
+// Register interest for premium library
+function registerInterest() {
+  var email = document.getElementById('interestEmail').value.trim();
+  var msg = document.getElementById('interestMsg');
+  if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+    msg.textContent = 'Please enter a valid email address.';
+    msg.style.color = '#f87171';
+    msg.style.display = 'block';
+    return;
+  }
+  fetch(API_BASE + '/api/subscribe', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ email: email })
+  })
+  .then(function(res) {
+    if (res.ok) {
+      msg.textContent = 'Thank you — we\'ll notify you when the premium library launches.';
+      msg.style.color = 'var(--sky)';
+      msg.style.display = 'block';
+      document.getElementById('interestEmail').value = '';
+    } else { throw new Error(); }
+  })
+  .catch(function() {
+    msg.textContent = 'Something went wrong. Please try again.';
+    msg.style.color = '#f87171';
+    msg.style.display = 'block';
+  });
+}
+
+// Newsletter subscribe
+function subscribeNewsletter() {
+  var email = document.getElementById('subscribeEmail').value.trim();
+  var msg = document.getElementById('subscribeMsg');
+  if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+    msg.textContent = 'Please enter a valid email address.';
+    msg.style.color = '#f87171';
+    msg.style.display = 'block';
+    return;
+  }
+  fetch(API_BASE + '/api/subscribe', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ email: email })
+  })
+  .then(function(res) {
+    if (res.ok) {
+      msg.textContent = 'Thank you — you\'re subscribed!';
+      msg.style.color = 'var(--sky)';
+      msg.style.display = 'block';
+      document.getElementById('subscribeEmail').value = '';
+    } else { throw new Error(); }
+  })
+  .catch(function() {
+    msg.textContent = 'Something went wrong. Please try again.';
+    msg.style.color = '#f87171';
+    msg.style.display = 'block';
+  });
+}
+
+// Fade in
+var observer = new IntersectionObserver(function(entries) {
+  entries.forEach(function(entry) { if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); } });
+}, { threshold: 0.1 });
+document.querySelectorAll('.fade-in').forEach(function(el) { observer.observe(el); });
+
+// Close contact popup on click outside
+document.addEventListener('click', function(e) {
+  document.querySelectorAll('.contact-popup.open, .nav-contact-popup.open').forEach(function(popup) {
+    if (!popup.parentElement.contains(e.target)) popup.classList.remove('open');
+  });
+});
+
+// Nav shrink + back to top
+window.addEventListener('scroll', function() {
+  document.querySelector('nav').classList.toggle('scrolled', window.scrollY > 60);
+  document.querySelector('.back-to-top').classList.toggle('visible', window.scrollY > 400);
+});
+</script>
+
+</body>
+</html>
