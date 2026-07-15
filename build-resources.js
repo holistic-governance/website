@@ -3,7 +3,7 @@ const path = require('path');
 const https = require('https');
 
 const SITE_URL = 'https://hg-au.com';
-const API_URL = 'https://hg-proposals-1010766137344.australia-southeast1.run.app/api/holistic-governance/resources';
+const API_URL = process.env.DASHBOARD_API_URL || 'https://app.hg-au.com/api/holistic-governance/resources';
 const HTML_PATH = path.join(__dirname, 'resources.html');
 
 const TYPE_ICONS = {
