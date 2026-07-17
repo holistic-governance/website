@@ -126,6 +126,17 @@
     }
     .testimonial-arrow:hover { border-color: var(--sky); color: var(--sky); background: rgba(56,189,248,0.08); }
     .testimonial-arrow svg { width: 18px; height: 18px; }
+    /* Side change arrows in reserved gutters (mirrors the Power BI demo nav). */
+    .testimonial-stage { position: relative; padding: 0 54px; }
+    .testimonial-arrow-side {
+      position: absolute; top: 50%; transform: translateY(-50%); z-index: 2;
+      width: 44px; height: 44px; border-radius: 50%;
+      background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.3); color: var(--white);
+    }
+    .testimonial-arrow-side.prev { left: 0; }
+    .testimonial-arrow-side.next { right: 0; }
+    .testimonial-arrow-side:hover { background: var(--sky); color: var(--navy); border-color: var(--sky); }
+    .testimonial-arrow-side svg { width: 20px; height: 20px; }
     .testimonial-dots { display: flex; gap: 0.6rem; }
     .testimonial-dot { width: 9px; height: 9px; border-radius: 50%; border: none; padding: 0; cursor: pointer; background: var(--border); transition: all 0.3s; }
     .testimonial-dot.active { background: var(--sky); transform: scale(1.2); }
@@ -143,6 +154,9 @@
       .values-visual { display: none; }
       .consultant-avatar { width: 120px; height: 120px; }
       .consultant-details h4[style*="opacity:0"] { display: none; }
+      .testimonial-stage { padding: 0 40px; }
+      .testimonial-arrow-side { width: 36px; height: 36px; }
+      .testimonial-arrow-side svg { width: 16px; height: 16px; }
       .testimonial-card { padding: 2.5rem 1.75rem 2rem; }
       .testimonial-quote::before, .testimonial-quote::after { font-size: 4.5rem; }
       .testimonial-quote p { font-size: 1.15rem; }
@@ -598,6 +612,13 @@
   <div class="section-label">What Clients Say</div>
   <h2>Client Testimonials</h2>
   <div class="testimonial-carousel" aria-roledescription="carousel" aria-label="Client testimonials">
+    <div class="testimonial-stage">
+      <button class="testimonial-arrow testimonial-arrow-side prev" type="button" data-dir="prev" aria-label="Previous testimonial">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M15 18l-6-6 6-6"/></svg>
+      </button>
+      <button class="testimonial-arrow testimonial-arrow-side next" type="button" data-dir="next" aria-label="Next testimonial">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 18l6-6-6-6"/></svg>
+      </button>
     <div class="testimonial-viewport">
       <div class="testimonial-track" aria-live="polite">
 
@@ -658,15 +679,10 @@
         </div>
 
       </div>
+      </div>
     </div>
     <div class="testimonial-controls">
-      <button class="testimonial-arrow" type="button" data-dir="prev" aria-label="Previous testimonial">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M15 18l-6-6 6-6"/></svg>
-      </button>
       <div class="testimonial-dots" role="tablist" aria-label="Choose testimonial"></div>
-      <button class="testimonial-arrow" type="button" data-dir="next" aria-label="Next testimonial">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 18l6-6-6-6"/></svg>
-      </button>
     </div>
   </div>
 </section>
