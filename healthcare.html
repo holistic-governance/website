@@ -64,6 +64,31 @@
       .hc-card:hover {
         border-color: var(--sky);
       }
+      a.hc-card-link {
+        display: block;
+        text-decoration: none;
+        color: inherit;
+        cursor: pointer;
+      }
+      a.hc-card-link:hover {
+        border-color: var(--sky);
+      }
+      .hc-card-cta {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.4rem;
+        margin-top: 1.2rem;
+        color: var(--sky);
+        font-size: 0.82rem;
+        font-weight: 500;
+        letter-spacing: 0.02em;
+      }
+      a.hc-card-link:hover .hc-card-cta {
+        gap: 0.7rem;
+      }
+      .hc-card-cta {
+        transition: gap 0.25s ease;
+      }
       .hc-card svg {
         width: 36px;
         height: 36px;
@@ -316,7 +341,7 @@
         and we'll recommend the right fit.
       </p>
       <div class="hc-grid">
-        <div class="hc-card">
+        <a href="reporting-dashboards.html" class="hc-card hc-card-link">
           <svg
             viewBox="0 0 24 24"
             fill="none"
@@ -329,8 +354,8 @@
           <h3>Reporting & Dashboards</h3>
           <p>
             Struggling to turn scattered data into board-ready insight? We build
-            dashboards that surface what matters — quality, risk, incidents,
-            complaints, and workforce trends — in one clear view.
+            custom Power BI dashboards that surface what matters — quality, risk,
+            incidents, complaints, and workforce trends — in one clear view.
           </p>
           <ul>
             <li>Power BI or Excel based builds depending on data maturity</li>
@@ -341,7 +366,8 @@
             <li>Board ready reporting with traffic light indicators</li>
             <li>Training to support interpreting and actioning insights</li>
           </ul>
-        </div>
+          <span class="hc-card-cta">See the interactive demo &amp; packages &rarr;</span>
+        </a>
         <div class="hc-card">
           <svg
             viewBox="0 0 24 24"

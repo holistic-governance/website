@@ -1,0 +1,609 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Custom Power BI Dashboards for Healthcare | Holistic Governance</title>
+    <meta name="description" content="Custom Power BI dashboards for aged care and healthcare — board-ready governance reporting and quality & operations team dashboards. See an interactive demo, then book a scoping call." />
+    <meta name="robots" content="index,follow" />
+    <meta name="author" content="Naomi Alefelder" />
+    <link rel="canonical" href="https://hg-au.com/reporting-dashboards.html" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Holistic Governance" />
+    <meta property="og:locale" content="en_AU" />
+    <meta property="og:url" content="https://hg-au.com/reporting-dashboards.html" />
+    <meta property="og:title" content="Custom Power BI Dashboards for Healthcare | Holistic Governance" />
+    <meta property="og:description" content="Board-ready Power BI dashboards for aged care and healthcare governance. Interactive demo, quality & operations views, and training included." />
+    <meta property="og:image" content="https://hg-au.com/og-image-v3.png" />
+    <meta property="og:image:width" content="2400" />
+    <meta property="og:image:height" content="1260" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Custom Power BI Dashboards for Healthcare | Holistic Governance" />
+    <meta name="twitter:description" content="Board-ready Power BI dashboards for aged care and healthcare governance. Interactive demo and training included." />
+    <meta name="twitter:image" content="https://hg-au.com/og-image-v3.png" />
+    <link rel="icon" type="image/png" href="favicon.png" />
+    <link rel="preload" as="image" href="logo-hg-trimmed.png" fetchpriority="high" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=DM+Sans:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      .breadcrumb a:hover { text-decoration: underline; }
+      section { padding: 5rem 4rem; }
+      .section-intro {
+        color: #ffffff;
+        font-size: 1rem;
+        line-height: 1.8;
+        max-width: 640px;
+        margin-bottom: 3rem;
+      }
+      .lead-accent { color: var(--sky); }
+
+      /* Primary button (sky-filled) — not in shared styles.css */
+      .btn-primary {
+        display: inline-block;
+        padding: 1rem 2.4rem;
+        background: var(--sky);
+        color: var(--navy);
+        font-size: 0.85rem;
+        font-weight: 600;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        text-decoration: none;
+        border: none;
+        border-radius: 2px;
+        white-space: nowrap;
+        cursor: pointer;
+        font-family: "DM Sans", sans-serif;
+        transition: background 0.3s, transform 0.2s, box-shadow 0.2s;
+      }
+      .btn-primary:hover {
+        background: var(--sky-light);
+        transform: translateY(-2px);
+        box-shadow: 0 10px 30px -12px rgba(56, 189, 248, 0.6);
+      }
+
+      /* PROBLEM → OUTCOME */
+      .po-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+        margin-top: 2rem;
+      }
+      .po-card {
+        background: var(--navy-mid);
+        border: 1px solid var(--border);
+        border-radius: 2px;
+        padding: 2rem;
+      }
+      .po-card .po-from { font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-light); margin-bottom: 0.6rem; }
+      .po-card h3 { font-family: "Cormorant Garamond", serif; font-size: 1.3rem; color: var(--white); margin-bottom: 0.6rem; }
+      .po-card p { color: #ffffff; font-size: 0.88rem; line-height: 1.7; }
+
+      /* DEMO */
+      .demo-section { background: var(--navy-mid); }
+      .demo-wrap { max-width: 1100px; margin: 2.5rem auto 0; }
+      .demo-tabs { display: flex; gap: 0.5rem; margin-bottom: 1rem; flex-wrap: wrap; }
+      .demo-tab {
+        background: transparent;
+        border: 1px solid var(--border);
+        color: var(--text-mid);
+        font-family: inherit;
+        font-size: 0.8rem;
+        letter-spacing: 0.04em;
+        padding: 0.5rem 1.1rem;
+        border-radius: 2px;
+        cursor: pointer;
+        transition: all 0.2s;
+      }
+      .demo-tab:hover { border-color: var(--sky); color: var(--white); }
+      .demo-tab.active { background: rgba(56, 189, 248, 0.1); border-color: var(--sky); color: var(--sky); }
+      .demo-frame {
+        position: relative;
+        width: 100%;
+        aspect-ratio: 16 / 9.4;
+        background: #ffffff;
+        border: 1px solid var(--border-mid);
+        border-radius: 4px;
+        overflow: hidden;
+      }
+      .demo-frame iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+      .demo-shot { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; background: #fff; display: none; }
+      .demo-shot.active { display: block; }
+      .demo-note { text-align: center; color: var(--text-light); font-size: 0.8rem; margin-top: 1rem; font-style: italic; }
+      .demo-cta { text-align: center; margin-top: 1.6rem; }
+
+      /* FEATURES */
+      .feat-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+        margin-top: 2.5rem;
+      }
+      .feat {
+        border: 1px solid var(--border);
+        border-radius: 2px;
+        padding: 1.8rem;
+        transition: border-color 0.3s;
+      }
+      .feat:hover { border-color: var(--sky); }
+      .feat svg { width: 30px; height: 30px; color: var(--sky); margin-bottom: 1rem; }
+      .feat h3 { font-family: "Cormorant Garamond", serif; font-size: 1.2rem; color: var(--white); margin-bottom: 0.5rem; }
+      .feat p { color: #ffffff; font-size: 0.85rem; line-height: 1.7; }
+
+      /* PACKAGES */
+      .pkg-section { background: var(--navy-mid); }
+      .pkg-grid {
+        display: grid;
+        grid-template-columns: 1.1fr 1fr;
+        gap: 1.5rem;
+        margin-top: 2.5rem;
+        align-items: start;
+      }
+      .pkg-card {
+        background: var(--navy);
+        border: 1px solid var(--border);
+        border-radius: 4px;
+        padding: 2.5rem 2.2rem;
+        position: relative;
+      }
+      .pkg-card.hero { border-color: var(--sky); box-shadow: 0 0 0 1px rgba(56, 189, 248, 0.25), 0 20px 50px -30px rgba(56, 189, 248, 0.5); }
+      .pkg-badge {
+        position: absolute;
+        top: -0.8rem;
+        left: 2.2rem;
+        background: var(--sky);
+        color: var(--navy);
+        font-size: 0.62rem;
+        font-weight: 600;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        padding: 0.3rem 0.8rem;
+        border-radius: 2px;
+      }
+      .pkg-eyebrow { font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--sky); margin-bottom: 0.6rem; }
+      .pkg-card h3 { font-family: "Cormorant Garamond", serif; font-size: 1.7rem; color: var(--white); margin-bottom: 0.6rem; }
+      .pkg-card > p { color: #ffffff; font-size: 0.88rem; line-height: 1.7; margin-bottom: 1.4rem; }
+      .pkg-list { list-style: none; padding: 0; margin-bottom: 1.8rem; }
+      .pkg-list li { color: #ffffff; font-size: 0.85rem; line-height: 1.7; padding-left: 1.4rem; position: relative; margin-bottom: 0.3rem; }
+      .pkg-list li::before { content: ""; position: absolute; left: 0; top: 0.55em; width: 6px; height: 6px; border-radius: 50%; background: var(--sky); }
+      .pkg-options { display: flex; flex-direction: column; gap: 0.8rem; }
+      .pkg-opt {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1rem;
+        border: 1px solid var(--border);
+        border-radius: 3px;
+        padding: 1rem 1.2rem;
+        text-decoration: none;
+        color: inherit;
+        transition: all 0.2s;
+      }
+      .pkg-opt:hover { border-color: var(--sky); background: rgba(56, 189, 248, 0.05); }
+      .pkg-opt .opt-name { font-size: 0.9rem; color: var(--white); font-weight: 500; }
+      .pkg-opt .opt-sub { font-size: 0.76rem; color: var(--text-mid); margin-top: 0.2rem; }
+      .pkg-opt .opt-arrow { color: var(--sky); font-size: 1rem; flex-shrink: 0; }
+      .pkg-note { text-align: center; color: var(--text-light); font-size: 0.82rem; margin-top: 2rem; }
+      .pkg-note a { color: var(--sky); text-decoration: none; }
+      .pkg-note a:hover { text-decoration: underline; }
+
+      /* HOW IT WORKS */
+      .steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; margin-top: 2.5rem; }
+      .step { position: relative; padding-top: 0.5rem; }
+      .step .step-num { font-family: "Cormorant Garamond", serif; font-size: 2.4rem; color: var(--sky); line-height: 1; opacity: 0.8; }
+      .step h3 { font-size: 1rem; color: var(--white); margin: 0.6rem 0 0.4rem; }
+      .step p { color: #cbd5e1; font-size: 0.82rem; line-height: 1.6; }
+
+      /* LEAD MAGNET BAND */
+      .lm-band {
+        background: linear-gradient(135deg, rgba(56, 189, 248, 0.08), rgba(201, 149, 107, 0.06));
+        border-top: 1px solid var(--border);
+        border-bottom: 1px solid var(--border);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 2rem;
+        flex-wrap: wrap;
+      }
+      .lm-band .lm-text { max-width: 620px; }
+      .lm-band h2 { margin-bottom: 0.6rem; }
+      .lm-band p { color: #e2e8f0; font-size: 0.92rem; line-height: 1.7; }
+
+      /* TRUST STRIP */
+      .trust-strip { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-top: 2rem; }
+      .trust-pill { border: 1px solid var(--border); border-radius: 20px; padding: 0.4rem 1rem; font-size: 0.78rem; color: var(--text-mid); }
+
+      @media (max-width: 900px) {
+        section { padding: 3.5rem 1.5rem; }
+        .po-grid, .feat-grid, .pkg-grid, .steps { grid-template-columns: 1fr; }
+        .lm-band { flex-direction: column; align-items: flex-start; }
+      }
+    </style>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9PMGXF9Q9T"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-9PMGXF9Q9T');
+      gtag('config', 'AW-18073082985');
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "serviceType": "Custom Power BI Dashboard Development for Healthcare",
+      "provider": {
+        "@type": "Organization",
+        "name": "Holistic Governance",
+        "url": "https://hg-au.com/"
+      },
+      "areaServed": ["Australia", "New Zealand"],
+      "audience": {
+        "@type": "Audience",
+        "audienceType": "Aged care and healthcare providers, boards and executives"
+      },
+      "description": "Custom Power BI dashboards for aged care and healthcare — board-ready governance reporting and quality & operations team dashboards, with training and optional monthly review included.",
+      "offers": {
+        "@type": "Offer",
+        "url": "https://hg-au.com/bi-enquiry.html",
+        "priceSpecification": { "@type": "PriceSpecification", "priceCurrency": "AUD" }
+      }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://hg-au.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Solutions", "item": "https://hg-au.com/healthcare.html" },
+        { "@type": "ListItem", "position": 3, "name": "Reporting & Dashboards", "item": "https://hg-au.com/reporting-dashboards.html" }
+      ]
+    }
+    </script>
+  </head>
+  <body>
+    <nav>
+      <a href="index.html" class="logo"><img src="logo-hg-trimmed.png" alt="Holistic Governance" width="351" height="524"><span class="logo-name">Holistic <span>Governance</span></span></a>
+      <button class="hamburger" onclick="this.nextElementSibling.classList.toggle('open')">&#9776;</button>
+      <ul>
+        <li><a href="about.html">About</a></li>
+        <li><a href="healthcare.html" class="active">Solutions</a></li>
+        <li><a href="resources.html">Resources</a></li>
+        <li class="nav-contact-wrapper">
+          <button class="nav-cta" onclick="this.nextElementSibling.classList.toggle('open')">Contact</button>
+          <div class="nav-contact-popup">
+            <a href="tel:0405515300"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>0405 515 300</a>
+            <a href="mailto:info@hg-au.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>info@hg-au.com</a>
+            <a href="bi-enquiry.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>Enquire About a Build</a>
+          </div>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="page-hero">
+      <div class="breadcrumb">
+        <a href="index.html">Home</a> / <a href="healthcare.html">Solutions</a> / Reporting &amp; Dashboards
+      </div>
+      <h1>Board-Ready Power BI Dashboards for Healthcare</h1>
+      <p>
+        Turn scattered incident, quality, risk and workforce data into one clear,
+        board-ready view — built by a governance specialist who knows what your
+        board, regulator and quality team actually need to see.
+      </p>
+    </div>
+
+    <!-- PROBLEM → OUTCOME -->
+    <section>
+      <div class="section-label">Why It Matters</div>
+      <h2>From scattered spreadsheets to decisions you can defend</h2>
+      <p class="section-intro">
+        Most aged care and healthcare providers are data-rich but insight-poor —
+        numbers live in separate systems, board packs are assembled by hand, and
+        the story behind the trend gets lost. A purpose-built dashboard fixes that.
+      </p>
+      <div class="po-grid">
+        <div class="po-card">
+          <div class="po-from">Instead of</div>
+          <h3>Manual board packs</h3>
+          <p>Hours spent copying figures into slides each month — outdated the moment they're printed.</p>
+        </div>
+        <div class="po-card">
+          <div class="po-from">You get</div>
+          <h3>One source of truth</h3>
+          <p>Live, automated reporting with traffic-light indicators and exceptions surfaced against your thresholds.</p>
+        </div>
+        <div class="po-card">
+          <div class="po-from">So you can</div>
+          <h3>Act with confidence</h3>
+          <p>Drill from a board KPI to the root cause in seconds, and evidence your governance to the regulator.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- INTERACTIVE DEMO -->
+    <section class="demo-section">
+      <div class="section-label">Interactive Demo</div>
+      <h2>Explore a live sample dashboard</h2>
+      <p class="section-intro">
+        This is a fully interactive mock built on <strong>illustrative data</strong> —
+        the same board and incident views we build for aged care providers. Use the
+        <strong>page tabs along the bottom of the report</strong> to switch between
+        Board Summary and the detailed incident views, and hover or click to explore.
+      </p>
+
+      <div class="demo-wrap">
+        <div class="demo-frame" id="demoFrame">
+          <!-- Live Power BI report (Publish to web · illustrative data only).
+               To update: regenerate the Publish-to-web code in the Power BI Service
+               and replace the src URL below. The .demo-fallback screenshots are kept
+               hidden as a backup in case the embed is ever unavailable. -->
+          <iframe title="Holistic Governance — Demo BI Dashboard"
+                  src="https://app.powerbi.com/view?r=eyJrIjoiNDdiNWQzMDEtNWFlMC00YjZiLWE3MzItMjNmNjhkZjlmNDlhIiwidCI6IjAyNGFkNzQzLTNmYmYtNDJmYy1iYTEwLWY5NTQ0YTY1ZTBiOCJ9"
+                  frameborder="0" allowfullscreen></iframe>
+
+          <div class="demo-fallback" id="demoFallback" style="display:none">
+            <img class="demo-shot active" id="shot-board" src="demo-board-summary.png"
+                 alt="Board summary dashboard showing incident rate per 1,000 occupied bed days, SIRS notifications, mandatory education compliance and exceptions — illustrative data" />
+            <img class="demo-shot" id="shot-incident" src="demo-incident-summary.png"
+                 alt="Incident analytics dashboard showing risk rating heatmap, incident counts by type, SIRS priority and root cause — illustrative data" />
+          </div>
+        </div>
+        <p class="demo-note">Illustrative data only — your build uses your own data, branded to your organisation.</p>
+        <div class="demo-cta">
+          <a href="bi-enquiry.html" class="btn-primary">Book a live walkthrough &rarr;</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHAT YOU GET -->
+    <section>
+      <div class="section-label">What You Get</div>
+      <h2>Built for governance, not just charts</h2>
+      <div class="feat-grid">
+        <div class="feat">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 3v18h18"/><path d="M7 14l4-4 3 3 5-6"/></svg>
+          <h3>Board-ready reporting</h3>
+          <p>Traffic-light KPIs, trend lines with control limits, and an exceptions table that flags what's past threshold this month.</p>
+        </div>
+        <div class="feat">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 21l-4.35-4.35"/><circle cx="11" cy="11" r="7"/><path d="M11 8v6M8 11h6"/></svg>
+          <h3>Drill-down to root cause</h3>
+          <p>Move from a headline metric to the incident, risk rating or high-risk area behind it — no re-running reports.</p>
+        </div>
+        <div class="feat">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4"/><circle cx="12" cy="12" r="3"/></svg>
+          <h3>Automated data inputs</h3>
+          <p>Where your systems allow, we automate refresh so the numbers are current — less manual handling, fewer errors.</p>
+        </div>
+        <div class="feat">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg>
+          <h3>Sector metrics that count</h3>
+          <p>Incidents per 1,000 occupied bed days, SIRS notifications, care minutes, mandatory education and Essential Eight maturity.</p>
+        </div>
+        <div class="feat">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+          <h3>Board &amp; team views</h3>
+          <p>A concise board summary for directors, plus deeper operational dashboards for your quality and operations teams.</p>
+        </div>
+        <div class="feat">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 14l9-5-9-5-9 5 9 5z"/><path d="M12 14v7M5 11v4c0 1 3 3 7 3s7-2 7-3v-4"/></svg>
+          <h3>Training included</h3>
+          <p>We don't just hand over a file — we train your people to read, interpret and act on what the dashboard is telling them.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- PACKAGES -->
+    <section class="pkg-section">
+      <div class="section-label">Packages</div>
+      <h2>Choose the build that fits your organisation</h2>
+      <p class="section-intro">
+        Every dashboard is custom-built and comes with training. Choose a
+        <strong>one-off build</strong> to own it outright, or a
+        <strong>monthly retainer</strong> where we also review your data each period
+        and give you written commentary on what's changing and why.
+      </p>
+
+      <div class="pkg-grid">
+        <!-- HERO -->
+        <div class="pkg-card hero">
+          <span class="pkg-badge">Most Popular</span>
+          <div class="pkg-eyebrow">For your board &amp; executive</div>
+          <h3>Board-Ready Dashboard</h3>
+          <p>The governance view — one clear page your board can read in minutes, with the exceptions and trends that matter for regulatory confidence.</p>
+          <ul class="pkg-list">
+            <li>Board summary with traffic-light KPIs &amp; trend control limits</li>
+            <li>Exceptions register — indicators past threshold, at a glance</li>
+            <li>SIRS, incidents per 1,000 OBD, care minutes, education &amp; E8 maturity</li>
+            <li>Drill-down for directors who want the detail</li>
+            <li>Training for your board and executive included</li>
+          </ul>
+          <div class="pkg-options">
+            <a class="pkg-opt" href="bi-enquiry.html?package=board-oneoff">
+              <span>
+                <span class="opt-name">One-off build</span>
+                <span class="opt-sub">Custom build + training, delivered once</span>
+              </span>
+              <span class="opt-arrow">Book scoping call &rarr;</span>
+            </a>
+            <a class="pkg-opt" href="bi-enquiry.html?package=board-retainer">
+              <span>
+                <span class="opt-name">Monthly retainer</span>
+                <span class="opt-sub">Build + monthly data review, commentary &amp; training</span>
+              </span>
+              <span class="opt-arrow">Book scoping call &rarr;</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- SECONDARY -->
+        <div class="pkg-card">
+          <div class="pkg-eyebrow">For your quality &amp; operations teams</div>
+          <h3>Health Care Team Dashboards</h3>
+          <p>The working view — operational dashboards your quality and operations teams use day to day to find issues early and close the loop.</p>
+          <ul class="pkg-list">
+            <li>Incident analytics — by type, risk rating heatmap &amp; root cause</li>
+            <li>Complaints, open disclosure &amp; SIRS notification tracking</li>
+            <li>Workforce &amp; care-minutes operational views</li>
+            <li>Filters &amp; drill-down for frontline quality work</li>
+            <li>Training for your team included</li>
+          </ul>
+          <div class="pkg-options">
+            <a class="pkg-opt" href="bi-enquiry.html?package=team-oneoff">
+              <span>
+                <span class="opt-name">One-off build</span>
+                <span class="opt-sub">Custom build + training, delivered once</span>
+              </span>
+              <span class="opt-arrow">Book scoping call &rarr;</span>
+            </a>
+            <a class="pkg-opt" href="bi-enquiry.html?package=team-retainer">
+              <span>
+                <span class="opt-name">Monthly retainer</span>
+                <span class="opt-sub">Build + monthly data review, commentary &amp; training</span>
+              </span>
+              <span class="opt-arrow">Book scoping call &rarr;</span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <p class="pkg-note">
+        Not sure which fits? <a href="bi-enquiry.html">Tell us about your data</a> and we'll recommend the right build on a short scoping call.
+      </p>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section>
+      <div class="section-label">How It Works</div>
+      <h2>From scoping call to trained team</h2>
+      <div class="steps">
+        <div class="step">
+          <div class="step-num">1</div>
+          <h3>Scoping call</h3>
+          <p>We map what your board and teams need, and assess your data maturity and sources.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <h3>Design &amp; build</h3>
+          <p>We build your dashboard in Power BI, automating data inputs wherever your systems allow.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">3</div>
+          <h3>Review together</h3>
+          <p>We refine the views with you so the layout and thresholds match how you actually govern.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">4</div>
+          <h3>Train &amp; hand over</h3>
+          <p>We train your people to interpret and action the insights — and stay on for retainer if you want ongoing review.</p>
+        </div>
+      </div>
+      <div class="trust-strip">
+        <span class="trust-pill">Aged Care Quality Standards</span>
+        <span class="trust-pill">NSQHS</span>
+        <span class="trust-pill">SIRS</span>
+        <span class="trust-pill">Care minutes</span>
+        <span class="trust-pill">Essential Eight</span>
+        <span class="trust-pill">Governance-led, not generic BI</span>
+      </div>
+    </section>
+
+    <!-- LEAD MAGNET BAND -->
+    <section class="lm-band">
+      <div class="lm-text">
+        <div class="section-label">Free Resource</div>
+        <h2>Is your board reporting doing its job?</h2>
+        <p>
+          Download the <strong>Board Reporting Health Check</strong> — a short
+          self-assessment for aged care and healthcare boards. Score your current
+          reporting in ten minutes and see exactly where the gaps are.
+        </p>
+      </div>
+      <a href="board-reporting-health-check.html" class="btn-primary">Get the Health Check &rarr;</a>
+    </section>
+
+    <div class="cta-band">
+      <h2>Ready to see your data as a board-ready dashboard?</h2>
+      <a href="bi-enquiry.html" class="btn-dark">Enquire About a Custom Build</a>
+    </div>
+
+    <footer>
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <div class="footer-logo"><img src="logo-hg-trimmed.png" alt="Holistic Governance" width="351" height="524"><span class="logo-name">Holistic <span>Governance</span></span></div>
+          <p class="footer-tagline">Improving clarity and confidence in governance through knowledge, data, and technology.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Navigate</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="healthcare.html">Solutions</a></li>
+            <li><a href="resources.html">Resources</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Get in Touch</h4>
+          <div class="footer-contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            <a href="mailto:info@hg-au.com">info@hg-au.com</a>
+          </div>
+          <div class="footer-contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+            <a href="tel:0405515300">0405 515 300</a>
+          </div>
+          <div class="footer-contact-item" style="margin-top: 0.5rem;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+            <a href="bi-enquiry.html">Enquire About a Build</a>
+          </div>
+          <div class="footer-contact-item">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.48-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 11.01-4.12 2.06 2.06 0 010 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z"/></svg>
+            <a href="https://www.linkedin.com/company/hg-au/" target="_blank" rel="noopener">LinkedIn</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Where We Work</h4>
+          <address style="font-style:normal; font-size:0.85rem; line-height:1.6; color:var(--text); margin-bottom:0.6rem;">Heidelberg, Victoria, Australia</address>
+          <ul>
+            <li>Australia</li>
+            <li>New Zealand</li>
+          </ul>
+          <p style="font-size:0.8rem; color:var(--text-light); margin-top:0.8rem;">Remote &amp; on-site delivery</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Holistic Governance. All rights reserved. · <a href="/privacy.html" style="color:rgba(255,255,255,0.5);text-decoration:none">Privacy Policy</a></p>
+      </div>
+    </footer>
+
+    <button class="back-to-top" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 15l-6-6-6 6"/></svg>
+    </button>
+
+    <script>
+      // Demo view switcher
+      function showShot(which, btn) {
+        document.querySelectorAll('.demo-shot').forEach(function (s) { s.classList.remove('active'); });
+        var shot = document.getElementById('shot-' + which);
+        if (shot) shot.classList.add('active');
+        document.querySelectorAll('.demo-tab').forEach(function (t) { t.classList.remove('active'); });
+        if (btn) btn.classList.add('active');
+      }
+
+      // Shared nav/popup + scroll behaviour (matches other pages)
+      document.addEventListener('click', function (e) {
+        document.querySelectorAll('.contact-popup.open, .nav-contact-popup.open').forEach(function (popup) {
+          if (!popup.parentElement.contains(e.target)) popup.classList.remove('open');
+        });
+      });
+      window.addEventListener('scroll', function () {
+        document.querySelector('nav').classList.toggle('scrolled', window.scrollY > 60);
+        document.querySelector('.back-to-top').classList.toggle('visible', window.scrollY > 400);
+      });
+    </script>
+  </body>
+</html>

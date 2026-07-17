@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Board Reporting Health Check — Holistic Governance</title>
+<meta name="description" content="A free 5-minute self-assessment for aged care and healthcare boards. Score your board reporting and see exactly where the gaps are." />
+<meta name="robots" content="index,follow" />
+<link rel="canonical" href="https://hg-au.com/board-reporting-health-check.html" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://hg-au.com/board-reporting-health-check.html" />
+<meta property="og:title" content="Board Reporting Health Check — Holistic Governance" />
+<meta property="og:description" content="A free 5-minute self-assessment for aged care and healthcare boards. Score your reporting and find the gaps." />
+<meta property="og:image" content="https://hg-au.com/og-image-v3.png" />
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="preload" as="image" href="logo-hg-trimmed.png" fetchpriority="high">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --navy: #0f172a; --navy-mid: #1e293b; --sky: #38bdf8; --sky2: #0077a8;
+    --text: #f1f5f9; --muted: #64748b; --border: rgba(56,189,248,0.15);
+    --border-focus: rgba(56,189,248,0.45);
+    --green: #34d399; --amber: #fbbf24; --red: #f87171;
+  }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'DM Sans', sans-serif; background: var(--navy); color: var(--text); min-height: 100vh; overflow-x: hidden; }
+  .bg { position: fixed; inset: 0; z-index: 0;
+    background: radial-gradient(ellipse 70% 50% at 15% -5%, rgba(56,189,248,0.1) 0%, transparent 60%),
+                radial-gradient(ellipse 50% 40% at 85% 105%, rgba(56,189,248,0.08) 0%, transparent 60%), var(--navy); }
+  .bg-grid { position: fixed; inset: 0; z-index: 0; opacity: 0.025;
+    background-image: linear-gradient(var(--sky) 1px, transparent 1px), linear-gradient(90deg, var(--sky) 1px, transparent 1px);
+    background-size: 48px 48px; }
+  .page { position: relative; z-index: 1; max-width: 780px; margin: 0 auto; padding: 56px 24px 100px; }
+
+  .site-header { display: flex; align-items: center; gap: 12px; margin-bottom: 44px; }
+  .logo { text-decoration: none; display: flex; align-items: center; gap: 0.75rem; }
+  .logo img { height: 50px; width: auto; }
+  .logo-name { font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; font-weight: 600; letter-spacing: 0.08em; color: var(--text); }
+  .logo-name span { color: var(--sky); }
+  .back-link { margin-left: auto; font-size: 13px; color: var(--muted); text-decoration: none; }
+  .back-link:hover { color: var(--sky); }
+
+  .hero { margin-bottom: 32px; }
+  .hero-eyebrow { font-size: 11px; font-weight: 500; letter-spacing: 3px; text-transform: uppercase; color: var(--sky); margin-bottom: 14px; display: flex; align-items: center; gap: 10px; }
+  .hero-eyebrow::before { content: ''; width: 28px; height: 1px; background: var(--sky); }
+  .hero-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(32px, 5.5vw, 46px); font-weight: 300; line-height: 1.1; margin-bottom: 18px; color: var(--sky); }
+  .hero-desc { font-size: 15px; line-height: 1.8; color: #cbd5e1; max-width: 620px; }
+  .hero-desc strong { color: var(--text); }
+
+  .card { background: rgba(30,41,59,0.6); border: 1px solid var(--border); border-radius: 16px; padding: 36px; backdrop-filter: blur(12px); position: relative; overflow: hidden; margin-bottom: 24px; }
+  .card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: linear-gradient(90deg, transparent, var(--sky), transparent); }
+
+  /* Gate form */
+  .gate-title { font-family: 'Cormorant Garamond', serif; font-size: 24px; font-weight: 400; color: var(--text); margin-bottom: 8px; }
+  .gate-sub { font-size: 13px; color: var(--muted); margin-bottom: 24px; line-height: 1.6; }
+  .field { margin-bottom: 18px; }
+  .field-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  @media (max-width: 560px) { .field-row { grid-template-columns: 1fr; } }
+  label { display: block; font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 1.5px; color: var(--muted); margin-bottom: 8px; }
+  label .optional { font-size: 10px; font-weight: 400; color: rgba(100,116,139,0.6); text-transform: none; letter-spacing: 0; margin-left: 6px; }
+  input, select { width: 100%; background: rgba(255,255,255,0.04); border: 1px solid var(--border); border-radius: 8px; color: var(--text); font-family: 'DM Sans', sans-serif; font-size: 14px; padding: 12px 14px; transition: all 0.2s; outline: none; appearance: none; }
+  input::placeholder { color: rgba(100,116,139,0.5); }
+  input:focus, select:focus { border-color: var(--border-focus); background: rgba(56,189,248,0.03); box-shadow: 0 0 0 3px rgba(56,189,248,0.07); }
+  input.error, select.error { border-color: var(--red); }
+  select { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%2338bdf8' stroke-width='2'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 14px center; padding-right: 36px; cursor: pointer; }
+  select option { background: #1e293b; color: var(--text); }
+  .field-error { font-size: 11px; color: var(--red); margin-top: 6px; display: none; }
+  .field-error.show { display: block; }
+
+  .btn { width: 100%; padding: 15px 32px; background: linear-gradient(135deg, #0077a8, var(--sky)); color: var(--navy); font-family: 'DM Sans', sans-serif; font-size: 14px; font-weight: 700; letter-spacing: 0.5px; border: none; border-radius: 10px; cursor: pointer; transition: all 0.2s; position: relative; overflow: hidden; }
+  .btn:hover { opacity: 0.92; transform: translateY(-1px); box-shadow: 0 8px 24px rgba(56,189,248,0.2); }
+  .btn:disabled { opacity: 0.5; cursor: not-allowed; transform: none; }
+  .btn .spinner { display: none; width: 16px; height: 16px; border: 2px solid rgba(15,23,42,0.3); border-top-color: var(--navy); border-radius: 50%; animation: spin 0.7s linear infinite; position: absolute; right: 20px; top: 50%; transform: translateY(-50%); }
+  .btn.loading .spinner { display: block; }
+  @keyframes spin { to { transform: translateY(-50%) rotate(360deg); } }
+  .gate-note { text-align: center; font-size: 11px; color: rgba(100,116,139,0.6); margin-top: 12px; line-height: 1.6; }
+
+  .preview-list { list-style: none; margin: 20px 0 0; padding: 0; }
+  .preview-list li { font-size: 13px; color: #cbd5e1; padding: 6px 0 6px 24px; position: relative; }
+  .preview-list li::before { content: '\2713'; position: absolute; left: 0; color: var(--sky); font-weight: 700; }
+
+  /* Checklist (revealed) */
+  #checklist { display: none; }
+  #checklist.show { display: block; }
+  .score-bar { position: sticky; top: 0; z-index: 5; background: rgba(15,23,42,0.92); backdrop-filter: blur(8px); border: 1px solid var(--border); border-radius: 12px; padding: 16px 20px; margin-bottom: 24px; display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+  .score-num { font-family: 'Cormorant Garamond', serif; font-size: 34px; color: var(--sky); line-height: 1; }
+  .score-num small { font-size: 15px; color: var(--muted); }
+  .score-band { font-size: 13px; font-weight: 600; padding: 5px 12px; border-radius: 20px; }
+  .score-band.at-risk { background: rgba(248,113,113,0.15); color: var(--red); }
+  .score-band.developing { background: rgba(251,191,36,0.15); color: var(--amber); }
+  .score-band.board-ready { background: rgba(52,211,153,0.15); color: var(--green); }
+  .score-meter { flex: 1; height: 8px; background: rgba(255,255,255,0.06); border-radius: 4px; overflow: hidden; max-width: 240px; }
+  .score-fill { height: 100%; width: 0; background: linear-gradient(90deg, var(--sky2), var(--sky)); transition: width 0.3s; }
+
+  .hc-section { margin-bottom: 20px; }
+  .hc-section h3 { font-family: 'Cormorant Garamond', serif; font-size: 19px; font-weight: 400; color: var(--text); margin-bottom: 12px; padding-bottom: 8px; border-bottom: 1px solid var(--border); }
+  .hc-item { display: flex; align-items: flex-start; gap: 12px; padding: 9px 0; cursor: pointer; }
+  .hc-item input { width: 18px; height: 18px; margin-top: 2px; accent-color: var(--sky); flex-shrink: 0; cursor: pointer; }
+  .hc-item span { font-size: 14px; line-height: 1.6; color: #e2e8f0; }
+
+  .band-explainer { font-size: 13px; color: var(--muted); line-height: 1.7; margin-top: 8px; padding: 16px; border: 1px dashed var(--border); border-radius: 10px; }
+
+  .final-cta { text-align: center; padding: 8px 0 0; }
+  .final-cta h3 { font-family: 'Cormorant Garamond', serif; font-size: 24px; font-weight: 400; color: var(--text); margin-bottom: 10px; }
+  .final-cta p { font-size: 14px; color: var(--muted); line-height: 1.7; margin-bottom: 20px; max-width: 520px; margin-left: auto; margin-right: auto; }
+  .cta-buttons { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+  .btn-inline { display: inline-block; width: auto; padding: 13px 26px; text-decoration: none; }
+  .btn-ghost { background: transparent; border: 1px solid var(--border-focus); color: var(--sky); }
+  .btn-ghost:hover { background: rgba(56,189,248,0.08); box-shadow: none; }
+  @media print { .bg, .bg-grid, .gate, .score-bar, .final-cta, .back-link { display: none !important; } body { background: #fff; color: #000; } }
+</style>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9PMGXF9Q9T"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-9PMGXF9Q9T');
+  gtag('config', 'AW-18073082985');
+</script>
+</head>
+<body>
+<div class="bg"></div>
+<div class="bg-grid"></div>
+
+<div class="page">
+  <header class="site-header">
+    <a href="index.html" class="logo"><img src="logo-hg-trimmed.png" alt="Holistic Governance" width="351" height="524"><span class="logo-name">Holistic <span>Governance</span></span></a>
+    <a href="reporting-dashboards.html" class="back-link">&larr; Back to dashboards</a>
+  </header>
+
+  <div class="hero">
+    <div class="hero-eyebrow">Free Resource</div>
+    <h1 class="hero-title">Board Reporting Health Check</h1>
+    <p class="hero-desc">
+      A five-minute self-assessment for aged care and healthcare boards and executives.
+      Good governance depends on good information — if your reporting is late, inconsistent
+      or buried in spreadsheets, oversight gaps become <strong>compliance gaps</strong>.
+      Score your reporting across 30 checkpoints and see exactly where to focus.
+    </p>
+  </div>
+
+  <!-- GATE -->
+  <div class="card gate" id="gate">
+    <div class="gate-title">Get the Health Check</div>
+    <p class="gate-sub">Enter your details to unlock the interactive checklist — it scores itself as you go. No spam; we'll only follow up if you ask us to.</p>
+    <div id="gateForm">
+      <div class="field">
+        <label for="name">Your Name</label>
+        <input type="text" id="name" placeholder="First and last name" required />
+        <div class="field-error" id="name-error">Please enter your name</div>
+      </div>
+      <div class="field-row">
+        <div class="field">
+          <label for="email">Work Email</label>
+          <input type="email" id="email" placeholder="you@organisation.com.au" required />
+          <div class="field-error" id="email-error">Please enter a valid email</div>
+        </div>
+        <div class="field">
+          <label for="orgName">Organisation <span class="optional">optional</span></label>
+          <input type="text" id="orgName" placeholder="e.g. Sunnyside Aged Care" />
+        </div>
+      </div>
+      <div class="field">
+        <label for="orgType">Organisation Type <span class="optional">optional</span></label>
+        <select id="orgType">
+          <option value="" disabled selected>Select type…</option>
+          <option>Residential Aged Care</option>
+          <option>Home Care / Support at Home</option>
+          <option>Hospital / Health Service</option>
+          <option>Primary / Community Health</option>
+          <option>Disability / NDIS</option>
+          <option>Other</option>
+        </select>
+      </div>
+      <button type="button" class="btn" id="unlockBtn" onclick="unlock()">
+        Unlock the Health Check &rarr;
+        <div class="spinner"></div>
+      </button>
+      <p class="gate-note">Your information is handled per our <a href="/privacy.html" style="color:#00b4d8;text-decoration:none">Privacy Policy</a>.</p>
+    </div>
+    <ul class="preview-list">
+      <li>30 checkpoints across 7 governance dimensions</li>
+      <li>Covers SIRS, care minutes, mandatory education, Essential Eight &amp; NSQHS</li>
+      <li>Instant score with an At-risk / Developing / Board-ready band</li>
+    </ul>
+  </div>
+
+  <!-- CHECKLIST (revealed after unlock) -->
+  <div id="checklist">
+    <div class="score-bar">
+      <div class="score-num"><span id="scoreNum">0</span><small>/30</small></div>
+      <div class="score-meter"><div class="score-fill" id="scoreFill"></div></div>
+      <div class="score-band at-risk" id="scoreBand">At risk</div>
+    </div>
+
+    <div class="card" id="sectionsWrap"></div>
+
+    <div class="card">
+      <h3 style="font-family:'Cormorant Garamond',serif;font-weight:400;font-size:20px;color:var(--text);margin-bottom:12px;">What your score means</h3>
+      <div class="band-explainer" id="bandExplainer"></div>
+    </div>
+
+    <div class="card">
+      <div class="final-cta">
+        <h3>Turn your score into a board-ready dashboard</h3>
+        <p>
+          Holistic Governance builds custom Power BI dashboards for aged care and healthcare —
+          designed by a governance specialist, so they mirror your real board pack and regulatory
+          reporting. Available as a one-off build or a monthly retainer with review and commentary.
+        </p>
+        <div class="cta-buttons">
+          <a href="bi-enquiry.html" class="btn btn-inline">Book a scoping call &rarr;</a>
+          <a href="reporting-dashboards.html" class="btn btn-inline btn-ghost">See the interactive demo</a>
+        </div>
+        <p style="margin-top:20px;font-size:12px;">
+          <a href="#" onclick="window.print();return false;" style="color:var(--muted);text-decoration:underline;">Print / save your results</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  var SECTIONS = [
+    { title: '1 — Single source of truth', items: [
+      'Board reporting draws from one agreed data source, not multiple disconnected spreadsheets.',
+      'Numbers in the board pack reconcile with the operational systems they come from.',
+      'There is one owner accountable for the accuracy of the reporting.',
+      'The same metric is defined the same way every month (definitions don’t drift).'
+    ]},
+    { title: '2 — Board-ready presentation', items: [
+      'Reporting is at a board-appropriate altitude — summary first, detail on demand.',
+      'Key indicators use traffic-light / RAG status a non-clinical director can read in seconds.',
+      'Metrics are normalised for comparability (e.g. incidents per 1,000 occupied bed days).',
+      'Each metric has a target, threshold or benchmark — it answers "so what?".'
+    ]},
+    { title: '3 — Regulatory & compliance coverage', items: [
+      'SIRS notifications and trends are visible to the board.',
+      'Care minutes delivered vs target (RN and total) are reported and tracked.',
+      'Mandatory education / training compliance rates are reported by cohort or site.',
+      'Essential Eight cyber-security maturity is visible as a governance risk.',
+      'Performance against NSQHS and/or Aged Care Quality Standards is mapped and reported.',
+      'Accreditation status, outcomes and open actions are tracked in the pack.'
+    ]},
+    { title: '4 — Trend & exception visibility', items: [
+      'Metrics show a trend over time, not just a single point-in-time number.',
+      'The report flags exceptions past a defined threshold automatically.',
+      'Directors can see which items are getting worse, not only current status.',
+      'Emerging risks are surfaced before they become notifiable events.'
+    ]},
+    { title: '5 — Drill-down to root cause', items: [
+      'The board summary can be traced down to the underlying detail.',
+      'Quality and risk teams have an operational view that feeds the board view.',
+      'Root-cause and contributing factors are captured and reportable.',
+      'There is a clear line of sight from a board-level number to an operational action.'
+    ]},
+    { title: '6 — Timeliness & automation', items: [
+      'Board reporting is produced on a predictable schedule aligned to the board cycle.',
+      'Assembling the pack takes hours, not days, of manual effort.',
+      'Data is refreshed automatically or semi-automatically, not re-keyed each cycle.',
+      'Ad-hoc director questions can be answered quickly, without rebuilding a report.'
+    ]},
+    { title: '7 — Action tracking', items: [
+      'Every reported issue has a clear owner and due date.',
+      'Open actions from previous meetings are visible and tracked to closure.',
+      'The board can see whether interventions actually moved the metric.',
+      'There is a repeatable loop from insight → decision → action → follow-up.'
+    ]}
+  ];
+
+  var BANDS = {
+    'at-risk': 'At risk (0–10): Reporting is largely manual and fragmented. Governance and regulatory blind spots are likely, and the board is probably reacting to issues rather than seeing them coming. This is the highest-value area to fix first.',
+    'developing': 'Developing (11–20): Solid foundations but meaningful gaps — often in exception visibility, drill-down, automation or action tracking. A focused build would materially lift board confidence and cut manual effort.',
+    'board-ready': 'Board-ready (21–30): Your reporting is mature. The opportunity now is refinement — sharper exception logic, deeper compliance coverage, and reclaiming time through automation.'
+  };
+
+  // Render checklist
+  (function () {
+    var html = '';
+    SECTIONS.forEach(function (sec) {
+      html += '<div class="hc-section"><h3>' + sec.title + '</h3>';
+      sec.items.forEach(function (item) {
+        html += '<label class="hc-item"><input type="checkbox" class="hc-check" onchange="updateScore()"><span>' + item + '</span></label>';
+      });
+      html += '</div>';
+    });
+    document.getElementById('sectionsWrap').innerHTML = html;
+  })();
+
+  function updateScore() {
+    var checks = document.querySelectorAll('.hc-check');
+    var score = 0;
+    checks.forEach(function (c) { if (c.checked) score++; });
+    var total = checks.length;
+    document.getElementById('scoreNum').textContent = score;
+    document.getElementById('scoreFill').style.width = (score / total * 100) + '%';
+    var bandKey = score <= 10 ? 'at-risk' : (score <= 20 ? 'developing' : 'board-ready');
+    var bandLabel = score <= 10 ? 'At risk' : (score <= 20 ? 'Developing' : 'Board-ready');
+    var badge = document.getElementById('scoreBand');
+    badge.className = 'score-band ' + bandKey;
+    badge.textContent = bandLabel;
+    document.getElementById('bandExplainer').textContent = BANDS[bandKey];
+  }
+
+  // ── Gate submit ──
+  async function unlock() {
+    var name = document.getElementById('name');
+    var email = document.getElementById('email');
+    var valid = true;
+    if (!name.value.trim()) { name.classList.add('error'); document.getElementById('name-error').classList.add('show'); valid = false; }
+    if (!email.value.trim() || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value)) {
+      email.classList.add('error'); document.getElementById('email-error').classList.add('show'); valid = false;
+    }
+    if (!valid) return;
+
+    var btn = document.getElementById('unlockBtn');
+    btn.disabled = true; btn.classList.add('loading');
+
+    var data = {
+      enquiryType: 'bi-leadmagnet',
+      leadMagnet:  'Board Reporting Health Check',
+      contactName: name.value.trim(),
+      email:       email.value.trim(),
+      orgName:     document.getElementById('orgName').value.trim(),
+      orgType:     document.getElementById('orgType').value || '',
+      submittedAt: new Date().toISOString()
+    };
+
+    try {
+      await fetch('https://hg-proposals-1010766137344.australia-southeast1.run.app/enquiry', {
+        method: 'POST', headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data)
+      });
+    } catch (err) { /* reveal content regardless — capture is best-effort */ }
+
+    gtag('event', 'lead_magnet_download', {
+      event_category: 'bi-leadmagnet',
+      event_label: 'Board Reporting Health Check',
+      value: 1
+    });
+
+    document.getElementById('gate').style.display = 'none';
+    var cl = document.getElementById('checklist');
+    cl.classList.add('show');
+    updateScore();
+    cl.scrollIntoView({ behavior: 'smooth' });
+  }
+
+  ['name', 'email'].forEach(function (id) {
+    document.getElementById(id).addEventListener('input', function () {
+      this.classList.remove('error');
+      var err = document.getElementById(id + '-error');
+      if (err) err.classList.remove('show');
+    });
+  });
+</script>
+
+<footer style="background:#070d1a;padding:3rem 4rem;display:flex;align-items:center;justify-content:space-between;border-top:1px solid rgba(56,189,248,0.15);">
+  <div style="font-family:'Cormorant Garamond',serif;font-size:1.2rem;color:#f1f5f9;">Holistic <span style="color:#38bdf8;">Governance</span></div>
+  <p style="font-size:0.78rem;color:#64748b;">© 2026 Holistic Governance</p>
+</footer>
+</body>
+</html>
