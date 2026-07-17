@@ -87,8 +87,9 @@
       /* DEMO */
       .demo-section { background: var(--navy-mid); }
       .demo-wrap { max-width: 1100px; margin: 2.5rem auto 0; }
-      .demo-tabs { display: inline-flex; gap: 0; margin: 0 auto 1.25rem; border: 1px solid var(--border-mid); border-radius: 999px; overflow: hidden; }
+      .demo-tabs { display: inline-flex; gap: 0; margin: 0; border: 1px solid var(--border-mid); border-radius: 999px; overflow: hidden; }
       .demo-tabs-wrap { text-align: center; }
+      .demo-tabs-row { display: inline-flex; align-items: center; gap: 0.75rem; margin: 0 auto 1.25rem; }
       .demo-tab {
         background: transparent;
         border: none;
@@ -113,37 +114,44 @@
         border-radius: 4px;
         overflow: hidden;
       }
-      .demo-frame iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
-      /* Horizontal padding reserves a gutter so the arrows always sit beside the
-         report (never over it), at any viewport width. */
-      .demo-stage { position: relative; padding: 0 54px; }
+      /* The iframe is deliberately taller than the frame (+ --pbi-chrome) so
+         Power BI's own footer bar — the "Microsoft Power BI" logo, page nav
+         and zoom control — falls below the frame and is clipped by the
+         frame's overflow:hidden. We drive page switching with our own toggle,
+         so nothing of value is lost. Tune --pbi-chrome if a sliver shows. */
+      .demo-frame { --pbi-chrome: 64px; }
+      .demo-frame iframe { position: absolute; top: 0; left: 0; width: 100%; height: calc(100% + var(--pbi-chrome)); border: 0; }
+      .demo-stage { position: relative; }
+      /* Arrows now sit inline beside the page toggle (see .demo-tabs-row) so the
+         report can use the full width of the frame. */
       .demo-nav {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
         z-index: 2;
-        width: 44px;
-        height: 44px;
+        width: 40px;
+        height: 40px;
         display: flex;
         align-items: center;
         justify-content: center;
         padding: 0;
-        font-size: 1.8rem;
+        font-size: 1.6rem;
         line-height: 1;
         color: var(--white);
         background: rgba(255, 255, 255, 0.1);
         border: 1px solid rgba(255, 255, 255, 0.3);
         border-radius: 999px;
         cursor: pointer;
+        flex-shrink: 0;
         transition: background 0.2s, color 0.2s, opacity 0.2s;
       }
-      .demo-nav.prev { left: 0; }
-      .demo-nav.next { right: 0; }
       .demo-nav:hover { background: var(--sky); color: var(--navy); border-color: var(--sky); }
       .demo-nav:disabled { opacity: 0.3; cursor: default; pointer-events: none; }
       @media (max-width: 600px) {
-        .demo-stage { padding: 0 40px; }
-        .demo-nav { width: 32px; height: 32px; font-size: 1.4rem; }
+        /* On phones the report width is the only lever that makes Power BI's
+           fit-to-page content legible, so full-bleed the frame edge-to-edge
+           (cancel the section's 1.5rem padding). A slightly taller ratio
+           gives the report more room now that the footer bar is clipped. */
+        .demo-stage { margin-left: -1.5rem; margin-right: -1.5rem; }
+        .demo-frame { border-left: 0; border-right: 0; border-radius: 0; aspect-ratio: 16 / 11; }
+        .demo-nav { width: 34px; height: 34px; font-size: 1.4rem; }
       }
       .demo-shot { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; background: #fff; display: none; }
       .demo-shot.active { display: block; }
@@ -367,21 +375,23 @@
       <h2>Explore a live sample dashboard</h2>
       <p class="section-intro">
         This is a fully interactive mock built on <strong>illustrative data</strong>.
-        Use the <strong>page toggle</strong> — or the arrows on either side of the report —
+        Use the <strong>page toggle</strong> — or the arrows beside it —
         to switch between Board Summary and the detailed incident view, and hover or click
         within the report to explore.
       </p>
 
       <div class="demo-wrap">
         <div class="demo-tabs-wrap">
-          <div class="demo-tabs" role="tablist" aria-label="Dashboard page">
-            <button type="button" class="demo-tab active" data-page="board" onclick="showPage('board', this)">Board Summary</button>
-            <button type="button" class="demo-tab" data-page="incident" onclick="showPage('incident', this)">Incident Detail</button>
+          <div class="demo-tabs-row">
+            <button type="button" class="demo-nav prev" id="demoPrev" aria-label="Previous page" onclick="stepPage(-1)" disabled>&lsaquo;</button>
+            <div class="demo-tabs" role="tablist" aria-label="Dashboard page">
+              <button type="button" class="demo-tab active" data-page="board" onclick="showPage('board', this)">Board Summary</button>
+              <button type="button" class="demo-tab" data-page="incident" onclick="showPage('incident', this)">Incident Detail</button>
+            </div>
+            <button type="button" class="demo-nav next" id="demoNext" aria-label="Next page" onclick="stepPage(1)">&rsaquo;</button>
           </div>
         </div>
         <div class="demo-stage">
-          <button type="button" class="demo-nav prev" id="demoPrev" aria-label="Previous page" onclick="stepPage(-1)" disabled>&lsaquo;</button>
-          <button type="button" class="demo-nav next" id="demoNext" aria-label="Next page" onclick="stepPage(1)">&rsaquo;</button>
           <div class="demo-frame" id="demoFrame">
             <!-- Live Power BI report (Publish to web · illustrative data only).
                  To update: regenerate the Publish-to-web code in the Power BI Service
