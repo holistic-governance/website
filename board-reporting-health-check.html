@@ -4,13 +4,13 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Board Reporting Health Check — Holistic Governance</title>
-<meta name="description" content="A free 5-minute self-assessment for aged care and healthcare boards. Score your board reporting and see exactly where the gaps are." />
+<meta name="description" content="A free 5-minute self-assessment for healthcare boards. Score your board reporting and see exactly where the gaps are." />
 <meta name="robots" content="index,follow" />
 <link rel="canonical" href="https://hg-au.com/board-reporting-health-check.html" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://hg-au.com/board-reporting-health-check.html" />
 <meta property="og:title" content="Board Reporting Health Check — Holistic Governance" />
-<meta property="og:description" content="A free 5-minute self-assessment for aged care and healthcare boards. Score your reporting and find the gaps." />
+<meta property="og:description" content="A free 5-minute self-assessment for healthcare boards. Score your reporting and find the gaps." />
 <meta property="og:image" content="https://hg-au.com/og-image-v3.png" />
 <meta name="twitter:card" content="summary_large_image" />
 <link rel="icon" type="image/png" href="favicon.png">
@@ -96,9 +96,15 @@
 
   .hc-section { margin-bottom: 20px; }
   .hc-section h3 { font-family: 'Cormorant Garamond', serif; font-size: 19px; font-weight: 400; color: var(--text); margin-bottom: 12px; padding-bottom: 8px; border-bottom: 1px solid var(--border); }
-  .hc-item { display: flex; align-items: flex-start; gap: 12px; padding: 9px 0; cursor: pointer; }
-  .hc-item input { width: 18px; height: 18px; margin-top: 2px; accent-color: var(--sky); flex-shrink: 0; cursor: pointer; }
-  .hc-item span { font-size: 14px; line-height: 1.6; color: #e2e8f0; }
+  .hc-item { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 11px 0; border-bottom: 1px solid rgba(255,255,255,0.05); }
+  .hc-item:last-child { border-bottom: none; }
+  .hc-text { font-size: 14px; line-height: 1.6; color: #e2e8f0; flex: 1; }
+  .hc-toggle { display: inline-flex; flex-shrink: 0; border: 1px solid var(--border); border-radius: 8px; overflow: hidden; }
+  .hc-toggle button { background: transparent; border: none; color: var(--muted); font-family: inherit; font-size: 12px; font-weight: 600; letter-spacing: 0.03em; padding: 7px 18px; cursor: pointer; transition: background 0.15s, color 0.15s; }
+  .hc-toggle button + button { border-left: 1px solid var(--border); }
+  .hc-toggle button:hover { color: var(--text); background: rgba(255,255,255,0.03); }
+  .hc-yes.on { background: var(--green); color: var(--navy); }
+  .hc-no.on { background: var(--red); color: var(--navy); }
 
   .band-explainer { font-size: 13px; color: var(--muted); line-height: 1.7; margin-top: 8px; padding: 16px; border: 1px dashed var(--border); border-radius: 10px; }
 
@@ -123,7 +129,6 @@
 </head>
 <body>
 <div class="bg"></div>
-<div class="bg-grid"></div>
 
 <div class="page">
   <header class="site-header">
@@ -135,7 +140,7 @@
     <div class="hero-eyebrow">Free Resource</div>
     <h1 class="hero-title">Board Reporting Health Check</h1>
     <p class="hero-desc">
-      A five-minute self-assessment for aged care and healthcare boards and executives.
+      A five-minute self-assessment for healthcare boards and executives.
       Good governance depends on good information — if your reporting is late, inconsistent
       or buried in spreadsheets, oversight gaps become <strong>compliance gaps</strong>.
       Score your reporting across 30 checkpoints and see exactly where to focus.
@@ -183,7 +188,6 @@
     </div>
     <ul class="preview-list">
       <li>30 checkpoints across 7 governance dimensions</li>
-      <li>Covers SIRS, care minutes, mandatory education, Essential Eight &amp; NSQHS</li>
       <li>Instant score with an At-risk / Developing / Board-ready band</li>
     </ul>
   </div>
@@ -207,7 +211,7 @@
       <div class="final-cta">
         <h3>Turn your score into a board-ready dashboard</h3>
         <p>
-          Holistic Governance builds custom Power BI dashboards for aged care and healthcare —
+          Holistic Governance builds custom Power BI dashboards for healthcare —
           designed by a governance specialist, so they mirror your real board pack and regulatory
           reporting. Available as a one-off build or a monthly retainer with review and commentary.
         </p>
@@ -241,7 +245,7 @@
       'SIRS notifications and trends are visible to the board.',
       'Care minutes delivered vs target (RN and total) are reported and tracked.',
       'Mandatory education / training compliance rates are reported by cohort or site.',
-      'Essential Eight cyber-security maturity is visible as a governance risk.',
+      'Cybersecurity maturity is visible as a governance risk.',
       'Performance against NSQHS and/or Aged Care Quality Standards is mapped and reported.',
       'Accreditation status, outcomes and open actions are tracked in the pack.'
     ]},
@@ -283,20 +287,29 @@
     SECTIONS.forEach(function (sec) {
       html += '<div class="hc-section"><h3>' + sec.title + '</h3>';
       sec.items.forEach(function (item) {
-        html += '<label class="hc-item"><input type="checkbox" class="hc-check" onchange="updateScore()"><span>' + item + '</span></label>';
+        html += '<div class="hc-item"><span class="hc-text">' + item + '</span>' +
+                  '<span class="hc-toggle">' +
+                    '<button type="button" class="hc-yes" onclick="setAnswer(this, true)">Yes</button>' +
+                    '<button type="button" class="hc-no" onclick="setAnswer(this, false)">No</button>' +
+                  '</span></div>';
       });
       html += '</div>';
     });
     document.getElementById('sectionsWrap').innerHTML = html;
   })();
 
+  function setAnswer(btn, yes) {
+    var toggle = btn.parentNode;
+    toggle.querySelector('.hc-yes').classList.toggle('on', yes);
+    toggle.querySelector('.hc-no').classList.toggle('on', !yes);
+    updateScore();
+  }
+
   function updateScore() {
-    var checks = document.querySelectorAll('.hc-check');
-    var score = 0;
-    checks.forEach(function (c) { if (c.checked) score++; });
-    var total = checks.length;
+    var total = document.querySelectorAll('.hc-item').length;
+    var score = document.querySelectorAll('.hc-yes.on').length;
     document.getElementById('scoreNum').textContent = score;
-    document.getElementById('scoreFill').style.width = (score / total * 100) + '%';
+    document.getElementById('scoreFill').style.width = (total ? (score / total * 100) : 0) + '%';
     var bandKey = score <= 10 ? 'at-risk' : (score <= 20 ? 'developing' : 'board-ready');
     var bandLabel = score <= 10 ? 'At risk' : (score <= 20 ? 'Developing' : 'Board-ready');
     var badge = document.getElementById('scoreBand');
