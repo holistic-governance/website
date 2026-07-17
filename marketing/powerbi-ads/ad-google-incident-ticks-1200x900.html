@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400;1,600&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#0f172a; --navy-mid:#1e293b; --sky:#38bdf8; --sky-light:#7dd3fc;
+    --white:#f1f5f9; --text-mid:#94a3b8; --text-light:#64748b; --border:rgba(56,189,248,0.18);
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{width:1200px;height:900px;overflow:hidden;font-family:'DM Sans',sans-serif;}
+  .ad{
+    position:relative; width:1200px; height:900px;
+    display:flex; flex-direction:column; padding:52px 50px 22px;
+    background:
+      radial-gradient(ellipse 60% 45% at 82% 18%, rgba(56,189,248,0.16) 0%, transparent 62%),
+      radial-gradient(ellipse 45% 40% at 8% 92%, rgba(56,189,248,0.07) 0%, transparent 60%),
+      linear-gradient(155deg,#0b1424 0%, var(--navy) 48%, #0d1a30 100%);
+    color:var(--white); overflow:hidden;
+  }
+  .grid{position:absolute; inset:0; opacity:0.05;
+    background-image:
+      linear-gradient(rgba(56,189,248,0.4) 1px,transparent 1px),
+      linear-gradient(90deg,rgba(56,189,248,0.4) 1px,transparent 1px);
+    background-size:60px 60px;}
+
+  /* TOP BAND */
+  .head{position:relative; z-index:2; display:flex; justify-content:space-between; align-items:flex-end; gap:28px;}
+  .head-l{display:flex; flex-direction:column;}
+  .top{display:flex; align-items:center; gap:12px;}
+  .top img{height:42px; width:auto;}
+  .brand{font-family:'Cormorant Garamond',serif; font-size:24px; font-weight:600; letter-spacing:0.05em;}
+  .brand span{color:var(--sky);}
+  h1{font-family:'Cormorant Garamond',serif; font-weight:300; font-size:44px; line-height:1; margin-top:22px; white-space:nowrap;}
+  h1 em{font-style:italic; color:var(--sky-light);}
+  .badge{display:inline-flex; align-items:center; gap:8px; align-self:flex-start; margin-top:9px;
+    background:rgba(56,189,248,0.12); border:1px solid var(--sky); color:var(--sky-light);
+    font-size:13px; font-weight:600; letter-spacing:0.14em; text-transform:uppercase;
+    padding:7px 15px; border-radius:30px;}
+  .badge::before{content:''; width:7px; height:7px; border-radius:50%; background:var(--sky); box-shadow:0 0 8px var(--sky);}
+  .head-r{display:flex; flex-direction:column; align-items:flex-end; gap:9px;}
+  .cta{display:inline-flex; align-items:center; gap:11px; background:var(--sky); color:var(--navy);
+    font-weight:700; font-size:18px; letter-spacing:0.05em; text-transform:uppercase;
+    padding:15px 28px; border-radius:4px; box-shadow:0 10px 28px rgba(56,189,248,0.3);}
+  .url{font-size:15px; color:rgba(241,245,249,0.72);}
+  .url b{color:var(--sky-light); font-weight:600;}
+
+  /* HERO DASHBOARD */
+  .hero{position:relative; z-index:2; width:874px; margin:10px auto 0;}
+  .window{border:1px solid var(--border); border-radius:13px; overflow:hidden;
+    box-shadow:0 30px 72px rgba(0,0,0,0.55);}
+  .win-bar{display:flex; align-items:center; gap:15px; padding:13px 22px;
+    background:linear-gradient(180deg,#16283f,#122236); border-bottom:1px solid var(--border);}
+  .win-dots{display:flex; gap:8px;}
+  .win-dots i{width:11px; height:11px; border-radius:50%; background:rgba(56,189,248,0.45); display:block;}
+  .win-title{font-size:14px; letter-spacing:0.14em; text-transform:uppercase; color:var(--text-mid);}
+  .win-live{margin-left:auto; display:flex; align-items:center; gap:7px; font-size:13px; color:var(--sky-light); letter-spacing:0.06em;}
+  .win-live::before{content:''; width:8px; height:8px; border-radius:50%; background:#4ade80; box-shadow:0 0 8px #4ade80;}
+  .win-body{width:100%; background:#fff; font-size:0;}
+  .win-body img{width:100%; display:block;}
+  .win-cap{margin-top:6px; font-size:13px; font-style:italic; color:rgba(148,163,184,0.72); text-align:right;}
+
+  /* TICK ROW */
+  .props{position:relative; z-index:2; margin-top:12px; display:flex; gap:30px;}
+  .prop{flex:1; display:flex; align-items:flex-start; gap:12px; font-size:15px; line-height:1.3; color:var(--white);}
+  .prop .tick{width:28px; height:28px; flex-shrink:0; border-radius:50%; margin-top:1px;
+    background:rgba(56,189,248,0.14); border:1px solid var(--border);
+    display:flex; align-items:center; justify-content:center;}
+  .prop .tick svg{width:15px; height:15px; stroke:var(--sky);}
+  .prop b{font-weight:700;}
+</style>
+</head>
+<body>
+  <div class="ad">
+    <div class="grid"></div>
+
+    <div class="head">
+      <div class="head-l">
+        <div class="top">
+          <img src="logo.png" alt="Holistic Governance">
+          <div class="brand">Holistic <span>Governance</span></div>
+        </div>
+        <h1>Custom <em>Power&nbsp;BI</em> dashboards</h1>
+        <div class="badge">Free scoping call</div>
+      </div>
+      <div class="head-r">
+        <div class="cta">Book a build &rarr;</div>
+        <div class="url">Explore at <b>hg-au.com</b></div>
+      </div>
+    </div>
+
+    <div class="hero">
+      <div class="window">
+        <div class="win-bar">
+          <div class="win-dots"><i></i><i></i><i></i></div>
+          <div class="win-title">Incident Detail</div>
+          <div class="win-live">Live</div>
+        </div>
+        <div class="win-body"><img src="pbi-incident-clean.png" alt="Incident detail Power BI dashboard"></div>
+      </div>
+      <div class="win-cap">Illustrative data used</div>
+    </div>
+
+    <div class="props">
+      <div class="prop"><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><span>Decision-ready reporting built around <b>your</b> data</span></div>
+      <div class="prop"><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><span>Built for boards, executives, quality &amp; operations</span></div>
+      <div class="prop"><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><span>One source of truth across your whole organisation</span></div>
+    </div>
+  </div>
+</body>
+</html>
