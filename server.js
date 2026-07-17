@@ -417,6 +417,29 @@ app.delete('/api/enquiries/:file', requireSession, (req, res) => {
   res.json({ ok: true });
 });
 
+// Update pipeline metadata (stage + internal notes) on an enquiry. Merges into
+// the stored JSON so /api/enquiries returns it on the next read.
+const ENQUIRY_STAGES = ['New', 'Contacted', 'Scoping call', 'Proposal sent', 'Won', 'Lost'];
+app.patch('/api/enquiries/:file', requireSession, (req, res) => {
+  const safe = req.params.file.replace(/[^a-zA-Z0-9_.-]/g, '');
+  const filePath = path.join(enquiriesDir, safe);
+  if (!filePath.startsWith(path.resolve(enquiriesDir))) return res.status(400).json({ error: 'Invalid file' });
+  if (!fs.existsSync(filePath)) return res.status(404).json({ error: 'Not found' });
+  const { stage, notes } = req.body || {};
+  if (stage !== undefined && !ENQUIRY_STAGES.includes(stage)) {
+    return res.status(400).json({ error: 'Invalid stage' });
+  }
+  let data;
+  try { data = JSON.parse(fs.readFileSync(filePath, 'utf-8')); }
+  catch { return res.status(500).json({ error: 'Unreadable enquiry' }); }
+  if (stage !== undefined) data.stage = stage;
+  if (notes !== undefined) data.notes = String(notes).slice(0, 5000);
+  data.updatedAt = new Date().toISOString();
+  fs.writeFileSync(filePath, JSON.stringify(data, null, 2) + '\n');
+  audit(req, `update-enquiry:${safe}`);
+  res.json({ ok: true });
+});
+
 app.get('/api/subscribers', requireSession, (req, res) => {
   const subsFile = path.join(enquiriesDir, 'subscribers.json');
   if (!fs.existsSync(subsFile)) return res.json([]);

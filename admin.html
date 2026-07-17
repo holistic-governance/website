@@ -137,6 +137,23 @@
     .enquiry-type { display: inline-block; font-size: 0.65rem; padding: 0.2rem 0.6rem; border-radius: 2px; text-transform: uppercase; letter-spacing: 0.08em; font-weight: 500; }
     .enquiry-type.proposal { background: rgba(167,139,250,0.15); color: var(--purple); }
     .enquiry-type.competitor { background: rgba(56,189,248,0.15); color: var(--sky); }
+    .enquiry-type.bi { background: rgba(52,211,153,0.15); color: var(--green); }
+    .enquiry-type.lead { background: rgba(251,191,36,0.15); color: var(--amber); }
+    /* STAGE PILL */
+    .stage-pill { display: inline-block; font-size: 0.68rem; padding: 0.2rem 0.6rem; border-radius: 2px; letter-spacing: 0.04em; border: 1px solid var(--border); color: var(--text-mid); white-space: nowrap; }
+    .stage-pill.s-new { border-color: var(--border-mid); color: var(--text-mid); }
+    .stage-pill.s-contacted { border-color: rgba(56,189,248,0.4); color: var(--sky); }
+    .stage-pill.s-scoping { border-color: rgba(167,139,250,0.4); color: var(--purple); }
+    .stage-pill.s-proposal { border-color: rgba(251,191,36,0.4); color: var(--amber); }
+    .stage-pill.s-won { border-color: rgba(52,211,153,0.4); color: var(--green); }
+    .stage-pill.s-lost { border-color: rgba(248,113,113,0.4); color: var(--red); }
+    /* ENQUIRY FILTERS */
+    .enq-filters { display: flex; gap: 0.6rem; align-items: center; }
+    .enq-filters select { padding: 0.35rem 1.8rem 0.35rem 0.7rem; font-size: 0.75rem; }
+    /* DETAIL META EDITOR */
+    .detail-edit { margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid var(--border); }
+    .detail-edit label { display: block; margin-bottom: 0.4rem; }
+    .detail-edit select, .detail-edit textarea { width: 100%; margin-bottom: 1rem; }
     .enquiry-detail { cursor: pointer; }
     .enquiry-detail:hover { color: var(--sky); }
     .btn-sm { padding: 0.3rem 0.6rem; font-size: 0.7rem; background: none; border: 1px solid var(--border); color: var(--text-light); border-radius: 2px; cursor: pointer; }
@@ -371,6 +388,24 @@
         <div class="panel">
           <div class="panel-header">
             <h3>All Enquiries</h3>
+            <div class="enq-filters">
+              <select id="filterType" onchange="renderEnquiries()">
+                <option value="all">All types</option>
+                <option value="bi-build">BI Build</option>
+                <option value="bi-leadmagnet">Health Check</option>
+                <option value="competitor-analytics">Competitor</option>
+                <option value="proposal">Proposal</option>
+              </select>
+              <select id="filterStage" onchange="renderEnquiries()">
+                <option value="all">All stages</option>
+                <option>New</option>
+                <option>Contacted</option>
+                <option>Scoping call</option>
+                <option>Proposal sent</option>
+                <option>Won</option>
+                <option>Lost</option>
+              </select>
+            </div>
           </div>
           <div class="panel-body" style="padding:0;">
             <table class="enquiry-table" id="enquiryTable">
@@ -378,6 +413,7 @@
                 <tr>
                   <th>Date</th>
                   <th>Type</th>
+                  <th>Stage</th>
                   <th>Name</th>
                   <th>Organisation</th>
                   <th>Email</th>
@@ -421,6 +457,19 @@
   let resources = [];
   let currentSlug = null;
   let isNew = false;
+
+  const STAGES = ['New', 'Contacted', 'Scoping call', 'Proposal sent', 'Won', 'Lost'];
+  function typeMeta(e) {
+    switch (e.enquiryType) {
+      case 'competitor-analytics': return { label: 'Competitor', cls: 'competitor' };
+      case 'bi-build': return { label: 'BI Build', cls: 'bi' };
+      case 'bi-leadmagnet': return { label: 'Health Check', cls: 'lead' };
+      default: return { label: 'Proposal', cls: 'proposal' };
+    }
+  }
+  function stageClass(stage) {
+    return 's-' + (stage || 'New').toLowerCase().replace(/ .*/, '');
+  }
 
   async function logout() {
     await fetch('/api/logout', { method: 'POST' });
@@ -482,8 +531,8 @@
     el.innerHTML = '<table class="enquiry-table"><thead><tr><th>Date</th><th>Type</th><th>Name</th><th>Email</th></tr></thead><tbody>' +
       recent.map(e => {
         const date = new Date(e.receivedAt || e.submittedAt).toLocaleDateString('en-AU');
-        const type = e.enquiryType === 'competitor-analytics' ? '<span class="enquiry-type competitor">Competitor</span>' : '<span class="enquiry-type proposal">Proposal</span>';
-        return `<tr><td>${date}</td><td>${type}</td><td>${e.contactName || e.orgName || '—'}</td><td>${e.email || '—'}</td></tr>`;
+        const tm = typeMeta(e);
+        return `<tr><td>${date}</td><td><span class="enquiry-type ${tm.cls}">${tm.label}</span></td><td>${e.contactName || e.orgName || '—'}</td><td>${e.email || '—'}</td></tr>`;
       }).join('') + '</tbody></table>';
   }
 
@@ -598,16 +647,34 @@
   async function loadEnquiries() {
     const res = await fetch('/api/enquiries');
     allEnquiries = await res.json();
+    renderEnquiries();
+  }
+
+  function renderEnquiries() {
     const tbody = document.getElementById('enquiryBody');
-    if (allEnquiries.length === 0) { tbody.innerHTML = '<tr><td colspan="6" style="text-align:center;color:var(--text-light);padding:2rem;">No enquiries yet.</td></tr>'; return; }
-    tbody.innerHTML = allEnquiries.map((e, i) => {
+    const ftEl = document.getElementById('filterType');
+    const fsEl = document.getElementById('filterStage');
+    const ft = ftEl ? ftEl.value : 'all';
+    const fstage = fsEl ? fsEl.value : 'all';
+    const KNOWN = ['competitor-analytics', 'bi-build', 'bi-leadmagnet'];
+    const list = allEnquiries.filter(e => {
+      if (ft !== 'all') {
+        if (ft === 'proposal') { if (KNOWN.includes(e.enquiryType)) return false; }
+        else if (e.enquiryType !== ft) return false;
+      }
+      if (fstage !== 'all' && (e.stage || 'New') !== fstage) return false;
+      return true;
+    });
+    if (list.length === 0) { tbody.innerHTML = '<tr><td colspan="7" style="text-align:center;color:var(--text-light);padding:2rem;">No enquiries match.</td></tr>'; return; }
+    tbody.innerHTML = list.map(e => {
+      const i = allEnquiries.indexOf(e);
       const date = new Date(e.receivedAt || e.submittedAt).toLocaleDateString('en-AU');
-      const type = e.enquiryType === 'competitor-analytics'
-        ? '<span class="enquiry-type competitor">Competitor</span>'
-        : '<span class="enquiry-type proposal">Proposal</span>';
+      const tm = typeMeta(e);
+      const stage = e.stage || 'New';
       return `<tr>
         <td>${date}</td>
-        <td>${type}</td>
+        <td><span class="enquiry-type ${tm.cls}">${tm.label}</span></td>
+        <td><span class="stage-pill ${stageClass(stage)}">${stage}</span></td>
         <td class="enquiry-detail" onclick="showDetail(${i})">${e.contactName || '—'}</td>
         <td>${e.orgName || e.businessName || '—'}</td>
         <td>${e.email || '—'}</td>
@@ -618,20 +685,49 @@
 
   function showDetail(idx) {
     const e = allEnquiries[idx];
-    const skip = ['_file', 'receivedAt', 'submittedAt', 'enquiryType'];
-    let html = `<h3>${e.enquiryType === 'competitor-analytics' ? 'Competitor Analytics' : 'Governance Proposal'} Enquiry</h3>`;
+    const tm = typeMeta(e);
+    const skip = ['_file', 'receivedAt', 'submittedAt', 'updatedAt', 'enquiryType', 'stage', 'notes'];
+    let html = `<h3>${tm.label} Enquiry</h3>`;
     html += `<div class="detail-row"><div class="detail-label">Received</div><div class="detail-value">${new Date(e.receivedAt || e.submittedAt).toLocaleString('en-AU')}</div></div>`;
     for (const [k, v] of Object.entries(e)) {
       if (skip.includes(k) || !v) continue;
       const label = k.replace(/([A-Z])/g, ' $1').replace(/^./, s => s.toUpperCase());
       html += `<div class="detail-row"><div class="detail-label">${label}</div><div class="detail-value">${v}</div></div>`;
     }
-    html += `<button class="btn btn-cancel detail-close" onclick="closeDetail()">Close</button>`;
+    const stage = e.stage || 'New';
+    const stageOpts = STAGES.map(s => `<option${s === stage ? ' selected' : ''}>${s}</option>`).join('');
+    const notesVal = (e.notes || '').replace(/&/g, '&amp;').replace(/</g, '&lt;');
+    html += `<div class="detail-edit">
+      <label>Pipeline Stage</label>
+      <select id="detailStage">${stageOpts}</select>
+      <label>Internal Notes</label>
+      <textarea id="detailNotes" rows="4" placeholder="Follow-up notes, next step, context…">${notesVal}</textarea>
+      <div style="display:flex;gap:0.8rem;">
+        <button class="btn btn-save" onclick="saveEnquiryMeta('${e._file}')">Save</button>
+        <button class="btn btn-cancel detail-close" onclick="closeDetail()">Close</button>
+      </div>
+    </div>`;
     document.getElementById('detailCard').innerHTML = html;
     document.getElementById('detailOverlay').classList.add('open');
   }
 
   function closeDetail() { document.getElementById('detailOverlay').classList.remove('open'); }
+
+  async function saveEnquiryMeta(file) {
+    const stage = document.getElementById('detailStage').value;
+    const notes = document.getElementById('detailNotes').value;
+    const res = await fetch('/api/enquiries/' + file, {
+      method: 'PATCH', headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ stage, notes })
+    });
+    if (res.ok) {
+      const e = allEnquiries.find(x => x._file === file);
+      if (e) { e.stage = stage; e.notes = notes; }
+      renderEnquiries();
+      closeDetail();
+      toast('Enquiry updated');
+    } else { toast('Error saving enquiry', true); }
+  }
 
   async function deleteEnquiry(file, btn) {
     if (!confirm('Delete this enquiry?')) return;
