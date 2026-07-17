@@ -114,6 +114,8 @@
     .service-icon { width: 48px; height: 48px; margin-bottom: 2rem; color: var(--sky); opacity: 0.7; transition: opacity 0.4s, transform 0.4s; }
     .service-card h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.7rem; font-weight: 400; color: var(--white); margin-bottom: 1rem; }
     .service-card p { color: rgba(241,245,249,0.8); font-size: 0.92rem; line-height: 1.85; }
+    a.service-card { display: block; text-decoration: none; color: inherit; }
+    .service-link { display: inline-block; margin-top: 1.2rem; color: var(--sky); font-size: 0.82rem; font-weight: 500; letter-spacing: 0.02em; }
     .service-num { position: absolute; top: 2rem; right: 2.5rem; font-family: 'Cormorant Garamond', serif; font-size: 4.5rem; font-weight: 300; color: var(--border); line-height: 1; }
 
     /* ── PROVEN IMPACT ── */
@@ -351,12 +353,13 @@
       <h3>Risk & Compliance</h3>
       <p>Achieve regulatory readiness and embed sustainable compliance systems.</p>
     </div>
-    <div class="service-card">
+    <a href="reporting-dashboards.html" class="service-card">
       <div class="service-num">03</div>
       <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 3v18h18"/><path d="M7 16l4-4 4 4 4-8"/></svg>
       <h3>Data & Intelligence</h3>
       <p>Turn fragmented data into board-level insight and decision confidence.</p>
-    </div>
+      <span class="service-link">Explore custom Power BI dashboards &rarr;</span>
+    </a>
     <div class="service-card">
       <div class="service-num">04</div>
       <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="3"/><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>
