@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400;1,600&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#0f172a; --navy-mid:#1e293b; --sky:#38bdf8; --sky-light:#7dd3fc;
+    --white:#f1f5f9; --text-mid:#94a3b8; --border:rgba(56,189,248,0.18);
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{width:1080px;height:1350px;overflow:hidden;font-family:'DM Sans',sans-serif;}
+  .ad{
+    position:relative; width:1080px; height:1350px;
+    background:
+      radial-gradient(ellipse 55% 45% at 80% 22%, rgba(56,189,248,0.16) 0%, transparent 62%),
+      radial-gradient(ellipse 45% 40% at 12% 90%, rgba(56,189,248,0.08) 0%, transparent 60%),
+      linear-gradient(160deg,#0b1424 0%, var(--navy) 46%, #0d1a30 100%);
+    padding:60px 66px 58px;
+    display:flex; flex-direction:column;
+    color:var(--white); overflow:hidden;
+  }
+  .grid{position:absolute; inset:0; opacity:0.05;
+    background-image:
+      linear-gradient(rgba(56,189,248,0.4) 1px,transparent 1px),
+      linear-gradient(90deg,rgba(56,189,248,0.4) 1px,transparent 1px);
+    background-size:64px 64px;}
+
+  .top{display:flex; align-items:center; gap:15px; position:relative; z-index:2;}
+  .top img{height:56px; width:auto;}
+  .brand{font-family:'Cormorant Garamond',serif; font-size:29px; font-weight:600; letter-spacing:0.05em;}
+  .brand span{color:var(--sky);}
+
+  .eyebrow{margin-top:36px; font-size:15px; letter-spacing:0.32em; text-transform:uppercase;
+    color:var(--sky); display:flex; align-items:center; gap:15px; position:relative; z-index:2;}
+  .eyebrow::before{content:''; width:48px; height:1px; background:var(--sky);}
+
+  h1{font-family:'Cormorant Garamond',serif; font-weight:300; font-size:72px; line-height:1.03;
+    margin-top:16px; position:relative; z-index:2;}
+  h1 em{font-style:italic; color:var(--sky-light);}
+
+  .sub{margin-top:18px; font-size:23px; line-height:1.5; color:rgba(241,245,249,0.82);
+    max-width:640px; font-weight:300; position:relative; z-index:2;}
+
+  /* product window with real screenshot */
+  .window{margin-top:34px; position:relative; z-index:2;
+    border:1px solid var(--border); border-radius:14px; overflow:hidden;
+    box-shadow:0 30px 70px rgba(0,0,0,0.5);}
+  .win-bar{display:flex; align-items:center; gap:16px; padding:14px 20px;
+    background:linear-gradient(180deg,#16283f,#122236); border-bottom:1px solid var(--border);}
+  .win-dots{display:flex; gap:9px;}
+  .win-dots i{width:12px; height:12px; border-radius:50%; background:rgba(56,189,248,0.45); display:block;}
+  .win-title{font-size:15px; letter-spacing:0.14em; text-transform:uppercase; color:var(--text-mid);}
+  .win-live{margin-left:auto; display:flex; align-items:center; gap:8px; font-size:14px; color:var(--sky-light); letter-spacing:0.06em;}
+  .win-live::before{content:''; width:9px; height:9px; border-radius:50%; background:#4ade80; box-shadow:0 0 8px #4ade80;}
+  /* crop the Power BI nav bar off the bottom (~42px of 1000) */
+  .win-body{width:100%; background:#fff; font-size:0;}
+  .win-body img{width:100%; display:block;}
+
+  .tagline{margin-top:22px; display:flex; align-items:center; gap:14px; position:relative; z-index:2;
+    font-size:22px; color:var(--white);}
+  .tagline .tick{width:32px; height:32px; flex-shrink:0; border-radius:50%;
+    background:rgba(56,189,248,0.14); border:1px solid var(--border);
+    display:flex; align-items:center; justify-content:center;}
+  .tagline .tick svg{width:17px; height:17px; stroke:var(--sky);}
+  .note{margin-top:10px; font-size:15px; color:var(--text-light,#64748b); font-style:italic; position:relative; z-index:2;}
+
+  .foot{margin-top:auto; padding-top:26px; display:flex; align-items:center; justify-content:space-between;
+    position:relative; z-index:2;}
+  .cta{display:inline-flex; align-items:center; gap:14px; background:var(--sky); color:var(--navy);
+    font-weight:700; font-size:21px; letter-spacing:0.06em; text-transform:uppercase;
+    padding:19px 34px; border-radius:4px; box-shadow:0 10px 30px rgba(56,189,248,0.3);}
+  .url{text-align:right; font-size:19px; color:rgba(241,245,249,0.7); line-height:1.5;}
+  .url b{color:var(--sky-light); font-weight:600;}
+</style>
+</head>
+<body>
+  <div class="ad">
+    <div class="grid"></div>
+
+    <div class="top">
+      <img src="logo.png" alt="Holistic Governance">
+      <div class="brand">Holistic <span>Governance</span></div>
+    </div>
+
+    <div class="eyebrow">Data &amp; Intelligence</div>
+    <h1>Custom <em>Power&nbsp;BI</em> dashboards</h1>
+    <div class="sub">Decision-ready reporting built around <b>your</b> data.</div>
+
+    <div class="window">
+      <div class="win-bar">
+        <div class="win-dots"><i></i><i></i><i></i></div>
+        <div class="win-title">Board Summary</div>
+        <div class="win-live">Live</div>
+      </div>
+      <div class="win-body"><img src="pbi-board-clean.png" alt="Board summary Power BI dashboard"></div>
+    </div>
+
+    <div class="tagline"><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>Built for boards, executives, quality &amp; operations</div>
+    <div class="note">Illustrative data only — your build uses your own data, branded to your organisation.</div>
+
+    <div class="foot">
+      <div class="cta">Book a walkthrough &rarr;</div>
+      <div class="url">Explore at<br><b>hg-au.com</b></div>
+    </div>
+  </div>
+</body>
+</html>

@@ -12,6 +12,31 @@ Cormorant Garamond / DM Sans, HG logo).
 | `ad-instagram-story-1080x1920.html`    | `hg-powerbi-instagram-story-1080x1920.png`   | 1080×1920  | Instagram / Facebook story |
 | `ad-linkedin-1200x627.html`            | `hg-powerbi-linkedin-1200x627.png`           | 1200×627   | LinkedIn feed (landscape) |
 
+### Real-dashboard versions (recommended — a 2-slide carousel)
+
+These feature actual screenshots of the live "Publish to web" demo report
+(embedded on `/reporting-dashboards.html`) in a "product window" frame, instead
+of the mock dashboard.
+
+| Source (HTML)                       | Rendered (PNG)                            | Shows |
+|-------------------------------------|-------------------------------------------|-------|
+| `ad-real-board-1080x1350.html`      | `hg-powerbi-real-board-1080x1350.png`     | Board Summary page |
+| `ad-real-incident-1080x1350.html`   | `hg-powerbi-real-incident-1080x1350.png`  | Incident Detail page |
+
+`pbi-board-clean.png` / `pbi-incident-clean.png` are the captured Power BI pages
+(nav bar cropped off at the report footer). To refresh them, screenshot the
+published report with headless Chrome and re-crop above the Power BI chrome:
+
+```sh
+CHROME="/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
+BASE="https://app.powerbi.com/view?r=eyJrIjoiNDdiNWQzMDEtNWFlMC00YjZiLWE3MzItMjNmNjhkZjlmNDlhIiwidCI6IjAyNGFkNzQzLTNmYmYtNDJmYy1iYTEwLWY5NTQ0YTY1ZTBiOCJ9"
+# Board Summary page = default; Incident Detail page = &pageName=52bbaeec0e3408f3cf7f
+"$CHROME" --headless=new --window-size=2560,1600 --force-device-scale-factor=1.5 \
+  --virtual-time-budget=25000 --run-all-compositor-stages-before-draw \
+  --screenshot=capture.png "$BASE&pageName=52bbaeec0e3408f3cf7f"
+# then crop off the bottom Power BI nav bar (sharp: extract top rows down to the report footer)
+```
+
 `logo.png` is a local copy of `logo-hg-trimmed.png` referenced by the HTML.
 
 ## Current copy
