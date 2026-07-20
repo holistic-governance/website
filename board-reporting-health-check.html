@@ -143,7 +143,7 @@
       A five-minute self-assessment for healthcare boards and executives.
       Good governance depends on good information — if your reporting is late, inconsistent
       or buried in spreadsheets, oversight gaps become <strong>compliance gaps</strong>.
-      Score your reporting across 30 checkpoints and see exactly where to focus.
+      Score your reporting across 24 checkpoints and see exactly where to focus.
     </p>
   </div>
 
@@ -187,7 +187,7 @@
       <p class="gate-note">Your information is handled per our <a href="/privacy.html" style="color:#00b4d8;text-decoration:none">Privacy Policy</a>.</p>
     </div>
     <ul class="preview-list">
-      <li>30 checkpoints across 7 governance dimensions</li>
+      <li>24 checkpoints across 6 governance dimensions</li>
       <li>Instant score with an At-risk / Developing / Board-ready band</li>
     </ul>
   </div>
@@ -195,7 +195,7 @@
   <!-- CHECKLIST (revealed after unlock) -->
   <div id="checklist">
     <div class="score-bar">
-      <div class="score-num"><span id="scoreNum">0</span><small>/30</small></div>
+      <div class="score-num"><span id="scoreNum">0</span><small>/24</small></div>
       <div class="score-meter"><div class="score-fill" id="scoreFill"></div></div>
       <div class="score-band at-risk" id="scoreBand">At risk</div>
     </div>
@@ -239,15 +239,12 @@
       'Reporting is at a board-appropriate altitude — summary first, detail on demand.',
       'Key indicators use traffic-light / RAG status a non-clinical director can read in seconds.',
       'Metrics are normalised for comparability (e.g. incidents per 1,000 occupied bed days).',
-      'Each metric has a target, threshold or benchmark — it answers "so what?".'
+      'Each metric has a target, threshold or benchmark?'
     ]},
     { title: '3 — Regulatory & compliance coverage', items: [
-      'SIRS notifications and trends are visible to the board.',
-      'Care minutes delivered vs target (RN and total) are reported and tracked.',
+      'Notifications and trends are visible to the board.',
       'Mandatory education / training compliance rates are reported by cohort or site.',
-      'Cybersecurity maturity is visible as a governance risk.',
-      'Performance against NSQHS and/or Aged Care Quality Standards is mapped and reported.',
-      'Accreditation status, outcomes and open actions are tracked in the pack.'
+      'Cybersecurity maturity is visible as a governance risk.'
     ]},
     { title: '4 — Trend & exception visibility', items: [
       'Metrics show a trend over time, not just a single point-in-time number.',
@@ -255,19 +252,14 @@
       'Directors can see which items are getting worse, not only current status.',
       'Emerging risks are surfaced before they become notifiable events.'
     ]},
-    { title: '5 — Drill-down to root cause', items: [
-      'The board summary can be traced down to the underlying detail.',
-      'Quality and risk teams have an operational view that feeds the board view.',
-      'Root-cause and contributing factors are captured and reportable.',
-      'There is a clear line of sight from a board-level number to an operational action.'
-    ]},
-    { title: '6 — Timeliness & automation', items: [
+    { title: '5 — Timeliness & automation', items: [
       'Board reporting is produced on a predictable schedule aligned to the board cycle.',
       'Assembling the pack takes hours, not days, of manual effort.',
       'Data is refreshed automatically or semi-automatically, not re-keyed each cycle.',
-      'Ad-hoc director questions can be answered quickly, without rebuilding a report.'
+      'Ad-hoc director questions can be answered quickly, without rebuilding a report.',
+      'Quality and risk teams have an operational view that feeds the board view, or vice versa.'
     ]},
-    { title: '7 — Action tracking', items: [
+    { title: '6 — Action tracking', items: [
       'Every reported issue has a clear owner and due date.',
       'Open actions from previous meetings are visible and tracked to closure.',
       'The board can see whether interventions actually moved the metric.',
@@ -276,9 +268,9 @@
   ];
 
   var BANDS = {
-    'at-risk': 'At risk (0–10): Reporting is largely manual and fragmented. Governance and regulatory blind spots are likely, and the board is probably reacting to issues rather than seeing them coming. This is the highest-value area to fix first.',
-    'developing': 'Developing (11–20): Solid foundations but meaningful gaps — often in exception visibility, drill-down, automation or action tracking. A focused build would materially lift board confidence and cut manual effort.',
-    'board-ready': 'Board-ready (21–30): Your reporting is mature. The opportunity now is refinement — sharper exception logic, deeper compliance coverage, and reclaiming time through automation.'
+    'at-risk': 'At risk (0–8): Reporting is largely manual and fragmented. Governance and regulatory blind spots are likely, and the board is probably reacting to issues rather than seeing them coming. This is the highest-value area to fix first.',
+    'developing': 'Developing (9–16): Solid foundations but meaningful gaps — often in exception visibility, drill-down, automation or action tracking. A focused build would materially lift board confidence and cut manual effort.',
+    'board-ready': 'Board-ready (17–24): Your reporting is mature. The opportunity now is refinement — sharper exception logic, deeper compliance coverage, and reclaiming time through automation.'
   };
 
   // Render checklist
@@ -310,8 +302,8 @@
     var score = document.querySelectorAll('.hc-yes.on').length;
     document.getElementById('scoreNum').textContent = score;
     document.getElementById('scoreFill').style.width = (total ? (score / total * 100) : 0) + '%';
-    var bandKey = score <= 10 ? 'at-risk' : (score <= 20 ? 'developing' : 'board-ready');
-    var bandLabel = score <= 10 ? 'At risk' : (score <= 20 ? 'Developing' : 'Board-ready');
+    var bandKey = score <= 8 ? 'at-risk' : (score <= 16 ? 'developing' : 'board-ready');
+    var bandLabel = score <= 8 ? 'At risk' : (score <= 16 ? 'Developing' : 'Board-ready');
     var badge = document.getElementById('scoreBand');
     badge.className = 'score-band ' + bandKey;
     badge.textContent = bandLabel;
