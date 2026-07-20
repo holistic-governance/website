@@ -143,7 +143,7 @@
       A five-minute self-assessment for healthcare boards and executives.
       Good governance depends on good information — if your reporting is late, inconsistent
       or buried in spreadsheets, oversight gaps become <strong>compliance gaps</strong>.
-      Score your reporting across 24 checkpoints and see exactly where to focus.
+      Score your reporting across the core dimensions of board-ready governance — plus a short module for your sector — and see exactly where to focus.
     </p>
   </div>
 
@@ -187,7 +187,7 @@
       <p class="gate-note">Your information is handled per our <a href="/privacy.html" style="color:#00b4d8;text-decoration:none">Privacy Policy</a>.</p>
     </div>
     <ul class="preview-list">
-      <li>24 checkpoints across 6 governance dimensions</li>
+      <li>30+ checkpoints across seven core governance dimensions, plus a sector module</li>
       <li>Instant score with an At-risk / Developing / Board-ready band</li>
     </ul>
   </div>
@@ -195,7 +195,7 @@
   <!-- CHECKLIST (revealed after unlock) -->
   <div id="checklist">
     <div class="score-bar">
-      <div class="score-num"><span id="scoreNum">0</span><small>/24</small></div>
+      <div class="score-num"><span id="scoreNum">0</span><small>/<span id="scoreDenom">30</span></small></div>
       <div class="score-meter"><div class="score-fill" id="scoreFill"></div></div>
       <div class="score-band at-risk" id="scoreBand">At risk</div>
     </div>
@@ -205,6 +205,17 @@
     <div class="card">
       <h3 style="font-family:'Cormorant Garamond',serif;font-weight:400;font-size:20px;color:var(--text);margin-bottom:12px;">What your score means</h3>
       <div class="band-explainer" id="bandExplainer"></div>
+    </div>
+
+    <div class="card">
+      <h3 style="font-family:'Cormorant Garamond',serif;font-weight:400;font-size:20px;color:var(--text);margin-bottom:12px;">Aligned to Australian governance standards</h3>
+      <ul style="list-style:none;margin:0;padding:0;font-size:13px;line-height:1.6;color:#cbd5e1;">
+        <li style="padding:9px 0;border-bottom:1px solid rgba(255,255,255,0.05);">Aged Care Act 2024 &amp; Strengthened Aged Care Quality Standards — <a href="https://www.agedcarequality.gov.au/strengthened-quality-standards" target="_blank" rel="noopener" style="color:var(--sky);text-decoration:none;">Aged Care Quality &amp; Safety Commission</a></li>
+        <li style="padding:9px 0;border-bottom:1px solid rgba(255,255,255,0.05);">NSQHS Standards &amp; National Model Clinical Governance Framework — <a href="https://www.safetyandquality.gov.au/standards/nsqhs-standards" target="_blank" rel="noopener" style="color:var(--sky);text-decoration:none;">ACSQHC</a></li>
+        <li style="padding:9px 0;border-bottom:1px solid rgba(255,255,255,0.05);">Board reporting &amp; Not-for-Profit Governance Principles — <a href="https://www.aicd.com.au/tools-and-resources/not-for-profit-governance-principles.html" target="_blank" rel="noopener" style="color:var(--sky);text-decoration:none;">AICD</a></li>
+        <li style="padding:9px 0;">Board papers guidance — <a href="https://www.governanceinstitute.com.au/advocacy/guidance-board-papers/" target="_blank" rel="noopener" style="color:var(--sky);text-decoration:none;">Governance Institute of Australia</a></li>
+      </ul>
+      <p style="font-size:11px;color:var(--muted);margin-top:14px;line-height:1.6;">This health check is an indicative self-assessment to help you focus — not a compliance determination or audit against any standard.</p>
     </div>
 
     <div class="card">
@@ -239,27 +250,36 @@
       'Reporting is at a board-appropriate altitude — summary first, detail on demand.',
       'Key indicators use traffic-light / RAG status a non-clinical director can read in seconds.',
       'Metrics are normalised for comparability (e.g. incidents per 1,000 occupied bed days).',
-      'Each metric has a target, threshold or benchmark?'
+      'Every metric has a target, threshold or benchmark, so directors can see what ‘good’ looks like.'
     ]},
-    { title: '3 — Regulatory & compliance coverage', items: [
-      'Notifications and trends are visible to the board.',
-      'Mandatory education / training compliance rates are reported by cohort or site.',
-      'Cybersecurity maturity is visible as a governance risk.'
+    { title: '3 — Clinical & quality governance', items: [
+      'The board endorses and monitors a documented clinical / corporate governance framework.',
+      'Clinical quality and outcome indicators (e.g. falls, infections, medication safety, pressure injuries) are trended for the board.',
+      'Complaints and feedback themes — and how they were resolved — are reported to the board.',
+      'Consumer / community voice reaches the board and informs decisions.'
     ]},
-    { title: '4 — Trend & exception visibility', items: [
+    { title: '4 — Regulatory & compliance coverage', items: [
+      'Reportable incidents and regulatory notifications — and their trends — are visible to the board.',
+      'Performance against the organisation’s mandatory standards is mapped and reported.',
+      'Accreditation status, outcomes and open actions are tracked in the pack.',
+      'Mandatory training / education compliance is reported by cohort or site.',
+      'Cybersecurity and data-privacy maturity is visible as a governance risk.'
+    ]},
+    { title: '5 — Risk, trend & exception visibility', items: [
       'Metrics show a trend over time, not just a single point-in-time number.',
       'The report flags exceptions past a defined threshold automatically.',
       'Directors can see which items are getting worse, not only current status.',
-      'Emerging risks are surfaced before they become notifiable events.'
+      'Emerging risks are surfaced before they become notifiable events.',
+      'An enterprise risk register with agreed risk appetite / tolerances is reviewed by the board.'
     ]},
-    { title: '5 — Timeliness & automation', items: [
+    { title: '6 — Timeliness & automation', items: [
       'Board reporting is produced on a predictable schedule aligned to the board cycle.',
       'Assembling the pack takes hours, not days, of manual effort.',
       'Data is refreshed automatically or semi-automatically, not re-keyed each cycle.',
       'Ad-hoc director questions can be answered quickly, without rebuilding a report.',
       'Quality and risk teams have an operational view that feeds the board view, or vice versa.'
     ]},
-    { title: '6 — Action tracking', items: [
+    { title: '7 — Action tracking', items: [
       'Every reported issue has a clear owner and due date.',
       'Open actions from previous meetings are visible and tracked to closure.',
       'The board can see whether interventions actually moved the metric.',
@@ -267,16 +287,54 @@
     ]}
   ];
 
+  // Sector-specific module appended based on the org type chosen at the gate.
+  var APPENDIX_AGED_CARE = { title: 'Sector module — Aged care', items: [
+    'Care minutes delivered vs target (total and RN) and 24/7 RN coverage are reported and tracked.',
+    'SIRS reportable incidents (Priority 1 and 2) and their trends are visible to the board.',
+    'Quality Indicator (QI) Program results and Star Ratings are reported and benchmarked.',
+    'Restrictive-practices use and authorisation are reported to the board.',
+    'Quality Care Advisory Body and Consumer Advisory Body reports reach the governing body (Aged Care Act 2024).'
+  ]};
+  var APPENDIX_HOSPITAL = { title: 'Sector module — Hospital / health service', items: [
+    'Performance against the NSQHS Standards (especially the Clinical Governance Standard) is mapped and reported.',
+    'Hospital-acquired complications and healthcare-associated infections are trended and benchmarked.',
+    'Accreditation status and open recommendations are tracked in the pack.',
+    'Patient-experience and consumer-partnering measures reach the board.'
+  ]};
+  var APPENDIX_NDIS = { title: 'Sector module — Disability / NDIS', items: [
+    'Reportable incidents to the NDIS Commission (and their notification timeframes) are visible to the board.',
+    'Performance against the NDIS Practice Standards (provider governance) is reported.',
+    'Participant feedback and complaints themes reach the board.'
+  ]};
+
+  function appendixFor(orgType) {
+    switch (orgType) {
+      case 'Residential Aged Care':
+      case 'Home Care / Support at Home':
+        return APPENDIX_AGED_CARE;
+      case 'Hospital / Health Service':
+      case 'Primary / Community Health':
+        return APPENDIX_HOSPITAL;
+      case 'Disability / NDIS':
+        return APPENDIX_NDIS;
+      default:
+        return null;
+    }
+  }
+
   var BANDS = {
-    'at-risk': 'At risk (0–8): Reporting is largely manual and fragmented. Governance and regulatory blind spots are likely, and the board is probably reacting to issues rather than seeing them coming. This is the highest-value area to fix first.',
-    'developing': 'Developing (9–16): Solid foundations but meaningful gaps — often in exception visibility, drill-down, automation or action tracking. A focused build would materially lift board confidence and cut manual effort.',
-    'board-ready': 'Board-ready (17–24): Your reporting is mature. The opportunity now is refinement — sharper exception logic, deeper compliance coverage, and reclaiming time through automation.'
+    'at-risk': 'At risk: Reporting is largely manual and fragmented. Governance and regulatory blind spots are likely, and the board is probably reacting to issues rather than seeing them coming. This is the highest-value area to fix first.',
+    'developing': 'Developing: Solid foundations but meaningful gaps — often in exception visibility, drill-down, automation or action tracking. A focused build would materially lift board confidence and cut manual effort.',
+    'board-ready': 'Board-ready: Your reporting is mature. The opportunity now is refinement — sharper exception logic, deeper compliance coverage, and reclaiming time through automation.'
   };
 
-  // Render checklist
-  (function () {
+  // Render checklist (core dimensions + a sector module for the chosen org type)
+  function renderChecklist(orgType) {
+    var sections = SECTIONS.slice();
+    var appendix = appendixFor(orgType);
+    if (appendix) sections.push(appendix);
     var html = '';
-    SECTIONS.forEach(function (sec) {
+    sections.forEach(function (sec) {
       html += '<div class="hc-section"><h3>' + sec.title + '</h3>';
       sec.items.forEach(function (item) {
         html += '<div class="hc-item"><span class="hc-text">' + item + '</span>' +
@@ -288,7 +346,7 @@
       html += '</div>';
     });
     document.getElementById('sectionsWrap').innerHTML = html;
-  })();
+  }
 
   function setAnswer(btn, yes) {
     var toggle = btn.parentNode;
@@ -301,9 +359,12 @@
     var total = document.querySelectorAll('.hc-item').length;
     var score = document.querySelectorAll('.hc-yes.on').length;
     document.getElementById('scoreNum').textContent = score;
+    var denom = document.getElementById('scoreDenom');
+    if (denom) denom.textContent = total;
     document.getElementById('scoreFill').style.width = (total ? (score / total * 100) : 0) + '%';
-    var bandKey = score <= 8 ? 'at-risk' : (score <= 16 ? 'developing' : 'board-ready');
-    var bandLabel = score <= 8 ? 'At risk' : (score <= 16 ? 'Developing' : 'Board-ready');
+    var pct = total ? (score / total) : 0;
+    var bandKey = pct < 0.34 ? 'at-risk' : (pct < 0.67 ? 'developing' : 'board-ready');
+    var bandLabel = pct < 0.34 ? 'At risk' : (pct < 0.67 ? 'Developing' : 'Board-ready');
     var badge = document.getElementById('scoreBand');
     badge.className = 'score-band ' + bandKey;
     badge.textContent = bandLabel;
@@ -348,6 +409,7 @@
     });
 
     document.getElementById('gate').style.display = 'none';
+    renderChecklist(data.orgType);
     var cl = document.getElementById('checklist');
     cl.classList.add('show');
     updateScore();
