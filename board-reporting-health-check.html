@@ -164,8 +164,9 @@
           <div class="field-error" id="email-error">Please enter a valid email</div>
         </div>
         <div class="field">
-          <label for="orgName">Organisation <span class="optional">optional</span></label>
-          <input type="text" id="orgName" placeholder="e.g. Sunnyside Aged Care" />
+          <label for="orgName">Organisation</label>
+          <input type="text" id="orgName" placeholder="e.g. Sunnyside Aged Care" required />
+          <div class="field-error" id="orgName-error">Please enter your organisation</div>
         </div>
       </div>
       <div class="field">
@@ -380,6 +381,8 @@
     if (!email.value.trim() || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value)) {
       email.classList.add('error'); document.getElementById('email-error').classList.add('show'); valid = false;
     }
+    var orgName = document.getElementById('orgName');
+    if (!orgName.value.trim()) { orgName.classList.add('error'); document.getElementById('orgName-error').classList.add('show'); valid = false; }
     if (!valid) return;
 
     var btn = document.getElementById('unlockBtn');
@@ -416,7 +419,7 @@
     cl.scrollIntoView({ behavior: 'smooth' });
   }
 
-  ['name', 'email'].forEach(function (id) {
+  ['name', 'email', 'orgName'].forEach(function (id) {
     document.getElementById(id).addEventListener('input', function () {
       this.classList.remove('error');
       var err = document.getElementById(id + '-error');
