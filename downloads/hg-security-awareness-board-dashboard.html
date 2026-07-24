@@ -135,7 +135,11 @@
   .tile .hint{font-size:10.5px;color:var(--hg-text-fade);margin-top:8px;text-align:center}
 
   /* ---------- Slicer ---------- */
-  .slicer{display:flex;gap:8px;align-items:center;margin:18px 0 14px;flex-wrap:wrap}
+  .slicer-head{margin:32px 0 0}
+  .slicer-head h2{font-family:var(--serif);font-weight:600;font-size:22px;color:var(--hg-text)}
+  .slicer-head h2 .rule{display:block;width:48px;height:3px;background:var(--hg-gold);margin-top:8px}
+  .slicer-head p{font-size:12.5px;color:var(--hg-text-muted);margin-top:8px;max-width:660px;line-height:1.6}
+  .slicer{display:flex;gap:8px;align-items:center;margin:14px 0 14px;flex-wrap:wrap}
   .slicer .lab{font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--hg-text-muted);font-weight:600;margin-right:2px}
   .schip{border:1px solid var(--hg-border);background:#fff;color:var(--hg-text-soft);font-size:12px;font-weight:600;padding:6px 13px;border-radius:999px;transition:.12s;display:inline-flex;align-items:center;gap:7px}
   .schip:hover{border-color:var(--hg-sky)}
@@ -244,7 +248,7 @@
   @media print{
     @page{size:A4 landscape;margin:14mm}
     .topbar{position:static;border-bottom:2px solid var(--hg-navy-2)}
-    .controls,.slicer,.mockbar .x,.tile .hint,.stage-head .caret{display:none!important}
+    .controls,.slicer,.slicer-head p,.mockbar .x,.tile .hint,.stage-head .caret{display:none!important}
     body{font-size:11.5px}
     .kpi,.tile,.stage-block{box-shadow:none;break-inside:avoid}
     .stage-block.collapsed .stage-body{display:block}
@@ -328,8 +332,12 @@
   </section>
 
   <!-- SLICER -->
+  <div class="slicer-head">
+    <h2>Metric detail by stage<span class="rule"></span></h2>
+    <p>Every metric in the pack, grouped by SANS maturity stage. Use the chips to focus on one stage — the small number is how many metrics that stage holds. Hover a chip or a stage header for a plain-English explainer.</p>
+  </div>
   <div class="slicer" id="slicer">
-    <span class="lab">Filter</span>
+    <span class="lab">Show</span>
   </div>
 
   <!-- DRILL-DOWN -->
