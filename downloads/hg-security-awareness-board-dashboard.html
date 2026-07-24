@@ -192,6 +192,13 @@
 
   /* edit-mode inputs */
   input.editval{width:64px;font-family:var(--serif);font-size:17px;font-weight:600;text-align:right;border:1px solid var(--hg-sky);border-radius:6px;padding:2px 6px;color:var(--hg-text);background:#F4FAFE}
+  input.edittgt{width:54px;font-size:12px;text-align:right;border:1px solid var(--hg-sky);border-radius:5px;padding:2px 4px;color:var(--hg-text);background:#F4FAFE}
+  .tgt-edit{white-space:nowrap;color:var(--hg-text-muted);font-size:12px}
+  .trend-edit{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px}
+  .trend-edit .te{display:flex;flex-direction:column;align-items:center;gap:2px}
+  .trend-edit .te label{font-size:9.5px;letter-spacing:.04em;text-transform:uppercase;color:var(--hg-text-muted)}
+  .trend-edit .te input{width:46px;font-size:12px;text-align:center;border:1px solid var(--hg-sky);border-radius:5px;padding:2px 3px;color:var(--hg-text);background:#F4FAFE}
+  select.stage-sel{font-size:12px;border:1px solid var(--hg-sky);border-radius:5px;padding:3px 5px;color:var(--hg-text);background:#F4FAFE;max-width:100%}
   select.editstat{font-family:var(--sans);font-size:11.5px;font-weight:600;border:1px solid var(--hg-sky);border-radius:6px;padding:3px 4px;background:#F4FAFE}
   body:not(.editing) .edit-only{display:none}
   body.editing .view-only{display:none}
@@ -303,6 +310,7 @@
       <h3 id="trendTitle">Human-driven incidents</h3>
       <div class="tsub" id="trendSub">Rolling 12 months</div>
       <div class="canvas-wrap"><canvas id="trendChart"></canvas></div>
+      <div class="edit-only trend-edit" id="trendEdit"></div>
     </div>
   </section>
 
@@ -839,6 +847,8 @@ function renderKpis(){
   const row = document.getElementById("kpiRow");
   row.innerHTML = "";
   DATA.headlineKpis.forEach(id => row.insertAdjacentHTML("beforeend", kpiCard(id)));
+  const ss = document.getElementById("stageSel");
+  if(ss) ss.onchange = () => { DATA.maturity.current = Number(ss.value); save(); renderKpis(); };
 }
 function kpiCard(id){
   if(id === "maturity"){
@@ -849,11 +859,12 @@ function kpiCard(id){
       return `<span class="${cls}" data-tip="mat:${n}"></span>`;
     }).join("");
     const lvl = (M.levels && M.levels[cur]) || {};
+    const stageEdit = `<div class="edit-only" style="margin-top:8px"><select class="stage-sel" id="stageSel">${Array.from({length:max},(_,i)=>i+1).map(n=>`<option value="${n}"${n===cur?" selected":""}>Stage ${n} — ${(M.levels&&M.levels[n]&&(M.levels[n].short||M.levels[n].name))||""}</option>`).join("")}</select></div>`;
     return `<div class="kpi"><span class="accent"></span>
       <div class="klabel">${M.label || "Maturity level"}<i class="info-i" data-tip="mat:all">i</i></div>
       <div class="kbig tabnum">${cur}<span class="slash"> / ${max}</span></div>
       <div class="ladder-mini">${rungs}</div>
-      <div class="ksub" style="margin-top:8px"><span data-tip="mat:${cur}" style="border-bottom:1px dotted var(--hg-text-fade)">${lvl.short || lvl.name || ""}</span>${M.trendNote ? ` · <span class="chip-trend up">${M.trendNote}</span>` : ""}</div></div>`;
+      <div class="ksub" style="margin-top:8px"><span data-tip="mat:${cur}" style="border-bottom:1px dotted var(--hg-text-fade)">${lvl.short || lvl.name || ""}</span>${M.trendNote ? ` · <span class="chip-trend up">${M.trendNote}</span>` : ""}</div>${stageEdit}</div>`;
   }
   if(id === "onTarget"){
     const p = onTargetPct();
@@ -942,6 +953,12 @@ function stageBlock(s){
 }
 function metricRow(m){
   const rag = ragOf(m);
+  const t = m.target || {};
+  const tgtEdit = (t.op==="gte"||t.op==="lte")
+      ? `<span class="edit-only tgt-edit">${t.op==="gte"?"≥":"≤"} <input class="edittgt" data-id="${m.id}" data-k="v" type="number" step="any" value="${t.v}">${m.unit||""}</span>`
+      : t.op==="range"
+      ? `<span class="edit-only tgt-edit"><input class="edittgt" data-id="${m.id}" data-k="v" type="number" step="any" value="${t.v}">–<input class="edittgt" data-id="${m.id}" data-k="v2" type="number" step="any" value="${t.v2}">${m.unit||""}</span>`
+      : `<span class="edit-only">${targetText(m)}</span>`;
   const tclass = m.trendDir==="good" ? "t-good" : m.trendDir==="bad" ? "t-bad" : "t-flat";
   const isQual = (m.target||{}).op === "qual";
   const valView = `<span class="val view-only tabnum">${fmtVal(m)}<span class="u">${m.unit||""}</span></span>`;
@@ -952,7 +969,7 @@ function metricRow(m){
   return `<tr>
     <td class="metric-name">${m.name}</td>
     <td class="n">${valView}${valEdit}</td>
-    <td class="target">${targetText(m)}</td>
+    <td class="target"><span class="view-only">${targetText(m)}</span>${tgtEdit}</td>
     <td class="stcell"><span class="ragdot ${rag} view-only" data-dot="${m.id}">${STATUS_LABEL[rag]}</span>${statEdit}</td>
     <td class="trendcell ${tclass}">${m.trend||""}</td>
   </tr>`;
@@ -967,6 +984,15 @@ function wireEditInputs(){
   });
   document.querySelectorAll("select.editstat").forEach(sel=>{
     sel.onchange = () => { findMetric(sel.dataset.id).status = sel.value; onEdit(findMetric(sel.dataset.id)); };
+  });
+  document.querySelectorAll("input.edittgt").forEach(inp=>{
+    inp.oninput = () => {
+      const m = findMetric(inp.dataset.id);
+      const t = m.target || (m.target = {});
+      t[inp.dataset.k] = inp.value === "" ? null : Number(inp.value);
+      delete t.label;                       // custom label would go stale once the number changes
+      onEdit(m);
+    };
   });
 }
 function onEdit(m){
@@ -1144,6 +1170,21 @@ function hideTip(){ tipEl.classList.remove("show"); }
 document.addEventListener("mouseover", e => { const t = e.target.closest("[data-tip]"); if(t) showTip(t); });
 document.addEventListener("mouseout", e => { const t = e.target.closest("[data-tip]"); if(t) hideTip(); });
 
+/* ---------- trend editor ---------- */
+function renderTrendEdit(){
+  const box = document.getElementById("trendEdit");
+  if(!box || !DATA.trend) return;
+  box.innerHTML = DATA.trend.labels.map((l,i)=>
+    `<span class="te"><label>${l}</label><input type="number" step="any" data-i="${i}" value="${DATA.trend.values[i]===null||DATA.trend.values[i]===undefined?'':DATA.trend.values[i]}"></span>`).join("");
+  box.querySelectorAll("input").forEach(inp=>{
+    inp.oninput = () => {
+      DATA.trend.values[Number(inp.dataset.i)] = inp.value === "" ? null : Number(inp.value);
+      if(charts.trend){ charts.trend.data.datasets[0].data = DATA.trend.values; charts.trend.update("none"); }
+      save();
+    };
+  });
+}
+
 /* ---------- boot ---------- */
 function renderAll(){
   document.title = (DATA.title || "Board Governance Dashboard") + " — Board Dashboard";
@@ -1157,7 +1198,7 @@ function renderAll(){
   document.getElementById("footCurrency").textContent = DATA.currencyNote || "";
   document.getElementById("footDisc").textContent = DATA.disclaimer || "Decision-support only — not audit, accreditation, legal or professional advice. Replace all figures with measured data and remove the \u201cillustrative data\u201d banner before any live board use.";
   var _lic=document.getElementById("footLicence"); _lic.textContent=DATA.licence||""; _lic.style.display=DATA.licence?"":"none";
-  renderKpis(); renderSlicer(); renderStages();
+  renderKpis(); renderSlicer(); renderStages(); renderTrendEdit();
   updateGauge(); updateRagChart(); highlightRagChart();
 }
 renderAll();
