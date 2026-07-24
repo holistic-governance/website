@@ -280,6 +280,7 @@
       <button class="btn primary" id="saveBtn" title="Download a copy with your numbers baked in">💾 Save copy</button>
       <button class="btn" id="printBtn">⎙ Print</button>
       <button class="btn ghost" id="resetBtn" title="Reset to file defaults">↺ Reset</button>
+      <button class="btn ghost" id="clearBtn" title="Blank all sample values so you can enter your own">⌫ Clear demo data</button>
     </div>
     <div class="edit-banner" id="editBanner"><span class="dot"></span><span><b>Edit mode</b> — click a value and type; changes save automatically in this browser. Click <b>✓ Save &amp; finish</b> when you're done, or <b>💾 Save copy</b> to download a file with your numbers baked in.</span></div>
   </div>
@@ -1142,6 +1143,22 @@ document.getElementById("resetBtn").onclick = () => {
     localStorage.removeItem(LS_KEY); DATA = structuredClone(DEFAULT_DATA); activeStage=null; renderAll(); toast("Reset to file defaults");
   }
 };
+document.getElementById("clearBtn").onclick = () => {
+  if(!confirm("Clear all values? Every metric, status, trend point and the maturity stage will be blanked so you can enter your own data. Targets are kept. (Reset restores the file defaults if you change your mind.)")) return;
+  allMetrics().forEach(m => {
+    m.value = null;
+    if((m.target||{}).op === "qual") m.status = "na";
+    m.trend = ""; m.trendDir = "flat";
+  });
+  if(DATA.trend) DATA.trend.values = DATA.trend.values.map(()=>null);
+  if(DATA.maturity){ DATA.maturity.current = 1; DATA.maturity.trendNote = ""; }
+  (DATA.sections||[]).forEach(sec => { if(sec.badge) sec.badge = {label:"", tone:"neutral"}; });
+  DATA.demoCleared = true;
+  save(); renderAll();
+  if(charts.trend){ charts.trend.data.datasets[0].data = DATA.trend.values; charts.trend.update(); }
+  if(!document.body.classList.contains("editing")) document.getElementById("editBtn").click();
+  toast("Demo data cleared — enter your numbers");
+};
 
 /* ---------- maturity-stage explainer tooltip ---------- */
 const tipEl = document.getElementById("stagetip");
@@ -1225,6 +1242,8 @@ function renderAll(){
   document.getElementById("footCurrency").textContent = DATA.currencyNote || "";
   document.getElementById("footDisc").textContent = DATA.disclaimer || "Decision-support only — not audit, accreditation, legal or professional advice. Replace all figures with measured data and remove the \u201cillustrative data\u201d banner before any live board use.";
   var _lic=document.getElementById("footLicence"); _lic.textContent=DATA.licence||""; _lic.style.display=DATA.licence?"":"none";
+  const mb = document.getElementById("mockbar");
+  if(mb) mb.style.display = DATA.demoCleared ? "none" : "";
   renderKpis(); renderSlicer(); renderStages(); renderTrendEdit();
   updateGauge(); updateRagChart(); highlightRagChart();
 }
