@@ -139,6 +139,7 @@
   .slicer-head h2{font-family:var(--serif);font-weight:600;font-size:22px;color:var(--hg-text)}
   .slicer-head h2 .rule{display:block;width:48px;height:3px;background:var(--hg-gold);margin-top:8px}
   .slicer-head p{font-size:12.5px;color:var(--hg-text-muted);margin-top:8px;max-width:660px;line-height:1.6}
+  .slicer-head p.tgt-note{font-size:11.5px;color:var(--hg-text-fade);margin-top:6px;line-height:1.55}
   .slicer{display:flex;gap:8px;align-items:center;margin:14px 0 14px;flex-wrap:wrap}
   .slicer .lab{font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--hg-text-muted);font-weight:600;margin-right:2px}
   .schip{border:1px solid var(--hg-border);background:#fff;color:var(--hg-text-soft);font-size:12px;font-weight:600;padding:6px 13px;border-radius:999px;transition:.12s;display:inline-flex;align-items:center;gap:7px}
@@ -253,7 +254,7 @@
   @media print{
     @page{size:A4 landscape;margin:14mm}
     .topbar{position:static;border-bottom:2px solid var(--hg-navy-2)}
-    .controls,.slicer,.slicer-head p,.mockbar .x,.tile .hint,.stage-head .caret,.edit-only,.edit-banner{display:none!important}
+    .controls,.slicer,.slicer-head p.chips-help,.mockbar .x,.tile .hint,.stage-head .caret,.edit-only,.edit-banner{display:none!important}
     body{font-size:11.5px}
     .kpi,.tile,.stage-block{box-shadow:none;break-inside:avoid}
     .stage-block.collapsed .stage-body{display:block}
@@ -346,7 +347,8 @@
   <!-- SLICER -->
   <div class="slicer-head">
     <h2>Metric detail by stage<span class="rule"></span></h2>
-    <p>Every metric in the pack, grouped by SANS maturity stage. Use the chips to focus on one stage — the small number is how many metrics that stage holds. Hover a chip or a stage header for a plain-English explainer.</p>
+    <p class="chips-help">Every metric in the pack, grouped by SANS maturity stage. Use the chips to focus on one stage — the small number is how many metrics that stage holds. Hover a chip or a stage header for a plain-English explainer.</p>
+    <p class="tgt-note">Built-in targets are Holistic Governance defaults, current as at July 2026 — they are not SANS-prescribed values. Review them periodically against the latest SANS guidance and your organisation's risk appetite, and adjust them in Edit mode.</p>
   </div>
   <div class="slicer" id="slicer">
     <span class="lab">Show</span>
@@ -392,7 +394,7 @@ const DEFAULT_DATA = {
   "preparedFor": "Risk & Audit Committee",
   "framework": "SANS Security Awareness & Culture Maturity Model™",
   "frameworkAttribution": "Structured on the <strong>SANS Security Awareness &amp; Culture Maturity Model™</strong> (Maturity Model eBook 2026, © SANS Institute). Maturity stages, indicators and the “potential metrics” shown for each stage are attributed to SANS; metric <em>values</em> here are illustrative sample data and do not represent measured results.",
-  "currencyNote": "Aligned to the SANS Security Awareness & Culture Maturity Model (2026 eBook) — verify currency before use.",
+  "currencyNote": "Aligned to the SANS Security Awareness & Culture Maturity Model (2026 eBook). Built-in targets are Holistic Governance defaults current as at July 2026, not SANS-prescribed values — periodically verify against the latest SANS guidance before use.",
   "disclaimer": "Decision-support only — supports assessment; it is not an audit, accreditation, legal or professional advice. Replace all figures with measured data and remove the “illustrative data” banner before any live board use.",
   "sectionsTitle": "Status by maturity level",
   "headlineKpis": [
