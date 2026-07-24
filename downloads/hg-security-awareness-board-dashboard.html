@@ -199,6 +199,9 @@
   .trend-edit .te label{font-size:9.5px;letter-spacing:.04em;text-transform:uppercase;color:var(--hg-text-muted)}
   .trend-edit .te input{width:46px;font-size:12px;text-align:center;border:1px solid var(--hg-sky);border-radius:5px;padding:2px 3px;color:var(--hg-text);background:#F4FAFE}
   select.stage-sel{font-size:12px;border:1px solid var(--hg-sky);border-radius:5px;padding:3px 5px;color:var(--hg-text);background:#F4FAFE;max-width:100%}
+  .pb-edit{display:flex;flex-direction:column;gap:5px;margin-top:2px;max-width:340px}
+  .pb-edit input{font-family:var(--sans);font-size:12px;border:1px solid var(--hg-sky);border-radius:5px;padding:3px 7px;color:var(--hg-text);background:#F4FAFE;width:100%}
+  .pb-edit .pb-row{display:flex;gap:5px}
   select.editstat{font-family:var(--sans);font-size:11.5px;font-weight:600;border:1px solid var(--hg-sky);border-radius:6px;padding:3px 4px;background:#F4FAFE}
   body:not(.editing) .edit-only{display:none}
   body.editing .view-only{display:none}
@@ -1101,7 +1104,7 @@ document.getElementById("editBtn").onclick = function(){
   const on = document.body.classList.contains("editing");
   this.classList.toggle("on", on);
   this.textContent = on ? "✓ Done" : "✎ Edit";
-  if(!on){ renderStages(); toast("Edits saved to this browser"); }  // re-render to sync dots on exit
+  if(!on){ renderAll(); toast("Edits saved to this browser"); }  // re-render to sync dots + header text on exit
 };
 document.getElementById("exportBtn").onclick = () => {
   const json = "const DATA = " + JSON.stringify(DATA, null, 2) + ";";
@@ -1196,8 +1199,18 @@ function renderAll(){
   document.getElementById("kickerEl").textContent = DATA.kicker || "Board Reporting";
   document.getElementById("titleH1").innerHTML = DATA.title || "";
   document.getElementById("ragTitle").textContent = DATA.sectionsTitle || "Status by section";
+  const escA = v => String(v ?? "").replace(/&/g,"&amp;").replace(/"/g,"&quot;").replace(/</g,"&lt;");
   document.getElementById("periodBox").innerHTML =
-    `<b>${DATA.org}</b><br>${DATA.period} · ${DATA.periodRange}<br>${DATA.preparedFor}`;
+    `<span class="view-only"><b>${DATA.org}</b><br>${DATA.period} · ${DATA.periodRange}<br>${DATA.preparedFor}</span>` +
+    `<span class="edit-only pb-edit">` +
+      `<input id="orgEdit" value="${escA(DATA.org)}" placeholder="Organisation name" title="Organisation name">` +
+      `<span class="pb-row"><input id="periodEdit" value="${escA(DATA.period)}" placeholder="e.g. Q4 FY2025–26" title="Reporting period"><input id="rangeEdit" value="${escA(DATA.periodRange)}" placeholder="e.g. Apr–Jun 2026" title="Period range"></span>` +
+      `<input id="prepEdit" value="${escA(DATA.preparedFor)}" placeholder="Prepared for — e.g. Risk & Audit Committee" title="Prepared for">` +
+    `</span>`;
+  [["orgEdit","org"],["periodEdit","period"],["rangeEdit","periodRange"],["prepEdit","preparedFor"]].forEach(([id,key])=>{
+    const el = document.getElementById(id);
+    if(el) el.oninput = () => { DATA[key] = el.value; save(); };
+  });
   document.getElementById("footWm").innerHTML = `Holistic <em>Governance</em> — ${DATA.preparedFor} pack`;
   document.getElementById("footAttr").innerHTML = DATA.frameworkAttribution || "";
   document.getElementById("footCurrency").textContent = DATA.currencyNote || "";
