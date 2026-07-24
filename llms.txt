@@ -14,6 +14,7 @@ Naomi Alefelder is a registered nurse (AHPRA NMW000180905) with an MBA (Charles 
 - [AI & Technology consultancy](https://hg-au.com/ai-technology.html): AI governance, clinical AI governance, AI vendor assessment, medical device advisory, AI optimisation training, technology risk and privacy.
 - [Prototype builds](https://hg-au.com/app-development.html): Working app, dashboard and workflow prototypes designed around how your organisation actually works, with governance and privacy built in.
 - [Request a proposal](https://hg-au.com/proposal-enquiry.html): Engagement enquiry form — scope, timeline, fixed-price quote.
+- [Security Awareness & Culture Board Dashboard (free tool)](https://hg-au.com/security-awareness-dashboard.html): Free editable, board-ready dashboard structured on the SANS Security Awareness & Culture Maturity Model™ — runs in any browser, works offline, figures never leave the device. Download gated by a short contact form.
 
 ## Services
 

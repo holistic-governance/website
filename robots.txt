@@ -7,6 +7,7 @@ Allow: /
 Disallow: /admin.html
 Disallow: /login.html
 Disallow: /enquiries/
+Disallow: /downloads/
 
 # ── Explicit allow-list for AI search & training crawlers ──────
 # Listed individually so policy can be tightened per-bot later
@@ -18,18 +19,21 @@ Allow: /
 Disallow: /admin.html
 Disallow: /login.html
 Disallow: /enquiries/
+Disallow: /downloads/
 
 User-agent: OAI-SearchBot
 Allow: /
 Disallow: /admin.html
 Disallow: /login.html
 Disallow: /enquiries/
+Disallow: /downloads/
 
 User-agent: ChatGPT-User
 Allow: /
 Disallow: /admin.html
 Disallow: /login.html
 Disallow: /enquiries/
+Disallow: /downloads/
 
 # Anthropic
 User-agent: ClaudeBot
@@ -37,18 +41,21 @@ Allow: /
 Disallow: /admin.html
 Disallow: /login.html
 Disallow: /enquiries/
+Disallow: /downloads/
 
 User-agent: Claude-Web
 Allow: /
 Disallow: /admin.html
 Disallow: /login.html
 Disallow: /enquiries/
+Disallow: /downloads/
 
 User-agent: anthropic-ai
 Allow: /
 Disallow: /admin.html
 Disallow: /login.html
 Disallow: /enquiries/
+Disallow: /downloads/
 
 # Perplexity
 User-agent: PerplexityBot
@@ -56,12 +63,14 @@ Allow: /
 Disallow: /admin.html
 Disallow: /login.html
 Disallow: /enquiries/
+Disallow: /downloads/
 
 User-agent: Perplexity-User
 Allow: /
 Disallow: /admin.html
 Disallow: /login.html
 Disallow: /enquiries/
+Disallow: /downloads/
 
 # Google AI surfaces (Bard / Gemini / AI Overviews training)
 User-agent: Google-Extended
@@ -69,6 +78,7 @@ Allow: /
 Disallow: /admin.html
 Disallow: /login.html
 Disallow: /enquiries/
+Disallow: /downloads/
 
 # Apple Intelligence
 User-agent: Applebot-Extended
@@ -76,6 +86,7 @@ Allow: /
 Disallow: /admin.html
 Disallow: /login.html
 Disallow: /enquiries/
+Disallow: /downloads/
 
 # Common Crawl (foundation model training corpus)
 User-agent: CCBot
@@ -83,6 +94,7 @@ Allow: /
 Disallow: /admin.html
 Disallow: /login.html
 Disallow: /enquiries/
+Disallow: /downloads/
 
 # Meta AI
 User-agent: Meta-ExternalAgent
@@ -90,12 +102,14 @@ Allow: /
 Disallow: /admin.html
 Disallow: /login.html
 Disallow: /enquiries/
+Disallow: /downloads/
 
 User-agent: Meta-ExternalFetcher
 Allow: /
 Disallow: /admin.html
 Disallow: /login.html
 Disallow: /enquiries/
+Disallow: /downloads/
 
 # Amazon (Alexa+ / Rufus)
 User-agent: Amazonbot
@@ -103,6 +117,7 @@ Allow: /
 Disallow: /admin.html
 Disallow: /login.html
 Disallow: /enquiries/
+Disallow: /downloads/
 
 # DuckDuckGo AI Assist
 User-agent: DuckAssistBot
@@ -110,6 +125,7 @@ Allow: /
 Disallow: /admin.html
 Disallow: /login.html
 Disallow: /enquiries/
+Disallow: /downloads/
 
 # Cohere
 User-agent: cohere-ai
@@ -117,6 +133,7 @@ Allow: /
 Disallow: /admin.html
 Disallow: /login.html
 Disallow: /enquiries/
+Disallow: /downloads/
 
 # Mistral
 User-agent: MistralAI-User
@@ -124,6 +141,7 @@ Allow: /
 Disallow: /admin.html
 Disallow: /login.html
 Disallow: /enquiries/
+Disallow: /downloads/
 
 # You.com
 User-agent: YouBot
@@ -131,6 +149,7 @@ Allow: /
 Disallow: /admin.html
 Disallow: /login.html
 Disallow: /enquiries/
+Disallow: /downloads/
 
 # ── Sitemap & AI content map ───────────────────────────────────
 Sitemap: https://hg-au.com/sitemap.xml
