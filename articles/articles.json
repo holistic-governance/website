@@ -1,5 +1,16 @@
 [
   {
+    "slug": "asd-post-quantum-vendor-questions",
+    "title": "Post-Quantum Cryptography — ASD's New Vendor Questions: What Buyers and Software Vendors Need to Know",
+    "date": "2026-07-24",
+    "dateModified": "2026-07-24",
+    "author": "Naomi Alefelder",
+    "category": "Industry News",
+    "featured": false,
+    "summary": "On 16 July 2026 the Australian Signals Directorate released \"Post-quantum questions to ask your vendors\" — 31 questions across five phases for assessing supplier readiness for post-quantum cryptography. We summarise what the guidance asks, what buyers should prioritise, what good vendor answers look like, and why data longevity and embedded systems make this land particularly heavily in aged-care and health settings.",
+    "ogImage": "og-image-v3.png"
+  },
+  {
     "slug": "liquidity-standard-targeted-review",
     "title": "Targeted Review on the New Liquidity Standard — What Category 6 Providers Need to Know",
     "date": "2026-07-02",
@@ -7,7 +18,7 @@
     "author": "Naomi Alefelder",
     "category": "Industry News",
     "featured": false,
-    "summary": "From July 2026, the Aged Care Quality and Safety Commission begins a targeted review of the Liquidity Standard — one of three new Financial and Prudential Standards that took effect with the Aged Care Act 2024. We explain who is selected, what the Liquidity Standard requires, how it fits the wider prudential framework, and the governance questions every Category 6 board should be asking.",
+    "summary": "From July 2026, the Aged Care Quality and Safety Commission begins a targeted review of the Liquidity Standard — one of three new Financial and Prudential Standards that took effect with the Aged Care Act 2024. We explain who is selected, what the review involves, how the Liquidity Standard fits within the wider prudential framework, and the governance questions every Category 6 board should be asking.",
     "ogImage": "og-image-v3.png"
   },
   {

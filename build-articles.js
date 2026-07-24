@@ -207,8 +207,23 @@ function mdToHtml(md) {
       continue;
     }
 
+    if (/^\s*\|.*\|\s*$/.test(line)) {
+      const rows = [];
+      while (i < lines.length && /^\s*\|.*\|\s*$/.test(lines[i])) {
+        rows.push(lines[i].trim().replace(/^\|/, '').replace(/\|$/, '').split('|').map(c => c.trim()));
+        i++;
+      }
+      const isSeparator = r => r.every(c => /^:?-{3,}:?$/.test(c));
+      const header = rows.length > 1 && isSeparator(rows[1]) ? rows[0] : null;
+      const bodyRows = (header ? rows.slice(2) : rows).filter(r => !isSeparator(r));
+      const thead = header ? `<thead><tr>${header.map(c => `<th>${inline(c)}</th>`).join('')}</tr></thead>` : '';
+      const tbody = `<tbody>${bodyRows.map(r => `<tr>${r.map(c => `<td>${inline(c)}</td>`).join('')}</tr>`).join('')}</tbody>`;
+      out.push(`<table>${thead}${tbody}</table>`);
+      continue;
+    }
+
     const para = [];
-    while (i < lines.length && !/^\s*$/.test(lines[i]) && !/^#{1,6}\s/.test(lines[i]) && !/^\s*[-*]\s+/.test(lines[i]) && !/^\s*\d+\.\s+/.test(lines[i])) {
+    while (i < lines.length && !/^\s*$/.test(lines[i]) && !/^#{1,6}\s/.test(lines[i]) && !/^\s*[-*]\s+/.test(lines[i]) && !/^\s*\d+\.\s+/.test(lines[i]) && !/^\s*\|.*\|\s*$/.test(lines[i])) {
       para.push(lines[i]);
       i++;
     }
@@ -333,7 +348,7 @@ function renderArticlePage(meta, body, takeaways = []) {
     .article-page h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 4vw, 3rem); font-weight: 300; color: var(--white); line-height: 1.15; margin-bottom: 1.2rem; }
     .article-page .article-meta { font-size: 0.82rem; color: var(--text-light); margin-bottom: 2rem; padding-bottom: 1.5rem; border-bottom: 1px solid var(--border); }
     .article-page .article-meta span { color: var(--sky); }
-    .article-body { color: #ffffff; font-size: 1rem; line-height: 1.9; }
+    .article-body { color: #aab4c4; font-size: 1rem; line-height: 1.9; }
     .article-body h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; font-weight: 400; color: var(--white); margin: 2.5rem 0 1rem; }
     .article-body h3 { font-family: 'DM Sans', sans-serif; font-size: 1.15rem; font-weight: 500; color: var(--white); margin: 2rem 0 0.8rem; }
     .article-body p { margin-bottom: 1.2rem; }
@@ -341,10 +356,13 @@ function renderArticlePage(meta, body, takeaways = []) {
     .article-body li { margin-bottom: 0.5rem; }
     .article-body strong { color: var(--white); }
     .article-body a { color: var(--sky); text-decoration: underline; }
+    .article-body table { width: 100%; border-collapse: collapse; margin: 1.5rem 0 2rem; font-size: 0.92rem; }
+    .article-body th, .article-body td { border: 1px solid var(--border); padding: 0.65rem 0.85rem; text-align: left; vertical-align: top; line-height: 1.55; }
+    .article-body th { color: var(--white); font-weight: 500; background: rgba(56,189,248,0.06); }
     .key-takeaways { margin: 0 0 2.5rem; padding: 1.5rem 1.75rem; background: rgba(56,189,248,0.06); border: 1px solid rgba(56,189,248,0.25); border-left: 3px solid var(--sky); border-radius: 4px; }
     .key-takeaways h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.25rem; font-weight: 500; color: var(--white); margin: 0 0 0.75rem; letter-spacing: 0.02em; }
     .key-takeaways ul { list-style: none; padding: 0; margin: 0; }
-    .key-takeaways li { color: #ffffff; font-size: 0.95rem; line-height: 1.6; padding: 0.4rem 0 0.4rem 1.5rem; position: relative; }
+    .key-takeaways li { color: #aab4c4; font-size: 0.95rem; line-height: 1.6; padding: 0.4rem 0 0.4rem 1.5rem; position: relative; }
     .key-takeaways li::before { content: '→'; position: absolute; left: 0; top: 0.4rem; color: var(--sky); font-weight: 600; }
     .related-solutions { margin-top: 3.5rem; padding: 1.75rem; background: rgba(56,189,248,0.04); border: 1px solid var(--border); border-radius: 4px; }
     .related-solutions h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; font-weight: 400; color: var(--white); margin: 0 0 0.9rem; }
@@ -357,7 +375,7 @@ function renderArticlePage(meta, body, takeaways = []) {
     .author-bio-header img { width: 72px; height: 72px; border-radius: 50%; object-fit: cover; border: 1px solid var(--border); flex-shrink: 0; }
     .author-bio-header h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; font-weight: 400; color: var(--white); margin: 0 0 0.2rem; }
     .author-bio-role { font-size: 0.82rem; color: var(--sky); margin: 0; letter-spacing: 0.04em; }
-    .author-bio p { font-size: 0.92rem; color: #ffffff; line-height: 1.7; margin: 0 0 0.8rem; }
+    .author-bio p { font-size: 0.92rem; color: #aab4c4; line-height: 1.7; margin: 0 0 0.8rem; }
     .author-bio-links a { color: var(--sky); text-decoration: none; border-bottom: 1px solid rgba(56,189,248,0.4); }
     .author-bio-links a:hover { border-bottom-color: var(--sky); }
     .article-footer-nav { position: static; background: none; backdrop-filter: none; border-bottom: none; z-index: auto; margin-top: 2.5rem; padding: 2rem 0 0; border-top: 1px solid var(--border); display: flex; align-items: flex-start; justify-content: flex-start; gap: 1rem; flex-wrap: wrap; }
@@ -424,7 +442,7 @@ ${renderRelatedSolutions(meta.category)}
 <footer>
   <div class="footer-inner">
     <div class="footer-brand">
-      <div class="footer-logo"><img src="../logo-hg-trimmed.png" alt="Holistic Governance" width="351" height="524"><span class="logo-name">Holistic <span>Governance</span></span></div>
+      <a href="../index.html" class="footer-logo" style="text-decoration:none;"><img src="../logo-hg-trimmed.png" alt="Holistic Governance" width="351" height="524"><span class="logo-name">Holistic <span>Governance</span></span></a>
       <p class="footer-tagline">Improving clarity and confidence in governance through knowledge, data, and technology.</p>
     </div>
     <div class="footer-col">
@@ -445,7 +463,7 @@ ${renderRelatedSolutions(meta.category)}
     </div>
     <div class="footer-col">
       <h4>Where We Work</h4>
-      <address style="font-style:normal; font-size:0.85rem; line-height:1.6; color:var(--text); margin-bottom:0.6rem;">Heidelberg, Victoria, Australia</address>
+      <address style="font-style:normal; font-size:0.85rem; line-height:1.6; color:var(--text); margin-bottom:0.6rem;">Melbourne Metro and Regional</address>
       <ul><li>Australia</li><li>New Zealand</li></ul>
       <p style="font-size:0.8rem; color:var(--text-light); margin-top:0.8rem;">Remote &amp; on-site delivery</p>
     </div>

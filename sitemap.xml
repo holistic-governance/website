@@ -49,6 +49,12 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://hg-au.com/articles/asd-post-quantum-vendor-questions.html</loc>
+    <lastmod>2026-07-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://hg-au.com/articles/liquidity-standard-targeted-review.html</loc>
     <lastmod>2026-07-02</lastmod>
     <changefreq>monthly</changefreq>
