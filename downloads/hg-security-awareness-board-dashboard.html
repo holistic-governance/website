@@ -167,7 +167,8 @@
   .ss-bad{background:var(--not-met-soft);color:var(--not-met)}
   .ss-neutral{background:var(--na-soft);color:var(--na)}
   .stage-head:hover{background:#FBFCFD}
-  .stage-body{border-top:1px solid var(--hg-border)}
+  .stage-body{border-top:1px solid var(--hg-border);overflow-x:auto;-webkit-overflow-scrolling:touch}
+  .stage-body table{min-width:600px}
   .stage-block.collapsed .stage-body{display:none}
 
   table{width:100%;border-collapse:collapse;font-size:13px}
@@ -202,6 +203,8 @@
   .trend-edit .te{display:flex;flex-direction:column;align-items:center;gap:2px}
   .trend-edit .te label{font-size:9.5px;letter-spacing:.04em;text-transform:uppercase;color:var(--hg-text-muted)}
   .trend-edit .te input{width:46px;font-size:12px;text-align:center;border:1px solid var(--hg-sky);border-radius:5px;padding:2px 3px;color:var(--hg-text);background:#F4FAFE}
+  .trend-edit .te input.te-lab{font-size:9.5px;letter-spacing:.03em;text-transform:uppercase;color:var(--hg-text-muted);border-color:transparent;background:transparent;padding:1px 2px}
+  .trend-edit .te input.te-lab:hover,.trend-edit .te input.te-lab:focus{border-color:var(--hg-sky);background:#F4FAFE}
   select.stage-sel{font-size:12px;border:1px solid var(--hg-sky);border-radius:5px;padding:3px 5px;color:var(--hg-text);background:#F4FAFE;max-width:100%}
   .pb-edit{display:flex;flex-direction:column;gap:5px;margin-top:2px;max-width:340px}
   .pb-edit input{font-family:var(--sans);font-size:12px;border:1px solid var(--hg-sky);border-radius:5px;padding:3px 7px;color:var(--hg-text);background:#F4FAFE;width:100%}
@@ -211,8 +214,10 @@
   td .edit-only{white-space:nowrap}
   select.editstat{font-family:var(--sans);font-size:11.5px;font-weight:600;border:1px solid var(--hg-sky);border-radius:6px;padding:3px 4px;background:#F4FAFE}
   body:not(.editing) .edit-only{display:none}
-  body.editing .view-only{display:none}
-  body.editing .kpi,body.editing .tile,body.editing .stage-block{outline:1.5px dashed rgba(31,111,168,.45);outline-offset:3px}
+  @media screen{
+    body.editing .view-only{display:none}
+    body.editing .kpi,body.editing .tile,body.editing .stage-block{outline:1.5px dashed rgba(31,111,168,.45);outline-offset:3px}
+  }
   .edit-banner{display:none}
   body.editing .edit-banner{display:flex;align-items:center;gap:10px;margin-top:12px;padding:10px 16px;background:#E8F4FC;border:1px solid var(--hg-sky);border-radius:10px;font-size:13px;color:var(--hg-text-soft)}
   .edit-banner .dot{flex-shrink:0;width:8px;height:8px;border-radius:50%;background:var(--hg-sky);animation:editpulse 1.2s ease-in-out infinite}
@@ -248,7 +253,7 @@
   @media print{
     @page{size:A4 landscape;margin:14mm}
     .topbar{position:static;border-bottom:2px solid var(--hg-navy-2)}
-    .controls,.slicer,.slicer-head p,.mockbar .x,.tile .hint,.stage-head .caret{display:none!important}
+    .controls,.slicer,.slicer-head p,.mockbar .x,.tile .hint,.stage-head .caret,.edit-only,.edit-banner{display:none!important}
     body{font-size:11.5px}
     .kpi,.tile,.stage-block{box-shadow:none;break-inside:avoid}
     .stage-block.collapsed .stage-body{display:block}
@@ -259,6 +264,13 @@
   @media (max-width:1080px){
     .kpis{grid-template-columns:repeat(2,1fr)}
     .tiles{grid-template-columns:1fr}
+  }
+  @media (max-width:640px){
+    .wrap{padding:0 16px}
+    .topbar .wrap{padding:12px 16px;gap:12px}
+    .topbar .divider{display:none}
+    .topbar .period{text-align:left}
+    .kpis{grid-template-columns:1fr}
   }
 </style>
 </head>
@@ -859,6 +871,7 @@ function countByStatus(metrics){
   metrics.forEach(m => c[ragOf(m)]++);
   return c;
 }
+function escAttr(v){ return String(v ?? "").replace(/&/g,"&amp;").replace(/"/g,"&quot;").replace(/</g,"&lt;"); }
 function fmtVal(m){
   if(m.value === null || m.value === undefined || m.value === "") return "—";
   return m.value;
@@ -881,9 +894,9 @@ function kpiCard(id){
       return `<span class="${cls}" data-tip="mat:${n}"></span>`;
     }).join("");
     const lvl = (M.levels && M.levels[cur]) || {};
-    const stageEdit = `<div class="edit-only" style="margin-top:8px"><select class="stage-sel" id="stageSel">${Array.from({length:max},(_,i)=>i+1).map(n=>`<option value="${n}"${n===cur?" selected":""}>Stage ${n} — ${(M.levels&&M.levels[n]&&(M.levels[n].short||M.levels[n].name))||""}</option>`).join("")}</select></div>`;
+    const stageEdit = `<div class="edit-only" style="margin-top:8px"><select class="stage-sel" id="stageSel" aria-label="Maturity stage">${Array.from({length:max},(_,i)=>i+1).map(n=>`<option value="${n}"${n===cur?" selected":""}>Stage ${n} — ${(M.levels&&M.levels[n]&&(M.levels[n].short||M.levels[n].name))||""}</option>`).join("")}</select></div>`;
     return `<div class="kpi"><span class="accent"></span>
-      <div class="klabel">${M.label || "Maturity level"}<i class="info-i" data-tip="mat:all">i</i></div>
+      <div class="klabel">${M.label || "Maturity level"}<i class="info-i" data-tip="mat:all" tabindex="0" role="button" aria-label="Explain the maturity stages">i</i></div>
       <div class="kbig tabnum">${cur}<span class="slash"> / ${max}</span></div>
       <div class="ladder-mini">${rungs}</div>
       <div class="ksub" style="margin-top:8px"><span data-tip="mat:${cur}" style="border-bottom:1px dotted var(--hg-text-fade)">${lvl.short || lvl.name || ""}</span>${M.trendNote ? ` · <span class="chip-trend up">${M.trendNote}</span>` : ""}</div>${stageEdit}</div>`;
@@ -976,15 +989,16 @@ function stageBlock(s){
 function metricRow(m){
   const rag = ragOf(m);
   const t = m.target || {};
+  const tgtAttrs = `type="number" step="any" min="0"${m.unit==="%"?' max="100"':''}`;
   const tgtEdit = (t.op==="gte"||t.op==="lte")
-      ? `<span class="edit-only tgt-edit">${t.op==="gte"?"≥":"≤"} <input class="edittgt" data-id="${m.id}" data-k="v" type="number" step="any" value="${t.v}">${m.unit||""}</span>`
+      ? `<span class="edit-only tgt-edit">${t.op==="gte"?"≥":"≤"} <input class="edittgt" data-id="${m.id}" data-k="v" ${tgtAttrs} value="${t.v}" aria-label="${escAttr(m.name)} — target">${m.unit||""}</span>`
       : t.op==="range"
-      ? `<span class="edit-only tgt-edit"><input class="edittgt" data-id="${m.id}" data-k="v" type="number" step="any" value="${t.v}">–<input class="edittgt" data-id="${m.id}" data-k="v2" type="number" step="any" value="${t.v2}">${m.unit||""}</span>`
+      ? `<span class="edit-only tgt-edit"><input class="edittgt" data-id="${m.id}" data-k="v" ${tgtAttrs} value="${t.v}" aria-label="${escAttr(m.name)} — target lower bound">–<input class="edittgt" data-id="${m.id}" data-k="v2" ${tgtAttrs} value="${t.v2}" aria-label="${escAttr(m.name)} — target upper bound">${m.unit||""}</span>`
       : `<span class="edit-only">${targetText(m)}</span>`;
   const tclass = m.trendDir==="good" ? "t-good" : m.trendDir==="bad" ? "t-bad" : "t-flat";
   const isQual = (m.target||{}).op === "qual";
   const valView = `<span class="val view-only tabnum">${fmtVal(m)}<span class="u">${m.unit||""}</span></span>`;
-  const valEdit = `<span class="edit-only"><input class="editval tabnum" data-id="${m.id}" type="number" step="any" value="${m.value===null?'':m.value}"><span class="u">${m.unit||""}</span></span>`;
+  const valEdit = `<span class="edit-only"><input class="editval tabnum" data-id="${m.id}" type="number" step="any" min="0"${m.unit==="%"?' max="100"':''} value="${m.value===null?'':m.value}" aria-label="${escAttr(m.name)} — current value"><span class="u">${m.unit||""}</span></span>`;
   const statEdit = isQual
       ? `<select class="editstat editctl edit-only" data-id="${m.id}">${STATUS_ORDER.map(k=>`<option value="${k}"${(m.status||'na')===k?' selected':''}>${STATUS_LABEL[k]}</option>`).join("")}</select>`
       : `<span class="edit-only ragdot ${rag}" data-dot="${m.id}">${STATUS_LABEL[rag]}</span>`;
@@ -997,10 +1011,19 @@ function metricRow(m){
   </tr>`;
 }
 function wireEditInputs(){
+  const clampNum = (m, v) => {
+    if(v === null || Number.isNaN(v)) return null;
+    if(v < 0) v = 0;
+    if(m && m.unit === "%" && v > 100) v = 100;
+    return v;
+  };
   document.querySelectorAll("input.editval").forEach(inp=>{
     inp.oninput = () => {
       const m = findMetric(inp.dataset.id);
-      m.value = inp.value === "" ? null : Number(inp.value);
+      let v = inp.value === "" ? null : Number(inp.value);
+      const c = clampNum(m, v);
+      if(c !== v && c !== null) inp.value = c;
+      m.value = c;
       onEdit(m);
     };
   });
@@ -1011,7 +1034,10 @@ function wireEditInputs(){
     inp.oninput = () => {
       const m = findMetric(inp.dataset.id);
       const t = m.target || (m.target = {});
-      t[inp.dataset.k] = inp.value === "" ? null : Number(inp.value);
+      let v = inp.value === "" ? null : Number(inp.value);
+      const c = clampNum(m, v);
+      if(c !== v && c !== null) inp.value = c;
+      t[inp.dataset.k] = c;
       delete t.label;                       // custom label would go stale once the number changes
       onEdit(m);
     };
@@ -1078,7 +1104,7 @@ function initCharts(){
       plugins:{ legend:{display:false}, tooltip:{callbacks:{title:c=>c[0].label, label:c=>" "+c.raw+(DATA.trend.pointLabel?" "+DATA.trend.pointLabel:"")}} },
       animation:{duration:500} }
   });
-  document.getElementById("trendTitle").innerHTML = DATA.trend.title + ' <i class="info-i" data-tip="def:trend">i</i>';
+  document.getElementById("trendTitle").innerHTML = DATA.trend.title + ' <i class="info-i" data-tip="def:trend" tabindex="0" role="button" aria-label="What counts as a human-driven incident">i</i>';
   document.getElementById("trendSub").textContent = DATA.trend.sub;
 }
 function updateGauge(){
@@ -1138,7 +1164,7 @@ document.getElementById("saveBtn").onclick = () => {
   let html = "<!DOCTYPE html>\n" + document.documentElement.outerHTML;
   html = html.replace(/const DEFAULT_DATA = \{[\s\S]*?\n\};/, "const DEFAULT_DATA = " + json + ";");
   html = html.replace(/<body class="editing"/, '<body');   // open clean, not in edit mode
-  const name = ((DATA.id || "dashboard") + "-" + (DATA.period || "")).replace(/[^a-z0-9]+/gi, "-").replace(/-+$/,"") + ".html";
+  const name = ((DATA.org ? DATA.org + "-" : "") + (DATA.id || "dashboard") + "-" + (DATA.period || "")).replace(/[^a-z0-9]+/gi, "-").replace(/^-+|-+$/g,"") + ".html";
   const a = document.createElement("a");
   a.href = URL.createObjectURL(new Blob([html], {type:"text/html"}));
   a.download = name;
@@ -1211,17 +1237,39 @@ function showTip(el){
 function hideTip(){ tipEl.classList.remove("show"); }
 document.addEventListener("mouseover", e => { const t = e.target.closest("[data-tip]"); if(t) showTip(t); });
 document.addEventListener("mouseout", e => { const t = e.target.closest("[data-tip]"); if(t) hideTip(); });
+// tap (touch devices) — chips and stage headers keep their click actions; everything else toggles the tip
+document.addEventListener("click", e => {
+  const t = e.target.closest("[data-tip]");
+  if(t && !t.closest(".schip") && !t.closest(".stage-head")){
+    if(tipEl._for === t && tipEl.classList.contains("show")){ hideTip(); tipEl._for = null; }
+    else { showTip(t); tipEl._for = t; }
+  } else if(!e.target.closest("#stagetip")){ hideTip(); tipEl._for = null; }
+});
+// keyboard focus
+document.addEventListener("focusin", e => { const t = e.target.closest("[data-tip]"); if(t) showTip(t); });
+document.addEventListener("focusout", () => hideTip());
+window.addEventListener("scroll", hideTip, {passive:true});
 
 /* ---------- trend editor ---------- */
 function renderTrendEdit(){
   const box = document.getElementById("trendEdit");
   if(!box || !DATA.trend) return;
   box.innerHTML = DATA.trend.labels.map((l,i)=>
-    `<span class="te"><label>${l}</label><input type="number" step="any" data-i="${i}" value="${DATA.trend.values[i]===null||DATA.trend.values[i]===undefined?'':DATA.trend.values[i]}"></span>`).join("");
-  box.querySelectorAll("input").forEach(inp=>{
+    `<span class="te"><input class="te-lab" data-i="${i}" value="${escAttr(l)}" aria-label="Trend period ${i+1} label"><input class="te-num" type="number" step="any" min="0" data-i="${i}" value="${DATA.trend.values[i]===null||DATA.trend.values[i]===undefined?'':DATA.trend.values[i]}" aria-label="${escAttr(l)} value"></span>`).join("");
+  box.querySelectorAll("input.te-num").forEach(inp=>{
     inp.oninput = () => {
-      DATA.trend.values[Number(inp.dataset.i)] = inp.value === "" ? null : Number(inp.value);
+      let v = inp.value === "" ? null : Number(inp.value);
+      if(Number.isNaN(v)) v = null;
+      if(v !== null && v < 0){ v = 0; inp.value = 0; }
+      DATA.trend.values[Number(inp.dataset.i)] = v;
       if(charts.trend){ charts.trend.data.datasets[0].data = DATA.trend.values; charts.trend.update("none"); }
+      save();
+    };
+  });
+  box.querySelectorAll("input.te-lab").forEach(inp=>{
+    inp.oninput = () => {
+      DATA.trend.labels[Number(inp.dataset.i)] = inp.value;
+      if(charts.trend){ charts.trend.data.labels = DATA.trend.labels; charts.trend.update("none"); }
       save();
     };
   });
