@@ -150,6 +150,18 @@
         margin-bottom: 1rem;
       }
 
+      /* FREE RESOURCE CARD */
+      .fr-card { border: 1px solid var(--border-mid); border-radius: 3px; background: var(--navy-mid); position: relative; overflow: hidden; padding: 3rem; display: flex; align-items: center; justify-content: space-between; gap: 2.5rem; flex-wrap: wrap; text-align: left; }
+      .fr-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: var(--sky); }
+      .fr-badge { position: absolute; top: 1.4rem; right: -3.2rem; transform: rotate(45deg); background: var(--sky); color: var(--navy); font-size: 0.7rem; font-weight: 600; letter-spacing: 0.25em; padding: 0.35rem 3.5rem; text-transform: uppercase; }
+      .fr-card h2 { margin-bottom: 0.6rem; }
+      .fr-card .fr-text { max-width: 620px; }
+      .fr-card .fr-text > p { color: rgba(241,245,249,0.8); font-size: 0.92rem; line-height: 1.7; margin: 0; }
+      .fr-ticks { list-style: none; padding: 0; margin: 1.2rem 0 0; }
+      .fr-ticks li { font-size: 0.88rem; color: rgba(241,245,249,0.8); line-height: 2; padding-left: 1.6rem; position: relative; }
+      .fr-ticks li::before { content: '\2713'; position: absolute; left: 0; color: var(--sky); }
+      .fr-btn { display: inline-block; padding: 1rem 2.4rem; background: var(--sky); color: var(--navy); font-size: 0.85rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; text-decoration: none; border-radius: 2px; }
+
       @media (max-width: 900px) {
         .page-hero,
         section {
@@ -159,6 +171,7 @@
         .at-frameworks-grid {
           grid-template-columns: 1fr;
         }
+        .fr-card { flex-direction: column; align-items: flex-start; padding: 2rem 1.5rem; }
       }
     </style>
     <script type="application/ld+json">
@@ -438,16 +451,20 @@
     </section>
 
     <!-- FREE RESOURCE -->
-    <section style="padding:5rem 4rem; background:var(--navy); text-align:center;">
-      <div style="max-width:900px; margin:0 auto;">
-        <div class="section-label" style="justify-content:center;">Free Resource</div>
-        <h2 style="margin-bottom:1rem;">Security Awareness &amp; Culture Board Dashboard</h2>
-        <p style="color:rgba(241,245,249,0.8); max-width:640px; margin:0 auto 2rem; line-height:1.8;">
-          An editable, board-ready dashboard structured on the SANS Security Awareness &amp; Culture
-          Maturity Model&trade;. Open it in any browser, type your measured numbers, and print a
-          one-page board pack — your figures never leave your device.
-        </p>
-        <a href="security-awareness-dashboard.html" style="display:inline-block; padding:1rem 2.4rem; border:1px solid var(--sky); color:var(--sky); font-size:0.85rem; letter-spacing:0.08em; text-transform:uppercase; text-decoration:none; border-radius:2px; transition:all 0.3s;" onmouseover="this.style.background='rgba(56,189,248,0.1)'" onmouseout="this.style.background='transparent'">Get the Free Dashboard</a>
+    <section style="padding:5rem 4rem; background:var(--navy);">
+      <div class="fr-card">
+        <div class="fr-badge">Free</div>
+        <div class="fr-text">
+          <div class="section-label">Free Resource</div>
+          <h2>Security Awareness &amp; Culture Board Dashboard</h2>
+          <p>An editable, board-ready dashboard for reporting your security culture to the board.</p>
+          <ul class="fr-ticks">
+            <li>Structured on the SANS Security Awareness &amp; Culture Maturity Model&trade;</li>
+            <li>Type your measured numbers and print a one-page board pack</li>
+            <li>Free — runs in any browser, your figures never leave your device</li>
+          </ul>
+        </div>
+        <a href="security-awareness-dashboard.html" class="fr-btn">Get the Free Dashboard &rarr;</a>
       </div>
     </section>
 

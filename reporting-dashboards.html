@@ -240,20 +240,28 @@
       .step h3 { font-size: 1rem; color: var(--white); margin: 0.6rem 0 0.4rem; }
       .step p { color: #cbd5e1; font-size: 0.82rem; line-height: 1.6; }
 
-      /* LEAD MAGNET BAND */
-      .lm-band {
-        background: linear-gradient(135deg, rgba(56, 189, 248, 0.08), rgba(201, 149, 107, 0.06));
-        border-top: 1px solid var(--border);
-        border-bottom: 1px solid var(--border);
+      /* LEAD MAGNET CARD */
+      .fr-card {
+        border: 1px solid var(--border-mid);
+        border-radius: 3px;
+        background: var(--navy-mid);
+        position: relative;
+        overflow: hidden;
+        padding: 3rem;
         display: flex;
         align-items: center;
         justify-content: space-between;
-        gap: 2rem;
+        gap: 2.5rem;
         flex-wrap: wrap;
       }
-      .lm-band .lm-text { max-width: 620px; }
-      .lm-band h2 { margin-bottom: 0.6rem; }
-      .lm-band p { color: #e2e8f0; font-size: 0.92rem; line-height: 1.7; }
+      .fr-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: var(--sky); }
+      .fr-badge { position: absolute; top: 1.4rem; right: -3.2rem; transform: rotate(45deg); background: var(--sky); color: var(--navy); font-size: 0.7rem; font-weight: 600; letter-spacing: 0.25em; padding: 0.35rem 3.5rem; text-transform: uppercase; }
+      .fr-card .lm-text { max-width: 620px; }
+      .fr-card h2 { margin-bottom: 0.6rem; }
+      .fr-card p { color: #e2e8f0; font-size: 0.92rem; line-height: 1.7; }
+      .fr-ticks { list-style: none; padding: 0; margin: 1.2rem 0 0; }
+      .fr-ticks li { font-size: 0.88rem; color: rgba(241,245,249,0.8); line-height: 2; padding-left: 1.6rem; position: relative; }
+      .fr-ticks li::before { content: '\2713'; position: absolute; left: 0; color: var(--sky); }
 
       /* TRUST STRIP */
       .trust-strip { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-top: 2rem; }
@@ -262,7 +270,7 @@
       @media (max-width: 900px) {
         section { padding: 3.5rem 1.5rem; }
         .po-grid, .feat-grid, .pkg-grid, .steps { grid-template-columns: 1fr; }
-        .lm-band { flex-direction: column; align-items: flex-start; }
+        .fr-card { flex-direction: column; align-items: flex-start; padding: 2rem 1.5rem; }
       }
     </style>
     <!-- Google tag (gtag.js) -->
@@ -569,18 +577,25 @@
       </div>
     </section>
 
-    <!-- LEAD MAGNET BAND -->
-    <section class="lm-band">
-      <div class="lm-text">
-        <div class="section-label">Free Resource</div>
-        <h2>Is your board reporting doing its job?</h2>
-        <p>
-          Download the <strong>Board Reporting Health Check</strong> — a short
-          self-assessment for healthcare boards. Score your current
-          reporting in ten minutes and see exactly where the gaps are.
-        </p>
+    <!-- LEAD MAGNET CARD -->
+    <section>
+      <div class="fr-card">
+        <div class="fr-badge">Free</div>
+        <div class="lm-text">
+          <div class="section-label">Free Resource</div>
+          <h2>Is your board reporting doing its job?</h2>
+          <p>
+            Download the <strong>Board Reporting Health Check</strong> — a short
+            self-assessment for healthcare boards.
+          </p>
+          <ul class="fr-ticks">
+            <li>Score your current reporting in ten minutes</li>
+            <li>See exactly where the gaps are</li>
+            <li>No cost — runs in your browser, nothing installed</li>
+          </ul>
+        </div>
+        <a href="board-reporting-health-check.html" class="btn-primary">Get the Health Check &rarr;</a>
       </div>
-      <a href="board-reporting-health-check.html" class="btn-primary">Get the Health Check &rarr;</a>
     </section>
 
     <div class="cta-band">
