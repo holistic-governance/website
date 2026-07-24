@@ -151,7 +151,7 @@
       }
 
       /* FREE RESOURCE CARD */
-      .fr-card { border: 1px solid var(--border-mid); border-radius: 3px; background: var(--navy-mid); position: relative; overflow: hidden; padding: 3rem; display: flex; align-items: center; justify-content: space-between; gap: 2.5rem; flex-wrap: wrap; text-align: left; }
+      .fr-card { border: 1px solid var(--border-mid); border-radius: 3px; background: var(--navy-mid); position: relative; overflow: hidden; padding: 3rem; display: flex; align-items: center; justify-content: space-between; gap: 2.5rem; flex-wrap: wrap; text-align: left; max-width: 1100px; }
       .fr-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: var(--sky); }
       .fr-badge { position: absolute; top: 1.4rem; right: -3.2rem; transform: rotate(45deg); background: var(--sky); color: var(--navy); font-size: 0.7rem; font-weight: 600; letter-spacing: 0.25em; padding: 0.35rem 3.5rem; text-transform: uppercase; }
       .fr-card h2 { margin-bottom: 0.6rem; }
@@ -160,7 +160,11 @@
       .fr-ticks { list-style: none; padding: 0; margin: 1.2rem 0 0; }
       .fr-ticks li { font-size: 0.88rem; color: rgba(241,245,249,0.8); line-height: 2; padding-left: 1.6rem; position: relative; }
       .fr-ticks li::before { content: '\2713'; position: absolute; left: 0; color: var(--sky); }
-      .fr-btn { display: inline-block; padding: 1rem 2.4rem; background: var(--sky); color: var(--navy); font-size: 0.85rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; text-decoration: none; border-radius: 2px; }
+      .fr-btn { display: inline-block; padding: 0.9rem 2rem; border: 1px solid var(--sky); color: var(--sky); font-size: 0.82rem; letter-spacing: 0.08em; text-transform: uppercase; text-decoration: none; border-radius: 2px; transition: background 0.3s; margin-right: 2.5rem; }
+      .fr-btn:hover { background: rgba(56,189,248,0.1); }
+      .fr-icon { width: 42px; height: 42px; background: var(--sky-pale); border: 1px solid var(--border); border-radius: 2px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; align-self: flex-start; }
+      .fr-icon svg { width: 20px; height: 20px; stroke: var(--sky); fill: none; stroke-width: 1.5; }
+      .fr-tag { font-size: 0.68rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--sky); margin-bottom: 0.6rem; display: block; }
 
       @media (max-width: 900px) {
         .page-hero,
@@ -456,7 +460,9 @@
       <h2>Security Awareness &amp; Culture Board Dashboard</h2>
       <div class="fr-card" style="margin-top:2rem;">
         <div class="fr-badge">Free</div>
+        <div class="fr-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
         <div class="fr-text">
+          <span class="fr-tag">Cyber Governance</span>
           <p>An editable, board-ready dashboard for reporting your security culture to the board.</p>
           <ul class="fr-ticks">
             <li>Structured on the SANS Security Awareness &amp; Culture Maturity Model&trade;</li>
