@@ -53,7 +53,7 @@ Reference doc for the SEO work on the Holistic Governance website. Written 2026-
 | Incorrect "NSQHS Standards Second Edition: Key Changes for 2025" article deleted | ✅ 2026-05-22 (factual errors per author); removed from sitemap, llms files, resources.html |
 | Backend HG Reference topic dossiers at `/topics/` | ✅ 9 dossiers, ~12,500 words — Aged Care Act 2024, Strengthened Standards, Rights-Based Care, ACQS Audit, Financial & Prudential Standards, QI Program, SIRS, Support at Home, Board Responsibilities (incl. Responsible Person duties). Indexed only via `llms.txt`; not in sitemap; not linked from visible pages. |
 | Jekyll disabled (`.nojekyll`) | ✅ so `.md` files serve as-is for AI fetchers |
-| IndexNow (Bing/Yandex/Naver/Seznam → Copilot, ChatGPT browse) | ✅ key file `b28a40dc768afeabbe32943e3af7f361.txt` at root; 21+ URLs submitted across 2026-05-22 commits; 5 URLs (new article + resources + sitemap + llms.txt + llms-full.txt) re-submitted 2026-05-23 — HTTP 200 |
+| IndexNow (Bing/Yandex/Naver/Seznam → Copilot, ChatGPT browse) | ✅ key file `b28a40dc768afeabbe32943e3af7f361.txt` at root; 21+ URLs submitted across 2026-05-22 commits; 5 URLs (new article + resources + sitemap + llms.txt + llms-full.txt) re-submitted 2026-05-23 — HTTP 200; 6 URLs (PQC + Liquidity Standard articles + resources + sitemap + llms.txt + llms-full.txt) submitted 2026-07-24 — HTTP 200 |
 | Topic dossier accuracy review | ⏳ Naomi to verify factual specifics (commencement dates, QI 4.0 indicator list, prudential standards) |
 | Article-specific OG images | ⏳ pipeline supports per-article OG; no per-article images created yet |
 
@@ -68,6 +68,8 @@ Reference doc for the SEO work on the Holistic Governance website. Written 2026-
   - `/`, `/about.html`, `/healthcare.html`, `/resources.html`, `/proposal-enquiry.html`
   - 6 pre-existing article pages (1 deleted 2026-05-22 — NSQHS Second Edition)
   - **New 2026-05-23**: `/articles/reform-without-reporting.html` ✅ Request Indexing submitted 2026-05-23
+  - **New 2026-07-24**: `/articles/asd-post-quantum-vendor-questions.html` ✅ Request Indexing submitted 2026-07-24
+  - `/articles/liquidity-standard-targeted-review.html` (published 2026-07-02) ✅ Request Indexing submitted 2026-07-24
   - Note: rate-limited to ~10–12 requests/day per property
 - [ ] Skim 7 backend topic dossiers at `/topics/*.md` for factual accuracy — particularly commencement dates of Aged Care Act 2024 components, QI Program 4.0 indicator list specifics, current prudential standards thresholds
 - [ ] Flip GBP to service-area mode (hide street, add service areas)
@@ -291,3 +293,5 @@ The 2026-05-05 09:00 AEST one-time check-in routine has elapsed (trig_01KeRhAzLf
 | `4302198` | `.nojekyll` (so `.md` files serve as-is, not converted to .html by Jekyll); remove visible FAQ from homepage per request + remove corresponding FAQPage schema to keep schema aligned with visible content |
 | `18dc068` → `8b758ff` | **2026-05-23** — Publish "Reform Without Reporting" sector insight article + 4 author-edit refinements (Sector Performance Report runs since 2018 not 2021, tightened lead/Key Takeaways wording, sharpened Support at Home scope, hyperlinked Edmonds citation, closing paragraph naming the transparency gap, softened tone). Added to articles.json, resources.html tile, sitemap.xml. |
 | `9d20738` | **2026-05-23** — Register "Reform Without Reporting" in AI ingestion layer: llms.txt (curated index) + llms-full.txt (full content map). Bumped llms-full.txt Last updated to 2026-05-23. IndexNow ping for 5 URLs returned HTTP 200. |
+| `e0eaa7c` | **2026-07-24** — Publish "Post-Quantum Cryptography — ASD's New Vendor Questions" (summary of ASD's 16 July 2026 "Post-quantum questions to ask your vendors" + aged-care commentary). Added markdown table support + table CSS to build-articles.js; synced article template with hand-edits from the site rework (#aab4c4 body text, linked footer logo, "Melbourne Metro and Regional" footer address) so rebuilds no longer revert them. Added to articles.json, resources.html tile, sitemap.xml. Note: liquidity-standard-targeted-review.html retains hand-polish newer than its .md — restore it after any full rebuild. |
+| `40f6c23` | **2026-07-24** — Register PQC article **and** "Targeted Review on the New Liquidity Standard" (published 2026-07-02, previously missed) in AI ingestion layer: llms.txt + llms-full.txt. Bumped llms-full.txt Last updated to 2026-07-24. IndexNow ping for 6 URLs (both articles, resources, sitemap, llms.txt, llms-full.txt) returned HTTP 200. GSC Request Indexing submitted for both articles 2026-07-24. |
