@@ -263,11 +263,6 @@
       .fr-ticks { list-style: none; padding: 0; margin: 1.2rem 0 0; }
       .fr-ticks li { font-size: 0.88rem; color: rgba(241,245,249,0.8); line-height: 2; padding-left: 1.6rem; position: relative; }
       .fr-ticks li::before { content: '\2713'; position: absolute; left: 0; color: var(--sky); }
-      .fr-icon { width: 42px; height: 42px; background: var(--sky-pale); border: 1px solid var(--border); border-radius: 2px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; align-self: flex-start; }
-      .fr-icon svg { width: 20px; height: 20px; stroke: var(--sky); fill: none; stroke-width: 1.5; }
-      .fr-tag { font-size: 0.68rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--sky); margin-bottom: 0.6rem; display: block; }
-      .fr-btn { display: inline-block; padding: 0.9rem 2rem; border: 1px solid var(--sky); color: var(--sky); font-size: 0.82rem; letter-spacing: 0.08em; text-transform: uppercase; text-decoration: none; border-radius: 2px; transition: background 0.3s; margin-right: 2.5rem; }
-      .fr-btn:hover { background: rgba(56,189,248,0.1); }
 
       /* TRUST STRIP */
       .trust-strip { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-top: 2rem; }
@@ -589,9 +584,7 @@
       <h2>Is your board reporting doing its job?</h2>
       <div class="fr-card" style="margin-top:2rem;">
         <div class="fr-badge">Free</div>
-        <div class="fr-icon"><svg viewBox="0 0 24 24"><path d="M9 11l3 3L22 4M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg></div>
         <div class="lm-text">
-          <span class="fr-tag">Board Reporting</span>
           <p>
             Download the <strong>Board Reporting Health Check</strong> — a short
             self-assessment for healthcare boards.
@@ -602,7 +595,7 @@
             <li>No cost — runs in your browser, nothing installed</li>
           </ul>
         </div>
-        <a href="board-reporting-health-check.html" class="fr-btn">Get the Health Check &rarr;</a>
+        <a href="board-reporting-health-check.html" class="btn-primary">Get the Health Check &rarr;</a>
       </div>
     </section>
 
