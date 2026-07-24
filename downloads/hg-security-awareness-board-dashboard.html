@@ -404,7 +404,8 @@ const DEFAULT_DATA = {
   },
   "trend": {
     "title": "Human-driven incidents",
-    "sub": "Rolling 12 months · lower is better",
+    "sub": "Monthly count · a subset of all security incidents · lower is better",
+    "info": "Incidents where the root cause was a person's action — e.g. phishing compromise, misdirected email, credential disclosure, lost or unsecured devices, social engineering, policy violations. Counted from the incident register, tagged by root cause. In this sample: 22 of the 28 security incidents in the rolling 12 months were human-driven.",
     "pointLabel": "incidents",
     "labels": [
       "Jul",
@@ -421,17 +422,17 @@ const DEFAULT_DATA = {
       "Jun"
     ],
     "values": [
-      5,
-      4,
       4,
       3,
-      3,
-      2,
       3,
       2,
       2,
       1,
       2,
+      1,
+      1,
+      1,
+      1,
       1
     ]
   },
@@ -1056,7 +1057,7 @@ function initCharts(){
       plugins:{ legend:{display:false}, tooltip:{callbacks:{title:c=>c[0].label, label:c=>" "+c.raw+(DATA.trend.pointLabel?" "+DATA.trend.pointLabel:"")}} },
       animation:{duration:500} }
   });
-  document.getElementById("trendTitle").textContent = DATA.trend.title;
+  document.getElementById("trendTitle").innerHTML = DATA.trend.title + ' <i class="info-i" data-tip="def:trend">i</i>';
   document.getElementById("trendSub").textContent = DATA.trend.sub;
 }
 function updateGauge(){
@@ -1144,6 +1145,10 @@ function tipHtml(key){
     }
     const l = M.levels[id];
     return l ? `<b>${word} ${id} — ${l.name}</b>${l.d}` : "";
+  }
+  if(kind === "def" && id === "trend"){
+    const info = (DATA.trend && DATA.trend.info) || (DEFAULT_DATA.trend && DEFAULT_DATA.trend.info) || "";
+    return info ? `<b>${(DATA.trend && DATA.trend.title) || "Trend"}</b>${info}` : "";
   }
   if(kind === "sec"){
     const sec = DATA.sections.find(x=>String(x.n)===String(id));
