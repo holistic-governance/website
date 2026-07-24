@@ -101,7 +101,7 @@ h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 3.5vw, 3re
   position: absolute; inset: 0;
   background: radial-gradient(ellipse 60% 100% at 90% 50%, rgba(255,255,255,0.08) 0%, transparent 60%);
 }
-.cta-band h2 { color: #0f172a; font-size: clamp(1.8rem, 3vw, 2.8rem); max-width: 520px; margin-bottom: 0; position: relative; }
+.cta-band h2 { color: #0f172a; font-size: clamp(1.8rem, 3vw, 2.8rem); max-width: 760px; margin-bottom: 0; position: relative; }
 
 /* ── BTN-DARK ── */
 .btn-dark { display: inline-block; padding: 1rem 2.4rem; background: var(--navy); color: var(--text); font-size: 0.85rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; text-decoration: none; border: none; border-radius: 2px; white-space: nowrap; cursor: pointer; font-family: 'DM Sans', sans-serif; transition: background 0.3s, transform 0.2s; position: relative; }
