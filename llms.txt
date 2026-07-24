@@ -1,6 +1,6 @@
 # Holistic Governance
 
-> Specialist clinical governance, risk and data consultancy for healthcare, aged care and disability providers across Australia and New Zealand. Founded by Naomi Alefelder. Based in Heidelberg, Victoria. Servicing Australia and New Zealand remotely with on-site delivery available.
+> Assurance over assumptions. Specialist clinical governance, risk and technology consultancy for healthcare, aged care and disability providers across Australia and New Zealand. Founded by Naomi Alefelder. Based in Heidelberg, Victoria. Servicing Australia and New Zealand remotely with on-site delivery available.
 
 Holistic Governance helps boards and executives strengthen assurance frameworks, simplify NSQHS and Strengthened Aged Care Quality Standards compliance, and turn fragmented operational data into board-ready insight. Engagements span clinical governance reviews, accreditation readiness, aged care audits under the Aged Care Act 2024, AI governance frameworks, FHIR interoperability advisory, and Power BI dashboards.
 
@@ -11,6 +11,8 @@ Naomi Alefelder is a registered nurse (AHPRA NMW000180905) with an MBA (Charles 
 - [About Holistic Governance + Naomi Alefelder](https://hg-au.com/about.html): Founder background, qualifications, board roles, sector experience, governance philosophy.
 - [Healthcare solutions](https://hg-au.com/healthcare.html): Service catalogue — NSQHS readiness, ACQS audits, clinical governance, Power BI board reporting, FHIR advisory, interim quality leadership.
 - [Resources](https://hg-au.com/resources.html): Articles, frameworks and explainers on aged care, clinical governance, AI governance, data governance and interoperability.
+- [AI & Technology consultancy](https://hg-au.com/ai-technology.html): AI governance, clinical AI governance, AI vendor assessment, medical device advisory, AI optimisation training, technology risk and privacy.
+- [Prototype builds](https://hg-au.com/app-development.html): Working app, dashboard and workflow prototypes designed around how your organisation actually works, with governance and privacy built in.
 - [Request a proposal](https://hg-au.com/proposal-enquiry.html): Engagement enquiry form — scope, timeline, fixed-price quote.
 
 ## Services

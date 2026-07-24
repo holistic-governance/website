@@ -49,6 +49,16 @@
       .hc-services {
         background: var(--navy);
       }
+      .btn-outline {
+        display: inline-block; padding: 0.7rem 1.8rem;
+        background: none; color: var(--sky);
+        font-family: 'DM Sans', sans-serif; font-size: 0.95rem;
+        text-decoration: none; border: 1px solid var(--sky);
+        border-radius: 2px; cursor: pointer;
+        transition: background 0.3s, color 0.3s;
+      }
+      .btn-outline:hover { background: var(--sky); color: var(--navy); }
+      .hc-services-cta { margin: -1.5rem 0 3rem; }
       .hc-grid {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
@@ -337,9 +347,11 @@
       <h2>Our Health Care Offerings</h2>
       <p class="section-intro">
         Not sure where to start? Choose the service that matches your challenge — or
-        <a href="proposal-enquiry.html" style="color:var(--sky);text-decoration:underline;">request a proposal</a>
-        and we'll recommend the right fit.
+        request a proposal and we'll recommend the right fit.
       </p>
+      <div class="hc-services-cta">
+        <a href="proposal-enquiry.html" class="btn-outline">Request a Proposal</a>
+      </div>
       <div class="hc-grid">
         <a href="reporting-dashboards.html" class="hc-card hc-card-link">
           <svg
@@ -410,12 +422,11 @@
           </p>
           <ul>
             <li>Clinical-Technical Translation</li>
-            <li>Interoperability & Standards Advisory</li>
             <li>Clinical Governance & Data Integrity</li>
             <li>Digital Product & Solution Design</li>
           </ul>
         </div>
-        <div class="hc-card">
+        <div class="hc-card" id="consultancy">
           <svg
             viewBox="0 0 24 24"
             fill="none"
@@ -442,7 +453,7 @@
             <li>Technical & Digital Health Advisory</li>
           </ul>
         </div>
-        <div class="hc-card">
+        <div class="hc-card" id="audits">
           <svg
             viewBox="0 0 24 24"
             fill="none"
@@ -669,7 +680,7 @@
     <footer>
       <div class="footer-inner">
         <div class="footer-brand">
-          <div class="footer-logo"><img src="logo-hg-trimmed.png" alt="Holistic Governance" width="351" height="524"><span class="logo-name">Holistic <span>Governance</span></span></div>
+          <a href="index.html" class="footer-logo" style="text-decoration:none;"><img src="logo-hg-trimmed.png" alt="Holistic Governance" width="351" height="524"><span class="logo-name">Holistic <span>Governance</span></span></a>
           <p class="footer-tagline">Improving clarity and confidence in governance through knowledge, data, and technology.</p>
         </div>
         <div class="footer-col">
@@ -702,7 +713,7 @@
         </div>
         <div class="footer-col">
           <h4>Where We Work</h4>
-          <address style="font-style:normal; font-size:0.85rem; line-height:1.6; color:var(--text); margin-bottom:0.6rem;">Heidelberg, Victoria, Australia</address>
+          <address style="font-style:normal; font-size:0.85rem; line-height:1.6; color:var(--text); margin-bottom:0.6rem;">Melbourne Metro and Regional</address>
           <ul>
             <li>Australia</li>
             <li>New Zealand</li>

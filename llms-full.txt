@@ -1,6 +1,6 @@
 # Holistic Governance — Full Content for AI Ingestion
 
-> Specialist clinical governance, risk and data consultancy for healthcare, aged care and disability providers across Australia and New Zealand. Founded by Naomi Alefelder. Based in Heidelberg, Victoria.
+> Assurance over assumptions. Specialist clinical governance, risk and technology consultancy for healthcare, aged care and disability providers across Australia and New Zealand. Founded by Naomi Alefelder. Based in Heidelberg, Victoria.
 
 This document is the full machine-readable content map of hg-au.com, intended for ingestion by AI search and assistant systems. Last updated: 2026-05-23.
 
@@ -90,7 +90,22 @@ End-to-end support for the new Aged Care Act 2024 — gap analysis, governance u
 Independent review and design of your organisation's clinical governance framework — board oversight, accountability, risk and quality assurance — with practical recommendations to strengthen safeguards and meet regulatory expectations.
 
 ### AI governance advisory
-AI governance frameworks tailored to healthcare, aged care and disability providers. Includes AI risk assessments, responsible AI policy design, model oversight and integration with existing risk and quality systems.
+AI governance frameworks tailored to healthcare, aged care and disability providers. Includes AI risk assessments, responsible AI policy design, model oversight and integration with existing risk and quality systems. See https://hg-au.com/ai-technology.html
+
+### Clinical AI governance
+Extending existing clinical governance to AI tools in clinical settings — scribes, decision support, triage. Frameworks aligned to the 2026 National Model for Clinical Governance, AI inventory and board reporting, human oversight and escalation pathways, and monitoring for model drift and automation bias. See https://hg-au.com/ai-technology.html
+
+### AI vendor assessment
+Independent assessment of AI vendors and their claims — capability review, scope-creep monitoring (when a feature update turns a tool into a medical device), privacy and consent due diligence, and ongoing performance oversight. See https://hg-au.com/ai-technology.html
+
+### Medical device advisory
+Advisory for health technology developers and providers on when AI software is regulated as a medical device — TGA intended-purpose assessment, ARTG inclusion readiness, post-market obligations, and EU AI Act readiness. See https://hg-au.com/ai-technology.html
+
+### AI optimisation training
+Hands-on training that lifts team productivity with AI — practical AI literacy for boards, executives and frontline teams, prompting and workflow optimisation, and safe, acceptable use within governance and privacy guardrails. See https://hg-au.com/ai-technology.html
+
+### Prototype builds
+Working app, dashboard and workflow prototypes designed around how your organisation actually works — trial with users, show your board, or take to investors before committing to a full build. See https://hg-au.com/app-development.html
 
 ### Data governance framework development
 Build a fit-for-purpose data governance framework covering data ownership, quality, privacy, lifecycle and reporting — designed to meet healthcare regulatory expectations and AI readiness.

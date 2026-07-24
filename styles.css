@@ -24,7 +24,7 @@
   --gold-light: #7dd3fc;
 }
 
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; scroll-padding-top: 110px; }
 body { font-family: 'DM Sans', sans-serif; background: var(--navy); color: var(--text); overflow-x: hidden; }
 
 /* ── SCROLL ANIMATIONS ── */
@@ -133,7 +133,7 @@ footer {
   gap: 3rem;
   margin-bottom: 3rem;
 }
-.footer-brand .footer-logo { display: flex; align-items: center; gap: 0.6rem; margin-bottom: 1rem; }
+.footer-brand .footer-logo { display: flex; align-items: center; gap: 0.6rem; margin-bottom: 1rem; text-decoration: none; }
 .footer-brand .footer-logo img { height: 45px; width: auto; }
 .footer-brand .footer-logo .logo-name { font-family: 'Cormorant Garamond', serif; font-size: 1.2rem; font-weight: 600; color: var(--white); }
 .footer-brand .footer-logo .logo-name span { color: var(--sky); }
