@@ -11,8 +11,11 @@
 <meta property="og:url" content="https://hg-au.com/security-awareness-dashboard.html" />
 <meta property="og:title" content="Security Awareness &amp; Culture Board Dashboard — Holistic Governance" />
 <meta property="og:description" content="A free, editable, board-ready dashboard for the SANS Security Awareness & Culture Maturity Model. Type your numbers in the browser and print a one-page board pack." />
-<meta property="og:image" content="https://hg-au.com/og-image-v3.png" />
+<meta property="og:image" content="https://hg-au.com/og-security-awareness.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
 <meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://hg-au.com/og-security-awareness.png" />
 <link rel="icon" type="image/png" href="favicon.png">
 <link rel="preload" as="image" href="logo-hg-trimmed.png" fetchpriority="high">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
@@ -138,10 +141,18 @@
     </p>
   </div>
 
+  <img src="security-awareness-preview.png" alt="Preview of the Security Awareness &amp; Culture board dashboard — maturity stage, metrics on target, phishing report rate and the human-driven incidents trend, shown with illustrative sample data" width="1240" height="930" style="width:100%;height:auto;border-radius:16px;border:1px solid var(--border);margin-bottom:24px;display:block;" />
+
   <!-- GATE -->
   <div class="card gate" id="gate">
     <div class="gate-title">Get the Dashboard</div>
-    <p class="gate-sub">Enter your details to unlock the download. No spam; we'll only follow up if you ask us to.</p>
+    <p class="gate-sub">Enter your details to unlock the download — we'll also email you the link so you can grab it again later. No spam; we'll only follow up if you ask us to.</p>
+    <ul class="preview-list" style="margin:0 0 22px;">
+      <li>Editable, board-ready dashboard — ratings, gauges and charts update as you type</li>
+      <li>Runs in any browser, works offline, no install, no account</li>
+      <li>One-click "Save copy" bakes your numbers into a file you reopen next quarter</li>
+      <li>Prints a clean one-page landscape board PDF</li>
+    </ul>
     <div id="gateForm">
       <div class="field">
         <label for="name">Your Name</label>
@@ -177,13 +188,8 @@
         <div class="spinner"></div>
       </button>
       <p class="gate-note">Your information is handled per our <a href="/privacy.html" style="color:#00b4d8;text-decoration:none">Privacy Policy</a>.</p>
+      <p class="gate-note">Built by Naomi Alefelder — registered nurse, MBA, lead auditor and board director.</p>
     </div>
-    <ul class="preview-list">
-      <li>Editable, board-ready dashboard — ratings, gauges and charts update as you type</li>
-      <li>Runs in any browser, works offline, no install, no account</li>
-      <li>One-click "Save copy" bakes your numbers into a file you reopen next quarter</li>
-      <li>Prints a clean one-page landscape board PDF</li>
-    </ul>
   </div>
 
   <!-- DOWNLOAD (revealed after unlock) -->
@@ -192,9 +198,10 @@
       <div class="dl-card">
         <h3>Your dashboard is ready</h3>
         <p>Download the file, then double-click it to open in any browser — Chrome, Edge, Safari or Firefox. It runs entirely on your device.</p>
+        <p id="emailNote" style="font-size:12px;color:var(--muted);margin-bottom:18px;"></p>
         <div class="cta-buttons">
           <a href="downloads/hg-security-awareness-board-dashboard.html" download="HG-Security-Awareness-Board-Dashboard.html" class="btn btn-inline" id="dlBtn">Download the Dashboard &darr;</a>
-          <a href="downloads/hg-security-awareness-board-dashboard.html" target="_blank" rel="noopener" class="btn btn-inline btn-ghost">Preview in browser</a>
+          <a href="downloads/hg-security-awareness-board-dashboard.html" target="_blank" rel="noopener" class="btn btn-inline btn-ghost" id="previewBtn">Preview in browser</a>
         </div>
       </div>
     </div>
@@ -224,7 +231,7 @@
         <strong>Scope &amp; attribution.</strong> Decision-support only — this dashboard supports assessment; it is not an audit, accreditation, legal or professional advice.
         Structured on the SANS Security Awareness &amp; Culture Maturity Model&trade; (Maturity Model eBook 2026, &copy; SANS Institute). Maturity stages, indicators and the
         "potential metrics" shown for each stage are attributed to SANS; metric values are illustrative sample data and do not represent measured results. Verify framework
-        currency before use. Single-organisation licence — not for redistribution. &copy; Holistic Governance.
+        currency before use. Licensed for use within your organisation — not for resale. &copy; Holistic Governance. Holistic Governance is not affiliated with, endorsed by, or sponsored by the SANS Institute.
       </p>
     </div>
 
@@ -270,24 +277,42 @@
       submittedAt: new Date().toISOString()
     };
 
+    var captured = false;
     try {
-      await fetch('https://dashboard-pkltzbmtea-ts.a.run.app/enquiry', {
+      var ctrl = new AbortController();
+      var timer = setTimeout(function(){ ctrl.abort(); }, 8000);
+      var resp = await fetch('https://dashboard-pkltzbmtea-ts.a.run.app/enquiry', {
         method: 'POST', headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(data)
+        body: JSON.stringify(data), signal: ctrl.signal
       });
+      clearTimeout(timer);
+      captured = resp.ok;
     } catch (err) { /* reveal content regardless — capture is best-effort */ }
 
-    gtag('event', 'lead_magnet_download', {
-      event_category: 'security-leadmagnet',
-      event_label: 'Security Awareness Board Dashboard',
-      value: 1
+    gtag('event', 'generate_lead', {
+      lead_magnet: 'Security Awareness Board Dashboard',
+      lead_source: 'security-leadmagnet'
     });
+    if (!captured) {
+      gtag('event', 'lead_capture_failed', { lead_magnet: 'Security Awareness Board Dashboard' });
+    }
+
+    document.getElementById('emailNote').textContent = captured
+      ? "We've also emailed the link to you — check spam the first time."
+      : "We couldn't confirm your details just now — if you'd like the link emailed, contact info@hg-au.com.";
 
     document.getElementById('gate').style.display = 'none';
     var dl = document.getElementById('downloadWrap');
     dl.classList.add('show');
     dl.scrollIntoView({ behavior: 'smooth' });
   }
+
+  document.getElementById('dlBtn').addEventListener('click', function () {
+    gtag('event', 'file_download', { file_name: 'HG-Security-Awareness-Board-Dashboard.html', lead_magnet: 'Security Awareness Board Dashboard' });
+  });
+  document.getElementById('previewBtn').addEventListener('click', function () {
+    gtag('event', 'file_preview', { lead_magnet: 'Security Awareness Board Dashboard' });
+  });
 
   ['name', 'email', 'orgName'].forEach(function (id) {
     document.getElementById(id).addEventListener('input', function () {

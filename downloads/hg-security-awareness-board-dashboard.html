@@ -348,7 +348,7 @@
   <div class="slicer-head">
     <h2>Metric detail by stage<span class="rule"></span></h2>
     <p class="chips-help">Every metric in the pack, grouped by SANS maturity stage. Use the chips to focus on one stage — the small number is how many metrics that stage holds. Hover a chip or a stage header for a plain-English explainer.</p>
-    <p class="tgt-note">Built-in targets are Holistic Governance defaults, current as at July 2026 — they are not SANS-prescribed values. Review them periodically against the latest SANS guidance and your organisation's risk appetite, and adjust them in Edit mode.</p>
+    <p class="tgt-note">Built-in targets are Holistic Governance defaults, current as at July 2026 — they are not SANS-prescribed values. Review them periodically against the latest SANS guidance and your organisation's risk appetite, and adjust them in Edit mode. Latest version and targets: <a href="https://hg-au.com/security-awareness-dashboard.html?utm_source=dashboard-file" style="color:var(--hg-sky)">hg-au.com/security-awareness-dashboard.html</a>.</p>
   </div>
   <div class="slicer" id="slicer">
     <span class="lab">Show</span>
@@ -372,6 +372,7 @@
     <div class="fade" id="footDisc" style="margin-top:5px"></div>
     <div class="fade" id="footLicence" style="margin-top:8px;color:var(--hg-text-fade)"></div>
     <div class="fade" style="margin-top:8px"><b style="color:var(--hg-text-soft);font-weight:600">Privacy &amp; data storage:</b> this tool runs entirely in your browser. Figures you enter are stored only on your device — in this browser's local storage and in any copies you save — and are never transmitted to Holistic Governance or anyone else. The tool contains no analytics or tracking; its only network request fetches brand fonts from Google Fonts when online (none offline). &ldquo;Reset&rdquo; or clearing browser data removes local edits. Saved copies contain your organisation's data — store and share them under your own information-security and privacy policies.</div>
+    <div class="fade" style="margin-top:8px">Free tool from <a href="https://hg-au.com/security-awareness-dashboard.html?utm_source=dashboard-file" style="color:var(--hg-sky)">Holistic Governance</a> — governance reporting for healthcare &amp; aged care. Latest version, updated targets, or help wiring this to your real data: <a href="https://hg-au.com/security-awareness-dashboard.html?utm_source=dashboard-file" style="color:var(--hg-sky)">hg-au.com/security-awareness-dashboard.html</a></div>
   </footer>
 </main>
 
@@ -394,7 +395,8 @@ const DEFAULT_DATA = {
   "periodRange": "Apr–Jun 2026",
   "preparedFor": "Risk & Audit Committee",
   "framework": "SANS Security Awareness & Culture Maturity Model™",
-  "frameworkAttribution": "Structured on the <strong>SANS Security Awareness &amp; Culture Maturity Model™</strong> (Maturity Model eBook 2026, © SANS Institute). Maturity stages, indicators and the “potential metrics” shown for each stage are attributed to SANS; metric <em>values</em> here are illustrative sample data and do not represent measured results.",
+  "frameworkAttribution": "Structured on the <strong>SANS Security Awareness &amp; Culture Maturity Model™</strong> (Maturity Model eBook 2026, © SANS Institute). Maturity stages, indicators and the “potential metrics” shown for each stage are attributed to SANS; metric <em>values</em> here are illustrative sample data and do not represent measured results. Holistic Governance is not affiliated with, endorsed by, or sponsored by the SANS Institute.",
+  "licence": "Licensed for use within your organisation — not for resale. © Holistic Governance.",
   "currencyNote": "Aligned to the SANS Security Awareness & Culture Maturity Model (2026 eBook). Built-in targets are Holistic Governance defaults current as at July 2026, not SANS-prescribed values — periodically verify against the latest SANS guidance before use.",
   "disclaimer": "Decision-support only — supports assessment; it is not an audit, accreditation, legal or professional advice. Replace all figures with measured data and remove the “illustrative data” banner before any live board use.",
   "sectionsTitle": "Status by maturity level",
@@ -875,6 +877,8 @@ function countByStatus(metrics){
   return c;
 }
 function escAttr(v){ return String(v ?? "").replace(/&/g,"&amp;").replace(/"/g,"&quot;").replace(/</g,"&lt;"); }
+function escHtml(v){ return String(v ?? "").replace(/</g,"&lt;").replace(/>/g,"&gt;"); }
+function safeRich(v){ return escHtml(v).replace(/&lt;(\/?(?:b|strong|i|em))&gt;/gi, "<$1>"); }
 function fmtVal(m){
   if(m.value === null || m.value === undefined || m.value === "") return "—";
   return m.value;
@@ -897,12 +901,12 @@ function kpiCard(id){
       return `<span class="${cls}" data-tip="mat:${n}"></span>`;
     }).join("");
     const lvl = (M.levels && M.levels[cur]) || {};
-    const stageEdit = `<div class="edit-only" style="margin-top:8px"><select class="stage-sel" id="stageSel" aria-label="Maturity stage">${Array.from({length:max},(_,i)=>i+1).map(n=>`<option value="${n}"${n===cur?" selected":""}>Stage ${n} — ${(M.levels&&M.levels[n]&&(M.levels[n].short||M.levels[n].name))||""}</option>`).join("")}</select></div>`;
+    const stageEdit = `<div class="edit-only" style="margin-top:8px"><select class="stage-sel" id="stageSel" aria-label="Maturity stage">${Array.from({length:max},(_,i)=>i+1).map(n=>`<option value="${n}"${n===cur?" selected":""}>Stage ${n} — ${escHtml((M.levels&&M.levels[n]&&(M.levels[n].short||M.levels[n].name))||"")}</option>`).join("")}</select></div>`;
     return `<div class="kpi"><span class="accent"></span>
-      <div class="klabel">${M.label || "Maturity level"}<i class="info-i" data-tip="mat:all" tabindex="0" role="button" aria-label="Explain the maturity stages">i</i></div>
+      <div class="klabel">${escHtml(M.label || "Maturity level")}<i class="info-i" data-tip="mat:all" tabindex="0" role="button" aria-label="Explain the maturity stages">i</i></div>
       <div class="kbig tabnum">${cur}<span class="slash"> / ${max}</span></div>
       <div class="ladder-mini">${rungs}</div>
-      <div class="ksub" style="margin-top:8px"><span data-tip="mat:${cur}" style="border-bottom:1px dotted var(--hg-text-fade)">${lvl.short || lvl.name || ""}</span>${M.trendNote ? ` · <span class="chip-trend up">${M.trendNote}</span>` : ""}</div>${stageEdit}</div>`;
+      <div class="ksub" style="margin-top:8px"><span data-tip="mat:${cur}" style="border-bottom:1px dotted var(--hg-text-fade)">${escHtml(lvl.short || lvl.name || "")}</span>${M.trendNote ? ` · <span class="chip-trend up">${escHtml(M.trendNote)}</span>` : ""}</div>${stageEdit}</div>`;
   }
   if(id === "onTarget"){
     const p = onTargetPct();
@@ -921,11 +925,11 @@ function kpiCard(id){
               : m.trendDir==="bad" ? "down-bad" : "flat";
   const arrow = m.trendDir==="good" ? (m.trend.includes("−")?"▼":"▲") : m.trendDir==="bad" ? "▼" : "";
   return `<div class="kpi">
-    <div class="klabel">${m.kpiLabel || m.name}</div>
-    <div class="kbig tabnum">${fmtVal(m)}<span class="unit">${m.unit||""}</span></div>
+    <div class="klabel">${escHtml(m.kpiLabel || m.name)}</div>
+    <div class="kbig tabnum">${escHtml(fmtVal(m))}<span class="unit">${escHtml(m.unit||"")}</span></div>
     <div class="ksub" style="margin-top:8px">
       <span class="ragdot ${rag}">${STATUS_LABEL[rag]}</span>
-      <span class="chip-trend ${tclass}">${arrow} ${m.trend}</span></div></div>`;
+      <span class="chip-trend ${tclass}">${arrow} ${escHtml(m.trend)}</span></div></div>`;
 }
 
 /* ---------- Slicer ---------- */
@@ -935,7 +939,7 @@ function renderSlicer(){
   const mk = (label, stage, count) => {
     const active = (activeStage === stage) ? " active" : "";
     const si = stage===null ? "" : ` data-tip="sec:${stage}"`;
-    return `<button class="schip${active}" data-stage="${stage===null?'':stage}"${si}>${label}${count!==null?` <span class="cnt">${count}</span>`:''}</button>`;
+    return `<button class="schip${active}" data-stage="${stage===null?'':stage}"${si}>${escHtml(label)}${count!==null?` <span class="cnt">${count}</span>`:''}</button>`;
   };
   let html = mk("All", null, allMetrics().length);
   DATA.sections.forEach(s => html += mk(s.chipLabel || s.name, s.n, s.metrics.length));
@@ -973,13 +977,13 @@ function stageBlock(s){
   const badge = s.badge || {label:"", tone:"neutral"};
   const ragMini = STATUS_ORDER.filter(k=>c[k]>0).map(k=>`<span class="ragdot-sm" style="background:${STATUS_COLOR[k]}" title="${c[k]} ${STATUS_LABEL[k]}"></span>`).join("");
   const rows = s.metrics.map(m => metricRow(m)).join("");
-  const note = s.note ? `<div class="stage-note">${s.note}</div>` : "";
-  const badgeHtml = badge.label ? `<span class="sstatus ss-${badge.tone || "neutral"}">${badge.label}</span>` : "";
+  const note = s.note ? `<div class="stage-note">${safeRich(s.note)}</div>` : "";
+  const badgeHtml = badge.label ? `<span class="sstatus ss-${escAttr(badge.tone || "neutral")}">${escHtml(badge.label)}</span>` : "";
   return `<div class="stage-block">
     <div class="stage-head" data-tip="sec:${s.n}">
       <span class="caret">▼</span>
       <span class="snum">${s.n}</span>
-      <div><div class="stitle">${s.name}</div><div class="sfocus">${s.focus || ""}</div></div>
+      <div><div class="stitle">${escHtml(s.name)}</div><div class="sfocus">${escHtml(s.focus || "")}</div></div>
       <div class="ragmini">${ragMini}${badgeHtml}</div>
     </div>
     <div class="stage-body">
@@ -994,23 +998,23 @@ function metricRow(m){
   const t = m.target || {};
   const tgtAttrs = `type="number" step="any" min="0"${m.unit==="%"?' max="100"':''}`;
   const tgtEdit = (t.op==="gte"||t.op==="lte")
-      ? `<span class="edit-only tgt-edit">${t.op==="gte"?"≥":"≤"} <input class="edittgt" data-id="${m.id}" data-k="v" ${tgtAttrs} value="${t.v}" aria-label="${escAttr(m.name)} — target">${m.unit||""}</span>`
+      ? `<span class="edit-only tgt-edit">${t.op==="gte"?"≥":"≤"} <input class="edittgt" data-id="${m.id}" data-k="v" ${tgtAttrs} value="${t.v}" aria-label="${escAttr(m.name)} — target">${escHtml(m.unit||"")}</span>`
       : t.op==="range"
-      ? `<span class="edit-only tgt-edit"><input class="edittgt" data-id="${m.id}" data-k="v" ${tgtAttrs} value="${t.v}" aria-label="${escAttr(m.name)} — target lower bound">–<input class="edittgt" data-id="${m.id}" data-k="v2" ${tgtAttrs} value="${t.v2}" aria-label="${escAttr(m.name)} — target upper bound">${m.unit||""}</span>`
-      : `<span class="edit-only">${targetText(m)}</span>`;
+      ? `<span class="edit-only tgt-edit"><input class="edittgt" data-id="${m.id}" data-k="v" ${tgtAttrs} value="${t.v}" aria-label="${escAttr(m.name)} — target lower bound">–<input class="edittgt" data-id="${m.id}" data-k="v2" ${tgtAttrs} value="${t.v2}" aria-label="${escAttr(m.name)} — target upper bound">${escHtml(m.unit||"")}</span>`
+      : `<span class="edit-only">${escHtml(targetText(m))}</span>`;
   const tclass = m.trendDir==="good" ? "t-good" : m.trendDir==="bad" ? "t-bad" : "t-flat";
   const isQual = (m.target||{}).op === "qual";
-  const valView = `<span class="val view-only tabnum">${fmtVal(m)}<span class="u">${m.unit||""}</span></span>`;
-  const valEdit = `<span class="edit-only"><input class="editval tabnum" data-id="${m.id}" type="number" step="any" min="0"${m.unit==="%"?' max="100"':''} value="${m.value===null?'':m.value}" aria-label="${escAttr(m.name)} — current value"><span class="u">${m.unit||""}</span></span>`;
+  const valView = `<span class="val view-only tabnum">${escHtml(fmtVal(m))}<span class="u">${escHtml(m.unit||"")}</span></span>`;
+  const valEdit = `<span class="edit-only"><input class="editval tabnum" data-id="${m.id}" type="number" step="any" min="0"${m.unit==="%"?' max="100"':''} value="${m.value===null?'':m.value}" aria-label="${escAttr(m.name)} — current value"><span class="u">${escHtml(m.unit||"")}</span></span>`;
   const statEdit = isQual
       ? `<select class="editstat editctl edit-only" data-id="${m.id}">${STATUS_ORDER.map(k=>`<option value="${k}"${(m.status||'na')===k?' selected':''}>${STATUS_LABEL[k]}</option>`).join("")}</select>`
       : `<span class="edit-only ragdot ${rag}" data-dot="${m.id}">${STATUS_LABEL[rag]}</span>`;
   return `<tr>
-    <td class="metric-name">${m.name}</td>
+    <td class="metric-name">${escHtml(m.name)}</td>
     <td class="n">${valView}${valEdit}</td>
-    <td class="target"><span class="view-only">${targetText(m)}</span>${tgtEdit}</td>
+    <td class="target"><span class="view-only">${escHtml(targetText(m))}</span>${tgtEdit}</td>
     <td class="stcell"><span class="ragdot ${rag} view-only" data-dot="${m.id}">${STATUS_LABEL[rag]}</span>${statEdit}</td>
-    <td class="trendcell ${tclass}">${m.trend||""}</td>
+    <td class="trendcell ${tclass}">${escHtml(m.trend||"")}</td>
   </tr>`;
 }
 function wireEditInputs(){
@@ -1107,7 +1111,7 @@ function initCharts(){
       plugins:{ legend:{display:false}, tooltip:{callbacks:{title:c=>c[0].label, label:c=>" "+c.raw+(DATA.trend.pointLabel?" "+DATA.trend.pointLabel:"")}} },
       animation:{duration:500} }
   });
-  document.getElementById("trendTitle").innerHTML = DATA.trend.title + ' <i class="info-i" data-tip="def:trend" tabindex="0" role="button" aria-label="What counts as a human-driven incident">i</i>';
+  document.getElementById("trendTitle").innerHTML = escHtml(DATA.trend.title) + ' <i class="info-i" data-tip="def:trend" tabindex="0" role="button" aria-label="What counts as a human-driven incident">i</i>';
   document.getElementById("trendSub").textContent = DATA.trend.sub;
 }
 function updateGauge(){
@@ -1163,6 +1167,7 @@ document.getElementById("exportBtn").onclick = () => {
 document.getElementById("printBtn").onclick = () => window.print();
 document.getElementById("saveBtn").onclick = () => {
   // Build a fresh self-contained file with the current (edited) numbers baked in as defaults.
+  DATA.savedAt = new Date().toISOString(); save();
   const json = JSON.stringify(DATA, null, 2).replace(/<\//g, "<\\/");   // guard against a stray close-script token in the data
   let html = "<!DOCTYPE html>\n" + document.documentElement.outerHTML;
   html = html.replace(/const DEFAULT_DATA = \{[\s\S]*?\n\};/, "const DEFAULT_DATA = " + json + ";");
@@ -1206,19 +1211,19 @@ function tipHtml(key){
     const M = DATA.maturity; if(!M || !M.levels) return "";
     const word = M.levelWord || "Level";
     if(id === "all"){
-      return `<b>${M.label || "Maturity levels"}</b>` + Object.keys(M.levels).map(n=>
-        `<div class="row"><span class="sn">${word} ${n}</span><span class="st"><strong style="color:#fff">${M.levels[n].name}.</strong> ${M.levels[n].d}</span></div>`).join("");
+      return `<b>${escHtml(M.label || "Maturity levels")}</b>` + Object.keys(M.levels).map(n=>
+        `<div class="row"><span class="sn">${escHtml(word)} ${n}</span><span class="st"><strong style="color:#fff">${escHtml(M.levels[n].name)}.</strong> ${escHtml(M.levels[n].d)}</span></div>`).join("");
     }
     const l = M.levels[id];
-    return l ? `<b>${word} ${id} — ${l.name}</b>${l.d}` : "";
+    return l ? `<b>${escHtml(word)} ${escHtml(id)} — ${escHtml(l.name)}</b>${escHtml(l.d)}` : "";
   }
   if(kind === "def" && id === "trend"){
     const info = (DATA.trend && DATA.trend.info) || (DEFAULT_DATA.trend && DEFAULT_DATA.trend.info) || "";
-    return info ? `<b>${(DATA.trend && DATA.trend.title) || "Trend"}</b>${info}` : "";
+    return info ? `<b>${escHtml((DATA.trend && DATA.trend.title) || "Trend")}</b>${escHtml(info)}` : "";
   }
   if(kind === "sec"){
     const sec = DATA.sections.find(x=>String(x.n)===String(id));
-    return sec ? `<b>${sec.name}</b>${sec.info || sec.focus || ""}` : "";
+    return sec ? `<b>${escHtml(sec.name)}</b>${escHtml(sec.info || sec.focus || "")}` : "";
   }
   return "";
 }
@@ -1282,11 +1287,11 @@ function renderTrendEdit(){
 function renderAll(){
   document.title = (DATA.title || "Board Governance Dashboard") + " — Board Dashboard";
   document.getElementById("kickerEl").textContent = DATA.kicker || "Board Reporting";
-  document.getElementById("titleH1").innerHTML = DATA.title || "";
+  document.getElementById("titleH1").innerHTML = escHtml(DATA.title || "");
   document.getElementById("ragTitle").textContent = DATA.sectionsTitle || "Status by section";
   const escA = v => String(v ?? "").replace(/&/g,"&amp;").replace(/"/g,"&quot;").replace(/</g,"&lt;");
   document.getElementById("periodBox").innerHTML =
-    `<span class="view-only"><b>${DATA.org}</b><br>${DATA.period} · ${DATA.periodRange}<br>${DATA.preparedFor}</span>` +
+    `<span class="view-only"><b>${escHtml(DATA.org)}</b><br>${escHtml(DATA.period)} · ${escHtml(DATA.periodRange)}<br>${escHtml(DATA.preparedFor)}</span>` +
     `<span class="edit-only pb-edit">` +
       `<input id="orgEdit" value="${escA(DATA.org)}" placeholder="Organisation name" title="Organisation name">` +
       `<span class="pb-row"><input id="periodEdit" value="${escA(DATA.period)}" placeholder="e.g. Q4 FY2025–26" title="Reporting period"><input id="rangeEdit" value="${escA(DATA.periodRange)}" placeholder="e.g. Apr–Jun 2026" title="Period range"></span>` +
@@ -1296,8 +1301,8 @@ function renderAll(){
     const el = document.getElementById(id);
     if(el) el.oninput = () => { DATA[key] = el.value; save(); };
   });
-  document.getElementById("footWm").innerHTML = `Holistic <em>Governance</em> — ${DATA.preparedFor} pack`;
-  document.getElementById("footAttr").innerHTML = DATA.frameworkAttribution || "";
+  document.getElementById("footWm").innerHTML = `Holistic <em>Governance</em> — ${escHtml(DATA.preparedFor)} pack`;
+  document.getElementById("footAttr").innerHTML = safeRich(DATA.frameworkAttribution || "");
   document.getElementById("footCurrency").textContent = DATA.currencyNote || "";
   document.getElementById("footDisc").textContent = DATA.disclaimer || "Decision-support only — not audit, accreditation, legal or professional advice. Replace all figures with measured data and remove the \u201cillustrative data\u201d banner before any live board use.";
   var _lic=document.getElementById("footLicence"); _lic.textContent=DATA.licence||""; _lic.style.display=DATA.licence?"":"none";
@@ -1308,6 +1313,20 @@ function renderAll(){
 }
 renderAll();
 initCharts();
+
+// Saved copies carry a savedAt stamp — nudge when a copy is reopened a quarter later.
+(function(){
+  const sa = DEFAULT_DATA.savedAt;
+  if(!sa) return;
+  const age = Date.now() - new Date(sa).getTime();
+  if(age > 80*24*3600*1000){
+    const mb = document.createElement("div");
+    mb.className = "mockbar";
+    mb.innerHTML = '<b>Saved copy</b><span>This copy was saved more than a quarter ago — check <a href="https://hg-au.com/security-awareness-dashboard.html?utm_source=dashboard-file" style="color:inherit;text-decoration:underline">hg-au.com</a> for the latest version and targets before your next board pack.</span><span class="x" onclick="this.parentNode.remove()">✕</span>';
+    const main = document.querySelector("main.wrap");
+    if(main) main.insertBefore(mb, main.firstElementChild);
+  }
+})();
 </script>
 </body>
 </html>

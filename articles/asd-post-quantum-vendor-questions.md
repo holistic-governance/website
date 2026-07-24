@@ -81,6 +81,8 @@ Vendors who can answer these questions well won't just pass procurement gates �
 
 _Our commentary, beyond the ASD text:_ two aspects of this guidance land particularly heavily in care settings. First, **data longevity** — clinical and care records carry confidentiality obligations that span decades, exactly the profile 'harvest now, decrypt later' targets, which argues for asking the data-lifetime questions of any vendor holding care records. Second, **embedded systems** — ASD's list of hard-to-update environments (building management, physical access and security systems, IoT, legacy platforms) describes much of a modern care facility. These are long-lifecycle assets where cryptography may be fixed in hardware; the time to ask about PQC is before the next procurement, not after.
 
+**Reporting cyber culture to your board?** Get our free [Security Awareness & Culture Board Dashboard](../security-awareness-dashboard.html) — an editable, board-ready dashboard structured on the SANS Security Awareness & Culture Maturity Model™. It runs in your browser, your figures never leave your device, and it prints a one-page board pack.
+
 ## Sources
 
 - ASD, _Planning for post-quantum cryptography_ (LATICE framework), cyber.gov.au.

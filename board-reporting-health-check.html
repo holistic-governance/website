@@ -398,18 +398,25 @@
       submittedAt: new Date().toISOString()
     };
 
+    var captured = false;
     try {
-      await fetch('https://dashboard-pkltzbmtea-ts.a.run.app/enquiry', {
+      var ctrl = new AbortController();
+      var timer = setTimeout(function(){ ctrl.abort(); }, 8000);
+      var resp = await fetch('https://dashboard-pkltzbmtea-ts.a.run.app/enquiry', {
         method: 'POST', headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(data)
+        body: JSON.stringify(data), signal: ctrl.signal
       });
+      clearTimeout(timer);
+      captured = resp.ok;
     } catch (err) { /* reveal content regardless — capture is best-effort */ }
 
-    gtag('event', 'lead_magnet_download', {
-      event_category: 'bi-leadmagnet',
-      event_label: 'Board Reporting Health Check',
-      value: 1
+    gtag('event', 'generate_lead', {
+      lead_magnet: 'Board Reporting Health Check',
+      lead_source: 'bi-leadmagnet'
     });
+    if (!captured) {
+      gtag('event', 'lead_capture_failed', { lead_magnet: 'Board Reporting Health Check' });
+    }
 
     document.getElementById('gate').style.display = 'none';
     renderChecklist(data.orgType);
