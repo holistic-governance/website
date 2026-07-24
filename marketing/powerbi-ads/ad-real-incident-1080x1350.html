@@ -59,8 +59,8 @@
   .win-title{font-size:15px; letter-spacing:0.14em; text-transform:uppercase; color:var(--text-mid);}
   .win-live{margin-left:auto; display:flex; align-items:center; gap:8px; font-size:14px; color:var(--sky-light); letter-spacing:0.06em;}
   .win-live::before{content:''; width:9px; height:9px; border-radius:50%; background:#4ade80; box-shadow:0 0 8px #4ade80;}
-  /* crop the Power BI nav bar off the bottom (~42px of 1000) */
-  .win-body{width:100%; background:#fff; font-size:0;}
+  /* crop the Power BI nav bar off the bottom via overflow (image is full-height incl. nav) */
+  .win-body{width:100%; background:#fff; font-size:0; aspect-ratio:3840 / 2060; overflow:hidden;}
   .win-body img{width:100%; display:block;}
 
   .tagline{margin-top:22px; display:flex; align-items:center; gap:14px; position:relative; z-index:2;
@@ -114,9 +114,9 @@
     </div>
 
     <div class="grp-bottom">
-    <div class="foot">
+    <div class="foot" style="justify-content:flex-start; gap:30px;">
       <div class="cta">Book a build &rarr;</div>
-      <div class="url">Explore at<br><b>hg-au.com</b></div>
+      <div class="url" style="text-align:left">Explore at<br><b>hg-au.com</b></div>
     </div>
     </div>
   </div>
