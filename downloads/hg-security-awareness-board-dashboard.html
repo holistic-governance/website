@@ -202,6 +202,9 @@
   .pb-edit{display:flex;flex-direction:column;gap:5px;margin-top:2px;max-width:340px}
   .pb-edit input{font-family:var(--sans);font-size:12px;border:1px solid var(--hg-sky);border-radius:5px;padding:3px 7px;color:var(--hg-text);background:#F4FAFE;width:100%}
   .pb-edit .pb-row{display:flex;gap:5px}
+  input[type=number]::-webkit-inner-spin-button,input[type=number]::-webkit-outer-spin-button{-webkit-appearance:none;margin:0}
+  input[type=number]{-moz-appearance:textfield;appearance:textfield}
+  td .edit-only{white-space:nowrap}
   select.editstat{font-family:var(--sans);font-size:11.5px;font-weight:600;border:1px solid var(--hg-sky);border-radius:6px;padding:3px 4px;background:#F4FAFE}
   body:not(.editing) .edit-only{display:none}
   body.editing .view-only{display:none}
