@@ -189,8 +189,8 @@ footer {
   nav { padding: 1.2rem 1.5rem; }
   nav.scrolled { padding: 0.8rem 1.5rem; }
   nav ul {
-    display: none; position: fixed; top: 62px; left: 0; right: 0;
-    background: rgba(15,23,42,0.98); flex-direction: column;
+    display: none; position: absolute; top: 100%; left: 0; right: 0;
+    background: rgb(15,23,42); flex-direction: column;
     padding: 2rem; gap: 1.5rem;
     border-bottom: 1px solid var(--border);
     transform: none; left: 0;
