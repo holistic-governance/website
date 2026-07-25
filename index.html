@@ -136,6 +136,20 @@
     /* ── WHO WE WORK WITH ── */
     #clients { background: var(--navy); padding: 6rem 4rem; }
     #collaborate { background: var(--navy-mid); padding: 6rem 4rem; position: relative; z-index: 5; }
+    .collab-form-card { max-width: 640px; margin-top: 2.5rem; padding: 2.5rem; background: var(--navy); border: 1px solid var(--border); border-radius: 3px; position: relative; overflow: hidden; }
+    .collab-form-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: var(--sky); }
+    .collab-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    .collab-form-card input, .collab-form-card textarea { width: 100%; padding: 0.9rem 1rem; margin-bottom: 1rem; background: rgba(15,23,42,0.6); border: 1px solid var(--border); border-radius: 2px; color: var(--white); font-family: 'DM Sans', sans-serif; font-size: 0.9rem; }
+    .collab-form-card input::placeholder, .collab-form-card textarea::placeholder { color: rgba(241,245,249,0.45); }
+    .collab-form-card input:focus, .collab-form-card textarea:focus { outline: none; border-color: var(--sky); }
+    .collab-form-card input.error, .collab-form-card textarea.error { border-color: #f87171; }
+    .collab-form-card textarea { resize: vertical; min-height: 110px; }
+    .collab-form-error { display: none; color: #f87171; font-size: 0.82rem; margin-bottom: 1rem; }
+    .collab-form-error.show { display: block; }
+    .collab-form-note { font-size: 0.78rem; color: rgba(241,245,249,0.5); margin-top: 1rem; }
+    .collab-form-note a { color: var(--sky); text-decoration: none; }
+    .collab-form-success { display: none; text-align: center; padding: 2rem 0; }
+    .collab-form-success p { color: rgba(241,245,249,0.8); line-height: 1.8; margin-top: 1rem; }
     .clients-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; margin-top: 3rem; }
     .client-card {
       text-align: center; padding: 2.5rem 2rem;
@@ -207,6 +221,8 @@
       .credential-item:not(:last-child)::after { display: none; }
       .free-tools { padding: 4rem 1.5rem; }
       .fr-card { padding: 2rem 1.5rem; }
+      .collab-row { grid-template-columns: 1fr; gap: 0; }
+      .collab-form-card { padding: 2rem 1.5rem; }
     }
   </style>
   <script type="application/ld+json">
@@ -307,6 +323,7 @@
   <a href="index.html" class="logo"><img src="logo-hg-trimmed.png" alt="Holistic Governance" width="351" height="524"><span class="logo-name">Holistic <span>Governance</span></span></a>
   <button class="hamburger" aria-label="Menu" onclick="this.nextElementSibling.classList.toggle('open')">&#9776;</button>
   <ul>
+    <li><a href="index.html">Home</a></li>
     <li><a href="about.html">About</a></li>
     <li><a href="healthcare.html">Solutions</a></li>
     <li><a href="resources.html">Resources</a></li>
@@ -479,27 +496,28 @@
 <div style="max-width:1100px; margin:0 auto;">
   <div class="section-label">Collaborate With Us</div>
   <h2>Follow our work &mdash; and let's build better governance together</h2>
-  <p class="collab-intro">Governance insights, updates, and practical thinking across our channels.<br>Reach out to explore working together.</p>
+  <p class="collab-intro">Governance insights, updates, and practical thinking across our channels.<br>Contact us at <a href="mailto:info@hg-au.com" style="color:var(--sky); text-decoration:none;">info@hg-au.com</a> or use the form below.</p>
   <div class="collab-socials">
     <a href="https://www.linkedin.com/company/hg-au/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.48-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 11.01-4.12 2.06 2.06 0 010 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z"/></svg></a>
     <a href="https://www.youtube.com/@holisticgovernance" target="_blank" rel="noopener" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.5 6.2a3.02 3.02 0 00-2.12-2.14C19.5 3.55 12 3.55 12 3.55s-7.5 0-9.38.51A3.02 3.02 0 00.5 6.2 31.5 31.5 0 000 12a31.5 31.5 0 00.5 5.8 3.02 3.02 0 002.12 2.14c1.88.51 9.38.51 9.38.51s7.5 0 9.38-.51a3.02 3.02 0 002.12-2.14A31.5 31.5 0 0024 12a31.5 31.5 0 00-.5-5.8zM9.55 15.57V8.43L15.82 12l-6.27 3.57z"/></svg></a>
     <a href="https://www.instagram.com/holisticgovernance/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41-.56-.22-.96-.48-1.38-.9-.42-.42-.68-.82-.9-1.38-.16-.42-.36-1.06-.41-2.23C2.17 15.58 2.16 15.2 2.16 12s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.17 8.8 2.16 12 2.16zm0 1.62c-3.15 0-3.52.01-4.76.07-.9.04-1.39.19-1.71.32-.43.17-.74.37-1.06.69-.32.32-.52.63-.69 1.06-.13.32-.28.81-.32 1.71-.06 1.24-.07 1.61-.07 4.76s.01 3.52.07 4.76c.04.9.19 1.39.32 1.71.17.43.37.74.69 1.06.32.32.63.52 1.06.69.32.13.81.28 1.71.32 1.24.06 1.61.07 4.76.07s3.52-.01 4.76-.07c.9-.04 1.39-.19 1.71-.32.43-.17.74-.37 1.06-.69.32-.32.52-.63.69-1.06.13-.32.28-.81.32-1.71.06-1.24.07-1.61.07-4.76s-.01-3.52-.07-4.76c-.04-.9-.19-1.39-.32-1.71-.17-.43-.37-.74-.69-1.06-.32-.32-.63-.52-1.06-.69-.32-.13-.81-.28-1.71-.32-1.24-.06-1.61-.07-4.76-.07zm0 2.76a5.3 5.3 0 110 10.6 5.3 5.3 0 010-10.6zm0 1.62a3.68 3.68 0 100 7.36 3.68 3.68 0 000-7.36zm5.5-1.86a1.24 1.24 0 110 2.48 1.24 1.24 0 010-2.48z"/></svg></a>
   </div>
-  <div class="contact-wrapper">
-    <button class="btn-primary" onclick="this.nextElementSibling.classList.toggle('open')">Collaborate With Us</button>
-    <div class="contact-popup">
-      <a href="tel:0405515300">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
-        0405 515 300
-      </a>
-      <a href="mailto:info@hg-au.com">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-        info@hg-au.com
-      </a>
-      <a href="proposal-enquiry.html">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
-        Submit a Proposal
-      </a>
+  <div class="collab-form-card">
+    <div id="collabFormContent">
+      <div class="collab-row">
+        <input type="text" id="cfFirst" placeholder="First name*" aria-label="First name" />
+        <input type="text" id="cfLast" placeholder="Last name*" aria-label="Last name" />
+      </div>
+      <input type="email" id="cfEmail" placeholder="Work email*" aria-label="Work email" />
+      <input type="text" id="cfOrg" placeholder="Organisation" aria-label="Organisation" />
+      <textarea id="cfMsg" placeholder="How would you like to collaborate?*" aria-label="How would you like to collaborate?"></textarea>
+      <div class="collab-form-error" id="collabFormError">Please complete the required fields marked *</div>
+      <button type="button" class="btn-primary" id="collabSubmit" onclick="submitCollabForm()">Send Message</button>
+      <p class="collab-form-note">Your information is kept confidential and handled in accordance with our <a href="privacy.html">Privacy Policy</a>.</p>
+    </div>
+    <div class="collab-form-success" id="collabFormSuccess">
+      <div style="font-size:2rem; color:var(--sky);">&#10003;</div>
+      <p>Thank you &mdash; your message has been received.<br>We'll be in touch within two business days.</p>
     </div>
   </div>
 </div>
@@ -562,7 +580,7 @@
     </div>
     <div class="footer-col">
       <h4>Where We Work</h4>
-      <address style="font-style:normal; font-size:0.85rem; line-height:1.6; color:var(--text); margin-bottom:0.6rem;">Melbourne Metro and Regional</address>
+      <address style="font-style:normal; font-size:0.85rem; line-height:1.6; color:var(--text-light); margin-bottom:0.6rem;">Melbourne Metro and Regional</address>
       <ul>
         <li>Australia</li>
         <li>New Zealand</li>
@@ -596,6 +614,53 @@ const observer = new IntersectionObserver(function(entries) {
   });
 }, { threshold: 0.1 });
 document.querySelectorAll('.fade-in').forEach(function(el) { observer.observe(el); });
+
+// Collaborate form
+async function submitCollabForm() {
+  var first = document.getElementById('cfFirst'), last = document.getElementById('cfLast'),
+      email = document.getElementById('cfEmail'), org = document.getElementById('cfOrg'),
+      msg = document.getElementById('cfMsg'), err = document.getElementById('collabFormError');
+  var bad = false;
+  [first, last, msg].forEach(function(el) {
+    var empty = !el.value.trim();
+    el.classList.toggle('error', empty);
+    if (empty) bad = true;
+  });
+  var emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value.trim());
+  email.classList.toggle('error', !emailOk);
+  if (!emailOk) bad = true;
+  err.classList.toggle('show', bad);
+  if (bad) return;
+  var btn = document.getElementById('collabSubmit');
+  btn.disabled = true; btn.textContent = 'Sending\u2026';
+  try {
+    var res = await fetch('https://dashboard-pkltzbmtea-ts.a.run.app/enquiry', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        orgName: org.value.trim() || 'Not provided',
+        orgType: 'Collaboration enquiry',
+        orgSize: '',
+        accreditation: '',
+        challenge: '[Collaboration enquiry \u2014 homepage form]\n' + msg.value.trim(),
+        timeframe: 'Not specified',
+        contactName: first.value.trim() + ' ' + last.value.trim(),
+        email: email.value.trim(),
+        phone: '',
+        submittedAt: new Date().toISOString()
+      })
+    });
+    if (!res.ok) throw new Error('Server error');
+    document.getElementById('collabFormContent').style.display = 'none';
+    document.getElementById('collabFormSuccess').style.display = 'block';
+  } catch (e) {
+    alert('There was a problem sending your message. Please email info@hg-au.com directly.');
+    btn.disabled = false; btn.textContent = 'Send Message';
+  }
+}
+document.querySelectorAll('.collab-form-card input, .collab-form-card textarea').forEach(function(el) {
+  el.addEventListener('input', function() { el.classList.remove('error'); document.getElementById('collabFormError').classList.remove('show'); });
+});
 
 // Nav shrink on scroll
 window.addEventListener('scroll', function() {
