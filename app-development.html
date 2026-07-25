@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Prototype Builds — Apps, Dashboards &amp; Workflows | Holistic Governance</title>
-    <meta name="description" content="Prototype builds — working app, dashboard, and workflow prototypes designed around how your organisation actually works, with governance and privacy built in." />
+    <meta name="description" content="Prototype builds — working app, dashboard, and workflow prototypes designed around how your organisation actually works." />
     <meta name="robots" content="index,follow" />
     <meta name="author" content="Naomi Alefelder" />
     <link rel="canonical" href="https://hg-au.com/app-development.html" />
@@ -13,13 +13,13 @@
     <meta property="og:locale" content="en_AU" />
     <meta property="og:url" content="https://hg-au.com/app-development.html" />
     <meta property="og:title" content="Prototype Builds | Holistic Governance" />
-    <meta property="og:description" content="Prototype builds — designed around how your organisation actually works, with governance and privacy built in." />
+    <meta property="og:description" content="Prototype builds — designed around how your organisation actually works." />
     <meta property="og:image" content="https://hg-au.com/og-image-v3.png" />
   <meta property="og:image:width" content="2400" />
   <meta property="og:image:height" content="1260" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Prototype Builds | Holistic Governance" />
-    <meta name="twitter:description" content="Prototype builds — designed around how your organisation actually works, with governance and privacy built in." />
+    <meta name="twitter:description" content="Prototype builds — designed around how your organisation actually works." />
     <meta name="twitter:image" content="https://hg-au.com/og-image-v3.png" />
     <link rel="icon" type="image/png" href="favicon.png">
     <link rel="preload" as="image" href="logo-hg-trimmed.png" fetchpriority="high">
@@ -93,66 +93,6 @@
         margin: 0;
       }
 
-      /* SERVICE CARD GRIDS */
-      .ad-services {
-        background: var(--navy-mid);
-      }
-      .ad-grid {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 1.5rem;
-      }
-      .ad-card {
-        background: var(--navy);
-        border: 1px solid var(--border);
-        padding: 2.5rem 2rem;
-        border-radius: 2px;
-        transition: border-color 0.3s;
-      }
-      .ad-services .ad-card {
-        background: var(--navy);
-      }
-      .ad-card:hover {
-        border-color: var(--sky);
-      }
-      .ad-card svg {
-        width: 36px;
-        height: 36px;
-        color: var(--sky);
-        margin-bottom: 1.2rem;
-      }
-      .ad-card h3 {
-        font-family: "Cormorant Garamond", serif;
-        font-size: 1.4rem;
-        color: var(--white);
-        margin-bottom: 0.8rem;
-      }
-      .ad-card p {
-        color: rgba(241,245,249,0.8);
-        font-size: 0.88rem;
-        line-height: 1.75;
-        margin-bottom: 1rem;
-      }
-      .ad-card ul {
-        list-style: none;
-        padding: 0;
-      }
-      .ad-card ul li {
-        color: rgba(241,245,249,0.8);
-        font-size: 0.85rem;
-        line-height: 1.7;
-        padding-left: 1rem;
-        position: relative;
-      }
-      .ad-card ul li::before {
-        content: "—";
-        position: absolute;
-        left: 0;
-        color: var(--sky);
-        font-size: 0.7rem;
-        top: 0.15rem;
-      }
-
       @media (max-width: 900px) {
         .page-hero,
         section {
@@ -161,9 +101,6 @@
         .ad-overview-layout {
           grid-template-columns: 1fr;
           gap: 3rem;
-        }
-        .ad-grid {
-          grid-template-columns: 1fr;
         }
       }
     </style>
@@ -232,117 +169,45 @@
 
     <div class="page-hero">
       <div class="breadcrumb">
-        <a href="index.html">Home</a> / App Development
+        <a href="index.html">Home</a> / Prototype Builds
       </div>
       <h1>Prototype Builds</h1>
       <p>
-        Working prototypes for your digital ideas — designed around how your
-        organisation actually works, with governance and privacy built in
-        from the start.
+        From idea to a working prototype — built around how your team
+        actually works.
       </p>
     </div>
 
     <!-- OVERVIEW -->
     <section class="ad-overview">
-      <div class="section-label">Our Approach</div>
-      <div class="ad-overview-layout">
-        <div class="ad-overview-text">
-          <h3>Prototypes grounded in real workflows.</h3>
-          <p>
-            If you have an idea for a digital tool — an app, a dashboard, a
-            workflow system — we turn it into something you can put in front
-            of users, boards, or investors within weeks.
-          </p>
-          <p>
-            Our difference is that we start with the workflow, not the
-            technology. We map how your team actually works — approvals,
-            reporting, incident capture, day-to-day operations — so your
-            prototype makes sense to the people who will use it.
-          </p>
-        </div>
-        <div class="ad-overview-features">
-          <div class="ad-feature-item">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
-            <div>
-              <h4>Workflow First</h4>
-              <p>Your processes, terminology, and logic mapped with your team — not assumed by developers.</p>
-            </div>
-          </div>
-          <div class="ad-feature-item">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
-            <div>
-              <h4>Working Prototypes, Fast</h4>
-              <p>From concept to a testable, working prototype in weeks — real screens and real user journeys, not static mockups.</p>
-            </div>
-          </div>
-          <div class="ad-feature-item">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
-            <div>
-              <h4>Governance Built In</h4>
-              <p>Privacy, security, and regulatory considerations shaped in from the first sketch — so what you validate can safely become what you build.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- SERVICES -->
-    <section class="ad-services">
-      <div class="section-label">What We Offer</div>
-      <h2>Prototype Builds</h2>
+      <div class="section-label">Prototype Builds</div>
+      <h2>Test the idea before you invest in it</h2>
       <p class="section-intro">
-        One offering, done well. We take your idea and turn it into a working
-        prototype you can trial with users, show your board, or take to
-        investors — before you commit to a full build.
+        Apps, dashboards, workflow tools — whatever shape the idea takes,
+        we turn it into a working prototype you can put in front of users,
+        your board, or investors.
       </p>
-      <div class="ad-grid">
-        <div class="ad-card">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-            <rect x="5" y="2" width="14" height="20" rx="2"/><path d="M12 18h.01"/>
-          </svg>
-          <h3>App Prototypes</h3>
-          <p>
-            Clickable, working web and mobile app prototypes — real screens
-            and real user journeys, ready to put in front of users.
-          </p>
-          <ul>
-            <li>Cross-platform mobile builds (iOS &amp; Android)</li>
-            <li>Working user journeys, not static mockups</li>
-            <li>Ready for user trials and feedback</li>
-            <li>Handover pack with a build-ready roadmap</li>
-          </ul>
+      <div class="ad-overview-features" style="max-width:640px;">
+        <div class="ad-feature-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+          <div>
+            <h4>1 &middot; Map the workflow</h4>
+            <p>We map how the work actually gets done with your team — terminology, approvals, and exceptions included.</p>
+          </div>
         </div>
-        <div class="ad-card">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-            <rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/>
-          </svg>
-          <h3>Dashboard Prototypes</h3>
-          <p>
-            Proof-of-concept dashboards that show what your data could tell
-            you — before you invest in full reporting infrastructure.
-          </p>
-          <ul>
-            <li>Built on a sample of your real data</li>
-            <li>Board and operational views</li>
-            <li>Demonstrates what can be automated</li>
-            <li>Clear pathway to a full reporting build</li>
-          </ul>
+        <div class="ad-feature-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+          <div>
+            <h4>2 &middot; Build the prototype</h4>
+            <p>Working screens and real user journeys — not static mockups.</p>
+          </div>
         </div>
-        <div class="ad-card">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-            <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
-          </svg>
-          <h3>Workflow Prototypes</h3>
-          <p>
-            Digitise a single workflow — approvals, incident capture,
-            reporting — and test it with the team who will actually use it.
-          </p>
-          <ul>
-            <li>Workflow mapping with your team</li>
-            <li>Designed around how the work actually gets done</li>
-            <li>Terminology and logic validated with your people</li>
-            <li>Test before you invest</li>
-          </ul>
+        <div class="ad-feature-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
+          <div>
+            <h4>3 &middot; Trial and decide</h4>
+            <p>Test with real users, keep the handover pack and build-ready roadmap, then decide whether to invest.</p>
+          </div>
         </div>
       </div>
     </section>
