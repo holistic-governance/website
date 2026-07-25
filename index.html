@@ -189,11 +189,13 @@
       .credentials-bar { padding: 3rem 1.5rem; }
       .credentials-grid { grid-template-columns: repeat(2, 1fr); gap: 2rem; }
       .credential-item:not(:last-child)::after { display: none; }
+      .free-tools { padding: 4rem 1.5rem; }
       .fr-card { padding: 2rem 1.5rem; }
     }
 
     /* FREE TOOLS CARDS */
-    .fr-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.5rem; max-width: 1100px; }
+    .free-tools { background: var(--navy-mid); padding: 4rem 4rem; }
+    .fr-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(320px, 100%), 1fr)); gap: 1.5rem; max-width: 1100px; }
     .fr-card { border: 1px solid var(--border-mid); border-radius: 3px; background: var(--navy); position: relative; overflow: hidden; padding: 2.5rem; display: flex; flex-direction: column; align-items: flex-start; text-align: left; }
     .fr-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: var(--sky); }
     .fr-badge { position: absolute; top: 1.4rem; right: -3.2rem; transform: rotate(45deg); background: var(--sky); color: var(--navy); font-size: 0.7rem; font-weight: 600; letter-spacing: 0.25em; padding: 0.35rem 3.5rem; text-transform: uppercase; }
@@ -443,7 +445,7 @@
 </div>
 
 <!-- FREE TOOLS -->
-<section class="fade-in" style="background:var(--navy-mid); padding:4rem 4rem;">
+<section class="free-tools fade-in">
   <div style="max-width:1100px; margin:0 auto;">
   <div class="section-label">Free Tools</div>
   <h2>Board-ready tools, free to use</h2>
