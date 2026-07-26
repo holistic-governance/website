@@ -110,6 +110,15 @@
         transition: background 0.3s, color 0.3s;
       }
       .btn-outline:hover { background: var(--sky); color: var(--navy); }
+      .btn-solid {
+        display: inline-block; padding: 0.7rem 1.8rem;
+        background: var(--sky); color: var(--navy);
+        font-family: 'DM Sans', sans-serif; font-size: 0.9rem; font-weight: 600;
+        text-decoration: none; border: 1px solid var(--sky);
+        border-radius: 2px; cursor: pointer;
+        transition: background 0.3s, transform 0.2s, box-shadow 0.2s;
+      }
+      .btn-solid:hover { background: var(--sky-light); transform: translateY(-2px); box-shadow: 0 10px 30px -12px rgba(56,189,248,0.6); }
 
       .at-badge {
         display: inline-block;
@@ -342,7 +351,7 @@
       <p class="section-intro" style="margin:2rem 0 0.8rem; max-width:700px;">
         Measure your organisation's security culture with our free board dashboard.
       </p>
-      <a href="security-awareness-dashboard.html" class="btn-outline">Security Awareness &amp; Culture Board Dashboard &rarr;</a>
+      <a href="security-awareness-dashboard.html" class="btn-solid">Security Awareness &amp; Culture Board Dashboard &rarr;</a>
       <p class="section-intro" style="margin:2.5rem 0 0; max-width:700px;">
         We work across sectors, with particular depth in healthcare and
         regulated environments — clinical AI and medical-device advisory sit
@@ -351,7 +360,7 @@
       <p class="section-intro" style="margin:2rem 0 0.8rem; max-width:700px;">
         Have a digital idea to test?
       </p>
-      <a href="app-development.html" class="btn-outline">Prototype Builds &rarr;</a>
+      <a href="app-development.html" class="btn-solid">Prototype Builds &rarr;</a>
     </section>
 
     <!-- FAQ -->
