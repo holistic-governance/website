@@ -122,14 +122,18 @@
 
       .at-badge {
         display: inline-block;
-        padding: 0.4rem 0.9rem;
-        background: rgba(56, 189, 248, 0.08);
-        border: 1px solid var(--sky);
-        color: var(--sky);
-        font-size: 0.72rem;
-        letter-spacing: 0.1em;
-        text-transform: uppercase;
-        border-radius: 2px;
+        padding: 0.45rem 1.1rem;
+        background: rgba(56, 189, 248, 0.06);
+        border: 1px solid rgba(56, 189, 248, 0.35);
+        color: var(--sky-light);
+        font-size: 0.78rem;
+        letter-spacing: 0.04em;
+        border-radius: 999px;
+        transition: border-color 0.3s, background 0.3s;
+      }
+      .at-badge:hover {
+        border-color: var(--sky);
+        background: rgba(56, 189, 248, 0.12);
       }
 
       /* FRAMEWORKS */
