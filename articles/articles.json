@@ -1,5 +1,16 @@
 [
   {
+    "slug": "ai-governance-aged-care",
+    "title": "AI Governance for Aged Care — A Provider's Practical Framework",
+    "date": "2026-07-26",
+    "dateModified": "2026-07-26",
+    "author": "Naomi Alefelder",
+    "category": "AI Governance",
+    "featured": false,
+    "summary": "AI is already inside most aged care organisations — in scribes, rostering tools, chatbots and the features switched on inside software you already own. What providers are missing is not enthusiasm but governance. A practical framework for governing AI under the Aged Care Act 2024 and the Strengthened Quality Standards, in eight steps a provider can actually run.",
+    "ogImage": "og-image-v3.png"
+  },
+  {
     "slug": "asd-post-quantum-vendor-questions",
     "title": "Post-Quantum Cryptography — ASD's New Vendor Questions: What Buyers and Software Vendors Need to Know",
     "date": "2026-07-24",
@@ -14,7 +25,7 @@
     "slug": "liquidity-standard-targeted-review",
     "title": "Targeted Review on the New Liquidity Standard — What Category 6 Providers Need to Know",
     "date": "2026-07-02",
-    "dateModified": "2026-07-02",
+    "dateModified": "2026-07-26",
     "author": "Naomi Alefelder",
     "category": "Industry News",
     "featured": false,
@@ -25,7 +36,7 @@
     "slug": "reform-without-reporting",
     "title": "Reform Without Reporting — The Visibility Gap Six Months into the New Aged Care Act",
     "date": "2026-05-23",
-    "dateModified": "2026-05-23",
+    "dateModified": "2026-07-26",
     "author": "Naomi Alefelder",
     "category": "Industry News",
     "featured": true,

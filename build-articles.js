@@ -4,13 +4,13 @@ const path = require('path');
 const SITE_URL = 'https://hg-au.com';
 const DEFAULT_OG_IMAGE = 'og-image-v3.png';
 
-// AI & App Development pages are archived — all categories point to healthcare only.
 const SOLUTIONS_BY_CATEGORY = {
   'Health Care':          ['healthcare'],
   'Compliance':           ['healthcare'],
   'Industry News':        ['healthcare'],
   'Data Governance':      ['healthcare'],
-  'Competitor Analytics': ['healthcare']
+  'Competitor Analytics': ['healthcare'],
+  'AI Governance':        ['ai-technology', 'healthcare']
 };
 
 const SOLUTION_LABELS = {

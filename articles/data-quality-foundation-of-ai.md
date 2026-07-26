@@ -34,3 +34,5 @@ Data quality is everyone's responsibility. Bring together data engineers, busine
 ## The Bottom Line
 
 Organisations that invest in data quality governance before scaling AI initiatives will see better outcomes, lower risk, and faster time to value. Those that skip this step will find themselves constantly firefighting quality issues that undermine trust in their AI investments.
+
+If you are establishing AI oversight, our [AI governance advisory](https://hg-au.com/ai-technology.html) helps put the ownership, standards and accountability in place before you scale.

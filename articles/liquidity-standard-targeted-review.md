@@ -1,6 +1,7 @@
 ---
 title: Targeted Review on the New Liquidity Standard — What Category 6 Providers Need to Know
 date: 2026-07-02
+dateModified: 2026-07-26
 author: Naomi Alefelder
 category: Industry News
 featured: false

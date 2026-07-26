@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Governance for Aged Care — A Provider's Practical Framework | Holistic Governance</title>
+  <meta name="description" content="AI is already inside most aged care organisations — in scribes, rostering tools, chatbots and the features switched on inside software you already own. What providers are missing is not enthusiasm but governance. A practical framework for governing AI under the Aged Care Act 2024 and the Strengthened Quality Standards, in eight steps a provider can actually run." />
+  <meta name="robots" content="index,follow" />
+  <meta name="author" content="Naomi Alefelder" />
+  <link rel="canonical" href="https://hg-au.com/articles/ai-governance-aged-care.html" />
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="Holistic Governance" />
+  <meta property="og:locale" content="en_AU" />
+  <meta property="og:url" content="https://hg-au.com/articles/ai-governance-aged-care.html" />
+  <meta property="og:title" content="AI Governance for Aged Care — A Provider's Practical Framework | Holistic Governance" />
+  <meta property="og:description" content="AI is already inside most aged care organisations — in scribes, rostering tools, chatbots and the features switched on inside software you already own. What providers are missing is not enthusiasm but governance. A practical framework for governing AI under the Aged Care Act 2024 and the Strengthened Quality Standards, in eight steps a provider can actually run." />
+  <meta property="og:image" content="https://hg-au.com/og-image-v3.png" />
+  <meta property="og:image:width" content="2400" />
+  <meta property="og:image:height" content="1260" />
+  <meta property="article:published_time" content="2026-07-26" />
+  <meta property="article:modified_time" content="2026-07-26" />
+  <meta property="article:section" content="AI Governance" />
+  <meta property="article:author" content="Naomi Alefelder" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="AI Governance for Aged Care — A Provider's Practical Framework | Holistic Governance" />
+  <meta name="twitter:description" content="AI is already inside most aged care organisations — in scribes, rostering tools, chatbots and the features switched on inside software you already own. What providers are missing is not enthusiasm but governance. A practical framework for governing AI under the Aged Care Act 2024 and the Strengthened Quality Standards, in eight steps a provider can actually run." />
+  <meta name="twitter:image" content="https://hg-au.com/og-image-v3.png" />
+  <link rel="icon" type="image/png" href="../favicon.png" />
+  <link rel="preload" as="image" href="../logo-hg-trimmed.png" fetchpriority="high" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../styles.css" />
+  <style>
+    .article-page { padding: 10rem 4rem 5rem; background: var(--navy); max-width: 820px; margin: 0 auto; }
+    .article-page .breadcrumb { margin-bottom: 2rem; }
+    .article-page .article-tag { display: inline-block; padding: 0.3rem 0.8rem; background: rgba(56,189,248,0.08); border: 1px solid var(--border); color: var(--sky); font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; border-radius: 2px; margin-bottom: 1.2rem; }
+    .article-page h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 4vw, 3rem); font-weight: 300; color: var(--white); line-height: 1.15; margin-bottom: 1.2rem; }
+    .article-page .article-meta { font-size: 0.82rem; color: var(--text-light); margin-bottom: 2rem; padding-bottom: 1.5rem; border-bottom: 1px solid var(--border); }
+    .article-page .article-meta span { color: var(--sky); }
+    .article-body { color: #aab4c4; font-size: 1rem; line-height: 1.9; }
+    .article-body h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; font-weight: 400; color: var(--white); margin: 2.5rem 0 1rem; }
+    .article-body h3 { font-family: 'DM Sans', sans-serif; font-size: 1.15rem; font-weight: 500; color: var(--white); margin: 2rem 0 0.8rem; }
+    .article-body p { margin-bottom: 1.2rem; }
+    .article-body ul, .article-body ol { margin: 1rem 0 1.5rem 1.5rem; }
+    .article-body li { margin-bottom: 0.5rem; }
+    .article-body strong { color: var(--white); }
+    .article-body a { color: var(--sky); text-decoration: underline; }
+    .article-body table { width: 100%; border-collapse: collapse; margin: 1.5rem 0 2rem; font-size: 0.92rem; }
+    .article-body th, .article-body td { border: 1px solid var(--border); padding: 0.65rem 0.85rem; text-align: left; vertical-align: top; line-height: 1.55; }
+    .article-body th { color: var(--white); font-weight: 500; background: rgba(56,189,248,0.06); }
+    .key-takeaways { margin: 0 0 2.5rem; padding: 1.5rem 1.75rem; background: rgba(56,189,248,0.06); border: 1px solid rgba(56,189,248,0.25); border-left: 3px solid var(--sky); border-radius: 4px; }
+    .key-takeaways h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.25rem; font-weight: 500; color: var(--white); margin: 0 0 0.75rem; letter-spacing: 0.02em; }
+    .key-takeaways ul { list-style: none; padding: 0; margin: 0; }
+    .key-takeaways li { color: #aab4c4; font-size: 0.95rem; line-height: 1.6; padding: 0.4rem 0 0.4rem 1.5rem; position: relative; }
+    .key-takeaways li::before { content: '→'; position: absolute; left: 0; top: 0.4rem; color: var(--sky); font-weight: 600; }
+    .related-solutions { margin-top: 3.5rem; padding: 1.75rem; background: rgba(56,189,248,0.04); border: 1px solid var(--border); border-radius: 4px; }
+    .related-solutions h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; font-weight: 400; color: var(--white); margin: 0 0 0.9rem; }
+    .related-solutions ul { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: 0.6rem; }
+    .related-solutions li { margin: 0; }
+    .related-solutions a { display: inline-block; color: var(--sky); font-size: 0.9rem; text-decoration: none; border: 1px solid rgba(56,189,248,0.3); padding: 0.5rem 1rem; border-radius: 2px; transition: all 0.2s; }
+    .related-solutions a:hover { background: rgba(56,189,248,0.12); border-color: var(--sky); }
+    .author-bio { margin-top: 2.5rem; padding: 1.75rem; background: var(--navy-mid); border: 1px solid var(--border); border-radius: 4px; }
+    .author-bio-header { display: flex; align-items: center; gap: 1.25rem; margin-bottom: 1rem; }
+    .author-bio-header img { width: 72px; height: 72px; border-radius: 50%; object-fit: cover; border: 1px solid var(--border); flex-shrink: 0; }
+    .author-bio-header h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; font-weight: 400; color: var(--white); margin: 0 0 0.2rem; }
+    .author-bio-role { font-size: 0.82rem; color: var(--sky); margin: 0; letter-spacing: 0.04em; }
+    .author-bio p { font-size: 0.92rem; color: #aab4c4; line-height: 1.7; margin: 0 0 0.8rem; }
+    .author-bio-links a { color: var(--sky); text-decoration: none; border-bottom: 1px solid rgba(56,189,248,0.4); }
+    .author-bio-links a:hover { border-bottom-color: var(--sky); }
+    .article-footer-nav { position: static; background: none; backdrop-filter: none; border-bottom: none; z-index: auto; margin-top: 2.5rem; padding: 2rem 0 0; border-top: 1px solid var(--border); display: flex; align-items: flex-start; justify-content: flex-start; gap: 1rem; flex-wrap: wrap; }
+    .article-footer-nav a { color: var(--sky); text-decoration: none; font-size: 0.85rem; letter-spacing: 0.06em; text-transform: uppercase; border: 1px solid var(--border); padding: 0.8rem 1.6rem; border-radius: 2px; transition: all 0.3s; }
+    .article-footer-nav a:hover { background: var(--sky); color: var(--navy); }
+    @media (max-width: 900px) { .article-page { padding: 8rem 1.5rem 3rem; } }
+  </style>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "AI Governance for Aged Care — A Provider's Practical Framework",
+  "description": "AI is already inside most aged care organisations — in scribes, rostering tools, chatbots and the features switched on inside software you already own. What providers are missing is not enthusiasm but governance. A practical framework for governing AI under the Aged Care Act 2024 and the Strengthened Quality Standards, in eight steps a provider can actually run.",
+  "image": "https://hg-au.com/og-image-v3.png",
+  "author": {
+    "@type": "Person",
+    "@id": "https://hg-au.com/about.html#naomi",
+    "name": "Naomi Alefelder",
+    "url": "https://hg-au.com/about.html"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "@id": "https://hg-au.com/#organization",
+    "name": "Holistic Governance",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://hg-au.com/logo-hg-trimmed.png"
+    }
+  },
+  "datePublished": "2026-07-26",
+  "dateModified": "2026-07-26",
+  "mainEntityOfPage": "https://hg-au.com/articles/ai-governance-aged-care.html",
+  "articleSection": "AI Governance",
+  "inLanguage": "en-AU",
+  "url": "https://hg-au.com/articles/ai-governance-aged-care.html",
+  "isPartOf": {
+    "@id": "https://hg-au.com/#website"
+  }
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": "https://hg-au.com/articles/ai-governance-aged-care.html#webpage",
+  "url": "https://hg-au.com/articles/ai-governance-aged-care.html",
+  "name": "AI Governance for Aged Care — A Provider's Practical Framework | Holistic Governance",
+  "description": "AI is already inside most aged care organisations — in scribes, rostering tools, chatbots and the features switched on inside software you already own. What providers are missing is not enthusiasm but governance. A practical framework for governing AI under the Aged Care Act 2024 and the Strengthened Quality Standards, in eight steps a provider can actually run.",
+  "isPartOf": {
+    "@id": "https://hg-au.com/#website"
+  },
+  "primaryImageOfPage": "https://hg-au.com/og-image-v3.png",
+  "inLanguage": "en-AU",
+  "speakable": {
+    "@type": "SpeakableSpecification",
+    "cssSelector": [
+      ".article-page h1",
+      ".article-meta",
+      "#key-takeaways"
+    ]
+  }
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://hg-au.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Resources",
+      "item": "https://hg-au.com/resources.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "AI Governance for Aged Care — A Provider's Practical Framework",
+      "item": "https://hg-au.com/articles/ai-governance-aged-care.html"
+    }
+  ]
+}
+  </script>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-9PMGXF9Q9T"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-9PMGXF9Q9T');
+  </script>
+</head>
+<body>
+
+<nav>
+  <a href="../index.html" class="logo"><img src="../logo-hg-trimmed.png" alt="Holistic Governance" width="351" height="524"><span class="logo-name">Holistic <span>Governance</span></span></a>
+  <button class="hamburger" onclick="this.nextElementSibling.classList.toggle('open')">&#9776;</button>
+  <ul>
+    <li><a href="../index.html">Home</a></li>
+    <li><a href="../about.html">About</a></li>
+    <li><a href="../healthcare.html">Solutions</a></li>
+    <li><a href="../resources.html">Resources</a></li>
+    <li class="nav-contact-wrapper">
+      <button class="nav-cta" onclick="this.nextElementSibling.classList.toggle('open')">Contact</button>
+      <div class="nav-contact-popup">
+        <a href="tel:0405515300">0405 515 300</a>
+        <a href="mailto:info@hg-au.com">info@hg-au.com</a>
+        <a href="../proposal-enquiry.html">Submit a Proposal</a>
+      </div>
+    </li>
+  </ul>
+</nav>
+
+<article class="article-page">
+  <div class="breadcrumb"><a href="../index.html">Home</a> / <a href="../resources.html">Resources</a> / AI Governance for Aged Care — A Provider's Practical Framework</div>
+  <div class="article-tag">AI Governance</div>
+  <h1>AI Governance for Aged Care — A Provider's Practical Framework</h1>
+  <div class="article-meta"><span>26 July 2026</span> &middot; Naomi Alefelder</div>
+  <aside class="key-takeaways" id="key-takeaways" aria-label="Key takeaways">
+    <h2>Key takeaways</h2>
+    <ul>
+      <li>There is no AI-specific statute for aged care — but your existing obligations under the Aged Care Act 2024, the Strengthened Quality Standards and the Privacy Act 1988 already apply to everything AI touches.</li>
+      <li>Responsible persons cannot exercise due diligence under section 180 over tools they do not know exist. An AI inventory is the non-negotiable first step.</li>
+      <li>Not all AI uses carry equal risk. A rostering suggestion and a tool that influences clinical care decisions should not be governed the same way — risk-tier each use.</li>
+      <li>Clinical AI is not a new governance domain; it is an extension of your existing clinical governance framework, with human oversight and escalation pathways.</li>
+      <li>AI governance is only real when it reaches the board: an inventory, a risk position and monitoring results, reported on a regular cadence.</li>
+    </ul>
+  </aside>
+  <div class="article-body">
+<p>AI is already inside most aged care organisations — whether or not anyone decided it should be. Documentation assistants and AI scribes, rostering optimisation, chatbots on the website, analytics features switched on inside clinical and care management software you already own: each is an AI use, and each carries risk that existing policies were never written to cover. What most providers are missing is not enthusiasm. It is governance.</p>
+<h2>AI is already in your organisation</h2>
+<p>The question for a governing body is rarely "should we adopt AI?" — it is "what AI is already in use, and who decided?" Typical examples across the sector:</p>
+<ul><li><strong>Documentation and scribing</strong> — AI assistants that draft progress notes, summaries or correspondence from voice or text.</li><li><strong>Workforce and rostering</strong> — optimisation features inside scheduling systems.</li><li><strong>Consumer-facing chatbots</strong> — answering enquiries from prospective residents and families.</li><li><strong>Embedded features</strong> — AI capabilities switched on by vendors inside care management, HR or finance software during routine updates, sometimes without a decision on your side of the fence.</li><li><strong>General-purpose tools</strong> — staff using public AI assistants for drafting, translation or summarising, with or without permission.</li></ul>
+<p>That last category deserves particular attention. Where no sanctioned option and no acceptable-use rule exists, staff improvise — and care information can end up in tools the organisation has never assessed.</p>
+<h2>Why this is a governing-body issue</h2>
+<p>Nothing about AI suspends your existing obligations; it routes new risk through them.</p>
+<p><strong>The Aged Care Act 2024.</strong> Registered providers carry a statutory duty to comply with their obligations (section 179), and responsible persons — including directors — carry a personal due diligence duty (section 180) to take reasonable steps to ensure the provider complies. If an AI tool drafts clinical documentation, influences care decisions or handles personal information, it sits squarely inside the conduct those duties cover. A director cannot take reasonable steps regarding tools nobody has listed, assessed or assigned an owner.</p>
+<p><strong>The Strengthened Quality Standards.</strong> The Standards are outcomes-based: what matters is the care and the experience of the older person, not whether a human or an algorithm produced the input. If an AI scribe writes an inaccurate progress note, it is a care documentation problem. If a rostering optimiser produces unsafe coverage, it is a workforce problem. The Standards do not accept "the software did it" as an answer.</p>
+<p><strong>Privacy.</strong> Care records are among the most sensitive information any Australian organisation holds. The Privacy Act 1988 and the Australian Privacy Principles govern how that information is collected, used and disclosed — including disclosure to an AI vendor's cloud service. Where a tool trains on, retains or transmits personal information offshore, that is a privacy assessment, not an IT preference.</p>
+<p><strong>The medical device boundary.</strong> Some AI software is regulated by the TGA as a medical device, depending on its intended purpose — decision support that influences diagnosis or treatment can cross that line, and a vendor's feature update can move a product across it. Providers do not need to become regulatory lawyers, but procurement and review should ask the question.</p>
+<p>Alongside the binding obligations sit voluntary frameworks worth borrowing from: Australia's AI Ethics Principles give a plain-language vocabulary for policy, and ISO/IEC 42001 — the international AI management system standard — offers a structure that scales down sensibly for a mid-sized provider. For clinical uses, the National Model Clinical Governance Framework is the anchor: clinical AI governance is an extension of clinical governance, not a separate discipline.</p>
+<h2>A practical framework in eight steps</h2>
+<p>None of this requires a transformation program. It requires the same governance discipline you already apply to medication management or infection control, pointed at a new class of tool.</p>
+<p><strong>1 — Build the AI inventory.</strong> List every AI use: procured tools, features embedded in existing systems, and general-purpose assistants staff use informally. For each: what it does, what data it touches, who owns it, and whether it influences care. This single artefact converts "unknown unknowns" into a governable list — and it is what makes section 180 due diligence possible.</p>
+<p><strong>2 — Risk-tier each use.</strong> Grade each inventory entry by its potential to affect care outcomes, rights and privacy. A meeting-notes summariser and a falls-risk prediction tool should not face the same controls. Tiering is what keeps governance proportionate — heavy where harm is possible, light where it is not.</p>
+<p><strong>3 — Set policy and acceptable use.</strong> A short AI policy beats a long one nobody reads: what is permitted, what is prohibited (care information in unapproved public tools, for instance), who approves new uses, and how staff raise a proposed use. Make the sanctioned path easier than the workaround.</p>
+<p><strong>4 — Assign ownership.</strong> Every AI use gets a named owner accountable for its performance and its incidents — the same principle as any other risk register entry. Unowned tools are ungoverned tools.</p>
+<p><strong>5 — Keep humans in the loop.</strong> For any use that touches care, define where human review sits and how staff escalate when the tool gets it wrong. An AI-drafted note is a draft until a human accepts it; a risk flag is an input to clinical judgement, not a replacement for it. Route these controls through your existing clinical governance framework rather than building a parallel one.</p>
+<p><strong>6 — Put vendors through due diligence.</strong> Ask where data goes, whether it is used for training, where it is stored, what happens on termination, how the model is updated, and how the vendor tells you when capability changes. A vendor's willingness to answer transparently is itself a signal — the same lesson the ASD draws about <a href="https://hg-au.com/articles/asd-post-quantum-vendor-questions.html">technology vendors generally</a>. Build the questions into procurement and contract renewal as standing items, not one-off projects.</p>
+<p><strong>7 — Protect the data.</strong> Apply your privacy and security controls to AI pathways specifically: what personal information can enter which tools, de-identification expectations, retention, and offshore disclosure. If you cannot say what data a tool sends where, it has not been assessed.</p>
+<p><strong>8 — Monitor and report to the board.</strong> AI tools change under your feet — models drift, vendors ship new capabilities, staff find new uses. Review the inventory on a cycle, track incidents and near-misses involving AI, and report the position to the governing body on a regular cadence: what is in use, at what risk tier, what changed, what went wrong, what was done. This is where AI governance joins your broader <a href="https://hg-au.com/aged-care-board-reporting.html">board reporting and assurance</a> rather than living in an IT silo.</p>
+<h2>Six questions for the board</h2>
+<ol><li>Do we have a current inventory of every AI use in the organisation — including features embedded in software we already own?</li><li>Which of those uses can affect care outcomes, resident rights or personal information, and have they been risk-tiered?</li><li>Does every AI use have a named owner, and a policy that staff actually know about?</li><li>Where AI touches care, where exactly does human review sit — and can staff describe the escalation path?</li><li>What did we ask our AI vendors about data use, training, storage and capability changes — and what did they answer?</li><li>When did the governing body last see an AI report: inventory, risk position, incidents and changes?</li></ol>
+<p>If your board cannot answer these with documented evidence, that is not unusual — most boards cannot yet. It is, however, the gap to close, because the duties these questions map to are already in force.</p>
+<h2>What providers should do this quarter</h2>
+<ol><li>Commission the AI inventory — a focused piece of work, not a program.</li><li>Risk-tier the inventory and pick the two or three highest-risk uses for immediate review.</li><li>Issue an interim acceptable-use position to staff, even one page, while the fuller policy is developed.</li><li>Add AI vendor questions to your procurement and contract-renewal checklists.</li><li>Put AI on the governing body agenda with a standing reporting slot.</li></ol>
+<p>Holistic Governance provides <a href="https://hg-au.com/ai-technology.html">AI governance advisory, independent vendor assessment and AI training</a> — and for clinical settings, extends your existing <a href="https://hg-au.com/healthcare.html">clinical governance framework</a> to cover AI, rather than bolting on a parallel structure. You can read more about our approach and experience <a href="https://hg-au.com/about.html">here</a>.</p>
+<h2>Sources</h2>
+<ul><li>Aged Care Act 2024 (Cth) — provider duty (s 179) and responsible person due diligence duty (s 180). <a href="https://www.legislation.gov.au/C2024A00104/latest/text">legislation.gov.au</a></li><li>Strengthened Aged Care Quality Standards — <a href="https://www.agedcarequality.gov.au/strengthened-quality-standards">Aged Care Quality and Safety Commission</a></li><li>Privacy Act 1988 (Cth) and the Australian Privacy Principles — <a href="https://www.oaic.gov.au/privacy/australian-privacy-principles">OAIC</a></li><li>Australia's AI Ethics Principles — <a href="https://www.industry.gov.au/publications/australias-artificial-intelligence-ethics-principles">Department of Industry, Science and Resources</a></li><li>ISO/IEC 42001 — Artificial intelligence management systems — <a href="https://www.iso.org/standard/42001">ISO</a></li><li>National Model Clinical Governance Framework — <a href="https://www.safetyandquality.gov.au/topic/national-model-clinical-governance-framework">ACSQHC</a></li><li>Regulation of software-based medical devices — <a href="https://www.tga.gov.au/how-we-regulate/manufacturing/manufacture-medical-device/manufacture-specific-types-medical-devices/regulation-software-based-medical-devices">Therapeutic Goods Administration</a></li></ul>
+<p>*This article is published by Holistic Governance for sector information purposes only. It reflects the position as at the date of issue and does not constitute legal, regulatory, audit or financial advice. Verify any specific provision on the Federal Register of Legislation (legislation.gov.au) and current regulator guidance before relying on it. © Holistic Governance 2026.*</p>
+  </div>
+  <aside class="author-bio" aria-label="About the author">
+    <div class="author-bio-header">
+      <img src="../headshotimage.png" alt="Naomi Alefelder" width="96" height="96" />
+      <div>
+        <h2>About the author</h2>
+        <p class="author-bio-role">Naomi Alefelder &middot; Founding Director, Holistic Governance</p>
+      </div>
+    </div>
+    <p>Registered nurse and governance specialist with over a decade of senior leadership across aged care, hospital, day surgery, disability and community health. MBA (Charles Sturt University), AICD Foundations of Directorship, Lead Auditor (Exemplar Global). Board Director, Caladenia Dementia Care.</p>
+    <p class="author-bio-links"><a href="../about.html">More about Naomi</a> &middot; <a href="https://www.linkedin.com/in/naomi-alefelder" target="_blank" rel="noopener">LinkedIn</a> &middot; <a href="../proposal-enquiry.html">Request a proposal</a></p>
+  </aside>
+  <aside class="related-solutions" aria-label="Related solutions">
+    <h2>Related Solutions</h2>
+    <ul>
+      <li><a href="../ai-technology.html">AI &amp; Technology Governance</a></li>
+      <li><a href="../healthcare.html">Healthcare Governance</a></li>
+    </ul>
+  </aside>
+  <nav class="article-footer-nav" aria-label="Article navigation">
+    <a href="../resources.html">&larr; All articles</a>
+    <a href="../proposal-enquiry.html">Request a Proposal</a>
+    <a href="../healthcare.html">Our Solutions</a>
+  </nav>
+</article>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <a href="../index.html" class="footer-logo" style="text-decoration:none;"><img src="../logo-hg-trimmed.png" alt="Holistic Governance" width="351" height="524"><span class="logo-name">Holistic <span>Governance</span></span></a>
+      <p class="footer-tagline">Improving clarity and confidence in governance through knowledge, data, and technology.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Navigate</h4>
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../about.html">About</a></li>
+        <li><a href="../healthcare.html">Solutions</a></li>
+        <li><a href="../resources.html">Resources</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Get in Touch</h4>
+      <div class="footer-contact-item"><a href="mailto:info@hg-au.com">info@hg-au.com</a></div>
+      <div class="footer-contact-item"><a href="tel:0405515300">0405 515 300</a></div>
+      <div class="footer-contact-item" style="margin-top: 0.5rem;"><a href="../proposal-enquiry.html">Request a Proposal</a></div>
+      <div class="footer-contact-item"><a href="https://www.linkedin.com/company/hg-au/" target="_blank" rel="noopener">LinkedIn</a></div>
+    </div>
+    <div class="footer-col">
+      <h4>Where We Work</h4>
+      <address style="font-style:normal; font-size:0.85rem; line-height:1.6; color:var(--text-light); margin-bottom:0.6rem;">Melbourne Metro and Regional</address>
+      <ul><li>Australia</li><li>New Zealand</li></ul>
+      <p style="font-size:0.8rem; color:var(--text-light); margin-top:0.8rem;">Remote &amp; on-site delivery</p>
+    </div>
+  </div>
+  <div class="footer-bottom"><p>&copy; 2026 Holistic Governance. All rights reserved.</p></div>
+</footer>
+
+<script>
+document.addEventListener('click', function(e) {
+  document.querySelectorAll('.nav-contact-popup.open').forEach(function(popup) {
+    if (!popup.parentElement.contains(e.target)) popup.classList.remove('open');
+  });
+});
+window.addEventListener('scroll', function() {
+  document.querySelector('nav').classList.toggle('scrolled', window.scrollY > 60);
+});
+</script>
+</body>
+</html>

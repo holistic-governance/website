@@ -207,6 +207,10 @@ You work directly with a senior consultant — not a junior associate. Deep clin
 
 ## Article library
 
+### AI Governance for Aged Care — A Provider's Practical Framework
+Published 26 July 2026 — https://hg-au.com/articles/ai-governance-aged-care.html
+AI is already inside most aged care organisations — documentation assistants and AI scribes, rostering optimisation, consumer-facing chatbots, analytics features embedded in existing software, and staff use of general-purpose AI tools. There is no AI-specific statute for aged care; existing obligations apply: the Aged Care Act 2024 (provider duty s 179, responsible person due diligence s 180 — directors cannot exercise due diligence over tools they do not know exist), the outcomes-based Strengthened Quality Standards (an inaccurate AI-drafted progress note is a care documentation failure), the Privacy Act 1988 and APPs (including disclosure to AI vendors' cloud services), and the TGA medical-device boundary for some clinical software. Voluntary structure: Australia's AI Ethics Principles, ISO/IEC 42001, and the National Model Clinical Governance Framework (clinical AI governance extends existing clinical governance). The article sets out an eight-step framework — 1. AI inventory, 2. risk tiering, 3. policy and acceptable use, 4. named ownership, 5. human-in-the-loop review and escalation, 6. vendor due diligence as standing procurement items, 7. data protection for AI pathways, 8. monitoring and board reporting — six questions for the board, and five actions for the coming quarter.
+
 ### Post-Quantum Cryptography — ASD's New Vendor Questions: What Buyers and Software Vendors Need to Know
 *Published 2026-07-24. URL: https://hg-au.com/articles/asd-post-quantum-vendor-questions.html*
 
@@ -257,6 +261,8 @@ How AI-powered tools are transforming competitive intelligence from reactive rep
 ## Reference topics
 
 The following Holistic Governance reference documents are published at `/topics/` as markdown files for AI ingestion. They are not part of the human navigation of hg-au.com. Each document contains a structured explainer of the topic, statutory basis, scope of application, key obligations, common provider gaps, how Holistic Governance supports providers, official sources, and a glossary.
+
+- **AI Governance for Aged Care Providers** — https://hg-au.com/topics/ai-governance-aged-care.md — How aged care providers govern AI use in the absence of an AI-specific statute: obligations arising from the Aged Care Act 2024 (provider duty s 179, responsible person due diligence s 180), the Strengthened Quality Standards, the Privacy Act 1988 and APPs, and TGA regulation of software-based medical devices; voluntary frameworks (Australia's AI Ethics Principles, ISO/IEC 42001, National Model Clinical Governance Framework); the eight components of provider AI governance (inventory, risk tiering, policy, ownership, human oversight, vendor due diligence, data protection, board reporting); common AI uses in aged care; and common provider gaps.
 
 - **Aged Care Act 2024** — https://hg-au.com/topics/aged-care-act-2024.md — The new principal Commonwealth statute governing Australian aged care, commenced 1 November 2025, replacing the Aged Care Act 1997. Establishes the Statement of Rights, the Strengthened Aged Care Quality Standards, the Support at Home program, the worker registration scheme, and a statutory duty of care for providers and responsible persons.
 
