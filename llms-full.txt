@@ -1,8 +1,8 @@
 # Holistic Governance — Full Content for AI Ingestion
 
-> Assurance over assumptions. Specialist clinical governance, risk and technology consultancy for healthcare, aged care and disability providers across Australia and New Zealand. Founded by Naomi Alefelder. Based in Heidelberg, Victoria.
+> Assurance over assumptions. Specialist clinical governance, board reporting, board assurance and risk consultancy for healthcare, aged care and disability providers across Australia and New Zealand. Founded by Naomi Alefelder. Based in Heidelberg, Victoria.
 
-This document is the full machine-readable content map of hg-au.com, intended for ingestion by AI search and assistant systems. Last updated: 2026-07-24.
+This document is the full machine-readable content map of hg-au.com, intended for ingestion by AI search and assistant systems. Last updated: 2026-07-26.
 
 ---
 
@@ -21,7 +21,7 @@ This document is the full machine-readable content map of hg-au.com, intended fo
 **Company LinkedIn:** https://www.linkedin.com/company/hg-au/
 
 ### What we do
-Holistic Governance is a specialist consultancy providing governance, risk, compliance and data intelligence services for healthcare and regulated organisations across Australia and New Zealand. We help aged care providers, hospitals, disability services and digital health organisations navigate clinical governance, accreditation and regulatory requirements.
+Holistic Governance is a specialist consultancy providing governance, risk, compliance and data intelligence services for healthcare and regulated organisations across Australia and New Zealand. We help aged care providers, hospitals, disability services and digital health organisations navigate aged care governance, clinical governance, board reporting and board assurance, accreditation and regulatory requirements.
 
 ### Who we work with
 - Residential aged care providers
@@ -89,6 +89,9 @@ End-to-end support for the new Aged Care Act 2024 — gap analysis, governance u
 ### Clinical governance framework design
 Independent review and design of your organisation's clinical governance framework — board oversight, accountability, risk and quality assurance — with practical recommendations to strengthen safeguards and meet regulatory expectations.
 
+### Board reporting and board assurance for aged care providers
+Board reporting and board assurance consultancy for aged care and healthcare governing bodies — independent review and redesign of board packs against regulatory expectations, board assurance frameworks that map Aged Care Act 2024 duties (provider duty under section 179, responsible person due diligence under section 180) and Strengthened Aged Care Quality Standards obligations to evidence sources, Power BI board reporting dashboards, and board briefings on governance duties. Includes the free Board Reporting Health Check self-assessment. See https://hg-au.com/aged-care-board-reporting.html
+
 ### AI governance advisory
 AI governance frameworks tailored to healthcare, aged care and disability providers. Includes AI risk assessments, responsible AI policy design, model oversight and integration with existing risk and quality systems. See https://hg-au.com/ai-technology.html
 
@@ -146,6 +149,9 @@ Aged care providers, hospitals, day procedure centres, community and disability 
 
 ### What data and reporting services does Holistic Governance offer?
 Power BI and Excel-based dashboards that turn fragmented operational data into board-ready insights — quality indicators, risk registers, incident trends, complaints, workforce metrics and compliance status.
+
+### What board reporting and board assurance services does Holistic Governance offer?
+Independent review and redesign of board reporting for aged care and healthcare governing bodies, board assurance frameworks that map statutory duties under the Aged Care Act 2024 and the Strengthened Aged Care Quality Standards to evidence sources, Power BI board reporting dashboards, and board briefings and governance coaching. A free Board Reporting Health Check self-assessment is available at https://hg-au.com/board-reporting-health-check.html and the full service is described at https://hg-au.com/aged-care-board-reporting.html
 
 ### How does Holistic Governance help with AI and technology governance?
 AI governance advisory services including AI risk assessment, responsible AI frameworks, data governance for AI readiness, and digital transformation strategy. We help organisations adopt emerging technologies safely within their existing governance and regulatory obligations.

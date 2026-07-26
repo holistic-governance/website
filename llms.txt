@@ -1,8 +1,8 @@
 # Holistic Governance
 
-> Assurance over assumptions. Specialist clinical governance, risk and technology consultancy for healthcare, aged care and disability providers across Australia and New Zealand. Founded by Naomi Alefelder. Based in Heidelberg, Victoria. Servicing Australia and New Zealand remotely with on-site delivery available.
+> Assurance over assumptions. Specialist clinical governance, board reporting, board assurance and risk consultancy for healthcare, aged care and disability providers across Australia and New Zealand. Founded by Naomi Alefelder. Based in Heidelberg, Victoria. Servicing Australia and New Zealand remotely with on-site delivery available.
 
-Holistic Governance helps boards and executives strengthen assurance frameworks, simplify NSQHS and Strengthened Aged Care Quality Standards compliance, and turn fragmented operational data into board-ready insight. Engagements span clinical governance reviews, accreditation readiness, aged care audits under the Aged Care Act 2024, AI governance frameworks, FHIR interoperability advisory, and Power BI dashboards.
+Holistic Governance helps boards and executives strengthen aged care governance, board reporting and board assurance, simplify NSQHS and Strengthened Aged Care Quality Standards compliance, and turn fragmented operational data into board-ready insight. Engagements span board reporting and assurance reviews, clinical governance reviews, accreditation readiness, aged care audits under the Aged Care Act 2024, AI governance frameworks, FHIR interoperability advisory, and Power BI board reporting dashboards.
 
 Naomi Alefelder is a registered nurse (AHPRA NMW000180905) with an MBA (Charles Sturt University), AICD Foundations of Directorship, and Exemplar Global lead auditor certification (PwC). Over a decade of senior leadership in aged care, hospital, day surgery, disability and community health governance.
 
@@ -10,6 +10,7 @@ Naomi Alefelder is a registered nurse (AHPRA NMW000180905) with an MBA (Charles 
 
 - [About Holistic Governance + Naomi Alefelder](https://hg-au.com/about.html): Founder background, qualifications, board roles, sector experience, governance philosophy.
 - [Healthcare solutions](https://hg-au.com/healthcare.html): Service catalogue — NSQHS readiness, ACQS audits, clinical governance, Power BI board reporting, FHIR advisory, interim quality leadership.
+- [Board reporting & board assurance for aged care providers](https://hg-au.com/aged-care-board-reporting.html): Board reporting and board assurance consultancy — board pack review and redesign, assurance frameworks mapped to the Aged Care Act 2024 and Strengthened Quality Standards, Power BI board reporting dashboards, board briefings. Includes the free Board Reporting Health Check.
 - [Resources](https://hg-au.com/resources.html): Articles, frameworks and explainers on aged care, clinical governance, AI governance, data governance and interoperability.
 - [AI & Technology consultancy](https://hg-au.com/ai-technology.html): AI governance, clinical AI governance, AI vendor assessment, medical device advisory, AI optimisation training, technology risk and privacy.
 - [Prototype builds](https://hg-au.com/app-development.html): Working app, dashboard and workflow prototypes designed around how your organisation actually works, with governance and privacy built in.
@@ -18,6 +19,7 @@ Naomi Alefelder is a registered nurse (AHPRA NMW000180905) with an MBA (Charles 
 
 ## Services
 
+- [Board reporting and board assurance for aged care providers](https://hg-au.com/aged-care-board-reporting.html): Independent review and redesign of board packs, board assurance frameworks that map Aged Care Act 2024 duties (sections 179 and 180) and Strengthened Quality Standards obligations to evidence sources, and board briefings on governance duties. Core aged care governance offering for governing bodies.
 - [NSQHS Standards readiness and accreditation support](https://hg-au.com/healthcare.html): Pre-survey gap analysis against NSQHS Second Edition, mock surveys, interview coaching, remediation plans for hospitals and day procedure services.
 - [Aged Care Quality Standards compliance audit](https://hg-au.com/healthcare.html): Independent audit against the Strengthened Aged Care Quality Standards — evidence review, on-site or remote assessment, prioritised action plan for residential, home care and respite providers.
 - [Aged Care Act 2024 compliance support](https://hg-au.com/healthcare.html): Gap analysis, governance updates, board briefings, policy revisions and ongoing assurance under the new regime.

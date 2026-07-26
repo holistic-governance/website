@@ -1,0 +1,512 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Board Reporting &amp; Board Assurance for Aged Care Providers | Holistic Governance</title>
+    <meta name="description" content="Board reporting and board assurance consultancy for aged care providers. Strengthen aged care governance under the Aged Care Act 2024 — board pack reviews, assurance frameworks, and Power BI board reporting dashboards. Start with the free Board Reporting Health Check." />
+    <meta name="robots" content="index,follow" />
+    <meta name="author" content="Naomi Alefelder" />
+    <link rel="canonical" href="https://hg-au.com/aged-care-board-reporting.html" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Holistic Governance" />
+    <meta property="og:locale" content="en_AU" />
+    <meta property="og:url" content="https://hg-au.com/aged-care-board-reporting.html" />
+    <meta property="og:title" content="Board Reporting &amp; Board Assurance for Aged Care Providers | Holistic Governance" />
+    <meta property="og:description" content="Board reporting and board assurance for aged care governing bodies — board pack reviews, assurance frameworks, and Power BI dashboards. Free Board Reporting Health Check." />
+    <meta property="og:image" content="https://hg-au.com/og-image-v3.png" />
+    <meta property="og:image:width" content="2400" />
+    <meta property="og:image:height" content="1260" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Board Reporting &amp; Board Assurance for Aged Care Providers | Holistic Governance" />
+    <meta name="twitter:description" content="Board reporting and board assurance for aged care governing bodies — board pack reviews, assurance frameworks, and Power BI dashboards." />
+    <meta name="twitter:image" content="https://hg-au.com/og-image-v3.png" />
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="preload" as="image" href="logo-hg-trimmed.png" fetchpriority="high">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=DM+Sans:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css">
+    <style>
+      .breadcrumb a:hover {
+        text-decoration: underline;
+      }
+
+      section {
+        padding: 5rem 4rem;
+      }
+      .section-intro {
+        color: rgba(241,245,249,0.8);
+        font-size: 1rem;
+        line-height: 1.8;
+        max-width: 760px;
+        margin-bottom: 3rem;
+      }
+      .btn-outline {
+        display: inline-block; padding: 0.9rem 2.2rem;
+        background: none; color: var(--sky);
+        font-family: 'DM Sans', sans-serif; font-size: 0.85rem;
+        letter-spacing: 0.08em; text-transform: uppercase;
+        text-decoration: none; border: 1px solid var(--sky);
+        border-radius: 2px; cursor: pointer;
+        transition: background 0.3s, color 0.3s;
+      }
+      .btn-outline:hover { background: var(--sky); color: var(--navy); }
+
+      /* WHY NOW */
+      .why-band { background: var(--navy); }
+      .why-band p {
+        color: rgba(241,245,249,0.8); font-size: 0.98rem; line-height: 1.9;
+        max-width: 760px; margin-bottom: 1.4rem;
+      }
+      .why-band p strong { color: var(--white); font-weight: 500; }
+
+      /* CARD GRIDS */
+      .br-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+      }
+      .br-grid.four { grid-template-columns: repeat(2, 1fr); max-width: 1100px; }
+      .br-card {
+        background: var(--navy-mid);
+        border: 1px solid var(--border);
+        padding: 2.5rem 2rem;
+        border-radius: 2px;
+        transition: border-color 0.3s;
+      }
+      .br-card:hover { border-color: var(--sky); }
+      .br-card svg { width: 36px; height: 36px; color: var(--sky); margin-bottom: 1.2rem; }
+      .br-card h3 {
+        font-family: "Cormorant Garamond", serif;
+        font-size: 1.4rem;
+        color: var(--white);
+        margin-bottom: 0.8rem;
+      }
+      .br-card p { color: rgba(241,245,249,0.8); font-size: 0.9rem; line-height: 1.75; }
+      .br-card .br-link { display: inline-block; margin-top: 1rem; color: var(--sky); font-size: 0.84rem; font-weight: 500; text-decoration: none; }
+      .br-card .br-link:hover { text-decoration: underline; }
+
+      /* LEAD MAGNET BAND */
+      .leadmag { background: var(--navy-mid); }
+      .leadmag-card {
+        max-width: 760px; padding: 2.8rem;
+        background: var(--navy); border: 1px solid var(--border-mid); border-radius: 3px;
+        position: relative; overflow: hidden;
+      }
+      .leadmag-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: var(--sky); }
+      .leadmag-card h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.7rem; font-weight: 400; color: var(--white); margin-bottom: 1rem; }
+      .leadmag-card p { color: rgba(241,245,249,0.8); font-size: 0.95rem; line-height: 1.8; margin-bottom: 1.6rem; }
+      .leadmag-card ul { list-style: none; margin: 0 0 1.8rem; padding: 0; }
+      .leadmag-card li { font-size: 0.9rem; color: rgba(241,245,249,0.8); padding: 0.35rem 0 0.35rem 1.6rem; position: relative; }
+      .leadmag-card li::before { content: '\2713'; position: absolute; left: 0; color: var(--sky); font-weight: 700; }
+
+      /* RELATED READING */
+      .related ul { list-style: none; margin: 1.5rem 0 0; padding: 0; max-width: 760px; }
+      .related li { border-bottom: 1px solid var(--border); padding: 1.1rem 0; }
+      .related a { color: var(--white); text-decoration: none; font-size: 0.98rem; transition: color 0.2s; }
+      .related a:hover { color: var(--sky); }
+      .related .related-note { display: block; color: rgba(241,245,249,0.6); font-size: 0.84rem; margin-top: 0.3rem; }
+
+      @media (max-width: 900px) {
+        .page-hero, section { padding-left: 1.5rem; padding-right: 1.5rem; }
+        .br-grid, .br-grid.four { grid-template-columns: 1fr; }
+        .leadmag-card { padding: 2rem 1.5rem; }
+      }
+    </style>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "@id": "https://hg-au.com/aged-care-board-reporting.html#service",
+      "name": "Board Reporting & Board Assurance for Aged Care Providers",
+      "serviceType": ["Board Reporting Consultancy", "Board Assurance Consultancy", "Aged Care Governance Consultancy"],
+      "url": "https://hg-au.com/aged-care-board-reporting.html",
+      "description": "Board reporting and board assurance consultancy for aged care providers — board pack review and redesign, assurance frameworks aligned to the Aged Care Act 2024 and Strengthened Aged Care Quality Standards, and Power BI board reporting dashboards.",
+      "provider": { "@id": "https://hg-au.com/#organization" },
+      "areaServed": [
+        { "@type": "Country", "name": "Australia" },
+        { "@type": "Country", "name": "New Zealand" }
+      ],
+      "audience": {
+        "@type": "BusinessAudience",
+        "audienceType": "Aged care providers, boards and governing bodies, hospitals, day procedure services, disability and community services"
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Board Reporting & Board Assurance Services",
+        "itemListElement": [
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Board reporting review and redesign" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Board assurance and governance framework design" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Power BI board reporting dashboards" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Board briefings and governance coaching" } }
+        ]
+      }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "@id": "https://hg-au.com/aged-care-board-reporting.html#webpage",
+      "url": "https://hg-au.com/aged-care-board-reporting.html",
+      "name": "Board Reporting & Board Assurance for Aged Care Providers | Holistic Governance",
+      "description": "Board reporting and board assurance consultancy for aged care providers — board pack reviews, assurance frameworks, and Power BI board reporting dashboards.",
+      "isPartOf": { "@id": "https://hg-au.com/#website" },
+      "about": { "@id": "https://hg-au.com/#organization" },
+      "inLanguage": "en-AU",
+      "speakable": {
+        "@type": "SpeakableSpecification",
+        "cssSelector": [".page-hero h1", ".page-hero p", "section[aria-labelledby='br-faq-heading'] details summary", "section[aria-labelledby='br-faq-heading'] details > div"]
+      }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is board assurance?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Board assurance is the evidence a governing body relies on to be confident that care, compliance and risk are actually being managed as intended — not just reported as managed. An assurance approach maps each key obligation and material risk to a source of evidence, such as audits, quality indicators, trend data, complaints themes and external reviews, so directors can see how they know, rather than relying on management assertion alone."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What should aged care board reporting include?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Aged care board reporting should cover clinical and quality indicators (such as falls, medication safety and pressure injuries), complaints and feedback themes, SIRS reportable incidents and their trends, care minutes performance, Quality Indicator Program results and Star Ratings, workforce and mandatory training metrics, risk register movements, and financial and prudential obligations. Metrics should be trended over time, compared against targets or benchmarks, and flag exceptions so a non-executive director can absorb them quickly."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does the Aged Care Act 2024 change board reporting?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The Aged Care Act 2024 places a statutory duty on registered providers (section 179) and a personal due diligence duty on responsible persons (section 180), who must take reasonable steps to ensure the provider complies with its obligations. In practice, that due diligence depends on reliable, current information about care, quality and compliance reaching the governing body — and governing bodies must also consider reports from their Quality Care Advisory Body. Board reporting is the mechanism these duties rely on."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you only work with aged care providers?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Aged care governance is a core focus, but we provide board reporting and board assurance support to hospitals and day procedure services (aligned to the NSQHS Clinical Governance Standard), disability and community services, and boards and executive teams across the broader health and human services sector in Australia and New Zealand."
+          }
+        }
+      ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://hg-au.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Solutions", "item": "https://hg-au.com/healthcare.html" },
+        { "@type": "ListItem", "position": 3, "name": "Board Reporting & Board Assurance", "item": "https://hg-au.com/aged-care-board-reporting.html" }
+      ]
+    }
+    </script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9PMGXF9Q9T"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-9PMGXF9Q9T');
+      gtag('config', 'AW-18073082985');
+    </script>
+  </head>
+  <body>
+    <nav>
+      <a href="index.html" class="logo"><img src="logo-hg-trimmed.png" alt="Holistic Governance" width="351" height="524"><span class="logo-name">Holistic <span>Governance</span></span></a>
+      <button class="hamburger" aria-label="Menu" onclick="this.nextElementSibling.classList.toggle('open')">&#9776;</button>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="healthcare.html" class="active">Solutions</a></li>
+        <li><a href="resources.html">Resources</a></li>
+        <li class="nav-contact-wrapper">
+          <button class="nav-cta" onclick="this.nextElementSibling.classList.toggle('open')">Contact</button>
+          <div class="nav-contact-popup">
+            <a href="tel:0405515300"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>0405 515 300</a>
+            <a href="mailto:info@hg-au.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>info@hg-au.com</a>
+            <a href="proposal-enquiry.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>Submit a Proposal</a>
+          </div>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="page-hero">
+      <div class="breadcrumb">
+        <a href="index.html">Home</a> / <a href="healthcare.html">Solutions</a> / Board Reporting &amp; Board Assurance
+      </div>
+      <h1>Board Reporting &amp; Board Assurance for Aged Care Providers</h1>
+      <p>
+        Good governance runs on good information. We help aged care and healthcare
+        governing bodies build board reporting and board assurance they can rely on —
+        evidence, trends and exceptions, not assumptions.
+      </p>
+    </div>
+
+    <!-- WHY NOW -->
+    <section class="why-band fade-in">
+      <div class="section-label">Aged Care Governance</div>
+      <h2>Board reporting is now a statutory governance question</h2>
+      <p>
+        Under the <strong>Aged Care Act 2024</strong>, registered providers carry a statutory duty
+        to comply with their obligations (section&nbsp;179), and responsible persons — including
+        directors — carry a personal due diligence duty (section&nbsp;180) to take reasonable steps
+        to ensure the provider complies. Directors cannot discharge a due diligence duty on
+        information they never see.
+      </p>
+      <p>
+        The <strong>Strengthened Aged Care Quality Standards</strong> expect governing bodies to set
+        priorities, monitor performance and drive improvement — and governing bodies must consider
+        reports from their Quality Care Advisory Body. That only works when board reporting is
+        accurate, trended, and arrives on time.
+      </p>
+      <p>
+        In practice, many board packs are assembled manually from disconnected spreadsheets, present
+        point-in-time numbers with no trend, and leave directors asking the same question every
+        meeting: <strong>how do we know?</strong> Closing that gap — between what management reports
+        and what the board can evidence — is what board assurance means.
+      </p>
+    </section>
+
+    <!-- WHAT GOOD LOOKS LIKE -->
+    <section style="background:var(--navy-mid);" class="fade-in">
+      <div class="section-label">Board Assurance</div>
+      <h2>What strong board assurance looks like</h2>
+      <p class="section-intro">
+        Three characteristics separate board reporting that provides genuine assurance from
+        reporting that simply fills a board pack.
+      </p>
+      <div class="br-grid">
+        <div class="br-card">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+          <h3>A single source of truth</h3>
+          <p>Every number in the board pack reconciles with the operational system it came from, definitions don't drift between meetings, and one owner is accountable for accuracy.</p>
+        </div>
+        <div class="br-card">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 3v18h18"/><path d="M7 16l4-4 4 4 4-8"/></svg>
+          <h3>Trends and exceptions</h3>
+          <p>Metrics are trended over time against targets and benchmarks, exceptions past agreed thresholds are flagged automatically, and emerging risks surface before they become notifiable events.</p>
+        </div>
+        <div class="br-card">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 11l3 3L22 4M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg>
+          <h3>A closed action loop</h3>
+          <p>Every reported issue has an owner and due date, open actions are tracked to closure, and the board can see whether interventions actually moved the metric.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW WE HELP -->
+    <section style="background:var(--navy);" class="fade-in">
+      <div class="section-label">How We Help</div>
+      <h2>Board reporting &amp; assurance services</h2>
+      <p class="section-intro">
+        Designed by a governance specialist — a registered nurse and lead auditor with board
+        experience — so the reporting mirrors your real regulatory obligations, not a generic template.
+      </p>
+      <div class="br-grid four">
+        <div class="br-card">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+          <h3>Board reporting review &amp; redesign</h3>
+          <p>Independent review of your current board pack against regulatory expectations and good-practice guidance — what's missing, what's noise, and a redesigned reporting structure at board altitude.</p>
+        </div>
+        <div class="br-card">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          <h3>Board assurance &amp; governance frameworks</h3>
+          <p>Map your obligations under the Aged Care Act 2024 and the Strengthened Quality Standards to evidence sources, so every duty has a line of sight from the board to the floor. Part of our <a href="healthcare.html" style="color:var(--sky); text-decoration:none;">clinical governance consultancy</a>.</p>
+        </div>
+        <div class="br-card">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 3v18h18"/><path d="M7 16l4-4 4 4 4-8"/></svg>
+          <h3>Power BI board reporting dashboards</h3>
+          <p>Custom dashboards that turn fragmented operational data into board-ready insight — quality indicators, incidents, complaints, care minutes, risk and compliance status — refreshed automatically, not re-keyed each cycle.</p>
+          <a href="reporting-dashboards.html" class="br-link">See the interactive demo &rarr;</a>
+        </div>
+        <div class="br-card">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+          <h3>Board briefings &amp; governance coaching</h3>
+          <p>Practical briefings for boards and executives on their governance duties, what to ask of management reporting, and how to read clinical and quality data with confidence.</p>
+        </div>
+      </div>
+      <div style="margin-top:2.5rem;">
+        <a href="proposal-enquiry.html" class="btn-outline">Request a Proposal</a>
+      </div>
+    </section>
+
+    <!-- LEAD MAGNET -->
+    <section class="leadmag fade-in">
+      <div class="section-label">Free Resource</div>
+      <h2>Start with the free Board Reporting Health Check</h2>
+      <p class="section-intro">
+        Not sure where your reporting stands? Score it first. The Board Reporting Health Check
+        is a free, ten-minute self-assessment built for aged care and healthcare boards.
+      </p>
+      <div class="leadmag-card">
+        <h3>Board Reporting Health Check</h3>
+        <p>
+          Work through 30+ checkpoints across seven dimensions of board-ready reporting — from
+          single source of truth to action tracking — plus a sector module for aged care,
+          hospital or disability settings.
+        </p>
+        <ul>
+          <li>Instant score with an At-risk / Developing / Board-ready band</li>
+          <li>Aligned to the Aged Care Act 2024, Strengthened Quality Standards, NSQHS and AICD guidance</li>
+          <li>Free, browser-based, and printable for your next board meeting</li>
+        </ul>
+        <a href="board-reporting-health-check.html" class="btn-outline">Get the Health Check &rarr;</a>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section style="background:var(--navy);" class="fade-in" aria-labelledby="br-faq-heading">
+      <div class="section-label">Common Questions</div>
+      <h2 id="br-faq-heading">Board reporting &amp; assurance FAQs</h2>
+      <div style="margin-top:2.5rem; max-width:760px;">
+        <details style="border:1px solid var(--border); border-radius:2px; margin-bottom:1rem;">
+          <summary style="padding:1.5rem 2rem; cursor:pointer; font-family:'Cormorant Garamond',serif; font-size:1.2rem; color:var(--white); font-weight:400; list-style:none;">What is board assurance?</summary>
+          <div style="padding:0 2rem 1.5rem; font-size:0.92rem; color:var(--text-mid); line-height:1.8;">Board assurance is the evidence a governing body relies on to be confident that care, compliance and risk are actually being managed as intended — not just reported as managed. An assurance approach maps each key obligation and material risk to a source of evidence, such as audits, quality indicators, trend data, complaints themes and external reviews, so directors can see how they know, rather than relying on management assertion alone.</div>
+        </details>
+        <details style="border:1px solid var(--border); border-radius:2px; margin-bottom:1rem;">
+          <summary style="padding:1.5rem 2rem; cursor:pointer; font-family:'Cormorant Garamond',serif; font-size:1.2rem; color:var(--white); font-weight:400; list-style:none;">What should aged care board reporting include?</summary>
+          <div style="padding:0 2rem 1.5rem; font-size:0.92rem; color:var(--text-mid); line-height:1.8;">Aged care board reporting should cover clinical and quality indicators (such as falls, medication safety and pressure injuries), complaints and feedback themes, SIRS reportable incidents and their trends, care minutes performance, Quality Indicator Program results and Star Ratings, workforce and mandatory training metrics, risk register movements, and financial and prudential obligations. Metrics should be trended over time, compared against targets or benchmarks, and flag exceptions so a non-executive director can absorb them quickly.</div>
+        </details>
+        <details style="border:1px solid var(--border); border-radius:2px; margin-bottom:1rem;">
+          <summary style="padding:1.5rem 2rem; cursor:pointer; font-family:'Cormorant Garamond',serif; font-size:1.2rem; color:var(--white); font-weight:400; list-style:none;">How does the Aged Care Act 2024 change board reporting?</summary>
+          <div style="padding:0 2rem 1.5rem; font-size:0.92rem; color:var(--text-mid); line-height:1.8;">The Aged Care Act 2024 places a statutory duty on registered providers (section 179) and a personal due diligence duty on responsible persons (section 180), who must take reasonable steps to ensure the provider complies with its obligations. In practice, that due diligence depends on reliable, current information about care, quality and compliance reaching the governing body — and governing bodies must also consider reports from their Quality Care Advisory Body. Board reporting is the mechanism these duties rely on.</div>
+        </details>
+        <details style="border:1px solid var(--border); border-radius:2px; margin-bottom:1rem;">
+          <summary style="padding:1.5rem 2rem; cursor:pointer; font-family:'Cormorant Garamond',serif; font-size:1.2rem; color:var(--white); font-weight:400; list-style:none;">Do you only work with aged care providers?</summary>
+          <div style="padding:0 2rem 1.5rem; font-size:0.92rem; color:var(--text-mid); line-height:1.8;">No. Aged care governance is a core focus, but we provide board reporting and board assurance support to hospitals and day procedure services (aligned to the NSQHS Clinical Governance Standard), disability and community services, and boards and executive teams across the broader health and human services sector in Australia and New Zealand.</div>
+        </details>
+      </div>
+    </section>
+
+    <!-- RELATED READING -->
+    <section class="related fade-in" style="background:var(--navy-mid);">
+      <div class="section-label">Go Deeper</div>
+      <h2>Related reading on board oversight</h2>
+      <ul>
+        <li>
+          <a href="articles/reform-without-reporting.html">Reform Without Reporting — the visibility gap six months into the new Aged Care Act</a>
+          <span class="related-note">Why the sector's own reporting gap makes provider-level board reporting matter more, not less.</span>
+        </li>
+        <li>
+          <a href="articles/liquidity-standard-targeted-review.html">Targeted Review on the New Liquidity Standard — what Category 6 providers need to know</a>
+          <span class="related-note">Includes six board-ready governance questions on financial and prudential obligations.</span>
+        </li>
+        <li>
+          <a href="resources.html">Browse all articles and resources</a>
+          <span class="related-note">Frameworks and explainers on aged care governance, clinical governance and data.</span>
+        </li>
+      </ul>
+    </section>
+
+    <div class="cta-band">
+      <h2>Ready to strengthen your board reporting and assurance?</h2>
+      <div class="contact-wrapper">
+        <button class="btn-dark" onclick="this.nextElementSibling.classList.toggle('open')">Get in Touch</button>
+        <div class="contact-popup">
+          <a href="tel:0405515300">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+            0405 515 300
+          </a>
+          <a href="mailto:info@hg-au.com">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            info@hg-au.com
+          </a>
+          <a href="proposal-enquiry.html">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+            Submit a Proposal
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <a href="index.html" class="footer-logo" style="text-decoration:none;"><img src="logo-hg-trimmed.png" alt="Holistic Governance" width="351" height="524"><span class="logo-name">Holistic <span>Governance</span></span></a>
+          <p class="footer-tagline">Improving clarity and confidence in governance through knowledge, data, and technology.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Navigate</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="healthcare.html">Solutions</a></li>
+            <li><a href="resources.html">Resources</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Get in Touch</h4>
+          <div class="footer-contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            <a href="mailto:info@hg-au.com">info@hg-au.com</a>
+          </div>
+          <div class="footer-contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+            <a href="tel:0405515300">0405 515 300</a>
+          </div>
+          <div class="footer-contact-item" style="margin-top: 0.5rem;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+            <a href="proposal-enquiry.html">Request a Proposal</a>
+          </div>
+          <div class="footer-contact-item">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.48-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 11.01-4.12 2.06 2.06 0 010 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z"/></svg>
+            <a href="https://www.linkedin.com/company/hg-au/" target="_blank" rel="noopener">LinkedIn</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Where We Work</h4>
+          <address style="font-style:normal; font-size:0.85rem; line-height:1.6; color:var(--text-light); margin-bottom:0.6rem;">Melbourne Metro and Regional</address>
+          <ul>
+            <li>Australia</li>
+            <li>New Zealand</li>
+          </ul>
+          <p style="font-size:0.8rem; color:var(--text-light); margin-top:0.8rem;">Remote & on-site delivery</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Holistic Governance. All rights reserved. · <a href="privacy.html" style="color:rgba(255,255,255,0.5);text-decoration:none">Privacy Policy</a></p>
+      </div>
+    </footer>
+
+    <button class="back-to-top" aria-label="Scroll to top" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 15l-6-6-6 6"/></svg>
+    </button>
+
+    <script>
+    document.addEventListener('click', function(e) {
+      document.querySelectorAll('.contact-popup.open, .nav-contact-popup.open').forEach(function(popup) {
+        if (!popup.parentElement.contains(e.target)) popup.classList.remove('open');
+      });
+    });
+
+    var observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.fade-in').forEach(function(el) { observer.observe(el); });
+
+    window.addEventListener('scroll', function() {
+      document.querySelector('nav').classList.toggle('scrolled', window.scrollY > 60);
+      document.querySelector('.back-to-top').classList.toggle('visible', window.scrollY > 400);
+    });
+    </script>
+  </body>
+</html>

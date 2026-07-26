@@ -76,7 +76,7 @@ These questions distil the obligations into board-ready governance prompts. They
 5. Are related-party transactions and conflicts of interest identified, registered and managed transparently?
 6. If we hold refundable deposits, accommodation bonds or entry contributions, are they safeguarded, properly accounted for, and recorded on the refundable deposit register required under section 150A?
 
-If your board cannot answer "yes" — with documented evidence — to all six, it is likely carrying material compliance risk under the Aged Care Act 2024.
+If your board cannot answer "yes" — with documented evidence — to all six, it is likely carrying material compliance risk under the Aged Care Act 2024. How those answers reach the board — as trended evidence rather than assertion — is a [board reporting and board assurance](https://hg-au.com/aged-care-board-reporting.html) question.
 
 ## Updated resources for the Financial and Prudential Standards
 

@@ -62,6 +62,8 @@ Source: Phoebe Loomes, ["Pressure mounts on the Prime Minister as aged care comp
 
 The current public snapshot — 1,261 new complaints in April 2026, 3,551 open, 41% closed within 60 days — is a sobering one whether you compare it to anything or not. But because the Commission has paused its analytical reporting, no provider board, executive team, quality lead, registered manager, journalist, member of the public, or member of Parliament can see whether this snapshot is improving, stable, or deteriorating. The visibility gap is itself a governance issue, before the underlying numbers are even considered.
 
+For providers, the practical response to a sector-level visibility gap is provider-level visibility: [board reporting and board assurance](https://hg-au.com/aged-care-board-reporting.html) that gives your own governing body the trend data, exception flags and closed feedback loop that the public reporting currently lacks.
+
 ## In closing
 
 Six months into the new Act, the absence of analytical sector performance data — and the corresponding loss of public transparency — is concerning for providers, boards, consumers, advocates, and the wider public. At this point in the reform, it falls short of what the sector and the public should reasonably expect.
