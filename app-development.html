@@ -155,8 +155,48 @@
       "inLanguage": "en-AU",
       "speakable": {
         "@type": "SpeakableSpecification",
-        "cssSelector": [".page-hero h1", ".page-hero p"]
+        "cssSelector": [".page-hero h1", ".page-hero p", "section[aria-labelledby='ad-faq-heading'] details summary", "section[aria-labelledby='ad-faq-heading'] details > div"]
       }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is a prototype build?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A working prototype of your app, dashboard or workflow tool — real screens and real user journeys, not static mockups — designed around how your team actually works, so you can test the idea with users, your board or investors before committing to full development."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What do we get at the end?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The working prototype itself, plus a handover pack and a build-ready roadmap — so whichever way your decision goes, you keep the thinking."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is a prototype the same as an MVP or a proof of concept?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The terms overlap. A proof of concept shows something is feasible; an MVP is a first releasable product. Our prototypes sit between the two: working software real users can trial, built to de-risk the investment decision without the cost of production engineering."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What happens if we decide to go ahead with a full build?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The prototype work carries forward — the mapped workflow, validated user journeys and build-ready roadmap give whichever development team you engage a tested starting point rather than a blank page."
+          }
+        }
+      ]
     }
     </script>
     <!-- Google tag (gtag.js) -->
@@ -231,6 +271,30 @@
             <p>Test with real users, keep the handover pack and build-ready roadmap, then decide whether to invest.</p>
           </div>
         </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section style="background:var(--navy-mid);" aria-labelledby="ad-faq-heading">
+      <div class="section-label">Common Questions</div>
+      <h2 id="ad-faq-heading">Prototype build FAQs</h2>
+      <div style="margin-top:2.5rem; max-width:760px;">
+        <details style="border:1px solid var(--border); border-radius:2px; margin-bottom:1rem;">
+          <summary style="padding:1.5rem 2rem; cursor:pointer; font-family:'Cormorant Garamond',serif; font-size:1.2rem; color:var(--white); font-weight:400; list-style:none;">What is a prototype build?</summary>
+          <div style="padding:0 2rem 1.5rem; font-size:0.92rem; color:var(--text-mid); line-height:1.8;">A working prototype of your app, dashboard or workflow tool — real screens and real user journeys, not static mockups — designed around how your team actually works, so you can test the idea with users, your board or investors before committing to full development.</div>
+        </details>
+        <details style="border:1px solid var(--border); border-radius:2px; margin-bottom:1rem;">
+          <summary style="padding:1.5rem 2rem; cursor:pointer; font-family:'Cormorant Garamond',serif; font-size:1.2rem; color:var(--white); font-weight:400; list-style:none;">What do we get at the end?</summary>
+          <div style="padding:0 2rem 1.5rem; font-size:0.92rem; color:var(--text-mid); line-height:1.8;">The working prototype itself, plus a handover pack and a build-ready roadmap — so whichever way your decision goes, you keep the thinking.</div>
+        </details>
+        <details style="border:1px solid var(--border); border-radius:2px; margin-bottom:1rem;">
+          <summary style="padding:1.5rem 2rem; cursor:pointer; font-family:'Cormorant Garamond',serif; font-size:1.2rem; color:var(--white); font-weight:400; list-style:none;">Is a prototype the same as an MVP or a proof of concept?</summary>
+          <div style="padding:0 2rem 1.5rem; font-size:0.92rem; color:var(--text-mid); line-height:1.8;">The terms overlap. A proof of concept shows something is feasible; an MVP is a first releasable product. Our prototypes sit between the two: working software real users can trial, built to de-risk the investment decision without the cost of production engineering.</div>
+        </details>
+        <details style="border:1px solid var(--border); border-radius:2px; margin-bottom:1rem;">
+          <summary style="padding:1.5rem 2rem; cursor:pointer; font-family:'Cormorant Garamond',serif; font-size:1.2rem; color:var(--white); font-weight:400; list-style:none;">What happens if we decide to go ahead with a full build?</summary>
+          <div style="padding:0 2rem 1.5rem; font-size:0.92rem; color:var(--text-mid); line-height:1.8;">The prototype work carries forward — the mapped workflow, validated user journeys and build-ready roadmap give whichever development team you engage a tested starting point rather than a blank page.</div>
+        </details>
       </div>
     </section>
 

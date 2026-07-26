@@ -188,8 +188,56 @@
       "inLanguage": "en-AU",
       "speakable": {
         "@type": "SpeakableSpecification",
-        "cssSelector": [".page-hero h1", ".page-hero p"]
+        "cssSelector": [".page-hero h1", ".page-hero p", "section[aria-labelledby='at-faq-heading'] details summary", "section[aria-labelledby='at-faq-heading'] details > div"]
       }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is AI governance?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "AI governance is the framework of policies, accountabilities and controls an organisation uses to decide which AI tools may be used, on what data, under whose oversight, and with what monitoring. In practice it covers an inventory of AI in use, risk tiering, an acceptable-use policy, human oversight of consequential outputs, vendor due diligence, and regular reporting to the board."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What does an independent AI vendor assessment cover?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A structured review of an AI vendor and its claims — what the tool actually does, what data it collects and where it goes, whether your information is used to train models, how the model is updated, privacy and consent implications, and whether a feature update changes the tool's regulatory status. The assessment is independent of any vendor."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do we need ISO/IEC 42001 certification?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Not necessarily. ISO/IEC 42001 is the international AI management system standard and a useful structure to borrow from, but most organisations are better served by a right-sized framework aligned to it than by pursuing certification from day one."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What AI training do you provide?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Practical AI literacy for boards, executives and frontline teams — prompting and workflow optimisation, and safe, acceptable use within your governance and privacy guardrails, aimed at building lasting in-house capability."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you only work in healthcare?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No — we work across sectors, with particular depth in healthcare and regulated environments. Clinical AI and medical-device advisory sit within our healthcare solutions."
+          }
+        }
+      ]
     }
     </script>
     <!-- Google tag (gtag.js) -->
@@ -304,6 +352,34 @@
         Have a digital idea to test?
       </p>
       <a href="app-development.html" class="btn-outline">Prototype Builds &rarr;</a>
+    </section>
+
+    <!-- FAQ -->
+    <section style="background:var(--navy);" aria-labelledby="at-faq-heading">
+      <div class="section-label">Common Questions</div>
+      <h2 id="at-faq-heading">AI governance &amp; technology FAQs</h2>
+      <div style="margin-top:2.5rem; max-width:760px;">
+        <details style="border:1px solid var(--border); border-radius:2px; margin-bottom:1rem;">
+          <summary style="padding:1.5rem 2rem; cursor:pointer; font-family:'Cormorant Garamond',serif; font-size:1.2rem; color:var(--white); font-weight:400; list-style:none;">What is AI governance?</summary>
+          <div style="padding:0 2rem 1.5rem; font-size:0.92rem; color:var(--text-mid); line-height:1.8;">AI governance is the framework of policies, accountabilities and controls an organisation uses to decide which AI tools may be used, on what data, under whose oversight, and with what monitoring. In practice it covers an inventory of AI in use, risk tiering, an acceptable-use policy, human oversight of consequential outputs, vendor due diligence, and regular reporting to the board.</div>
+        </details>
+        <details style="border:1px solid var(--border); border-radius:2px; margin-bottom:1rem;">
+          <summary style="padding:1.5rem 2rem; cursor:pointer; font-family:'Cormorant Garamond',serif; font-size:1.2rem; color:var(--white); font-weight:400; list-style:none;">What does an independent AI vendor assessment cover?</summary>
+          <div style="padding:0 2rem 1.5rem; font-size:0.92rem; color:var(--text-mid); line-height:1.8;">A structured review of an AI vendor and its claims — what the tool actually does, what data it collects and where it goes, whether your information is used to train models, how the model is updated, privacy and consent implications, and whether a feature update changes the tool's regulatory status. The assessment is independent of any vendor.</div>
+        </details>
+        <details style="border:1px solid var(--border); border-radius:2px; margin-bottom:1rem;">
+          <summary style="padding:1.5rem 2rem; cursor:pointer; font-family:'Cormorant Garamond',serif; font-size:1.2rem; color:var(--white); font-weight:400; list-style:none;">Do we need ISO/IEC 42001 certification?</summary>
+          <div style="padding:0 2rem 1.5rem; font-size:0.92rem; color:var(--text-mid); line-height:1.8;">Not necessarily. ISO/IEC 42001 is the international AI management system standard and a useful structure to borrow from, but most organisations are better served by a right-sized framework aligned to it than by pursuing certification from day one.</div>
+        </details>
+        <details style="border:1px solid var(--border); border-radius:2px; margin-bottom:1rem;">
+          <summary style="padding:1.5rem 2rem; cursor:pointer; font-family:'Cormorant Garamond',serif; font-size:1.2rem; color:var(--white); font-weight:400; list-style:none;">What AI training do you provide?</summary>
+          <div style="padding:0 2rem 1.5rem; font-size:0.92rem; color:var(--text-mid); line-height:1.8;">Practical AI literacy for boards, executives and frontline teams — prompting and workflow optimisation, and safe, acceptable use within your governance and privacy guardrails, aimed at building lasting in-house capability.</div>
+        </details>
+        <details style="border:1px solid var(--border); border-radius:2px; margin-bottom:1rem;">
+          <summary style="padding:1.5rem 2rem; cursor:pointer; font-family:'Cormorant Garamond',serif; font-size:1.2rem; color:var(--white); font-weight:400; list-style:none;">Do you only work in healthcare?</summary>
+          <div style="padding:0 2rem 1.5rem; font-size:0.92rem; color:var(--text-mid); line-height:1.8;">No — we work across sectors, with particular depth in healthcare and regulated environments. Clinical AI and medical-device advisory sit within our <a href="healthcare.html" style="color:var(--sky);">healthcare solutions</a>.</div>
+        </details>
+      </div>
     </section>
 
     <div class="cta-band">
