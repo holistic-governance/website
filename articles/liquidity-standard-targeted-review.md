@@ -6,6 +6,7 @@ author: Naomi Alefelder
 category: Industry News
 featured: false
 summary: From July 2026, the Aged Care Quality and Safety Commission begins a targeted review of the Liquidity Standard — one of three new Financial and Prudential Standards that took effect with the Aged Care Act 2024. We explain who is selected, what the review involves, how the Liquidity Standard fits within the wider prudential framework, and the governance questions every Category 6 board should be asking.
+metaDescription: From July 2026, the Aged Care Quality and Safety Commission begins a targeted review of the Liquidity Standard — one of three new Financial and Prudential Standards. Who is selected, what the Liquidity Standard requires, the governance stakes, and the updated resources.
 ---
 
 The Aged Care Quality and Safety Commission (ACQSC) has [announced](https://www.agedcarequality.gov.au/news-publications/quality-bulletin/aged-care-quality-bulletin-6-2026) that from July 2026 it will begin a targeted review of the Liquidity Standard — one of the three new Financial and Prudential Standards that took effect when the Aged Care Act 2024 (Cth) commenced on 1 November 2025. All non-government providers registered in Category 6 (residential care) must comply with the standard, and the Commission has updated its supporting resources to help providers understand and meet their obligations.

@@ -135,6 +135,7 @@ function buildAll(articlesDir) {
       category: frontmatter.category || 'General',
       featured: frontmatter.featured === 'true',
       summary: frontmatter.summary || '',
+      metaDescription: frontmatter.metaDescription || '',
       ogImage: frontmatter.og_image || frontmatter.ogImage || DEFAULT_OG_IMAGE
     };
 
@@ -246,7 +247,9 @@ function renderArticlePage(meta, body, takeaways = []) {
   const bodyHtml = mdToHtml(body);
   const canonical = `${SITE_URL}/articles/${meta.slug}.html`;
   const ogTitle = `${meta.title} | Holistic Governance`;
-  const description = meta.summary || meta.title;
+  // metaDescription = hand-tuned SEO text; falls back to the article summary.
+  // Keep SEO copy in the markdown frontmatter, never in generated HTML.
+  const description = meta.metaDescription || meta.summary || meta.title;
   const ogImageUrl = meta.ogImage.startsWith('http')
     ? meta.ogImage
     : `${SITE_URL}/${meta.ogImage.replace(/^\/+/, '')}`;

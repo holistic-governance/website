@@ -8,6 +8,7 @@
     "category": "AI Governance",
     "featured": false,
     "summary": "AI is already inside most aged care organisations — in scribes, rostering tools, chatbots and the features switched on inside software you already own. What providers are missing is not enthusiasm but governance. A practical framework for governing AI under the Aged Care Act 2024 and the Strengthened Quality Standards, in eight steps a provider can actually run.",
+    "metaDescription": "",
     "ogImage": "og-image-v3.png"
   },
   {
@@ -19,6 +20,7 @@
     "category": "Industry News",
     "featured": false,
     "summary": "On 16 July 2026 the Australian Signals Directorate released \"Post-quantum questions to ask your vendors\" — 31 questions across five phases for assessing supplier readiness for post-quantum cryptography. We summarise what the guidance asks, what buyers should prioritise, what good vendor answers look like, and why data longevity and embedded systems make this land particularly heavily in aged-care and health settings.",
+    "metaDescription": "",
     "ogImage": "og-image-v3.png"
   },
   {
@@ -30,6 +32,7 @@
     "category": "Industry News",
     "featured": false,
     "summary": "From July 2026, the Aged Care Quality and Safety Commission begins a targeted review of the Liquidity Standard — one of three new Financial and Prudential Standards that took effect with the Aged Care Act 2024. We explain who is selected, what the review involves, how the Liquidity Standard fits within the wider prudential framework, and the governance questions every Category 6 board should be asking.",
+    "metaDescription": "From July 2026, the Aged Care Quality and Safety Commission begins a targeted review of the Liquidity Standard — one of three new Financial and Prudential Standards. Who is selected, what the Liquidity Standard requires, the governance stakes, and the updated resources.",
     "ogImage": "og-image-v3.png"
   },
   {
@@ -41,6 +44,7 @@
     "category": "Industry News",
     "featured": true,
     "summary": "Six months into the most significant aged care reform in a generation, the Aged Care Quality and Safety Commission's analytical Sector Performance Report has not been published for any period under the new Aged Care Act 2024. Five live counters on the homepage are not a public-reporting system — they are a status panel.",
+    "metaDescription": "",
     "ogImage": "og-image-v3.png"
   },
   {
@@ -52,6 +56,7 @@
     "category": "Health Care",
     "featured": true,
     "summary": "The Aged Care Quality and Safety Commission has introduced strengthened quality standards that represent a significant shift in how aged care providers are assessed and held accountable. We break down what these changes mean for your organisation.",
+    "metaDescription": "",
     "ogImage": "og-image-v3.png"
   },
   {
@@ -63,6 +68,7 @@
     "category": "Competitor Analytics",
     "featured": false,
     "summary": "The way businesses monitor competitors is evolving rapidly. We explore how AI-powered tools are transforming competitive intelligence from reactive reporting to proactive strategy.",
+    "metaDescription": "",
     "ogImage": "og-image-v3.png"
   },
   {
@@ -74,6 +80,7 @@
     "category": "Health Care",
     "featured": false,
     "summary": "Fast Healthcare Interoperability Resources (FHIR) is becoming the backbone of digital health. We explain what it means for your organisation and how to prepare.",
+    "metaDescription": "",
     "ogImage": "og-image-v3.png"
   },
   {
@@ -85,6 +92,7 @@
     "category": "Data Governance",
     "featured": false,
     "summary": "Where do you start when your organisation has never had a formal data governance program? Our step-by-step guide to building foundations that actually work.",
+    "metaDescription": "",
     "ogImage": "og-image-v3.png"
   },
   {
@@ -96,6 +104,7 @@
     "category": "Industry News",
     "featured": false,
     "summary": "The National Aged Care Mandatory Quality Indicator Program Manual 4.0 introduces new indicators and reporting requirements. Here is what has changed.",
+    "metaDescription": "",
     "ogImage": "og-image-v3.png"
   },
   {
@@ -107,6 +116,7 @@
     "category": "Data Governance",
     "featured": false,
     "summary": "Organisations rushing to adopt AI are discovering a hard truth — AI is only as good as the data behind it. We explore why data quality governance is more critical than ever.",
+    "metaDescription": "",
     "ogImage": "og-image-v3.png"
   }
 ]
