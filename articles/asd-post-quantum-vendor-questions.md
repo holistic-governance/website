@@ -21,9 +21,16 @@ This article summarises the guidance for two audiences: **organisations choosing
 - For software vendors, the publication is a preview of customers' next security questionnaire: maintain a CBOM, commit to product-specific dates, use standard libraries, and don't paywall PQC.
 - Aged-care and health providers are exposed on two fronts: decades-long confidentiality of care records, and hard-to-update embedded systems throughout facilities.
 
+## First, the jargon — in plain English
+
+- **Cryptography** is the mathematics of scrambling information so only the right people can read it — and of proving that a message, document or software update really came from who it claims. It works invisibly behind logins, online banking, the padlock in your browser, and confidential records. When we say a vendor "implements cryptography", we mean their product does this scrambling and proving for you.
+- **Encryption** is using cryptography to scramble data so it's unreadable without the right key; decryption unscrambles it.
+- **Public-key cryptography** is the most widely used approach: each party has a linked pair of keys, one public and one private. It's what lets two systems that have never met agree on a secure connection, and what makes digital signatures possible. (You'll also see it called *asymmetric* cryptography.)
+- **A quantum computer** is a fundamentally different kind of computer. A powerful-enough one is expected to solve the specific mathematics problems that public-key cryptography depends on — which is the whole issue.
+
 ## Why this matters — the short version
 
-- Future advances in quantum computing are expected to undermine the traditional public-key cryptography that protects almost everything: logins, key exchange, digital signatures, data in transit and at rest. A quantum system capable of doing this is called a **cryptographically relevant quantum computer (CRQC)**.
+- Future advances in quantum computing are expected to undermine the traditional public-key cryptography that protects almost everything: logins, secure connections between systems (key exchange), digital signatures, and data both being sent and sitting in storage. A quantum system capable of doing this is called a **cryptographically relevant quantum computer (CRQC)**.
 - The risk is not only future-dated. Under **'harvest now, decrypt later'**, data stolen today can be decrypted once a CRQC exists — so data with long-lived confidentiality requirements is already at risk.
 - **PQC** — cryptographic algorithms designed to resist both classical and quantum attack — is the practical mitigation, and ASD's guidance supports completing the transition **by the end of 2030**.
 - Many organisations rely on vendors to implement and control their cryptography — SaaS platforms, managed service providers, identity services, backup services and cloud providers often do it for them. That is why ASD says vendor readiness may be one of the biggest factors influencing an organisation's ability to transition within recommended timeframes.
@@ -35,7 +42,7 @@ The publication (with a companion quick-reference PDF, both free on [cyber.gov.a
 | Phase | Questions | Focus |
 |---|---|---|
 | **L**ocate | 8 | Where cryptography lives — inventories (CBOMs), hardcoded or hardware-bound crypto, third-party dependencies, firmware and roots of trust |
-| **A**ssess | 6 | Which data flows and trust decisions rely on traditional asymmetric cryptography, data lifetimes, documented CRQC risk assessments |
+| **A**ssess | 6 | Which data flows and trust decisions rely on traditional asymmetric (public-key) cryptography, data lifetimes, documented CRQC risk assessments |
 | **T**riage | 5 | Whether vendor transition plans and sequencing align with your risk priorities and the end-of-2030 milestone |
 | **I**mplement | 6 | Standards-based algorithms, production readiness, library validation, key and certificate changes, licensing |
 | **C**ommunicate & educate | 6 | Change notification, transition guides, deprecation of traditional cryptography, trained support teams |
@@ -50,10 +57,10 @@ Importantly, ASD notes cryptographic exposure extends well beyond cloud and SaaS
 
 If you only have time for a handful, these (adapted from the guidance) reveal the most:
 
-1. **"Do you maintain a current inventory of cryptographic dependencies — a cryptographic bill of materials (CBOM) or equivalent?"** A vendor that can't say where its cryptography is can't credibly plan to replace it.
+1. **"Do you maintain a current inventory of cryptographic dependencies — a cryptographic bill of materials (CBOM) or equivalent?"** In plain terms: a stocktake of all the cryptography in their product. A vendor that can't say where its cryptography is can't credibly plan to replace it.
 2. **"Which products or services will be PQC-ready early enough to support our rollout before the end of 2030?"** Look for product-specific, versioned commitments — not general assurances.
 3. **"Is PQC included in base licensing?"** ASD's rationale: including PQC in base licensing avoids security controls being paywalled, which could delay adoption and lead to uneven risk across customers.
-4. **"If you support post-quantum/traditional (PQ/T) hybrid modes, when and how will you move to PQC-only?"** Hybrid is a legitimate transitional measure — but only with a documented de-hybridisation plan and timeline.
+4. **"If you support post-quantum/traditional (PQ/T) hybrid modes, when and how will you move to PQC-only?"** Hybrid means running the new and old cryptography side by side during the changeover — a legitimate transitional measure, but only with a documented plan and timeline for dropping the old half.
 5. **"What internal governance oversees your PQC transition?"** Executive ownership, documented decision forums and regular review cycles are what separate a roadmap from a press release.
 
 **Watch for these red flags.** ASD lists seven common concerns in vendor responses: limited visibility of cryptographic use; reliance on general assurances; unclear or deferred transition timelines; use of proprietary or opaque cryptography; treatment of PQC as an optional or premium function; over-reliance on compensating controls; and lack of governance or ownership. None is an automatic disqualifier — but each may warrant follow-up, depending on the vendor's risk level and what they supply, and ASD makes the point that a vendor's _willingness to engage transparently_ is itself a signal of maturity, in PQC and in cyber security generally.
