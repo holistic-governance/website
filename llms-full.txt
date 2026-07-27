@@ -39,8 +39,7 @@ Holistic Governance is a specialist consultancy providing governance, risk, comp
 - NSQHS Standards (Second Edition)
 - NDIS Practice Standards
 - Clinical Care Standards
-- ISO 31000 risk management
-- ISO 9001 quality management
+- ISO standards (quality, risk, and management systems)
 - FHIR (Fast Healthcare Interoperability Resources)
 - National Aged Care Mandatory Quality Indicator Program (Manual 4.0)
 
@@ -68,7 +67,7 @@ Founding Director and Principal Consultant. Highly experienced governance, quali
 - Chair of Quality and NSQHS Committee — Brunswick Private Hospital
 
 ### Areas of expertise
-NSQHS, Strengthened Aged Care Quality Standards, Clinical Care Standards, NDIS Practice Standards, ISO 31000, ISO 9001, FHIR, AI governance, data governance, Power BI dashboards, clinical risk management, accreditation, quality indicator reporting.
+NSQHS, Strengthened Aged Care Quality Standards, Clinical Care Standards, NDIS Practice Standards, ISO standards, FHIR, AI governance, data governance, Power BI dashboards, clinical risk management, accreditation, quality indicator reporting.
 
 ### Healthcare sector experience
 Aged care, respite, home care, disability, hospital, day surgery, cosmetic surgery.
