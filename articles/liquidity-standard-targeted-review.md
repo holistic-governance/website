@@ -61,7 +61,7 @@ A provider that elects to use the evaluated MLA must notify the Commission using
 
 Compliance with the Financial and Prudential Standards is a **condition of registration** under section 150 of the Aged Care Act 2024. Contravening a condition of registration is a civil penalty provision under section 142 — carrying up to **250 penalty units**, or up to **500 penalty units** where the failure is significant or part of a systematic pattern of conduct (section 142(4)).
 
-> The penalty unit value is indexed periodically under the *Crimes Act 1914* (Cth) section 4AA. Confirm the current value before relying on any dollar conversion.
+> The penalty unit value is indexed periodically under the _Crimes Act 1914_ (Cth) section 4AA. Confirm the current value before relying on any dollar conversion.
 
 Beyond the provider-level penalty, **responsible persons** owe a due diligence duty under section 180 of the Act — including maintaining current, documented knowledge of the standards and ensuring the provider has appropriate resources and processes to comply. And where a provider holds refundable deposits, accommodation bonds or entry contributions, it must maintain a **refundable deposit register** under section 150A.
 
@@ -116,4 +116,4 @@ Providers can find more information on targeted reviews and the Financial and Pr
 - ACQSC, [New Financial and Prudential Standards](https://www.agedcarequality.gov.au/providers/financial-prudential-standards/new-financial-and-prudential-standards) and [Liquidity Standard](https://www.agedcarequality.gov.au/providers/financial-prudential-standards/liquidity-standard) guidance.
 - Crimes Act 1914 (Cth), section 4AA (penalty unit value).
 
-*This article is published by Holistic Governance for sector information purposes only. It reflects the position as at the date of issue and does not constitute legal, regulatory, audit or financial advice. Verify any specific provision on the Federal Register of Legislation (legislation.gov.au) and current ACQSC guidance (agedcarequality.gov.au) before relying on it. © Holistic Governance 2026.*
+_This article is published by Holistic Governance for sector information purposes only. It reflects the position as at the date of issue and does not constitute legal, regulatory, audit or financial advice. Verify any specific provision on the Federal Register of Legislation (legislation.gov.au) and current ACQSC guidance (agedcarequality.gov.au) before relying on it. © Holistic Governance 2026._

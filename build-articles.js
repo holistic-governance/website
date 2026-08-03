@@ -48,7 +48,7 @@ function renderAuthorBio() {
 
 function renderTakeaways(takeaways) {
   if (!takeaways || takeaways.length === 0) return '';
-  const items = takeaways.map(t => `      <li>${inlineEscape(t)}</li>`).join('\n');
+  const items = takeaways.map(t => `      <li>${takeawayInline(t)}</li>`).join('\n');
   return `  <aside class="key-takeaways" id="key-takeaways" aria-label="Key takeaways">
     <h2>Key takeaways</h2>
     <ul>
@@ -62,6 +62,13 @@ function inlineEscape(s) {
     .replace(/&/g, '&amp;')
     .replace(/</g, '&lt;')
     .replace(/>/g, '&gt;');
+}
+
+// Takeaway bullets support the same bold/italic markers as body text.
+function takeawayInline(s) {
+  return inlineEscape(s)
+    .replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>')
+    .replace(/(^|\s)_([^_]+)_(?=\s|$|[.,;:!?])/g, '$1<em>$2</em>');
 }
 
 // Pull the first `## Key takeaways` section out of the body and return both

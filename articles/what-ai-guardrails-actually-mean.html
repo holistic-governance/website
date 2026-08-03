@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>&quot;AI Guardrails&quot; — Everyone Says It. Almost Nobody Can Point at One. | Holistic Governance</title>
+  <meta name="description" content="What &quot;AI guardrails&quot; actually means — the two meanings that survive scrutiny, documented failures, and a five-question test for small and medium organisations." />
+  <meta name="robots" content="index,follow" />
+  <meta name="author" content="Naomi Alefelder" />
+  <link rel="canonical" href="https://hg-au.com/articles/what-ai-guardrails-actually-mean.html" />
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="Holistic Governance" />
+  <meta property="og:locale" content="en_AU" />
+  <meta property="og:url" content="https://hg-au.com/articles/what-ai-guardrails-actually-mean.html" />
+  <meta property="og:title" content="&quot;AI Guardrails&quot; — Everyone Says It. Almost Nobody Can Point at One. | Holistic Governance" />
+  <meta property="og:description" content="What &quot;AI guardrails&quot; actually means — the two meanings that survive scrutiny, documented failures, and a five-question test for small and medium organisations." />
+  <meta property="og:image" content="https://hg-au.com/og-image-v3.png" />
+  <meta property="og:image:width" content="2400" />
+  <meta property="og:image:height" content="1260" />
+  <meta property="article:published_time" content="2026-07-30" />
+  <meta property="article:modified_time" content="2026-08-03" />
+  <meta property="article:section" content="AI Governance" />
+  <meta property="article:author" content="Naomi Alefelder" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="&quot;AI Guardrails&quot; — Everyone Says It. Almost Nobody Can Point at One. | Holistic Governance" />
+  <meta name="twitter:description" content="What &quot;AI guardrails&quot; actually means — the two meanings that survive scrutiny, documented failures, and a five-question test for small and medium organisations." />
+  <meta name="twitter:image" content="https://hg-au.com/og-image-v3.png" />
+  <link rel="icon" type="image/png" href="../favicon.png" />
+  <link rel="preload" as="image" href="../logo-hg-trimmed.png" fetchpriority="high" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../styles.css" />
+  <style>
+    .article-page { padding: 10rem 4rem 5rem; background: var(--navy); max-width: 820px; margin: 0 auto; }
+    .article-page .breadcrumb { margin-bottom: 2rem; }
+    .article-page .article-tag { display: inline-block; padding: 0.3rem 0.8rem; background: rgba(56,189,248,0.08); border: 1px solid var(--border); color: var(--sky); font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; border-radius: 2px; margin-bottom: 1.2rem; }
+    .article-page h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 4vw, 3rem); font-weight: 300; color: var(--white); line-height: 1.15; margin-bottom: 1.2rem; }
+    .article-page .article-meta { font-size: 0.82rem; color: var(--text-light); margin-bottom: 2rem; padding-bottom: 1.5rem; border-bottom: 1px solid var(--border); }
+    .article-page .article-meta span { color: var(--sky); }
+    .article-body { color: #aab4c4; font-size: 1rem; line-height: 1.9; }
+    .article-body h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; font-weight: 400; color: var(--white); margin: 2.5rem 0 1rem; }
+    .article-body h3 { font-family: 'DM Sans', sans-serif; font-size: 1.15rem; font-weight: 500; color: var(--white); margin: 2rem 0 0.8rem; }
+    .article-body p { margin-bottom: 1.2rem; }
+    .article-body ul, .article-body ol { margin: 1rem 0 1.5rem 1.5rem; }
+    .article-body li { margin-bottom: 0.5rem; }
+    .article-body strong { color: var(--white); }
+    .article-body a { color: var(--sky); text-decoration: underline; }
+    .article-body table { width: 100%; border-collapse: collapse; margin: 1.5rem 0 2rem; font-size: 0.92rem; }
+    .article-body th, .article-body td { border: 1px solid var(--border); padding: 0.65rem 0.85rem; text-align: left; vertical-align: top; line-height: 1.55; }
+    .article-body th { color: var(--white); font-weight: 500; background: rgba(56,189,248,0.06); }
+    .key-takeaways { margin: 0 0 2.5rem; padding: 1.5rem 1.75rem; background: rgba(56,189,248,0.06); border: 1px solid rgba(56,189,248,0.25); border-left: 3px solid var(--sky); border-radius: 4px; }
+    .key-takeaways h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.25rem; font-weight: 500; color: var(--white); margin: 0 0 0.75rem; letter-spacing: 0.02em; }
+    .key-takeaways ul { list-style: none; padding: 0; margin: 0; }
+    .key-takeaways li { color: #aab4c4; font-size: 0.95rem; line-height: 1.6; padding: 0.4rem 0 0.4rem 1.5rem; position: relative; }
+    .key-takeaways li::before { content: '→'; position: absolute; left: 0; top: 0.4rem; color: var(--sky); font-weight: 600; }
+    .related-solutions { margin-top: 3.5rem; padding: 1.75rem; background: rgba(56,189,248,0.04); border: 1px solid var(--border); border-radius: 4px; }
+    .related-solutions h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; font-weight: 400; color: var(--white); margin: 0 0 0.9rem; }
+    .related-solutions ul { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: 0.6rem; }
+    .related-solutions li { margin: 0; }
+    .related-solutions a { display: inline-block; color: var(--sky); font-size: 0.9rem; text-decoration: none; border: 1px solid rgba(56,189,248,0.3); padding: 0.5rem 1rem; border-radius: 2px; transition: all 0.2s; }
+    .related-solutions a:hover { background: rgba(56,189,248,0.12); border-color: var(--sky); }
+    .author-bio { margin-top: 2.5rem; padding: 1.75rem; background: var(--navy-mid); border: 1px solid var(--border); border-radius: 4px; }
+    .author-bio-header { display: flex; align-items: center; gap: 1.25rem; margin-bottom: 1rem; }
+    .author-bio-header img { width: 72px; height: 72px; border-radius: 50%; object-fit: cover; border: 1px solid var(--border); flex-shrink: 0; }
+    .author-bio-header h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; font-weight: 400; color: var(--white); margin: 0 0 0.2rem; }
+    .author-bio-role { font-size: 0.82rem; color: var(--sky); margin: 0; letter-spacing: 0.04em; }
+    .author-bio p { font-size: 0.92rem; color: #aab4c4; line-height: 1.7; margin: 0 0 0.8rem; }
+    .author-bio-links a { color: var(--sky); text-decoration: none; border-bottom: 1px solid rgba(56,189,248,0.4); }
+    .author-bio-links a:hover { border-bottom-color: var(--sky); }
+    .article-footer-nav { position: static; background: none; backdrop-filter: none; border-bottom: none; z-index: auto; margin-top: 2.5rem; padding: 2rem 0 0; border-top: 1px solid var(--border); display: flex; align-items: flex-start; justify-content: flex-start; gap: 1rem; flex-wrap: wrap; }
+    .article-footer-nav a { color: var(--sky); text-decoration: none; font-size: 0.85rem; letter-spacing: 0.06em; text-transform: uppercase; border: 1px solid var(--border); padding: 0.8rem 1.6rem; border-radius: 2px; transition: all 0.3s; }
+    .article-footer-nav a:hover { background: var(--sky); color: var(--navy); }
+    @media (max-width: 900px) { .article-page { padding: 8rem 1.5rem 3rem; } }
+  </style>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "\"AI Guardrails\" — Everyone Says It. Almost Nobody Can Point at One.",
+  "description": "What \"AI guardrails\" actually means — the two meanings that survive scrutiny, documented failures, and a five-question test for small and medium organisations.",
+  "image": "https://hg-au.com/og-image-v3.png",
+  "author": {
+    "@type": "Person",
+    "@id": "https://hg-au.com/about.html#naomi",
+    "name": "Naomi Alefelder",
+    "url": "https://hg-au.com/about.html"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "@id": "https://hg-au.com/#organization",
+    "name": "Holistic Governance",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://hg-au.com/logo-hg-trimmed.png"
+    }
+  },
+  "datePublished": "2026-07-30",
+  "dateModified": "2026-08-03",
+  "mainEntityOfPage": "https://hg-au.com/articles/what-ai-guardrails-actually-mean.html",
+  "articleSection": "AI Governance",
+  "inLanguage": "en-AU",
+  "url": "https://hg-au.com/articles/what-ai-guardrails-actually-mean.html",
+  "isPartOf": {
+    "@id": "https://hg-au.com/#website"
+  }
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": "https://hg-au.com/articles/what-ai-guardrails-actually-mean.html#webpage",
+  "url": "https://hg-au.com/articles/what-ai-guardrails-actually-mean.html",
+  "name": "\"AI Guardrails\" — Everyone Says It. Almost Nobody Can Point at One. | Holistic Governance",
+  "description": "What \"AI guardrails\" actually means — the two meanings that survive scrutiny, documented failures, and a five-question test for small and medium organisations.",
+  "isPartOf": {
+    "@id": "https://hg-au.com/#website"
+  },
+  "primaryImageOfPage": "https://hg-au.com/og-image-v3.png",
+  "inLanguage": "en-AU",
+  "speakable": {
+    "@type": "SpeakableSpecification",
+    "cssSelector": [
+      ".article-page h1",
+      ".article-meta",
+      "#key-takeaways"
+    ]
+  }
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://hg-au.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Resources",
+      "item": "https://hg-au.com/resources.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "\"AI Guardrails\" — Everyone Says It. Almost Nobody Can Point at One.",
+      "item": "https://hg-au.com/articles/what-ai-guardrails-actually-mean.html"
+    }
+  ]
+}
+  </script>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-9PMGXF9Q9T"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-9PMGXF9Q9T');
+  </script>
+</head>
+<body>
+
+<nav>
+  <a href="../index.html" class="logo"><img src="../logo-hg-trimmed.png" alt="Holistic Governance" width="351" height="524"><span class="logo-name">Holistic <span>Governance</span></span></a>
+  <button class="hamburger" onclick="this.nextElementSibling.classList.toggle('open')">&#9776;</button>
+  <ul>
+    <li><a href="../index.html">Home</a></li>
+    <li><a href="../about.html">About</a></li>
+    <li><a href="../healthcare.html">Solutions</a></li>
+    <li><a href="../resources.html">Resources</a></li>
+    <li class="nav-contact-wrapper">
+      <button class="nav-cta" onclick="this.nextElementSibling.classList.toggle('open')">Contact</button>
+      <div class="nav-contact-popup">
+        <a href="tel:0405515300">0405 515 300</a>
+        <a href="mailto:info@hg-au.com">info@hg-au.com</a>
+        <a href="../proposal-enquiry.html">Submit a Proposal</a>
+      </div>
+    </li>
+  </ul>
+</nav>
+
+<article class="article-page">
+  <div class="breadcrumb"><a href="../index.html">Home</a> / <a href="../resources.html">Resources</a> / &quot;AI Guardrails&quot; — Everyone Says It. Almost Nobody Can Point at One.</div>
+  <div class="article-tag">AI Governance</div>
+  <h1>&quot;AI Guardrails&quot; — Everyone Says It. Almost Nobody Can Point at One.</h1>
+  <div class="article-meta"><span>30 July 2026</span> &middot; Updated 3 August 2026 &middot; Naomi Alefelder</div>
+  <aside class="key-takeaways" id="key-takeaways" aria-label="Key takeaways">
+    <h2>Key takeaways</h2>
+    <ul>
+      <li>The security industry's own guidance (OWASP) draws a sharp line: a real guardrail is a deterministic, auditable control enforced outside the model. Instructions in a system prompt are explicitly not a security control.</li>
+      <li>OWASP itself says it is unclear whether fool-proof prevention of prompt injection is even possible. Every technical control mitigates; none is known to eliminate. Anyone claiming otherwise is selling the word, not the thing.</li>
+      <li>Deployed guardrail products from major vendors have been evaded at rates of 60% to over 90% in peer-reviewed testing — one technique hit 100%, and only one product held firm — and a real-world exploit chained its way past four separate Microsoft guardrails. Detection tools are a layer, never the layer.</li>
+      <li>In Australian healthcare, "guardrail" can mean a legal obligation: the TGA regulates AI by its intended purpose, and an AI tool that drifts into giving health advice must be technically constrained or pulled from supply.</li>
+      <li>"A human reviews it" is a real guardrail only when the review is specified — who, when, accountable for what. Automation bias is the documented mechanism by which unspecified human review quietly stops working.</li>
+      <li>The most affordable real guardrails are procedural and architectural — approval gates, least privilege, review timing, update monitoring — not purchased filter products.</li>
+    </ul>
+  </aside>
+  <div class="article-body">
+<p>A guardrail on a highway is a physical object. You can point at it, you can test what force it withstands, and you know exactly what it does when a car hits it. That is why the metaphor is so persuasive — and why it is doing so much unearned work in AI right now.</p>
+<p>"Robust guardrails" appears in vendor decks, board papers, policy documents and procurement responses, and it can mean anything from an independently tested security control to a sentence someone typed into a prompt asking the model to be careful. Both get the same word. Only one deserves it.</p>
+<p>This article does three things: pins down the two meanings of "guardrails" that survive scrutiny, walks through documented cases where guardrails existed on paper and failed anyway, and sets out what tangible, affordable guardrails actually look like for a small or medium organisation — particularly in Australian healthcare and aged care, where some guardrails are not merely best practice — they are backed by law.</p>
+<h2>The two meanings that survive scrutiny</h2>
+<p>Strip away the marketing and "AI guardrails" has two defensible meanings.</p>
+<p><strong>The technical meaning: a control enforced outside the model.</strong> The clearest definition comes from OWASP's Top 10 for LLM Applications — the closest thing the industry has to a canonical security reference for AI systems. Its guidance is blunt: implement guardrails <em>outside</em> the LLM itself; an independent system that inspects outputs is preferable to system-prompt instructions; and critical controls — privilege separation, authorisation checks — "must not be delegated to the LLM" but enforced "in a deterministic, auditable manner". The system prompt, OWASP says plainly, "should not be considered a secret, nor should it be used as a security control".</p>
+<p>That is the sharpest available line between a guardrail and a wish. "We instructed the model not to give medical advice" is a wish. "A separate system checks every output before it reaches the user, logs the result, and blocks anything that fails" is a guardrail. One is probabilistic and invisible; the other is deterministic and auditable. Ask which one you are being sold.</p>
+<p><strong>The regulatory meaning: a control someone can enforce against you.</strong> The second defensible meaning is a guardrail mandated by a regulator, with consequences attached. Australia's Therapeutic Goods Administration regulates software by <em>intended purpose</em>, not technology: an AI product intended or used for diagnosis, prevention, monitoring, prediction, prognosis or treatment is a medical device requiring inclusion on the ARTG. The TGA's guidance gives a strikingly concrete example: a developer whose general-purpose AI system is found to be giving health advice "must either: implement controls to prevent the system from providing health advice, or stop supply of the product, seek our approval for the new intended use and include the product in the ARTG". That is the word "guardrail" meaning something enforceable — implement the control or exit the market.</p>
+<p>The US runs the same logic through the FDA's premarket pathways, with a candid admission attached: the FDA itself states its traditional device-regulation paradigm "was not designed for adaptive artificial intelligence and machine learning technologies". Its patch is a named mechanism — Predetermined Change Control Plans (final guidance, December 2024) — which lets manufacturers pre-specify how a model may change after approval. Even the regulators, in other words, are retrofitting guardrails onto systems that change under their feet.</p>
+<h2>The marketing-washed middle</h2>
+<p>Between those two meanings sits most of what the word is actually used for: trained-in model behaviour, prompt instructions, and safety claims backed by benchmarks.</p>
+<p>The benchmark problem now has a peer-reviewed name: <strong>safetywashing</strong>. A NeurIPS 2024 study found that many widely used AI safety benchmarks correlate highly with general model capability and training compute — meaning a model can score better on "safety" simply by being bigger, and capability improvements get presented as safety advancements. A safety metric can exist, be reported, and be genuinely measuring something other than safety.</p>
+<p>And the trained-in behaviour problem has a growing case file. In 2023, Tessa — the US National Eating Disorders Association's chatbot, originally a rules-based tool — was reported to have given dieting and weight-loss advice to people seeking help with eating disorders after generative AI features were added; the chatbot was taken down. The guardrails existed in someone's intentions. They did not exist in the architecture.</p>
+<h2>When guardrails fail even when they're real</h2>
+<p>Here is the uncomfortable part: even genuine, deployed, engineered guardrails fail — and the documented record is worth every board's attention.</p>
+<p><strong>Detection tools get evaded.</strong> Peer-reviewed research from Mindgard and Lancaster University tested six production guardrail systems — including Microsoft's Azure Prompt Shield and Meta's Prompt Guard — against character-injection and adversarial techniques. Character-injection attacks evaded several of the systems 60% to over 90% of the time, one technique — smuggling instructions inside emoji-encoded Unicode — achieved 100% evasion against several systems, and only one product held character injection to around 20%. The vendors acknowledged the findings, and Microsoft patched. The durable lesson cuts both ways: no system resisted every attack class, so a detection-based guardrail can never be the <em>sole</em> control — but the one product that largely held shows guardrail quality is real and measurable, which is exactly what the five questions below exist to surface.</p>
+<p><strong>Layered guardrails get chained.</strong> The canonical case is EchoLeak (CVE-2025-32711), a vulnerability in Microsoft 365 Copilot disclosed in 2025 and patched before any known exploitation. A single crafted email could exfiltrate data by bypassing four separate deployed guardrails in sequence: the prompt-injection classifier (evaded by phrasing the attack as an ordinary business email, never mentioning AI at all), link redaction (which stripped one Markdown link format but not another), image-fetch controls, and the content security policy (abused via an allowlisted Microsoft domain). Four real guardrails, each individually sensible, each bypassed by modest creativity. OWASP's own wording explains why this keeps happening: it is unclear, OWASP says, whether fool-proof prevention of prompt injection is even possible — every listed defence mitigates impact; none is known to eliminate the vulnerability.</p>
+<p><strong>Human review quietly stops working.</strong> The failure mode that matters most in healthcare is not technical. The Australian Commission on Safety and Quality in Health Care names it directly: <strong>automation bias</strong> — acting on incorrect AI output (errors of commission) and failing to act when the AI misses something (errors of omission). A "human in the loop" who has learned to trust the tool is a guardrail in the org chart and not in reality. This is why the Commission's AI Clinical Use Guide does not say "review AI outputs" and stop; it specifies <em>when</em> — ideally during or at completion of the patient interaction, while your own memory of the encounter can still catch what a scribe fabricated, omitted or misheard — and it is explicit that clinicians remain accountable for every AI output that informs a clinical decision or record.</p>
+<h2>The Australian healthcare specifics</h2>
+<p>Two more points from the Australian guidance deserve their own paragraphs, because they convert directly into things a provider should do.</p>
+<p><strong>Scope creep arrives by software update.</strong> The TGA and the Commission give closely parallel examples of the same failure mode; in the Commission's words, an ambient AI scribe that "adds recommended tests or treatments" to a consultation summary is a medical device subject to regulation. TGA guidance is hard-edged on the vendor side — features that change a device's intended purpose "must not be implemented" until regulatory approvals are in place. But the Commission's warning is aimed at the organisations and clinicians using the tool: "you may not be notified when these changes occur." A tool you assessed in March is not the tool you are running in September. Monitoring vendor updates for scope creep is not bureaucratic overhead; it is a named regulatory failure mode with a named procedural control.</p>
+<p><strong>The policy landscape has churned — check currency before you cite it.</strong> Australia's Voluntary AI Safety Standard, published in September 2024 with its ten voluntary guardrails, was superseded in October 2025 by the National AI Centre's Guidance for AI Adoption, built around six essential practices: decide who is accountable, understand impacts and plan accordingly, measure and manage risks, share essential information, test and monitor, and maintain human control. Notice what happened to the vocabulary: the current national guidance has largely retired "guardrails" in favour of named practices — and its two tiers (foundations guidance for organisations starting out; implementation guidance for complex or higher-risk use) are deliberately sized so that a smaller organisation is not asked to run an enterprise program. The separately <em>proposed</em> mandatory guardrails for high-risk AI were never enacted: the December 2025 National AI Plan set them aside in favour of existing laws and sector regulators, and in July 2026 the government moved again — standing up an Office of AI within the Department of the Prime Minister and Cabinet and announcing its intention to legislate Australian Standards for AI. If a consultant or vendor cites "the ten guardrails" as current Australian guidance, that is itself a currency test they have just failed.</p>
+<h2>The guardrail test</h2>
+<p>For a small or medium organisation, the practical question is not "do we have guardrails?" but "would our guardrails survive being pointed at?" Five questions do most of the work — for anything a vendor claims, and anything your own team builds:</p>
+<ol><li><strong>Where does it run?</strong> Inside the model (prompt instructions, trained behaviour) or outside it (a separate check, a permission boundary, a human gate)? Only the second is a security control.</li><li><strong>Is it deterministic?</strong> Does the same bad input get blocked every time, or usually?</li><li><strong>Can you show me the log?</strong> A guardrail that fires invisibly is unverifiable. Auditable means evidence exists.</li><li><strong>What happens when it fails?</strong> Fail closed (block and escalate) or fail open (let it through)? Fail-closed carries its own cost — a tool that blocks mid-task is a workflow problem — but the point is that someone chose the failure mode deliberately, and knows which one they chose.</li><li><strong>Has anyone tried to break it?</strong> Not "did you test it works" — did someone adversarial, treating the model as an untrusted user, try to make it <em>not</em> work?</li></ol>
+<p>Ask these of a vendor and you will learn more from the quality of the answers than the content. A vendor who answers "our model is trained to be safe" to question one has told you everything.</p>
+<h2>What real, affordable guardrails look like</h2>
+<p>None of what follows requires buying an AI security product. It requires the same governance discipline you already apply elsewhere, pointed at a new class of tool — and it maps directly onto OWASP's own mitigation list, which is as procedural as it is technical.</p>
+<ul><li><strong>Human approval gates for consequential actions.</strong> Anything AI-drafted that reaches a client, a clinical record or a regulator passes a named human first — and the AI output is labelled as a draft until it does. Decision support, not decision making.</li><li><strong>Least privilege.</strong> The AI tool gets access to the minimum data and systems it needs. A scribe does not need the full care record; a chatbot does not need any of it. Most catastrophic AI failures are ordinary access-control failures wearing a new hat.</li><li><strong>Specified review, not assumed review.</strong> Who reviews, when (for clinical scribes: during or at completion of the interaction), and accountable for what. Write it down; audit it occasionally. Unspecified review decays into automation bias.</li><li><strong>Vendor update monitoring.</strong> A standing agenda item: what changed in each AI tool this quarter, and did any change move its intended purpose? This is the scope-creep control both Australian regulators point to.</li><li><strong>Treat the model as an untrusted user.</strong> Ordinary testing asks "does the tool do what it should?" Adversarial testing asks the opposite: "can we make it do what it shouldn't?" Before deployment and periodically after, have someone play attacker — try to extract another person's information, coax out advice the tool shouldn't give, push it outside its lane — and judge it the way you would a stranger off the street, not a trusted part of the system. This costs an afternoon, not a product licence.</li><li><strong>A named owner per AI use.</strong> Every guardrail above needs someone accountable for the fact that it still exists. Unowned controls are the ones that fail silently.</li></ul>
+<p>For a provider that already maintains an AI inventory and risk-tiers its uses — the framework we set out in <a href="https://hg-au.com/articles/ai-governance-aged-care.html">AI Governance for Aged Care</a> — this list is the control layer that sits under the two or three highest-risk entries.</p>
+<h2>The provocation, stated plainly</h2>
+<p>The word "guardrails" is popular precisely because it lets everyone feel the problem is handled without anyone specifying how. Vendors like it because it is unfalsifiable. Boards like it because it sounds like an answer. The evidence says something less comfortable: one of the best-resourced technology companies on earth had four real guardrails chained and bypassed by a single email, no defence against the most basic attack class is known to be fool-proof, and the human-review guardrail fails through a bias so predictable it has a clinical name.</p>
+<p>The conclusion is not despair — it is precision. Guardrails that are deterministic, external, auditable, owned and occasionally attacked are worth the name. Everything else is a wish with good branding. The next time the word appears in a document you are asked to approve, the question that earns its keep is five words long: <em>can you point at it?</em></p>
+<p>Holistic Governance provides <a href="https://hg-au.com/ai-technology.html">AI governance advisory, independent vendor assessment and AI training</a> for healthcare and aged care organisations — including running the guardrail test above against your AI inventory. You can read more about our approach and experience <a href="https://hg-au.com/about.html">here</a>.</p>
+<h2>Sources</h2>
+<ul><li>OWASP Top 10 for LLM Applications 2025 — prompt injection (LLM01) and system prompt leakage (LLM07) guidance. <a href="https://owasp.org/www-project-top-10-for-large-language-model-applications/assets/PDF/OWASP-Top-10-for-LLMs-v2025.pdf">owasp.org</a></li><li>"Bypassing LLM Guardrails: An Empirical Analysis of Evasion Attacks against Prompt Injection and Jailbreak Detection Systems" — Mindgard / Lancaster University, ACL LLMSec 2025. <a href="https://arxiv.org/pdf/2504.11168">arxiv.org</a></li><li>EchoLeak (CVE-2025-32711) — zero-click prompt injection in Microsoft 365 Copilot, patched May 2025. <a href="https://www.securityweek.com/echoleak-ai-attack-enabled-theft-of-sensitive-data-via-microsoft-365-copilot/">SecurityWeek</a> · <a href="https://arxiv.org/abs/2509.10540">technical case study, arXiv</a></li><li>Artificial intelligence (AI) and medical device software regulation — <a href="https://www.tga.gov.au/products/medical-devices/software-and-artificial-intelligence-ai/manufacturing/artificial-intelligence-ai-and-medical-device-software-regulation">Therapeutic Goods Administration</a></li><li>AI Clinical Use Guide (v1.0, August 2025) — <a href="https://www.safetyandquality.gov.au/resources/ai-clinical-use-guide">Australian Commission on Safety and Quality in Health Care</a></li><li>Artificial Intelligence and Machine Learning in Software as a Medical Device; Predetermined Change Control Plan guidance (December 2024) — <a href="https://www.fda.gov/regulatory-information/search-fda-guidance-documents/marketing-submission-recommendations-predetermined-change-control-plan-artificial-intelligence">US FDA</a></li><li>Voluntary AI Safety Standard (September 2024; superseded October 2025 by the Guidance for AI Adoption) — <a href="https://www.industry.gov.au/publications/voluntary-ai-safety-standard">Department of Industry, Science and Resources</a></li><li>Guidance for AI Adoption: implementation guidance — the 6 essential practices — <a href="https://www.ai.gov.au/staying-safe-and-responsible/essential-ai-practices/guidance-ai-adoption-implementation-guidance">National AI Centre</a></li><li>Office of AI and planned Australian Standards for AI (announced 15 July 2026) — <a href="https://www.sbs.com.au/news/article/australia-labor-ai-framework-office-standards/0w2q0yakr">SBS News</a></li><li>"Safetywashing: Do AI Safety Benchmarks Actually Measure Safety Progress?" — NeurIPS 2024. <a href="https://arxiv.org/pdf/2407.21792">arxiv.org</a></li><li>"An eating disorders chatbot offered dieting advice, raising fears about AI in health" — <a href="https://www.npr.org/sections/health-shots/2023/06/08/1180838096/an-eating-disorders-chatbot-offered-dieting-advice-raising-fears-about-ai-in-hea">NPR, June 2023</a></li></ul>
+<p><em>This article is published by Holistic Governance for sector information purposes only. It reflects the position as at the date of issue and does not constitute legal, regulatory, audit or financial advice. The specific vulnerabilities described (EchoLeak, guardrail evasion findings) were responsibly disclosed and remediated; they are cited as historical evidence about guardrail design, not as claims about current products. Verify any specific provision on the Federal Register of Legislation (legislation.gov.au) and current regulator guidance before relying on it. © Holistic Governance 2026.</em></p>
+  </div>
+  <aside class="author-bio" aria-label="About the author">
+    <div class="author-bio-header">
+      <img src="../headshotimage.png" alt="Naomi Alefelder" width="96" height="96" />
+      <div>
+        <h2>About the author</h2>
+        <p class="author-bio-role">Naomi Alefelder &middot; Founding Director, Holistic Governance</p>
+      </div>
+    </div>
+    <p>Registered nurse and governance specialist with over a decade of senior leadership across aged care, hospital, day surgery, disability and community health. MBA (Charles Sturt University), AICD Foundations of Directorship, Lead Auditor (Exemplar Global). Board Director, Caladenia Dementia Care.</p>
+    <p class="author-bio-links"><a href="../about.html">More about Naomi</a> &middot; <a href="https://www.linkedin.com/in/naomi-alefelder" target="_blank" rel="noopener">LinkedIn</a> &middot; <a href="../proposal-enquiry.html">Request a proposal</a></p>
+  </aside>
+  <aside class="related-solutions" aria-label="Related solutions">
+    <h2>Related Solutions</h2>
+    <ul>
+      <li><a href="../ai-technology.html">AI &amp; Technology Governance</a></li>
+      <li><a href="../healthcare.html">Healthcare Governance</a></li>
+    </ul>
+  </aside>
+  <nav class="article-footer-nav" aria-label="Article navigation">
+    <a href="../resources.html">&larr; All articles</a>
+    <a href="../proposal-enquiry.html">Request a Proposal</a>
+    <a href="../healthcare.html">Our Solutions</a>
+  </nav>
+</article>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <a href="../index.html" class="footer-logo" style="text-decoration:none;"><img src="../logo-hg-trimmed.png" alt="Holistic Governance" width="351" height="524"><span class="logo-name">Holistic <span>Governance</span></span></a>
+      <p class="footer-tagline">Improving clarity and confidence in governance through knowledge, data, and technology.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Navigate</h4>
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../about.html">About</a></li>
+        <li><a href="../healthcare.html">Solutions</a></li>
+        <li><a href="../resources.html">Resources</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Get in Touch</h4>
+      <div class="footer-contact-item"><a href="mailto:info@hg-au.com">info@hg-au.com</a></div>
+      <div class="footer-contact-item"><a href="tel:0405515300">0405 515 300</a></div>
+      <div class="footer-contact-item" style="margin-top: 0.5rem;"><a href="../proposal-enquiry.html">Request a Proposal</a></div>
+      <div class="footer-contact-item"><a href="https://www.linkedin.com/company/hg-au/" target="_blank" rel="noopener">LinkedIn</a></div>
+    </div>
+    <div class="footer-col">
+      <h4>Where We Work</h4>
+      <address style="font-style:normal; font-size:0.85rem; line-height:1.6; color:var(--text-light); margin-bottom:0.6rem;">Melbourne Metro and Regional</address>
+      <ul><li>Australia</li><li>New Zealand</li></ul>
+      <p style="font-size:0.8rem; color:var(--text-light); margin-top:0.8rem;">Remote &amp; on-site delivery</p>
+    </div>
+  </div>
+  <div class="footer-bottom"><p>&copy; 2026 Holistic Governance. All rights reserved.</p></div>
+</footer>
+
+<script>
+document.addEventListener('click', function(e) {
+  document.querySelectorAll('.nav-contact-popup.open').forEach(function(popup) {
+    if (!popup.parentElement.contains(e.target)) popup.classList.remove('open');
+  });
+});
+window.addEventListener('scroll', function() {
+  document.querySelector('nav').classList.toggle('scrolled', window.scrollY > 60);
+});
+</script>
+</body>
+</html>

@@ -25,7 +25,7 @@ This article summarises the guidance for two audiences: **organisations choosing
 
 - **Cryptography** is the mathematics of scrambling information so only the right people can read it — and of proving that a message, document or software update really came from who it claims. It works invisibly behind logins, online banking, the padlock in your browser, and confidential records. When we say a vendor "implements cryptography", we mean their product does this scrambling and proving for you.
 - **Encryption** is using cryptography to scramble data so it's unreadable without the right key; decryption unscrambles it.
-- **Public-key cryptography** is the most widely used approach: each party has a linked pair of keys, one public and one private. It's what lets two systems that have never met agree on a secure connection, and what makes digital signatures possible. (You'll also see it called *asymmetric* cryptography.)
+- **Public-key cryptography** is the most widely used approach: each party has a linked pair of keys, one public and one private. It's what lets two systems that have never met agree on a secure connection, and what makes digital signatures possible. (You'll also see it called _asymmetric_ cryptography.)
 - **A quantum computer** is a fundamentally different kind of computer. A powerful-enough one is expected to solve the specific mathematics problems that public-key cryptography depends on — which is the whole issue.
 
 ## Why this matters — the short version

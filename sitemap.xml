@@ -67,6 +67,12 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://hg-au.com/articles/what-ai-guardrails-actually-mean.html</loc>
+    <lastmod>2026-07-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://hg-au.com/articles/ai-governance-aged-care.html</loc>
     <lastmod>2026-07-26</lastmod>
     <changefreq>monthly</changefreq>
