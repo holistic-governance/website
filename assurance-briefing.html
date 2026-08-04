@@ -46,7 +46,10 @@
   .nav a.item { font-size: 13.5px; font-weight: 500; color: #334155; text-decoration: none; }
   .nav a.item:hover { color: var(--sky); }
   .cta-pill { background: var(--ink); color: #fff; font-size: 13.5px; font-weight: 600; padding: 11px 20px; border-radius: 999px; text-decoration: none; }
-  @media (max-width: 720px) { .nav a.item { display: none; } }
+  @media (max-width: 720px) {
+    .navwrap { position: static; padding: 12px 16px 0; }
+    .nav { gap: 14px; padding: 12px 20px; }
+  }
 
   /* HERO — clean, uncluttered headline (Lorikeet-style glow) */
   .hero { position: relative; max-width: 900px; margin: 0 auto; padding: 74px 24px 8px; text-align: center; }
@@ -78,7 +81,17 @@
   @media (max-width: 700px){
     .mapband { height: auto !important; margin: 0 auto; padding: 20px; }
     .mapband svg.wires { display: none; }
-    .reg.fc { position: static; margin: 10px auto; }
+    .reg.fc { position: static !important; margin: 12px auto !important;
+      opacity: 1 !important; animation: none !important; transform: none !important; }
+    .map-note { position: static; transform: none; margin: 6px auto 18px; opacity: 1 !important;
+      animation: none !important; padding: 10px 16px; background: none; }
+    /* episode rows stack cleanly */
+    .slim { display: block; }
+    .slim .badge { display: inline-block; margin-bottom: 8px; }
+    .slim h4 { margin: 4px 0 6px; }
+    .slim .soonlbl { display: block; }
+    /* pricing halves stack */
+    #pricing div[style*="grid-template-columns"] { grid-template-columns: 1fr !important; }
   }
   .colL .reg:nth-child(1){align-self:flex-start} .colL .reg:nth-child(2){align-self:flex-end} .colL .reg:nth-child(3){align-self:flex-start}
   .colR .reg:nth-child(1){align-self:flex-end} .colR .reg:nth-child(2){align-self:flex-start} .colR .reg:nth-child(3){align-self:flex-end}
