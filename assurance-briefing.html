@@ -84,9 +84,9 @@
   .mapband.inview .reg.fc:nth-of-type(odd) { animation: cardin .7s .4s ease forwards, rideR 13s .4s ease-in-out infinite alternate; }
   @media (max-width: 700px){
     /* miniature desktop map: portrait streams + compact cards riding them */
-    .mapband { height: 880px !important; margin: 0 auto; padding: 0 12px; position: relative; }
+    .mapband { height: 980px !important; margin: 0 auto; padding: 0 12px; position: relative; }
     .mapband svg.wires { display: none; }
-    svg.wires-m { display: block !important; position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; z-index: 1; }
+    svg.wires-m { display: block !important; position: absolute; left: 0; right: 0; top: 100px; width: 100%; height: 880px; pointer-events: none; z-index: 1; }
     .map-note { position: static; transform: none; margin: 6px auto 18px; opacity: 1 !important;
       animation: none !important; padding: 10px 16px; background: none;
       width: auto; max-width: 100%; font-size: 26px; text-shadow: none; }
@@ -96,13 +96,14 @@
     .reg.fc .t { font-size: 12.5px; }
     .reg.fc .s { display: none; }
     .nm-full { display: none; } .nm-short { display: inline !important; }
-    .reg.fc[style*="left:1%;"]  { left: 10px !important; right: auto !important; top: 70px !important; }
-    .reg.fc[style*="left:11%;"] { left: auto !important; right: 10px !important; top: 180px !important; }
-    .reg.fc[style*="left:22%;"] { left: 10px !important; right: auto !important; top: 290px !important; }
-    .reg.fc[style*="right:1%;"] { left: auto !important; right: 10px !important; top: 400px !important; }
-    .reg.fc[style*="right:11%;"]{ left: 10px !important; right: auto !important; top: 510px !important; }
-    .reg.fc[style*="right:22%;"]{ left: auto !important; right: 10px !important; top: 620px !important; }
-    .reg.fc[style*="left:32%;"] { left: 10px !important; right: auto !important; top: 730px !important; }
+    .reg.fc[style*="left:32%"] .mono { font-size: 7px !important; letter-spacing: 0; }
+    .reg.fc[style*="left:1%;"]  { left: 10px !important; right: auto !important; top: 170px !important; }
+    .reg.fc[style*="left:11%;"] { left: auto !important; right: 10px !important; top: 280px !important; }
+    .reg.fc[style*="left:22%;"] { left: 10px !important; right: auto !important; top: 390px !important; }
+    .reg.fc[style*="right:1%;"] { left: auto !important; right: 10px !important; top: 500px !important; }
+    .reg.fc[style*="right:11%;"]{ left: 10px !important; right: auto !important; top: 610px !important; }
+    .reg.fc[style*="right:22%;"]{ left: auto !important; right: 10px !important; top: 720px !important; }
+    .reg.fc[style*="left:32%;"] { left: 10px !important; right: auto !important; top: 830px !important; }
     /* episode rows stack cleanly */
     .slim { display: block; }
     .slim .badge { display: inline-block; margin-bottom: 8px; }
