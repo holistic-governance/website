@@ -188,15 +188,15 @@
   .tiers { display: grid; grid-template-columns: repeat(2, minmax(0,320px)); gap: 20px; justify-content: center; }
   @media (max-width: 680px){ .tiers{grid-template-columns:1fr} }
   .tier { background: #fff; border: 1px solid var(--line); border-radius: 20px; box-shadow: 0 14px 40px rgba(15,23,42,.07); padding: 32px; text-align: center; position: relative; }
-  .tier.pass { background: linear-gradient(140deg, #4c1d95, #8b5cf6); color: #fff; border: none; }
+  .tier.pass { background: linear-gradient(120deg, #fef9c3 0%, #fce7f3 48%, #ede9fe 100%); color: var(--ink); border: 1px solid #f3e8ff; }
   .ribbon { position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: var(--orange); color: #fff; font-size: 10px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; padding: 5px 14px; border-radius: 999px; }
   .tn { font-size: 11px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: var(--soft); }
-  .pass .tn { color: #ddd6fe; }
+  .pass .tn { color: #a855f7; }
   .tp { font-family: 'Cormorant Garamond', serif; font-size: 46px; color: var(--sky); margin: 8px 0; }
-  .pass .tp { color: #fff; }
+  .pass .tp { background: linear-gradient(100deg, #f59e0b, #ec4899 55%, #8b5cf6); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
   .tier p { font-size: 12.5px; line-height: 1.65; color: #475569; margin-bottom: 18px; }
-  .pass p { color: #ede9fe; }
-  .pass .buy { background: #fff; color: #4c1d95; }
+  .pass p { color: #475569; }
+  .pass .buy { background: var(--ink); color: #fff; }
   .invoice { text-align: center; font-size: 12px; color: var(--soft); margin-top: 18px; line-height: 1.7; }
   .invoice a { color: var(--sky); text-decoration: none; }
 
