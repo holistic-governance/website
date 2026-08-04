@@ -111,18 +111,28 @@
     .hero-center{order:1}
     .colL .reg,.colR .reg{align-self:auto!important}
   }
+  /* section connectors — one continuous spine down the page */
+  .conn { width: 2px; height: 84px; margin: 0 auto; border-radius: 2px; position: relative;
+    transform: scaleY(0); transform-origin: top; }
+  .conn::after { content: ''; position: absolute; left: 50%; bottom: -3px; transform: translateX(-50%);
+    width: 7px; height: 7px; border-radius: 50%; background: currentColor; opacity: 0; }
+  .conn.inview { animation: connGrow .8s ease forwards; }
+  .conn.inview::after { animation: cardin .4s .7s ease forwards; }
+  @keyframes connGrow { to { transform: scaleY(1); } }
+  .conn.short { height: 48px; }
+
   .map-title { font-family: 'Cormorant Garamond', serif; font-weight: 400; font-size: clamp(34px, 3.8vw, 50px); line-height: 1.1; margin-bottom: 14px; }
   .map-title em { font-style: italic; color: var(--sky); }
   .map-sub { font-size: 13.5px; line-height: 1.75; color: var(--soft); }
 
   /* TRAILER */
-  .trailerband { max-width: 860px; margin: 0 auto; padding: 10px 24px 30px; text-align: center; }
+  .trailerband { max-width: 860px; margin: 0 auto; padding: 14px 24px 30px; text-align: center; }
   .trailer-frame { position: relative; padding-top: 56.25%; border-radius: 20px; overflow: hidden; background: #f8fafc; border: 1px solid var(--line); box-shadow: 0 22px 60px rgba(15,23,42,.12); }
   .trailer-frame iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
   .trailer-label { font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--soft); margin-top: 14px; }
 
   /* STATS — Lorikeet floating tiles with drop-lines to a centred statement */
-  .statsband { position: relative; max-width: 980px; margin: 40px auto 0; padding: 0 20px; text-align: center; }
+  .statsband { position: relative; max-width: 980px; margin: 16px auto 0; padding: 0 20px; text-align: center; }
   .stiles { position: relative; z-index: 2; display: flex; justify-content: space-between; align-items: flex-start; max-width: 860px; margin: 0 auto; }
   .stile { background: #fff; border: 1px solid var(--line); border-radius: 22px; box-shadow: 0 18px 50px rgba(15,23,42,.10); padding: 28px 30px; min-width: 200px; opacity: 0; }
   .statsband.inview .stile { animation: cardin .7s ease forwards, ride 12s ease-in-out infinite alternate; }
@@ -271,6 +281,8 @@
   </div>
 </section>
 
+<div class="conn short" style="background:linear-gradient(180deg,#cbd5e1,#0f172a);color:#0f172a"></div>
+
 <!-- REGULATOR MAP — scroll down into the wires -->
 <section class="mapband" id="map">
   <svg class="wires" viewBox="0 0 1280 700" fill="none" preserveAspectRatio="none" aria-hidden="true">
@@ -311,6 +323,8 @@
   </div>
 </section>
 
+<div class="conn" style="background:linear-gradient(180deg,#0f172a,#0ea5e9);color:#0ea5e9"></div>
+
 <!-- TRAILER -->
 <section class="trailerband" id="trailer">
   <div class="trailer-frame">
@@ -318,6 +332,8 @@
   </div>
   <p class="trailer-label">Watch the trailer — free</p>
 </section>
+
+<div class="conn" style="background:linear-gradient(180deg,#0ea5e9,#10b981);color:#10b981"></div>
 
 <!-- STATS — floating tiles with drop-lines -->
 <section class="statsband" id="stats">
@@ -337,6 +353,8 @@
     expires after 90 days — watch when the board pack gets written.</p>
   </div>
 </section>
+
+<div class="conn" style="background:linear-gradient(180deg,#10b981,#0ea5e9);color:#0ea5e9"></div>
 
 <!-- CATALOGUE -->
 <section class="band" id="catalogue">
@@ -372,6 +390,8 @@
   </div>
 </section>
 
+<div class="conn" style="background:linear-gradient(180deg,#8b5cf6,#f97316);color:#f97316"></div>
+
 <!-- EXPIRY -->
 <section class="expiry"><div class="in">
   <div class="big90">90<small>days, then gone</small></div>
@@ -384,6 +404,8 @@
     <p>That also means: if a briefing on the catalogue matters to your board, don't sit on it.</p>
   </div>
 </div></section>
+
+<div class="conn" style="background:linear-gradient(180deg,#f97316,#0ea5e9);color:#0ea5e9"></div>
 
 <!-- PRICING -->
 <section class="band" id="pricing">
@@ -407,6 +429,8 @@
   Organisations can pay the annual pass by invoice and bank transfer —
   <a href="mailto:naomi@hg-au.com?subject=Assurance%20Briefing%20annual%20pass%20invoice">request an invoice</a>.</p>
 </section>
+
+<div class="conn" style="background:linear-gradient(180deg,#8b5cf6,#1F6FA8);color:#1F6FA8"></div>
 
 <!-- NOTIFY -->
 <section class="notify" id="notifyband"><div class="in">
@@ -461,6 +485,8 @@
   </div>
 </div></section>
 
+<div class="conn" style="background:linear-gradient(180deg,#1F6FA8,#94a3b8);color:#94a3b8"></div>
+
 <!-- TERMS + PRESENTER -->
 <section class="band"><div class="duo">
   <div class="panel">
@@ -504,7 +530,7 @@ before acting.</p>
 <script>
   // draw the regulator map when it scrolls into view
   (function () {
-    var watched = [document.getElementById('map'), document.getElementById('stats')];
+    var watched = Array.prototype.slice.call(document.querySelectorAll('#map, #stats, .conn'));
     if ('IntersectionObserver' in window) {
       var io = new IntersectionObserver(function (entries) {
         entries.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('inview'); io.unobserve(e.target); } });
