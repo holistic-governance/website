@@ -126,10 +126,11 @@
     .feat p { font-size: 12.5px; }
     .feat .meta { margin-top: 8px; font-size: 10px; }
     .feat .buy { display: block; text-align: center; width: 100%; }
-    .slim { display: flex !important; align-items: center; gap: 10px; padding: 13px 16px; }
-    .slim .badge { margin: 0; flex-shrink: 0; }
-    .slim h4 { flex: 1; font-size: 15px; margin: 0; }
-    .slim .soonlbl { display: inline; font-size: 10px; text-transform: uppercase; letter-spacing: 1px; }
+    .slim { display: grid !important; grid-template-columns: 1fr auto; align-items: center;
+      gap: 8px 10px; padding: 13px 16px; }
+    .slim .badge { margin: 0; justify-self: start; }
+    .slim .soonlbl { display: inline; font-size: 10px; text-transform: uppercase; letter-spacing: 1px; justify-self: end; }
+    .slim h4 { grid-column: 1 / -1; font-size: 15.5px; line-height: 1.35; margin: 0; }
     /* pricing halves stack */
     #pricing div[style*="grid-template-columns"] { grid-template-columns: 1fr !important; }
     /* close the desktop flare gap */
