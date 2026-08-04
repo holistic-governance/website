@@ -96,8 +96,6 @@
   .mapband.inview svg.wires path.w:nth-of-type(3){animation-delay:.35s} .mapband.inview svg.wires path.w:nth-of-type(4){animation-delay:.12s}
   .mapband.inview svg.wires path.w:nth-of-type(5){animation-delay:.28s} .mapband.inview svg.wires path.w:nth-of-type(6){animation-delay:.42s}
   @keyframes draw { to { stroke-dashoffset: 0; } }
-  svg.wires circle.dot { opacity: 0; }
-  .mapband.inview svg.wires circle.dot { opacity: 1; transition: opacity .6s 1.6s; }
 
   /* scale the map proportionally so the wires survive smaller windows */
   @media (max-width:1300px){ .mapband{zoom:.85} }
@@ -267,12 +265,6 @@
     <path class="w" d="M640 6 L640 32 Q640 48 656 48 L1164 48 Q1180 48 1180 64 L1180 574 Q1180 590 1164 590 L656 590 Q640 590 640 606 L640 694" stroke="url(#w5)" stroke-width="2"/>
     <path class="w" d="M640 6 L640 32 Q640 48 656 48 L984 48 Q1000 48 1000 64 L1000 574 Q1000 590 984 590 L656 590 Q640 590 640 606 L640 694" stroke="url(#w6)" stroke-width="2"/>
     <circle cx="640" cy="6" r="5" fill="#0f172a"/><circle cx="640" cy="694" r="5" fill="#0f172a"/>
-    <circle class="dot" r="4" fill="#0ea5e9"><animateMotion dur="7s" repeatCount="indefinite" path="M640 6 L640 32 Q640 48 624 48 L206 48 Q190 48 190 64 L190 574 Q190 590 206 590 L624 590 Q640 590 640 606 L640 694"/></circle>
-    <circle class="dot" r="4" fill="#8b5cf6"><animateMotion dur="9s" begin="1.2s" repeatCount="indefinite" path="M640 6 L640 32 Q640 48 624 48 L116 48 Q100 48 100 64 L100 574 Q100 590 116 590 L624 590 Q640 590 640 606 L640 694"/></circle>
-    <circle class="dot" r="4" fill="#ec4899"><animateMotion dur="8s" begin="2.4s" repeatCount="indefinite" path="M640 6 L640 32 Q640 48 624 48 L296 48 Q280 48 280 64 L280 574 Q280 590 296 590 L624 590 Q640 590 640 606 L640 694"/></circle>
-    <circle class="dot" r="4" fill="#10b981"><animateMotion dur="7.5s" begin=".6s" repeatCount="indefinite" path="M640 6 L640 32 Q640 48 656 48 L1074 48 Q1090 48 1090 64 L1090 574 Q1090 590 1074 590 L656 590 Q640 590 640 606 L640 694"/></circle>
-    <circle class="dot" r="4" fill="#f97316"><animateMotion dur="9.5s" begin="1.8s" repeatCount="indefinite" path="M640 6 L640 32 Q640 48 656 48 L1164 48 Q1180 48 1180 64 L1180 574 Q1180 590 1164 590 L656 590 Q640 590 640 606 L640 694"/></circle>
-    <circle class="dot" r="4" fill="#0f172a"><animateMotion dur="8.5s" begin="3s" repeatCount="indefinite" path="M640 6 L640 32 Q640 48 656 48 L984 48 Q1000 48 1000 64 L1000 574 Q1000 590 984 590 L656 590 Q640 590 640 606 L640 694"/></circle>
     <defs>
       <linearGradient id="w1" x1="190" y1="48" x2="640" y2="606" gradientUnits="userSpaceOnUse"><stop stop-color="#0ea5e9"/><stop offset="1" stop-color="#8b5cf6"/></linearGradient>
       <linearGradient id="w2" x1="100" y1="48" x2="640" y2="606" gradientUnits="userSpaceOnUse"><stop stop-color="#8b5cf6"/><stop offset="1" stop-color="#ec4899"/></linearGradient>
