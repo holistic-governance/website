@@ -604,9 +604,9 @@ before acting.</p>
       if (err) err.classList.remove('show');
     });
   });
-  var toTopBtn = document.getElementById('toTop');
   window.addEventListener('scroll', function () {
-    toTopBtn.classList.toggle('show', window.scrollY > 600);
+    var toTopBtn = document.getElementById('toTop');
+    if (toTopBtn) toTopBtn.classList.toggle('show', window.scrollY > 600);
   }, { passive: true });
 
   document.getElementById('consent').addEventListener('change', function () {
