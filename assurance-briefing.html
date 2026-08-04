@@ -64,6 +64,10 @@
     font-family: 'Cormorant Garamond', serif; font-weight: 400; font-size: clamp(26px, 2.8vw, 38px);
     line-height: 1.25; color: var(--ink); text-align: center; max-width: 440px; opacity: 0; }
   .map-note em { font-style: italic; color: var(--sky); }
+  .guidance { max-width: 1000px; margin: 4px auto 10px; text-align: center; padding: 0 20px; }
+  .glabel { font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--soft); margin-bottom: 14px; }
+  .grow { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+  .reg.gsm { position: static; opacity: 1 !important; animation: none !important; box-shadow: 0 10px 28px rgba(15,23,42,.08); }
   .mapband.inview .map-note { animation: cardin .9s .9s ease forwards; }
   @media (max-width: 700px){ .map-note { position: static; transform: none; margin: 10px auto 20px; opacity: 1; } }
   .mapband.inview .reg.fc { animation: cardin .7s ease forwards, ride 12s ease-in-out infinite alternate; }
@@ -318,6 +322,15 @@
   <div class="reg fc" style="right:1%;top:300px"><div class="mono" style="background:#5B2D8E">ACS</div><div><div class="t">Australian Commission on Safety and Quality in Health Care</div><div class="s">Safety &amp; quality standards</div></div></div>
   <div class="reg fc" style="right:11%;top:560px"><div class="mono" style="background:#00696B">ACQ</div><div><div class="t">Aged Care Quality &amp; Safety Commission</div><div class="s">Provider regulation</div></div></div>
   <div class="reg fc" style="right:22%;top:140px"><div class="mono" style="background:#0f172a">ACT</div><div><div class="t">Aged Care Act 2024</div><div class="s">Duties &amp; obligations</div></div></div>
+</section>
+
+<!-- GUIDANCE ROW — voluntary guidance, deliberately separate from the requirements map -->
+<section class="guidance">
+  <p class="glabel">Plus the guidance shaping practice</p>
+  <div class="grow">
+    <div class="reg gsm"><div class="mono" style="background:#64748b">NAIC</div><div><div class="t">National AI Centre</div><div class="s">Voluntary AI guidance</div></div></div>
+    <div class="reg gsm"><div class="mono" style="background:#334155">ASD</div><div><div class="t">Australian Signals Directorate</div><div class="s">Cyber security guidance</div></div></div>
+  </div>
 </section>
 
 <!-- TRAILER -->
