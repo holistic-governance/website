@@ -131,6 +131,36 @@
   .terms strong { color: var(--text); }
 
   .fineprint { font-size: 11px; color: var(--muted); line-height: 1.7; margin-top: 14px; }
+
+  /* Colour-blocks look (variant B, chosen 4 Aug 2026) */
+  .bg { background:
+    radial-gradient(ellipse 70% 50% at 15% -5%, rgba(56,189,248,0.25) 0%, transparent 60%),
+    radial-gradient(ellipse 45% 35% at 90% 15%, rgba(251,146,60,0.14) 0%, transparent 65%),
+    radial-gradient(ellipse 50% 40% at 85% 105%, rgba(52,211,153,0.12) 0%, transparent 60%), var(--navy); }
+  .hero-title { background: linear-gradient(100deg, #7dd3fc, #38bdf8 55%, #a78bfa);
+    -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+  .hero-eyebrow { color:#fb923c; } .hero-eyebrow::before { background:#fb923c; }
+  .card.expiry { background: linear-gradient(135deg, rgba(251,146,60,0.14), rgba(30,41,59,0.6) 55%);
+    border-color: rgba(251,146,60,0.4); }
+  .card.expiry::before { background: linear-gradient(90deg, transparent, #fb923c, transparent); }
+  .card.expiry h2 { color:#fdba74; }
+  .stat90 { float:right; margin:0 0 8px 20px; text-align:center; }
+  .stat90 .n { font-family:'Cormorant Garamond',serif; font-size:64px; line-height:1; color:#fb923c; }
+  .stat90 .l { font-size:10px; letter-spacing:2px; text-transform:uppercase; color:#fdba74; margin-top:4px; }
+  .tier.pass { border-color:#fb923c; background: rgba(251,146,60,0.08); position:relative; }
+  .tier.pass .tier-price { color:#fb923c; }
+  .tier.pass .btn { background: linear-gradient(135deg, #ea7317, #fb923c); }
+  .ribbon { position:absolute; top:-11px; right:16px; background:#fb923c; color:#0f172a;
+    font-size:10px; font-weight:700; letter-spacing:1.5px; text-transform:uppercase;
+    padding:4px 12px; border-radius:999px; }
+  .ep { border-color: rgba(56,189,248,0.4); background: rgba(56,189,248,0.05); }
+  .epnum { display:inline-flex; align-items:center; justify-content:center; width:40px; height:40px;
+    border-radius:10px; background:linear-gradient(135deg,#0077a8,#38bdf8); color:#0f172a;
+    font-weight:700; font-size:16px; float:right; margin-left:14px; }
+  .coming .when { color:#34d399; }
+  .card.notifyc { border-color: rgba(52,211,153,0.35); }
+  .card.notifyc::before { background: linear-gradient(90deg, transparent, #34d399, transparent); }
+  .card.notifyc h2 { color:#6ee7b7; }
 </style>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-9PMGXF9Q9T"></script>
@@ -171,9 +201,9 @@
     </div>
   </div>
 
-  <!-- WHY BRIEFINGS RETIRE -->
-  <div class="card">
-    <h2>Why briefings expire</h2>
+  <!-- WHY BRIEFINGS EXPIRE -->
+  <div class="card expiry">
+    <h2>Why briefings expire</h2><div class="stat90"><div class="n">90</div><div class="l">days, then gone</div></div>
     <p>Regulatory content goes stale fast. Each briefing is available for <strong>90 days from
     release</strong>, then it expires — we don't sell stale regulatory content. Every episode
     carries its recorded date, and if the law moves materially inside an episode's window,
@@ -192,7 +222,8 @@
         <p>One briefing, yours until it expires. The PDF briefing paper is yours to keep.</p>
         <a class="btn" href="[PIN-EP1-URL]" onclick="gtag('event','begin_checkout',{item_name:'Assurance Briefing single'});">Buy a briefing &rarr;</a>
       </div>
-      <div class="tier">
+      <div class="tier pass">
+        <div class="ribbon">Best value</div>
         <div class="tier-name">Annual pass</div>
         <div class="tier-price">A$599</div>
         <p>Every briefing released during your 12 months — at least one new briefing a month.</p>
@@ -209,6 +240,7 @@
     <h2>On the catalogue now</h2>
 
     <div class="ep">
+      <span class="epnum">01</span>
       <div class="ep-meta">Episode 1 &middot; September 2026 &middot; 45 min &middot; <span class="retire">expires 90 days from release</span></div>
       <h3>Governing clinical AI: the regulatory map for boards</h3>
       <p>Clinical AI is already in Australian health and aged care. This briefing maps who
@@ -227,7 +259,7 @@
   </div>
 
   <!-- NOTIFY ME -->
-  <div class="card" id="notify">
+  <div class="card notifyc" id="notify">
     <h2>Never miss a release</h2>
     <p style="margin-bottom:20px;">New-episode announcements and last-chance notices before an
     episode expires. No spam; unsubscribe any time.</p>
