@@ -92,6 +92,14 @@
     .slim .soonlbl { display: block; }
     /* pricing halves stack */
     #pricing div[style*="grid-template-columns"] { grid-template-columns: 1fr !important; }
+    /* close the desktop flare gap */
+    .guidance { margin: 28px auto 32px; }
+    /* mobile line language: a gradient spine stitching the stacked cards */
+    .mapband { position: relative; }
+    .mapband::before { content: ''; position: absolute; left: 50%; top: 8px; bottom: 8px; width: 2px;
+      transform: translateX(-50%); z-index: 0; opacity: .55;
+      background: linear-gradient(180deg, rgba(0,180,255,.1), #00B4FF 18%, #8b5cf6 55%, #ec4899 85%, rgba(236,72,153,.1)); }
+    .reg.fc { position: relative !important; z-index: 2; }
   }
   .colL .reg:nth-child(1){align-self:flex-start} .colL .reg:nth-child(2){align-self:flex-end} .colL .reg:nth-child(3){align-self:flex-start}
   .colR .reg:nth-child(1){align-self:flex-end} .colR .reg:nth-child(2){align-self:flex-start} .colR .reg:nth-child(3){align-self:flex-end}
