@@ -265,6 +265,15 @@
   .fineprint { font-size: 11px; color: var(--soft); line-height: 1.7; max-width: 660px; margin: 0 auto; text-align: center; padding: 0 20px 50px; }
   .fineprint a { color: var(--sky); text-decoration: none; }
 
+  /* floating back-to-top */
+  #toTop { position: fixed; left: 24px; bottom: 24px; z-index: 60; width: 48px; height: 48px;
+    border-radius: 50%; border: none; cursor: pointer; background: #fff; color: #0577C7;
+    font-size: 20px; line-height: 1; box-shadow: 0 10px 30px rgba(15,23,42,.18);
+    border: 1px solid var(--line); opacity: 0; pointer-events: none; transform: translateY(10px);
+    transition: opacity .3s, transform .3s; }
+  #toTop.show { opacity: 1; pointer-events: auto; transform: translateY(0); }
+  #toTop:hover { background: linear-gradient(135deg, #0577C7, #00B4FF); color: #fff; }
+
   footer { border-top: 1px solid var(--line); padding: 2.4rem 3rem; display: flex; justify-content: space-between; align-items: center; }
   footer .fl { font-family: 'Cormorant Garamond', serif; font-size: 1.15rem; }
   footer .fl span { color: #0577C7; }
@@ -595,10 +604,17 @@ before acting.</p>
       if (err) err.classList.remove('show');
     });
   });
+  var toTopBtn = document.getElementById('toTop');
+  window.addEventListener('scroll', function () {
+    toTopBtn.classList.toggle('show', window.scrollY > 600);
+  }, { passive: true });
+
   document.getElementById('consent').addEventListener('change', function () {
     document.getElementById('consent-error').classList.remove('show');
   });
 </script>
+
+<button id="toTop" aria-label="Back to top" onclick="window.scrollTo({top:0,behavior:'smooth'});">&uarr;</button>
 
 <footer>
   <div class="fl">Holistic <span>Governance</span></div>
