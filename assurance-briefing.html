@@ -111,14 +111,10 @@
     .hero-center{order:1}
     .colL .reg,.colR .reg{align-self:auto!important}
   }
-  /* section connectors — one continuous spine down the page */
-  .conn { width: 2px; height: 84px; margin: 0 auto; border-radius: 2px; position: relative;
-    transform: scaleY(0); transform-origin: top; }
-  .conn.inview { animation: connGrow .8s ease forwards; }
-  @keyframes connGrow { to { transform: scaleY(1); } }
-  .conn.short { height: 48px; }
+  /* section connectors — three-strand fans forming one spine */
   svg.connfan { display: block; margin: 0 auto; }
-  svg.connfan path { stroke-dasharray: 130; stroke-dashoffset: 130; }
+  svg.connfan path { stroke-dasharray: 190; stroke-dashoffset: 190; }
+  svg.connfan { margin-bottom: -4px; }
   svg.connfan.inview path { animation: draw 1s ease forwards; }
   svg.connfan.inview path:nth-of-type(2) { animation-delay: .15s; }
   svg.connfan.inview path:nth-of-type(3) { animation-delay: .3s; }
@@ -283,7 +279,11 @@
   </div>
 </section>
 
-<div class="conn short" style="background:linear-gradient(180deg,#cbd5e1,#0f172a);color:#0f172a"></div>
+<svg class="connfan" width="220" height="72" viewBox="0 0 220 72" fill="none" aria-hidden="true">
+  <path d="M110 0 C66 18 66 54 110 72" stroke="#94a3b8" stroke-width="2"/>
+  <path d="M110 0 L110 72" stroke="#0f172a" stroke-width="2"/>
+  <path d="M110 0 C154 18 154 54 110 72" stroke="#8b5cf6" stroke-width="2"/>
+</svg>
 
 <!-- REGULATOR MAP — scroll down into the wires -->
 <section class="mapband" id="map">
@@ -324,7 +324,11 @@
   </div>
 </section>
 
-<div class="conn" style="background:linear-gradient(180deg,#0f172a,#0ea5e9);color:#0ea5e9"></div>
+<svg class="connfan" width="220" height="120" viewBox="0 0 220 120" fill="none" aria-hidden="true">
+  <path d="M110 0 C66 30 66 90 110 120" stroke="#0f172a" stroke-width="2"/>
+  <path d="M110 0 L110 120" stroke="#0ea5e9" stroke-width="2"/>
+  <path d="M110 0 C154 30 154 90 110 120" stroke="#ec4899" stroke-width="2"/>
+</svg>
 
 <!-- TRAILER -->
 <section class="trailerband" id="trailer">
@@ -334,7 +338,11 @@
   <p class="trailer-label">Watch the trailer — free</p>
 </section>
 
-<div class="conn" style="background:linear-gradient(180deg,#0ea5e9,#10b981);color:#10b981"></div>
+<svg class="connfan" width="220" height="120" viewBox="0 0 220 120" fill="none" aria-hidden="true">
+  <path d="M110 0 C66 30 66 90 110 120" stroke="#0ea5e9" stroke-width="2"/>
+  <path d="M110 0 L110 120" stroke="#10b981" stroke-width="2"/>
+  <path d="M110 0 C154 30 154 90 110 120" stroke="#f97316" stroke-width="2"/>
+</svg>
 
 <!-- STATS — floating tiles with drop-lines -->
 <section class="statsband" id="stats">
@@ -355,7 +363,11 @@
   </div>
 </section>
 
-<div class="conn" style="background:linear-gradient(180deg,#10b981,#0ea5e9);color:#0ea5e9"></div>
+<svg class="connfan" width="220" height="120" viewBox="0 0 220 120" fill="none" aria-hidden="true">
+  <path d="M110 0 C66 30 66 90 110 120" stroke="#10b981" stroke-width="2"/>
+  <path d="M110 0 L110 120" stroke="#0ea5e9" stroke-width="2"/>
+  <path d="M110 0 C154 30 154 90 110 120" stroke="#8b5cf6" stroke-width="2"/>
+</svg>
 
 <!-- CATALOGUE -->
 <section class="band" id="catalogue">
@@ -391,10 +403,10 @@
   </div>
 </section>
 
-<svg class="connfan" width="220" height="64" viewBox="0 0 220 64" fill="none" aria-hidden="true">
-  <path d="M110 8 C110 28 70 36 70 64" stroke="#8b5cf6" stroke-width="2"/>
-  <path d="M110 8 L110 64" stroke="#ec4899" stroke-width="2"/>
-  <path d="M110 8 C110 28 150 36 150 64" stroke="#0ea5e9" stroke-width="2"/>
+<svg class="connfan" width="220" height="104" viewBox="0 0 220 104" fill="none" aria-hidden="true">
+  <path d="M110 0 C110 42 70 58 70 104" stroke="#8b5cf6" stroke-width="2"/>
+  <path d="M110 0 L110 104" stroke="#ec4899" stroke-width="2"/>
+  <path d="M110 0 C110 42 150 58 150 104" stroke="#0ea5e9" stroke-width="2"/>
 </svg>
 
 <!-- EXPIRY -->
@@ -410,10 +422,10 @@
   </div>
 </div></section>
 
-<svg class="connfan" width="220" height="64" viewBox="0 0 220 64" fill="none" aria-hidden="true">
-  <path d="M70 0 C70 28 110 36 110 56" stroke="#8b5cf6" stroke-width="2"/>
-  <path d="M110 0 L110 56" stroke="#0ea5e9" stroke-width="2"/>
-  <path d="M150 0 C150 28 110 36 110 56" stroke="#ec4899" stroke-width="2"/>
+<svg class="connfan" width="220" height="104" viewBox="0 0 220 104" fill="none" aria-hidden="true">
+  <path d="M70 0 C70 46 110 62 110 104" stroke="#8b5cf6" stroke-width="2"/>
+  <path d="M110 0 L110 104" stroke="#0ea5e9" stroke-width="2"/>
+  <path d="M150 0 C150 46 110 62 110 104" stroke="#ec4899" stroke-width="2"/>
 </svg>
 
 <!-- PRICING -->
@@ -439,7 +451,11 @@
   <a href="mailto:naomi@hg-au.com?subject=Assurance%20Briefing%20annual%20pass%20invoice">request an invoice</a>.</p>
 </section>
 
-<div class="conn" style="background:linear-gradient(180deg,#8b5cf6,#1F6FA8);color:#1F6FA8"></div>
+<svg class="connfan" width="220" height="120" viewBox="0 0 220 120" fill="none" aria-hidden="true">
+  <path d="M110 0 C66 30 66 90 110 120" stroke="#8b5cf6" stroke-width="2"/>
+  <path d="M110 0 L110 120" stroke="#1F6FA8" stroke-width="2"/>
+  <path d="M110 0 C154 30 154 90 110 120" stroke="#ec4899" stroke-width="2"/>
+</svg>
 
 <!-- NOTIFY -->
 <section class="notify" id="notifyband"><div class="in">
@@ -494,7 +510,11 @@
   </div>
 </div></section>
 
-<div class="conn" style="background:linear-gradient(180deg,#1F6FA8,#94a3b8);color:#94a3b8"></div>
+<svg class="connfan" width="220" height="120" viewBox="0 0 220 120" fill="none" aria-hidden="true">
+  <path d="M110 0 C66 30 66 90 110 120" stroke="#1F6FA8" stroke-width="2"/>
+  <path d="M110 0 L110 120" stroke="#94a3b8" stroke-width="2"/>
+  <path d="M110 0 C154 30 154 90 110 120" stroke="#8b5cf6" stroke-width="2"/>
+</svg>
 
 <!-- TERMS + PRESENTER -->
 <section class="band"><div class="duo">
@@ -539,7 +559,7 @@ before acting.</p>
 <script>
   // draw the regulator map when it scrolls into view
   (function () {
-    var watched = Array.prototype.slice.call(document.querySelectorAll('#map, #stats, .conn, .connfan'));
+    var watched = Array.prototype.slice.call(document.querySelectorAll('#map, #stats, .connfan'));
     if ('IntersectionObserver' in window) {
       var io = new IntersectionObserver(function (entries) {
         entries.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('inview'); io.unobserve(e.target); } });
