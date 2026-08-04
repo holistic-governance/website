@@ -58,9 +58,15 @@
   .hero > * { position: relative; }
 
   /* REGULATOR MAP — Lorikeet bracket: stem → squared lines → cards on lines → stem */
-  .mapband { position: relative; max-width: 1280px; margin: 0 auto; padding: 0 24px; }
-  .hero-grid { position: relative; display: grid; grid-template-columns: 270px minmax(0,1fr) 270px; gap: 28px; align-items: center; z-index: 2; padding: 84px 0 96px; }
-  .colL, .colR { display: flex; flex-direction: column; gap: 110px; }
+  .mapband { position: relative; max-width: 1280px; margin: -44px auto -60px; padding: 0; z-index: 0; }
+  .reg.fc { position: absolute; z-index: 2; }
+  .mapband.inview .reg.fc { animation: cardin .7s ease forwards, ride 12s ease-in-out infinite alternate; }
+  .mapband.inview .reg.fc:nth-of-type(odd) { animation: cardin .7s .4s ease forwards, rideR 13s .4s ease-in-out infinite alternate; }
+  @media (max-width: 700px){
+    .mapband { height: auto !important; margin: 0 auto; padding: 20px; }
+    .mapband svg.wires { display: none; }
+    .reg.fc { position: static; margin: 10px auto; }
+  }
   .colL .reg:nth-child(1){align-self:flex-start} .colL .reg:nth-child(2){align-self:flex-end} .colL .reg:nth-child(3){align-self:flex-start}
   .colR .reg:nth-child(1){align-self:flex-end} .colR .reg:nth-child(2){align-self:flex-start} .colR .reg:nth-child(3){align-self:flex-end}
   .reg { background: #fff; border: 1px solid var(--line); border-radius: 18px; box-shadow: 0 18px 50px rgba(15,23,42,.12); padding: 15px 19px; display: flex; align-items: center; gap: 12px; max-width: 255px; opacity: 0; }
@@ -279,58 +285,39 @@
     <a class="b1" href="[PIN-EP1-URL]" onclick="gtag('event','begin_checkout',{item_name:'Assurance Briefing Ep 1'});">Buy Episode 1 — A$99</a>
     <a class="b2" href="#trailer">Watch the trailer — <span>free</span></a>
   </div>
+  <h2 class="map-title" style="margin-top:56px;">One briefing a month. Key regulators on your <em>radar</em>.</h2>
+  <p class="map-sub" style="max-width:640px;margin:0 auto;">TGA, Ahpra, OAIC, ACSQHC, the Aged Care Quality and
+  Safety Commission, the Aged Care Act 2024 — the briefings map who governs what, and what it
+  means for your board pack and quality committee.</p>
 </section>
 
-<svg class="connfan" width="220" height="72" viewBox="0 0 220 72" fill="none" aria-hidden="true">
-  <path d="M110 0 C110 21 88 18 88 36 C88 54 110 50 110 72" stroke="#94a3b8" stroke-width="2"/>
-  <path d="M110 0 L110 72" stroke="#0f172a" stroke-width="2"/>
-  <path d="M110 0 C110 21 132 18 132 36 C132 54 110 50 110 72" stroke="#8b5cf6" stroke-width="2"/>
-</svg>
 
-<!-- REGULATOR MAP — scroll down into the wires -->
-<section class="mapband" id="map">
-  <svg class="wires" viewBox="0 0 1280 700" fill="none" preserveAspectRatio="none" aria-hidden="true">
-    <path class="w" d="M640 6 L640 32 Q640 48 624 48 L206 48 Q190 48 190 64 L190 574 Q190 590 206 590 L624 590 Q640 590 640 606 L640 694" stroke="url(#w1)" stroke-width="2"/>
-    <path class="w" d="M640 6 L640 32 Q640 48 624 48 L116 48 Q100 48 100 64 L100 574 Q100 590 116 590 L624 590 Q640 590 640 606 L640 694" stroke="url(#w2)" stroke-width="2"/>
-    <path class="w" d="M640 6 L640 32 Q640 48 624 48 L296 48 Q280 48 280 64 L280 574 Q280 590 296 590 L624 590 Q640 590 640 606 L640 694" stroke="url(#w3)" stroke-width="2"/>
-    <path class="w" d="M640 6 L640 32 Q640 48 656 48 L1074 48 Q1090 48 1090 64 L1090 574 Q1090 590 1074 590 L656 590 Q640 590 640 606 L640 694" stroke="url(#w4)" stroke-width="2"/>
-    <path class="w" d="M640 6 L640 32 Q640 48 656 48 L1164 48 Q1180 48 1180 64 L1180 574 Q1180 590 1164 590 L656 590 Q640 590 640 606 L640 694" stroke="url(#w5)" stroke-width="2"/>
-    <path class="w" d="M640 6 L640 32 Q640 48 656 48 L984 48 Q1000 48 1000 64 L1000 574 Q1000 590 984 590 L656 590 Q640 590 640 606 L640 694" stroke="url(#w6)" stroke-width="2"/>
+
+<!-- REGULATOR MAP — full-width flowing cascade -->
+<section class="mapband" id="map" style="height:880px;">
+  <svg class="wires" viewBox="0 0 1280 880" fill="none" preserveAspectRatio="none" aria-hidden="true">
+    <path class="w" d="M95 0 C95 240 150 300 150 460 C150 640 70 700 70 880" stroke="url(#w1)" stroke-width="2"/>
+    <path class="w" d="M285 0 C285 220 215 320 215 480 C215 660 330 720 330 880" stroke="url(#w2)" stroke-width="2"/>
+    <path class="w" d="M470 0 C470 260 400 340 400 520 C400 700 505 740 505 880" stroke="url(#w3)" stroke-width="2"/>
+    <path class="w" d="M1185 0 C1185 240 1130 300 1130 460 C1130 640 1210 700 1210 880" stroke="url(#w4)" stroke-width="2"/>
+    <path class="w" d="M995 0 C995 220 1065 320 1065 480 C1065 660 950 720 950 880" stroke="url(#w5)" stroke-width="2"/>
+    <path class="w" d="M810 0 C810 260 880 340 880 520 C880 700 775 740 775 880" stroke="url(#w6)" stroke-width="2"/>
     <defs>
-      <linearGradient id="w1" x1="190" y1="48" x2="640" y2="606" gradientUnits="userSpaceOnUse"><stop stop-color="#0ea5e9"/><stop offset="1" stop-color="#8b5cf6"/></linearGradient>
-      <linearGradient id="w2" x1="100" y1="48" x2="640" y2="606" gradientUnits="userSpaceOnUse"><stop stop-color="#8b5cf6"/><stop offset="1" stop-color="#ec4899"/></linearGradient>
-      <linearGradient id="w3" x1="280" y1="48" x2="640" y2="606" gradientUnits="userSpaceOnUse"><stop stop-color="#ec4899"/><stop offset="1" stop-color="#f97316"/></linearGradient>
-      <linearGradient id="w4" x1="1090" y1="48" x2="640" y2="606" gradientUnits="userSpaceOnUse"><stop stop-color="#10b981"/><stop offset="1" stop-color="#0ea5e9"/></linearGradient>
-      <linearGradient id="w5" x1="1180" y1="48" x2="640" y2="606" gradientUnits="userSpaceOnUse"><stop stop-color="#f97316"/><stop offset="1" stop-color="#10b981"/></linearGradient>
-      <linearGradient id="w6" x1="1000" y1="48" x2="640" y2="606" gradientUnits="userSpaceOnUse"><stop stop-color="#0f172a"/><stop offset="1" stop-color="#0ea5e9"/></linearGradient>
+      <linearGradient id="w1" x1="100" y1="0" x2="640" y2="880" gradientUnits="userSpaceOnUse"><stop stop-color="#0ea5e9"/><stop offset="1" stop-color="#8b5cf6"/></linearGradient>
+      <linearGradient id="w2" x1="215" y1="0" x2="640" y2="880" gradientUnits="userSpaceOnUse"><stop stop-color="#8b5cf6"/><stop offset="1" stop-color="#ec4899"/></linearGradient>
+      <linearGradient id="w3" x1="345" y1="0" x2="640" y2="880" gradientUnits="userSpaceOnUse"><stop stop-color="#ec4899"/><stop offset="1" stop-color="#f97316"/></linearGradient>
+      <linearGradient id="w4" x1="1180" y1="0" x2="640" y2="880" gradientUnits="userSpaceOnUse"><stop stop-color="#10b981"/><stop offset="1" stop-color="#0ea5e9"/></linearGradient>
+      <linearGradient id="w5" x1="1065" y1="0" x2="640" y2="880" gradientUnits="userSpaceOnUse"><stop stop-color="#f97316"/><stop offset="1" stop-color="#10b981"/></linearGradient>
+      <linearGradient id="w6" x1="935" y1="0" x2="640" y2="880" gradientUnits="userSpaceOnUse"><stop stop-color="#0f172a"/><stop offset="1" stop-color="#0ea5e9"/></linearGradient>
     </defs>
   </svg>
-
-  <div class="hero-grid">
-    <div class="colL">
-      <div class="reg"><div class="mono" style="background:#0ea5e9">TGA</div><div><div class="t">Therapeutic Goods Administration</div><div class="s">Medical devices &amp; software</div></div></div>
-      <div class="reg"><div class="mono" style="background:#8b5cf6">AH</div><div><div class="t">Ahpra</div><div class="s">Practitioner regulation</div></div></div>
-      <div class="reg"><div class="mono" style="background:#ec4899">OAIC</div><div><div class="t">OAIC</div><div class="s">Privacy &amp; health information</div></div></div>
-    </div>
-    <div class="hero-center">
-      <h2 class="map-title">One briefing a month. Key regulators on your <em>radar</em>.</h2>
-      <p class="map-sub">TGA, Ahpra, OAIC, ACSQHC, the Aged Care Quality and Safety Commission, the
-      Aged Care Act 2024 — the briefings map who governs what, and what it means for your board
-      pack and quality committee.</p>
-    </div>
-    <div class="colR">
-      <div class="reg"><div class="mono" style="background:#10b981">ACS</div><div><div class="t">ACSQHC</div><div class="s">Safety &amp; quality standards</div></div></div>
-      <div class="reg"><div class="mono" style="background:#f97316">ACQ</div><div><div class="t">Aged Care Quality &amp; Safety Commission</div><div class="s">Provider regulation</div></div></div>
-      <div class="reg"><div class="mono" style="background:#0f172a">ACT</div><div><div class="t">Aged Care Act 2024</div><div class="s">Duties &amp; obligations</div></div></div>
-    </div>
-  </div>
+  <div class="reg fc" style="left:1%;top:300px"><div class="mono" style="background:#0ea5e9">TGA</div><div><div class="t">Therapeutic Goods Administration</div><div class="s">Medical devices &amp; software</div></div></div>
+  <div class="reg fc" style="left:11%;top:560px"><div class="mono" style="background:#8b5cf6">AH</div><div><div class="t">Ahpra</div><div class="s">Practitioner regulation</div></div></div>
+  <div class="reg fc" style="left:22%;top:140px"><div class="mono" style="background:#ec4899">OAIC</div><div><div class="t">OAIC</div><div class="s">Privacy &amp; health information</div></div></div>
+  <div class="reg fc" style="right:1%;top:300px"><div class="mono" style="background:#10b981">ACS</div><div><div class="t">ACSQHC</div><div class="s">Safety &amp; quality standards</div></div></div>
+  <div class="reg fc" style="right:11%;top:560px"><div class="mono" style="background:#f97316">ACQ</div><div><div class="t">Aged Care Quality &amp; Safety Commission</div><div class="s">Provider regulation</div></div></div>
+  <div class="reg fc" style="right:22%;top:140px"><div class="mono" style="background:#0f172a">ACT</div><div><div class="t">Aged Care Act 2024</div><div class="s">Duties &amp; obligations</div></div></div>
 </section>
-
-<svg class="connfan" width="220" height="120" viewBox="0 0 220 120" fill="none" aria-hidden="true">
-  <path d="M110 0 C110 36 88 30 88 60 C88 90 110 84 110 120" stroke="#0f172a" stroke-width="2"/>
-  <path d="M110 0 L110 120" stroke="#0ea5e9" stroke-width="2"/>
-  <path d="M110 0 C110 36 132 30 132 60 C132 90 110 84 110 120" stroke="#ec4899" stroke-width="2"/>
-</svg>
 
 <!-- TRAILER -->
 <section class="trailerband" id="trailer">
