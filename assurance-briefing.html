@@ -149,11 +149,13 @@
   .statsband { position: relative; max-width: 980px; margin: -6px auto 0; padding: 0 20px; text-align: center; z-index: 0; }
   .stiles { position: relative; z-index: 2; display: flex; justify-content: space-between; align-items: flex-start; max-width: 860px; margin: 0 auto; }
   .stile { background: #fff; border: 1px solid var(--line); border-radius: 22px; box-shadow: 0 18px 50px rgba(15,23,42,.10); padding: 28px 30px; min-width: 200px; opacity: 0; }
-  .statsband.inview .stile { animation: cardin .7s ease forwards, ride 12s ease-in-out infinite alternate; }
-  .statsband.inview .stile:nth-child(1){ margin-top: 64px; animation-delay: .2s, .2s; }
-  .statsband.inview .stile:nth-child(2){ animation: cardin .7s .4s ease forwards, rideR 13s .4s ease-in-out infinite alternate; }
-  .statsband.inview .stile:nth-child(3){ margin-top: 44px; animation-delay: .6s, .6s; }
-  .stile:nth-child(1){ margin-top: 64px; } .stile:nth-child(3){ margin-top: 44px; }
+  @keyframes rideS { 0% { transform: translateY(-16px); } 100% { transform: translateY(16px); } }
+  @keyframes rideSR { 0% { transform: translateY(16px); } 100% { transform: translateY(-16px); } }
+  .statsband.inview .stile { animation: cardin .7s ease forwards, rideS 12s ease-in-out infinite alternate; }
+  .statsband.inview .stile:nth-child(1){ margin-top: 48px; animation-delay: .2s, .2s; }
+  .statsband.inview .stile:nth-child(2){ animation: cardin .7s .4s ease forwards, rideSR 13s .4s ease-in-out infinite alternate; }
+  .statsband.inview .stile:nth-child(3){ margin-top: 34px; animation-delay: .6s, .6s; }
+  .stile:nth-child(1){ margin-top: 48px; } .stile:nth-child(3){ margin-top: 34px; }
   .stile .n { font-family: 'Cormorant Garamond', serif; font-size: 44px; line-height: 1; }
   .stile:nth-child(1) .n{color:var(--sky)} .stile:nth-child(2) .n{color:var(--green)} .stile:nth-child(3) .n{color:var(--orange)}
   .stile p { font-size: 11px; letter-spacing: 1.6px; text-transform: uppercase; color: var(--soft); margin-top: 8px; }
