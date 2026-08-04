@@ -104,16 +104,13 @@
     .reg.fc[style*="left:11%"] .mono { font-size: 7px !important; letter-spacing: 0; }
     .reg.fc[style*="right:1%"] .mono { font-size: 6px !important; letter-spacing: 0; }
     .reg.fc[style*="right:11%"] .mono { font-size: 7px !important; letter-spacing: 0; }
-    /* guidance trio as one combined card */
-    .grow { flex-direction: column; gap: 0; background: #fff; border: 1px solid #eef2f7;
-      border-radius: 18px; box-shadow: 0 12px 34px rgba(15,23,42,.08); overflow: hidden;
-      max-width: 340px; margin: 0 auto; }
-    .reg.gsm { box-shadow: none; border: none !important; border-radius: 0; width: 100%; max-width: none;
-      justify-content: flex-start; text-align: left; padding: 13px 18px; border-bottom: 1px solid #eef2f7 !important; }
-    .grow .reg.gsm:last-child { border-bottom: none !important; }
-    .grow .reg.gsm:nth-child(1) { border-left: 4px solid #64748b !important; }
-    .grow .reg.gsm:nth-child(2) { border-left: 4px solid #334155 !important; }
-    .grow .reg.gsm:nth-child(3) { border-left: 4px solid #47698a !important; }
+    /* guidance trio: separate cards, thin bright outlines */
+    .grow { flex-direction: column; gap: 10px; align-items: center; }
+    .reg.gsm { width: 100%; max-width: 320px; justify-content: flex-start; text-align: left;
+      padding: 12px 18px; border-radius: 16px; box-shadow: 0 8px 22px rgba(15,23,42,.06); }
+    .grow .reg.gsm:nth-child(1) { border: 1.5px solid #00B4FF !important; }
+    .grow .reg.gsm:nth-child(2) { border: 1.5px solid #f97316 !important; }
+    .grow .reg.gsm:nth-child(3) { border: 1.5px solid #10b981 !important; }
     .reg.gsm .t { font-size: 13px; }
     .reg.gsm .s { font-size: 10.5px; }
     .reg.fc[style*="left:1%;"]  { left: 10px !important; right: auto !important; top: 170px !important; animation: rideM 6.5s -1s ease-in-out infinite alternate !important; }
