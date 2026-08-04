@@ -120,6 +120,11 @@
   .conn.inview::after { animation: cardin .4s .7s ease forwards; }
   @keyframes connGrow { to { transform: scaleY(1); } }
   .conn.short { height: 48px; }
+  svg.connfan { display: block; margin: 0 auto; }
+  svg.connfan path { stroke-dasharray: 130; stroke-dashoffset: 130; }
+  svg.connfan.inview path { animation: draw 1s ease forwards; }
+  svg.connfan.inview path:nth-of-type(2) { animation-delay: .15s; }
+  svg.connfan.inview path:nth-of-type(3) { animation-delay: .3s; }
 
   .map-title { font-family: 'Cormorant Garamond', serif; font-weight: 400; font-size: clamp(34px, 3.8vw, 50px); line-height: 1.1; margin-bottom: 14px; }
   .map-title em { font-style: italic; color: var(--sky); }
@@ -175,13 +180,13 @@
   .buy { display: inline-block; text-align: center; background: var(--ink); color: #fff; font-weight: 600; font-size: 13px; padding: 12px 22px; border-radius: 999px; text-decoration: none; cursor: pointer; border: none; font-family: 'Inter', sans-serif; }
 
   /* EXPIRY */
-  .expiry { background: linear-gradient(120deg, #fff7ed, #ffedd5 120%); border-top: 1px solid #fed7aa; border-bottom: 1px solid #fed7aa; }
+  .expiry { background: linear-gradient(120deg, #ede9fe, #e0f2fe); border-top: 1px solid #ddd6fe; border-bottom: 1px solid #ddd6fe; }
   .expiry .in { max-width: 1000px; margin: 0 auto; padding: 56px 20px; display: grid; grid-template-columns: auto 1fr; gap: 44px; align-items: center; }
   @media (max-width: 640px){ .expiry .in{grid-template-columns:1fr; gap:20px} }
-  .big90 { font-family: 'Cormorant Garamond', serif; font-size: 120px; line-height: 1; color: var(--orange); }
-  .big90 small { display: block; font-family: 'Inter', sans-serif; font-size: 11px; letter-spacing: 2.5px; text-transform: uppercase; color: #c2610c; margin-top: 6px; }
+  .big90 { font-family: 'Cormorant Garamond', serif; font-size: 108px; line-height: 1; color: var(--orange); }
+  .big90 small { display: block; font-family: 'Inter', sans-serif; font-size: 11px; letter-spacing: 2.5px; text-transform: uppercase; color: #7c3aed; margin-top: 20px; }
   .expiry h2 { text-align: left; margin-bottom: 12px; font-size: 28px; }
-  .expiry p { font-size: 14px; line-height: 1.8; color: #431407; max-width: 580px; }
+  .expiry p { font-size: 14px; line-height: 1.8; color: #334155; max-width: 580px; }
   .expiry p + p { margin-top: 10px; }
 
   /* PRICING */
@@ -310,7 +315,7 @@
       <div class="reg"><div class="mono" style="background:#ec4899">OAIC</div><div><div class="t">OAIC</div><div class="s">Privacy &amp; health information</div></div></div>
     </div>
     <div class="hero-center">
-      <h2 class="map-title">One briefing a month. Every regulator on your board's <em>radar</em>.</h2>
+      <h2 class="map-title">One briefing a month. Key regulators on your <em>radar</em>.</h2>
       <p class="map-sub">TGA, Ahpra, OAIC, ACSQHC, the Aged Care Quality and Safety Commission, the
       Aged Care Act 2024 — the briefings map who governs what, and what it means for your board
       pack and quality committee.</p>
@@ -390,7 +395,12 @@
   </div>
 </section>
 
-<div class="conn" style="background:linear-gradient(180deg,#8b5cf6,#f97316);color:#f97316"></div>
+<svg class="connfan" width="220" height="64" viewBox="0 0 220 64" fill="none" aria-hidden="true">
+  <circle cx="110" cy="4" r="4" fill="#0f172a"/>
+  <path d="M110 8 C110 28 70 36 70 64" stroke="#8b5cf6" stroke-width="2"/>
+  <path d="M110 8 L110 64" stroke="#ec4899" stroke-width="2"/>
+  <path d="M110 8 C110 28 150 36 150 64" stroke="#0ea5e9" stroke-width="2"/>
+</svg>
 
 <!-- EXPIRY -->
 <section class="expiry"><div class="in">
@@ -405,7 +415,12 @@
   </div>
 </div></section>
 
-<div class="conn" style="background:linear-gradient(180deg,#f97316,#0ea5e9);color:#0ea5e9"></div>
+<svg class="connfan" width="220" height="64" viewBox="0 0 220 64" fill="none" aria-hidden="true">
+  <path d="M70 0 C70 28 110 36 110 56" stroke="#8b5cf6" stroke-width="2"/>
+  <path d="M110 0 L110 56" stroke="#0ea5e9" stroke-width="2"/>
+  <path d="M150 0 C150 28 110 36 110 56" stroke="#ec4899" stroke-width="2"/>
+  <circle cx="110" cy="60" r="4" fill="#0f172a"/>
+</svg>
 
 <!-- PRICING -->
 <section class="band" id="pricing">
@@ -530,7 +545,7 @@ before acting.</p>
 <script>
   // draw the regulator map when it scrolls into view
   (function () {
-    var watched = Array.prototype.slice.call(document.querySelectorAll('#map, #stats, .conn'));
+    var watched = Array.prototype.slice.call(document.querySelectorAll('#map, #stats, .conn, .connfan'));
     if ('IntersectionObserver' in window) {
       var io = new IntersectionObserver(function (entries) {
         entries.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('inview'); io.unobserve(e.target); } });
