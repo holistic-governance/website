@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <!--
-  THE ASSURANCE BRIEFING — series page (cinematic-bands layout, locked 4 Aug 2026).
+  THE ASSURANCE BRIEFING — series page (LIGHT brand, adopted 4 Aug 2026).
+  The dark cinematic-bands version is recoverable at website commit b1d7692.
   PRE-LAUNCH: robots is noindex; placeholders to fill at launch:
     [TRAILER-YOUTUBE-ID]  — public trailer video ID
     [PIN-EP1-URL]         — Pin Payments hosted payment page for Ep 1
@@ -25,143 +26,182 @@
 <meta name="twitter:card" content="summary_large_image" />
 <link rel="icon" type="image/png" href="favicon.png">
 <link rel="preload" as="image" href="logo-hg-trimmed.png" fetchpriority="high">
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
   :root {
-    --navy: #0f172a; --sky: #38bdf8; --green: #34d399; --orange: #fb923c;
-    --text: #f1f5f9; --muted: #64748b; --border: rgba(56,189,248,0.15);
-    --border-focus: rgba(56,189,248,0.45); --red: #f87171;
+    --ink: #0f172a; --sky: #0ea5e9; --green: #10b981; --orange: #f97316;
+    --violet: #8b5cf6; --pink: #ec4899; --soft: #64748b; --line: #eef2f7; --red: #dc2626;
   }
   html { scroll-behavior: smooth; }
-  body { font-family: 'DM Sans', sans-serif; background: var(--navy); color: var(--text); overflow-x: hidden; }
-  .band { padding: 64px 28px; position: relative; }
-  .inner { max-width: 1000px; margin: 0 auto; }
+  body { font-family: 'Inter', sans-serif; background: #FFFFFF; color: var(--ink); overflow-x: hidden; }
 
-  .hdr { max-width: 1000px; margin: 0 auto; display: flex; align-items: center; padding: 30px 28px 0; }
-  .logo { display: flex; align-items: center; gap: .75rem; text-decoration: none; }
-  .logo img { height: 46px; width: auto; }
-  .logo-name { font-family: 'Cormorant Garamond', serif; font-size: 1.35rem; font-weight: 600; letter-spacing: .08em; color: var(--text); }
+  /* floating pill nav */
+  .navwrap { position: sticky; top: 16px; z-index: 50; display: flex; justify-content: center; padding: 16px 20px 0; }
+  .nav { display: flex; align-items: center; gap: 24px; background: #fff; border: 1px solid var(--line); border-radius: 999px; box-shadow: 0 10px 40px rgba(15,23,42,.10); padding: 10px 12px 10px 20px; }
+  .logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+  .logo img { height: 34px; width: auto; }
+  .logo-name { font-family: 'Cormorant Garamond', serif; font-size: 1.15rem; font-weight: 600; letter-spacing: .05em; color: var(--ink); }
   .logo-name span { color: var(--sky); }
-  .back-link { margin-left: auto; font-size: 13px; color: var(--muted); text-decoration: none; }
-  .back-link:hover { color: var(--sky); }
+  .nav a.item { font-size: 13.5px; font-weight: 500; color: #334155; text-decoration: none; }
+  .nav a.item:hover { color: var(--sky); }
+  .cta-pill { background: var(--ink); color: #fff; font-size: 13.5px; font-weight: 600; padding: 11px 20px; border-radius: 999px; text-decoration: none; }
+  @media (max-width: 720px) { .nav a.item { display: none; } }
 
-  /* HERO BAND */
-  .hero { background:
-    radial-gradient(ellipse 60% 70% at 50% -10%, rgba(56,189,248,0.28), transparent 65%),
-    radial-gradient(ellipse 40% 40% at 85% 30%, rgba(52,211,153,0.14), transparent 65%);
-    text-align: center; padding: 70px 28px 56px; }
-  .eyebrow { font-size: 11px; font-weight: 500; letter-spacing: 3px; text-transform: uppercase; color: var(--green); margin-bottom: 18px; display: inline-flex; align-items: center; gap: 10px; }
-  .eyebrow::before, .eyebrow::after { content: ''; width: 28px; height: 1px; background: var(--green); }
-  h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(44px, 8vw, 70px); font-weight: 300; line-height: 1.05; margin-bottom: 14px;
-    background: linear-gradient(100deg, #7dd3fc, #38bdf8 55%, #a78bfa);
-    -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
-  .tag { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 20px; color: #cbd5e1; margin-bottom: 20px; }
-  .desc { font-size: 15px; line-height: 1.8; color: #cbd5e1; max-width: 660px; margin: 0 auto 30px; }
-  .desc strong { color: var(--text); }
-  .trailer { max-width: 720px; margin: 0 auto; position: relative; padding-top: 40.5%; border-radius: 16px; overflow: hidden; background: rgba(255,255,255,0.04); border: 1px solid rgba(56,189,248,0.35); box-shadow: 0 30px 80px rgba(0,0,0,.5); }
-  .trailer iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
-  .trailer-label { font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); margin-top: 14px; }
+  /* HERO — three-column grid; wires drawn behind */
+  .hero { position: relative; max-width: 1280px; margin: 0 auto; padding: 56px 24px 56px; }
+  .hero-grid { position: relative; display: grid; grid-template-columns: 270px minmax(0,1fr) 270px; gap: 28px; align-items: center; z-index: 2; padding: 52px 0 56px; }
+  .colL, .colR { display: flex; flex-direction: column; gap: 56px; }
+  .colL .reg:nth-child(1){align-self:flex-start} .colL .reg:nth-child(2){align-self:flex-end} .colL .reg:nth-child(3){align-self:flex-start}
+  .colR .reg:nth-child(1){align-self:flex-end} .colR .reg:nth-child(2){align-self:flex-start} .colR .reg:nth-child(3){align-self:flex-end}
+  .reg { background: #fff; border: 1px solid var(--line); border-radius: 18px; box-shadow: 0 18px 50px rgba(15,23,42,.12); padding: 15px 19px; display: flex; align-items: center; gap: 12px; max-width: 255px; opacity: 0; animation: cardin .7s ease forwards, bob 6s ease-in-out infinite alternate; }
+  .colL .reg:nth-child(1){animation-delay:.5s,1.4s} .colL .reg:nth-child(2){animation-delay:.7s,2s} .colL .reg:nth-child(3){animation-delay:.9s,1.1s}
+  .colR .reg:nth-child(1){animation-delay:.6s,1.7s} .colR .reg:nth-child(2){animation-delay:.8s,2.3s} .colR .reg:nth-child(3){animation-delay:1s,1.3s}
+  @keyframes cardin { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: translateY(0); } }
+  @keyframes bob { from { margin-top: 0; } to { margin-top: -8px; } }
+  .mono { width: 40px; height: 40px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 12px; color: #fff; flex-shrink: 0; }
+  .reg .t { font-size: 13px; font-weight: 600; line-height: 1.25; }
+  .reg .s { font-size: 10.5px; color: var(--soft); font-weight: 400; margin-top: 1px; }
 
-  /* STATS BAND */
-  .stats { background: rgba(30,41,59,0.55); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 44px 28px; }
-  .stats .inner { display: grid; grid-template-columns: repeat(3, 1fr); gap: 26px; text-align: center; }
-  @media (max-width: 640px) { .stats .inner { grid-template-columns: 1fr; } }
-  .s .n { font-family: 'Cormorant Garamond', serif; font-size: 48px; color: var(--sky); line-height: 1; }
-  .s:nth-child(2) .n { color: var(--green); }
-  .s:nth-child(3) .n { color: var(--orange); }
-  .s p { font-size: 12px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--muted); margin-top: 10px; }
+  .hero-center { text-align: center; max-width: 600px; margin: 0 auto; }
+  .chip-kicker { display: inline-block; font-size: 11px; font-weight: 700; letter-spacing: 2.5px; text-transform: uppercase; color: var(--green); background: #ecfdf5; border: 1px solid #a7f3d0; padding: 7px 16px; border-radius: 999px; margin-bottom: 22px; }
+  h1 { font-family: 'Cormorant Garamond', serif; font-weight: 400; font-size: clamp(38px, 4.6vw, 60px); line-height: 1.06; margin-bottom: 16px; }
+  h1 em { font-style: italic; color: var(--sky); }
+  .tag { font-size: 16px; line-height: 1.65; color: #334155; margin-bottom: 10px; }
+  .sub { font-size: 13.5px; line-height: 1.75; color: var(--soft); margin-bottom: 26px; }
+  .hero-ctas { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+  .b1 { background: var(--ink); color: #fff; font-weight: 600; font-size: 14px; padding: 14px 26px; border-radius: 999px; text-decoration: none; }
+  .b2 { background: #fff; color: var(--ink); border: 1.5px solid #e2e8f0; font-weight: 600; font-size: 14px; padding: 14px 26px; border-radius: 999px; text-decoration: none; }
+  .b2 span { color: var(--sky); }
 
-  h2 { font-family: 'Cormorant Garamond', serif; font-size: 30px; font-weight: 300; margin-bottom: 26px; text-align: center; }
+  svg.wires { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; z-index: 1; }
+  svg.wires path { stroke-dasharray: 2600; stroke-dashoffset: 2600; animation: draw 2.4s cubic-bezier(.4,0,.2,1) forwards; }
+  svg.wires path:nth-of-type(1){animation-delay:.1s} svg.wires path:nth-of-type(2){animation-delay:.25s}
+  svg.wires path:nth-of-type(3){animation-delay:.4s} svg.wires path:nth-of-type(4){animation-delay:.2s}
+  svg.wires path:nth-of-type(5){animation-delay:.35s} svg.wires path:nth-of-type(6){animation-delay:.5s}
+  @keyframes draw { to { stroke-dashoffset: 0; } }
 
-  /* EPISODE STRIP */
-  .strip { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
-  @media (max-width: 800px) { .strip { grid-template-columns: 1fr; } }
-  .epc { border-radius: 16px; padding: 26px; border: 1px solid var(--border); background: rgba(30,41,59,0.6); display: flex; flex-direction: column; }
-  .epc.live { border-color: rgba(56,189,248,0.5); background: linear-gradient(160deg, rgba(56,189,248,0.12), rgba(30,41,59,0.6) 60%); }
-  .badge { align-self: flex-start; font-size: 10px; font-weight: 700; letter-spacing: 1.6px; text-transform: uppercase; padding: 5px 12px; border-radius: 999px; margin-bottom: 16px; }
-  .live .badge { background: var(--sky); color: var(--navy); }
-  .soon .badge { background: rgba(52,211,153,0.15); color: var(--green); border: 1px solid rgba(52,211,153,0.35); }
-  .epc .num { font-family: 'Cormorant Garamond', serif; font-size: 42px; color: rgba(241,245,249,0.25); line-height: 1; margin-bottom: 10px; }
-  .epc h3 { font-family: 'Cormorant Garamond', serif; font-size: 21px; font-weight: 400; line-height: 1.25; margin-bottom: 10px; }
-  .epc p { font-size: 12.5px; line-height: 1.65; color: #cbd5e1; flex: 1; }
-  .epc .meta { font-size: 10.5px; letter-spacing: 1.4px; text-transform: uppercase; color: #7dd3fc; margin: 14px 0; }
-  .live .meta .x { color: var(--orange); }
+  /* scale hero proportionally so the wires survive smaller windows */
+  @media (max-width:1300px){ .hero{zoom:.85} }
+  @media (max-width:1100px){ .hero{zoom:.72} }
+  @media (max-width:920px){ .hero{zoom:.6} }
+  @media (max-width:760px){ .hero{zoom:.5} }
+  @media (max-width:600px){
+    .hero{zoom:1}
+    .hero-grid{grid-template-columns:1fr}
+    svg.wires{display:none}
+    .colL,.colR{flex-direction:row;flex-wrap:wrap;justify-content:center;gap:12px}
+    .colL{order:2;margin-top:26px} .colR{order:3}
+    .hero-center{order:1}
+    .colL .reg,.colR .reg{align-self:auto!important}
+  }
 
-  .btn { display: inline-block; text-align: center; padding: 13px 24px; background: linear-gradient(135deg, #0077a8, var(--sky)); color: var(--navy); font-family: 'DM Sans', sans-serif; font-weight: 700; font-size: 13px; border: none; border-radius: 9px; text-decoration: none; cursor: pointer; transition: all .2s; }
-  .btn:hover { opacity: .92; transform: translateY(-1px); box-shadow: 0 8px 24px rgba(56,189,248,0.2); }
-  .btn:disabled { opacity: .5; cursor: not-allowed; transform: none; }
-  .btn.loading .spinner { display: inline-block; }
-  .spinner { display: none; width: 14px; height: 14px; border: 2px solid rgba(15,23,42,0.3); border-top-color: var(--navy); border-radius: 50%; animation: spin .7s linear infinite; vertical-align: -2px; margin-left: 8px; }
-  @keyframes spin { to { transform: rotate(360deg); } }
+  /* TRAILER */
+  .trailerband { max-width: 860px; margin: 0 auto; padding: 10px 24px 30px; text-align: center; }
+  .trailer-frame { position: relative; padding-top: 56.25%; border-radius: 20px; overflow: hidden; background: #f8fafc; border: 1px solid var(--line); box-shadow: 0 22px 60px rgba(15,23,42,.12); }
+  .trailer-frame iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+  .trailer-label { font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--soft); margin-top: 14px; }
 
-  /* EXPIRY BAND */
-  .expiry { background: linear-gradient(120deg, rgba(251,146,60,0.16), rgba(15,23,42,0) 60%); border-top: 1px solid rgba(251,146,60,0.3); border-bottom: 1px solid rgba(251,146,60,0.3); }
-  .expiry .inner { display: grid; grid-template-columns: auto 1fr; gap: 44px; align-items: center; }
-  @media (max-width: 640px) { .expiry .inner { grid-template-columns: 1fr; gap: 20px; } }
+  /* STATS */
+  .stats { max-width: 1000px; margin: 26px auto 0; display: grid; grid-template-columns: repeat(3,1fr); gap: 16px; padding: 0 20px; }
+  @media (max-width: 720px){ .stats{grid-template-columns:1fr} }
+  .stat { background: #fff; border: 1px solid var(--line); border-radius: 18px; box-shadow: 0 10px 30px rgba(15,23,42,.06); padding: 26px; text-align: center; }
+  .stat .n { font-family: 'Cormorant Garamond', serif; font-size: 42px; line-height: 1; }
+  .stat:nth-child(1) .n{color:var(--sky)} .stat:nth-child(2) .n{color:var(--green)} .stat:nth-child(3) .n{color:var(--orange)}
+  .stat p { font-size: 11.5px; letter-spacing: 1.6px; text-transform: uppercase; color: var(--soft); margin-top: 8px; }
+
+  .band { max-width: 1000px; margin: 0 auto; padding: 64px 20px; }
+  h2 { font-family: 'Cormorant Garamond', serif; font-size: 34px; font-weight: 400; text-align: center; margin-bottom: 30px; }
+  h2 em { font-style: italic; color: var(--sky); }
+
+  /* CATALOGUE */
+  .strip { display: grid; grid-template-columns: repeat(3,1fr); gap: 18px; }
+  @media (max-width: 800px){ .strip{grid-template-columns:1fr} }
+  .epc { background: #fff; border: 1px solid var(--line); border-radius: 20px; box-shadow: 0 14px 40px rgba(15,23,42,.07); padding: 26px; display: flex; flex-direction: column; }
+  .badge { align-self: flex-start; font-size: 10px; font-weight: 700; letter-spacing: 1.6px; text-transform: uppercase; padding: 6px 13px; border-radius: 999px; margin-bottom: 16px; }
+  .badge.live { background: var(--sky); color: #fff; }
+  .badge.oct { background: #f5f3ff; color: var(--violet); border: 1px solid #ddd6fe; }
+  .badge.nov { background: #fdf2f8; color: var(--pink); border: 1px solid #fbcfe8; }
+  .epc .num { font-family: 'Cormorant Garamond', serif; font-size: 40px; color: #e2e8f0; line-height: 1; margin-bottom: 8px; }
+  .epc h3 { font-family: 'Cormorant Garamond', serif; font-size: 21px; font-weight: 500; line-height: 1.25; margin-bottom: 10px; }
+  .epc p { font-size: 12.5px; line-height: 1.65; color: #475569; flex: 1; }
+  .epc .meta { font-size: 10.5px; letter-spacing: 1.3px; text-transform: uppercase; color: var(--sky); margin: 14px 0; }
+  .epc .meta .x { color: var(--orange); }
+  .buy { display: inline-block; text-align: center; background: var(--ink); color: #fff; font-weight: 600; font-size: 13px; padding: 12px 22px; border-radius: 999px; text-decoration: none; cursor: pointer; border: none; font-family: 'Inter', sans-serif; }
+
+  /* EXPIRY */
+  .expiry { background: linear-gradient(120deg, #fff7ed, #ffedd5 120%); border-top: 1px solid #fed7aa; border-bottom: 1px solid #fed7aa; }
+  .expiry .in { max-width: 1000px; margin: 0 auto; padding: 56px 20px; display: grid; grid-template-columns: auto 1fr; gap: 44px; align-items: center; }
+  @media (max-width: 640px){ .expiry .in{grid-template-columns:1fr; gap:20px} }
   .big90 { font-family: 'Cormorant Garamond', serif; font-size: 120px; line-height: 1; color: var(--orange); }
-  .big90 small { display: block; font-size: 12px; letter-spacing: 2.5px; text-transform: uppercase; color: #fdba74; font-family: 'DM Sans', sans-serif; margin-top: 6px; }
-  .expiry h2 { text-align: left; margin-bottom: 12px; color: #fdba74; font-size: 26px; }
-  .expiry p { font-size: 14px; line-height: 1.8; color: #e2e8f0; max-width: 580px; }
+  .big90 small { display: block; font-family: 'Inter', sans-serif; font-size: 11px; letter-spacing: 2.5px; text-transform: uppercase; color: #c2610c; margin-top: 6px; }
+  .expiry h2 { text-align: left; margin-bottom: 12px; font-size: 28px; }
+  .expiry p { font-size: 14px; line-height: 1.8; color: #431407; max-width: 580px; }
   .expiry p + p { margin-top: 10px; }
 
-  /* PRICING BAND */
-  .tiers { display: grid; grid-template-columns: repeat(2, minmax(0, 320px)); gap: 20px; justify-content: center; }
-  @media (max-width: 640px) { .tiers { grid-template-columns: 1fr; } }
-  .tier { border: 1px solid var(--border); border-radius: 16px; padding: 30px; background: rgba(30,41,59,0.6); text-align: center; position: relative; }
-  .tier.pass { border-color: var(--orange); background: rgba(251,146,60,0.08); }
-  .ribbon { position: absolute; top: -11px; left: 50%; transform: translateX(-50%); background: var(--orange); color: var(--navy); font-size: 10px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; padding: 4px 14px; border-radius: 999px; }
-  .tn { font-size: 11px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); }
-  .tp { font-family: 'Cormorant Garamond', serif; font-size: 44px; color: var(--sky); margin: 8px 0; }
-  .pass .tp { color: var(--orange); }
-  .tier p { font-size: 12.5px; line-height: 1.65; color: #cbd5e1; margin-bottom: 18px; }
-  .pass .btn { background: linear-gradient(135deg, #ea7317, var(--orange)); }
-  .invoice { text-align: center; font-size: 12px; color: var(--muted); margin-top: 18px; line-height: 1.7; }
+  /* PRICING */
+  .tiers { display: grid; grid-template-columns: repeat(2, minmax(0,320px)); gap: 20px; justify-content: center; }
+  @media (max-width: 680px){ .tiers{grid-template-columns:1fr} }
+  .tier { background: #fff; border: 1px solid var(--line); border-radius: 20px; box-shadow: 0 14px 40px rgba(15,23,42,.07); padding: 32px; text-align: center; position: relative; }
+  .tier.pass { background: linear-gradient(140deg, #4c1d95, #8b5cf6); color: #fff; border: none; }
+  .ribbon { position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: var(--orange); color: #fff; font-size: 10px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; padding: 5px 14px; border-radius: 999px; }
+  .tn { font-size: 11px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: var(--soft); }
+  .pass .tn { color: #ddd6fe; }
+  .tp { font-family: 'Cormorant Garamond', serif; font-size: 46px; color: var(--sky); margin: 8px 0; }
+  .pass .tp { color: #fff; }
+  .tier p { font-size: 12.5px; line-height: 1.65; color: #475569; margin-bottom: 18px; }
+  .pass p { color: #ede9fe; }
+  .pass .buy { background: #fff; color: #4c1d95; }
+  .invoice { text-align: center; font-size: 12px; color: var(--soft); margin-top: 18px; line-height: 1.7; }
   .invoice a { color: var(--sky); text-decoration: none; }
 
-  /* NOTIFY BAND */
-  .notifyband { background: linear-gradient(120deg, rgba(52,211,153,0.12), rgba(15,23,42,0) 60%); border-top: 1px solid rgba(52,211,153,0.3); }
-  .notifyband .inner { max-width: 620px; }
-  .notifyband h2 { color: #6ee7b7; }
-  .notifyband p.sub { font-size: 13.5px; color: #cbd5e1; text-align: center; margin-bottom: 22px; }
+  /* NOTIFY */
+  .notify { background: linear-gradient(120deg, #ecfdf5, #d1fae5 130%); border-top: 1px solid #a7f3d0; }
+  .notify .in { max-width: 620px; margin: 0 auto; padding: 56px 20px; }
+  .notify h2 em { color: var(--green); }
+  .notify p.sub2 { font-size: 13.5px; color: #065f46; text-align: center; margin-bottom: 22px; }
   .field { margin-bottom: 16px; }
   .field-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
-  @media (max-width: 560px) { .field-row { grid-template-columns: 1fr; } }
-  label { display: block; font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 1.5px; color: var(--muted); margin-bottom: 8px; }
-  label .optional { font-size: 10px; font-weight: 400; color: rgba(100,116,139,0.6); text-transform: none; letter-spacing: 0; margin-left: 6px; }
-  input, select { width: 100%; background: rgba(255,255,255,0.04); border: 1px solid rgba(52,211,153,0.3); border-radius: 8px; color: var(--text); font-family: 'DM Sans', sans-serif; font-size: 14px; padding: 12px 14px; transition: all .2s; outline: none; appearance: none; }
-  input::placeholder { color: rgba(100,116,139,0.5); }
-  input:focus, select:focus { border-color: rgba(52,211,153,0.6); background: rgba(52,211,153,0.04); box-shadow: 0 0 0 3px rgba(52,211,153,0.08); }
+  @media (max-width: 560px){ .field-row{grid-template-columns:1fr} }
+  label { display: block; font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 1.5px; color: #047857; margin-bottom: 8px; }
+  label .optional { font-size: 10px; font-weight: 400; color: var(--soft); text-transform: none; letter-spacing: 0; margin-left: 6px; }
+  input, select { width: 100%; background: #fff; border: 1.5px solid #a7f3d0; border-radius: 12px; color: var(--ink); font-family: 'Inter', sans-serif; font-size: 14px; padding: 12px 14px; transition: all .2s; outline: none; appearance: none; }
+  input::placeholder { color: #94a3b8; }
+  input:focus, select:focus { border-color: var(--green); box-shadow: 0 0 0 3px rgba(16,185,129,.12); }
   input.error { border-color: var(--red); }
-  select { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%2334d399' stroke-width='2'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 14px center; padding-right: 36px; cursor: pointer; }
-  select option { background: #1e293b; color: var(--text); }
+  select { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%2310b981' stroke-width='2'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 14px center; padding-right: 36px; cursor: pointer; }
   .field-error { font-size: 11px; color: var(--red); margin-top: 6px; display: none; }
   .field-error.show { display: block; }
   .consent { display: flex; align-items: flex-start; gap: 10px; margin: 4px 0 18px; }
   .consent input { width: 18px; height: 18px; flex-shrink: 0; margin-top: 2px; accent-color: var(--green); appearance: auto; cursor: pointer; }
-  .consent label { text-transform: none; letter-spacing: 0; font-size: 13px; font-weight: 400; color: #cbd5e1; line-height: 1.6; margin: 0; cursor: pointer; }
-  .btn-block { width: 100%; background: linear-gradient(135deg, #0d9268, var(--green)); }
-  .gate-note { font-size: 11px; color: rgba(148,163,184,0.8); margin-top: 14px; line-height: 1.7; }
-  .gate-note a { color: var(--green); text-decoration: none; }
+  .consent label { text-transform: none; letter-spacing: 0; font-size: 13px; font-weight: 400; color: #065f46; line-height: 1.6; margin: 0; cursor: pointer; }
+  .nbtn { width: 100%; padding: 14px; background: var(--green); color: #fff; font-weight: 600; font-size: 14px; border: none; border-radius: 999px; cursor: pointer; font-family: 'Inter', sans-serif; }
+  .nbtn:disabled { opacity: .6; cursor: not-allowed; }
+  .gate-note { font-size: 11px; color: #047857; margin-top: 14px; line-height: 1.7; }
+  .gate-note a { color: var(--green); text-decoration: underline; }
   .form-done { display: none; text-align: center; padding: 18px 0 6px; }
   .form-done.show { display: block; }
   .form-done .tick { font-size: 30px; color: var(--green); margin-bottom: 10px; }
+  .form-done p { color: #065f46; font-size: 14px; }
 
   /* TERMS + PRESENTER */
-  .duo { display: grid; grid-template-columns: 1.2fr .8fr; gap: 22px; }
-  @media (max-width: 800px) { .duo { grid-template-columns: 1fr; } }
-  .panel { background: rgba(30,41,59,0.6); border: 1px solid var(--border); border-radius: 16px; padding: 30px; }
-  .panel h2 { text-align: left; font-size: 22px; margin-bottom: 14px; }
-  .terms { font-size: 13px; line-height: 1.75; color: #cbd5e1; }
+  .duo { display: grid; grid-template-columns: 1.2fr .8fr; gap: 20px; }
+  @media (max-width: 800px){ .duo{grid-template-columns:1fr} }
+  .panel { background: #fff; border: 1px solid var(--line); border-radius: 20px; box-shadow: 0 10px 30px rgba(15,23,42,.06); padding: 30px; }
+  .panel h2 { text-align: left; font-size: 24px; margin-bottom: 14px; }
+  .terms { font-size: 13px; line-height: 1.75; color: #475569; }
   .terms li { margin: 0 0 10px 18px; }
-  .terms strong { color: var(--text); }
-  .panel p { font-size: 13.5px; line-height: 1.75; color: #cbd5e1; }
+  .terms strong { color: var(--ink); }
+  .panel p { font-size: 13.5px; line-height: 1.75; color: #475569; }
   .panel a { color: var(--sky); text-decoration: none; }
 
-  .fineprint { font-size: 11px; color: var(--muted); line-height: 1.7; max-width: 660px; margin: 0 auto; text-align: center; }
+  .fineprint { font-size: 11px; color: var(--soft); line-height: 1.7; max-width: 660px; margin: 0 auto; text-align: center; padding: 0 20px 50px; }
   .fineprint a { color: var(--sky); text-decoration: none; }
 
-  footer { background: #070d1a; padding: 2.6rem 3rem; display: flex; align-items: center; justify-content: space-between; border-top: 1px solid var(--border); }
+  footer { border-top: 1px solid var(--line); padding: 2.4rem 3rem; display: flex; justify-content: space-between; align-items: center; }
+  footer .fl { font-family: 'Cormorant Garamond', serif; font-size: 1.15rem; }
+  footer .fl span { color: var(--sky); }
+  footer p { font-size: .75rem; color: var(--soft); }
 </style>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-9PMGXF9Q9T"></script>
@@ -175,38 +215,79 @@
 </head>
 <body>
 
-<header class="hdr">
-  <a href="index.html" class="logo"><img src="logo-hg-trimmed.png" alt="Holistic Governance" width="351" height="524"><span class="logo-name">Holistic <span>Governance</span></span></a>
-  <a href="index.html" class="back-link">&larr; hg-au.com</a>
-</header>
+<div class="navwrap"><nav class="nav">
+  <a class="logo" href="index.html"><img src="logo-hg-trimmed.png" alt="Holistic Governance"><span class="logo-name">Holistic <span>Governance</span></span></a>
+  <a class="item" href="#catalogue">Catalogue</a>
+  <a class="item" href="#pricing">Pricing</a>
+  <a class="item" href="about.html">About</a>
+  <a class="cta-pill" href="[PIN-PASS-URL]" onclick="gtag('event','begin_checkout',{item_name:'Assurance Briefing annual pass'});">Get the annual pass &rarr;</a>
+</nav></div>
 
 <!-- HERO -->
 <section class="hero">
-  <div class="eyebrow">On-Demand Executive Briefings</div>
-  <h1>The Assurance Briefing</h1>
-  <p class="tag">Monthly executive briefings for boards, CEOs and leadership teams across Australian healthcare.</p>
-  <p class="desc">Board-level briefings on what's moving in health-sector governance — the regulation,
-    the evidence, and the questions that belong in your board pack and quality committee.
-    <strong>Every claim cited to the primary source</strong>, with the reference list provided.</p>
-  <div class="trailer">
+  <svg class="wires" viewBox="0 0 1280 670" fill="none" preserveAspectRatio="none" aria-hidden="true">
+    <path d="M640 26 C450 30 190 70 190 170 L190 470 C190 580 450 640 640 644" stroke="url(#w1)" stroke-width="2"/>
+    <path d="M640 26 C410 32 100 95 100 215 L100 430 C100 565 420 638 640 644" stroke="url(#w2)" stroke-width="2"/>
+    <path d="M640 26 C485 32 275 115 275 240 L275 405 C275 545 490 636 640 644" stroke="url(#w3)" stroke-width="2"/>
+    <path d="M640 26 C830 30 1090 70 1090 170 L1090 470 C1090 580 830 640 640 644" stroke="url(#w4)" stroke-width="2"/>
+    <path d="M640 26 C870 32 1180 95 1180 215 L1180 430 C1180 565 860 638 640 644" stroke="url(#w5)" stroke-width="2"/>
+    <path d="M640 26 C795 32 1005 115 1005 240 L1005 405 C1005 545 790 636 640 644" stroke="url(#w6)" stroke-width="2"/>
+    <circle cx="640" cy="26" r="5" fill="#0f172a"/><circle cx="640" cy="644" r="5" fill="#0f172a"/>
+    <defs>
+      <linearGradient id="w1" x1="190" y1="26" x2="640" y2="644" gradientUnits="userSpaceOnUse"><stop stop-color="#0ea5e9"/><stop offset="1" stop-color="#8b5cf6"/></linearGradient>
+      <linearGradient id="w2" x1="100" y1="26" x2="640" y2="644" gradientUnits="userSpaceOnUse"><stop stop-color="#8b5cf6"/><stop offset="1" stop-color="#ec4899"/></linearGradient>
+      <linearGradient id="w3" x1="275" y1="26" x2="640" y2="644" gradientUnits="userSpaceOnUse"><stop stop-color="#ec4899"/><stop offset="1" stop-color="#f97316"/></linearGradient>
+      <linearGradient id="w4" x1="1090" y1="26" x2="640" y2="644" gradientUnits="userSpaceOnUse"><stop stop-color="#10b981"/><stop offset="1" stop-color="#0ea5e9"/></linearGradient>
+      <linearGradient id="w5" x1="1180" y1="26" x2="640" y2="644" gradientUnits="userSpaceOnUse"><stop stop-color="#f97316"/><stop offset="1" stop-color="#10b981"/></linearGradient>
+      <linearGradient id="w6" x1="1005" y1="26" x2="640" y2="644" gradientUnits="userSpaceOnUse"><stop stop-color="#0f172a"/><stop offset="1" stop-color="#0ea5e9"/></linearGradient>
+    </defs>
+  </svg>
+
+  <div class="hero-grid">
+    <div class="colL">
+      <div class="reg"><div class="mono" style="background:#0ea5e9">TGA</div><div><div class="t">Therapeutic Goods Administration</div><div class="s">Medical devices &amp; software</div></div></div>
+      <div class="reg"><div class="mono" style="background:#8b5cf6">AH</div><div><div class="t">Ahpra</div><div class="s">Practitioner regulation</div></div></div>
+      <div class="reg"><div class="mono" style="background:#ec4899">OAIC</div><div><div class="t">OAIC</div><div class="s">Privacy &amp; health information</div></div></div>
+    </div>
+    <div class="hero-center">
+      <span class="chip-kicker">On-demand executive briefings</span>
+      <h1>One briefing a month. Every regulator on your board's <em>radar</em>.</h1>
+      <p class="tag">The Assurance Briefing — monthly executive briefings for boards, CEOs and leadership teams across Australian healthcare.</p>
+      <p class="sub">Approximately 45 minutes. Every claim cited to the primary source, reference list provided. Each briefing expires after 90 days — we don't sell stale regulatory content.</p>
+      <div class="hero-ctas">
+        <a class="b1" href="[PIN-EP1-URL]" onclick="gtag('event','begin_checkout',{item_name:'Assurance Briefing Ep 1'});">Buy Episode 1 — A$99</a>
+        <a class="b2" href="#trailer">Watch the trailer — <span>free</span></a>
+      </div>
+    </div>
+    <div class="colR">
+      <div class="reg"><div class="mono" style="background:#10b981">ACS</div><div><div class="t">ACSQHC</div><div class="s">Safety &amp; quality standards</div></div></div>
+      <div class="reg"><div class="mono" style="background:#f97316">ACQ</div><div><div class="t">Aged Care Quality &amp; Safety Commission</div><div class="s">Provider regulation</div></div></div>
+      <div class="reg"><div class="mono" style="background:#0f172a">ACT</div><div><div class="t">Aged Care Act 2024</div><div class="s">Duties &amp; obligations</div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- TRAILER -->
+<section class="trailerband" id="trailer">
+  <div class="trailer-frame">
     <iframe src="https://www.youtube-nocookie.com/embed/[TRAILER-YOUTUBE-ID]" title="The Assurance Briefing — trailer" allowfullscreen loading="lazy"></iframe>
   </div>
   <p class="trailer-label">Watch the trailer — free</p>
 </section>
 
 <!-- STATS -->
-<section class="stats"><div class="inner">
-  <div class="s"><div class="n">~45 min</div><p>Per briefing</p></div>
-  <div class="s"><div class="n">Monthly</div><p>At least one new briefing</p></div>
-  <div class="s"><div class="n">90 days</div><p>Then it expires</p></div>
-</div></section>
+<div class="stats">
+  <div class="stat"><div class="n">~45 min</div><p>Per briefing</p></div>
+  <div class="stat"><div class="n">Monthly</div><p>At least one new briefing</p></div>
+  <div class="stat"><div class="n">90 days</div><p>Then it expires</p></div>
+</div>
 
-<!-- CATALOGUE STRIP -->
-<section class="band"><div class="inner">
-  <h2>The catalogue</h2>
+<!-- CATALOGUE -->
+<section class="band" id="catalogue">
+  <h2>The <em>catalogue</em></h2>
   <div class="strip">
-    <div class="epc live">
-      <span class="badge">Live September 2026</span>
+    <div class="epc">
+      <span class="badge live">Live September 2026</span>
       <div class="num">01</div>
       <h3>Governing clinical AI: the regulatory map for boards</h3>
       <p>Clinical AI is already in Australian health and aged care. Who governs what — TGA, Ahpra,
@@ -214,34 +295,34 @@
       tools are deployed, and the questions and metrics that belong in your board pack and
       quality committee.</p>
       <div class="meta">Approx. 45 min &middot; <span class="x">expires 90 days from release</span></div>
-      <a class="btn" href="[PIN-EP1-URL]" onclick="gtag('event','begin_checkout',{item_name:'Assurance Briefing Ep 1'});">Buy — A$99 &rarr;</a>
+      <a class="buy" href="[PIN-EP1-URL]" onclick="gtag('event','begin_checkout',{item_name:'Assurance Briefing Ep 1'});">Buy — A$99 &rarr;</a>
     </div>
-    <div class="epc soon">
-      <span class="badge">October 2026</span>
+    <div class="epc">
+      <span class="badge oct">October 2026</span>
       <div class="num">02</div>
       <h3>&ldquo;AI guardrails&rdquo;: from buzzword to real controls</h3>
       <p>Everyone claims guardrails. The five-question test that separates a real control from a
       policy hope — with tangible examples.</p>
-      <div class="meta">Coming next</div>
+      <div class="meta" style="color:var(--violet)">Coming next</div>
     </div>
-    <div class="epc soon">
-      <span class="badge">November 2026</span>
+    <div class="epc">
+      <span class="badge nov">November 2026</span>
       <div class="num">03</div>
       <h3>Board responsibilities under the Aged Care Act 2024</h3>
       <p>The provider duty, the responsible-person due-diligence duty, and the governance
       structures boards must build — in plain language.</p>
-      <div class="meta">Coming soon</div>
+      <div class="meta" style="color:var(--pink)">Coming soon</div>
     </div>
   </div>
-</div></section>
+</section>
 
 <!-- EXPIRY -->
-<section class="band expiry"><div class="inner">
+<section class="expiry"><div class="in">
   <div class="big90">90<small>days, then gone</small></div>
   <div>
     <h2>Why briefings expire</h2>
-    <p>Regulatory content goes stale fast. Each briefing is available for <strong style="color:#fff;">90 days
-    from release</strong>, then it expires — we don't sell stale regulatory content. Every episode carries
+    <p>Regulatory content goes stale fast. Each briefing is available for <strong>90 days from
+    release</strong>, then it expires — we don't sell stale regulatory content. Every episode carries
     its recorded date, and if the law moves materially inside an episode's window, we pull or
     replace it early.</p>
     <p>That also means: if a briefing on the catalogue matters to your board, don't sit on it.</p>
@@ -249,32 +330,32 @@
 </div></section>
 
 <!-- PRICING -->
-<section class="band"><div class="inner">
-  <h2>Simple pricing</h2>
+<section class="band" id="pricing">
+  <h2>Simple <em>pricing</em></h2>
   <div class="tiers">
     <div class="tier">
       <div class="tn">Single briefing</div>
       <div class="tp">A$99</div>
       <p>One briefing, yours until it expires. The PDF briefing paper is yours to keep.</p>
-      <a class="btn" href="[PIN-EP1-URL]" onclick="gtag('event','begin_checkout',{item_name:'Assurance Briefing single'});">Buy a briefing &rarr;</a>
+      <a class="buy" href="[PIN-EP1-URL]" onclick="gtag('event','begin_checkout',{item_name:'Assurance Briefing single'});">Buy a briefing &rarr;</a>
     </div>
     <div class="tier pass">
       <div class="ribbon">Best value</div>
       <div class="tn">Annual pass</div>
       <div class="tp">A$599</div>
       <p>Every briefing released during your 12 months — at least one new briefing a month.</p>
-      <a class="btn" href="[PIN-PASS-URL]" onclick="gtag('event','begin_checkout',{item_name:'Assurance Briefing annual pass'});">Get the pass &rarr;</a>
+      <a class="buy" href="[PIN-PASS-URL]" onclick="gtag('event','begin_checkout',{item_name:'Assurance Briefing annual pass'});">Get the pass &rarr;</a>
     </div>
   </div>
   <p class="invoice">Pay &rarr; your link lands in your inbox &rarr; watch anytime until expiry.<br>
   Organisations can pay the annual pass by invoice and bank transfer —
   <a href="mailto:naomi@hg-au.com?subject=Assurance%20Briefing%20annual%20pass%20invoice">request an invoice</a>.</p>
-</div></section>
+</section>
 
 <!-- NOTIFY -->
-<section class="band notifyband" id="notify"><div class="inner">
-  <h2>Never miss a release</h2>
-  <p class="sub">New-episode announcements and last-chance notices before an episode expires.
+<section class="notify" id="notifyband"><div class="in">
+  <h2>Never miss a <em>release</em></h2>
+  <p class="sub2">New-episode announcements and last-chance notices before an episode expires.
   No spam; unsubscribe any time.</p>
   <div id="notifyForm">
     <div class="field-row">
@@ -312,9 +393,7 @@
       <label for="consent">Notify me about new episodes and last-chance notices.</label>
     </div>
     <div class="field-error" id="consent-error" style="margin:-10px 0 14px;">Please tick the box so we know you'd like the notices</div>
-    <button type="button" class="btn btn-block" id="notifyBtn" onclick="subscribe()">
-      Keep me posted &rarr;<span class="spinner"></span>
-    </button>
+    <button type="button" class="nbtn" id="notifyBtn" onclick="subscribe()">Keep me posted &rarr;</button>
     <p class="gate-note">We collect your name, email, organisation and role to send you series
     updates you've opted into. Handled under the Privacy Act 1988 (Cth) and the Australian
     Privacy Principles — unsubscribe any time. Please don't include personal or health
@@ -327,7 +406,7 @@
 </div></section>
 
 <!-- TERMS + PRESENTER -->
-<section class="band"><div class="inner duo">
+<section class="band"><div class="duo">
   <div class="panel">
     <h2>Purchase terms</h2>
     <ul class="terms">
@@ -360,13 +439,11 @@
   </div>
 </div></section>
 
-<section class="band" style="padding-top:0;">
-  <p class="fineprint">The Assurance Briefing is general information and decision support only —
-  not legal or clinical advice. Legislative references are current as at each episode's recorded
-  date; verify against the current consolidated law at
-  <a href="https://www.legislation.gov.au" target="_blank" rel="noopener">legislation.gov.au</a>
-  before acting.</p>
-</section>
+<p class="fineprint">The Assurance Briefing is general information and decision support only —
+not legal or clinical advice. Legislative references are current as at each episode's recorded
+date; verify against the current consolidated law at
+<a href="https://www.legislation.gov.au" target="_blank" rel="noopener">legislation.gov.au</a>
+before acting.</p>
 
 <script>
   async function subscribe() {
@@ -382,7 +459,7 @@
     if (!valid) return;
 
     var btn = document.getElementById('notifyBtn');
-    btn.disabled = true; btn.classList.add('loading');
+    btn.disabled = true;
 
     var data = {
       enquiryType: 'briefing-notify',
@@ -411,7 +488,7 @@
 
     gtag('event', 'generate_lead', { lead_source: 'briefing-notify' });
     if (!captured) {
-      btn.disabled = false; btn.classList.remove('loading');
+      btn.disabled = false;
       alert('That didn’t go through — please try again, or email naomi@hg-au.com.');
       return;
     }
@@ -432,8 +509,8 @@
 </script>
 
 <footer>
-  <div style="font-family:'Cormorant Garamond',serif;font-size:1.2rem;color:#f1f5f9;">Holistic <span style="color:#38bdf8;">Governance</span></div>
-  <p style="font-size:.78rem;color:#64748b;">© 2026 Holistic Governance</p>
+  <div class="fl">Holistic <span>Governance</span></div>
+  <p>© 2026 Holistic Governance</p>
 </footer>
 </body>
 </html>
