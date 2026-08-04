@@ -5,7 +5,6 @@
   this page is linked or promoted. Source copy: hg-au/shared/brand/templates/briefings/
   assurance-briefing/ (series-page-copy.md, purchase-terms.md).
   Placeholders to fill at launch:
-    [PRICE] [PASS-PRICE]  — final prices (series-identity.md)
     [TRAILER-YOUTUBE-ID]  — public trailer video ID
     [PIN-EP1-URL]         — Pin Payments hosted payment page for Ep 1
     [PIN-PASS-URL]        — Pin payment page for the annual pass
@@ -18,13 +17,13 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>The Assurance Briefing — on-demand executive briefings | Holistic Governance</title>
-<meta name="description" content="Monthly on-demand executive briefings for Australian health and aged-care boards. 20–40 minutes, every claim cited to the primary source. Each briefing retires after 90 days." />
+<meta name="description" content="Monthly on-demand executive briefings for boards, CEOs and leadership teams across Australian healthcare. 20–40 minutes, every claim cited to the primary source. Each briefing expires after 90 days." />
 <meta name="robots" content="noindex,nofollow" />
 <link rel="canonical" href="https://hg-au.com/assurance-briefing.html" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://hg-au.com/assurance-briefing.html" />
 <meta property="og:title" content="The Assurance Briefing — Holistic Governance" />
-<meta property="og:description" content="Monthly executive briefings for Australian health and aged-care boards. Every claim cited. Each briefing retires after 90 days." />
+<meta property="og:description" content="Monthly executive briefings for boards, CEOs and leadership teams across Australian healthcare. Every claim cited. Each briefing expires after 90 days." />
 <meta property="og:image" content="https://hg-au.com/og-image-v3.png" />
 <meta name="twitter:card" content="summary_large_image" />
 <link rel="icon" type="image/png" href="favicon.png">
@@ -75,6 +74,14 @@
   .steps li:last-child { border-bottom: none; }
   .steps li::before { content: counter(step); position: absolute; left: 0; top: 12px; width: 34px; height: 34px; border: 1px solid var(--border-focus); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: 'Cormorant Garamond', serif; font-size: 18px; color: var(--sky); }
   .steps strong { color: var(--text); }
+
+  .tiers { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  @media (max-width: 560px) { .tiers { grid-template-columns: 1fr; } }
+  .tier { border: 1px solid var(--border-focus); border-radius: 12px; padding: 24px; display: flex; flex-direction: column; gap: 10px; }
+  .tier-name { font-size: 11px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); }
+  .tier-price { font-family: 'Cormorant Garamond', serif; font-size: 38px; color: var(--sky); line-height: 1; }
+  .tier p { font-size: 13px; line-height: 1.7; color: #cbd5e1; flex: 1; }
+  .tier .btn { text-align: center; }
 
   .ep { border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-top: 18px; }
   .ep-meta { font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--muted); margin-bottom: 8px; }
@@ -147,7 +154,7 @@
   <div class="hero">
     <div class="hero-eyebrow">On-Demand Executive Briefings</div>
     <h1 class="hero-title">The Assurance Briefing</h1>
-    <p class="hero-tag">Monthly executive briefings for Australian health and aged-care boards.</p>
+    <p class="hero-tag">Monthly executive briefings for boards, CEOs and leadership teams across Australian healthcare.</p>
     <p class="hero-desc">
       Board-level briefings on what's moving in health-sector governance — the regulation,
       the evidence, and the questions that belong in your board pack. Recorded monthly,
@@ -166,26 +173,35 @@
 
   <!-- WHY BRIEFINGS RETIRE -->
   <div class="card">
-    <h2>Why briefings retire</h2>
+    <h2>Why briefings expire</h2>
     <p>Regulatory content goes stale fast. Each briefing is available for <strong>90 days from
-    release</strong>, then it's retired — we don't sell stale regulatory content. Every episode
+    release</strong>, then it expires — we don't sell stale regulatory content. Every episode
     carries its recorded date, and if the law moves materially inside an episode's window,
-    we pull or replace it.</p>
+    we pull or replace it early.</p>
     <p>That also means: if a briefing on the catalogue matters to your board, don't sit on it.</p>
   </div>
 
   <!-- HOW IT WORKS -->
   <div class="card">
     <h2>How it works</h2>
-    <ol class="steps">
-      <li><strong>Watch the trailer free.</strong> Short clips from each episode are free too.</li>
-      <li><strong>Buy a briefing (A$[PRICE]) or an annual pass (A$[PASS-PRICE])</strong> — the pass
-        covers every briefing released during your 12-month pass. Organisations can pay the
-        annual pass by invoice and bank transfer — <a href="mailto:naomi@hg-au.com?subject=Assurance%20Briefing%20annual%20pass%20invoice" style="color:var(--sky);text-decoration:none;">request an invoice</a>.</li>
-      <li><strong>Your link arrives by email.</strong> Watch as often as you like until the episode
-        retires. The PDF briefing paper is yours to keep permanently.</li>
-    </ol>
-    <p class="fineprint">Directors may record viewing toward their self-assessed CPD.</p>
+    <p style="margin-bottom:18px;">Watch the trailer free — then choose:</p>
+    <div class="tiers">
+      <div class="tier">
+        <div class="tier-name">Single briefing</div>
+        <div class="tier-price">A$99</div>
+        <p>One briefing, yours until it expires. The PDF briefing paper is yours to keep.</p>
+        <a class="btn" href="[PIN-EP1-URL]" onclick="gtag('event','begin_checkout',{item_name:'Assurance Briefing single'});">Buy a briefing &rarr;</a>
+      </div>
+      <div class="tier">
+        <div class="tier-name">Annual pass</div>
+        <div class="tier-price">A$599</div>
+        <p>Every briefing released during your 12 months — at least one new briefing a month.</p>
+        <a class="btn" href="[PIN-PASS-URL]" onclick="gtag('event','begin_checkout',{item_name:'Assurance Briefing annual pass'});">Get the pass &rarr;</a>
+      </div>
+    </div>
+    <p style="margin-top:20px;">Pay &rarr; your link lands in your inbox &rarr; watch anytime until expiry.
+    Organisations can pay the annual pass by invoice and bank transfer —
+    <a href="mailto:naomi@hg-au.com?subject=Assurance%20Briefing%20annual%20pass%20invoice" style="color:var(--sky);text-decoration:none;">request an invoice</a>.</p>
   </div>
 
   <!-- CATALOGUE -->
@@ -200,9 +216,8 @@
       the oversight lifecycle once tools are deployed, and the questions and metrics that
       belong in your board pack.</p>
       <div class="ep-buy">
-        <span class="price">A$[PRICE]</span>
+        <span class="price">A$99</span>
         <a class="btn" href="[PIN-EP1-URL]" onclick="gtag('event','begin_checkout',{item_name:'Assurance Briefing Ep 1'});">Buy this briefing &rarr;</a>
-        <a class="btn btn-ghost" href="[PIN-PASS-URL]" onclick="gtag('event','begin_checkout',{item_name:'Assurance Briefing annual pass'});">Annual pass — A$[PASS-PRICE]</a>
       </div>
     </div>
 
@@ -215,7 +230,7 @@
   <div class="card" id="notify">
     <h2>Never miss a release</h2>
     <p style="margin-bottom:20px;">New-episode announcements and last-chance notices before an
-    episode retires. No spam; unsubscribe any time.</p>
+    episode expires. No spam; unsubscribe any time.</p>
     <div id="notifyForm">
       <div class="field-row">
         <div class="field">
@@ -269,14 +284,14 @@
 
   <!-- PURCHASE TERMS -->
   <div class="card">
-    <h2>Purchase terms — plain English</h2>
+    <h2>Purchase terms</h2>
     <ul class="terms">
       <li><strong>What you're buying:</strong> streaming access to the named briefing episode until
-        its stated retirement date (shown above and at checkout), plus the PDF briefing paper,
+        its stated expiry date (shown above and at checkout), plus the PDF briefing paper,
         which is yours to keep. Annual pass: the same, for every briefing released during your
         12-month pass.</li>
-      <li><strong>Access window:</strong> each briefing retires 90 days after release — the
-        retirement date is displayed before you buy. After retirement the video is no longer
+      <li><strong>Access window:</strong> each briefing expires 90 days after release — the
+        expiry date is displayed before you buy. After expiry the video is no longer
         available; your PDF remains yours.</li>
       <li><strong>Delivery:</strong> your access link arrives by email, normally within minutes
         of payment. No link within 24 hours? Email
@@ -287,7 +302,7 @@
       <li><strong>Licence:</strong> access is for you and your board/executive team within one
         organisation. Please don't republish or on-share the link.</li>
       <li><strong>Privacy:</strong> we collect your name and email to deliver your purchase, send
-        your receipt, and remind you before your episode retires. We won't add you to marketing
+        your receipt, and remind you before your episode expires. We won't add you to marketing
         lists unless you opt in.</li>
       <li><strong>Prices</strong> are in Australian dollars.</li>
     </ul>
@@ -299,7 +314,8 @@
     <p>Naomi Alefelder is the founder of Holistic Governance — RN, MBA, AICD Foundations, Lead
     Auditor (Exemplar Global). Holistic Governance partners with Australian health and aged-care
     providers on governance, compliance and clinical quality, grounded in clinical practice,
-    board experience and regulatory expertise.</p>
+    board experience and regulatory expertise.
+    <a href="about.html" style="color:var(--sky);text-decoration:none;">&nbsp;Read more about Naomi &rarr;</a></p>
   </div>
 
   <p class="fineprint" style="max-width:640px;">
