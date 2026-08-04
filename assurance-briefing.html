@@ -136,7 +136,7 @@
   .trailer-label { font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--soft); margin-top: 14px; }
 
   /* STATS — Lorikeet floating tiles with drop-lines to a centred statement */
-  .statsband { position: relative; max-width: 980px; margin: 16px auto 0; padding: 0 20px; text-align: center; z-index: 0; }
+  .statsband { position: relative; max-width: 980px; margin: -6px auto 0; padding: 0 20px; text-align: center; z-index: 0; }
   .stiles { position: relative; z-index: 2; display: flex; justify-content: space-between; align-items: flex-start; max-width: 860px; margin: 0 auto; }
   .stile { background: #fff; border: 1px solid var(--line); border-radius: 22px; box-shadow: 0 18px 50px rgba(15,23,42,.10); padding: 28px 30px; min-width: 200px; opacity: 0; }
   .statsband.inview .stile { animation: cardin .7s ease forwards, ride 12s ease-in-out infinite alternate; }
@@ -324,35 +324,10 @@
 </section>
 
 
-<svg class="connfan" width="220" height="120" viewBox="0 0 220 120" fill="none" aria-hidden="true">
-  <path d="M110 0 C110 36 88 30 88 60 C88 90 110 84 110 120" stroke="#0ea5e9" stroke-width="2"/>
-  <path d="M110 0 L110 120" stroke="#10b981" stroke-width="2"/>
-  <path d="M110 0 C110 36 132 30 132 60 C132 90 110 84 110 120" stroke="#f97316" stroke-width="2"/>
-</svg>
-
-<!-- STATS — floating tiles with drop-lines -->
-<section class="statsband" id="stats">
-  <div class="stiles">
-    <div class="stile"><div class="n">~45 min</div><p>Per briefing</p></div>
-    <div class="stile"><div class="n">Monthly</div><p>At least one new briefing</p></div>
-    <div class="stile"><div class="n">90 days</div><p>Then it expires</p></div>
-  </div>
-  <svg class="slines" viewBox="0 0 860 150" fill="none" preserveAspectRatio="none" aria-hidden="true">
-    <path d="M110 0 C110 70 330 90 396 140" stroke="#0ea5e9" stroke-width="2"/>
-    <path d="M430 8 C430 60 430 90 430 140" stroke="#10b981" stroke-width="2"/>
-    <path d="M750 0 C750 70 530 90 464 140" stroke="#f97316" stroke-width="2"/>
-  </svg>
-  <div class="scopy">
-    <h2>Sharp, current, and built for the <em>board cycle</em>.</h2>
-    <p>Approximately 45 minutes each. At least one new briefing a month. And every briefing
-    expires after 90 days — watch when the board pack gets written.</p>
-  </div>
-</section>
-
-<svg class="connfan" width="220" height="120" viewBox="0 0 220 120" fill="none" aria-hidden="true">
-  <path d="M110 0 C110 36 88 30 88 60 C88 90 110 84 110 120" stroke="#10b981" stroke-width="2"/>
-  <path d="M110 0 L110 120" stroke="#0ea5e9" stroke-width="2"/>
-  <path d="M110 0 C110 36 132 30 132 60 C132 90 110 84 110 120" stroke="#8b5cf6" stroke-width="2"/>
+<svg class="connfan" width="640" height="130" viewBox="0 0 640 130" fill="none" aria-hidden="true" style="max-width:70vw;">
+  <path d="M320 0 C320 58 90 52 90 130" stroke="#0ea5e9" stroke-width="2" style="stroke-dasharray:540;stroke-dashoffset:540;"/>
+  <path d="M320 0 L320 130" stroke="#8b5cf6" stroke-width="2" style="stroke-dasharray:540;stroke-dashoffset:540;"/>
+  <path d="M320 0 C320 58 550 52 550 130" stroke="#ec4899" stroke-width="2" style="stroke-dasharray:540;stroke-dashoffset:540;"/>
 </svg>
 
 <!-- CATALOGUE -->
