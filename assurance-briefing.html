@@ -1,16 +1,13 @@
 <!DOCTYPE html>
 <!--
-  THE ASSURANCE BRIEFING — series page.
-  PRE-LAUNCH: robots is set to noindex and placeholders below must be filled before
-  this page is linked or promoted. Source copy: hg-au/shared/brand/templates/briefings/
-  assurance-briefing/ (series-page-copy.md, purchase-terms.md).
-  Placeholders to fill at launch:
+  THE ASSURANCE BRIEFING — series page (cinematic-bands layout, locked 4 Aug 2026).
+  PRE-LAUNCH: robots is noindex; placeholders to fill at launch:
     [TRAILER-YOUTUBE-ID]  — public trailer video ID
     [PIN-EP1-URL]         — Pin Payments hosted payment page for Ep 1
     [PIN-PASS-URL]        — Pin payment page for the annual pass
     On go-live day: swap "expires 90 days from release" for the exact expiry date
-  Then: flip robots to "index,follow", add to sitemap.xml, and re-check the GST line
-  in the terms block (only say "include GST" if registered).
+  Then: flip robots to "index,follow", add to sitemap.xml, re-check the GST line in terms.
+  Source copy: hg-au/shared/brand/templates/briefings/assurance-briefing/ (canonical kit = PR #74).
 -->
 <html lang="en">
 <head>
@@ -32,139 +29,139 @@
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
   :root {
-    --navy: #0f172a; --navy-mid: #1e293b; --sky: #38bdf8; --sky2: #0077a8;
+    --navy: #0f172a; --sky: #38bdf8; --green: #34d399; --orange: #fb923c;
     --text: #f1f5f9; --muted: #64748b; --border: rgba(56,189,248,0.15);
-    --border-focus: rgba(56,189,248,0.45);
-    --green: #34d399; --amber: #fbbf24; --red: #f87171;
+    --border-focus: rgba(56,189,248,0.45); --red: #f87171;
   }
   html { scroll-behavior: smooth; }
-  body { font-family: 'DM Sans', sans-serif; background: var(--navy); color: var(--text); min-height: 100vh; overflow-x: hidden; }
-  .bg { position: fixed; inset: 0; z-index: 0;
-    background: radial-gradient(ellipse 70% 50% at 15% -5%, rgba(56,189,248,0.1) 0%, transparent 60%),
-                radial-gradient(ellipse 50% 40% at 85% 105%, rgba(56,189,248,0.08) 0%, transparent 60%), var(--navy); }
-  .page { position: relative; z-index: 1; max-width: 780px; margin: 0 auto; padding: 56px 24px 100px; }
+  body { font-family: 'DM Sans', sans-serif; background: var(--navy); color: var(--text); overflow-x: hidden; }
+  .band { padding: 64px 28px; position: relative; }
+  .inner { max-width: 1000px; margin: 0 auto; }
 
-  .site-header { display: flex; align-items: center; gap: 12px; margin-bottom: 44px; }
-  .logo { text-decoration: none; display: flex; align-items: center; gap: 0.75rem; }
-  .logo img { height: 50px; width: auto; }
-  .logo-name { font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; font-weight: 600; letter-spacing: 0.08em; color: var(--text); }
+  .hdr { max-width: 1000px; margin: 0 auto; display: flex; align-items: center; padding: 30px 28px 0; }
+  .logo { display: flex; align-items: center; gap: .75rem; text-decoration: none; }
+  .logo img { height: 46px; width: auto; }
+  .logo-name { font-family: 'Cormorant Garamond', serif; font-size: 1.35rem; font-weight: 600; letter-spacing: .08em; color: var(--text); }
   .logo-name span { color: var(--sky); }
   .back-link { margin-left: auto; font-size: 13px; color: var(--muted); text-decoration: none; }
   .back-link:hover { color: var(--sky); }
 
-  .hero { margin-bottom: 32px; }
-  .hero-eyebrow { font-size: 11px; font-weight: 500; letter-spacing: 3px; text-transform: uppercase; color: var(--sky); margin-bottom: 14px; display: flex; align-items: center; gap: 10px; }
-  .hero-eyebrow::before { content: ''; width: 28px; height: 1px; background: var(--sky); }
-  .hero-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(34px, 6vw, 50px); font-weight: 300; line-height: 1.1; margin-bottom: 8px; color: var(--sky); }
-  .hero-tag { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 19px; color: #cbd5e1; margin-bottom: 18px; }
-  .hero-desc { font-size: 15px; line-height: 1.8; color: #cbd5e1; max-width: 640px; }
-  .hero-desc strong { color: var(--text); }
+  /* HERO BAND */
+  .hero { background:
+    radial-gradient(ellipse 60% 70% at 50% -10%, rgba(56,189,248,0.28), transparent 65%),
+    radial-gradient(ellipse 40% 40% at 85% 30%, rgba(52,211,153,0.14), transparent 65%);
+    text-align: center; padding: 70px 28px 56px; }
+  .eyebrow { font-size: 11px; font-weight: 500; letter-spacing: 3px; text-transform: uppercase; color: var(--green); margin-bottom: 18px; display: inline-flex; align-items: center; gap: 10px; }
+  .eyebrow::before, .eyebrow::after { content: ''; width: 28px; height: 1px; background: var(--green); }
+  h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(44px, 8vw, 70px); font-weight: 300; line-height: 1.05; margin-bottom: 14px;
+    background: linear-gradient(100deg, #7dd3fc, #38bdf8 55%, #a78bfa);
+    -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+  .tag { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 20px; color: #cbd5e1; margin-bottom: 20px; }
+  .desc { font-size: 15px; line-height: 1.8; color: #cbd5e1; max-width: 660px; margin: 0 auto 30px; }
+  .desc strong { color: var(--text); }
+  .trailer { max-width: 720px; margin: 0 auto; position: relative; padding-top: 40.5%; border-radius: 16px; overflow: hidden; background: rgba(255,255,255,0.04); border: 1px solid rgba(56,189,248,0.35); box-shadow: 0 30px 80px rgba(0,0,0,.5); }
+  .trailer iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+  .trailer-label { font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); margin-top: 14px; }
 
-  .card { background: rgba(30,41,59,0.6); border: 1px solid var(--border); border-radius: 16px; padding: 36px; backdrop-filter: blur(12px); position: relative; overflow: hidden; margin-bottom: 24px; }
-  .card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: linear-gradient(90deg, transparent, var(--sky), transparent); }
-  .card h2 { font-family: 'Cormorant Garamond', serif; font-size: 24px; font-weight: 400; color: var(--text); margin-bottom: 14px; }
-  .card p { font-size: 14px; line-height: 1.8; color: #cbd5e1; }
-  .card p + p { margin-top: 12px; }
+  /* STATS BAND */
+  .stats { background: rgba(30,41,59,0.55); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 44px 28px; }
+  .stats .inner { display: grid; grid-template-columns: repeat(3, 1fr); gap: 26px; text-align: center; }
+  @media (max-width: 640px) { .stats .inner { grid-template-columns: 1fr; } }
+  .s .n { font-family: 'Cormorant Garamond', serif; font-size: 48px; color: var(--sky); line-height: 1; }
+  .s:nth-child(2) .n { color: var(--green); }
+  .s:nth-child(3) .n { color: var(--orange); }
+  .s p { font-size: 12px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--muted); margin-top: 10px; }
 
-  .trailer-frame { position: relative; padding-top: 56.25%; border-radius: 12px; overflow: hidden; background: rgba(255,255,255,0.03); border: 1px solid var(--border); }
-  .trailer-frame iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+  h2 { font-family: 'Cormorant Garamond', serif; font-size: 30px; font-weight: 300; margin-bottom: 26px; text-align: center; }
 
-  .steps { list-style: none; margin: 16px 0 0; padding: 0; counter-reset: step; }
-  .steps li { position: relative; padding: 12px 0 12px 52px; font-size: 14px; line-height: 1.7; color: #cbd5e1; counter-increment: step; border-bottom: 1px solid rgba(255,255,255,0.05); }
-  .steps li:last-child { border-bottom: none; }
-  .steps li::before { content: counter(step); position: absolute; left: 0; top: 12px; width: 34px; height: 34px; border: 1px solid var(--border-focus); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: 'Cormorant Garamond', serif; font-size: 18px; color: var(--sky); }
-  .steps strong { color: var(--text); }
+  /* EPISODE STRIP */
+  .strip { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+  @media (max-width: 800px) { .strip { grid-template-columns: 1fr; } }
+  .epc { border-radius: 16px; padding: 26px; border: 1px solid var(--border); background: rgba(30,41,59,0.6); display: flex; flex-direction: column; }
+  .epc.live { border-color: rgba(56,189,248,0.5); background: linear-gradient(160deg, rgba(56,189,248,0.12), rgba(30,41,59,0.6) 60%); }
+  .badge { align-self: flex-start; font-size: 10px; font-weight: 700; letter-spacing: 1.6px; text-transform: uppercase; padding: 5px 12px; border-radius: 999px; margin-bottom: 16px; }
+  .live .badge { background: var(--sky); color: var(--navy); }
+  .soon .badge { background: rgba(52,211,153,0.15); color: var(--green); border: 1px solid rgba(52,211,153,0.35); }
+  .epc .num { font-family: 'Cormorant Garamond', serif; font-size: 42px; color: rgba(241,245,249,0.25); line-height: 1; margin-bottom: 10px; }
+  .epc h3 { font-family: 'Cormorant Garamond', serif; font-size: 21px; font-weight: 400; line-height: 1.25; margin-bottom: 10px; }
+  .epc p { font-size: 12.5px; line-height: 1.65; color: #cbd5e1; flex: 1; }
+  .epc .meta { font-size: 10.5px; letter-spacing: 1.4px; text-transform: uppercase; color: #7dd3fc; margin: 14px 0; }
+  .live .meta .x { color: var(--orange); }
 
-  .tiers { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-  @media (max-width: 560px) { .tiers { grid-template-columns: 1fr; } }
-  .tier { border: 1px solid var(--border-focus); border-radius: 12px; padding: 24px; display: flex; flex-direction: column; gap: 10px; }
-  .tier-name { font-size: 11px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); }
-  .tier-price { font-family: 'Cormorant Garamond', serif; font-size: 38px; color: var(--sky); line-height: 1; }
-  .tier p { font-size: 13px; line-height: 1.7; color: #cbd5e1; flex: 1; }
-  .tier .btn { text-align: center; }
+  .btn { display: inline-block; text-align: center; padding: 13px 24px; background: linear-gradient(135deg, #0077a8, var(--sky)); color: var(--navy); font-family: 'DM Sans', sans-serif; font-weight: 700; font-size: 13px; border: none; border-radius: 9px; text-decoration: none; cursor: pointer; transition: all .2s; }
+  .btn:hover { opacity: .92; transform: translateY(-1px); box-shadow: 0 8px 24px rgba(56,189,248,0.2); }
+  .btn:disabled { opacity: .5; cursor: not-allowed; transform: none; }
+  .btn.loading .spinner { display: inline-block; }
+  .spinner { display: none; width: 14px; height: 14px; border: 2px solid rgba(15,23,42,0.3); border-top-color: var(--navy); border-radius: 50%; animation: spin .7s linear infinite; vertical-align: -2px; margin-left: 8px; }
+  @keyframes spin { to { transform: rotate(360deg); } }
 
-  .ep { border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-top: 18px; }
-  .ep-meta { font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; color: #7dd3fc; margin-bottom: 8px; }
-  .ep-meta .retire { color: #fb923c; }  /* warm orange — time-sensitive without alarm */
-  .ep h3 { font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 400; color: var(--text); margin-bottom: 10px; }
-  .ep p { font-size: 14px; line-height: 1.7; color: #cbd5e1; margin-bottom: 18px; }
-  .ep-buy { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; }
-  .price { font-family: 'Cormorant Garamond', serif; font-size: 26px; color: var(--sky); }
-  .coming { display: flex; gap: 10px; padding: 10px 0; font-size: 14px; color: #cbd5e1; border-bottom: 1px solid rgba(255,255,255,0.05); }
-  .coming:last-child { border-bottom: none; }
-  .coming .when { flex-shrink: 0; font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--muted); padding-top: 3px; width: 90px; }
+  /* EXPIRY BAND */
+  .expiry { background: linear-gradient(120deg, rgba(251,146,60,0.16), rgba(15,23,42,0) 60%); border-top: 1px solid rgba(251,146,60,0.3); border-bottom: 1px solid rgba(251,146,60,0.3); }
+  .expiry .inner { display: grid; grid-template-columns: auto 1fr; gap: 44px; align-items: center; }
+  @media (max-width: 640px) { .expiry .inner { grid-template-columns: 1fr; gap: 20px; } }
+  .big90 { font-family: 'Cormorant Garamond', serif; font-size: 120px; line-height: 1; color: var(--orange); }
+  .big90 small { display: block; font-size: 12px; letter-spacing: 2.5px; text-transform: uppercase; color: #fdba74; font-family: 'DM Sans', sans-serif; margin-top: 6px; }
+  .expiry h2 { text-align: left; margin-bottom: 12px; color: #fdba74; font-size: 26px; }
+  .expiry p { font-size: 14px; line-height: 1.8; color: #e2e8f0; max-width: 580px; }
+  .expiry p + p { margin-top: 10px; }
 
-  .btn { padding: 14px 28px; background: linear-gradient(135deg, #0077a8, var(--sky)); color: var(--navy); font-family: 'DM Sans', sans-serif; font-size: 14px; font-weight: 700; letter-spacing: 0.5px; border: none; border-radius: 10px; cursor: pointer; transition: all 0.2s; text-decoration: none; display: inline-block; }
-  .btn:hover { opacity: 0.92; transform: translateY(-1px); box-shadow: 0 8px 24px rgba(56,189,248,0.2); }
-  .btn:disabled { opacity: 0.5; cursor: not-allowed; transform: none; }
-  .btn-ghost { background: transparent; border: 1px solid var(--border-focus); color: var(--sky); }
-  .btn-ghost:hover { background: rgba(56,189,248,0.08); box-shadow: none; }
-  .btn-block { width: 100%; position: relative; }
-  .btn .spinner { display: none; width: 16px; height: 16px; border: 2px solid rgba(15,23,42,0.3); border-top-color: var(--navy); border-radius: 50%; animation: spin 0.7s linear infinite; position: absolute; right: 20px; top: 50%; transform: translateY(-50%); }
-  .btn.loading .spinner { display: block; }
-  @keyframes spin { to { transform: translateY(-50%) rotate(360deg); } }
+  /* PRICING BAND */
+  .tiers { display: grid; grid-template-columns: repeat(2, minmax(0, 320px)); gap: 20px; justify-content: center; }
+  @media (max-width: 640px) { .tiers { grid-template-columns: 1fr; } }
+  .tier { border: 1px solid var(--border); border-radius: 16px; padding: 30px; background: rgba(30,41,59,0.6); text-align: center; position: relative; }
+  .tier.pass { border-color: var(--orange); background: rgba(251,146,60,0.08); }
+  .ribbon { position: absolute; top: -11px; left: 50%; transform: translateX(-50%); background: var(--orange); color: var(--navy); font-size: 10px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; padding: 4px 14px; border-radius: 999px; }
+  .tn { font-size: 11px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); }
+  .tp { font-family: 'Cormorant Garamond', serif; font-size: 44px; color: var(--sky); margin: 8px 0; }
+  .pass .tp { color: var(--orange); }
+  .tier p { font-size: 12.5px; line-height: 1.65; color: #cbd5e1; margin-bottom: 18px; }
+  .pass .btn { background: linear-gradient(135deg, #ea7317, var(--orange)); }
+  .invoice { text-align: center; font-size: 12px; color: var(--muted); margin-top: 18px; line-height: 1.7; }
+  .invoice a { color: var(--sky); text-decoration: none; }
 
-  .field { margin-bottom: 18px; }
+  /* NOTIFY BAND */
+  .notifyband { background: linear-gradient(120deg, rgba(52,211,153,0.12), rgba(15,23,42,0) 60%); border-top: 1px solid rgba(52,211,153,0.3); }
+  .notifyband .inner { max-width: 620px; }
+  .notifyband h2 { color: #6ee7b7; }
+  .notifyband p.sub { font-size: 13.5px; color: #cbd5e1; text-align: center; margin-bottom: 22px; }
+  .field { margin-bottom: 16px; }
   .field-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
   @media (max-width: 560px) { .field-row { grid-template-columns: 1fr; } }
   label { display: block; font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 1.5px; color: var(--muted); margin-bottom: 8px; }
   label .optional { font-size: 10px; font-weight: 400; color: rgba(100,116,139,0.6); text-transform: none; letter-spacing: 0; margin-left: 6px; }
-  input, select { width: 100%; background: rgba(255,255,255,0.04); border: 1px solid var(--border); border-radius: 8px; color: var(--text); font-family: 'DM Sans', sans-serif; font-size: 14px; padding: 12px 14px; transition: all 0.2s; outline: none; appearance: none; }
+  input, select { width: 100%; background: rgba(255,255,255,0.04); border: 1px solid rgba(52,211,153,0.3); border-radius: 8px; color: var(--text); font-family: 'DM Sans', sans-serif; font-size: 14px; padding: 12px 14px; transition: all .2s; outline: none; appearance: none; }
   input::placeholder { color: rgba(100,116,139,0.5); }
-  input:focus, select:focus { border-color: var(--border-focus); background: rgba(56,189,248,0.03); box-shadow: 0 0 0 3px rgba(56,189,248,0.07); }
+  input:focus, select:focus { border-color: rgba(52,211,153,0.6); background: rgba(52,211,153,0.04); box-shadow: 0 0 0 3px rgba(52,211,153,0.08); }
   input.error { border-color: var(--red); }
-  select { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%2338bdf8' stroke-width='2'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 14px center; padding-right: 36px; cursor: pointer; }
+  select { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%2334d399' stroke-width='2'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 14px center; padding-right: 36px; cursor: pointer; }
   select option { background: #1e293b; color: var(--text); }
   .field-error { font-size: 11px; color: var(--red); margin-top: 6px; display: none; }
   .field-error.show { display: block; }
   .consent { display: flex; align-items: flex-start; gap: 10px; margin: 4px 0 18px; }
-  .consent input { width: 18px; height: 18px; flex-shrink: 0; margin-top: 2px; accent-color: var(--sky); appearance: auto; cursor: pointer; }
+  .consent input { width: 18px; height: 18px; flex-shrink: 0; margin-top: 2px; accent-color: var(--green); appearance: auto; cursor: pointer; }
   .consent label { text-transform: none; letter-spacing: 0; font-size: 13px; font-weight: 400; color: #cbd5e1; line-height: 1.6; margin: 0; cursor: pointer; }
-  .gate-note { font-size: 11px; color: rgba(100,116,139,0.8); margin-top: 12px; line-height: 1.7; }
-  .gate-note a { color: var(--sky); text-decoration: none; }
+  .btn-block { width: 100%; background: linear-gradient(135deg, #0d9268, var(--green)); }
+  .gate-note { font-size: 11px; color: rgba(148,163,184,0.8); margin-top: 14px; line-height: 1.7; }
+  .gate-note a { color: var(--green); text-decoration: none; }
   .form-done { display: none; text-align: center; padding: 18px 0 6px; }
   .form-done.show { display: block; }
   .form-done .tick { font-size: 30px; color: var(--green); margin-bottom: 10px; }
 
+  /* TERMS + PRESENTER */
+  .duo { display: grid; grid-template-columns: 1.2fr .8fr; gap: 22px; }
+  @media (max-width: 800px) { .duo { grid-template-columns: 1fr; } }
+  .panel { background: rgba(30,41,59,0.6); border: 1px solid var(--border); border-radius: 16px; padding: 30px; }
+  .panel h2 { text-align: left; font-size: 22px; margin-bottom: 14px; }
   .terms { font-size: 13px; line-height: 1.75; color: #cbd5e1; }
   .terms li { margin: 0 0 10px 18px; }
   .terms strong { color: var(--text); }
+  .panel p { font-size: 13.5px; line-height: 1.75; color: #cbd5e1; }
+  .panel a { color: var(--sky); text-decoration: none; }
 
-  .fineprint { font-size: 11px; color: var(--muted); line-height: 1.7; margin-top: 14px; }
+  .fineprint { font-size: 11px; color: var(--muted); line-height: 1.7; max-width: 660px; margin: 0 auto; text-align: center; }
+  .fineprint a { color: var(--sky); text-decoration: none; }
 
-  /* Colour-blocks look (variant B, chosen 4 Aug 2026) */
-  .bg { background:
-    radial-gradient(ellipse 70% 50% at 15% -5%, rgba(56,189,248,0.25) 0%, transparent 60%),
-    radial-gradient(ellipse 45% 35% at 90% 15%, rgba(251,146,60,0.14) 0%, transparent 65%),
-    radial-gradient(ellipse 50% 40% at 85% 105%, rgba(52,211,153,0.12) 0%, transparent 60%), var(--navy); }
-  .hero-title { background: linear-gradient(100deg, #7dd3fc, #38bdf8 55%, #a78bfa);
-    -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
-  .hero-eyebrow { color:#fb923c; } .hero-eyebrow::before { background:#fb923c; }
-  .card.expiry { background: linear-gradient(135deg, rgba(251,146,60,0.14), rgba(30,41,59,0.6) 55%);
-    border-color: rgba(251,146,60,0.4); }
-  .card.expiry::before { background: linear-gradient(90deg, transparent, #fb923c, transparent); }
-  .card.expiry h2 { color:#fdba74; }
-  .stat90 { float:right; margin:0 0 8px 20px; text-align:center; }
-  .stat90 .n { font-family:'Cormorant Garamond',serif; font-size:64px; line-height:1; color:#fb923c; }
-  .stat90 .l { font-size:10px; letter-spacing:2px; text-transform:uppercase; color:#fdba74; margin-top:4px; }
-  .tier.pass { border-color:#fb923c; background: rgba(251,146,60,0.08); position:relative; }
-  .tier.pass .tier-price { color:#fb923c; }
-  .tier.pass .btn { background: linear-gradient(135deg, #ea7317, #fb923c); }
-  .ribbon { position:absolute; top:-11px; right:16px; background:#fb923c; color:#0f172a;
-    font-size:10px; font-weight:700; letter-spacing:1.5px; text-transform:uppercase;
-    padding:4px 12px; border-radius:999px; }
-  .ep { border-color: rgba(56,189,248,0.4); background: rgba(56,189,248,0.05); }
-  .epnum { display:inline-flex; align-items:center; justify-content:center; width:40px; height:40px;
-    border-radius:10px; background:linear-gradient(135deg,#0077a8,#38bdf8); color:#0f172a;
-    font-weight:700; font-size:16px; float:right; margin-left:14px; }
-  .coming .when { color:#34d399; }
-  .card.notifyc { border-color: rgba(52,211,153,0.35); }
-  .card.notifyc::before { background: linear-gradient(90deg, transparent, #34d399, transparent); }
-  .card.notifyc h2 { color:#6ee7b7; }
-  /* Emerald kicker + card top-lines (Naomi, 4 Aug 2026); orange expiry line kept */
-  .hero-eyebrow { color:#34d399; } .hero-eyebrow::before { background:#34d399; }
-  .card::before { background: linear-gradient(90deg, transparent, #34d399, transparent); }
-  .card.expiry::before { background: linear-gradient(90deg, transparent, #fb923c, transparent); }
+  footer { background: #070d1a; padding: 2.6rem 3rem; display: flex; align-items: center; justify-content: space-between; border-top: 1px solid var(--border); }
 </style>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-9PMGXF9Q9T"></script>
@@ -177,162 +174,172 @@
 </script>
 </head>
 <body>
-<div class="bg"></div>
 
-<div class="page">
-  <header class="site-header">
-    <a href="index.html" class="logo"><img src="logo-hg-trimmed.png" alt="Holistic Governance" width="351" height="524"><span class="logo-name">Holistic <span>Governance</span></span></a>
-    <a href="index.html" class="back-link">&larr; hg-au.com</a>
-  </header>
+<header class="hdr">
+  <a href="index.html" class="logo"><img src="logo-hg-trimmed.png" alt="Holistic Governance" width="351" height="524"><span class="logo-name">Holistic <span>Governance</span></span></a>
+  <a href="index.html" class="back-link">&larr; hg-au.com</a>
+</header>
 
-  <div class="hero">
-    <div class="hero-eyebrow">On-Demand Executive Briefings</div>
-    <h1 class="hero-title">The Assurance Briefing</h1>
-    <p class="hero-tag">Monthly executive briefings for boards, CEOs and leadership teams across Australian healthcare.</p>
-    <p class="hero-desc">
-      Board-level briefings on what's moving in health-sector governance — the regulation,
-      the evidence, and the questions that belong in your board pack and quality committee. Recorded monthly,
-      approximately 45 minutes, watch anytime. <strong>Every claim cited to the primary source</strong>,
-      with the reference list provided.
-    </p>
+<!-- HERO -->
+<section class="hero">
+  <div class="eyebrow">On-Demand Executive Briefings</div>
+  <h1>The Assurance Briefing</h1>
+  <p class="tag">Monthly executive briefings for boards, CEOs and leadership teams across Australian healthcare.</p>
+  <p class="desc">Board-level briefings on what's moving in health-sector governance — the regulation,
+    the evidence, and the questions that belong in your board pack and quality committee.
+    <strong>Every claim cited to the primary source</strong>, with the reference list provided.</p>
+  <div class="trailer">
+    <iframe src="https://www.youtube-nocookie.com/embed/[TRAILER-YOUTUBE-ID]" title="The Assurance Briefing — trailer" allowfullscreen loading="lazy"></iframe>
   </div>
+  <p class="trailer-label">Watch the trailer — free</p>
+</section>
 
-  <!-- TRAILER -->
-  <div class="card">
-    <h2>Watch the trailer — free</h2>
-    <div class="trailer-frame">
-      <iframe src="https://www.youtube-nocookie.com/embed/[TRAILER-YOUTUBE-ID]" title="The Assurance Briefing — trailer" allowfullscreen loading="lazy"></iframe>
+<!-- STATS -->
+<section class="stats"><div class="inner">
+  <div class="s"><div class="n">~45 min</div><p>Per briefing</p></div>
+  <div class="s"><div class="n">Monthly</div><p>At least one new briefing</p></div>
+  <div class="s"><div class="n">90 days</div><p>Then it expires</p></div>
+</div></section>
+
+<!-- CATALOGUE STRIP -->
+<section class="band"><div class="inner">
+  <h2>The catalogue</h2>
+  <div class="strip">
+    <div class="epc live">
+      <span class="badge">Live September 2026</span>
+      <div class="num">01</div>
+      <h3>Governing clinical AI: the regulatory map for boards</h3>
+      <p>Clinical AI is already in Australian health and aged care. Who governs what — TGA, Ahpra,
+      OAIC, ACSQHC, the Aged Care Quality and Safety Commission — the oversight lifecycle once
+      tools are deployed, and the questions and metrics that belong in your board pack and
+      quality committee.</p>
+      <div class="meta">Approx. 45 min &middot; <span class="x">expires 90 days from release</span></div>
+      <a class="btn" href="[PIN-EP1-URL]" onclick="gtag('event','begin_checkout',{item_name:'Assurance Briefing Ep 1'});">Buy — A$99 &rarr;</a>
+    </div>
+    <div class="epc soon">
+      <span class="badge">October 2026</span>
+      <div class="num">02</div>
+      <h3>&ldquo;AI guardrails&rdquo;: from buzzword to real controls</h3>
+      <p>Everyone claims guardrails. The five-question test that separates a real control from a
+      policy hope — with tangible examples.</p>
+      <div class="meta">Coming next</div>
+    </div>
+    <div class="epc soon">
+      <span class="badge">November 2026</span>
+      <div class="num">03</div>
+      <h3>Board responsibilities under the Aged Care Act 2024</h3>
+      <p>The provider duty, the responsible-person due-diligence duty, and the governance
+      structures boards must build — in plain language.</p>
+      <div class="meta">Coming soon</div>
     </div>
   </div>
+</div></section>
 
-  <!-- WHY BRIEFINGS EXPIRE -->
-  <div class="card expiry">
-    <h2>Why briefings expire</h2><div class="stat90"><div class="n">90</div><div class="l">days, then gone</div></div>
-    <p>Regulatory content goes stale fast. Each briefing is available for <strong>90 days from
-    release</strong>, then it expires — we don't sell stale regulatory content. Every episode
-    carries its recorded date, and if the law moves materially inside an episode's window,
-    we pull or replace it early.</p>
+<!-- EXPIRY -->
+<section class="band expiry"><div class="inner">
+  <div class="big90">90<small>days, then gone</small></div>
+  <div>
+    <h2>Why briefings expire</h2>
+    <p>Regulatory content goes stale fast. Each briefing is available for <strong style="color:#fff;">90 days
+    from release</strong>, then it expires — we don't sell stale regulatory content. Every episode carries
+    its recorded date, and if the law moves materially inside an episode's window, we pull or
+    replace it early.</p>
     <p>That also means: if a briefing on the catalogue matters to your board, don't sit on it.</p>
   </div>
+</div></section>
 
-  <!-- HOW IT WORKS -->
-  <div class="card">
-    <h2>How it works</h2>
-    <p style="margin-bottom:18px;">Watch the trailer free — then choose:</p>
-    <div class="tiers">
-      <div class="tier">
-        <div class="tier-name">Single briefing</div>
-        <div class="tier-price">A$99</div>
-        <p>One briefing, yours until it expires. The PDF briefing paper is yours to keep.</p>
-        <a class="btn" href="[PIN-EP1-URL]" onclick="gtag('event','begin_checkout',{item_name:'Assurance Briefing single'});">Buy a briefing &rarr;</a>
-      </div>
-      <div class="tier pass">
-        <div class="ribbon">Best value</div>
-        <div class="tier-name">Annual pass</div>
-        <div class="tier-price">A$599</div>
-        <p>Every briefing released during your 12 months — at least one new briefing a month.</p>
-        <a class="btn" href="[PIN-PASS-URL]" onclick="gtag('event','begin_checkout',{item_name:'Assurance Briefing annual pass'});">Get the pass &rarr;</a>
-      </div>
+<!-- PRICING -->
+<section class="band"><div class="inner">
+  <h2>Simple pricing</h2>
+  <div class="tiers">
+    <div class="tier">
+      <div class="tn">Single briefing</div>
+      <div class="tp">A$99</div>
+      <p>One briefing, yours until it expires. The PDF briefing paper is yours to keep.</p>
+      <a class="btn" href="[PIN-EP1-URL]" onclick="gtag('event','begin_checkout',{item_name:'Assurance Briefing single'});">Buy a briefing &rarr;</a>
     </div>
-    <p style="margin-top:20px;">Pay &rarr; your link lands in your inbox &rarr; watch anytime until expiry.
-    Organisations can pay the annual pass by invoice and bank transfer —
-    <a href="mailto:naomi@hg-au.com?subject=Assurance%20Briefing%20annual%20pass%20invoice" style="color:var(--sky);text-decoration:none;">request an invoice</a>.</p>
-  </div>
-
-  <!-- CATALOGUE -->
-  <div class="card">
-    <h2>On the catalogue now</h2>
-
-    <div class="ep">
-      <span class="epnum">01</span>
-      <div class="ep-meta">Episode 1 &middot; September 2026 &middot; approx. 45 min &middot; <span class="retire">expires 90 days from release</span></div>
-      <h3>Governing clinical AI: the regulatory map for boards</h3>
-      <p>Clinical AI is already in Australian health and aged care. This briefing maps who
-      governs what — TGA, Ahpra, OAIC, ACSQHC, the Aged Care Quality and Safety Commission —
-      the oversight lifecycle once tools are deployed, and the questions and metrics that
-      belong in your board pack and quality committee.</p>
-      <div class="ep-buy">
-        <span class="price">A$99</span>
-        <a class="btn" href="[PIN-EP1-URL]" onclick="gtag('event','begin_checkout',{item_name:'Assurance Briefing Ep 1'});">Buy this briefing &rarr;</a>
-      </div>
-    </div>
-
-    <h2 style="margin-top:28px;">Coming next</h2>
-    <div class="coming"><span class="when">Oct 2026</span><span><strong style="color:var(--text);">Episode 2 — “AI guardrails”: from buzzword to real controls</strong></span></div>
-    <div class="coming"><span class="when">Nov 2026</span><span><strong style="color:var(--text);">Episode 3 — Board responsibilities under the Aged Care Act 2024</strong></span></div>
-  </div>
-
-  <!-- NOTIFY ME -->
-  <div class="card notifyc" id="notify">
-    <h2>Never miss a release</h2>
-    <p style="margin-bottom:20px;">New-episode announcements and last-chance notices before an
-    episode expires. No spam; unsubscribe any time.</p>
-    <div id="notifyForm">
-      <div class="field-row">
-        <div class="field">
-          <label for="name">Your Name</label>
-          <input type="text" id="name" placeholder="First and last name" required />
-          <div class="field-error" id="name-error">Please enter your name</div>
-        </div>
-        <div class="field">
-          <label for="email">Work Email</label>
-          <input type="email" id="email" placeholder="you@organisation.com.au" required />
-          <div class="field-error" id="email-error">Please enter a valid email</div>
-        </div>
-      </div>
-      <div class="field-row">
-        <div class="field">
-          <label for="orgName">Organisation <span class="optional">optional</span></label>
-          <input type="text" id="orgName" placeholder="e.g. Sunnyside Aged Care" />
-        </div>
-        <div class="field">
-          <label for="orgType">Organisation Type <span class="optional">optional</span></label>
-          <select id="orgType">
-            <option value="" disabled selected>Select type&hellip;</option>
-            <option>Residential Aged Care</option>
-            <option>Home Care / Support at Home</option>
-            <option>Hospital / Health Service</option>
-            <option>Primary / Community Health</option>
-            <option>Disability / NDIS</option>
-            <option>Other</option>
-          </select>
-        </div>
-      </div>
-      <div class="consent">
-        <input type="checkbox" id="consent" />
-        <label for="consent">Notify me about new episodes and retirement notices.</label>
-      </div>
-      <div class="field-error" id="consent-error" style="margin:-10px 0 14px;">Please tick the box so we know you'd like the notices</div>
-      <button type="button" class="btn btn-block" id="notifyBtn" onclick="subscribe()">
-        Keep me posted &rarr;
-        <div class="spinner"></div>
-      </button>
-      <p class="gate-note">We collect your name, email, organisation and role to send you series
-      updates you've opted into. Handled under the Privacy Act 1988 (Cth) and the Australian
-      Privacy Principles — unsubscribe any time. Please don't include personal or health
-      information. <a href="/privacy.html">Privacy Policy</a>.</p>
-    </div>
-    <div class="form-done" id="notifyDone">
-      <div class="tick">&#10003;</div>
-      <p>You're on the list — we'll email you when the next briefing is released.</p>
+    <div class="tier pass">
+      <div class="ribbon">Best value</div>
+      <div class="tn">Annual pass</div>
+      <div class="tp">A$599</div>
+      <p>Every briefing released during your 12 months — at least one new briefing a month.</p>
+      <a class="btn" href="[PIN-PASS-URL]" onclick="gtag('event','begin_checkout',{item_name:'Assurance Briefing annual pass'});">Get the pass &rarr;</a>
     </div>
   </div>
+  <p class="invoice">Pay &rarr; your link lands in your inbox &rarr; watch anytime until expiry.<br>
+  Organisations can pay the annual pass by invoice and bank transfer —
+  <a href="mailto:naomi@hg-au.com?subject=Assurance%20Briefing%20annual%20pass%20invoice">request an invoice</a>.</p>
+</div></section>
 
-  <!-- PURCHASE TERMS -->
-  <div class="card">
+<!-- NOTIFY -->
+<section class="band notifyband" id="notify"><div class="inner">
+  <h2>Never miss a release</h2>
+  <p class="sub">New-episode announcements and last-chance notices before an episode expires.
+  No spam; unsubscribe any time.</p>
+  <div id="notifyForm">
+    <div class="field-row">
+      <div class="field">
+        <label for="name">Your Name</label>
+        <input type="text" id="name" placeholder="First and last name" required />
+        <div class="field-error" id="name-error">Please enter your name</div>
+      </div>
+      <div class="field">
+        <label for="email">Work Email</label>
+        <input type="email" id="email" placeholder="you@organisation.com.au" required />
+        <div class="field-error" id="email-error">Please enter a valid email</div>
+      </div>
+    </div>
+    <div class="field-row">
+      <div class="field">
+        <label for="orgName">Organisation <span class="optional">optional</span></label>
+        <input type="text" id="orgName" placeholder="e.g. Sunnyside Aged Care" />
+      </div>
+      <div class="field">
+        <label for="orgType">Organisation Type <span class="optional">optional</span></label>
+        <select id="orgType">
+          <option value="" disabled selected>Select type&hellip;</option>
+          <option>Residential Aged Care</option>
+          <option>Home Care / Support at Home</option>
+          <option>Hospital / Health Service</option>
+          <option>Primary / Community Health</option>
+          <option>Disability / NDIS</option>
+          <option>Other</option>
+        </select>
+      </div>
+    </div>
+    <div class="consent">
+      <input type="checkbox" id="consent" />
+      <label for="consent">Notify me about new episodes and last-chance notices.</label>
+    </div>
+    <div class="field-error" id="consent-error" style="margin:-10px 0 14px;">Please tick the box so we know you'd like the notices</div>
+    <button type="button" class="btn btn-block" id="notifyBtn" onclick="subscribe()">
+      Keep me posted &rarr;<span class="spinner"></span>
+    </button>
+    <p class="gate-note">We collect your name, email, organisation and role to send you series
+    updates you've opted into. Handled under the Privacy Act 1988 (Cth) and the Australian
+    Privacy Principles — unsubscribe any time. Please don't include personal or health
+    information. <a href="/privacy.html">Privacy Policy</a>.</p>
+  </div>
+  <div class="form-done" id="notifyDone">
+    <div class="tick">&#10003;</div>
+    <p>You're on the list — we'll email you when the next briefing is released.</p>
+  </div>
+</div></section>
+
+<!-- TERMS + PRESENTER -->
+<section class="band"><div class="inner duo">
+  <div class="panel">
     <h2>Purchase terms</h2>
     <ul class="terms">
       <li><strong>What you're buying:</strong> streaming access to the named briefing episode until
-        its stated expiry date (shown above and at checkout), plus the PDF briefing paper,
-        which is yours to keep. Annual pass: the same, for every briefing released during your
-        12-month pass.</li>
-      <li><strong>Access window:</strong> each briefing expires 90 days after release — the
-        expiry date is displayed before you buy. After expiry the video is no longer
-        available; your PDF remains yours.</li>
-      <li><strong>Delivery:</strong> your access link arrives by email, normally within minutes
-        of payment. No link within 24 hours? Email
-        <a href="mailto:naomi@hg-au.com" style="color:var(--sky);text-decoration:none;">naomi@hg-au.com</a>
-        and we'll fix it.</li>
+        its stated expiry date (shown above and at checkout), plus the PDF briefing paper, which
+        is yours to keep. Annual pass: the same, for every briefing released during your 12-month pass.</li>
+      <li><strong>Access window:</strong> each briefing expires 90 days after release — the expiry
+        date is displayed before you buy. After expiry the video is no longer available; your PDF
+        remains yours.</li>
+      <li><strong>Delivery:</strong> your access link arrives by email, normally within minutes of
+        payment. No link within 24 hours? Email
+        <a href="mailto:naomi@hg-au.com">naomi@hg-au.com</a> and we'll fix it.</li>
       <li><strong>Refunds:</strong> if the briefing doesn't play, we'll fix it or refund you.
         Nothing in these terms limits your rights under the Australian Consumer Law.</li>
       <li><strong>Licence:</strong> access is for you and your board/executive team within one
@@ -343,25 +350,23 @@
       <li><strong>Prices</strong> are in Australian dollars.</li>
     </ul>
   </div>
-
-  <!-- PRESENTER -->
-  <div class="card">
+  <div class="panel">
     <h2>About the presenter</h2>
     <p>Naomi Alefelder is the founder of Holistic Governance — RN, MBA, AICD Foundations, Lead
     Auditor (Exemplar Global). Holistic Governance partners with Australian health and aged-care
     providers on governance, compliance and clinical quality, grounded in clinical practice,
     board experience and regulatory expertise.
-    <a href="about.html" style="color:var(--sky);text-decoration:none;">&nbsp;Read more about Naomi &rarr;</a></p>
+    <a href="about.html">&nbsp;Read more about Naomi &rarr;</a></p>
   </div>
+</div></section>
 
-  <p class="fineprint" style="max-width:640px;">
-    The Assurance Briefing is general information and decision support only — not legal or
-    clinical advice. Legislative references are current as at each episode's recorded date;
-    verify against the current consolidated law at
-    <a href="https://www.legislation.gov.au" target="_blank" rel="noopener" style="color:var(--sky);text-decoration:none;">legislation.gov.au</a>
-    before acting.
-  </p>
-</div>
+<section class="band" style="padding-top:0;">
+  <p class="fineprint">The Assurance Briefing is general information and decision support only —
+  not legal or clinical advice. Legislative references are current as at each episode's recorded
+  date; verify against the current consolidated law at
+  <a href="https://www.legislation.gov.au" target="_blank" rel="noopener">legislation.gov.au</a>
+  before acting.</p>
+</section>
 
 <script>
   async function subscribe() {
@@ -426,9 +431,9 @@
   });
 </script>
 
-<footer style="background:#070d1a;padding:3rem 4rem;display:flex;align-items:center;justify-content:space-between;border-top:1px solid rgba(56,189,248,0.15);">
+<footer>
   <div style="font-family:'Cormorant Garamond',serif;font-size:1.2rem;color:#f1f5f9;">Holistic <span style="color:#38bdf8;">Governance</span></div>
-  <p style="font-size:0.78rem;color:#64748b;">© 2026 Holistic Governance</p>
+  <p style="font-size:.78rem;color:#64748b;">© 2026 Holistic Governance</p>
 </footer>
 </body>
 </html>
