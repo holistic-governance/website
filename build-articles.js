@@ -414,10 +414,10 @@ ${JSON.stringify(breadcrumb, null, 2)}
 <body>
 
 <nav>
-  <a href="../index.html" class="logo"><img src="../logo-hg-trimmed.png" alt="Holistic Governance" width="351" height="524"><span class="logo-name">Holistic <span>Governance</span></span></a>
+  <a href="/" class="logo"><img src="../logo-hg-trimmed.png" alt="Holistic Governance" width="351" height="524"><span class="logo-name">Holistic <span>Governance</span></span></a>
   <button class="hamburger" onclick="this.nextElementSibling.classList.toggle('open')">&#9776;</button>
   <ul>
-    <li><a href="../index.html">Home</a></li>
+    <li><a href="/">Home</a></li>
     <li><a href="../about.html">About</a></li>
     <li><a href="../healthcare.html">Solutions</a></li>
     <li><a href="../resources.html">Resources</a></li>
@@ -433,7 +433,7 @@ ${JSON.stringify(breadcrumb, null, 2)}
 </nav>
 
 <article class="article-page">
-  <div class="breadcrumb"><a href="../index.html">Home</a> / <a href="../resources.html">Resources</a> / ${escapeAttr(meta.title)}</div>
+  <div class="breadcrumb"><a href="/">Home</a> / <a href="../resources.html">Resources</a> / ${escapeAttr(meta.title)}</div>
   <div class="article-tag">${escapeAttr(meta.category)}</div>
   <h1>${escapeAttr(meta.title)}</h1>
   <div class="article-meta"><span>${formatDate(meta.date)}</span>${dateModified !== meta.date ? ` &middot; Updated ${formatDate(dateModified)}` : ''} &middot; ${escapeAttr(meta.author)}</div>
@@ -453,13 +453,13 @@ ${renderRelatedSolutions(meta.category)}
 <footer>
   <div class="footer-inner">
     <div class="footer-brand">
-      <a href="../index.html" class="footer-logo" style="text-decoration:none;"><img src="../logo-hg-trimmed.png" alt="Holistic Governance" width="351" height="524"><span class="logo-name">Holistic <span>Governance</span></span></a>
+      <a href="/" class="footer-logo" style="text-decoration:none;"><img src="../logo-hg-trimmed.png" alt="Holistic Governance" width="351" height="524"><span class="logo-name">Holistic <span>Governance</span></span></a>
       <p class="footer-tagline">Improving clarity and confidence in governance through knowledge, data, and technology.</p>
     </div>
     <div class="footer-col">
       <h4>Navigate</h4>
       <ul>
-        <li><a href="../index.html">Home</a></li>
+        <li><a href="/">Home</a></li>
         <li><a href="../about.html">About</a></li>
         <li><a href="../healthcare.html">Solutions</a></li>
         <li><a href="../resources.html">Resources</a></li>
