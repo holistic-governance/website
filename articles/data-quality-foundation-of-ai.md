@@ -5,6 +5,7 @@ author: Naomi Alefelder
 category: Data Governance
 featured: false
 summary: Organisations rushing to adopt AI are discovering a hard truth — AI is only as good as the data behind it. We explore why data quality governance is more critical than ever.
+metaDescription: AI is only as good as the data behind it. Why data quality governance is the critical foundation of every AI initiative in regulated sectors.
 ---
 
 Organisations rushing to adopt AI are discovering a hard truth — AI is only as good as the data behind it. We explore why data quality governance is more critical than ever.

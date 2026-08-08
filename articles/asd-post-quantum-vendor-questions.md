@@ -5,6 +5,7 @@ author: Naomi Alefelder
 category: Industry News
 featured: false
 summary: On 16 July 2026 the Australian Signals Directorate released "Post-quantum questions to ask your vendors" — 31 questions across five phases for assessing supplier readiness for post-quantum cryptography. We summarise what the guidance asks, what buyers should prioritise, what good vendor answers look like, and why data longevity and embedded systems make this land particularly heavily in aged-care and health settings.
+metaDescription: The ASD's 31 post-quantum questions to ask your vendors — the key questions for buyers, seven red flags, and why aged care and health should act now.
 ---
 
 On 16 July 2026, the Australian Signals Directorate (ASD) released a new publication, **[Post-quantum questions to ask your vendors](https://www.cyber.gov.au/business-government/secure-design/quantum/post-quantum-questions-to-ask-your-vendors)** — a structured, vendor-neutral set of questions organisations can use to assess how prepared their third-party suppliers are for the transition to post-quantum cryptography (PQC).
