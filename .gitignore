@@ -2,3 +2,6 @@ node_modules/
 .env
 admin-users.json
 admin-audit.log
+
+# macOS
+.DS_Store
