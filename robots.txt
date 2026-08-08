@@ -153,3 +153,7 @@ Disallow: /downloads/
 
 # ── Sitemap & AI content map ───────────────────────────────────
 Sitemap: https://hg-au.com/sitemap.xml
+
+# AI content map (llms.txt standard) — structured index for AI search & assistants
+# https://hg-au.com/llms.txt
+# https://hg-au.com/llms-full.txt

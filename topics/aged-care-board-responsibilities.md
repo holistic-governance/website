@@ -69,6 +69,22 @@ Section 180(1): each member of the governing body and each executive decision-ma
 
 **Document the steps you take.** If it isn't recorded, it is harder to demonstrate due diligence was exercised.
 
+## What evidence discharges the duty — the board-pack test
+
+Boards typically read the five limbs as aspirations; a regulator reads them as evidence questions. The practical way to discharge — and to prove you discharged — the section 180 duty is to attach every limb to something that physically exists in the governance record: **the paper** placed before the board, **the register** that is maintained, **the metric** that is trended, and **the minute** that records what the board did about it. Nobody in the current commercial market has published this mapping; it is Holistic Governance's own governance framework.
+
+| Due diligence limb (s 180(2)) | The paper | The register | The metric | The minute |
+|---|---|---|---|---|
+| **(a)** Acquire and keep up to date knowledge of aged care matters | Regulatory-update briefing in the board pack each cycle | Director training and development register | Proportion of directors current on mandatory updates | Minuted briefing on each material regulatory change |
+| **(b)** Understand the provider's operations and their hazards | Service and hazard profile; site-visit reports | Enterprise risk register | Site visits completed against the board calendar | Minuted observations from directors' "eyes-on" visits |
+| **(c)** Ensure appropriate resources and systems | Clinical governance framework; workforce and resourcing report | Capability and resourcing assurance register | Care minutes, RN 24/7 coverage, mandatory-training completion | Minuted board decisions on resourcing and investment |
+| **(d)** Ensure incident and risk information reaches the board and is acted on | Board reporting pack — incidents, complaints, SIRS, trended | Incident and SIRS register | Time-to-board for serious incidents; exceptions flagged | Minuted board response to each escalated matter |
+| **(e)** Ensure the provider has, and implements, compliance processes | Annual statement of compliance review; compliance framework | Obligations and compliance register | Audit and action-item closure rate | Minuted assurance sign-off behind the annual statement |
+
+Limb **(e)** is the catch-all: it requires directors to ensure the provider not only *has* compliance processes but actually *implements* them. A documented framework the board never tests is not an implemented process — which is where most boards are exposed.
+
+**An algorithm cannot be a responsible person.** Because section 181 makes the duty non-transferable, no dashboard, compliance platform or AI tool can hold it or be penalised under s 180(6). Software and advisers supply *evidence*; the board supplies the *diligence*. A product marketed as discharging the duty for you is promising something section 181 does not permit — the structural limit of every compliance "solution".
+
 ## The Aged Care Code of Conduct (sections 14, 173, 174)
 
 Eight behaviours that bind providers, responsible persons (including directors), and aged care workers personally. Not delegable.
