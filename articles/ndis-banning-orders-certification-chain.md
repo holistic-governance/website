@@ -45,6 +45,8 @@ Either way, banning two people treats the symptom. The cause is a registration g
 
 Aged care avoided the core mistake. There is no finding your own auditor and no paying the person who grades you directly. It all runs through the [Aged Care Quality and Safety Commission](https://www.agedcarequality.gov.au/about-us/assessors), which arranges the audit, supplies the assessor and stands between the provider and the decision. The commercial relationship that sits at the heart of the NDIS matter simply does not exist. That single structural difference is why the two schemes should not be spoken of in the same breath when independence is the subject.
 
+## Personal experience
+
 I do not say this from the outside. I audit in the aged care and hospital sectors, and I have deliberately stayed out of NDIS auditing. Not because the work cannot be done with integrity (many do it conscientiously), but because a model that makes the provider the auditor's paying customer puts independence in tension with commercial survival from the very first engagement. I did not want my name on a certificate issued under that tension. That is a judgment about the design, not about the people working within it.
 
 The discipline is the same wherever you audit. A certification system is only as good as the independence it can actually demonstrate: sampled, stress-tested, enforced. Not the independence it asserts on paper.
