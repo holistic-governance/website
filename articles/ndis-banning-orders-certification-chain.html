@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The design flaw behind the NDIS's first auditor bans | Holistic Governance</title>
+  <meta name="description" content="The first NDIS banning orders against an auditor and consultant raise a bigger question about the certification chain, and how aged care's model differs as the new Act beds down." />
+  <meta name="robots" content="index,follow" />
+  <meta name="author" content="Naomi Alefelder" />
+  <link rel="canonical" href="https://hg-au.com/articles/ndis-banning-orders-certification-chain.html" />
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="Holistic Governance" />
+  <meta property="og:locale" content="en_AU" />
+  <meta property="og:url" content="https://hg-au.com/articles/ndis-banning-orders-certification-chain.html" />
+  <meta property="og:title" content="The design flaw behind the NDIS's first auditor bans | Holistic Governance" />
+  <meta property="og:description" content="The first NDIS banning orders against an auditor and consultant raise a bigger question about the certification chain, and how aged care's model differs as the new Act beds down." />
+  <meta property="og:image" content="https://hg-au.com/og-image-v3.png" />
+  <meta property="og:image:width" content="2400" />
+  <meta property="og:image:height" content="1260" />
+  <meta property="article:published_time" content="2026-08-14" />
+  <meta property="article:modified_time" content="2026-08-14" />
+  <meta property="article:section" content="Health Care" />
+  <meta property="article:author" content="Naomi Alefelder" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="The design flaw behind the NDIS's first auditor bans | Holistic Governance" />
+  <meta name="twitter:description" content="The first NDIS banning orders against an auditor and consultant raise a bigger question about the certification chain, and how aged care's model differs as the new Act beds down." />
+  <meta name="twitter:image" content="https://hg-au.com/og-image-v3.png" />
+  <link rel="icon" type="image/png" href="../favicon.png" />
+  <link rel="preload" as="image" href="../logo-hg-trimmed.png" fetchpriority="high" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../styles.css" />
+  <style>
+    .article-page { padding: 10rem 4rem 5rem; background: var(--navy); max-width: 820px; margin: 0 auto; }
+    .article-page .breadcrumb { margin-bottom: 2rem; }
+    .article-page .article-tag { display: inline-block; padding: 0.3rem 0.8rem; background: rgba(56,189,248,0.08); border: 1px solid var(--border); color: var(--sky); font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; border-radius: 2px; margin-bottom: 1.2rem; }
+    .article-page h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 4vw, 3rem); font-weight: 300; color: var(--white); line-height: 1.15; margin-bottom: 1.2rem; }
+    .article-page .article-meta { font-size: 0.82rem; color: var(--text-light); margin-bottom: 2rem; padding-bottom: 1.5rem; border-bottom: 1px solid var(--border); }
+    .article-page .article-meta span { color: var(--sky); }
+    .article-body { color: #aab4c4; font-size: 1rem; line-height: 1.9; }
+    .article-body h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; font-weight: 400; color: var(--white); margin: 2.5rem 0 1rem; }
+    .article-body h3 { font-family: 'DM Sans', sans-serif; font-size: 1.15rem; font-weight: 500; color: var(--white); margin: 2rem 0 0.8rem; }
+    .article-body p { margin-bottom: 1.2rem; }
+    .article-body ul, .article-body ol { margin: 1rem 0 1.5rem 1.5rem; }
+    .article-body li { margin-bottom: 0.5rem; }
+    .article-body strong { color: var(--white); }
+    .article-body a { color: var(--sky); text-decoration: underline; }
+    .article-body table { width: 100%; border-collapse: collapse; margin: 1.5rem 0 2rem; font-size: 0.92rem; }
+    .article-body th, .article-body td { border: 1px solid var(--border); padding: 0.65rem 0.85rem; text-align: left; vertical-align: top; line-height: 1.55; }
+    .article-body th { color: var(--white); font-weight: 500; background: rgba(56,189,248,0.06); }
+    .key-takeaways { margin: 0 0 2.5rem; padding: 1.5rem 1.75rem; background: rgba(56,189,248,0.06); border: 1px solid rgba(56,189,248,0.25); border-left: 3px solid var(--sky); border-radius: 4px; }
+    .key-takeaways h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.25rem; font-weight: 500; color: var(--white); margin: 0 0 0.75rem; letter-spacing: 0.02em; }
+    .key-takeaways ul { list-style: none; padding: 0; margin: 0; }
+    .key-takeaways li { color: #aab4c4; font-size: 0.95rem; line-height: 1.6; padding: 0.4rem 0 0.4rem 1.5rem; position: relative; }
+    .key-takeaways li::before { content: '→'; position: absolute; left: 0; top: 0.4rem; color: var(--sky); font-weight: 600; }
+    .related-solutions { margin-top: 3.5rem; padding: 1.75rem; background: rgba(56,189,248,0.04); border: 1px solid var(--border); border-radius: 4px; }
+    .related-solutions h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; font-weight: 400; color: var(--white); margin: 0 0 0.9rem; }
+    .related-solutions ul { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: 0.6rem; }
+    .related-solutions li { margin: 0; }
+    .related-solutions a { display: inline-block; color: var(--sky); font-size: 0.9rem; text-decoration: none; border: 1px solid rgba(56,189,248,0.3); padding: 0.5rem 1rem; border-radius: 2px; transition: all 0.2s; }
+    .related-solutions a:hover { background: rgba(56,189,248,0.12); border-color: var(--sky); }
+    .author-bio { margin-top: 2.5rem; padding: 1.75rem; background: var(--navy-mid); border: 1px solid var(--border); border-radius: 4px; }
+    .author-bio-header { display: flex; align-items: center; gap: 1.25rem; margin-bottom: 1rem; }
+    .author-bio-header img { width: 72px; height: 72px; border-radius: 50%; object-fit: cover; border: 1px solid var(--border); flex-shrink: 0; }
+    .author-bio-header h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; font-weight: 400; color: var(--white); margin: 0 0 0.2rem; }
+    .author-bio-role { font-size: 0.82rem; color: var(--sky); margin: 0; letter-spacing: 0.04em; }
+    .author-bio p { font-size: 0.92rem; color: #aab4c4; line-height: 1.7; margin: 0 0 0.8rem; }
+    .author-bio-links a { color: var(--sky); text-decoration: none; border-bottom: 1px solid rgba(56,189,248,0.4); }
+    .author-bio-links a:hover { border-bottom-color: var(--sky); }
+    .article-footer-nav { position: static; background: none; backdrop-filter: none; border-bottom: none; z-index: auto; margin-top: 2.5rem; padding: 2rem 0 0; border-top: 1px solid var(--border); display: flex; align-items: flex-start; justify-content: flex-start; gap: 1rem; flex-wrap: wrap; }
+    .article-footer-nav a { color: var(--sky); text-decoration: none; font-size: 0.85rem; letter-spacing: 0.06em; text-transform: uppercase; border: 1px solid var(--border); padding: 0.8rem 1.6rem; border-radius: 2px; transition: all 0.3s; }
+    .article-footer-nav a:hover { background: var(--sky); color: var(--navy); }
+    @media (max-width: 900px) { .article-page { padding: 8rem 1.5rem 3rem; } }
+  </style>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "The design flaw behind the NDIS's first auditor bans",
+  "description": "The first NDIS banning orders against an auditor and consultant raise a bigger question about the certification chain, and how aged care's model differs as the new Act beds down.",
+  "image": "https://hg-au.com/og-image-v3.png",
+  "author": {
+    "@type": "Person",
+    "@id": "https://hg-au.com/about.html#naomi",
+    "name": "Naomi Alefelder",
+    "url": "https://hg-au.com/about.html"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "@id": "https://hg-au.com/#organization",
+    "name": "Holistic Governance",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://hg-au.com/logo-hg-trimmed.png"
+    }
+  },
+  "datePublished": "2026-08-14",
+  "dateModified": "2026-08-14",
+  "mainEntityOfPage": "https://hg-au.com/articles/ndis-banning-orders-certification-chain.html",
+  "articleSection": "Health Care",
+  "inLanguage": "en-AU",
+  "url": "https://hg-au.com/articles/ndis-banning-orders-certification-chain.html",
+  "isPartOf": {
+    "@id": "https://hg-au.com/#website"
+  }
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": "https://hg-au.com/articles/ndis-banning-orders-certification-chain.html#webpage",
+  "url": "https://hg-au.com/articles/ndis-banning-orders-certification-chain.html",
+  "name": "The design flaw behind the NDIS's first auditor bans | Holistic Governance",
+  "description": "The first NDIS banning orders against an auditor and consultant raise a bigger question about the certification chain, and how aged care's model differs as the new Act beds down.",
+  "isPartOf": {
+    "@id": "https://hg-au.com/#website"
+  },
+  "primaryImageOfPage": "https://hg-au.com/og-image-v3.png",
+  "inLanguage": "en-AU",
+  "speakable": {
+    "@type": "SpeakableSpecification",
+    "cssSelector": [
+      ".article-page h1",
+      ".article-meta"
+    ]
+  }
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://hg-au.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Resources",
+      "item": "https://hg-au.com/resources.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "The design flaw behind the NDIS's first auditor bans",
+      "item": "https://hg-au.com/articles/ndis-banning-orders-certification-chain.html"
+    }
+  ]
+}
+  </script>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-9PMGXF9Q9T"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-9PMGXF9Q9T');
+  </script>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="logo"><img src="../logo-hg-trimmed.png" alt="Holistic Governance" width="351" height="524"><span class="logo-name">Holistic <span>Governance</span></span></a>
+  <button class="hamburger" onclick="this.nextElementSibling.classList.toggle('open')">&#9776;</button>
+  <ul>
+    <li><a href="/">Home</a></li>
+    <li><a href="../about.html">About</a></li>
+    <li><a href="../healthcare.html">Solutions</a></li>
+    <li><a href="../resources.html">Resources</a></li>
+    <li class="nav-contact-wrapper">
+      <button class="nav-cta" onclick="this.nextElementSibling.classList.toggle('open')">Contact</button>
+      <div class="nav-contact-popup">
+        <a href="tel:0405515300">0405 515 300</a>
+        <a href="mailto:info@hg-au.com">info@hg-au.com</a>
+        <a href="../proposal-enquiry.html">Submit a Proposal</a>
+      </div>
+    </li>
+  </ul>
+</nav>
+
+<article class="article-page">
+  <div class="breadcrumb"><a href="/">Home</a> / <a href="../resources.html">Resources</a> / The design flaw behind the NDIS's first auditor bans</div>
+  <div class="article-tag">Health Care</div>
+  <h1>The design flaw behind the NDIS's first auditor bans</h1>
+  <div class="article-meta"><span>14 August 2026</span> &middot; Naomi Alefelder</div>
+
+  <div class="article-body">
+<p>The NDIS Quality and Safeguards Commission has issued its first lifetime banning orders against a consultant and an auditor alleged to have colluded to register more than 200 providers on false or misleading information. On the back of the investigation, the Commission <a href="https://www.noticer.news/ndis-lifetime-bans-consultant-auditor/">refused 195 registration applications and revoked a further 40</a>. These are the first banning orders of their kind, because the power behind them is new.</p>
+<p><strong>What changed, and when.</strong> The <a href="https://www.ndiscommission.gov.au/node/1963244">banning orders were made on 17 June 2026</a>, permanent and nationwide, and they are the first issued under <a href="https://alloranews.com/australia/ndis-issues-first-lifetime-bans-under-expanded-watchdog-powers/">new powers to ban auditors and consultants</a>. Until the <a href="https://www.legislation.gov.au/C2026A00041">National Disability Insurance Scheme Amendment (Integrity and Safeguarding) Act 2026</a> (assented 8 April 2026), the Commission could ban only <em>providers</em> and <em>workers</em>. Closing that gap is the single most significant change here; the power itself, not the two individuals, is the story.</p>
+<p>It is good to see the clean-up beginning, and the new power actually being used. But the two individuals are only the visible end of the problem. The matter raises a sharper question about the chain those registrations passed through, and about a structural feature of the NDIS model that made the conflict possible in the first place.</p>
+<h2>A provider shops for the auditor that judges it</h2>
+<p>Follow the money, because it explains the rest. NDIS registration is free, but a provider cannot register without passing an audit, and it must find, choose and pay the auditor itself. The Commission does not assign the auditor and does not set the price. Providers are <a href="https://www.ndiscommission.gov.au/provider-registration/apply-registration/types-audits">told to get quotes and compare</a>, and the <a href="https://www.providerplus.com.au/post/how-much-does-ndis-provider-registration-cost-in-2026">commercial relationship runs directly between the provider and the auditor it hires</a>.</p>
+<p>Strip away the language and the design is this: the party being judged is the auditor's paying customer, and it gets to pick which auditor to hire. An auditor that fails too many clients loses them to one that does not. That is not a hypothetical bias, it is a commercial incentive wired into the structure. Every conformance industry built this way, from financial audit to building certification, has learned the same lesson the hard way.</p>
+<h2>The "independent" layer that was meant to fix this, and didn't</h2>
+<p>There is a check, and it is worth naming precisely so its failure is clear.</p>
+<p>Auditors do not appoint themselves. They are accredited by <a href="https://www.jas-anz.org/national-disability-insurance-scheme-approved-quality-auditors-scheme">JAS-ANZ</a> (which runs the scheme on the Commission's behalf, monitors auditors, and holds them to the <a href="https://www.ndiscommission.gov.au/provider-registration/apply-registration/information-quality-auditors">NDIS auditor guidelines and Code of Conduct</a>), and then approved by the Commission itself. Two keys. Accreditation runs under the <a href="https://www.legislation.gov.au/F2018N00114/2020-01-01">NDIS (Approved Quality Auditors Scheme) Guidelines 2018</a>, which invoke ISO/IEC 17065:2012, the international standard whose entire purpose is the impartiality and independence of certification bodies.</p>
+<p>So on paper the conflict is handled: an international impartiality standard, an accreditor and a regulator, all stacked on top of the provider-pays model.</p>
+<p>On paper. In this matter, a consultant and an auditor allegedly colluded to push more than 200 providers through, and that accreditation-and-approval layer did not stop it. The registrations were caught after the fact, by investigation and banning order, not before, by the impartiality controls that were supposed to make it impossible. That is the uncomfortable finding: the safeguards did not prevent the harm; enforcement cleaned up afterwards.</p>
+<p>And it was not the first warning. The sector has <a href="https://vccg.com.au/ndis-auditor-selection-vetting-checklist/">already seen an approved quality auditor sanctioned</a> for selling consultancy to the very providers it was auditing: the exact conflict, in plain sight, inside an accredited body. One case is an outlier. A second, on the back of a 200-provider collusion, looks less like bad luck and more like a pattern the design invites.</p>
+<h2>Failed, or never tested?</h2>
+<p>So the question is blunt: did the impartiality controls fail, or were they never really exercised?</p>
+<ul><li>If they <strong>failed</strong> (conflicts declared and waved through, technical review a formality), the accountability belongs at the certification-body level, not only with two banned individuals.</li><li>If they were <strong>never tested</strong>, because the framework assumes good faith and never looks at who advised the provider before the audit, then it is not a safeguard. It is paperwork.</li></ul>
+<p>Either way, banning two people treats the symptom. The cause is a registration gate that lets the assessed party choose and pay its own assessor, policed by an accreditation layer that only moved once the damage was done. And there is no scale excuse. Just <a href="https://www.ndiscommission.gov.au/provider-registration/apply-registration/find-auditor">seventeen certification bodies</a> audit the entire NDIS market at the time of writing, and the Commission is <a href="https://www.ndiscommission.gov.au/provider-registration/apply-registration/information-quality-auditors">not currently accepting new applications</a> to join them, approvals paused amid the integrity reforms now reshaping the scheme. A closed pool of seventeen makes the oversight question answerable, not impossible.</p>
+<h2>Aged care built it differently</h2>
+<p>Aged care avoided the core mistake. There is no finding your own auditor and no paying the person who grades you directly. It all runs through the <a href="https://www.agedcarequality.gov.au/about-us/assessors">Aged Care Quality and Safety Commission</a>, which arranges the audit, supplies the assessor and stands between the provider and the decision. The commercial relationship that sits at the heart of the NDIS matter simply does not exist. That single structural difference is why the two schemes should not be spoken of in the same breath when independence is the subject.</p>
+<p>I do not say this from the outside. I audit in the aged care and hospital sectors, and I have deliberately stayed out of NDIS auditing. Not because the work cannot be done with integrity (many do it conscientiously), but because a model that makes the provider the auditor's paying customer puts independence in tension with commercial survival from the very first engagement. I did not want my name on a certificate issued under that tension. That is a judgment about the design, not about the people working within it.</p>
+<p>The discipline is the same wherever you audit. A certification system is only as good as the independence it can actually demonstrate: sampled, stress-tested, enforced. Not the independence it asserts on paper.</p>
+<p>For providers, boards and the assurance bodies themselves, the question is the same on both sides of the fence: <strong>can you show that the independence in your certification chain was real, or only assumed?</strong></p>
+<h2>Sources</h2>
+<ul><li>The Noticer: <a href="https://www.noticer.news/ndis-lifetime-bans-consultant-auditor/">NDIS bans two people for life and cracks down on providers</a></li><li>NDIS Quality and Safeguards Commission: banning-order records for the <a href="https://www.ndiscommission.gov.au/node/1963244">consultant</a> and the <a href="https://www.ndiscommission.gov.au/node/1963245">auditor</a></li><li>Federal Register of Legislation: <a href="https://www.legislation.gov.au/C2026A00041">National Disability Insurance Scheme Amendment (Integrity and Safeguarding) Act 2026</a> (No. 41 of 2026; assent 8 April 2026)</li><li>Allora News: <a href="https://alloranews.com/australia/ndis-issues-first-lifetime-bans-under-expanded-watchdog-powers/">NDIS issues first lifetime bans under expanded watchdog powers</a></li><li>NDIS Quality and Safeguards Commission: <a href="https://www.ndiscommission.gov.au/provider-registration/apply-registration/types-audits">The quality audit process</a>, <a href="https://www.ndiscommission.gov.au/provider-registration/apply-registration/information-quality-auditors">Information for quality auditors</a> (new applications paused), and <a href="https://www.ndiscommission.gov.au/provider-registration/apply-registration/find-auditor">Find an auditor</a> (17 approved bodies, current to 31 July 2026)</li><li>Provider cost guidance: <a href="https://www.providerplus.com.au/post/how-much-does-ndis-provider-registration-cost-in-2026">how much it costs to become an NDIS provider (2026)</a></li><li>Federal Register of Legislation: <a href="https://www.legislation.gov.au/F2018N00114/2020-01-01">NDIS (Approved Quality Auditors Scheme) Guidelines 2018</a></li><li>JAS-ANZ: <a href="https://www.jas-anz.org/national-disability-insurance-scheme-approved-quality-auditors-scheme">National Disability Insurance Scheme (Approved Quality Auditors Scheme)</a></li><li>VCCG: <a href="https://vccg.com.au/ndis-auditor-selection-vetting-checklist/">NDIS auditor selection: vetting checklist</a></li><li>Aged Care Quality and Safety Commission: <a href="https://www.agedcarequality.gov.au/about-us/assessors">Assessors</a></li></ul>
+<p><em>Holistic Governance provides governance and compliance decision support for the aged care and disability sectors. This article is general commentary, not legal advice.</em></p>
+  </div>
+  <aside class="author-bio" aria-label="About the author">
+    <div class="author-bio-header">
+      <img src="../headshotimage.png" alt="Naomi Alefelder" width="96" height="96" />
+      <div>
+        <h2>About the author</h2>
+        <p class="author-bio-role">Naomi Alefelder &middot; Founding Director, Holistic Governance</p>
+      </div>
+    </div>
+    <p>Registered nurse and governance specialist with over a decade of senior leadership across aged care, hospital, day surgery, disability and community health. MBA (Charles Sturt University), AICD Foundations of Directorship, Lead Auditor (Exemplar Global). Board Director, Caladenia Dementia Care.</p>
+    <p class="author-bio-links"><a href="../about.html">More about Naomi</a> &middot; <a href="https://www.linkedin.com/in/naomi-alefelder" target="_blank" rel="noopener">LinkedIn</a> &middot; <a href="../proposal-enquiry.html">Request a proposal</a></p>
+  </aside>
+  <aside class="related-solutions" aria-label="Related solutions">
+    <h2>Related Solutions</h2>
+    <ul>
+      <li><a href="../healthcare.html">Healthcare Governance</a></li>
+    </ul>
+  </aside>
+  <nav class="article-footer-nav" aria-label="Article navigation">
+    <a href="../resources.html">&larr; All articles</a>
+    <a href="../proposal-enquiry.html">Request a Proposal</a>
+    <a href="../healthcare.html">Our Solutions</a>
+  </nav>
+</article>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <a href="/" class="footer-logo" style="text-decoration:none;"><img src="../logo-hg-trimmed.png" alt="Holistic Governance" width="351" height="524"><span class="logo-name">Holistic <span>Governance</span></span></a>
+      <p class="footer-tagline">Improving clarity and confidence in governance through knowledge, data, and technology.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Navigate</h4>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="../about.html">About</a></li>
+        <li><a href="../healthcare.html">Solutions</a></li>
+        <li><a href="../resources.html">Resources</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Get in Touch</h4>
+      <div class="footer-contact-item"><a href="mailto:info@hg-au.com">info@hg-au.com</a></div>
+      <div class="footer-contact-item"><a href="tel:0405515300">0405 515 300</a></div>
+      <div class="footer-contact-item" style="margin-top: 0.5rem;"><a href="../proposal-enquiry.html">Request a Proposal</a></div>
+      <div class="footer-contact-item"><a href="https://www.linkedin.com/company/hg-au/" target="_blank" rel="noopener">LinkedIn</a></div>
+    </div>
+    <div class="footer-col">
+      <h4>Where We Work</h4>
+      <address style="font-style:normal; font-size:0.85rem; line-height:1.6; color:var(--text-light); margin-bottom:0.6rem;">Melbourne Metro and Regional</address>
+      <ul><li>Australia</li><li>New Zealand</li></ul>
+      <p style="font-size:0.8rem; color:var(--text-light); margin-top:0.8rem;">Remote &amp; on-site delivery</p>
+    </div>
+  </div>
+  <div class="footer-bottom"><p>&copy; 2026 Holistic Governance. All rights reserved.</p></div>
+</footer>
+
+<script>
+document.addEventListener('click', function(e) {
+  document.querySelectorAll('.nav-contact-popup.open').forEach(function(popup) {
+    if (!popup.parentElement.contains(e.target)) popup.classList.remove('open');
+  });
+});
+window.addEventListener('scroll', function() {
+  document.querySelector('nav').classList.toggle('scrolled', window.scrollY > 60);
+});
+</script>
+</body>
+</html>
