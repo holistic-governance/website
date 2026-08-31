@@ -75,11 +75,11 @@
     text-shadow: 0 0 6px #fff, 0 0 12px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #fff; }
   .map-note em { font-style: italic; color: #0577C7; }
   .guidance { max-width: 1120px; margin: 210px auto 56px; text-align: center; padding: 0 20px; }
-  .glabel { font-size: 20px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--ink); margin-bottom: 44px; }
-  .grow { display: flex; gap: 22px; justify-content: center; flex-wrap: wrap; }
-  .reg.gsm { position: static; opacity: 1 !important; animation: none !important; box-shadow: 0 14px 36px rgba(15,23,42,.10); padding: 26px 34px; max-width: 360px; border-radius: 22px; }
-  .reg.gsm .t { font-size: 18px; }
-  .reg.gsm .s { font-size: 13px; margin-top: 4px; }
+  .glabel { font-size: 18px; font-weight: 700; letter-spacing: 2.8px; text-transform: uppercase; color: var(--ink); margin-bottom: 40px; }
+  .grow { display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; }
+  .reg.gsm { position: static; opacity: 1 !important; animation: none !important; box-shadow: 0 12px 32px rgba(15,23,42,.09); padding: 22px 30px; max-width: 340px; border-radius: 20px; }
+  .reg.gsm .t { font-size: 16.5px; }
+  .reg.gsm .s { font-size: 12.5px; margin-top: 3px; }
   .grow .reg.gsm:nth-child(1) { border: 1.5px solid #64748b; }
   .grow .reg.gsm:nth-child(2) { border: 1.5px solid #334155; }
   .grow .reg.gsm:nth-child(3) { border: 1.5px solid #47698a; }
@@ -378,13 +378,20 @@
 <section class="mapband" id="map" style="height:900px;">
   <div class="map-note"><em>Clarity</em> on interconnected<br>complex requirements</div>
   <svg class="wires" viewBox="0 0 1280 1150" fill="none" preserveAspectRatio="none" aria-hidden="true" style="height:1150px;">
+    <g mask="url(#clearing)">
     <path class="w" d="M400 0 C300 170 95 250 95 450 C95 860 640 820 900 1090" stroke="url(#w1)" stroke-width="2"/>
     <path class="w" d="M470 0 C380 160 215 240 215 420 C215 820 640 800 790 1065" stroke="url(#w2)" stroke-width="2"/>
     <path class="w" d="M560 0 C500 170 400 260 400 480 C400 800 640 790 705 1035" stroke="url(#w3)" stroke-width="2"/>
     <path class="w" d="M880 0 C980 170 1185 250 1185 450 C1185 860 640 820 380 1090" stroke="url(#w4)" stroke-width="2"/>
     <path class="w" d="M810 0 C900 160 1065 240 1065 420 C1065 820 640 800 490 1065" stroke="url(#w5)" stroke-width="2"/>
     <path class="w" d="M720 0 C780 170 880 260 880 480 C880 800 640 790 575 1035" stroke="url(#w6)" stroke-width="2"/>
+    </g>
     <defs>
+      <radialGradient id="clearingGrad"><stop offset="0.5" stop-color="#000"/><stop offset="1" stop-color="#fff"/></radialGradient>
+      <mask id="clearing" maskUnits="userSpaceOnUse" x="0" y="0" width="1280" height="1150">
+        <rect x="0" y="0" width="1280" height="1150" fill="#fff"/>
+        <ellipse cx="640" cy="398" rx="500" ry="180" fill="url(#clearingGrad)"/>
+      </mask>
       <linearGradient id="w1" x1="100" y1="0" x2="640" y2="1150" gradientUnits="userSpaceOnUse"><stop stop-color="#0ea5e9" stop-opacity="0.12"/><stop offset="0.5" stop-color="#0ea5e9" stop-opacity="1"/><stop offset="1" stop-color="#8b5cf6" stop-opacity="0.15"/></linearGradient>
       <linearGradient id="w2" x1="215" y1="0" x2="640" y2="880" gradientUnits="userSpaceOnUse"><stop stop-color="#8b5cf6" stop-opacity="0.12"/><stop offset="0.5" stop-color="#8b5cf6" stop-opacity="1"/><stop offset="1" stop-color="#ec4899" stop-opacity="0.15"/></linearGradient>
       <linearGradient id="w3" x1="345" y1="0" x2="640" y2="880" gradientUnits="userSpaceOnUse"><stop stop-color="#ec4899" stop-opacity="0.12"/><stop offset="0.5" stop-color="#ec4899" stop-opacity="1"/><stop offset="1" stop-color="#f97316" stop-opacity="0.15"/></linearGradient>
