@@ -6,7 +6,7 @@
     [TRAILER-YOUTUBE-ID]  — public trailer video ID
     [PIN-EP1-URL]         — Pin Payments hosted payment page for Ep 1
     [PIN-PASS-URL]        — Pin payment page for the annual pass
-    On go-live day: swap "expires 90 days from release" for the exact expiry date
+    On go-live day: set each episode's "current as at" release date + 12-month access-end date in copy/terms
   Then: flip robots to "index,follow", add to sitemap.xml, re-check the GST line in terms.
   Source copy: hg-au/shared/brand/templates/briefings/assurance-briefing/ (canonical kit = PR #74).
 -->
@@ -74,10 +74,12 @@
     background: radial-gradient(ellipse closest-side, rgba(255,255,255,.98) 74%, rgba(255,255,255,0) 100%);
     text-shadow: 0 0 6px #fff, 0 0 12px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #fff; }
   .map-note em { font-style: italic; color: #0577C7; }
-  .guidance { max-width: 1000px; margin: 210px auto 56px; text-align: center; padding: 0 20px; }
-  .glabel { font-size: 15px; font-weight: 600; letter-spacing: 2.5px; text-transform: uppercase; color: var(--ink); margin-bottom: 34px; }
-  .grow { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
-  .reg.gsm { position: static; opacity: 1 !important; animation: none !important; box-shadow: 0 10px 28px rgba(15,23,42,.08); }
+  .guidance { max-width: 1120px; margin: 210px auto 56px; text-align: center; padding: 0 20px; }
+  .glabel { font-size: 18px; font-weight: 700; letter-spacing: 2.8px; text-transform: uppercase; color: var(--ink); margin-bottom: 40px; }
+  .grow { display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; }
+  .reg.gsm { position: static; opacity: 1 !important; animation: none !important; box-shadow: 0 12px 32px rgba(15,23,42,.09); padding: 22px 30px; max-width: 340px; border-radius: 20px; }
+  .reg.gsm .t { font-size: 16.5px; }
+  .reg.gsm .s { font-size: 12.5px; margin-top: 3px; }
   .grow .reg.gsm:nth-child(1) { border: 1.5px solid #64748b; }
   .grow .reg.gsm:nth-child(2) { border: 1.5px solid #334155; }
   .grow .reg.gsm:nth-child(3) { border: 1.5px solid #47698a; }
@@ -196,6 +198,8 @@
   svg.connfan.inview path { animation: draw 1s ease forwards; }
   svg.connfan.inview path:nth-of-type(2) { animation-delay: .15s; }
   svg.connfan.inview path:nth-of-type(3) { animation-delay: .3s; }
+  .secend { width: 300px; height: 1px; margin: 64px auto; border: 0;
+    background: linear-gradient(90deg, transparent, #d4dae2 20%, #d4dae2 80%, transparent); }
 
   .map-title { font-family: 'Cormorant Garamond', serif; font-weight: 400; font-size: clamp(34px, 3.8vw, 50px); line-height: 1.1; margin-bottom: 14px; }
   .map-title em { font-style: italic; color: #0577C7; }
@@ -374,13 +378,20 @@
 <section class="mapband" id="map" style="height:900px;">
   <div class="map-note"><em>Clarity</em> on interconnected<br>complex requirements</div>
   <svg class="wires" viewBox="0 0 1280 1150" fill="none" preserveAspectRatio="none" aria-hidden="true" style="height:1150px;">
+    <g mask="url(#clearing)">
     <path class="w" d="M400 0 C300 170 95 250 95 450 C95 860 640 820 900 1090" stroke="url(#w1)" stroke-width="2"/>
     <path class="w" d="M470 0 C380 160 215 240 215 420 C215 820 640 800 790 1065" stroke="url(#w2)" stroke-width="2"/>
     <path class="w" d="M560 0 C500 170 400 260 400 480 C400 800 640 790 705 1035" stroke="url(#w3)" stroke-width="2"/>
     <path class="w" d="M880 0 C980 170 1185 250 1185 450 C1185 860 640 820 380 1090" stroke="url(#w4)" stroke-width="2"/>
     <path class="w" d="M810 0 C900 160 1065 240 1065 420 C1065 820 640 800 490 1065" stroke="url(#w5)" stroke-width="2"/>
     <path class="w" d="M720 0 C780 170 880 260 880 480 C880 800 640 790 575 1035" stroke="url(#w6)" stroke-width="2"/>
+    </g>
     <defs>
+      <radialGradient id="clearingGrad"><stop offset="0.5" stop-color="#000"/><stop offset="1" stop-color="#fff"/></radialGradient>
+      <mask id="clearing" maskUnits="userSpaceOnUse" x="0" y="0" width="1280" height="1150">
+        <rect x="0" y="0" width="1280" height="1150" fill="#fff"/>
+        <ellipse cx="640" cy="398" rx="500" ry="180" fill="url(#clearingGrad)"/>
+      </mask>
       <linearGradient id="w1" x1="100" y1="0" x2="640" y2="1150" gradientUnits="userSpaceOnUse"><stop stop-color="#0ea5e9" stop-opacity="0.12"/><stop offset="0.5" stop-color="#0ea5e9" stop-opacity="1"/><stop offset="1" stop-color="#8b5cf6" stop-opacity="0.15"/></linearGradient>
       <linearGradient id="w2" x1="215" y1="0" x2="640" y2="880" gradientUnits="userSpaceOnUse"><stop stop-color="#8b5cf6" stop-opacity="0.12"/><stop offset="0.5" stop-color="#8b5cf6" stop-opacity="1"/><stop offset="1" stop-color="#ec4899" stop-opacity="0.15"/></linearGradient>
       <linearGradient id="w3" x1="345" y1="0" x2="640" y2="880" gradientUnits="userSpaceOnUse"><stop stop-color="#ec4899" stop-opacity="0.12"/><stop offset="0.5" stop-color="#ec4899" stop-opacity="1"/><stop offset="1" stop-color="#f97316" stop-opacity="0.15"/></linearGradient>
@@ -426,18 +437,14 @@
 
 
 
-<svg class="connfan" width="860" height="140" viewBox="0 0 860 140" fill="none" aria-hidden="true" style="max-width:90vw;">
-  <path d="M430 0 C430 64 110 56 110 140" stroke="#0ea5e9" stroke-width="2" style="stroke-dasharray:620;stroke-dashoffset:620;"/>
-  <path d="M430 0 L430 140" stroke="#10b981" stroke-width="2" style="stroke-dasharray:620;stroke-dashoffset:620;"/>
-  <path d="M430 0 C430 64 750 56 750 140" stroke="#f97316" stroke-width="2" style="stroke-dasharray:620;stroke-dashoffset:620;"/>
-</svg>
+<hr class="secend" aria-hidden="true">
 
 <!-- STATS — floating tiles with drop-lines -->
 <section class="statsband" id="stats">
   <div class="stiles">
     <div class="stile"><div class="n">~45 min</div><p>Per briefing</p></div>
     <div class="stile"><div class="n">Monthly</div><p>Minimum 1 per month</p></div>
-    <div class="stile"><div class="n">90 day</div><p>Expiry to ensure currency</p></div>
+    <div class="stile"><div class="n">12 months</div><p>Streaming access per briefing</p></div>
   </div>
   <svg class="slines" viewBox="0 0 860 96" fill="none" preserveAspectRatio="none" aria-hidden="true">
     <path d="M110 0 C110 42 330 56 396 90" stroke="#0ea5e9" stroke-width="2"/>
@@ -446,8 +453,8 @@
   </svg>
   <div class="scopy">
     <h2>Sharp, current, and ready when <em>you</em> are.</h2>
-    <p>Approximately 45 minutes each. At least one new briefing a month. And every briefing
-    expires after 90 days — so what you watch is never stale.</p>
+    <p>Approximately 45 minutes each. At least one new briefing a month. And every briefing is
+    dated to its release — current as at that day, with a fresh one each month as the rules move.</p>
   </div>
 </section>
 
@@ -463,17 +470,20 @@
   <div class="feat">
     <div>
       <span class="badge live">September 2026</span>
-      <h3>Governing clinical AI: the regulatory map</h3>
-      <p>Clinical AI is already in Australian health and aged care. Who governs what — TGA, Ahpra,
-      OAIC, ACSQHC, the Aged Care Quality and Safety Commission — the oversight lifecycle once
-      tools are deployed, and the questions and metrics that belong in your board pack and
-      quality committee.</p>
+      <h3>Responsible person duties under the Aged Care Act 2024</h3>
+      <p>The Act attaches direct, non-delegable duties to providers (s 179) and to responsible
+      persons — board directors and executive decision-makers (s 180) — backed by a civil-penalty
+      regime. And "responsible person" reaches past the boardroom: s 12 also names the registered
+      nurse responsible for the overall management of nursing services, so directors of nursing and
+      senior clinical leaders are captured too. What due diligence actually requires of a director,
+      who counts as a responsible person, and the questions, evidence and cadence that show the duty
+      is being discharged in your board pack and quality committee.</p>
       <p class="meta">Approx. 45 min</p>
     </div>
     <a class="buy" href="[PIN-EP1-URL]" style="background:#fff;color:#0577C7;border:1.5px solid #0577C7;" onclick="gtag('event','begin_checkout',{item_name:'Assurance Briefing Ep 1'});">Buy — A$99 &rarr;</a>
   </div>
-  <div class="slim"><span class="badge oct">Oct 2026</span><h4>&ldquo;AI guardrails&rdquo;: from buzzword to real controls</h4><span class="soonlbl">Coming next</span></div>
-  <div class="slim"><span class="badge nov">Nov 2026</span><h4>Board responsibilities under the Aged Care Act 2024</h4><span class="soonlbl">Coming soon</span></div>
+  <div class="slim"><span class="badge oct">Oct 2026</span><h4>Governing clinical AI: the regulatory map</h4><span class="soonlbl">Coming next</span></div>
+  <div class="slim"><span class="badge nov">Nov 2026</span><h4>Closed Loop Feedback</h4><span class="soonlbl">Coming soon</span></div>
 </div>
 </div></section>
 
@@ -491,7 +501,7 @@
       <div style="padding:36px;text-align:center;">
         <div class="tn" style="color:#0ea5e9;">Single briefing</div>
         <div class="tp">A$99</div>
-        <p style="font-size:12.5px;color:#475569;margin-bottom:18px;">One briefing, yours until it expires.</p>
+        <p style="font-size:12.5px;color:#475569;margin-bottom:18px;">One briefing — 12 months' streaming access, PDF yours to keep.</p>
         <a class="buy" href="[PIN-EP1-URL]" onclick="gtag('event','begin_checkout',{item_name:'Assurance Briefing single'});">Buy a briefing &rarr;</a>
       </div>
       <div style="padding:36px;text-align:center;background:linear-gradient(120deg,#FFFDFB,#FFF7EC 58%,#FFEDD2 135%);position:relative;">
@@ -502,7 +512,7 @@
       </div>
     </div>
     <div style="border-top:1px solid #eef2f7;padding:18px 26px;display:flex;gap:22px;justify-content:center;flex-wrap:wrap;font-size:12px;color:#64748b;">
-      <span>&#10003; Every claim cited</span><span>&#10003; PDF yours to keep</span><span>&#10003; Link by email in minutes</span><span>&#10003; Expires after 90 days</span>
+      <span>&#10003; Every claim cited</span><span>&#10003; PDF yours to keep</span><span>&#10003; Link by email in minutes</span><span>&#10003; Current as at release</span>
     </div>
   </div>
   <p class="invoice" style="margin-top:20px;">Organisations can pay the annual pass by invoice and bank transfer —
@@ -518,7 +528,7 @@
 <!-- NOTIFY -->
 <section class="notify" id="notifyband"><div class="in">
   <h2>Never miss a <em>release</em></h2>
-  <p class="sub2">New-episode announcements and last-chance notices before an episode expires.
+  <p class="sub2">New-episode announcements the moment each briefing is released.
   No spam; unsubscribe any time.</p>
   <div id="notifyForm">
     <div class="field-row">
@@ -573,12 +583,16 @@
   <div class="panel">
     <h2>Purchase terms</h2>
     <ul class="terms">
-      <li><strong>What you're buying:</strong> streaming access to the named briefing episode until
-        its stated expiry date (shown above and at checkout), plus the PDF briefing paper, which
-        is yours to keep. Annual pass: the same, for every briefing released during your 12-month pass.</li>
-      <li><strong>Access window:</strong> each briefing expires 90 days after release — the expiry
-        date is displayed before you buy. After expiry the video is no longer available; your PDF
-        remains yours.</li>
+      <li><strong>What you're buying:</strong> streaming access to the named briefing episode for
+        12 months from its release date, plus the PDF briefing paper, which is yours to keep.
+        Annual pass: the same, for every briefing released during your 12-month pass.</li>
+      <li><strong>Access window:</strong> each briefing's streaming access runs for 12 months from
+        release; the end date is shown at checkout. After it ends the video is no longer available;
+        your PDF remains yours.</li>
+      <li><strong>Currency:</strong> each briefing is current as at its release date, shown on the
+        episode and at checkout. Regulation changes over time, so we release a new briefing at least
+        monthly; a briefing reflects the position at its release and is decision-support, not a
+        substitute for current professional advice.</li>
       <li><strong>Delivery:</strong> your access link arrives by email, normally within minutes of
         payment. No link within 24 hours? Email
         <a href="mailto:info@hg-au.com">info@hg-au.com</a> and we'll fix it.</li>
@@ -588,7 +602,7 @@
         leadership team within one organisation only. Please don't republish the briefing or
         share the link outside your organisation.</li>
       <li><strong>Privacy:</strong> we collect your name and email to deliver your purchase, send
-        your receipt, and remind you before your episode expires. We won't add you to marketing
+        your receipt, and let you know when a new briefing is released. We won't add you to marketing
         lists unless you opt in.</li>
       <li><strong>Prices</strong> are in Australian dollars.</li>
     </ul>
