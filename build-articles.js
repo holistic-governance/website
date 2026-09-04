@@ -57,6 +57,25 @@ ${items}
   </aside>`;
 }
 
+// Frontmatter: `alsoPublishedIn: Publication | YYYY-MM-DD | https://url`
+// Multiple republications separated by ` ;; `. Date is optional (leave blank between pipes).
+function parseAlsoPublishedIn(value) {
+  if (!value) return [];
+  return value.split(';;').map(entry => {
+    const [publication, date, url] = entry.split('|').map(s => (s || '').trim());
+    return { publication, date, url };
+  }).filter(e => e.publication && e.url);
+}
+
+function renderRepublished(list) {
+  if (!list || list.length === 0) return '';
+  const items = list.map(e => {
+    const when = e.date ? `, ${formatDate(e.date)}` : '';
+    return `<a href="${escapeAttr(e.url)}" target="_blank" rel="noopener">${escapeAttr(e.publication)}</a>${when}`;
+  }).join(' &middot; ');
+  return `  <div class="article-republished">Also published in ${items}</div>\n`;
+}
+
 function inlineEscape(s) {
   return String(s)
     .replace(/&/g, '&amp;')
@@ -145,6 +164,9 @@ function buildAll(articlesDir) {
       metaDescription: frontmatter.metaDescription || '',
       ogImage: frontmatter.og_image || frontmatter.ogImage || DEFAULT_OG_IMAGE
     };
+
+    const republished = parseAlsoPublishedIn(frontmatter.alsoPublishedIn);
+    if (republished.length) meta.alsoPublishedIn = republished;
 
     articles.push(meta);
 
@@ -292,6 +314,9 @@ function renderArticlePage(meta, body, takeaways = []) {
     url: canonical,
     isPartOf: { '@id': `${SITE_URL}/#website` }
   };
+  if (meta.alsoPublishedIn && meta.alsoPublishedIn.length) {
+    jsonLd.sameAs = meta.alsoPublishedIn.map(e => e.url);
+  }
 
   const webPage = {
     '@context': 'https://schema.org',
@@ -358,6 +383,9 @@ function renderArticlePage(meta, body, takeaways = []) {
     .article-page h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 4vw, 3rem); font-weight: 300; color: var(--white); line-height: 1.15; margin-bottom: 1.2rem; }
     .article-page .article-meta { font-size: 0.82rem; color: var(--text-light); margin-bottom: 2rem; padding-bottom: 1.5rem; border-bottom: 1px solid var(--border); }
     .article-page .article-meta span { color: var(--sky); }
+    .article-page .article-republished { display: inline-block; margin: -0.75rem 0 2rem; padding: 0.45rem 0.9rem; background: rgba(56,189,248,0.08); border: 1px solid rgba(56,189,248,0.3); border-radius: 2px; font-size: 0.78rem; letter-spacing: 0.04em; color: var(--text-light); }
+    .article-page .article-republished a { color: var(--sky); text-decoration: none; border-bottom: 1px solid rgba(56,189,248,0.4); }
+    .article-page .article-republished a:hover { border-bottom-color: var(--sky); }
     .article-body { color: #aab4c4; font-size: 1rem; line-height: 1.9; }
     .article-body h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; font-weight: 400; color: var(--white); margin: 2.5rem 0 1rem; }
     .article-body h3 { font-family: 'DM Sans', sans-serif; font-size: 1.15rem; font-weight: 500; color: var(--white); margin: 2rem 0 0.8rem; }
@@ -437,7 +465,7 @@ ${JSON.stringify(breadcrumb, null, 2)}
   <div class="article-tag">${escapeAttr(meta.category)}</div>
   <h1>${escapeAttr(meta.title)}</h1>
   <div class="article-meta"><span>${formatDate(meta.date)}</span>${dateModified !== meta.date ? ` &middot; Updated ${formatDate(dateModified)}` : ''} &middot; ${escapeAttr(meta.author)}</div>
-${takeawaysHtml}
+${renderRepublished(meta.alsoPublishedIn)}${takeawaysHtml}
   <div class="article-body">
 ${bodyHtml}
   </div>

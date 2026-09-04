@@ -1,0 +1,101 @@
+<!--
+  ARCHIVED 2026-09-04 — "Go Further / Premium Resource Library" section from resources.html.
+  Removed from the live page at Naomi's request; kept here for restoration if the premium
+  library launches.
+
+  To restore:
+  1. SECTION: paste the <section class="premium-section"> block back into resources.html
+     between the resources <section> (after the Load More wrap) and the Articles & Analysis section.
+  2. CSS: paste the "PREMIUM CTA" rules back into the page <style> block (before the
+     .interest-form rules, which stayed on the page — they're shared with the newsletter form).
+     Also re-add `.premium-layout { grid-template-columns: 1fr; }` inside the
+     @media (max-width: 900px) block.
+  3. JS: paste registerInterest() back into the page script (near subscribeNewsletter()).
+     It posts to API_BASE + '/api/subscribe' (same endpoint as the newsletter form).
+-->
+
+<!-- ===== 1. SECTION MARKUP ===== -->
+
+<!-- PREMIUM CTA -->
+<section class="premium-section fade-in">
+  <div class="section-label">Go Further</div>
+  <h2>Premium Resource Library</h2>
+  <div class="premium-layout">
+    <div>
+      <p style="color:#ffffff; font-size:0.95rem; line-height:1.8; margin-bottom:1.5rem;">Healthcare regulation in Australia is changing faster than ever. Between strengthened Aged Care Quality Standards, evolving NSQHS requirements, new legislative obligations, and shifting best practice guidelines — staying across what applies to your organisation is a very labour intensive job in itself.</p>
+      <p style="color:#ffffff; font-size:0.95rem; line-height:1.8; margin-bottom:1.5rem;">For nurses, case managers, quality managers, and governance leads already stretched thin, finding time to interpret regulatory updates and translate them into practice is one of the biggest challenges in the sector.</p>
+      <p style="color:#ffffff; font-size:0.95rem; line-height:1.8; margin-bottom:2rem;">Our premium library is designed to do that work for you — giving providers and clinicians a single, curated source to stay current, compliant, and confident.</p>
+      <ul class="premium-features">
+        <li>Plain-language regulatory summaries and change alerts</li>
+        <li>Implementation guides with step-by-step workflows</li>
+        <li>Audit-ready templates and self-assessment tools</li>
+        <li>Policy and procedure frameworks mapped to current standards</li>
+        <li>Board reporting guidance and templates</li>
+        <li>Sector-specific compliance checklists</li>
+        <li>Regular updates as regulations and best practice evolve</li>
+      </ul>
+    </div>
+    <div class="premium-card">
+      <h3>Stop Chasing Compliance. Stay Ahead of It.</h3>
+      <p>Built for providers, nurses, case managers, and quality leads who need to keep across regulatory and legislative requirements without drowning in documentation. One subscription — always current, always practical.</p>
+      <p style="font-size:0.85rem; color:var(--sky); font-style:italic;">Coming soon — watch this space.</p>
+      <p style="font-size:0.85rem; color:var(--text-mid); margin-bottom:0;">Register your interest and we'll notify you when it launches.</p>
+      <div class="interest-form">
+        <input type="email" id="interestEmail" placeholder="Your email address" autocomplete="email" onkeydown="if(event.key==='Enter'){event.preventDefault();registerInterest()}" />
+        <button type="button" onclick="registerInterest()">Notify Me</button>
+      </div>
+      <p id="interestMsg" style="display:none;margin-top:0.8rem;font-size:0.82rem;"></p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 2. CSS (from the page <style> block) ===== -->
+<style>
+    /* PREMIUM CTA */
+    .premium-section { background: var(--navy-mid); }
+    .premium-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; margin-top: 2.5rem; }
+    .premium-features { list-style: none; }
+    .premium-features li { font-size: 0.9rem; color: #ffffff; line-height: 1.8; padding-left: 1.5rem; position: relative; margin-bottom: 0.5rem; }
+    .premium-features li::before { content: ''; position: absolute; left: 0; top: 0.6rem; width: 6px; height: 6px; background: var(--sky); border-radius: 1px; }
+    .premium-card { background: var(--navy); border: 1px solid var(--border); border-radius: 2px; padding: 3rem; position: relative; overflow: hidden; }
+    .premium-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: var(--sky); }
+    .premium-card h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; color: var(--white); font-weight: 300; margin-bottom: 1rem; }
+    .premium-card p { font-size: 0.9rem; color: #ffffff; line-height: 1.8; margin-bottom: 1.5rem; }
+    .premium-card .btn-primary { display: inline-block; text-decoration: none; }
+
+    /* inside @media (max-width: 900px): */
+    /* .premium-layout { grid-template-columns: 1fr; } */
+</style>
+
+<!-- ===== 3. JS (from the page script, near subscribeNewsletter) ===== -->
+<script>
+// Register interest for premium library
+function registerInterest() {
+  var email = document.getElementById('interestEmail').value.trim();
+  var msg = document.getElementById('interestMsg');
+  if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+    msg.textContent = 'Please enter a valid email address.';
+    msg.style.color = '#f87171';
+    msg.style.display = 'block';
+    return;
+  }
+  fetch(API_BASE + '/api/subscribe', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ email: email })
+  })
+  .then(function(res) {
+    if (res.ok) {
+      msg.textContent = 'Thank you — we\'ll notify you when the premium library launches.';
+      msg.style.color = 'var(--sky)';
+      msg.style.display = 'block';
+      document.getElementById('interestEmail').value = '';
+    } else { throw new Error(); }
+  })
+  .catch(function() {
+    msg.textContent = 'Something went wrong. Please try again.';
+    msg.style.color = '#f87171';
+    msg.style.display = 'block';
+  });
+}
+</script>

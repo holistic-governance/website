@@ -61,17 +61,6 @@
     .no-results p { color: var(--text-mid); font-size: 0.95rem; }
     .result-count { font-size: 0.8rem; color: var(--text-light); margin-bottom: 1.5rem; }
 
-    /* PREMIUM CTA */
-    .premium-section { background: var(--navy-mid); }
-    .premium-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; margin-top: 2.5rem; }
-    .premium-features { list-style: none; }
-    .premium-features li { font-size: 0.9rem; color: #ffffff; line-height: 1.8; padding-left: 1.5rem; position: relative; margin-bottom: 0.5rem; }
-    .premium-features li::before { content: ''; position: absolute; left: 0; top: 0.6rem; width: 6px; height: 6px; background: var(--sky); border-radius: 1px; }
-    .premium-card { background: var(--navy); border: 1px solid var(--border); border-radius: 2px; padding: 3rem; position: relative; overflow: hidden; }
-    .premium-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: var(--sky); }
-    .premium-card h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; color: var(--white); font-weight: 300; margin-bottom: 1rem; }
-    .premium-card p { font-size: 0.9rem; color: #ffffff; line-height: 1.8; margin-bottom: 1.5rem; }
-    .premium-card .btn-primary { display: inline-block; text-decoration: none; }
     .interest-form { display: flex; gap: 0.8rem; margin-top: 1.5rem; }
     .interest-form input { flex: 1; padding: 0.8rem 1rem; background: var(--navy-mid); border: 1px solid var(--border); color: var(--cream); font-size: 0.85rem; border-radius: 2px; font-family: 'DM Sans', sans-serif; outline: none; transition: border-color 0.3s; }
     .interest-form input:focus { border-color: var(--sky); }
@@ -83,7 +72,6 @@
       .page-hero, section { padding: 6rem 1.5rem 3rem; }
       .resources-section { padding-top: 2.5rem; }
       .resources-grid { grid-template-columns: 1fr; }
-      .premium-layout { grid-template-columns: 1fr; }
       .interest-form { flex-direction: column; }
     }
   </style>
@@ -1580,46 +1568,13 @@ Find the latest cyber security advice, guidance and publications</p>
   </div>
 </section>
 
-<!-- PREMIUM CTA -->
-<section class="premium-section fade-in">
-  <div class="section-label">Go Further</div>
-  <h2>Premium Resource Library</h2>
-  <div class="premium-layout">
-    <div>
-      <p style="color:#ffffff; font-size:0.95rem; line-height:1.8; margin-bottom:1.5rem;">Healthcare regulation in Australia is changing faster than ever. Between strengthened Aged Care Quality Standards, evolving NSQHS requirements, new legislative obligations, and shifting best practice guidelines — staying across what applies to your organisation is a very labour intensive job in itself.</p>
-      <p style="color:#ffffff; font-size:0.95rem; line-height:1.8; margin-bottom:1.5rem;">For nurses, case managers, quality managers, and governance leads already stretched thin, finding time to interpret regulatory updates and translate them into practice is one of the biggest challenges in the sector.</p>
-      <p style="color:#ffffff; font-size:0.95rem; line-height:1.8; margin-bottom:2rem;">Our premium library is designed to do that work for you — giving providers and clinicians a single, curated source to stay current, compliant, and confident.</p>
-      <ul class="premium-features">
-        <li>Plain-language regulatory summaries and change alerts</li>
-        <li>Implementation guides with step-by-step workflows</li>
-        <li>Audit-ready templates and self-assessment tools</li>
-        <li>Policy and procedure frameworks mapped to current standards</li>
-        <li>Board reporting guidance and templates</li>
-        <li>Sector-specific compliance checklists</li>
-        <li>Regular updates as regulations and best practice evolve</li>
-      </ul>
-    </div>
-    <div class="premium-card">
-      <h3>Stop Chasing Compliance. Stay Ahead of It.</h3>
-      <p>Built for providers, nurses, case managers, and quality leads who need to keep across regulatory and legislative requirements without drowning in documentation. One subscription — always current, always practical.</p>
-      <p style="font-size:0.85rem; color:var(--sky); font-style:italic;">Coming soon — watch this space.</p>
-      <p style="font-size:0.85rem; color:var(--text-mid); margin-bottom:0;">Register your interest and we'll notify you when it launches.</p>
-      <div class="interest-form">
-        <input type="email" id="interestEmail" placeholder="Your email address" autocomplete="email" onkeydown="if(event.key==='Enter'){event.preventDefault();registerInterest()}" />
-        <button type="button" onclick="registerInterest()">Notify Me</button>
-      </div>
-      <p id="interestMsg" style="display:none;margin-top:0.8rem;font-size:0.82rem;"></p>
-    </div>
-  </div>
-</section>
-
 <!-- ARTICLES & ANALYSIS -->
 <section class="articles-section fade-in" style="padding:4rem clamp(1.5rem, 5vw, 4rem); background:var(--navy-mid);">
   <div style="max-width:1100px; margin:0 auto;">
     <div class="section-label">Articles &amp; Analysis</div>
     <h2 style="margin-bottom:2rem;">Sector insights and explainers</h2>
     <ul style="list-style:none; padding:0; margin:0; display:grid; grid-template-columns:repeat(auto-fit, minmax(min(280px, 100%), 1fr)); gap:1.25rem;">
-      <li><a href="articles/ndis-banning-orders-certification-chain.html" style="display:block; padding:1.25rem; border:1px solid var(--border); border-radius:3px; text-decoration:none; color:inherit; transition:border-color 0.2s;"><span style="font-size:0.7rem; letter-spacing:0.15em; text-transform:uppercase; color:var(--sky);">Health Care</span><h3 style="font-family:'Cormorant Garamond',serif; font-weight:400; font-size:1.2rem; margin:0.5rem 0; color:var(--white);">The design flaw behind the NDIS's first auditor bans</h3><span style="font-size:0.78rem; color:var(--text-light);">14 August 2026</span></a></li>
+      <li><a href="articles/ndis-banning-orders-certification-chain.html" style="display:block; padding:1.25rem; border:1px solid var(--border); border-radius:3px; text-decoration:none; color:inherit; transition:border-color 0.2s;"><span style="font-size:0.7rem; letter-spacing:0.15em; text-transform:uppercase; color:var(--sky);">Health Care</span><h3 style="font-family:'Cormorant Garamond',serif; font-weight:400; font-size:1.2rem; margin:0.5rem 0; color:var(--white);">The design flaw behind the NDIS's first auditor bans</h3><span style="font-size:0.78rem; color:var(--text-light);">14 August 2026</span><span style="display:block; margin-top:0.6rem; font-size:0.7rem; letter-spacing:0.08em; text-transform:uppercase; color:var(--sky);">Also published in Pearls and Irritations</span></a></li>
       <li><a href="articles/ai-governance-aged-care.html" style="display:block; padding:1.25rem; border:1px solid var(--border); border-radius:3px; text-decoration:none; color:inherit; transition:border-color 0.2s;"><span style="font-size:0.7rem; letter-spacing:0.15em; text-transform:uppercase; color:var(--sky);">AI Governance</span><h3 style="font-family:'Cormorant Garamond',serif; font-weight:400; font-size:1.2rem; margin:0.5rem 0; color:var(--white);">AI Governance for Aged Care — A Provider's Practical Framework</h3><span style="font-size:0.78rem; color:var(--text-light);">26 July 2026</span></a></li>
       <li><a href="articles/asd-post-quantum-vendor-questions.html" style="display:block; padding:1.25rem; border:1px solid var(--border); border-radius:3px; text-decoration:none; color:inherit; transition:border-color 0.2s;"><span style="font-size:0.7rem; letter-spacing:0.15em; text-transform:uppercase; color:var(--sky);">Industry News</span><h3 style="font-family:'Cormorant Garamond',serif; font-weight:400; font-size:1.2rem; margin:0.5rem 0; color:var(--white);">Post-Quantum Cryptography — ASD's New Vendor Questions: What Buyers and Software Vendors Need to Know</h3><span style="font-size:0.78rem; color:var(--text-light);">24 July 2026</span></a></li>
       <li><a href="articles/liquidity-standard-targeted-review.html" style="display:block; padding:1.25rem; border:1px solid var(--border); border-radius:3px; text-decoration:none; color:inherit; transition:border-color 0.2s;"><span style="font-size:0.7rem; letter-spacing:0.15em; text-transform:uppercase; color:var(--sky);">Industry News</span><h3 style="font-family:'Cormorant Garamond',serif; font-weight:400; font-size:1.2rem; margin:0.5rem 0; color:var(--white);">Targeted Review on the New Liquidity Standard — What Category 6 Providers Need to Know</h3><span style="font-size:0.78rem; color:var(--text-light);">2 July 2026</span></a></li>
@@ -1631,6 +1586,15 @@ Find the latest cyber security advice, guidance and publications</p>
       <li><a href="articles/quality-indicator-program-manual-4.html" style="display:block; padding:1.25rem; border:1px solid var(--border); border-radius:3px; text-decoration:none; color:inherit;"><span style="font-size:0.7rem; letter-spacing:0.15em; text-transform:uppercase; color:var(--sky);">Industry News</span><h3 style="font-family:'Cormorant Garamond',serif; font-weight:400; font-size:1.2rem; margin:0.5rem 0; color:var(--white);">The Quality Indicator Program — Manual 4.0 Explained</h3><span style="font-size:0.78rem; color:var(--text-light);">22 November 2024</span></a></li>
       <li><a href="articles/data-quality-foundation-of-ai.html" style="display:block; padding:1.25rem; border:1px solid var(--border); border-radius:3px; text-decoration:none; color:inherit;"><span style="font-size:0.7rem; letter-spacing:0.15em; text-transform:uppercase; color:var(--sky);">Data Governance</span><h3 style="font-family:'Cormorant Garamond',serif; font-weight:400; font-size:1.2rem; margin:0.5rem 0; color:var(--white);">Why Data Quality Is the Foundation of Every AI Initiative</h3><span style="font-size:0.78rem; color:var(--text-light);">10 November 2024</span></a></li>
     </ul>
+
+    <!-- ALSO PUBLISHED IN (external publications) -->
+    <div style="margin-top:3rem; padding-top:2.5rem; border-top:1px solid var(--border);">
+      <div class="section-label">In The Press</div>
+      <h2 style="margin-bottom:2rem;">Also published in</h2>
+      <ul style="list-style:none; padding:0; margin:0; display:grid; grid-template-columns:repeat(auto-fill, minmax(min(280px, 100%), 1fr)); gap:1.25rem;">
+        <li><a href="https://johnmenadue.com/post/2026/08/ndis-auditor-bans-shows-a-deeper-problem-with-provider-paid-audits/" target="_blank" rel="noopener" style="display:block; padding:1.25rem; border:1px solid var(--border); border-radius:3px; text-decoration:none; color:inherit; transition:border-color 0.2s;"><span style="font-size:0.7rem; letter-spacing:0.15em; text-transform:uppercase; color:var(--sky);">Pearls and Irritations</span><h3 style="font-family:'Cormorant Garamond',serif; font-weight:400; font-size:1.2rem; margin:0.5rem 0; color:var(--white);">NDIS auditor bans shows a deeper problem with provider-paid audits</h3><span style="font-size:0.78rem; color:var(--text-light);">24 August 2026 &middot; External link &#8599;</span></a></li>
+      </ul>
+    </div>
   </div>
 </section>
 
@@ -1903,36 +1867,6 @@ function renderResources() {
       '<a href="' + r.url + '" target="_blank" rel="noopener" class="resource-link">View Resource &rarr;</a>' +
     '</div>';
   }).join('');
-}
-
-// Register interest for premium library
-function registerInterest() {
-  var email = document.getElementById('interestEmail').value.trim();
-  var msg = document.getElementById('interestMsg');
-  if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-    msg.textContent = 'Please enter a valid email address.';
-    msg.style.color = '#f87171';
-    msg.style.display = 'block';
-    return;
-  }
-  fetch(API_BASE + '/api/subscribe', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ email: email })
-  })
-  .then(function(res) {
-    if (res.ok) {
-      msg.textContent = 'Thank you — we\'ll notify you when the premium library launches.';
-      msg.style.color = 'var(--sky)';
-      msg.style.display = 'block';
-      document.getElementById('interestEmail').value = '';
-    } else { throw new Error(); }
-  })
-  .catch(function() {
-    msg.textContent = 'Something went wrong. Please try again.';
-    msg.style.color = '#f87171';
-    msg.style.display = 'block';
-  });
 }
 
 // Newsletter subscribe
