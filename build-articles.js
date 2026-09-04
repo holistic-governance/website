@@ -73,7 +73,7 @@ function renderRepublished(list) {
     const when = e.date ? `, ${formatDate(e.date)}` : '';
     return `<a href="${escapeAttr(e.url)}" target="_blank" rel="noopener">${escapeAttr(e.publication)}</a>${when}`;
   }).join(' &middot; ');
-  return `  <div class="article-republished">Also published in ${items}</div>\n`;
+  return `  <div class="article-republished">Published in ${items}</div>\n`;
 }
 
 function inlineEscape(s) {
