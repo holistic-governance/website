@@ -427,6 +427,44 @@
       <a href="app-development.html" class="btn-solid">Prototype Builds &rarr;</a>
     </section>
 
+    <!-- HG INTEL TEASER -->
+    <section id="hg-intel" style="background:var(--navy-mid);" aria-labelledby="hg-intel-heading">
+      <div class="section-label">Coming 2027</div>
+      <h2 id="hg-intel-heading">HG Intel</h2>
+      <div style="max-width:640px;">
+        <p style="color:#ffffff; font-size:0.95rem; line-height:1.8; margin:1.2rem 0 0.6rem;">We're building <strong style="color:var(--white);">HG Intel</strong> — a healthcare governance intelligence platform from Holistic Governance. First trials begin late 2026, with launch in 2027.</p>
+        <p style="color:var(--text-mid); font-size:0.9rem; line-height:1.8; margin-bottom:1.6rem;">We're keeping the details close until launch. Register your interest to be first to know — and first in line for the trials.</p>
+        <div style="display:flex; gap:0.8rem; flex-wrap:wrap; max-width:480px;">
+          <input type="email" id="hgIntelEmail" placeholder="Your email address" autocomplete="email" onkeydown="if(event.key==='Enter'){event.preventDefault();hgIntelInterest()}" style="flex:1; min-width:220px; padding:0.8rem 1rem; background:var(--navy); border:1px solid var(--border); color:var(--cream); font-size:0.85rem; border-radius:2px; font-family:'DM Sans',sans-serif; outline:none;" />
+          <button type="button" onclick="hgIntelInterest()" style="padding:0.8rem 1.5rem; background:var(--sky); color:var(--navy); font-size:0.78rem; font-weight:500; letter-spacing:0.08em; text-transform:uppercase; border:none; border-radius:2px; cursor:pointer; white-space:nowrap; font-family:'DM Sans',sans-serif;">Register Interest</button>
+        </div>
+        <p id="hgIntelMsg" style="display:none; margin-top:0.8rem; font-size:0.82rem;"></p>
+      </div>
+      <script>
+        function hgIntelInterest() {
+          var email = document.getElementById('hgIntelEmail').value.trim();
+          var msg = document.getElementById('hgIntelMsg');
+          if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+            msg.textContent = 'Please enter a valid email address.';
+            msg.style.color = '#f87171'; msg.style.display = 'block'; return;
+          }
+          fetch('https://dashboard-pkltzbmtea-ts.a.run.app/api/subscribe', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ email: email, source: 'hg-intel' })
+          }).then(function(res) {
+            if (!res.ok) throw new Error();
+            msg.textContent = "Thanks — you're on the list. We'll be in touch before trials open.";
+            msg.style.color = 'var(--sky)'; msg.style.display = 'block';
+            document.getElementById('hgIntelEmail').value = '';
+          }).catch(function() {
+            msg.textContent = 'Something went wrong. Please try again.';
+            msg.style.color = '#f87171'; msg.style.display = 'block';
+          });
+        }
+      </script>
+    </section>
+
     <!-- FAQ -->
     <section style="background:var(--navy);" aria-labelledby="at-faq-heading">
       <div class="section-label">Common Questions</div>
