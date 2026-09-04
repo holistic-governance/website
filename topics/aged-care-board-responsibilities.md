@@ -13,7 +13,7 @@ canonicalUrl: https://hg-au.com/topics/aged-care-board-responsibilities.md
 
 > The Aged Care Act 2024 attaches direct, non-delegable duties to providers AND to responsible persons (including board directors and executive decision-makers), with substantial civil penalties for serious failures that risk or cause harm. Governance under the new Act is a verb, not a document — the board's duty is discharged through what it does, what it asks, what it documents, and what it visibly cares about.
 
-## What it is
+## What are aged care boards responsible for?
 
 The Aged Care Act 2024 (commenced 1 November 2025) introduced two parallel statutory duties: a duty on the **registered provider** (section 179) and a duty on the **responsible person** (section 180). The responsible person duty attaches to individuals — board directors, trustees, committee members, the CEO, and senior executive decision-makers — and is non-delegable.
 
@@ -24,7 +24,7 @@ The Act requires three shifts every director must internalise:
 - **From oversight to due diligence** — directors carry an affirmative, non-delegable duty to take reasonable steps to ensure the provider complies.
 - **From financial focus to clinical focus** — boards must engage with clinical governance and care quality with the same rigour as finance and risk.
 
-## Who is a "Responsible Person" (section 12)
+## Who is a "Responsible Person"? (section 12)
 
 The Act's duties attach to people, not just to the entity. Knowing who is captured is the first governance task. Section 12 captures:
 
@@ -35,14 +35,14 @@ The Act's duties attach to people, not just to the entity. Knowing who is captur
 
 **Important scope distinction:** The section 180 responsible person duty applies ONLY to s 12(1)(a) and s 12(1)(b) — board members and executive decision-makers. It does NOT extend to s 12(1)(c) branch managers or the s 12(1)(d) RN.
 
-## Statutory basis
+## What is the statutory basis?
 
 - **Aged Care Act 2024 (Cth)** — Compilation No. 1, commenced 1 November 2025.
 - **Aged Care Rules 2025** (F2025L01173, registered 24 September 2025).
 - **Aged Care Quality and Safety Commission Act 2018 (Cth)** — preserved with amendments; underpins the Commission's investigation and enforcement powers.
 - **Crimes Act 1914 (Cth) s 4AA** — penalty unit value mechanism.
 
-## The Provider Duty (section 179)
+## What is the Provider Duty? (section 179)
 
 > "A registered provider must ensure, so far as is reasonably practicable, that the conduct of the provider does not cause adverse effects to the health and safety of individuals to whom the provider is delivering funded aged care services."
 
@@ -55,7 +55,7 @@ The Act's duties attach to people, not just to the entity. Knowing who is captur
 
 Section 179(2) directs that "reasonably practicable" is judged against five factors: likelihood, harm, knowledge, available controls, and the Statement of Rights.
 
-## The Responsible Person Duty (section 180)
+## What is the Responsible Person Duty? (section 180)
 
 Section 180(1): each member of the governing body and each executive decision-maker must exercise **due diligence** to ensure the provider complies with the provider duty. The duty cannot be transferred (s 181). Due diligence includes five non-delegable limbs:
 
@@ -104,7 +104,7 @@ The Act puts older people at the centre. Providers must take all reasonable and 
 
 The Statement of Rights is **not directly enforceable in court** (s 24(3)) — but providers must demonstrate they have taken all reasonable and proportionate steps to act compatibly with these rights. See `/topics/rights-based-care.md` for the full rights framework.
 
-## Governing body composition (section 157)
+## What are the governing body composition requirements? (section 157)
 
 Structural requirements apply to higher-scrutiny provider categories.
 
@@ -115,7 +115,7 @@ Structural requirements apply to higher-scrutiny provider categories.
 - **Annual suitability assessment (s 172, Rule 172-5):** applies to ALL provider categories.
 - **Notify changes (s 169):** the Commission must be notified of changes to responsible persons within 14 days.
 
-## Three governance pillars the board must build and oversee
+## What are the three governance pillars the board must build and oversee?
 
 | Pillar | Requirement | Applies to |
 |---|---|---|
@@ -145,7 +145,7 @@ A separate compliance regime — three standards consolidating the previous four
 
 **Expanded scope** — the F&P Management Standard now applies to home care, personal care and nursing/transition providers (Cat 4 and 5) for the first time. The provider's annual statement of compliance covers both care quality AND financial standards — directors sign one document accepting accountability for both. See `/topics/financial-and-prudential-standards.md` for the full prudential framework.
 
-## Obligations by provider category
+## What are the obligations by provider category?
 
 The Aged Care Rules 2025 prescribe six registration categories. Different governance obligations attach to different categories — verify your provider's scope before relying on any single duty.
 
@@ -167,7 +167,7 @@ The Aged Care Rules 2025 prescribe six registration categories. Different govern
 
 `✓*` = subject to s 157(3) small-provider carve-out (governing body < 5 AND fewer than 40 individuals) and ACCO / registered co-operative exemptions under Rule 157-5(2). F&P Standards exclude government and local-government authority providers. Citations verified against Aged Care Act 2024 Compilation No. 1 (1 Nov 2025) and Aged Care Rules 2025 (F2025L01173). Verify against the current consolidated text on the Federal Register of Legislation before external use.
 
-## Reporting and notification obligations
+## What are the reporting and notification obligations?
 
 | Obligation | Frequency / trigger | Reported to | Board responsibility |
 |---|---|---|---|
@@ -181,7 +181,7 @@ The Aged Care Rules 2025 prescribe six registration categories. Different govern
 
 The whistleblower system also requires monthly communication and at-least-annual training (Rule 165-50) — board responsibility to assure system effectiveness.
 
-## Penalties and enforcement
+## What are the penalties and how are the duties enforced?
 
 Civil penalties (per contravention) under sections 179 and 180:
 
@@ -235,7 +235,7 @@ If you cannot answer these from the boardroom, the answers need to be on a futur
 5. When did we last hear directly from people receiving our care — and which of the changes we made are recorded in our minutes?
 6. If a regulator asked tomorrow, could I produce dated examples of my own s 180 due diligence — not just board reports I received?
 
-## Common board-level gaps
+## What are common board-level gaps?
 
 - **Section 12 mapping is incomplete** — providers have not formally identified every responsible person under each limb of s 12, leading to suitability assessment gaps and notification failures.
 - **Due diligence is undocumented** — directors are doing the work but cannot evidence it; the five s 180(2) limbs are not visible in board papers or director records.

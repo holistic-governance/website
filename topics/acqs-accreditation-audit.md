@@ -13,7 +13,7 @@ canonicalUrl: https://hg-au.com/topics/acqs-accreditation-audit.md
 
 > An ACQS accreditation audit is an independent assessment of an aged care provider's performance against the Strengthened Aged Care Quality Standards, conducted by quality assessors authorised by the Aged Care Quality and Safety Commission (ACQS Commission). Accreditation status is a precondition for receiving Commonwealth aged care subsidies.
 
-## What it is
+## What is an ACQS accreditation audit?
 
 An accreditation audit is the formal assessment process the Commission uses to determine whether a residential aged care provider should be granted, renewed, or have varied its accreditation. The audit assesses compliance with the Strengthened Aged Care Quality Standards using outcomes-based judgement, supported by document review, observation, and interviews with older people, families, representatives, workers, and management.
 
@@ -26,19 +26,19 @@ The Commission also conducts other forms of assessment activity beyond formal ac
 
 All assessment activity feeds into the Commission's risk-based regulatory model and is published on the Commission's website where required.
 
-## Statutory basis
+## What is the statutory basis?
 
 - **Aged Care Act 2024 (Cth)** — establishes registration and the obligation to comply with the Strengthened Standards.
 - **Aged Care Quality and Safety Commission Act 2018 (Cth)** — empowers the Commission to audit, assess, and enforce.
 - **Aged Care Rules 2025** and Commission policies — operational detail of the audit methodology.
 
-## Who it applies to
+## Who does audits apply to?
 
 - All Commonwealth-subsidised residential aged care providers (formal accreditation audits).
 - Support at Home and other home-based service providers (performance assessments).
 - Multipurpose services, transition care, and the National Aboriginal and Torres Strait Islander Flexible Aged Care Program (audit and performance assessment as applicable).
 
-## The accreditation cycle (residential)
+## How does the accreditation cycle work (residential)?
 
 A simplified view of the typical cycle:
 
@@ -53,7 +53,7 @@ A simplified view of the typical cycle:
 
 Re-accreditation is typically every three years for residential services, subject to risk-based variation.
 
-## Audit methodology under the Strengthened Standards
+## How do audits run under the Strengthened Standards?
 
 The Commission's audit methodology under the Strengthened Standards is outcomes-based. Assessors look for evidence that the intended outcome for the older person is being achieved, not only that processes and policies exist. The methodology relies on triangulation across three evidence sources:
 
@@ -63,7 +63,7 @@ The Commission's audit methodology under the Strengthened Standards is outcomes-
 
 Judgements are recorded for each Standard. Non-compliance is risk-rated and may trigger compliance action.
 
-## Audit outcomes and consequences
+## What are the possible audit outcomes and consequences?
 
 - **Accreditation granted/renewed** — for a period determined by the Commission, typically up to three years.
 - **Accreditation granted with conditions** — specific actions required by defined timeframes.
@@ -72,7 +72,7 @@ Judgements are recorded for each Standard. Non-compliance is risk-rated and may 
 - **Civil penalty proceedings** — under the Act, for breaches of statutory duties.
 - **Public performance report** — published on the Commission's website.
 
-## Common provider gaps in audit preparation
+## What are common provider gaps in audit preparation?
 
 - **Documentation-led preparation** — heavy investment in policies and binders, light investment in evidence of outcomes for older people.
 - **Workforce briefings are surface-level** — workers can describe "the new Standards" but not how each Standard translates into their daily practice.

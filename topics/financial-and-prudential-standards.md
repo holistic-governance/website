@@ -13,7 +13,7 @@ canonicalUrl: https://hg-au.com/topics/financial-and-prudential-standards.md
 
 > The financial and prudential framework in Australian aged care exists to protect older people's money (especially Refundable Accommodation Deposits and other refundable amounts), to ensure providers are financially viable, and to give the regulator and the public visibility over provider financial performance. The framework is anchored in the Aged Care Act 2024 and operationalised through prudential standards, financial reporting, and oversight by the Department of Health, Disability and Ageing and the Aged Care Quality and Safety Commission.
 
-## What it is
+## What is the Financial and Prudential Standards?
 
 The financial and prudential framework is a layered regime covering:
 
@@ -24,14 +24,14 @@ The financial and prudential framework is a layered regime covering:
 
 The framework's purpose is twofold: protect consumer money and protect the integrity of the aged care system from provider failure that disrupts care for older people.
 
-## Statutory basis
+## What is the statutory basis?
 
 - **Aged Care Act 2024 (Cth)** — provider registration, suitability, prudential obligations, financial reporting, and Commissioner oversight.
 - **Aged Care Rules 2025** and prudential standards instruments made under the Act — operational detail.
 - **Aged Care (Living Longer Living Better) Act 2013** and the prior **Aged Care Act 1997** — earlier framework, much of which has been carried into and modernised under the new Act.
 - **Accommodation Payment Security Act 2006** — government guarantee for refundable accommodation amounts in the event of provider default.
 
-## Who it applies to
+## Who does the Standards apply to?
 
 - All registered providers that hold or seek to hold refundable accommodation amounts from older people.
 - Residential aged care providers (financial reporting under ACFR/QFR/GPFR).
@@ -39,7 +39,7 @@ The framework's purpose is twofold: protect consumer money and protect the integ
 - Responsible persons of registered providers (suitability and statutory duty).
 - Approved providers transitioning under the new Act.
 
-## Key prudential obligations
+## What are the key prudential obligations?
 
 The detailed prudential standards are set out in instruments under the Act, but the key obligation categories include:
 
@@ -49,7 +49,7 @@ The detailed prudential standards are set out in instruments under the Act, but 
 - **Disclosure** — disclosure to older people and the regulator about refundable amounts, fees, accommodation pricing, and financial position.
 - **Refundable amount management** — accurate accounting, segregation, refund obligations, and protection against misuse.
 
-## Key reporting obligations
+## What are the key reporting obligations?
 
 - **Aged Care Financial Report (ACFR)** — annual statutory return providing detailed financial information about the provider's aged care operations. Submitted to the Department.
 - **Quarterly Financial Report (QFR)** — for residential providers, a quarterly return covering income, expenditure, care minutes, food spend, and other operational financial measures. Several elements feed into Star Ratings.
@@ -57,11 +57,11 @@ The detailed prudential standards are set out in instruments under the Act, but 
 - **Annual operational and prudential disclosures** under the Act.
 - **Auditor obligations** — independent audit of relevant financial information, with auditor independence requirements.
 
-## Government guarantee
+## How does the government guarantee work?
 
 Refundable accommodation amounts paid by older people to residential providers are guaranteed by the Commonwealth in the event of provider default. If a provider becomes insolvent or otherwise unable to refund, the Commonwealth refunds the amounts to the older person (or estate) and pursues recovery from the failed provider. This guarantee is a backstop, not a substitute for prudential compliance.
 
-## Implementation under the Aged Care Act 2024
+## How are the Standards implemented under the Aged Care Act 2024?
 
 The Aged Care Act 2024 carries forward and modernises the prudential framework. Key features under the new framework include:
 
@@ -72,7 +72,7 @@ The Aged Care Act 2024 carries forward and modernises the prudential framework. 
 
 The detailed prudential standards under the new Act are set out in instruments made under the Act and are administered by the Department of Health, Disability and Ageing and the Aged Care Quality and Safety Commission. Providers should refer to current Departmental and Commission guidance for the operative standards in any given reporting period.
 
-## Common provider gaps
+## What are common provider gaps?
 
 - **Board does not own the prudential agenda** — refundable amounts, liquidity, and investment policy are treated as Finance/CFO matters without board-level oversight or risk appetite.
 - **Liquidity reporting is reactive** — providers run close to liquidity floors without forward-looking forecasting and stress testing.

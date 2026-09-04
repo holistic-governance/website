@@ -6,6 +6,7 @@ category: Health Care
 featured: true
 summary: The Aged Care Quality and Safety Commission has introduced strengthened quality standards that represent a significant shift in how aged care providers are assessed and held accountable. We break down what these changes mean for your organisation.
 metaDescription: What the Strengthened Aged Care Quality Standards change for providers — the shift to outcomes-based assessment and how to prepare for it.
+topics: strengthened-aged-care-quality-standards, aged-care-act-2024
 ---
 
 The Aged Care Quality and Safety Commission has introduced strengthened quality standards that represent a significant shift in how aged care providers are assessed and held accountable. We break down what these changes mean for your organisation.

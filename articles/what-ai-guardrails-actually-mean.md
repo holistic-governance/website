@@ -7,6 +7,7 @@ category: AI Governance
 featured: false
 metaDescription: What "AI guardrails" actually means — the two meanings that survive scrutiny, documented failures, and a five-question test for small and medium organisations.
 summary: "Guardrails" has become the most load-bearing word in AI — used by vendors, regulators and boards to mean anything from a sentence in a prompt to a legal obligation. We separate the two meanings that survive scrutiny from the marketing-washed middle, walk through documented cases where guardrails existed on paper and failed anyway, and set out what tangible, affordable guardrails actually look like for a small or medium organisation.
+topics: ai-governance-aged-care
 ---
 
 A guardrail on a highway is a physical object. You can point at it, you can test what force it withstands, and you know exactly what it does when a car hits it. That is why the metaphor is so persuasive — and why it is doing so much unearned work in AI right now.

@@ -13,7 +13,7 @@ canonicalUrl: https://hg-au.com/topics/ai-governance-aged-care.md
 
 > AI governance is the framework of policies, accountabilities and controls through which an aged care provider decides which AI tools may be used, on what data, under whose oversight, and with what monitoring. Australia has no AI-specific statute for aged care; AI use is governed through existing obligations — principally the Aged Care Act 2024, the Strengthened Aged Care Quality Standards, the Privacy Act 1988, and (for some clinical software) therapeutic goods regulation — supplemented by voluntary frameworks such as Australia's AI Ethics Principles and ISO/IEC 42001.
 
-## What it is
+## What is AI governance for aged care providers?
 
 AI governance in an aged care context covers:
 
@@ -26,7 +26,7 @@ AI governance in an aged care context covers:
 7. **Data protection** — privacy and security controls applied specifically to AI pathways, including what personal information may enter which tools and any offshore disclosure.
 8. **Monitoring and board reporting** — cyclical review of the inventory, incident tracking, and a regular report to the governing body covering what is in use, at what risk tier, what changed and what went wrong.
 
-## Regulatory basis
+## What is the regulatory basis?
 
 There is no dedicated AI statute for Australian aged care. Obligations arise from existing law:
 
@@ -41,7 +41,7 @@ Voluntary frameworks commonly used to structure provider AI governance:
 - **ISO/IEC 42001** — international AI management system standard; scalable structure for inventory, risk treatment and continual improvement.
 - **National Model Clinical Governance Framework** (ACSQHC) — the anchor for clinical AI: clinical AI governance is treated as an extension of the provider's existing clinical governance framework, not a separate discipline.
 
-## Common AI uses in aged care
+## What are common AI uses in aged care?
 
 - Documentation assistants and AI scribes drafting progress notes, summaries and correspondence.
 - Rostering and workforce optimisation features inside scheduling systems.
@@ -51,7 +51,7 @@ Voluntary frameworks commonly used to structure provider AI governance:
 
 Unsanctioned use of public AI tools is a recurrent risk area: where no approved option and no acceptable-use rule exists, care information can be entered into tools the organisation has never assessed.
 
-## Common provider gaps
+## What are common provider gaps?
 
 - No AI inventory — the governing body cannot say what AI is in use, so due diligence under section 180 has no factual basis.
 - Uniform treatment of all AI uses — either blanket prohibition (driving shadow use) or blanket permission (ignoring risk tiers).

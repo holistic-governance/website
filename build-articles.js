@@ -167,6 +167,9 @@ function buildAll(articlesDir) {
 
     const republished = parseAlsoPublishedIn(frontmatter.alsoPublishedIn);
     if (republished.length) meta.alsoPublishedIn = republished;
+    if (frontmatter.topics) {
+      meta.topics = frontmatter.topics.split(',').map(s => s.trim()).filter(Boolean);
+    }
 
     articles.push(meta);
 
@@ -272,6 +275,43 @@ function formatDate(dateStr) {
   return d.toLocaleDateString('en-AU', { year: 'numeric', month: 'long', day: 'numeric' });
 }
 
+// Resolve frontmatter `topics: slug-a, slug-b` to Thing entities pointing at the
+// HG Reference dossiers in topics/, using each dossier's own frontmatter title.
+// Feeds Article JSON-LD `about` — ties articles to the machine-readable reference layer.
+function loadTopicRefs(slugs) {
+  const refs = [];
+  for (const slug of slugs || []) {
+    const file = path.join(__dirname, 'topics', `${slug}.md`);
+    if (!fs.existsSync(file)) {
+      console.warn(`  topics: no dossier found for "${slug}" — skipped`);
+      continue;
+    }
+    const head = fs.readFileSync(file, 'utf-8').slice(0, 2000);
+    if (/^lastReviewed:\s*DRAFT/m.test(head)) {
+      console.warn(`  topics: dossier "${slug}" is still DRAFT — skipped`);
+      continue;
+    }
+    const title = (head.match(/^title:\s*(.+)$/m) || [])[1];
+    refs.push({ '@type': 'Thing', name: (title || slug).trim(), url: `${SITE_URL}/topics/${slug}.md` });
+  }
+  return refs;
+}
+
+// Extract external links from the article's "## Sources" section for JSON-LD `citation`.
+function extractCitations(body) {
+  const m = body.match(/^##\s+Sources?\s*$([\s\S]*?)(?=^#{1,2}\s|(?![\s\S]))/m);
+  if (!m) return [];
+  const seen = new Set();
+  const citations = [];
+  for (const link of m[1].matchAll(/\[([^\]]+)\]\((https?:\/\/[^)\s]+)\)/g)) {
+    const [, name, url] = link;
+    if (url.startsWith(SITE_URL) || seen.has(url)) continue;
+    seen.add(url);
+    citations.push({ '@type': 'CreativeWork', name: name.trim(), url });
+  }
+  return citations;
+}
+
 function renderArticlePage(meta, body, takeaways = []) {
   const bodyHtml = mdToHtml(body);
   const canonical = `${SITE_URL}/articles/${meta.slug}.html`;
@@ -317,6 +357,10 @@ function renderArticlePage(meta, body, takeaways = []) {
   if (meta.alsoPublishedIn && meta.alsoPublishedIn.length) {
     jsonLd.sameAs = meta.alsoPublishedIn.map(e => e.url);
   }
+  const topicRefs = loadTopicRefs(meta.topics);
+  if (topicRefs.length) jsonLd.about = topicRefs;
+  const citations = extractCitations(body);
+  if (citations.length) jsonLd.citation = citations;
 
   const webPage = {
     '@context': 'https://schema.org',

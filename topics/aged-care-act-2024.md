@@ -13,7 +13,7 @@ canonicalUrl: https://hg-au.com/topics/aged-care-act-2024.md
 
 > The Aged Care Act 2024 is the new principal Commonwealth statute governing aged care in Australia. It replaces the Aged Care Act 1997, consolidates the regulatory framework into a single rights-based regime, and operationalises most of the major reforms recommended by the Royal Commission into Aged Care Quality and Safety.
 
-## What it is
+## What is the Aged Care Act 2024?
 
 The Aged Care Act 2024 (Cth) is the primary piece of legislation regulating Commonwealth-subsidised aged care services in Australia. The Act establishes a rights-based framework, embeds new provider obligations, modernises the regulatory model, and provides the legal foundation for the Strengthened Aged Care Quality Standards, the Statement of Rights, the Support at Home program, and an expanded suite of compliance and enforcement powers held by the Aged Care Quality and Safety Commission.
 
@@ -21,14 +21,14 @@ The Act is the legislative response to the final report of the Royal Commission 
 
 The Act sits on top of a layered framework of subordinate legislation (Rules, regulations, and instruments made under the Act), the Strengthened Aged Care Quality Standards, the Statement of Rights, and program-specific frameworks for Support at Home, residential aged care, and short-term restorative care.
 
-## Statutory basis
+## What is the statutory basis?
 
 - **Aged Care Act 2024 (Cth)** — the principal Act.
 - **Aged Care Rules 2025** and associated legislative instruments — operational detail.
 - **Aged Care Quality and Safety Commission Act 2018 (Cth)** — preserved with amendments to align with the new framework, establishing the regulator.
 - **Royal Commission into Aged Care Quality and Safety final report** (March 2021) — policy basis for the reforms.
 
-## Who it applies to
+## Who does the Act apply to?
 
 - Approved providers of residential aged care.
 - Approved providers of Support at Home (which from 1 November 2025 consolidates Home Care Packages and Short-Term Restorative Care into a single home-based program).
@@ -37,7 +37,7 @@ The Act sits on top of a layered framework of subordinate legislation (Rules, re
 - Governing bodies of approved providers.
 - Specialist aged care services (transition care, multipurpose services, National Aboriginal and Torres Strait Islander Flexible Aged Care Program).
 
-## Key reforms introduced by the Act
+## What are the key reforms introduced by the Act?
 
 ### Rights-based framework
 A statutory Statement of Rights for older people receiving aged care, with corresponding provider duties and Commissioner powers to enforce. The Statement of Rights replaces the earlier Charter of Aged Care Rights and is legally enforceable rather than aspirational.
@@ -72,7 +72,7 @@ Statutory protections for aged care workers and others who report breaches of th
 ### Prudential and financial transparency
 An expanded prudential framework for protection of Refundable Accommodation Deposits and other refundable amounts, enhanced financial reporting, and public disclosure obligations.
 
-## Implementation timeline
+## What is the implementation timeline?
 
 - **September 2024** — Aged Care Bill 2024 introduced into Parliament.
 - **November 2024** — Bill passed.
@@ -80,7 +80,7 @@ An expanded prudential framework for protection of Refundable Accommodation Depo
 - **2025–2027** — Staged commencement of specific elements (e.g., aspects of the worker registration scheme, certain prudential provisions, full Support at Home transition for CHSP).
 - **Transitional arrangements** — providers approved under the 1997 Act are deemed registered under the new Act subject to compliance with applicable transitional rules.
 
-## Common provider gaps
+## What are common provider gaps?
 
 - **Governance frameworks not updated** — board charters, terms of reference, and policy suites still reference the 1997 Act, the 2019 Quality Standards, and the Charter of Aged Care Rights.
 - **Statutory duty of care not embedded** — directors and responsible persons unaware of personal accountability under the new duty.

@@ -13,7 +13,7 @@ canonicalUrl: https://hg-au.com/topics/rights-based-care.md
 
 > Rights-based care is the foundational philosophy and statutory framework underpinning the Aged Care Act 2024. The Act elevates the rights of older people from an aspirational charter to a legally enforceable Statement of Rights, with corresponding provider duties and Commissioner powers.
 
-## What it is
+## What is rights-based care?
 
 Rights-based care in the Australian aged care context means that the design, delivery, and oversight of aged care services start from the rights of the older person, not from the operational convenience of the provider. The Aged Care Act 2024 codifies this approach through a statutory Statement of Rights and a Statement of Principles.
 
@@ -21,7 +21,7 @@ Under the previous framework, the Charter of Aged Care Rights existed but was la
 
 Rights-based care is also embedded in the Strengthened Aged Care Quality Standards, most explicitly in Standard 1 (The Person) and Standard 2 (The Organisation), and runs through expectations about partnering with older people, restrictive practices, complaints, communication, and dignity of risk.
 
-## The Statement of Rights
+## What is the Statement of Rights?
 
 The Statement of Rights typically covers (subject to the final form of the rules and subordinate instruments):
 
@@ -38,24 +38,24 @@ The Statement of Rights typically covers (subject to the final form of the rules
 
 The final, authoritative text is in the Aged Care Act 2024 and its subordinate rules.
 
-## Statement of Principles
+## What is the Statement of Principles?
 
 The Statement of Principles applies to the regulator, providers, workers, and the system as a whole. Principles typically include person-centredness, accountability, equity, transparency, partnership, sustainability, and a focus on outcomes for older people. The Principles guide regulator decision-making, including how the Commissioner exercises discretion under the Act.
 
-## Statutory basis
+## What is the statutory basis?
 
 - **Aged Care Act 2024 (Cth)** — establishes the Statement of Rights, the Statement of Principles, and the statutory duties of providers and responsible persons.
 - **Aged Care Rules 2025** and associated instruments — operational detail.
 - **Strengthened Aged Care Quality Standards** — operationalise rights through audit and assessment, especially Standards 1 and 2.
 
-## Who it applies to
+## Who does it apply to?
 
 - All registered providers of Commonwealth-subsidised aged care.
 - Responsible persons (directors and senior executives) of registered providers.
 - Aged care workers in registered roles.
 - The Aged Care Quality and Safety Commission and other regulators exercising powers under the Act.
 
-## Key provider obligations
+## What are the key provider obligations?
 
 - **Uphold rights in service design** — services, environments, and workflows are designed to enable older people to exercise their rights.
 - **Inform older people of their rights** — provide accessible information about rights and how to exercise them, including access to advocacy.
@@ -67,7 +67,7 @@ The Statement of Principles applies to the regulator, providers, workers, and th
 - **Recognise diversity** — culturally safe, trauma-informed, and inclusive care for Aboriginal and Torres Strait Islander people, culturally and linguistically diverse communities, LGBTIQ+ older people, people experiencing homelessness, care leavers, and others.
 - **Statutory duty of care** — exercise reasonable care and diligence in providing care and services, with personal accountability for responsible persons.
 
-## How rights are enforced
+## How are rights enforced?
 
 - **Provider duties** — corresponding duties on providers that, if breached, can trigger compliance notices, civil penalties, sanctions, banning orders, or conditions on registration.
 - **Statement of Principles** — guides Commission decision-making and provider conduct.
@@ -75,7 +75,7 @@ The Statement of Principles applies to the regulator, providers, workers, and th
 - **Whistleblower protections** — statutory protections for workers and others who report breaches.
 - **Statutory duty of care** — directors and responsible persons accountable.
 
-## Common provider gaps
+## What are common provider gaps?
 
 - **Rights training is a tick-box** — induction covers the Charter or the Statement but does not equip workers to recognise rights tensions in daily practice (e.g., dignity of risk vs. clinical risk management).
 - **Supported decision-making not embedded** — provider defaults to substitute decision-making (family, EPOA) rather than maximising the older person's own decision-making.

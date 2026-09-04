@@ -13,7 +13,7 @@ canonicalUrl: https://hg-au.com/topics/sirs.md
 
 > The Serious Incident Response Scheme (SIRS) is the mandatory framework for reporting, managing, and learning from serious incidents in Australian aged care. It applies to residential aged care (since 1 April 2021) and home-based services including Support at Home (since 1 December 2022). SIRS is administered by the Aged Care Quality and Safety Commission.
 
-## What it is
+## What is the Serious Incident Response Scheme (SIRS)?
 
 SIRS requires registered aged care providers to:
 
@@ -24,19 +24,19 @@ SIRS requires registered aged care providers to:
 
 SIRS is not just a reporting regime; it is an incident management and learning system that the Commission expects to be operating continuously, not only when a reportable incident occurs.
 
-## Statutory basis
+## What is the statutory basis?
 
 - **Aged Care Act 2024 (Cth)** — incident management and reporting obligations.
 - **Aged Care Quality and Safety Commission Act 2018 (Cth)** — Commission's powers to receive, investigate, and act on SIRS reports.
 - **Aged Care Rules 2025** and Commission instruments — operational detail of incident categories, priorities, timeframes, and incident management system requirements.
 
-## Who it applies to
+## Who does SIRS apply to?
 
 - Residential aged care providers — since 1 April 2021.
 - Home services providers (Home Care Packages and now Support at Home) — since 1 December 2022.
 - Multipurpose services and specialist programs as applicable under the Rules.
 
-## Reportable incident categories
+## What are the reportable incident categories?
 
 SIRS defines eight categories of reportable incident:
 
@@ -51,7 +51,7 @@ SIRS defines eight categories of reportable incident:
 
 The Commission publishes detailed guidance on how each category is defined and what evidence the Commission considers in assessing reports.
 
-## Priority and timeframes
+## What are the priority levels and reporting timeframes?
 
 SIRS reports are categorised as **Priority 1** or **Priority 2**:
 
@@ -60,7 +60,7 @@ SIRS reports are categorised as **Priority 1** or **Priority 2**:
 
 Some categories — notably unexpected death, sexual assault, and certain restrictive practices situations — have specific reporting expectations regardless of priority.
 
-## Incident management system obligations
+## What are the incident management system obligations?
 
 Providers must operate an incident management system that meets the requirements set out in the Rules and Commission guidance. The system must support:
 
@@ -86,7 +86,7 @@ SIRS sits inside the broader framework of the Strengthened Aged Care Quality Sta
 
 The Commission assesses incident management performance during audits and uses SIRS data as a regulatory intelligence input.
 
-## Common provider gaps
+## What are common provider gaps?
 
 - **Inconsistent identification** — workers do not consistently recognise or escalate incidents that meet a reportable category, especially psychological abuse, neglect, and inappropriate restrictive practices.
 - **Priority assessment errors** — under-rating Priority 1 as Priority 2, missing the 24-hour deadline.

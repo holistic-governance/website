@@ -13,7 +13,7 @@ canonicalUrl: https://hg-au.com/topics/quality-indicator-program.md
 
 > The National Aged Care Mandatory Quality Indicator Program (QI Program) is the mandatory data collection and reporting program for Commonwealth-subsidised residential aged care providers, with expansion underway to Support at Home. Providers must collect, validate, and report a defined set of quality indicators on a quarterly basis. QI data feeds into Star Ratings, Departmental performance monitoring, and the Aged Care Quality and Safety Commission's risk-based regulation.
 
-## What it is
+## What is the Quality Indicator Program?
 
 The QI Program is operationalised through the *National Aged Care Mandatory Quality Indicator Program Manual* (currently Manual 4.0). The Manual defines:
 
@@ -24,18 +24,18 @@ The QI Program is operationalised through the *National Aged Care Mandatory Qual
 
 The intent of the QI Program is twofold: drive measurable improvement in outcomes that matter to older people, and provide the public and regulator with comparable, transparent performance information.
 
-## Statutory basis
+## What is the statutory basis?
 
 - **Aged Care Act 2024 (Cth)** — registration obligations include compliance with the QI Program for in-scope providers.
 - **Aged Care Rules 2025** and Departmental instruments — mandate the collection and submission of QI data.
 - **National Aged Care Mandatory Quality Indicator Program Manual** (current version 4.0) — operational specification.
 
-## Who it applies to
+## Who does the QI Program apply to?
 
 - All Commonwealth-subsidised residential aged care providers.
 - Expansion to Support at Home and other home-based services is being progressively rolled out under the new Act and Rules.
 
-## Indicators (Manual 4.0)
+## What are the quality indicators (Manual 4.0)?
 
 The indicator set under Manual 4.0 covers the domains of clinical care, function, dignity, and consumer voice. The exact indicator list, definitions, and inclusion/exclusion criteria are set in the Manual and should always be confirmed against the current version. Indicators in scope include:
 
@@ -53,7 +53,7 @@ The indicator set under Manual 4.0 covers the domains of clinical care, function
 
 Indicator definitions, calculations, and reporting expectations are detailed in the QI Program Manual. Providers should align internal data collection precisely to the Manual's specification.
 
-## Collection and submission
+## How are quality indicators collected and submitted?
 
 - **Frequency** — quarterly.
 - **Submission** — via the Government Provider Portal (formerly known as the My Aged Care provider portal) on a defined quarterly schedule.
@@ -62,14 +62,14 @@ Indicator definitions, calculations, and reporting expectations are detailed in 
 - **Workforce data** — sourced from payroll and roster data, defined in the Manual.
 - **Consumer experience and quality of life** — collected using prescribed instruments, on a prescribed cadence.
 
-## Publication and use
+## How are quality indicator results published and used?
 
 - **Star Ratings** — QI data is one of the four Star Rating sub-components on My Aged Care, alongside Compliance, Staffing (care minutes), and Resident Experience.
 - **Departmental monitoring** — QI trends inform Departmental performance monitoring and policy review.
 - **Commissioner risk-based regulation** — the Aged Care Quality and Safety Commission uses QI data alongside compliance history, incidents, complaints, and other intelligence in its risk-based regulatory model.
 - **Provider continuous improvement** — providers are expected to use their QI data to identify improvement priorities and act on them, rather than treating QI submission as a compliance ritual.
 
-## Common provider gaps
+## What are common provider gaps?
 
 - **Data quality variance** — internal assessments and the QI definitions are not aligned; quarterly submissions show variance that can trigger Department queries.
 - **QI as compliance, not improvement** — data is submitted but not used to drive improvement priorities, action plans, or board-level oversight.

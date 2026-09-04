@@ -13,7 +13,7 @@ canonicalUrl: https://hg-au.com/topics/strengthened-aged-care-quality-standards.
 
 > The Strengthened Aged Care Quality Standards are the seven outcomes-based standards that all government-subsidised aged care providers in Australia must meet. They commenced on 1 November 2025 under the Aged Care Act 2024, replacing the eight 2019 Quality Standards.
 
-## What it is
+## What is the Strengthened Aged Care Quality Standards?
 
 The Strengthened Aged Care Quality Standards are a regulator-set framework of seven standards that define the minimum acceptable quality and safety of aged care service delivery in Australia. The Standards are operationalised through the Aged Care Act 2024 and audited by the Aged Care Quality and Safety Commission (the Commission).
 
@@ -21,7 +21,7 @@ The structure of the Standards is outcomes-based: each standard sets out the out
 
 The Strengthened Standards replace the previous eight Aged Care Quality Standards (2019). The shift reflects Royal Commission recommendations about person-centred care, governance accountability, clinical safety, and the dignity of older people.
 
-## The seven Strengthened Standards
+## What are the seven Strengthened Standards?
 
 | # | Standard | Focus | Applies to |
 |---|---|---|---|
@@ -35,13 +35,13 @@ The Strengthened Standards replace the previous eight Aged Care Quality Standard
 
 The exact scope of application to specific service categories is set out in the Aged Care Rules 2025 and Commission guidance.
 
-## Statutory basis
+## What is the statutory basis?
 
 - **Aged Care Act 2024 (Cth)** — empowers the Minister to determine the Standards and obliges registered providers to comply.
 - **Quality Standards** instruments made under the Act.
 - **Aged Care Quality and Safety Commission Act 2018 (Cth)** — empowers the Commission to audit and enforce compliance.
 
-## Who it applies to
+## Who does the Standards apply to?
 
 - All providers of Commonwealth-subsidised aged care, scoped by service category:
   - Residential aged care providers — all seven Standards.
@@ -49,7 +49,7 @@ The exact scope of application to specific service categories is set out in the 
   - Specialist programs (multipurpose services, transition care, National Aboriginal and Torres Strait Islander Flexible Aged Care Program) — applicable subset.
 - Sub-contracted providers and brokered service partners — through the registered provider's accountability chain.
 
-## Key obligations
+## What are the key obligations?
 
 - **Outcomes evidence** — providers must demonstrate the intended outcome for older people is achieved, not just that a process exists.
 - **Partnering with older people** — meaningful engagement with older people and their representatives in design, delivery, and review of services.
@@ -60,7 +60,7 @@ The exact scope of application to specific service categories is set out in the 
 - **Restrictive practices** — restrictive practices used only as a last resort, with informed consent and authorisation, and minimised over time.
 - **Food and nutrition** — choice, dignity, and nutritional adequacy for residential care residents.
 
-## Audit and assessment methodology
+## How are providers audited and assessed?
 
 The Commission audits providers using:
 - Document review.
@@ -70,14 +70,14 @@ The Commission audits providers using:
 
 Assessment outcomes for each Standard are recorded as compliant or non-compliant, with non-compliance risk-rated. Public performance reports are published on the Commission's website. Significant non-compliance can trigger compliance notices, sanctions, conditions on registration, or revocation.
 
-## Implementation timeline
+## What is the implementation timeline?
 
 - **2023** — draft Strengthened Standards released for consultation.
 - **2024** — final Standards published; provider preparation period.
 - **1 November 2025** — Strengthened Standards commenced alongside the Aged Care Act 2024.
 - **2025–2026** — first cycle of audits and assessment contacts under the new methodology.
 
-## Common provider gaps
+## What are common provider gaps?
 
 - **Outcomes evidence is thin** — providers can demonstrate the policy and the process but not the outcome for the older person.
 - **Standard 2 (The Organisation) is underestimated** — boards have not adapted their oversight arrangements to demonstrate the level of accountability the Standard requires.

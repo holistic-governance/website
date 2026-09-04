@@ -13,7 +13,7 @@ canonicalUrl: https://hg-au.com/topics/support-at-home.md
 
 > Support at Home is the new Australian Government home-based aged care program established under the Aged Care Act 2024. It commenced on 1 November 2025, consolidating the Home Care Packages program and Short-Term Restorative Care into a single, classification-based program with capped service prices, separated service streams, and a clearer distinction between clinical care, independence support, and everyday living. The Commonwealth Home Support Programme (CHSP) is scheduled to transition into Support at Home in a later stage.
 
-## What it is
+## What is Support at Home?
 
 Support at Home is the single national program through which the Australian Government subsidises home-based aged care. It replaces the Home Care Packages program (HCP) and the Short-Term Restorative Care program (STRC), and over time will absorb the Commonwealth Home Support Programme (CHSP).
 
@@ -25,21 +25,21 @@ The program is built around three principles:
 
 Support at Home is funded and policy-set by the Department of Health, Disability and Ageing, regulated by the Aged Care Quality and Safety Commission, and accessed by older people through the new Single Assessment System.
 
-## Statutory basis
+## What is the statutory basis?
 
 - **Aged Care Act 2024 (Cth)** — establishes the program, provider registration, participant rights, and funding framework.
 - **Aged Care Rules 2025** and Departmental instruments — operational detail including classification levels, service price caps, service-stream definitions, and contribution arrangements.
 - **Strengthened Aged Care Quality Standards** — apply to Support at Home providers (Standards 1, 2, 3, and 5 in scope, plus applicable parts of Standard 4).
 - **Aged Care Quality and Safety Commission Act 2018 (Cth)** — Commission's regulatory powers including assessment, compliance, and enforcement.
 
-## Who it applies to
+## Who does the program apply to?
 
 - Older people accessing home-based aged care services after the program's commencement.
 - Approved providers registered to deliver Support at Home services (in the relevant service categories).
 - Care managers and direct service providers (which may be the same organisation or different organisations).
 - Single Assessment System assessors performing the classification and care planning role.
 
-## Program structure
+## How is the program structured?
 
 ### Classification and budget
 Older people are assessed and assigned to a classification level that determines their ongoing quarterly budget. Higher-need classifications attract a larger budget. The funding model includes both ongoing budgets for routine care and short-term pathways for restorative and end-of-life support.
@@ -62,14 +62,14 @@ The Department publishes maximum prices for each service type. Providers may cha
 ### Care management
 Care management is a distinct, funded function that supports the participant to navigate their plan, coordinate services, and review goals. It is separated from direct service delivery in the funding and reporting model.
 
-## Implementation timeline
+## What is the implementation timeline?
 
 - **2024** — Aged Care Act 2024 passed; program design finalised through subordinate instruments.
 - **1 November 2025** — Support at Home commenced; new participants entered Support at Home, and existing Home Care Package recipients began transitioning under the program's transition rules.
 - **2025–2027** — Transitional period for existing Home Care Package participants, with rules preserving budget continuity and participant choice during the transition.
 - **2027 (planned)** — Commonwealth Home Support Programme (CHSP) integration into Support at Home (the exact commencement date is set by Departmental policy and may be adjusted; providers should monitor Departmental updates).
 
-## Common provider gaps
+## What are common provider gaps?
 
 - **Service-stream classification of activities** — providers continue to deliver services in their pre-Support at Home configuration without re-mapping every service into the new Clinical Care / Independence Support / Everyday Living streams.
 - **Care management and service delivery not separated in pricing or reporting** — legacy operating models still bundle case management with service hours, creating compliance and pricing risk.

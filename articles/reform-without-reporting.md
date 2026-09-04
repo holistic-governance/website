@@ -7,6 +7,7 @@ category: Industry News
 featured: true
 summary: Six months into the most significant aged care reform in a generation, the Aged Care Quality and Safety Commission's analytical Sector Performance Report has not been published for any period under the new Aged Care Act 2024. Five live counters on the homepage are not a public-reporting system — they are a status panel.
 metaDescription: Six months into the new Aged Care Act, the sector's analytical performance reporting is missing — the visibility gap and what it means for boards.
+topics: aged-care-act-2024, acqs-accreditation-audit
 ---
 
 Six months into the most significant aged care reform in a generation, the Aged Care Quality and Safety Commission's analytical Sector Performance Report has not been published for any period under the new Aged Care Act 2024. The Commission's homepage shows five live metrics on sector complaints, refreshed monthly, with no archive, no breakdown by program, no trends and no comparison to prior months.

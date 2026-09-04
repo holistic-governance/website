@@ -5,6 +5,7 @@ author: Naomi Alefelder
 category: Industry News
 featured: false
 summary: The National Aged Care Mandatory Quality Indicator Program Manual 4.0 introduces new indicators and reporting requirements. Here is what has changed.
+topics: quality-indicator-program
 ---
 
 The National Aged Care Mandatory Quality Indicator Program Manual 4.0 introduces new indicators and reporting requirements. Here is what has changed.

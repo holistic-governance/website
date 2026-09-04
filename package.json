@@ -5,7 +5,8 @@
   "main": "build-articles.js",
   "scripts": {
     "start": "node server.js",
-    "build": "node build-articles.js"
+    "build": "node build-articles.js && node check-llms-sync.js --warn",
+    "check-llms": "node check-llms-sync.js"
   },
   "repository": {
     "type": "git",

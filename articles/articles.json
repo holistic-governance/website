@@ -16,6 +16,9 @@
         "date": "2026-08-24",
         "url": "https://johnmenadue.com/post/2026/08/ndis-auditor-bans-shows-a-deeper-problem-with-provider-paid-audits/"
       }
+    ],
+    "topics": [
+      "acqs-accreditation-audit"
     ]
   },
   {
@@ -28,7 +31,10 @@
     "featured": false,
     "summary": "\"Guardrails\" has become the most load-bearing word in AI — used by vendors, regulators and boards to mean anything from a sentence in a prompt to a legal obligation. We separate the two meanings that survive scrutiny from the marketing-washed middle, walk through documented cases where guardrails existed on paper and failed anyway, and set out what tangible, affordable guardrails actually look like for a small or medium organisation.",
     "metaDescription": "What \"AI guardrails\" actually means — the two meanings that survive scrutiny, documented failures, and a five-question test for small and medium organisations.",
-    "ogImage": "og-image-v3.png"
+    "ogImage": "og-image-v3.png",
+    "topics": [
+      "ai-governance-aged-care"
+    ]
   },
   {
     "slug": "ai-governance-aged-care",
@@ -40,7 +46,12 @@
     "featured": false,
     "summary": "AI is already inside most aged care organisations — in scribes, rostering tools, chatbots and the features switched on inside software you already own. What providers are missing is not enthusiasm but governance. A practical framework for governing AI under the Aged Care Act 2024 and the Strengthened Quality Standards, in eight steps a provider can actually run.",
     "metaDescription": "How aged care providers govern AI under the Aged Care Act 2024 and Strengthened Quality Standards — an eight-step framework any provider can run.",
-    "ogImage": "og-image-v3.png"
+    "ogImage": "og-image-v3.png",
+    "topics": [
+      "ai-governance-aged-care",
+      "aged-care-act-2024",
+      "strengthened-aged-care-quality-standards"
+    ]
   },
   {
     "slug": "asd-post-quantum-vendor-questions",
@@ -64,7 +75,11 @@
     "featured": false,
     "summary": "From July 2026, the Aged Care Quality and Safety Commission begins a targeted review of the Liquidity Standard — one of three new Financial and Prudential Standards that took effect with the Aged Care Act 2024. We explain who is selected, what the review involves, how the Liquidity Standard fits within the wider prudential framework, and the governance questions every Category 6 board should be asking.",
     "metaDescription": "The ACQSC's targeted review of the new Liquidity Standard — what Category 6 aged care providers must do, and six board questions to prepare.",
-    "ogImage": "og-image-v3.png"
+    "ogImage": "og-image-v3.png",
+    "topics": [
+      "financial-and-prudential-standards",
+      "aged-care-act-2024"
+    ]
   },
   {
     "slug": "reform-without-reporting",
@@ -76,7 +91,11 @@
     "featured": true,
     "summary": "Six months into the most significant aged care reform in a generation, the Aged Care Quality and Safety Commission's analytical Sector Performance Report has not been published for any period under the new Aged Care Act 2024. Five live counters on the homepage are not a public-reporting system — they are a status panel.",
     "metaDescription": "Six months into the new Aged Care Act, the sector's analytical performance reporting is missing — the visibility gap and what it means for boards.",
-    "ogImage": "og-image-v3.png"
+    "ogImage": "og-image-v3.png",
+    "topics": [
+      "aged-care-act-2024",
+      "acqs-accreditation-audit"
+    ]
   },
   {
     "slug": "strengthened-aged-care-quality-standards",
@@ -88,7 +107,11 @@
     "featured": true,
     "summary": "The Aged Care Quality and Safety Commission has introduced strengthened quality standards that represent a significant shift in how aged care providers are assessed and held accountable. We break down what these changes mean for your organisation.",
     "metaDescription": "What the Strengthened Aged Care Quality Standards change for providers — the shift to outcomes-based assessment and how to prepare for it.",
-    "ogImage": "og-image-v3.png"
+    "ogImage": "og-image-v3.png",
+    "topics": [
+      "strengthened-aged-care-quality-standards",
+      "aged-care-act-2024"
+    ]
   },
   {
     "slug": "ai-reshaping-competitive-intelligence",
@@ -136,7 +159,10 @@
     "featured": false,
     "summary": "The National Aged Care Mandatory Quality Indicator Program Manual 4.0 introduces new indicators and reporting requirements. Here is what has changed.",
     "metaDescription": "",
-    "ogImage": "og-image-v3.png"
+    "ogImage": "og-image-v3.png",
+    "topics": [
+      "quality-indicator-program"
+    ]
   },
   {
     "slug": "data-quality-foundation-of-ai",
