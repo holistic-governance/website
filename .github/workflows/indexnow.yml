@@ -1,0 +1,58 @@
+name: IndexNow ping
+
+# Submits URLs changed by each push to api.indexnow.org so Bing (which feeds
+# ChatGPT search / Copilot), Yandex, Naver and Seznam re-crawl promptly.
+# The key is public by design — it is served at /<key>.txt on the site.
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  indexnow:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Submit changed URLs to IndexNow
+        env:
+          HOST: hg-au.com
+          KEY: b28a40dc768afeabbe32943e3af7f361
+        run: |
+          set -euo pipefail
+          BEFORE="${{ github.event.before }}"
+          AFTER="${{ github.sha }}"
+          if git cat-file -e "$BEFORE" 2>/dev/null; then
+            RANGE="$BEFORE..$AFTER"
+          else
+            RANGE="$AFTER~1..$AFTER"   # first push / force push fallback
+          fi
+
+          # Public, indexable paths only: root html/txt/xml, articles/*.html, topics/*.md
+          git diff --name-only --diff-filter=ACMR "$RANGE" \
+            | grep -E '^([^/]+\.(html|txt|xml)|articles/[^/]+\.html|topics/[^/]+\.md)$' \
+            | grep -vE '^(admin|login)\.html$' \
+            | sort -u > changed.txt || true
+
+          if [ ! -s changed.txt ]; then
+            echo "No public URLs changed — nothing to submit."
+            exit 0
+          fi
+
+          URLS=$(sed -e 's|^index\.html$||' changed.txt \
+            | awk -v h="https://$HOST/" '{print "\"" h $0 "\""}' | paste -sd, -)
+
+          BODY=$(printf '{"host":"%s","key":"%s","keyLocation":"https://%s/%s.txt","urlList":[%s]}' \
+            "$HOST" "$KEY" "$HOST" "$KEY" "$URLS")
+
+          echo "Submitting $(wc -l < changed.txt) URL(s):"
+          cat changed.txt
+          HTTP=$(curl -s -o response.txt -w '%{http_code}' \
+            -H 'Content-Type: application/json; charset=utf-8' \
+            -d "$BODY" https://api.indexnow.org/indexnow)
+          echo "IndexNow HTTP $HTTP"
+          cat response.txt || true
+          # 200/202 = accepted; anything else fails the job so it's visible
+          case "$HTTP" in 200|202) exit 0;; *) exit 1;; esac
