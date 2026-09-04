@@ -79,6 +79,14 @@
     .consultant-bio { font-size: 0.95rem; color: #ffffff; line-height: 1.8; margin-bottom: 2rem; }
     .consultant-details { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
     .detail-block h4 { font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; color: var(--white); margin-bottom: 0.8rem; font-weight: 400; }
+    .media-panel { border: 1px solid var(--border); border-radius: 3px; padding: 1.4rem 1.6rem; background: var(--sky-pale); max-width: 640px; }
+    .media-pub { display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; flex-wrap: wrap; padding-bottom: 0.9rem; border-bottom: 1px solid var(--border); }
+    .media-outlet { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 1.15rem; color: var(--white); text-decoration: none; }
+    .media-outlet:hover { color: var(--sky); }
+    .media-piece { display: block; font-size: 0.85rem; color: var(--text-mid); margin-top: 0.2rem; line-height: 1.5; }
+    .media-when { font-size: 0.78rem; color: var(--text-light); white-space: nowrap; }
+    .media-all { display: inline-block; margin-top: 0.9rem; font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--sky); text-decoration: none; border-bottom: 1px solid rgba(56,189,248,0.4); padding-bottom: 2px; }
+    .media-all:hover { border-bottom-color: var(--sky); }
     .detail-block ul { list-style: none; }
     .detail-block li { font-size: 0.85rem; color: #ffffff; line-height: 1.7; padding-left: 1rem; position: relative; }
     .detail-block li::before { content: ''; position: absolute; left: 0; top: 0.55rem; width: 5px; height: 5px; background: var(--sky); border-radius: 1px; }
@@ -530,7 +538,6 @@
       <div class="consultant-title">Founding Director & Principal Consultant</div>
       <p class="consultant-bio">Naomi is a highly experienced governance, quality, and risk specialist with over a decade of senior leadership across the aged care, disability, hospital, and community health sectors. She brings deep expertise in clinical governance, accreditation frameworks, and data-driven assurance, translating complex regulatory requirements into practical, sustainable systems. Through her consultancy, Holistic Governance, she works with boards and executives across Australia's regulated care sectors, and is building a governance-technology start-up scheduled for release in 2027.</p>
       <p style="font-size:0.88rem; color:var(--sky); margin-bottom:2rem; font-style:italic;">Supported by a network of specialist associates across governance, data analytics, and digital health.</p>
-      <p style="font-size:0.88rem; color:var(--text-mid); margin-top:-1rem; margin-bottom:2rem;">Naomi's analysis has been published in <a href="https://johnmenadue.com/authors/naomi-alefelder/" target="_blank" rel="noopener" style="color:var(--sky); text-decoration:none; border-bottom:1px solid rgba(56,189,248,0.4);">Pearls and Irritations</a>, John Menadue's public policy journal.</p>
 
       <div style="display:flex; align-items:center; gap:1.5rem; padding:1.5rem; border:1px solid var(--border); border-radius:8px; background:rgba(56,189,248,0.04); margin-bottom:2.5rem; max-width:520px;">
         <a href="naomi/" style="flex-shrink:0; line-height:0;" aria-label="Open Naomi's digital business card">
@@ -591,6 +598,21 @@
             <span style="padding:0.4rem 1rem; border:1px solid var(--border); border-radius:30px; font-size:0.8rem; color:var(--text-mid); transition:all 0.3s;">Day Surgery</span>
             <span style="padding:0.4rem 1rem; border:1px solid var(--border); border-radius:30px; font-size:0.8rem; color:var(--text-mid); transition:all 0.3s;">Medical &amp; Clinical Devices</span>
             <span style="padding:0.4rem 1rem; border:1px solid var(--border); border-radius:30px; font-size:0.8rem; color:var(--text-mid); transition:all 0.3s;">Cosmetic</span>
+          </div>
+        </div>
+      </div>
+      <div class="consultant-details" style="margin-top: 2rem; grid-template-columns: 1fr;">
+        <div class="detail-block">
+          <h4>Writing &amp; Media</h4>
+          <div class="media-panel">
+            <div class="media-pub">
+              <div>
+                <a href="https://johnmenadue.com/post/2026/08/ndis-auditor-bans-shows-a-deeper-problem-with-provider-paid-audits/" target="_blank" rel="noopener" class="media-outlet">Pearls and Irritations</a>
+                <span class="media-piece">NDIS auditor bans shows a deeper problem with provider-paid audits</span>
+              </div>
+              <span class="media-when">August 2026</span>
+            </div>
+            <a class="media-all" href="https://johnmenadue.com/authors/naomi-alefelder/" target="_blank" rel="noopener">Author page at johnmenadue.com &#8599;</a>
           </div>
         </div>
       </div>
