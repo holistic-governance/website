@@ -14,7 +14,7 @@ pages inline page-specific `<style>`. Brand: navy editorial, Cormorant Garamond 
 - `build-articles.js` — renders `articles/*.md` → `articles/*.html` (`npm run build`). Optional frontmatter
   `alsoPublishedIn: Publication | YYYY-MM-DD | https://url` (multiple entries split with ` ;; `) renders a
   "Published in" note under the byline and adds JSON-LD `sameAs`; also hand-add the piece to the
-  "In The Press" band on `resources.html` + About "Writing & Media" panel and the article's llms.txt/llms-full.txt entries.
+  "In The Press" band on `resources.html` (green accent) + About "Featured In" end section and the article's llms.txt/llms-full.txt entries.
 - `build-resources.js` — pulls resources from the dashboard API and injects into `resources.html`
   **between markers only** (`<!-- RESOURCES_GRID_START/END -->`, `<!-- RESOURCES_JSONLD_START/END -->`).
   Hand-edit `resources.html` ONLY outside those marker regions or your change is overwritten on next build.

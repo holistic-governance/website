@@ -79,14 +79,21 @@
     .consultant-bio { font-size: 0.95rem; color: #ffffff; line-height: 1.8; margin-bottom: 2rem; }
     .consultant-details { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
     .detail-block h4 { font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; color: var(--white); margin-bottom: 0.8rem; font-weight: 400; }
-    .media-panel { border: 1px solid var(--border); border-radius: 3px; padding: 1.4rem 1.6rem; background: var(--sky-pale); max-width: 640px; }
-    .media-pub { display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; flex-wrap: wrap; padding-bottom: 0.9rem; border-bottom: 1px solid var(--border); }
-    .media-outlet { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 1.15rem; color: var(--white); text-decoration: none; }
-    .media-outlet:hover { color: var(--sky); }
-    .media-piece { display: block; font-size: 0.85rem; color: var(--text-mid); margin-top: 0.2rem; line-height: 1.5; }
-    .media-when { font-size: 0.78rem; color: var(--text-light); white-space: nowrap; }
-    .media-all { display: inline-block; margin-top: 0.9rem; font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--sky); text-decoration: none; border-bottom: 1px solid rgba(56,189,248,0.4); padding-bottom: 2px; }
-    .media-all:hover { border-bottom-color: var(--sky); }
+    /* FEATURED IN — external publications (green = published elsewhere) */
+    .press-label { color: var(--green); }
+    .press-label::after { background: var(--green); }
+    .press-band { display: grid; grid-template-columns: minmax(180px, 240px) 1fr; border: 1px solid var(--green); border-radius: 3px; overflow: hidden; text-decoration: none; margin-top: 2.5rem; max-width: 940px; transition: box-shadow 0.3s; }
+    .press-band:hover { box-shadow: 0 0 0 1px var(--green); }
+    .press-masthead { background: var(--green-pale); border-right: 1px solid rgba(52,211,153,0.35); padding: 1.6rem 1.4rem; display: flex; flex-direction: column; justify-content: center; gap: 0.5rem; }
+    .press-outlet { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 1.5rem; line-height: 1.15; color: var(--white); }
+    .press-tag { font-size: 0.68rem; color: var(--green); letter-spacing: 0.08em; text-transform: uppercase; }
+    .press-body { padding: 1.6rem 1.8rem; }
+    .press-kicker { font-size: 0.66rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--green); margin-bottom: 0.5rem; }
+    .press-body h3 { font-family: 'Cormorant Garamond', serif; font-weight: 400; font-size: 1.5rem; color: var(--white); margin: 0 0 0.5rem; line-height: 1.25; }
+    .press-date { font-size: 0.78rem; color: var(--text-light); margin-bottom: 0.9rem; }
+    .press-go { font-size: 0.74rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--green); border-bottom: 1px solid rgba(52,211,153,0.5); padding-bottom: 2px; }
+    .press-more { display: inline-block; margin-top: 1.2rem; font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--sky); text-decoration: none; border-bottom: 1px solid rgba(56,189,248,0.4); padding-bottom: 2px; }
+    .press-more:hover { border-bottom-color: var(--sky); }
     .detail-block ul { list-style: none; }
     .detail-block li { font-size: 0.85rem; color: #ffffff; line-height: 1.7; padding-left: 1rem; position: relative; }
     .detail-block li::before { content: ''; position: absolute; left: 0; top: 0.55rem; width: 5px; height: 5px; background: var(--sky); border-radius: 1px; }
@@ -156,6 +163,8 @@
     @media (max-width: 900px) {
       .page-hero, section { padding: 6rem 1.5rem 3rem; }
       .vm-layout, .values-layout, .approach-steps, .consultant-layout, .consultant-details { grid-template-columns: 1fr; }
+      .press-band { grid-template-columns: 1fr; }
+      .press-masthead { border-right: none; border-bottom: 1px solid rgba(52,211,153,0.35); }
       .value-list { grid-template-columns: 1fr; }
       .approach-step { border-right: none; border-bottom: 1px solid var(--border); }
       .approach-step:last-child { border-bottom: none; }
@@ -601,21 +610,6 @@
           </div>
         </div>
       </div>
-      <div class="consultant-details" style="margin-top: 2rem; grid-template-columns: 1fr;">
-        <div class="detail-block">
-          <h4>Writing &amp; Media</h4>
-          <div class="media-panel">
-            <div class="media-pub">
-              <div>
-                <a href="https://johnmenadue.com/post/2026/08/ndis-auditor-bans-shows-a-deeper-problem-with-provider-paid-audits/" target="_blank" rel="noopener" class="media-outlet">Pearls and Irritations</a>
-                <span class="media-piece">NDIS auditor bans shows a deeper problem with provider-paid audits</span>
-              </div>
-              <span class="media-when">August 2026</span>
-            </div>
-            <a class="media-all" href="https://johnmenadue.com/authors/naomi-alefelder/" target="_blank" rel="noopener">Author page at johnmenadue.com &#8599;</a>
-          </div>
-        </div>
-      </div>
     </div>
   </div>
 </section>
@@ -743,6 +737,25 @@
       <div style="padding:0 2rem 1.5rem; font-size:0.92rem; color:var(--text-mid); line-height:1.8;">You work directly with a senior consultant — not a junior associate. We bring deep clinical and governance expertise rather than generic management frameworks. We deliberately limit the number of clients we take on to ensure focused, high-quality support. And we build systems you own and can sustain independently.</div>
     </details>
   </div>
+</section>
+
+<!-- FEATURED IN -->
+<section class="fade-in">
+  <div class="section-label press-label">In The Press</div>
+  <h2>Featured In</h2>
+  <a class="press-band" href="https://johnmenadue.com/post/2026/08/ndis-auditor-bans-shows-a-deeper-problem-with-provider-paid-audits/" target="_blank" rel="noopener">
+    <div class="press-masthead">
+      <span class="press-outlet">Pearls and&nbsp;Irritations</span>
+      <span class="press-tag">John Menadue's Public Policy Journal</span>
+    </div>
+    <div class="press-body">
+      <div class="press-kicker">Naomi Alefelder &middot; Health &middot; Politics</div>
+      <h3>NDIS auditor bans shows a deeper problem with provider-paid audits</h3>
+      <div class="press-date">24 August 2026</div>
+      <span class="press-go">Read at johnmenadue.com &#8599;</span>
+    </div>
+  </a>
+  <div><a class="press-more" href="https://johnmenadue.com/authors/naomi-alefelder/" target="_blank" rel="noopener">Author page at johnmenadue.com &#8599;</a></div>
 </section>
 
 <div class="cta-band">
