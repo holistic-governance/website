@@ -70,8 +70,6 @@
 
     /* IN THE PRESS — external publications band (green = published elsewhere) */
     :root { --green: #34d399; --green-pale: rgba(52,211,153,0.12); }
-    .press-label { color: var(--green); }
-    .press-label::after { background: var(--green); }
     .press-band { display: grid; grid-template-columns: minmax(180px, 240px) 1fr; border: 1px solid var(--green); border-radius: 3px; overflow: hidden; text-decoration: none; transition: box-shadow 0.3s; }
     .press-band:hover { box-shadow: 0 0 0 1px var(--green); }
     .press-masthead { background: var(--green-pale); border-right: 1px solid rgba(52,211,153,0.35); padding: 1.6rem 1.4rem; display: flex; flex-direction: column; justify-content: center; gap: 0.5rem; }
@@ -1590,7 +1588,7 @@ Find the latest cyber security advice, guidance and publications</p>
   <div style="max-width:1100px; margin:0 auto;">
     <!-- IN THE PRESS (external publications) -->
     <div style="margin-bottom:3.5rem;">
-      <div class="section-label press-label">In The Press</div>
+      <div class="section-label">In The Press</div>
       <a class="press-band" href="https://johnmenadue.com/post/2026/08/ndis-auditor-bans-shows-a-deeper-problem-with-provider-paid-audits/" target="_blank" rel="noopener">
         <div class="press-masthead">
           <span class="press-outlet">Pearls and&nbsp;Irritations</span>
