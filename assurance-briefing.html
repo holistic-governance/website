@@ -91,16 +91,40 @@
   .mapband.inview .reg.fc:nth-of-type(odd) { animation: cardin .7s .4s ease forwards, rideR 13s .4s ease-in-out infinite alternate; }
   @media (max-width: 700px){
     .hero { padding-top: 26px !important; }
-    /* miniature desktop map: portrait streams + compact cards riding them */
-    .mapband { height: 465px !important; margin: 0 auto; padding: 0 12px; position: relative; }
-    .mapband svg.wires { display: none; }
-    svg.wires-m { display: block !important; position: absolute; left: 0; right: 0; top: 96px; width: 100%; height: 360px; pointer-events: none; z-index: 1; }
-    .map-note { position: static; transform: none; margin: 6px auto 18px; opacity: 1 !important;
-      animation: none !important; padding: 10px 16px; background: none;
+    /* mobile map: clean central spine with cards alternating on their own rows */
+    .mapband { height: auto !important; margin: 0 auto; padding: 8px 6px 4px !important;
+      position: relative; display: flex; flex-direction: column; gap: 16px; }
+    .mapband svg.wires, .mapband svg.wires-m { display: none !important; }
+    .mapband::before { content: ''; position: absolute; left: 50%; top: 88px; bottom: 16px;
+      width: 2px; margin-left: -1px; border-radius: 2px; z-index: 0;
+      background: linear-gradient(180deg, #00B4FF, #8b5cf6, #ec4899, #f97316, #10b981); opacity: .4; }
+    .map-note { position: static; transform: none; margin: 6px auto 10px; opacity: 1 !important;
+      animation: none !important; padding: 10px 16px; background: none; align-self: stretch;
       width: auto; max-width: 100%; font-size: 26px; text-shadow: none; }
-    .reg.fc { opacity: 1 !important; padding: 7px 13px; max-width: calc(50vw - 26px); gap: 9px; z-index: 2; }
-    @keyframes rideM { 0% { transform: translateY(-6px); } 100% { transform: translateY(6px); } }
-    @keyframes rideMR { 0% { transform: translateY(6px); } 100% { transform: translateY(-6px); } }
+    .reg.fc { position: relative !important; left: auto !important; right: auto !important;
+      top: auto !important; bottom: auto !important; opacity: 1 !important; animation: none !important;
+      padding: 9px 13px; width: calc(50% - 20px); max-width: none; gap: 9px; z-index: 1;
+      box-shadow: 0 8px 22px rgba(15,23,42,.10); }
+    .reg.fc:nth-of-type(2n)   { align-self: flex-start; }
+    .reg.fc:nth-of-type(2n+1) { align-self: flex-end; }
+    /* connector line + node dot linking each card to the spine */
+    .reg.fc::before { content: ''; position: absolute; top: 50%; height: 2px; width: 20px;
+      transform: translateY(-1px); background: var(--conn, #94a3b8); z-index: 0; }
+    .reg.fc::after  { content: ''; position: absolute; top: 50%; width: 9px; height: 9px;
+      border-radius: 50%; transform: translateY(-50%); background: var(--conn, #94a3b8);
+      box-shadow: 0 0 0 3px #fff; z-index: 1; }
+    .reg.fc:nth-of-type(2n)::before   { right: -20px; }
+    .reg.fc:nth-of-type(2n)::after    { right: -24.5px; }
+    .reg.fc:nth-of-type(2n+1)::before { left: -20px; }
+    .reg.fc:nth-of-type(2n+1)::after  { left: -24.5px; }
+    /* per-card accent colours (match each mono badge) */
+    .reg.fc[style*="left:1%"]  { --conn: #00558B; }
+    .reg.fc[style*="left:11%"] { --conn: #007E8F; }
+    .reg.fc[style*="left:22%"] { --conn: #24356B; }
+    .reg.fc[style*="right:1%"] { --conn: #5B2D8E; }
+    .reg.fc[style*="right:11%"]{ --conn: #00696B; }
+    .reg.fc[style*="right:22%"]{ --conn: #0f172a; }
+    .reg.fc[style*="left:32%"] { --conn: #7C3AED; }
     .reg.fc .mono { width: 30px; height: 30px; border-radius: 8px; font-size: 9px; }
     .reg.fc .t { font-size: 12.5px; }
     .reg.fc .s { display: none; }
@@ -118,13 +142,6 @@
     .grow .reg.gsm:nth-child(3) { border: 1.5px solid #10b981 !important; }
     .reg.gsm .t { font-size: 13px; }
     .reg.gsm .s { font-size: 10.5px; }
-    .reg.fc[style*="left:1%;"]  { left: 10px !important; right: auto !important; top: 100px !important; animation: rideM 6.5s -1s ease-in-out infinite alternate !important; }
-    .reg.fc[style*="left:11%;"] { left: auto !important; right: 10px !important; top: 148px !important; animation: rideMR 7.5s -4s ease-in-out infinite alternate !important; }
-    .reg.fc[style*="left:22%;"] { left: 10px !important; right: auto !important; top: 196px !important; animation: rideM 6.5s -7s ease-in-out infinite alternate !important; }
-    .reg.fc[style*="right:1%;"] { left: auto !important; right: 10px !important; top: 244px !important; animation: rideMR 7.5s -2s ease-in-out infinite alternate !important; }
-    .reg.fc[style*="right:11%;"]{ left: 10px !important; right: auto !important; top: 292px !important; animation: rideM 6.5s -6s ease-in-out infinite alternate !important; }
-    .reg.fc[style*="right:22%;"]{ left: auto !important; right: 10px !important; top: 340px !important; animation: rideMR 7.5s -3s ease-in-out infinite alternate !important; }
-    .reg.fc[style*="left:32%;"] { left: 10px !important; right: auto !important; top: 388px !important; animation: rideM 6.5s -5s ease-in-out infinite alternate !important; }
     /* catalogue: clean stack (option A) */
     .feat { padding: 20px; gap: 14px; grid-template-columns: 1fr; }
     .featside { min-width: 0; }
