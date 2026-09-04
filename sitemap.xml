@@ -61,12 +61,6 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://hg-au.com/news.html</loc>
-    <lastmod>2026-09-04</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://hg-au.com/privacy.html</loc>
     <lastmod>2026-04-16</lastmod>
     <changefreq>yearly</changefreq>

@@ -74,6 +74,5 @@ Curated Holistic Governance reference documents on key regulatory and operationa
 ## Optional
 
 - [Privacy policy](https://hg-au.com/privacy.html)
-- [News / updates](https://hg-au.com/news.html)
 - [Full content for AI ingestion](https://hg-au.com/llms-full.txt)
 - [XML sitemap](https://hg-au.com/sitemap.xml)

@@ -18,6 +18,11 @@ Reference doc for the SEO work on the Holistic Governance website. Written 2026-
 
 ---
 
+> **2026-09-04:** Orphaned `news.html` retired to `archive/` (was never linked from any page; its dashboard
+> API feed at app.hg-au.com is IAP-gated since the hardening, so it permanently showed "Coming soon"; page was
+> already `noindex`). Removed from `llms.txt`; never shipped in `sitemap.xml`. Assurance Briefing page gained
+> Product/CreativeWorkSeries + WebPage/speakable + BreadcrumbList schema and OG/Twitter parity tags.
+
 ## Status snapshot (as of 2026-05-23)
 
 ### Traditional SEO foundation
