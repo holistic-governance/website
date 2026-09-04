@@ -100,17 +100,23 @@
     .map-note { position: static; transform: none; margin: 6px auto 10px; opacity: 1 !important;
       animation: none !important; padding: 10px 16px; background: none; align-self: stretch;
       width: auto; max-width: 100%; font-size: 26px; text-shadow: none; }
-    .reg.fc { position: absolute !important; opacity: 1 !important; animation: none !important;
+    /* gentle float, small amplitude so cards stay visually on their lines */
+    @keyframes rideP  { 0% { transform: translateY(-5px); } 100% { transform: translateY(5px); } }
+    @keyframes ridePR { 0% { transform: translateY(5px); } 100% { transform: translateY(-5px); } }
+    .reg.fc { position: absolute !important; opacity: 1 !important;
+      animation: rideP 7s ease-in-out infinite alternate !important;
       padding: 8px 12px; width: max-content; max-width: 44vw; gap: 8px; z-index: 2;
       box-shadow: 0 10px 26px rgba(15,23,42,.13); }
-    .reg.fc .mono { width: 30px; height: 30px; border-radius: 8px; font-size: 9px; }
+    .reg.fc:nth-of-type(2n)   { animation: ridePR 8s -3s ease-in-out infinite alternate !important; }
+    .reg.fc:nth-of-type(3n)   { animation-delay: -5s !important; }
+    .reg.fc:nth-of-type(3n+1) { animation-duration: 7.5s !important; }
+    .reg.fc .mono { width: 32px; height: 32px; border-radius: 8px;
+      font-size: 7.5px !important; letter-spacing: 0 !important; }
+    /* ACSQHC (6 chars) needs extra breathing room in the 32px badge */
+    .reg.fc .mono[style*="#5B2D8E"] { width: 40px; font-size: 6.5px !important; }
     .reg.fc .t { font-size: 12.5px; }
     .reg.fc .s { display: none; }
     .nm-full { display: none; } .nm-short { display: inline !important; }
-    .reg.fc[style*="left:32%"] .mono { font-size: 7px !important; letter-spacing: 0; }
-    .reg.fc[style*="left:11%"] .mono { font-size: 7px !important; letter-spacing: 0; }
-    .reg.fc[style*="right:1%"] .mono { font-size: 6px !important; letter-spacing: 0; }
-    .reg.fc[style*="right:11%"] .mono { font-size: 7px !important; letter-spacing: 0; }
     /* guidance trio: separate cards, thin bright outlines */
     .grow { flex-direction: column; gap: 10px; align-items: center; }
     .reg.gsm { width: 100%; max-width: 320px; justify-content: flex-start; text-align: left;
