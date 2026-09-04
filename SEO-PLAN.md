@@ -22,6 +22,11 @@ Reference doc for the SEO work on the Holistic Governance website. Written 2026-
 > API feed at app.hg-au.com is IAP-gated since the hardening, so it permanently showed "Coming soon"; page was
 > already `noindex`). Removed from `llms.txt`; never shipped in `sitemap.xml`. Assurance Briefing page gained
 > Product/CreativeWorkSeries + WebPage/speakable + BreadcrumbList schema and OG/Twitter parity tags.
+> Also 2026-09-04: IndexNow GitHub Action added (.github/workflows/indexnow.yml) — auto-submits changed public
+> URLs on every push to main. Four NEW topic dossiers DRAFTED, in repo but **pending Naomi's SME review before they
+> are committed/listed** (each carries a visible DRAFT banner + VERIFY markers): nsqhs-standards.md,
+> national-model-clinical-governance-framework.md, ndis-provider-audits-certification.md, ai-guardrails.md.
+> On sign-off: remove DRAFT banners, set real lastReviewed dates, add to sitemap.xml + llms.txt + llms-full.txt.
 
 ## Status snapshot (as of 2026-05-23)
 
