@@ -406,18 +406,11 @@
             <!-- Live Power BI report (Publish to web · illustrative data only).
                  To update: regenerate the Publish-to-web code in the Power BI Service
                  and replace PBI_BASE in the script below. Page switching reloads the
-                 iframe with &pageName=… (see PBI_PAGE). The .demo-fallback
-                 screenshots are kept hidden as a backup if the embed is unavailable. -->
+                 iframe with &pageName=… (see PBI_PAGE). -->
             <iframe id="demoIframe" title="Holistic Governance — Demo BI Dashboard"
                     src="https://app.powerbi.com/view?r=eyJrIjoiNDdiNWQzMDEtNWFlMC00YjZiLWE3MzItMjNmNjhkZjlmNDlhIiwidCI6IjAyNGFkNzQzLTNmYmYtNDJmYy1iYTEwLWY5NTQ0YTY1ZTBiOCJ9&pageName=b11e9abcfb356440d0a7"
                     frameborder="0" allowfullscreen></iframe>
 
-            <div class="demo-fallback" id="demoFallback" style="display:none">
-              <img class="demo-shot active" id="shot-board" src="demo-board-summary.png"
-                   alt="Board summary dashboard showing incident rate per 1,000 occupied bed days, SIRS notifications, mandatory education compliance and exceptions — illustrative data" />
-              <img class="demo-shot" id="shot-incident" src="demo-incident-summary.png"
-                   alt="Incident analytics dashboard showing risk rating heatmap, incident counts by type, SIRS priority and root cause — illustrative data" />
-            </div>
           </div>
         </div>
         <p class="demo-note">Illustrative data only — your build uses your own data, branded to your organisation.</p>
