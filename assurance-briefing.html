@@ -92,39 +92,17 @@
   @media (max-width: 700px){
     .hero { padding-top: 26px !important; }
     /* mobile map: clean central spine with cards alternating on their own rows */
-    .mapband { height: auto !important; margin: 0 auto; padding: 8px 6px 4px !important;
-      position: relative; display: flex; flex-direction: column; gap: 16px; }
-    .mapband svg.wires, .mapband svg.wires-m { display: none !important; }
-    .mapband::before { content: ''; position: absolute; left: 50%; top: 88px; bottom: 16px;
-      width: 2px; margin-left: -1px; border-radius: 2px; z-index: 0;
-      background: linear-gradient(180deg, #00B4FF, #8b5cf6, #ec4899, #f97316, #10b981); opacity: .4; }
+    .mapband { height: auto; margin: 0 auto; padding: 0 !important; position: relative; }
+    .mapband svg.wires { display: none !important; }
+    .mapband svg.wires-m { display: block !important; position: absolute; inset: 0;
+      width: 100%; height: 100%; z-index: 0; pointer-events: none; overflow: visible; }
+    .mapband svg.wires-m path { fill: none; stroke-width: 1.6; stroke-linecap: round; }
     .map-note { position: static; transform: none; margin: 6px auto 10px; opacity: 1 !important;
       animation: none !important; padding: 10px 16px; background: none; align-self: stretch;
       width: auto; max-width: 100%; font-size: 26px; text-shadow: none; }
-    .reg.fc { position: relative !important; left: auto !important; right: auto !important;
-      top: auto !important; bottom: auto !important; opacity: 1 !important; animation: none !important;
-      padding: 9px 13px; width: calc(50% - 20px); max-width: none; gap: 9px; z-index: 1;
-      box-shadow: 0 8px 22px rgba(15,23,42,.10); }
-    .reg.fc:nth-of-type(2n)   { align-self: flex-start; }
-    .reg.fc:nth-of-type(2n+1) { align-self: flex-end; }
-    /* connector line + node dot linking each card to the spine */
-    .reg.fc::before { content: ''; position: absolute; top: 50%; height: 2px; width: 20px;
-      transform: translateY(-1px); background: var(--conn, #94a3b8); z-index: 0; }
-    .reg.fc::after  { content: ''; position: absolute; top: 50%; width: 9px; height: 9px;
-      border-radius: 50%; transform: translateY(-50%); background: var(--conn, #94a3b8);
-      box-shadow: 0 0 0 3px #fff; z-index: 1; }
-    .reg.fc:nth-of-type(2n)::before   { right: -20px; }
-    .reg.fc:nth-of-type(2n)::after    { right: -24.5px; }
-    .reg.fc:nth-of-type(2n+1)::before { left: -20px; }
-    .reg.fc:nth-of-type(2n+1)::after  { left: -24.5px; }
-    /* per-card accent colours (match each mono badge) */
-    .reg.fc[style*="left:1%"]  { --conn: #00558B; }
-    .reg.fc[style*="left:11%"] { --conn: #007E8F; }
-    .reg.fc[style*="left:22%"] { --conn: #24356B; }
-    .reg.fc[style*="right:1%"] { --conn: #5B2D8E; }
-    .reg.fc[style*="right:11%"]{ --conn: #00696B; }
-    .reg.fc[style*="right:22%"]{ --conn: #0f172a; }
-    .reg.fc[style*="left:32%"] { --conn: #7C3AED; }
+    .reg.fc { position: absolute !important; opacity: 1 !important; animation: none !important;
+      padding: 8px 12px; width: max-content; max-width: 44vw; gap: 8px; z-index: 2;
+      box-shadow: 0 10px 26px rgba(15,23,42,.13); }
     .reg.fc .mono { width: 30px; height: 30px; border-radius: 8px; font-size: 9px; }
     .reg.fc .t { font-size: 12.5px; }
     .reg.fc .s { display: none; }
@@ -680,6 +658,122 @@ date; verify against the relevant current law and regulator guidance before acti
       }, { threshold: 0.25 });
       watched.forEach(function (el) { io.observe(el); });
     } else { watched.forEach(function (el) { el.classList.add('inview'); }); }
+  })();
+
+  // MOBILE MAP: lay the cards out in two interleaved columns and run soft,
+  // nested pastel line-bundles vertically through each column, converging at a
+  // point top and bottom — a portrait version of the desktop hourglass weave.
+  (function () {
+    var SVGNS = 'http://www.w3.org/2000/svg';
+    var mb = document.querySelector('.mapband');
+    var svg = mb && mb.querySelector('svg.wires-m');
+    if (!mb || !svg) return;
+    var note = mb.querySelector('.map-note');
+    var cards = Array.prototype.slice.call(mb.querySelectorAll('.reg.fc'));
+    // preserve the desktop inline positions/height so they can be restored exactly
+    var orig = cards.map(function (c) { return { left: c.style.left, top: c.style.top }; });
+    var origH = mb.style.height;
+    var mq = window.matchMedia('(max-width: 700px)');
+    var drawn = false;
+
+    // VERSION D: cards hug the edges (open centre), many flowing willow strands
+    var SIDE = [-1, 1, -1, 1, -1, 1, -1];
+    var MAG  = [0.55, 0.60, 0.85, 1.0, 1.0, 0.85, 0.60];  // lens: widest mid-height
+    var PALETTE = ['#0ea5e9', '#8b5cf6', '#ec4899', '#10b981', '#f97316', '#7c3aed', '#00B4FF'];
+
+    function clearSvg() { while (svg.firstChild) svg.removeChild(svg.firstChild); }
+
+    function build(animate) {
+      clearSvg();
+      var W = mb.clientWidth, cx = W / 2;
+      var maxOff = Math.min(cx - 12, 150);
+      var topY = (note ? note.offsetTop + note.offsetHeight : 20) + 14;
+      var rowGap = 76;
+
+      // row centre for each card (positions finalised after the curves exist)
+      var rows = cards.map(function (c, i) { return topY + i * rowGap + 24; });
+      var lastBottom = rows[rows.length - 1] + 30;
+      var H = lastBottom + 110;
+      mb.style.height = H + 'px';
+      svg.setAttribute('viewBox', '0 0 ' + W + ' ' + H);
+
+      var apexTop = Math.max(topY - 20, 6), apexBot = H - 10;
+      var yMid = (apexTop + apexBot) / 2;
+      var defs = document.createElementNS(SVGNS, 'defs');
+      svg.appendChild(defs);
+
+      // True lens/hourglass like the desktop: 7 NESTED curves, all peaking at the
+      // map's mid-height. Each starts spread at the top, bows out to its own
+      // amplitude at yMid, and curves back to a soft low crossing. Cards are then
+      // placed ON their curve at their row — so lines and cards can never tangle.
+      var AMP = [1.0, 0.95, 0.78, 0.73, 0.56, 0.51, 0.34]; // nested amplitudes, well spread
+      cards.forEach(function (card, i) {
+        var side = SIDE[i] || (i % 2 ? 1 : -1);
+        var A = AMP[i] * maxOff;
+        var peakX = cx + side * A;
+        var topX = cx + side * A * 0.55;   // clearly spread at the top
+        var botX = cx - side * A * 0.30;   // gentle cross past centre at the bottom
+        var uT = yMid - apexTop, uB = apexBot - yMid;
+        var dd = 'M ' + topX + ' ' + apexTop +
+                 ' C ' + topX + ' ' + (apexTop + uT * 0.35) +
+                 ', ' + peakX + ' ' + (yMid - uT * 0.55) +
+                 ', ' + peakX + ' ' + yMid +
+                 ' C ' + peakX + ' ' + (yMid + uB * 0.55) +
+                 ', ' + botX + ' ' + (apexBot - uB * 0.35) +
+                 ', ' + botX + ' ' + apexBot;
+        var col = PALETTE[i % PALETTE.length];
+        var gid = 'wgm' + i;
+        var g = document.createElementNS(SVGNS, 'linearGradient');
+        g.setAttribute('id', gid); g.setAttribute('gradientUnits', 'userSpaceOnUse');
+        g.setAttribute('x1', cx); g.setAttribute('y1', apexTop); g.setAttribute('x2', cx); g.setAttribute('y2', apexBot);
+        [['0', '0.05'], ['0.5', '0.55'], ['1', '0.06']].forEach(function (st) {
+          var s = document.createElementNS(SVGNS, 'stop');
+          s.setAttribute('offset', st[0]); s.setAttribute('stop-color', col); s.setAttribute('stop-opacity', st[1]);
+          g.appendChild(s);
+        });
+        defs.appendChild(g);
+        var p = document.createElementNS(SVGNS, 'path');
+        p.setAttribute('d', dd); p.setAttribute('stroke', 'url(#' + gid + ')');
+        svg.appendChild(p);
+
+        // place the card ON its curve at its row (y increases monotonically)
+        var ccy = rows[i], len = p.getTotalLength(), lo = 0, hi = len;
+        for (var k = 0; k < 20; k++) {
+          var m = (lo + hi) / 2;
+          if (p.getPointAtLength(m).y < ccy) lo = m; else hi = m;
+        }
+        var onCurve = p.getPointAtLength((lo + hi) / 2);
+        var w = card.offsetWidth, h = card.offsetHeight;
+        var left = Math.max(4, Math.min(Math.round(onCurve.x - w / 2), W - w - 4));
+        card.style.left = left + 'px';
+        card.style.top = Math.round(ccy - h / 2) + 'px';
+
+        if (animate) {
+          p.style.strokeDasharray = len; p.style.strokeDashoffset = len; p.style.transition = 'none';
+          (function (path, idx) { requestAnimationFrame(function () { requestAnimationFrame(function () {
+            path.style.transition = 'stroke-dashoffset 1.3s cubic-bezier(.4,0,.2,1) ' + (idx * 0.05) + 's';
+            path.style.strokeDashoffset = '0';
+          }); }); })(p, i);
+        }
+      });
+    }
+
+    function reset() {
+      clearSvg();
+      mb.style.height = origH;   // restore the desktop inline height (e.g. 900px)
+      cards.forEach(function (c, i) { c.style.left = orig[i].left; c.style.top = orig[i].top; });
+    }
+
+    function refresh(animate) {
+      if (mq.matches) { build(animate && !drawn); drawn = true; }
+      else if (drawn) { reset(); drawn = false; }   // only undo what build changed
+    }
+
+    refresh(true);
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(function () { refresh(false); });
+    var t;
+    window.addEventListener('resize', function () { clearTimeout(t); t = setTimeout(function () { refresh(false); }, 150); });
+    if (mq.addEventListener) mq.addEventListener('change', function () { refresh(true); });
   })();
 
   async function subscribe() {
