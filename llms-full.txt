@@ -91,6 +91,9 @@ Independent review and design of your organisation's clinical governance framewo
 ### Board reporting and board assurance for aged care providers
 Board reporting and board assurance consultancy for aged care and healthcare governing bodies — independent review and redesign of board packs against regulatory expectations, board assurance frameworks that map Aged Care Act 2024 duties (provider duty under section 179, responsible person due diligence under section 180) and Strengthened Aged Care Quality Standards obligations to evidence sources, Power BI board reporting dashboards, and board briefings on governance duties. Includes the free Board Reporting Health Check self-assessment. See https://hg-au.com/aged-care-board-reporting.html
 
+### The Assurance Briefing (monthly governance briefings)
+Monthly on-demand video briefings, about 45 minutes each, for boards, CEOs and leadership teams across Australia's regulated care sectors. Every briefing is dated to its release and current as at that day, translating regulatory change into the questions, evidence and cadence a board can action and evidence, with every claim cited to source. Sold as a single briefing (A$99) or an annual pass covering every briefing for 12 months (A$599); access link is emailed on release. Current series covers responsible person duties under the Aged Care Act 2024, governing clinical AI (the regulatory map), and closed-loop feedback / evidencing continuous improvement. See https://hg-au.com/assurance-briefing.html
+
 ### AI governance advisory
 AI governance frameworks tailored to healthcare, aged care and disability providers. Includes AI risk assessments, responsible AI policy design, model oversight and integration with existing risk and quality systems. See https://hg-au.com/ai-technology.html
 
