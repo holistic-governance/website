@@ -92,13 +92,13 @@
   @media (max-width: 700px){
     .hero { padding-top: 26px !important; }
     /* miniature desktop map: portrait streams + compact cards riding them */
-    .mapband { height: 505px !important; margin: 0 auto; padding: 0 12px; position: relative; }
+    .mapband { height: 465px !important; margin: 0 auto; padding: 0 12px; position: relative; }
     .mapband svg.wires { display: none; }
-    svg.wires-m { display: block !important; position: absolute; left: 0; right: 0; top: 96px; width: 100%; height: 385px; pointer-events: none; z-index: 1; }
+    svg.wires-m { display: block !important; position: absolute; left: 0; right: 0; top: 96px; width: 100%; height: 360px; pointer-events: none; z-index: 1; }
     .map-note { position: static; transform: none; margin: 6px auto 18px; opacity: 1 !important;
       animation: none !important; padding: 10px 16px; background: none;
       width: auto; max-width: 100%; font-size: 26px; text-shadow: none; }
-    .reg.fc { opacity: 1 !important; padding: 10px 14px; max-width: calc(50vw - 26px); gap: 9px; z-index: 2; }
+    .reg.fc { opacity: 1 !important; padding: 7px 13px; max-width: calc(50vw - 26px); gap: 9px; z-index: 2; }
     @keyframes rideM { 0% { transform: translateY(-6px); } 100% { transform: translateY(6px); } }
     @keyframes rideMR { 0% { transform: translateY(6px); } 100% { transform: translateY(-6px); } }
     .reg.fc .mono { width: 30px; height: 30px; border-radius: 8px; font-size: 9px; }
@@ -118,13 +118,13 @@
     .grow .reg.gsm:nth-child(3) { border: 1.5px solid #10b981 !important; }
     .reg.gsm .t { font-size: 13px; }
     .reg.gsm .s { font-size: 10.5px; }
-    .reg.fc[style*="left:1%;"]  { left: 10px !important; right: auto !important; top: 128px !important; animation: rideM 6.5s -1s ease-in-out infinite alternate !important; }
-    .reg.fc[style*="left:11%;"] { left: auto !important; right: 10px !important; top: 182px !important; animation: rideMR 7.5s -4s ease-in-out infinite alternate !important; }
-    .reg.fc[style*="left:22%;"] { left: 10px !important; right: auto !important; top: 236px !important; animation: rideM 6.5s -7s ease-in-out infinite alternate !important; }
-    .reg.fc[style*="right:1%;"] { left: auto !important; right: 10px !important; top: 280px !important; animation: rideMR 7.5s -2s ease-in-out infinite alternate !important; }
-    .reg.fc[style*="right:11%;"]{ left: 10px !important; right: auto !important; top: 324px !important; animation: rideM 6.5s -6s ease-in-out infinite alternate !important; }
-    .reg.fc[style*="right:22%;"]{ left: auto !important; right: 10px !important; top: 372px !important; animation: rideMR 7.5s -3s ease-in-out infinite alternate !important; }
-    .reg.fc[style*="left:32%;"] { left: 10px !important; right: auto !important; top: 416px !important; animation: rideM 6.5s -5s ease-in-out infinite alternate !important; }
+    .reg.fc[style*="left:1%;"]  { left: 10px !important; right: auto !important; top: 100px !important; animation: rideM 6.5s -1s ease-in-out infinite alternate !important; }
+    .reg.fc[style*="left:11%;"] { left: auto !important; right: 10px !important; top: 148px !important; animation: rideMR 7.5s -4s ease-in-out infinite alternate !important; }
+    .reg.fc[style*="left:22%;"] { left: 10px !important; right: auto !important; top: 196px !important; animation: rideM 6.5s -7s ease-in-out infinite alternate !important; }
+    .reg.fc[style*="right:1%;"] { left: auto !important; right: 10px !important; top: 244px !important; animation: rideMR 7.5s -2s ease-in-out infinite alternate !important; }
+    .reg.fc[style*="right:11%;"]{ left: 10px !important; right: auto !important; top: 292px !important; animation: rideM 6.5s -6s ease-in-out infinite alternate !important; }
+    .reg.fc[style*="right:22%;"]{ left: auto !important; right: 10px !important; top: 340px !important; animation: rideMR 7.5s -3s ease-in-out infinite alternate !important; }
+    .reg.fc[style*="left:32%;"] { left: 10px !important; right: auto !important; top: 388px !important; animation: rideM 6.5s -5s ease-in-out infinite alternate !important; }
     /* catalogue: clean stack (option A) */
     .feat { padding: 20px; gap: 14px; grid-template-columns: 1fr; }
     .featside { min-width: 0; }
@@ -421,12 +421,14 @@
     <path d="M204 0 C204 110 252 130 252 270 C252 480 252 570 252 650 C252 790 196 770 196 869" stroke="url(#wm3)" stroke-width="2"/>
     <path d="M208 0 C208 100 345 120 345 260 C345 490 345 580 345 660 C345 800 188 780 188 868" stroke="url(#wm4)" stroke-width="2"/>
     <path d="M212 0 C212 110 286 130 286 270 C286 470 286 560 286 640 C286 780 206 760 206 866" stroke="url(#wm5)" stroke-width="2"/>
+    <path d="M204 0 C204 110 150 130 150 270 C150 480 150 570 150 650 C150 790 202 770 202 869" stroke="url(#wm6)" stroke-width="2"/>
     <defs>
       <linearGradient id="wm1" x1="200" y1="0" x2="200" y2="880" gradientUnits="userSpaceOnUse"><stop stop-color="#00B4FF" stop-opacity="0.12"/><stop offset="0.5" stop-color="#00B4FF" stop-opacity="1"/><stop offset="1" stop-color="#8b5cf6" stop-opacity="0.15"/></linearGradient>
       <linearGradient id="wm2" x1="200" y1="0" x2="200" y2="880" gradientUnits="userSpaceOnUse"><stop stop-color="#8b5cf6" stop-opacity="0.12"/><stop offset="0.5" stop-color="#8b5cf6" stop-opacity="1"/><stop offset="1" stop-color="#ec4899" stop-opacity="0.15"/></linearGradient>
       <linearGradient id="wm3" x1="200" y1="0" x2="200" y2="880" gradientUnits="userSpaceOnUse"><stop stop-color="#10b981" stop-opacity="0.12"/><stop offset="0.5" stop-color="#10b981" stop-opacity="1"/><stop offset="1" stop-color="#0ea5e9" stop-opacity="0.15"/></linearGradient>
       <linearGradient id="wm4" x1="200" y1="0" x2="200" y2="880" gradientUnits="userSpaceOnUse"><stop stop-color="#ec4899" stop-opacity="0.12"/><stop offset="0.5" stop-color="#ec4899" stop-opacity="1"/><stop offset="1" stop-color="#f97316" stop-opacity="0.15"/></linearGradient>
       <linearGradient id="wm5" x1="200" y1="0" x2="200" y2="880" gradientUnits="userSpaceOnUse"><stop stop-color="#0f172a" stop-opacity="0.12"/><stop offset="0.5" stop-color="#0f172a" stop-opacity="1"/><stop offset="1" stop-color="#0ea5e9" stop-opacity="0.15"/></linearGradient>
+      <linearGradient id="wm6" x1="200" y1="0" x2="200" y2="880" gradientUnits="userSpaceOnUse"><stop stop-color="#7dd3fc" stop-opacity="0.12"/><stop offset="0.5" stop-color="#7dd3fc" stop-opacity="1"/><stop offset="1" stop-color="#8b5cf6" stop-opacity="0.15"/></linearGradient>
     </defs>
   </svg>
   <div class="reg fc" style="left:1%;top:300px"><div class="mono" style="background:#00558B">TGA</div><div><div class="t"><span class="nm-full">Therapeutic Goods Administration</span><span class="nm-short">TGA</span></div><div class="s">Medical devices &amp; software</div></div></div>
