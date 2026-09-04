@@ -1030,14 +1030,49 @@
 </div>
 
 <!-- FREE TOOLS -->
-<section class="fade-in" style="background:var(--navy); padding:4rem clamp(1.5rem, 5vw, 4rem) 2.5rem;">
+<style>
+  .fr-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(320px, 100%), 1fr)); gap: 1.5rem; max-width: 1100px; }
+  .fr-card { border: 1px solid var(--border-mid); border-radius: 3px; background: var(--navy-mid); position: relative; overflow: hidden; padding: 2.5rem; display: flex; flex-direction: column; align-items: flex-start; text-align: left; }
+  .fr-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: var(--sky); }
+  .fr-badge { position: absolute; top: 1.4rem; right: -3.2rem; transform: rotate(45deg); background: var(--sky); color: var(--navy); font-size: 0.7rem; font-weight: 600; letter-spacing: 0.25em; padding: 0.35rem 3.5rem; text-transform: uppercase; }
+  .fr-icon { width: 42px; height: 42px; background: var(--sky-pale); border: 1px solid var(--border); border-radius: 2px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-bottom: 1.2rem; }
+  .fr-icon svg { width: 20px; height: 20px; stroke: var(--sky); fill: none; stroke-width: 1.5; }
+  .fr-txt { flex: 1; margin-bottom: 1.6rem; }
+  .fr-tag { font-size: 0.68rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--sky); margin-bottom: 0.6rem; display: block; }
+  .fr-name { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 400; color: var(--white); margin-bottom: 0.4rem; }
+  .fr-txt p { font-size: 0.86rem; color: rgba(241,245,249,0.8); line-height: 1.7; margin: 0; }
+  .fr-intro { color: rgba(241,245,249,0.8); font-size: 0.95rem; line-height: 1.8; margin-bottom: 2.5rem; }
+  .fr-btn { display: inline-block; padding: 0.9rem 2rem; border: 1px solid var(--sky); color: var(--sky); font-size: 0.82rem; letter-spacing: 0.08em; text-transform: uppercase; text-decoration: none; border-radius: 2px; transition: background 0.3s; margin-top: auto; }
+  .fr-btn:hover { background: rgba(56,189,248,0.1); }
+  @media (max-width: 900px) { .fr-card { padding: 2rem 1.5rem; } }
+</style>
+<section id="free-tools" class="fade-in" style="background:var(--navy); padding:4rem clamp(1.5rem, 5vw, 4rem) 2.5rem;">
   <div>
     <div class="section-label">Free Tools</div>
-    <h2 style="margin-bottom:2rem;">Board-ready tools, free to use</h2>
-    <ul style="list-style:none; padding:0; margin:0; display:grid; grid-template-columns:repeat(auto-fit, minmax(min(280px, 100%), 1fr)); gap:1.25rem; max-width:1100px;">
-      <li><a href="security-awareness-dashboard.html" style="display:block; padding:1.25rem; border:1px solid var(--border); border-radius:3px; text-decoration:none; color:inherit; transition:border-color 0.2s;"><span style="font-size:0.7rem; letter-spacing:0.15em; text-transform:uppercase; color:var(--sky);">Cyber Governance</span><h3 style="font-family:'Cormorant Garamond',serif; font-weight:400; font-size:1.2rem; margin:0.5rem 0; color:var(--white);">Security Awareness &amp; Culture Board Dashboard</h3><span style="font-size:0.78rem; color:var(--text-light);">Editable board dashboard on the SANS Security Awareness &amp; Culture Maturity Model&trade; — free download, runs in your browser</span></a></li>
-      <li><a href="board-reporting-health-check.html" style="display:block; padding:1.25rem; border:1px solid var(--border); border-radius:3px; text-decoration:none; color:inherit; transition:border-color 0.2s;"><span style="font-size:0.7rem; letter-spacing:0.15em; text-transform:uppercase; color:var(--sky);">Board Reporting</span><h3 style="font-family:'Cormorant Garamond',serif; font-weight:400; font-size:1.2rem; margin:0.5rem 0; color:var(--white);">Board Reporting Health Check</h3><span style="font-size:0.78rem; color:var(--text-light);">Free five-minute self-assessment — score your board reporting and see where the gaps are</span></a></li>
-    </ul>
+    <h2>Board-ready tools, free to use</h2>
+    <p class="fr-intro">Practical, no-cost tools for boards and executives — free, browser-based, nothing installed.</p>
+    <div class="fr-grid">
+    <div class="fr-card">
+      <div class="fr-badge">Free</div>
+      <div class="fr-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+      <div class="fr-txt">
+        <span class="fr-tag">Cyber Governance</span>
+        <div class="fr-name">Security Awareness &amp; Culture Board Dashboard</div>
+        <p>Measure your security culture on the SANS Security Awareness &amp; Culture Maturity Model&trade; and print a one-page board pack — your figures never leave your device.</p>
+      </div>
+      <a href="security-awareness-dashboard.html" class="fr-btn">Get the Dashboard &rarr;</a>
+    </div>
+    <div class="fr-card">
+      <div class="fr-badge">Free</div>
+      <div class="fr-icon"><svg viewBox="0 0 24 24"><path d="M9 11l3 3L22 4M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg></div>
+      <div class="fr-txt">
+        <span class="fr-tag">Board Reporting</span>
+        <div class="fr-name">Board Reporting Health Check</div>
+        <p>A short self-assessment for aged care and healthcare boards — score your current reporting in ten minutes and see exactly where the gaps are. Part of our <a href="aged-care-board-reporting.html" style="color:var(--sky); text-decoration:none;">board reporting &amp; board assurance services</a>.</p>
+      </div>
+      <a href="board-reporting-health-check.html" class="fr-btn">Get the Health Check &rarr;</a>
+    </div>
+    </div>
   </div>
 </section>
 

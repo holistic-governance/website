@@ -189,22 +189,6 @@
     .quote-more { display: inline-block; margin-top: 2.5rem; color: var(--sky); font-size: 0.85rem; font-weight: 500; letter-spacing: 0.06em; text-decoration: none; }
     .quote-more:hover { text-decoration: underline; }
 
-    /* FREE TOOLS CARDS */
-    .free-tools { background: var(--navy-mid); padding: 4rem 4rem; }
-    .fr-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(320px, 100%), 1fr)); gap: 1.5rem; max-width: 1100px; }
-    .fr-card { border: 1px solid var(--border-mid); border-radius: 3px; background: var(--navy); position: relative; overflow: hidden; padding: 2.5rem; display: flex; flex-direction: column; align-items: flex-start; text-align: left; }
-    .fr-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: var(--sky); }
-    .fr-badge { position: absolute; top: 1.4rem; right: -3.2rem; transform: rotate(45deg); background: var(--sky); color: var(--navy); font-size: 0.7rem; font-weight: 600; letter-spacing: 0.25em; padding: 0.35rem 3.5rem; text-transform: uppercase; }
-    .fr-icon { width: 42px; height: 42px; background: var(--sky-pale); border: 1px solid var(--border); border-radius: 2px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-bottom: 1.2rem; }
-    .fr-icon svg { width: 20px; height: 20px; stroke: var(--sky); fill: none; stroke-width: 1.5; }
-    .fr-txt { flex: 1; margin-bottom: 1.6rem; }
-    .fr-tag { font-size: 0.68rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--sky); margin-bottom: 0.6rem; display: block; }
-    .fr-name { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 400; color: var(--white); margin-bottom: 0.4rem; }
-    .fr-txt p { font-size: 0.86rem; color: rgba(241,245,249,0.8); line-height: 1.7; margin: 0; }
-    .fr-intro { color: rgba(241,245,249,0.8); font-size: 0.95rem; line-height: 1.8; margin-bottom: 2.5rem; }
-    .fr-btn { display: inline-block; padding: 0.9rem 2rem; border: 1px solid var(--sky); color: var(--sky); font-size: 0.82rem; letter-spacing: 0.08em; text-transform: uppercase; text-decoration: none; border-radius: 2px; transition: background 0.3s; margin-top: auto; }
-    .fr-btn:hover { background: rgba(56,189,248,0.1); }
-
     @media (max-width: 900px) {
       .hero { min-height: auto; padding: 8rem 1.5rem 4rem; }
       .hero-actions { flex-direction: column; gap: 1rem; }
@@ -219,8 +203,6 @@
       .credentials-bar { padding: 3rem 1.5rem; }
       .credentials-grid { grid-template-columns: repeat(2, 1fr); gap: 2rem; }
       .credential-item:not(:last-child)::after { display: none; }
-      .free-tools { padding: 4rem 1.5rem; }
-      .fr-card { padding: 2rem 1.5rem; }
       .collab-row { grid-template-columns: 1fr; gap: 0; }
       .collab-form-card { padding: 2rem 1.5rem; }
     }
@@ -256,13 +238,13 @@
     },
     "knowsAbout": [
       "Clinical Governance",
-      "Aged Care Governance",
+      { "@type": "Thing", "name": "Aged Care Governance", "url": "https://hg-au.com/topics/aged-care-board-responsibilities.md" },
       "Board Reporting",
-      "Board Assurance",
+      { "@type": "Thing", "name": "Board Assurance", "url": "https://hg-au.com/topics/aged-care-board-responsibilities.md" },
       "Healthcare Risk Management",
       "NSQHS Standards",
-      "Aged Care Quality Standards",
-      "AI Governance",
+      { "@type": "Thing", "name": "Aged Care Quality Standards", "url": "https://hg-au.com/topics/strengthened-aged-care-quality-standards.md" },
+      { "@type": "Thing", "name": "AI Governance", "url": "https://hg-au.com/topics/ai-governance-aged-care.md" },
       "Data Governance"
     ],
     "hasOfferCatalog": {
@@ -361,13 +343,6 @@
     </div>
   </div>
 </section>
-
-<!-- HG INTEL ANNOUNCEMENT -->
-<a href="ai-technology.html#hg-intel" style="display:block; text-align:center; padding:0.85rem 1.5rem; background:var(--navy-mid); border-top:1px solid var(--border); border-bottom:1px solid var(--border); text-decoration:none; font-size:0.82rem; letter-spacing:0.06em; color:var(--text-mid);">
-  <span style="color:var(--sky); text-transform:uppercase; font-size:0.7rem; letter-spacing:0.18em; margin-right:0.9rem;">Coming 2027</span>
-  <strong style="color:var(--white); font-weight:500;">HG Intel</strong> — a new healthcare governance intelligence platform
-  <span style="color:var(--sky); margin-left:0.9rem;">Register your interest &rarr;</span>
-</a>
 
 <section id="services" class="fade-in">
   <div class="section-label">Our Focus</div>
@@ -474,6 +449,13 @@
   </div>
 </div>
 
+<!-- HG INTEL ANNOUNCEMENT -->
+<a href="ai-technology.html#hg-intel" style="display:block; text-align:center; padding:0.85rem 1.5rem; background:var(--navy-mid); border-top:1px solid var(--border); border-bottom:1px solid var(--border); text-decoration:none; font-size:0.82rem; letter-spacing:0.06em; color:var(--text-mid);">
+  <span style="color:var(--sky); text-transform:uppercase; font-size:0.7rem; letter-spacing:0.18em; margin-right:0.9rem;">Coming 2027</span>
+  <strong style="color:var(--white); font-weight:500;">HG Intel</strong> — a new healthcare governance intelligence platform
+  <span style="color:var(--sky); margin-left:0.9rem;">Register your interest &rarr;</span>
+</a>
+
 <!-- THE ASSURANCE BRIEFING -->
 <section class="fade-in" style="background:var(--navy); text-align:center; padding:6.5rem 4rem; border-top:1px solid var(--border); border-bottom:1px solid var(--border);">
   <div style="max-width:720px; margin:0 auto;">
@@ -483,35 +465,9 @@
   </div>
 </section>
 
-<!-- FREE TOOLS -->
-<section class="free-tools fade-in">
-  <div style="max-width:1100px;">
-  <div class="section-label">Free Tools</div>
-  <h2>Board-ready tools, free to use</h2>
-  <p class="fr-intro">Practical, no-cost tools for boards and executives — free, browser-based, nothing installed.</p>
-  <div class="fr-grid">
-  <div class="fr-card">
-    <div class="fr-badge">Free</div>
-    <div class="fr-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
-    <div class="fr-txt">
-      <span class="fr-tag">Cyber Governance</span>
-      <div class="fr-name">Security Awareness &amp; Culture Board Dashboard</div>
-      <p>Measure your security culture on the SANS Security Awareness &amp; Culture Maturity Model&trade; and print a one-page board pack — your figures never leave your device.</p>
-    </div>
-    <a href="security-awareness-dashboard.html" class="fr-btn">Get the Dashboard &rarr;</a>
-  </div>
-  <div class="fr-card">
-    <div class="fr-badge">Free</div>
-    <div class="fr-icon"><svg viewBox="0 0 24 24"><path d="M9 11l3 3L22 4M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg></div>
-    <div class="fr-txt">
-      <span class="fr-tag">Board Reporting</span>
-      <div class="fr-name">Board Reporting Health Check</div>
-      <p>A short self-assessment for aged care and healthcare boards — score your current reporting in ten minutes and see exactly where the gaps are. Part of our <a href="aged-care-board-reporting.html" style="color:var(--sky); text-decoration:none;">board reporting &amp; board assurance services</a>.</p>
-    </div>
-    <a href="board-reporting-health-check.html" class="fr-btn">Get the Health Check &rarr;</a>
-  </div>
-  </div>
-  </div>
+<!-- FREE TOOLS POINTER (tools live on resources.html#free-tools) -->
+<section class="fade-in" style="background:var(--navy-mid); text-align:center; padding:2.2rem 4rem; border-bottom:1px solid var(--border);">
+  <p style="margin:0; font-size:0.9rem; color:rgba(241,245,249,0.8); line-height:1.7;"><span style="font-size:0.68rem; letter-spacing:0.18em; text-transform:uppercase; color:var(--sky); margin-right:0.9rem;">Free Tools</span>Board-ready tools, free to use — the Security Awareness Dashboard and Board Reporting Health Check. <a href="resources.html#free-tools" style="color:var(--sky); text-decoration:none; font-weight:500;">Explore free tools &rarr;</a></p>
 </section>
 
 <section id="collaborate" class="fade-in">
