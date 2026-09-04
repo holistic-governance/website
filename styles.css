@@ -44,6 +44,13 @@ body { font-family: 'DM Sans', sans-serif; background: var(--navy); color: var(-
 .fade-in-delay-3 { transition-delay: 0.3s; }
 
 /* ── NAV ── */
+
+/* HG Intel launch announcement banner */
+.announce-banner{ position:fixed; top:0; left:0; right:0; z-index:101; display:flex; align-items:center; justify-content:center; gap:0.45rem; height:38px; padding:0 1rem; background:linear-gradient(90deg,#0577C7,#00B4FF); color:#ffffff; font-size:0.78rem; letter-spacing:0.06em; text-decoration:none; font-family:'DM Sans',sans-serif; white-space:nowrap; overflow:hidden; }
+.announce-banner strong{ font-weight:700; }
+.announce-banner .ab-go{ text-decoration:underline; text-underline-offset:3px; }
+.announce-banner + nav{ top:38px; }
+
 nav {
   position: fixed; top: 0; left: 0; right: 0; z-index: 100;
   display: flex; align-items: center; justify-content: space-between;
