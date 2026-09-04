@@ -2,12 +2,14 @@
 <!--
   THE ASSURANCE BRIEFING — series page (LIGHT brand, adopted 4 Aug 2026).
   The dark cinematic-bands version is recoverable at website commit b1d7692.
-  PRE-LAUNCH: robots is noindex; placeholders to fill at launch:
-    [TRAILER-YOUTUBE-ID]  — public trailer video ID
-    [PIN-EP1-URL]         — Pin Payments hosted payment page for Ep 1
-    [PIN-PASS-URL]        — Pin payment page for the annual pass
-    On go-live day: set each episode's "current as at" release date + 12-month access-end date in copy/terms
-  Then: flip robots to "index,follow", add to sitemap.xml, re-check the GST line in terms.
+  LIVE since 2026-09-04 (robots index,follow; in sitemap.xml). No trailer (no trailer block in body; .trailer* CSS is dormant, ready if a trailer is added later).
+    Stripe payment links (Live), wired 2026-09-04:
+    All briefings sold on a PRE-SALE model (delivery promise = "link emailed on release", see pricing + terms):
+      Ep 1 (Oct — Responsible person duties)  = buy.stripe.com/4gM8wR7VVbXK6ZT5bBbMQ01   [featured card + single pricing]
+      Ep 2 (Nov — Governing clinical AI)      = buy.stripe.com/dRm3cx6RR2na9817jJbMQ02   [violet slim card]
+      Ep 3 (Dec — Closed Loop Feedback)       = buy.stripe.com/cNi9AV3FF2nagAtfQfbMQ03   [pink slim card]
+      Pass (Annual)                           = buy.stripe.com/00w7sNekjf9W5VP47xbMQ00   [pricing]
+    Per-episode maintenance: on each release, promote the newest briefing to the featured card, demote the prior to a slim card, and set its "current as at" date.
   Source copy: hg-au/shared/brand/templates/briefings/assurance-briefing/ (canonical kit = PR #74).
 -->
 <html lang="en">
@@ -16,7 +18,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>The Assurance Briefing for Boards | Holistic Governance</title>
 <meta name="description" content="Monthly on-demand executive briefings for boards, CEOs and leadership teams in Australian healthcare — about 45 minutes, every claim cited to source." />
-<meta name="robots" content="noindex,nofollow" />
+<meta name="robots" content="index,follow" />
 <link rel="canonical" href="https://hg-au.com/assurance-briefing.html" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://hg-au.com/assurance-briefing.html" />
@@ -124,7 +126,8 @@
     .reg.fc[style*="right:22%;"]{ left: auto !important; right: 10px !important; top: 720px !important; animation: rideMR 7.5s -3s ease-in-out infinite alternate !important; }
     .reg.fc[style*="left:32%;"] { left: 10px !important; right: auto !important; top: 830px !important; animation: rideM 6.5s -5s ease-in-out infinite alternate !important; }
     /* catalogue: clean stack (option A) */
-    .feat { padding: 20px; gap: 14px; }
+    .feat { padding: 20px; gap: 14px; grid-template-columns: 1fr; }
+    .featside { min-width: 0; }
     .feat h3 { font-size: 21px; margin: 10px 0 6px; }
     .feat p { font-size: 12.5px; }
     .feat .meta { margin-top: 8px; font-size: 10px; }
@@ -244,18 +247,29 @@
 
   /* CATALOGUE — featured live episode + slim coming rows */
   .badge { display: inline-block; font-size: 10px; font-weight: 700; letter-spacing: 1.6px; text-transform: uppercase; padding: 6px 13px; border-radius: 999px; }
-  .badge.live { background: linear-gradient(100deg, #0577C7, #00B4FF); color: #fff; }
-  .badge.oct { background: #f5f3ff; color: var(--violet); border: 1px solid #ddd6fe; }
-  .badge.nov { background: #fdf2f8; color: var(--pink); border: 1px solid #fbcfe8; }
+  .badge.live { background: #eff6ff; color: #0577C7; border: 1px solid #bfdbfe; }
+  .badge.violet { background: #f5f3ff; color: var(--violet); border: 1px solid #ddd6fe; }
+  .badge.pink { background: #fdf2f8; color: var(--pink); border: 1px solid #fbcfe8; }
   .feat { background: #fff; border: 1px solid var(--line); border-radius: 20px; box-shadow: 0 14px 40px rgba(15,23,42,.08); padding: 30px; display: grid; grid-template-columns: 1fr auto; gap: 26px; align-items: center; margin-bottom: 14px; }
   @media (max-width: 720px){ .feat{grid-template-columns:1fr} }
   .feat h3 { font-family: 'Cormorant Garamond', serif; font-size: 26px; font-weight: 500; margin: 10px 0 8px; }
   .feat p { font-size: 13px; line-height: 1.65; color: #475569; max-width: 620px; }
   .feat .meta { font-size: 10.5px; letter-spacing: 1.3px; text-transform: uppercase; color: var(--sky); margin-top: 10px; }
   .feat .meta .x { color: var(--orange); }
+  .feat .flead { font-size: 14.5px; font-weight: 600; color: #0f172a; line-height: 1.5; margin: 0 0 10px; }
+  .featside { display: flex; flex-direction: column; gap: 12px; min-width: 232px; align-self: center; }
+  .incl { background: linear-gradient(180deg, #f8fbff, #eef6ff); border: 1px solid #dbeafe; border-radius: 16px; padding: 16px 18px; }
+  .incl .inclh { font-size: 10px; font-weight: 700; letter-spacing: 1.6px; text-transform: uppercase; color: #0577C7; margin-bottom: 11px; }
+  .incl ul { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+  .incl li { font-size: 12.5px; color: #334155; line-height: 1.4; padding-left: 22px; position: relative; }
+  .incl li::before { content: "✓"; position: absolute; left: 0; color: #0577C7; font-weight: 700; }
+  .featside .buy { width: 100%; text-align: center; }
+  .passx { font-size: 11.5px; color: #64748b; text-align: center; text-decoration: none; }
+  .passx:hover { color: #0577C7; text-decoration: underline; }
   .slim { background: #fff; border: 1px solid var(--line); border-radius: 14px; padding: 16px 22px; display: flex; align-items: center; gap: 16px; margin-bottom: 10px; }
   .slim h4 { font-family: 'Cormorant Garamond', serif; font-size: 18px; font-weight: 500; flex: 1; }
   .slim .soonlbl { font-size: 12px; font-weight: 600; color: var(--soft); white-space: nowrap; }
+  .slim h4 .subh { display: block; font-family: 'Inter', sans-serif; font-size: 12px; font-weight: 400; color: #64748b; margin-top: 4px; line-height: 1.4; }
   @media (max-width: 560px){ .slim{flex-wrap:wrap} }
   .buy { display: inline-block; text-align: center; background: var(--ink); color: #fff; font-weight: 600; font-size: 13px; padding: 12px 22px; border-radius: 999px; text-decoration: none; cursor: pointer; border: none; font-family: 'Inter', sans-serif; }
 
@@ -453,8 +467,8 @@
   </svg>
   <div class="scopy">
     <h2>Sharp, current, and ready when <em>you</em> are.</h2>
-    <p>Approximately 45 minutes each. At least one new briefing a month. And every briefing is
-    dated to its release — current as at that day, with a fresh one each month as the rules move.</p>
+    <p>Approximately 45 minutes each, on demand. A new briefing each month, dated to its release
+    and current as at that day.</p>
   </div>
 </section>
 
@@ -469,21 +483,35 @@
   <h2>The <em>catalogue</em></h2>
   <div class="feat">
     <div>
-      <span class="badge live">September 2026</span>
+      <span class="badge live">October 2026</span>
       <h3>Responsible person duties under the Aged Care Act 2024</h3>
-      <p>The Act attaches direct, non-delegable duties to providers (s 179) and to responsible
-      persons — board directors and executive decision-makers (s 180) — backed by a civil-penalty
+      <p class="flead">Who is personally on the hook under the Act, and what discharging the duty actually looks like.</p>
+      <p>The Act attaches direct, non-delegable duties to providers under s 179, and to responsible
+      persons (board directors and executive decision-makers) under s 180, backed by a civil-penalty
       regime. And "responsible person" reaches past the boardroom: s 12 also names the registered
       nurse responsible for the overall management of nursing services, so directors of nursing and
-      senior clinical leaders are captured too. What due diligence actually requires of a director,
-      who counts as a responsible person, and the questions, evidence and cadence that show the duty
-      is being discharged in your board pack and quality committee.</p>
-      <p class="meta">Approx. 45 min</p>
+      senior clinical leaders are captured too. What due diligence actually requires of a director
+      as a responsible person, and what that status means in practice for directors of nursing and
+      senior clinical leaders, from suitability assessment to the clinical evidence the board depends
+      on, plus the questions, evidence and cadence that show the duty is being discharged in your
+      board pack and quality committee.</p>
     </div>
-    <a class="buy" href="[PIN-EP1-URL]" style="background:#fff;color:#0577C7;border:1.5px solid #0577C7;" onclick="gtag('event','begin_checkout',{item_name:'Assurance Briefing Ep 1'});">Buy — A$99 &rarr;</a>
+    <div class="featside">
+      <div class="incl">
+        <div class="inclh">What's included</div>
+        <ul>
+          <li>~45-min video briefing</li>
+          <li>Fully cited PDF pack</li>
+          <li>12 months' streaming access</li>
+          <li>Current as at Oct 2026</li>
+        </ul>
+      </div>
+      <a class="buy" href="https://buy.stripe.com/4gM8wR7VVbXK6ZT5bBbMQ01" style="background:#fff;color:#0577C7;border:1.5px solid #0577C7;" onclick="gtag('event','begin_checkout',{item_name:'Assurance Briefing Ep 1'});">Buy A$99 &rarr;</a>
+      <a class="passx" href="#pricing">or get all year for A$599 &rarr;</a>
+    </div>
   </div>
-  <div class="slim"><span class="badge oct">Oct 2026</span><h4>Governing clinical AI: the regulatory map</h4><span class="soonlbl">Coming next</span></div>
-  <div class="slim"><span class="badge nov">Nov 2026</span><h4>Closed Loop Feedback</h4><span class="soonlbl">Coming soon</span></div>
+  <div class="slim"><span class="badge violet">Nov 2026</span><h4>Governing clinical AI: the regulatory map<span class="subh">Who's accountable when the algorithm gets it wrong? Mapping the rules that already apply.</span></h4><a class="buy" href="https://buy.stripe.com/dRm3cx6RR2na9817jJbMQ02" style="padding:9px 18px;font-size:12px;background:#fff;color:#8b5cf6;border:1.5px solid #8b5cf6;" onclick="gtag('event','begin_checkout',{item_name:'Assurance Briefing Ep 2'});">Buy A$99 &rarr;</a></div>
+  <div class="slim"><span class="badge pink">Dec 2026</span><h4>Closed Loop Feedback: evidencing continuous improvement<span class="subh">Did we actually fix it? Closing the governance loop.</span></h4><a class="buy" href="https://buy.stripe.com/cNi9AV3FF2nagAtfQfbMQ03" style="padding:9px 18px;font-size:12px;background:#fff;color:#ec4899;border:1.5px solid #ec4899;" onclick="gtag('event','begin_checkout',{item_name:'Assurance Briefing Ep 3'});">Buy A$99 &rarr;</a></div>
 </div>
 </div></section>
 
@@ -501,18 +529,18 @@
       <div style="padding:36px;text-align:center;">
         <div class="tn" style="color:#0ea5e9;">Single briefing</div>
         <div class="tp">A$99</div>
-        <p style="font-size:12.5px;color:#475569;margin-bottom:18px;">One briefing — 12 months' streaming access, PDF yours to keep.</p>
-        <a class="buy" href="[PIN-EP1-URL]" onclick="gtag('event','begin_checkout',{item_name:'Assurance Briefing single'});">Buy a briefing &rarr;</a>
+        <p style="font-size:12.5px;color:#475569;margin-bottom:18px;">Any single briefing — 12 months' streaming access, PDF yours to keep. Pick one from the catalogue.</p>
+        <a class="buy" href="#catalogue" style="background:linear-gradient(100deg,#38BDF8,#00B4FF);border:none;box-shadow:0 8px 22px rgba(0,180,255,.28);" onclick="gtag('event','select_item',{item_list_name:'Single briefing'});">Choose a briefing &rarr;</a>
       </div>
       <div style="padding:36px;text-align:center;background:linear-gradient(120deg,#FFFDFB,#FFF7EC 58%,#FFEDD2 135%);position:relative;">
         <div class="tn" style="color:#E0670A;">Annual pass</div>
         <div class="tp" style="background:linear-gradient(100deg,#F2820A,#FF9D2E);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;">A$599</div>
         <p style="font-size:12.5px;color:#475569;margin-bottom:18px;">Every briefing for 12 months — minimum 1 a month.</p>
-        <a class="buy" href="[PIN-PASS-URL]" onclick="gtag('event','begin_checkout',{item_name:'Assurance Briefing annual pass'});">Get the pass &rarr;</a>
+        <a class="buy" href="https://buy.stripe.com/00w7sNekjf9W5VP47xbMQ00" style="background:linear-gradient(100deg,#F2820A,#FF9D2E);border:none;box-shadow:0 8px 22px rgba(242,130,10,.30);" onclick="gtag('event','begin_checkout',{item_name:'Assurance Briefing annual pass'});">Get the pass &rarr;</a>
       </div>
     </div>
     <div style="border-top:1px solid #eef2f7;padding:18px 26px;display:flex;gap:22px;justify-content:center;flex-wrap:wrap;font-size:12px;color:#64748b;">
-      <span>&#10003; Every claim cited</span><span>&#10003; PDF yours to keep</span><span>&#10003; Link by email in minutes</span><span>&#10003; Current as at release</span>
+      <span>&#10003; Every claim cited</span><span>&#10003; PDF yours to keep</span><span>&#10003; Link emailed on release</span><span>&#10003; Current as at release</span>
     </div>
   </div>
   <p class="invoice" style="margin-top:20px;">Organisations can pay the annual pass by invoice and bank transfer —
@@ -593,9 +621,10 @@
         episode and at checkout. Regulation changes over time, so we release a new briefing at least
         monthly; a briefing reflects the position at its release and is decision-support, not a
         substitute for current professional advice.</li>
-      <li><strong>Delivery:</strong> your access link arrives by email, normally within minutes of
-        payment. No link within 24 hours? Email
-        <a href="mailto:info@hg-au.com">info@hg-au.com</a> and we'll fix it.</li>
+      <li><strong>Delivery:</strong> for a briefing that has already been released, your access link
+        arrives by email shortly after payment. For a briefing you buy ahead of its release — or with
+        the annual pass — we email your link when that briefing goes live. If your link hasn't arrived
+        when you'd expect it, email <a href="mailto:info@hg-au.com">info@hg-au.com</a> and we'll fix it.</li>
       <li><strong>Refunds:</strong> if the briefing doesn't play, we'll fix it or refund you.
         Nothing in these terms limits your rights under the Australian Consumer Law.</li>
       <li><strong>Licence:</strong> one licence per purchase — access is for you and your
@@ -609,19 +638,18 @@
   </div>
   <div class="panel">
     <h2>About the presenter</h2>
-    <p>Naomi Alefelder is the founder of Holistic Governance — RN, MBA, AICD Foundations, Lead
-    Auditor (Exemplar Global). Holistic Governance partners with Australian health and aged-care
-    organisations on governance — grounded in clinical practice, board director experience and
-    regulatory expertise.</p>
+    <p>Naomi Alefelder is the founder of Holistic Governance, a governance consultancy for
+    organisations across Australia's regulated care sectors. A Registered Nurse, MBA, AICD
+    Foundations graduate and Exemplar Global Lead Auditor, she pairs frontline clinical experience
+    with board-level oversight to turn complex regulatory obligations into governance organisations
+    can action and evidence. She is also building a governance-technology start-up, scheduled for release in 2027.</p>
     <a class="buy" href="about.html#naomi" style="margin-top:18px;background:linear-gradient(135deg,#0577C7,#00B4FF);color:#fff;">Read more about Naomi &rarr;</a>
   </div>
 </div></section>
 
 <p class="fineprint">The Assurance Briefing is general information and decision support only —
 not legal or clinical advice. Legislative references are current as at each episode's recorded
-date; verify against the current consolidated law at
-<a href="https://www.legislation.gov.au" target="_blank" rel="noopener">legislation.gov.au</a>
-before acting.</p>
+date; verify against the relevant current law and regulator guidance before acting.</p>
 
 <script>
   // draw the regulator map when it scrolls into view
