@@ -485,7 +485,7 @@ ${JSON.stringify(breadcrumb, null, 2)}
 </head>
 <body>
 
-<a class="announce-banner" href="/ai-technology.html#hg-intel"><strong>HG Intel</strong> — our healthcare governance intelligence platform is launching in 2027 <span class="ab-go">Register your interest &rarr;</span></a>
+<a class="announce-banner" href="/ai-technology.html#hg-intel"><strong>HG Intel</strong> — <span class="ab-full">our healthcare governance intelligence platform is </span>launching in 2027 <span class="ab-go">Register your interest &rarr;</span></a>
 <nav>
   <a href="/" class="logo"><img src="../logo-hg-trimmed.png" alt="Holistic Governance" width="351" height="524"><span class="logo-name">Holistic <span>Governance</span></span></a>
   <button class="hamburger" onclick="this.nextElementSibling.classList.toggle('open')">&#9776;</button>
