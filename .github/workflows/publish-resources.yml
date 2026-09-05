@@ -1,11 +1,11 @@
 name: Publish resources to website
 
+# Triggered only by the dashboard's "Publish to website" button, which sends the
+# full resource list in the dispatch payload. There is no scheduled run: the
+# dashboard API sits behind IAP, so CI cannot pull the list itself.
 on:
   repository_dispatch:
     types: [resources_published]
-  schedule:
-    - cron: '0 */6 * * *'
-  workflow_dispatch:
 
 concurrency:
   group: publish-resources
@@ -21,8 +21,12 @@ jobs:
       - uses: actions/setup-node@v7
         with:
           node-version: '20'
+      - name: Write resources payload to file
+        env:
+          RESOURCES_JSON: ${{ toJson(github.event.client_payload.resources) }}
+        run: printf '%s' "$RESOURCES_JSON" > "$RUNNER_TEMP/resources.json"
       - name: Build resources HTML + JSON-LD
-        run: node build-resources.js
+        run: node build-resources.js "$RUNNER_TEMP/resources.json"
       - name: Commit changes if any
         run: |
           git config user.name "github-actions[bot]"

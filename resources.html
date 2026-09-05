@@ -1097,7 +1097,7 @@
     <p>No resources match the selected filters. Try a different combination.</p>
   </div>
 
-  <!-- Resource grid (server-rendered at build time for AI crawlers; JS overwrites with live data for human filtering) -->
+  <!-- Resource grid (server-rendered at build time for AI crawlers; JS re-renders from embedded data for human filtering) -->
   <!-- RESOURCES_GRID_START -->
 <div class="resources-grid" id="resourcesGrid">
 <div class="resource-card">
@@ -1750,7 +1750,8 @@ Find the latest cyber security advice, guidance and publications</p>
 <script>
 var API_BASE = 'https://dashboard-pkltzbmtea-ts.a.run.app';
 
-var FALLBACK = [
+/* RESOURCES_DATA_START */
+var RESOURCES = [
   {"title":"National Safety and Quality Health Service (NSQHS) Standards","description":"The eight NSQHS Standards provide a nationally consistent framework for safety and quality in health service organisations. Mandatory for accreditation.","type":"Standard","sectors":["Hospital","Governance"],"url":"https://www.safetyandquality.gov.au/standards/nsqhs-standards","source":"Australian Commission on Safety and Quality in Health Care"},
   {"title":"Clinical Care Standards","description":"Evidence-based statements describing the care patients should be offered for specific clinical conditions. Designed to reduce unwarranted variation.","type":"Standard","sectors":["Hospital"],"url":"https://www.safetyandquality.gov.au/standards/clinical-care-standards","source":"Australian Commission on Safety and Quality in Health Care"},
   {"title":"NDIS Practice Standards","description":"Quality standards for NDIS providers covering rights and responsibilities, governance, service delivery, and the service environment.","type":"Standard","sectors":["Governance"],"url":"https://www.ndiscommission.gov.au/rules-and-standards/ndis-practice-standards","source":"NDIS Quality and Safeguards Commission"},
@@ -1794,6 +1795,7 @@ var FALLBACK = [
   {"title":"Guidelines for Cyber Security Roles","description":"ASD\u2019s guidelines defining cyber security roles and responsibilities within organisations \u2014 including the role of boards and executives in cyber security governance, oversight, and risk management.","type":"Framework","sectors":["Board Director","Cybersecurity","Governance"],"url":"https://www.cyber.gov.au/business-government/asds-cyber-security-frameworks/ism/cyber-security-guidelines/guidelines-for-cyber-security-roles","source":"Australian Signals Directorate (ASD)"},
   {"title":"ASD Essential Eight Cyber Security Framework","description":"The Australian Signals Directorate\u2019s Essential Eight mitigation strategies \u2014 the baseline cyber security framework recommended for all Australian organisations. Covers application control, patching, macro restrictions, user application hardening, admin privilege restriction, multi-factor authentication, backups, and operating system hardening.","type":"Framework","sectors":["Board Director","Cybersecurity","Digital Health","Governance"],"url":"https://www.cyber.gov.au/business-government/asds-cyber-security-frameworks/essential-eight","source":"Australian Signals Directorate (ASD)"}
 ];
+/* RESOURCES_DATA_END */
 
 var SECTORS = ['All', 'Aged Care', 'Board Director', 'Cybersecurity', 'Digital Health', 'Governance', 'Hospital', 'Support at Home'];
 var TYPES = ['Standard', 'Framework', 'Regulatory'];
@@ -1812,17 +1814,10 @@ var activeType = '';
 var INITIAL_COUNT = 6;
 var showAll = false;
 
-// Fetch resources from dashboard API, fall back to embedded data
-fetch(API_BASE + '/api/holistic-governance/resources')
-  .then(function(r) { return r.json(); })
-  .then(function(data) {
-    allResources = data && data.length ? data : FALLBACK;
-    onLoaded();
-  })
-  .catch(function() {
-    allResources = FALLBACK;
-    onLoaded();
-  });
+// Resource data is embedded at publish time (build-resources.js). The
+// dashboard API sits behind IAP, so the public site cannot fetch it live.
+allResources = RESOURCES;
+onLoaded();
 
 function onLoaded() {
   document.getElementById('loadingState').style.display = 'none';

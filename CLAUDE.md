@@ -15,8 +15,10 @@ pages inline page-specific `<style>`. Brand: navy editorial, Cormorant Garamond 
   `alsoPublishedIn: Publication | YYYY-MM-DD | https://url` (multiple entries split with ` ;; `) renders a
   "Published in" note under the byline and adds JSON-LD `sameAs`; also hand-add the piece to the
   "In The Press" band on `resources.html` (green accent) + About "Featured In" list line in consultant block and the article's llms.txt/llms-full.txt entries.
-- `build-resources.js` — pulls resources from the dashboard API and injects into `resources.html`
-  **between markers only** (`<!-- RESOURCES_GRID_START/END -->`, `<!-- RESOURCES_JSONLD_START/END -->`).
+- `build-resources.js` — takes the resource list as a JSON file (sent by the dashboard's "Publish to
+  website" button via `repository_dispatch` payload — the dashboard API is behind IAP, so nothing can
+  fetch it) and injects into `resources.html` **between markers only** (`<!-- RESOURCES_GRID_START/END -->`,
+  `<!-- RESOURCES_JSONLD_START/END -->`, `/* RESOURCES_DATA_START/END */`).
   Hand-edit `resources.html` ONLY outside those marker regions or your change is overwritten on next build.
 
 ## Backend AI & SEO discoverability (how we do discoverability here)

@@ -1,9 +1,10 @@
 const fs = require('fs');
 const path = require('path');
-const https = require('https');
 
 const SITE_URL = 'https://hg-au.com';
-const API_URL = process.env.DASHBOARD_API_URL || 'https://app.hg-au.com/api/holistic-governance/resources';
+// The resource list arrives as a file written from the repository_dispatch
+// payload (the dashboard API is behind IAP, so it cannot be fetched from CI).
+const RESOURCES_FILE = process.argv[2] || process.env.RESOURCES_FILE;
 const HTML_PATH = path.join(__dirname, 'resources.html');
 
 const TYPE_ICONS = {
@@ -24,19 +25,6 @@ function escapeHtml(s) {
 }
 
 function escapeAttr(s) { return escapeHtml(s); }
-
-function fetchJson(url) {
-  return new Promise((resolve, reject) => {
-    https.get(url, { timeout: 20000 }, (res) => {
-      if (res.statusCode !== 200) return reject(new Error(`${url} returned ${res.statusCode}`));
-      let data = '';
-      res.on('data', (c) => data += c);
-      res.on('end', () => {
-        try { resolve(JSON.parse(data)); } catch (e) { reject(e); }
-      });
-    }).on('error', reject).on('timeout', function () { this.destroy(new Error('timeout')); });
-  });
-}
 
 function renderCard(r) {
   const icon = TYPE_ICONS[r.type] || TYPE_ICONS['Standard'];
@@ -95,12 +83,18 @@ function replaceBetweenMarkers(html, startMarker, endMarker, replacement) {
 }
 
 async function main() {
-  console.log(`[build-resources] fetching ${API_URL}`);
+  console.log(`[build-resources] reading ${RESOURCES_FILE}`);
   let resources;
+  if (!RESOURCES_FILE) {
+    console.error('[build-resources] no resources file given. This build runs from the');
+    console.error('dashboard "Publish to website" button, which sends the resource list');
+    console.error('in the repository_dispatch payload. Usage: node build-resources.js <file.json>');
+    process.exit(1);
+  }
   try {
-    resources = await fetchJson(API_URL);
+    resources = JSON.parse(fs.readFileSync(RESOURCES_FILE, 'utf-8'));
   } catch (e) {
-    console.error(`[build-resources] fetch failed: ${e.message}`);
+    console.error(`[build-resources] could not read ${RESOURCES_FILE}: ${e.message}`);
     process.exit(1);
   }
   if (!Array.isArray(resources)) {
@@ -126,6 +120,18 @@ async function main() {
     '<!-- RESOURCES_JSONLD_START -->',
     '<!-- RESOURCES_JSONLD_END -->',
     jsonLd
+  );
+
+  // Embedded copy drives the client-side sector/type filters. \u003c-escape so
+  // no resource text can close the surrounding <script> tag.
+  const dataJs = 'var RESOURCES = [\n' + sorted
+    .map((r) => '  ' + JSON.stringify(r).replace(/</g, '\\u003c'))
+    .join(',\n') + '\n];';
+  html = replaceBetweenMarkers(
+    html,
+    '/* RESOURCES_DATA_START */',
+    '/* RESOURCES_DATA_END */',
+    dataJs
   );
 
   fs.writeFileSync(HTML_PATH, html);
