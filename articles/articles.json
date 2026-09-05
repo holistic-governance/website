@@ -18,7 +18,8 @@
       }
     ],
     "topics": [
-      "acqs-accreditation-audit"
+      "acqs-accreditation-audit",
+      "ndis-provider-audits-certification"
     ]
   },
   {
@@ -33,7 +34,8 @@
     "metaDescription": "What \"AI guardrails\" actually means — the two meanings that survive scrutiny, documented failures, and a five-question test for small and medium organisations.",
     "ogImage": "og-image-v3.png",
     "topics": [
-      "ai-governance-aged-care"
+      "ai-governance-aged-care",
+      "ai-guardrails"
     ]
   },
   {
@@ -50,7 +52,8 @@
     "topics": [
       "ai-governance-aged-care",
       "aged-care-act-2024",
-      "strengthened-aged-care-quality-standards"
+      "strengthened-aged-care-quality-standards",
+      "clinical-ai-governance"
     ]
   },
   {

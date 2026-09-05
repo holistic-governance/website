@@ -6,7 +6,7 @@ category: AI Governance
 featured: false
 summary: AI is already inside most aged care organisations — in scribes, rostering tools, chatbots and the features switched on inside software you already own. What providers are missing is not enthusiasm but governance. A practical framework for governing AI under the Aged Care Act 2024 and the Strengthened Quality Standards, in eight steps a provider can actually run.
 metaDescription: How aged care providers govern AI under the Aged Care Act 2024 and Strengthened Quality Standards — an eight-step framework any provider can run.
-topics: ai-governance-aged-care, aged-care-act-2024, strengthened-aged-care-quality-standards
+topics: ai-governance-aged-care, aged-care-act-2024, strengthened-aged-care-quality-standards, clinical-ai-governance
 ---
 
 AI is already inside most aged care organisations — whether or not anyone decided it should be. Documentation assistants and AI scribes, rostering optimisation, chatbots on the website, analytics features switched on inside clinical and care management software you already own: each is an AI use, and each carries risk that existing policies were never written to cover. What most providers are missing is not enthusiasm. It is governance.

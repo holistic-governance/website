@@ -49,6 +49,16 @@ for (const src of ['llms.txt', 'llms-full.txt']) {
   }
 }
 
+// 5. Staleness nudge: dossiers carry a lastReviewed date; flag any older than 6 months
+const STALE_DAYS = 180;
+for (const f of fs.readdirSync(path.join(__dirname, 'topics')).filter(f => f.endsWith('.md'))) {
+  const head = fs.readFileSync(path.join(__dirname, 'topics', f), 'utf-8').slice(0, 2000);
+  const m = head.match(/^lastReviewed:\s*(\d{4}-\d{2}-\d{2})/m);
+  if (!m) continue;
+  const age = Math.floor((Date.now() - new Date(m[1]).getTime()) / 86400000);
+  if (age > STALE_DAYS) console.warn(`[STALE] topics/${f} lastReviewed ${m[1]} (${age} days ago) — due for SME re-review`);
+}
+
 if (problems.length) {
   const tag = warnOnly ? 'WARN' : 'DRIFT';
   for (const p of problems) console.error(`[${tag}] ${p}`);
