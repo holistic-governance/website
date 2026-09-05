@@ -803,6 +803,7 @@ date; verify against the relevant current law and regulator guidance before acti
     // VERSION D: cards hug the edges (open centre), many flowing willow strands
     var SIDE = [-1, 1, -1, 1, -1, 1, -1];
     var MAG  = [0.55, 0.60, 0.85, 1.0, 1.0, 0.85, 0.60];  // lens: widest mid-height
+    var ROWOFF = [0, 0, 0, 0, 0, -18, 0];  // per-card row nudge, px (Aged Care Act sits higher)
     var PALETTE = ['#0ea5e9', '#8b5cf6', '#ec4899', '#10b981', '#f97316', '#7c3aed', '#00B4FF'];
 
     function clearSvg() { while (svg.firstChild) svg.removeChild(svg.firstChild); }
@@ -815,7 +816,7 @@ date; verify against the relevant current law and regulator guidance before acti
       var rowGap = 76;
 
       // row centre for each card (positions finalised after the curves exist)
-      var rows = cards.map(function (c, i) { return topY + i * rowGap + 24; });
+      var rows = cards.map(function (c, i) { return topY + i * rowGap + 24 + (ROWOFF[i] || 0); });
       var lastBottom = rows[rows.length - 1] + 30;
       var H = lastBottom + 110;
       mb.style.height = H + 'px';
