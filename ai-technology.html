@@ -383,7 +383,7 @@
             msg.textContent = 'Please enter a valid email address.';
             msg.style.color = '#f87171'; msg.style.display = 'block'; return;
           }
-          fetch('https://dashboard-pkltzbmtea-ts.a.run.app/api/subscribe', {
+          fetch('https://app.hg-au.com/api/subscribe', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ email: email, source: 'hg-intel' })

@@ -606,7 +606,7 @@ async function submitCollabForm() {
   var btn = document.getElementById('collabSubmit');
   btn.disabled = true; btn.textContent = 'Sending\u2026';
   try {
-    var res = await fetch('https://dashboard-pkltzbmtea-ts.a.run.app/enquiry', {
+    var res = await fetch('https://app.hg-au.com/enquiry', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({

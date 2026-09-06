@@ -402,7 +402,7 @@
     try {
       var ctrl = new AbortController();
       var timer = setTimeout(function(){ ctrl.abort(); }, 8000);
-      var resp = await fetch('https://dashboard-pkltzbmtea-ts.a.run.app/enquiry', {
+      var resp = await fetch('https://app.hg-au.com/enquiry', {
         method: 'POST', headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(data), signal: ctrl.signal
       });
