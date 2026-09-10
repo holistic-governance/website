@@ -49,6 +49,8 @@
   .announce-banner a { color: #ffffff; text-decoration: none; }
   .announce-banner a.ab-name { text-decoration: underline; text-underline-offset: 3px; text-decoration-color: rgba(255,255,255,0.55); }
   .announce-banner .ab-go { text-decoration: underline; text-underline-offset: 3px; }
+  @media (max-width: 900px) { .announce-banner { font-size: 0.7rem; letter-spacing: 0.03em; gap: 0.35rem; padding: 0 0.75rem; } .announce-banner .ab-full { display: none; } }
+  @media (max-width: 350px) { .announce-banner { font-size: 0.62rem; letter-spacing: 0.02em; gap: 0.3rem; padding: 0 0.5rem; } }
 
   /* floating pill nav */
   .navwrap { position: sticky; top: 54px; z-index: 50; display: flex; justify-content: center; padding: 16px 20px 0; }
