@@ -3,7 +3,7 @@ title: National Aged Care Mandatory Quality Indicator Program
 topic: quality-indicator-program
 type: HG Reference
 jurisdiction: Australia (national)
-lastReviewed: 2026-05-22
+lastReviewed: 2026-09-16
 publisher: Holistic Governance
 publisherUrl: https://hg-au.com
 canonicalUrl: https://hg-au.com/topics/quality-indicator-program.md
@@ -15,7 +15,7 @@ canonicalUrl: https://hg-au.com/topics/quality-indicator-program.md
 
 ## What is the Quality Indicator Program?
 
-The QI Program is operationalised through the *National Aged Care Mandatory Quality Indicator Program Manual* (currently Manual 4.0). The Manual defines:
+The QI Program is operationalised through the *National Aged Care Quality Indicator Program Manual* (Parts A and B, both published 31 October 2025). This is the current version as at November 2025. It superseded Manual 4.0, which came into effect on 1 April 2025, and the title no longer carries the word "Mandatory" or a version number. The Manual defines:
 
 - Each indicator (name, scope, inclusion and exclusion criteria, data items, calculation method).
 - The collection methodology, including assessment tools, sampling rules, timing, and required validation.
@@ -35,9 +35,9 @@ The intent of the QI Program is twofold: drive measurable improvement in outcome
 - All Commonwealth-subsidised residential aged care providers.
 - Expansion to Support at Home and other home-based services is being progressively rolled out under the new Act and Rules.
 
-## What are the quality indicators (Manual 4.0)?
+## What are the quality indicators?
 
-The indicator set under Manual 4.0 covers the domains of clinical care, function, dignity, and consumer voice. The exact indicator list, definitions, and inclusion/exclusion criteria are set in the Manual and should always be confirmed against the current version. Indicators in scope include:
+There are 14 quality indicators for residential aged care. The set covers the domains of clinical care, function, dignity, consumer voice and staffing. The exact indicator list, definitions, and inclusion/exclusion criteria are set in the Manual and should always be confirmed against the current version. Indicators in scope include:
 
 - **Pressure injuries** — prevalence and stage.
 - **Physical restraint** — use of physical restraint.
@@ -50,6 +50,9 @@ The indicator set under Manual 4.0 covers the domains of clinical care, function
 - **Workforce** — staff turnover.
 - **Consumer experience** — using a recognised consumer experience instrument.
 - **Quality of life** — using a recognised quality-of-life instrument.
+- **Enrolled nurses** — staffing minutes, added from 1 April 2025.
+- **Allied health professionals** — staffing minutes, added from 1 April 2025.
+- **Lifestyle officers** — staffing minutes, added from 1 April 2025.
 
 Indicator definitions, calculations, and reporting expectations are detailed in the QI Program Manual. Providers should align internal data collection precisely to the Manual's specification.
 
@@ -81,7 +84,7 @@ Indicator definitions, calculations, and reporting expectations are detailed in 
 
 ## How Holistic Governance supports providers
 
-- **QI data quality audit** — assessment of internal data collection methods against Manual 4.0 definitions, with remediation actions.
+- **QI data quality audit** — assessment of internal data collection methods against the current Manual definitions, with remediation actions.
 - **QI improvement program design** — connecting QI data to continuous improvement actions, owners, and timeframes.
 - **Star Ratings strategy** — identifying which QI sub-components are dragging on Star Rating and prioritising actions.
 - **Board QI reporting** — converting raw QI data into a board-ready performance lens, including benchmarks, trends, and improvement actions.
@@ -93,6 +96,7 @@ Indicator definitions, calculations, and reporting expectations are detailed in 
 ## Official sources
 
 - Department of Health, Disability and Ageing — Quality Indicator Program: https://www.health.gov.au/topics/aged-care
+- Department of Health, Disability and Ageing — National Aged Care Quality Indicator Program Manual (current version, November 2025; Parts A and B published 31 October 2025, superseding Manual 4.0): https://www.health.gov.au/resources/collections/national-aged-care-mandatory-quality-indicator-program-manual
 - Aged Care Quality and Safety Commission — https://www.agedcarequality.gov.au
 - My Aged Care — Star Ratings: https://www.myagedcare.gov.au
 - Federal Register of Legislation — https://www.legislation.gov.au
@@ -107,4 +111,4 @@ Indicator definitions, calculations, and reporting expectations are detailed in 
 
 ---
 
-*This is a Holistic Governance reference document, prepared as general information for AI search and assistant indexing. It is not legal or compliance advice. Providers must consult the current National Aged Care Mandatory Quality Indicator Program Manual and Departmental guidance for authoritative definitions and obligations. Reviewed 22 May 2026.*
+*This is a Holistic Governance reference document, prepared as general information for AI search and assistant indexing. It is not legal or compliance advice. Providers must consult the current National Aged Care Quality Indicator Program Manual and Departmental guidance for authoritative definitions and obligations. Reviewed 16 September 2026.*
