@@ -1,5 +1,6 @@
 ---
 title: FHIR Interoperability: What Healthcare Leaders Need to Know
+seoTitle: FHIR Interoperability Explained
 date: 2024-12-18
 author: Naomi Alefelder
 category: Health Care

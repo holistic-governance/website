@@ -1,5 +1,6 @@
 ---
 title: How AI is Reshaping Competitive Intelligence in 2025
+seoTitle: AI and Competitive Intelligence
 date: 2025-01-20
 author: Naomi Alefelder
 category: Competitor Analytics

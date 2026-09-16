@@ -1,5 +1,6 @@
 ---
 title: Why Data Quality Is the Foundation of Every AI Initiative
+seoTitle: Data Quality: The Foundation of AI
 date: 2024-11-10
 author: Naomi Alefelder
 category: Data Governance

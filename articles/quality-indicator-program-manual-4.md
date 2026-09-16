@@ -1,5 +1,6 @@
 ---
 title: The Quality Indicator Program — Manual 4.0 Explained
+seoTitle: Quality Indicator Program: Manual 4.0
 date: 2024-11-22
 author: Naomi Alefelder
 category: Industry News

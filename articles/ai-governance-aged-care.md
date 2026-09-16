@@ -1,5 +1,6 @@
 ---
 title: AI Governance for Aged Care — A Provider's Practical Framework
+seoTitle: AI Governance for Aged Care Providers
 date: 2026-07-26
 author: Naomi Alefelder
 category: AI Governance

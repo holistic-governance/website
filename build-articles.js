@@ -155,6 +155,7 @@ function buildAll(articlesDir) {
     const meta = {
       slug,
       title: frontmatter.title,
+      seoTitle: frontmatter.seoTitle || '',
       date: frontmatter.date,
       dateModified: frontmatter.dateModified || frontmatter.date,
       author: frontmatter.author || 'Naomi Alefelder',
@@ -315,7 +316,8 @@ function extractCitations(body) {
 function renderArticlePage(meta, body, takeaways = []) {
   const bodyHtml = mdToHtml(body);
   const canonical = `${SITE_URL}/articles/${meta.slug}.html`;
-  const ogTitle = `${meta.title} | Holistic Governance`;
+  // seoTitle = short search/social title; the visible h1 always uses meta.title.
+  const ogTitle = `${meta.seoTitle || meta.title} | Holistic Governance`;
   // metaDescription = hand-tuned SEO text; falls back to the article summary.
   // Keep SEO copy in the markdown frontmatter, never in generated HTML.
   const description = meta.metaDescription || meta.summary || meta.title;

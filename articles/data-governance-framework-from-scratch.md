@@ -1,5 +1,6 @@
 ---
 title: Building a Data Governance Framework From Scratch
+seoTitle: Building a Data Governance Framework
 date: 2024-12-05
 author: Naomi Alefelder
 category: Data Governance

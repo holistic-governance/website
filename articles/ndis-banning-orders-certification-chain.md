@@ -1,12 +1,13 @@
 ---
 title: The design flaw behind the NDIS's first auditor bans
+seoTitle: The NDIS's First Auditor Bans
 date: 2026-08-14
 author: Naomi Alefelder
 category: Health Care
 featured: true
 alsoPublishedIn: Pearls and Irritations | 2026-08-24 | https://johnmenadue.com/post/2026/08/ndis-auditor-bans-shows-a-deeper-problem-with-provider-paid-audits/
 summary: NDIS providers find, choose and pay the auditor who judges them, a conflict wired into the scheme's design. The first banning orders against a consultant and an auditor show what that invites, and why the certification chain deserves scrutiny, not just two individuals. Aged care built it differently.
-metaDescription: The first NDIS banning orders against an auditor and consultant raise a bigger question about the certification chain, and how aged care's model differs as the new Act beds down.
+metaDescription: The first NDIS banning orders against an auditor and consultant raise a bigger question about the certification chain, and how aged care's model differs.
 topics: acqs-accreditation-audit, ndis-provider-audits-certification
 ---
 

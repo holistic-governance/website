@@ -1,5 +1,6 @@
 ---
 title: Post-Quantum Cryptography — ASD's New Vendor Questions: What Buyers and Software Vendors Need to Know
+seoTitle: ASD's Post-Quantum Vendor Questions
 date: 2026-07-24
 author: Naomi Alefelder
 category: Industry News

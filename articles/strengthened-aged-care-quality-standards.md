@@ -1,5 +1,6 @@
 ---
 title: Understanding the New Strengthened Aged Care Quality Standards
+seoTitle: Strengthened Aged Care Quality Standards
 date: 2025-02-15
 author: Naomi Alefelder
 category: Health Care

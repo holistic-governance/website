@@ -2,13 +2,14 @@
   {
     "slug": "ndis-banning-orders-certification-chain",
     "title": "The design flaw behind the NDIS's first auditor bans",
+    "seoTitle": "The NDIS's First Auditor Bans",
     "date": "2026-08-14",
     "dateModified": "2026-08-14",
     "author": "Naomi Alefelder",
     "category": "Health Care",
     "featured": true,
     "summary": "NDIS providers find, choose and pay the auditor who judges them, a conflict wired into the scheme's design. The first banning orders against a consultant and an auditor show what that invites, and why the certification chain deserves scrutiny, not just two individuals. Aged care built it differently.",
-    "metaDescription": "The first NDIS banning orders against an auditor and consultant raise a bigger question about the certification chain, and how aged care's model differs as the new Act beds down.",
+    "metaDescription": "The first NDIS banning orders against an auditor and consultant raise a bigger question about the certification chain, and how aged care's model differs.",
     "ogImage": "og-image-v3.png",
     "alsoPublishedIn": [
       {
@@ -25,13 +26,14 @@
   {
     "slug": "what-ai-guardrails-actually-mean",
     "title": "\"AI Guardrails\" — Everyone Says It. Almost Nobody Can Point at One.",
+    "seoTitle": "What AI Guardrails Actually Mean",
     "date": "2026-07-30",
     "dateModified": "2026-08-03",
     "author": "Naomi Alefelder",
     "category": "AI Governance",
     "featured": false,
     "summary": "\"Guardrails\" has become the most load-bearing word in AI — used by vendors, regulators and boards to mean anything from a sentence in a prompt to a legal obligation. We separate the two meanings that survive scrutiny from the marketing-washed middle, walk through documented cases where guardrails existed on paper and failed anyway, and set out what tangible, affordable guardrails actually look like for a small or medium organisation.",
-    "metaDescription": "What \"AI guardrails\" actually means — the two meanings that survive scrutiny, documented failures, and a five-question test for small and medium organisations.",
+    "metaDescription": "What \"AI guardrails\" actually means: the two meanings that survive scrutiny, documented failures, and a five-question test for small and medium organisations.",
     "ogImage": "og-image-v3.png",
     "topics": [
       "ai-governance-aged-care",
@@ -41,6 +43,7 @@
   {
     "slug": "ai-governance-aged-care",
     "title": "AI Governance for Aged Care — A Provider's Practical Framework",
+    "seoTitle": "AI Governance for Aged Care Providers",
     "date": "2026-07-26",
     "dateModified": "2026-07-26",
     "author": "Naomi Alefelder",
@@ -59,6 +62,7 @@
   {
     "slug": "asd-post-quantum-vendor-questions",
     "title": "Post-Quantum Cryptography — ASD's New Vendor Questions: What Buyers and Software Vendors Need to Know",
+    "seoTitle": "ASD's Post-Quantum Vendor Questions",
     "date": "2026-07-24",
     "dateModified": "2026-07-24",
     "author": "Naomi Alefelder",
@@ -71,6 +75,7 @@
   {
     "slug": "liquidity-standard-targeted-review",
     "title": "Targeted Review on the New Liquidity Standard — What Category 6 Providers Need to Know",
+    "seoTitle": "Liquidity Standard: Category 6 Providers",
     "date": "2026-07-02",
     "dateModified": "2026-07-26",
     "author": "Naomi Alefelder",
@@ -87,6 +92,7 @@
   {
     "slug": "reform-without-reporting",
     "title": "Reform Without Reporting — The Visibility Gap Six Months into the New Aged Care Act",
+    "seoTitle": "Reform Without Reporting",
     "date": "2026-05-23",
     "dateModified": "2026-07-26",
     "author": "Naomi Alefelder",
@@ -103,6 +109,7 @@
   {
     "slug": "strengthened-aged-care-quality-standards",
     "title": "Understanding the New Strengthened Aged Care Quality Standards",
+    "seoTitle": "Strengthened Aged Care Quality Standards",
     "date": "2025-02-15",
     "dateModified": "2025-02-15",
     "author": "Naomi Alefelder",
@@ -119,6 +126,7 @@
   {
     "slug": "ai-reshaping-competitive-intelligence",
     "title": "How AI is Reshaping Competitive Intelligence in 2025",
+    "seoTitle": "AI and Competitive Intelligence",
     "date": "2025-01-20",
     "dateModified": "2025-01-20",
     "author": "Naomi Alefelder",
@@ -131,6 +139,7 @@
   {
     "slug": "fhir-interoperability",
     "title": "FHIR Interoperability: What Healthcare Leaders Need to Know",
+    "seoTitle": "FHIR Interoperability Explained",
     "date": "2024-12-18",
     "dateModified": "2024-12-18",
     "author": "Naomi Alefelder",
@@ -143,6 +152,7 @@
   {
     "slug": "data-governance-framework-from-scratch",
     "title": "Building a Data Governance Framework From Scratch",
+    "seoTitle": "Building a Data Governance Framework",
     "date": "2024-12-05",
     "dateModified": "2024-12-05",
     "author": "Naomi Alefelder",
@@ -155,6 +165,7 @@
   {
     "slug": "quality-indicator-program-manual-4",
     "title": "The Quality Indicator Program — Manual 4.0 Explained",
+    "seoTitle": "Quality Indicator Program: Manual 4.0",
     "date": "2024-11-22",
     "dateModified": "2024-11-22",
     "author": "Naomi Alefelder",
@@ -170,6 +181,7 @@
   {
     "slug": "data-quality-foundation-of-ai",
     "title": "Why Data Quality Is the Foundation of Every AI Initiative",
+    "seoTitle": "Data Quality: The Foundation of AI",
     "date": "2024-11-10",
     "dateModified": "2024-11-10",
     "author": "Naomi Alefelder",
