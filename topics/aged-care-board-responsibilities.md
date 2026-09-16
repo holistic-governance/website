@@ -3,7 +3,7 @@ title: Board Responsibilities and Responsible Person Duties under the Aged Care 
 topic: aged-care-board-responsibilities
 type: HG Reference
 jurisdiction: Australia (national)
-lastReviewed: 2026-05-22
+lastReviewed: 2026-09-16
 publisher: Holistic Governance
 publisherUrl: https://hg-au.com
 canonicalUrl: https://hg-au.com/topics/aged-care-board-responsibilities.md
@@ -17,7 +17,7 @@ canonicalUrl: https://hg-au.com/topics/aged-care-board-responsibilities.md
 
 The Aged Care Act 2024 (commenced 1 November 2025) introduced two parallel statutory duties: a duty on the **registered provider** (section 179) and a duty on the **responsible person** (section 180). The responsible person duty attaches to individuals — board directors, trustees, committee members, the CEO, and senior executive decision-makers — and is non-delegable.
 
-The Act creates a **civil-penalty regime**, not a criminal offence. Maximum civil penalties scale with severity: a "serious failure" exposing individuals to risk of death or serious harm attracts up to 150 penalty units personally (~$49,500) or 1,000 penalty units for the provider entity (~$330,000). Where conduct results in death, serious injury or illness, maximums rise to 500 penalty units personally (~$165,000) and 4,800 penalty units for the provider (~$1.58 million). Penalty unit value: $330 (Crimes Act 1914 s 4AA, re-indexed 1 July annually — verify current value before external use).
+The Act creates a **civil-penalty regime**, not a criminal offence. Maximum civil penalties scale with severity: a "serious failure" exposing individuals to risk of death or serious harm attracts up to 150 penalty units personally (~$54,600) or 1,000 penalty units for the provider entity (~$364,000). Where conduct results in death, serious injury or illness, maximums rise to 500 penalty units personally (~$182,000) and 4,800 penalty units for the provider (~$1.75 million). Penalty unit value: $364 for conduct on or after 1 July 2026 (Crimes Act 1914 s 4AA; indexed each third 1 July, next on 1 July 2029, following the Crimes and Other Legislation Amendment (Omnibus No. 1) Act 2024 — verify current value before external use). Conduct before 1 July 2026 is calculated at the $330 value that applied at the time.
 
 The Act requires three shifts every director must internalise:
 - **From compliance to rights** — a rights-based framework places older people at the centre of every decision.
@@ -187,10 +187,10 @@ Civil penalties (per contravention) under sections 179 and 180:
 
 | Contravention type | Responsible person (individual) | Registered provider (entity) |
 |---|---|---|
-| **Serious failure** — conduct exposes individuals to risk of death or serious harm; involves significant failure or systematic pattern | **150 penalty units** (~$49,500) — s 180(4) | **1,000 penalty units** (~$330,000) — s 179(3)(b) |
-| **Death, serious injury or illness** — serious failure AND results in death, serious injury or illness | **500 penalty units** (~$165,000) — s 180(6) | **4,800 penalty units** (~$1.58 million) — s 179(5)(b) |
+| **Serious failure** — conduct exposes individuals to risk of death or serious harm; involves significant failure or systematic pattern | **150 penalty units** (~$54,600) — s 180(4) | **1,000 penalty units** (~$364,000) — s 179(3)(b) |
+| **Death, serious injury or illness** — serious failure AND results in death, serious injury or illness | **500 penalty units** (~$182,000) — s 180(6) | **4,800 penalty units** (~$1.75 million) — s 179(5)(b) |
 
-Penalty unit value: $330 (Crimes Act 1914 s 4AA), re-indexed 1 July annually. Verify the current value before external use.
+Penalty unit value: $364 for conduct on or after 1 July 2026 (Crimes Act 1914 s 4AA), indexed each third 1 July, next on 1 July 2029. Verify the current value before external use.
 
 **Other enforcement powers:**
 - **Banning orders** — the Commission can ban individuals from being involved in the provision of aged care services where suitability is compromised.
@@ -275,7 +275,7 @@ If you cannot answer these from the boardroom, the answers need to be on a futur
 - **Provider duty (s 179)** — the duty on the registered provider to ensure, so far as is reasonably practicable, that its conduct does not cause adverse effects to the health and safety of people receiving funded aged care.
 - **Responsible person duty (s 180)** — the personal due diligence duty on board members and executive decision-makers to ensure provider compliance with the provider duty.
 - **Reasonably practicable (s 179(2))** — judged against five factors: likelihood, harm, knowledge, available controls, and the Statement of Rights.
-- **Penalty unit (Crimes Act 1914 s 4AA)** — $330 as at 2026; re-indexed 1 July annually.
+- **Penalty unit (Crimes Act 1914 s 4AA)** — $364 for conduct on or after 1 July 2026 (previously $330); indexed each third 1 July, next on 1 July 2029.
 - **Quality Care Advisory Body (QCAB)** — statutory advisory body required for Category 5 and 6 providers under s 158(2).
 - **Consumer Advisory Body (CAB)** — statutory advisory body that providers in Category 5 and 6 must offer in writing every 12 months under s 158(4).
 - **Annual statement of compliance** — directors' annual statement covering operations, care quality, and financial standards, due by 31 October for the year to 30 June.

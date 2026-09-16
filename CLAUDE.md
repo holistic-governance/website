@@ -49,8 +49,9 @@ term. Put the value where crawlers and AI assistants read it and visitors don't 
 
 ## Guardrails (this is a regulated-sector brand)
 - **Never fabricate** legislation, section numbers, dates, or penalty figures. Source regulatory facts from the
-  verified `topics/*.md` (each cites the Act/Rules + a review date). Penalty unit = **$330 as at 2026**, re-indexed
-  1 July — always caveat "verify current value". Mark unknowns `VERIFY`.
+  verified `topics/*.md` (each cites the Act/Rules + a review date). Penalty unit = **$364** for conduct on or
+  after 1 July 2026 (was $330); s 4AA now indexes every third 1 July, so the next change is 1 July 2029 — still
+  always caveat "verify current value". Mark unknowns `VERIFY`.
 - **No overclaiming** — "supports assessment", never "guarantees compliance"; decision-support, not legal/clinical
   advice. Independent/advisory deliverables carry a disclaimer.
 - **Content = the QA gate.** Substantive changes to `topics/*.md`, standards copy, or regulatory claims should be
