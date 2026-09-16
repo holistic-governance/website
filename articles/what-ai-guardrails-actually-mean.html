@@ -18,7 +18,7 @@
   <meta property="og:image:width" content="2400" />
   <meta property="og:image:height" content="1260" />
   <meta property="article:published_time" content="2026-07-30" />
-  <meta property="article:modified_time" content="2026-08-03" />
+  <meta property="article:modified_time" content="2026-09-16" />
   <meta property="article:section" content="AI Governance" />
   <meta property="article:author" content="Naomi Alefelder" />
   <meta name="twitter:card" content="summary_large_image" />
@@ -103,7 +103,7 @@
     }
   },
   "datePublished": "2026-07-30",
-  "dateModified": "2026-08-03",
+  "dateModified": "2026-09-16",
   "mainEntityOfPage": "https://hg-au.com/articles/what-ai-guardrails-actually-mean.html",
   "articleSection": "AI Governance",
   "inLanguage": "en-AU",
@@ -271,7 +271,7 @@
   <div class="breadcrumb"><a href="/">Home</a> / <a href="../resources.html">Resources</a> / &quot;AI Guardrails&quot; — Everyone Says It. Almost Nobody Can Point at One.</div>
   <div class="article-tag">AI Governance</div>
   <h1>&quot;AI Guardrails&quot; — Everyone Says It. Almost Nobody Can Point at One.</h1>
-  <div class="article-meta"><span>30 July 2026</span> &middot; Updated 3 August 2026 &middot; Naomi Alefelder</div>
+  <div class="article-meta"><span>30 July 2026</span> &middot; Updated 16 September 2026 &middot; Naomi Alefelder</div>
   <aside class="key-takeaways" id="key-takeaways" aria-label="Key takeaways">
     <h2>Key takeaways</h2>
     <ul>
@@ -305,7 +305,9 @@
 <h2>The Australian healthcare specifics</h2>
 <p>Two more points from the Australian guidance deserve their own paragraphs, because they convert directly into things a provider should do.</p>
 <p><strong>Scope creep arrives by software update.</strong> The TGA and the Commission give closely parallel examples of the same failure mode; in the Commission's words, an ambient AI scribe that "adds recommended tests or treatments" to a consultation summary is a medical device subject to regulation. TGA guidance is hard-edged on the vendor side — features that change a device's intended purpose "must not be implemented" until regulatory approvals are in place. But the Commission's warning is aimed at the organisations and clinicians using the tool: "you may not be notified when these changes occur." A tool you assessed in March is not the tool you are running in September. Monitoring vendor updates for scope creep is not bureaucratic overhead; it is a named regulatory failure mode with a named procedural control.</p>
-<p><strong>The policy landscape has churned — check currency before you cite it.</strong> Australia's Voluntary AI Safety Standard, published in September 2024 with its ten voluntary guardrails, was superseded in October 2025 by the National AI Centre's Guidance for AI Adoption, built around six essential practices: decide who is accountable, understand impacts and plan accordingly, measure and manage risks, share essential information, test and monitor, and maintain human control. Notice what happened to the vocabulary: the current national guidance has largely retired "guardrails" in favour of named practices — and its two tiers (foundations guidance for organisations starting out; implementation guidance for complex or higher-risk use) are deliberately sized so that a smaller organisation is not asked to run an enterprise program. The separately <em>proposed</em> mandatory guardrails for high-risk AI were never enacted: the December 2025 National AI Plan set them aside in favour of existing laws and sector regulators, and in July 2026 the government moved again — standing up an Office of AI within the Department of the Prime Minister and Cabinet and announcing its intention to legislate Australian Standards for AI. If a consultant or vendor cites "the ten guardrails" as current Australian guidance, that is itself a currency test they have just failed.</p>
+<p><strong>The policy landscape has churned — check currency before you cite it.</strong> Australia's Voluntary AI Safety Standard, published in September 2024 with its ten voluntary guardrails, was superseded in October 2025 by the National AI Centre's Guidance for AI Adoption, built around six essential practices: decide who is accountable, understand impacts and plan accordingly, measure and manage risks, share essential information, test and monitor, and maintain human control. Notice what happened to the vocabulary: the current national guidance has largely retired "guardrails" in favour of named practices — and its two tiers (foundations guidance for organisations starting out; implementation guidance for complex or higher-risk use) are deliberately sized so that a smaller organisation is not asked to run an enterprise program. The separately <em>proposed</em> mandatory guardrails for high-risk AI were never enacted: the December 2025 National AI Plan set them aside in favour of existing laws and sector regulators, and the Department of Industry, Science and Resources still states it "will not proceed at this time" with them.</p>
+<p>A separate legislative workstream is now under way, and it is easy to mistake for the guardrails returning. On 15 July 2026 the government established an <a href="https://www.pmc.gov.au/domestic-policy/office-ai">Office of AI</a> within the Department of the Prime Minister and Cabinet and announced it would legislate <a href="https://www.pm.gov.au/media/ai-australias-interests">Australian Standards for AI</a>. National Cabinet endorsed the approach on 26 August 2026, with legislation expected in early 2027. Read what those standards cover before assuming they cover you: obligations on large data centres for energy, water and grid connection, and copyright protection for Australian creative works used to train AI. They do not reinstate the high-risk AI guardrails, and they do not regulate how an organisation uses AI in its own operations.</p>
+<p>If a consultant or vendor cites "the ten guardrails" as current Australian guidance, that is itself a currency test they have just failed. If they cite the Australian Standards for AI as the high-risk regime arriving, that is a second one.</p>
 <h2>The guardrail test</h2>
 <p>For a small or medium organisation, the practical question is not "do we have guardrails?" but "would our guardrails survive being pointed at?" Five questions do most of the work — for anything a vendor claims, and anything your own team builds:</p>
 <ol><li><strong>Where does it run?</strong> Inside the model (prompt instructions, trained behaviour) or outside it (a separate check, a permission boundary, a human gate)? Only the second is a security control.</li><li><strong>Is it deterministic?</strong> Does the same bad input get blocked every time, or usually?</li><li><strong>Can you show me the log?</strong> A guardrail that fires invisibly is unverifiable. Auditable means evidence exists.</li><li><strong>What happens when it fails?</strong> Fail closed (block and escalate) or fail open (let it through)? Fail-closed carries its own cost — a tool that blocks mid-task is a workflow problem — but the point is that someone chose the failure mode deliberately, and knows which one they chose.</li><li><strong>Has anyone tried to break it?</strong> Not "did you test it works" — did someone adversarial, treating the model as an untrusted user, try to make it <em>not</em> work?</li></ol>
