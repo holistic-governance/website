@@ -48,6 +48,11 @@
     .article-body li { margin-bottom: 0.5rem; }
     .article-body strong { color: var(--white); }
     .article-body a { color: var(--sky); text-decoration: underline; }
+    /* Reference markers: sky accent, no underline on the tiny numeral, underline on hover. */
+    .article-body sup a, .key-takeaways sup a { color: var(--sky); text-decoration: none; font-weight: 700; font-size: 0.78em; padding-left: 0.1em; letter-spacing: 0.02em; }
+    .article-body sup a:hover, .key-takeaways sup a:hover { text-decoration: underline; color: #7dd3fc; }
+    .key-takeaways a { color: var(--sky); }
+    .article-body ol li { margin-bottom: 0.45rem; }
     .article-body table { width: 100%; border-collapse: collapse; margin: 1.5rem 0 2rem; font-size: 0.92rem; }
     .article-body th, .article-body td { border: 1px solid var(--border); padding: 0.65rem 0.85rem; text-align: left; vertical-align: top; line-height: 1.55; }
     .article-body th { color: var(--white); font-weight: 500; background: rgba(56,189,248,0.06); }

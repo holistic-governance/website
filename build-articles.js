@@ -86,6 +86,8 @@ function inlineEscape(s) {
 // Takeaway bullets support the same bold/italic markers as body text.
 function takeawayInline(s) {
   return inlineEscape(s)
+    .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2">$1</a>')
+    .replace(/\^([^^]+)\^/g, '<sup>$1</sup>')
     .replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>')
     .replace(/(^|\s)_([^_]+)_(?=\s|$|[.,;:!?])/g, '$1<em>$2</em>');
 }
@@ -204,6 +206,7 @@ function mdToHtml(md) {
     .replace(/</g, '&lt;')
     .replace(/>/g, '&gt;')
     .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2">$1</a>')
+    .replace(/\^([^^]+)\^/g, '<sup>$1</sup>')
     .replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>')
     .replace(/(^|\s)_([^_]+)_(?=\s|$|[.,;:!?])/g, '$1<em>$2</em>')
     .replace(/`([^`]+)`/g, '<code>$1</code>');
@@ -440,6 +443,11 @@ function renderArticlePage(meta, body, takeaways = []) {
     .article-body li { margin-bottom: 0.5rem; }
     .article-body strong { color: var(--white); }
     .article-body a { color: var(--sky); text-decoration: underline; }
+    /* Reference markers: sky accent, no underline on the tiny numeral, underline on hover. */
+    .article-body sup a, .key-takeaways sup a { color: var(--sky); text-decoration: none; font-weight: 700; font-size: 0.78em; padding-left: 0.1em; letter-spacing: 0.02em; }
+    .article-body sup a:hover, .key-takeaways sup a:hover { text-decoration: underline; color: #7dd3fc; }
+    .key-takeaways a { color: var(--sky); }
+    .article-body ol li { margin-bottom: 0.45rem; }
     .article-body table { width: 100%; border-collapse: collapse; margin: 1.5rem 0 2rem; font-size: 0.92rem; }
     .article-body th, .article-body td { border: 1px solid var(--border); padding: 0.65rem 0.85rem; text-align: left; vertical-align: top; line-height: 1.55; }
     .article-body th { color: var(--white); font-weight: 500; background: rgba(56,189,248,0.06); }
