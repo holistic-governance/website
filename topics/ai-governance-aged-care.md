@@ -3,7 +3,7 @@ title: AI Governance for Aged Care Providers
 topic: ai-governance-aged-care
 type: HG Reference
 jurisdiction: Australia (national)
-lastReviewed: 2026-07-26
+lastReviewed: 2026-09-16
 publisher: Holistic Governance
 publisherUrl: https://hg-au.com
 canonicalUrl: https://hg-au.com/topics/ai-governance-aged-care.md
@@ -30,7 +30,7 @@ AI governance in an aged care context covers:
 
 There is no dedicated AI statute for Australian aged care. Obligations arise from existing law:
 
-- **Aged Care Act 2024 (Cth)** — registered providers carry a statutory duty to comply with their obligations (section 179); responsible persons, including directors, carry a personal due diligence duty (section 180) to take reasonable steps to ensure the provider complies. AI tools that draft care documentation, influence care decisions or process personal information fall within the conduct these duties cover.
+- **Aged Care Act 2024 (Cth)** — registered providers must ensure, so far as is reasonably practicable, that their conduct does not cause adverse effects to the health and safety of individuals to whom they deliver funded aged care services (section 179). Governing body members and executive decision-makers, being the responsible persons captured by section 12(1)(a) and (b), must exercise due diligence to ensure the provider complies with that section 179 duty (section 180). AI tools that draft care documentation or influence care decisions fall within the conduct these duties cover; where they process personal information, the obligations engaged are the Privacy Act and the provider's conditions of registration rather than section 179.
 - **Strengthened Aged Care Quality Standards** — outcomes-based standards in effect from 1 November 2025. Outcomes remain the provider's responsibility regardless of whether a human or an AI system produced the input (for example, an inaccurate AI-drafted progress note is a care documentation failure).
 - **Privacy Act 1988 (Cth) and the Australian Privacy Principles** — govern collection, use and disclosure of personal information, including disclosure to AI vendors' cloud services, use of care information to train models, and offshore transfer.
 - **Therapeutic goods regulation** — some software, including AI clinical decision support, is regulated by the TGA as a medical device depending on its intended purpose. A vendor's feature update can move a product across this boundary.

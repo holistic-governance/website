@@ -2,7 +2,7 @@
 title: Reform Without Reporting — The Visibility Gap Six Months into the New Aged Care Act
 seoTitle: Reform Without Reporting
 date: 2026-05-23
-dateModified: 2026-07-26
+dateModified: 2026-09-16
 author: Naomi Alefelder
 category: Industry News
 featured: true
@@ -38,7 +38,7 @@ Source: ACQSC, [agedcarequality.gov.au](https://www.agedcarequality.gov.au/#bloc
 
 **The analytical report is paused.** The analytical Sector Performance Report — the quarterly publication the Commission has used since 2018 to provide narrative interpretation, charts, and trend analysis — has not been issued for any period under the new Act.
 
-The most recent report covers July to October 2025, described by the Commission as "the final 4 months under the old Aged Care Act 1997." It was published in early March 2026, alongside Quality Bulletin #2-2026. The Aged Care Act 2024 commenced 1 November 2025.
+The most recent report covers July to October 2025. Quality Bulletin #2-2026 described these as "the final 4 months under the previous Aged Care Act 1997", and the report itself is "the final report on regulatory activity and provider performance under the old Aged Care Act 1997". It was published in late February 2026 and promoted in the Bulletin in early March. The Aged Care Act 2024 commenced 1 November 2025.
 
 Consultation on a new reporting format closed 31 March 2026. No resumption date has been published.
 
@@ -50,7 +50,7 @@ Sources: ACQSC [Sector Performance page](https://www.agedcarequality.gov.au/news
 
 The article reports that "on average, the commission is now seeing double the amount of complaints each month than it did 16 months prior." An accompanying ACM graphic puts the average monthly complaints figure at 715, up from 320. The article frames these monthly averages in the context of Support at Home complaints; the per-month figures appear to use a different methodology than a straight division of the four-month total, and readers should interpret each figure within the scope and methodology the journalist presents.
 
-Aged Care Complaints Commissioner Treasurer Jennings (commenced 1 November 2025) confirmed there had been "an increase in the volume of complaints received overall" but said "the top concerns of cost and communication had not shifted substantially." She added: "With a reform of this scale, as expected people have been seeking clarification and raising concerns during the transition… The Commission is closely monitoring the increase and will continue to adjust staffing to meet demand."
+Aged Care Complaints Commissioner Treasure Jennings (commenced 1 November 2025) confirmed there had been "an increase in the volume of complaints received overall". The Senior reported that the top concerns of cost and communication had not shifted substantially. Jennings said: "With a reform of this scale, as expected people have been seeking clarification and raising concerns during the transition." She added that the Commission "is closely monitoring the increase and will continue to adjust staffing to meet demand."
 
 Source: Phoebe Loomes, ["Pressure mounts on the Prime Minister as aged care complaints double"](https://www.thesenior.com.au/story/9251386/government-accused-of-rationing-home-care-as-complaints-double/), The Senior / Newcastle Herald, 22 May 2026.
 
@@ -59,7 +59,7 @@ Source: Phoebe Loomes, ["Pressure mounts on the Prime Minister as aged care comp
 **Three corroborating data points.**
 
 - **OPAN advocacy demand.** OPAN delivered 32,025 advocacy services in the first half of FY26 — a 33% increase on the same period last year. ([Older Persons Advocacy Network, NACAP Presenting Issues Half-yearly Report, released 22 April 2026](https://opan.org.au/2026/04/22/presenting-issues-half-yearly-report/).)
-- **Cost pressure on consumers.** OPAN Director of Policy Samantha Edmonds told The Senior older people were struggling with "up to 40 per cent increases in the costs of their services." ([Loomes, The Senior, 22 May 2026](https://www.thesenior.com.au/story/9251386/government-accused-of-rationing-home-care-as-complaints-double/).)
+- **Cost pressure on consumers.** The Senior reported that older people were struggling with up to 40 per cent increases in the cost of their services, citing OPAN Director of Policy Samantha Edmonds. ([Loomes, The Senior, 22 May 2026](https://www.thesenior.com.au/story/9251386/government-accused-of-rationing-home-care-as-complaints-double/).)
 - **Productivity Commission wait-time data.** The Productivity Commission's 2026 Report on Government Services recorded that the median time to sign a service agreement following a successful assessment was 245 days in 2024–25, up from 118 days in 2023–24. The median time to receive an aged care assessment increased from 22 days to 27 days over the same period (a 22.7% increase). The data precedes the commencement of the new Act. ([Productivity Commission, Report on Government Services 2026, released February 2026](https://www.pc.gov.au/ongoing/report-on-government-services/community-services/aged-care-services/).)
 
 ## The governance point
@@ -84,7 +84,7 @@ Five live counters, refreshed monthly, with no trends, are not a public-reportin
 - Phoebe Loomes, ["Pressure mounts on the Prime Minister as aged care complaints double"](https://www.thesenior.com.au/story/9251386/government-accused-of-rationing-home-care-as-complaints-double/), The Senior (syndicated across ACM mastheads), 22 May 2026.
 - OPAN, [NACAP Presenting Issues Half-yearly Report](https://opan.org.au/2026/04/22/presenting-issues-half-yearly-report/), released 22 April 2026.
 - Productivity Commission, [Report on Government Services 2026, Chapter 14 (Aged care services)](https://www.pc.gov.au/ongoing/report-on-government-services/community-services/aged-care-services/), released February 2026.
-- Department of Health, Disability and Ageing, [Treasurer Jennings Appointed New Aged Care Complaints Commissioner](https://www.health.gov.au/ministers/the-hon-sam-rae-mp/media/treasure-jennings-appointed-new-aged-care-complaints-commissioner), 9 October 2025.
+- Department of Health, Disability and Ageing, [Treasure Jennings Appointed New Aged Care Complaints Commissioner](https://www.health.gov.au/ministers/the-hon-sam-rae-mp/media/treasure-jennings-appointed-new-aged-care-complaints-commissioner), 9 October 2025.
 - Aged Care Act 2024 (Cth), commenced 1 November 2025; Aged Care Rules 2025.
 
 This article is published by Holistic Governance for sector information purposes only. It does not constitute legal, regulatory or financial advice. © Holistic Governance 2026.

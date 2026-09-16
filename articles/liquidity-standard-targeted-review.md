@@ -2,7 +2,7 @@
 title: Targeted Review on the New Liquidity Standard — What Category 6 Providers Need to Know
 seoTitle: Liquidity Standard: Category 6 Providers
 date: 2026-07-02
-dateModified: 2026-07-26
+dateModified: 2026-09-16
 author: Naomi Alefelder
 category: Industry News
 featured: false
@@ -65,7 +65,7 @@ Compliance with the Financial and Prudential Standards is a **condition of regis
 
 > The penalty unit value is indexed periodically under the _Crimes Act 1914_ (Cth) section 4AA. Confirm the current value before relying on any dollar conversion.
 
-Beyond the provider-level penalty, **responsible persons** owe a due diligence duty under section 180 of the Act — including maintaining current, documented knowledge of the standards and ensuring the provider has appropriate resources and processes to comply. And where a provider holds refundable deposits, accommodation bonds or entry contributions, it must maintain a **refundable deposit register** under section 150A.
+Beyond the provider-level penalty, the provider must ensure its relevant responsible persons are aware of and understand the standards that apply to it (Financial and Prudential Standards, section 8(5)). Note that the section 180 due diligence duty is anchored to the provider's section 179 health and safety duty, so a purely prudential breach does not found personal liability under section 180. And where a provider holds refundable deposits, accommodation bonds or entry contributions, it must maintain a **refundable deposit register** under section 150A.
 
 The standards are also grounded in the principles in section 377, which direct that providers remain financially viable and sustainable so they can continue to deliver safe, quality care, and that residents' refundable deposits, accommodation bonds and entry contributions are safeguarded.
 
@@ -76,7 +76,7 @@ These questions distil the obligations into board-ready governance prompts. They
 1. Has our governing body formally approved a documented financial and prudential management system, and is that approval recorded in the minutes?
 2. Can we show that our financial and prudential decisions support the provider remaining financially viable and sustainable, so we can continue to deliver safe, quality care?
 3. Is our Annual Prudential Compliance Statement audit-ready under the Aged Care Rules 2025 (sections 166-380 and 166-385), with director-level visibility of conformance and at-risk items?
-4. Are our responsible persons equipped to exercise due diligence under section 180 — including current, documented knowledge of the Financial and Prudential Standards?
+4. Can we show that our relevant responsible persons are aware of and understand the Financial and Prudential Standards that apply to us, as section 8(5) requires?
 5. Are related-party transactions and conflicts of interest identified, registered and managed transparently?
 6. If we hold refundable deposits, accommodation bonds or entry contributions, are they safeguarded, properly accounted for, and recorded on the refundable deposit register required under section 150A?
 

@@ -2,6 +2,7 @@
 title: AI Governance for Aged Care — A Provider's Practical Framework
 seoTitle: AI Governance for Aged Care Providers
 date: 2026-07-26
+dateModified: 2026-09-16
 author: Naomi Alefelder
 category: AI Governance
 featured: false
@@ -36,7 +37,7 @@ That last category deserves particular attention. Where no sanctioned option and
 
 Nothing about AI suspends your existing obligations; it routes new risk through them.
 
-**The Aged Care Act 2024.** Registered providers carry a statutory duty to comply with their obligations (section 179), and responsible persons — including directors — carry a personal due diligence duty (section 180) to take reasonable steps to ensure the provider complies. If an AI tool drafts clinical documentation, influences care decisions or handles personal information, it sits squarely inside the conduct those duties cover. A director cannot take reasonable steps regarding tools nobody has listed, assessed or assigned an owner.
+**The Aged Care Act 2024.** Registered providers carry a statutory duty to ensure, so far as is reasonably practicable, that their conduct does not cause adverse effects to the health and safety of the people they deliver funded aged care to (section 179). Members of the governing body and executive decision-makers — the responsible persons captured by section 12(1)(a) and (b) — carry a personal duty to exercise due diligence to ensure the provider complies with that section 179 duty (section 180). If an AI tool drafts clinical documentation or influences care decisions, it sits inside the conduct those duties cover. Where it handles personal information, the obligations engaged are the Privacy Act and your conditions of registration rather than section 179. A director cannot take reasonable steps regarding tools nobody has listed, assessed or assigned an owner.
 
 **The Strengthened Quality Standards.** The Standards are outcomes-based: what matters is the care and the experience of the older person, not whether a human or an algorithm produced the input. If an AI scribe writes an inaccurate progress note, it is a care documentation problem. If a rostering optimiser produces unsafe coverage, it is a workforce problem. The Standards do not accept "the software did it" as an answer.
 
