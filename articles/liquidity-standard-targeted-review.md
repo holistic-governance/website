@@ -44,7 +44,7 @@ When the Aged Care Act 2024 commenced, the ACQSC simplified the prudential frame
 
 - **Financial and Prudential Management Standard** — applies to all registered providers in Categories 4, 5 and 6 (excluding government providers). It requires a documented financial and prudential management system, approved and overseen by the governing body, with sound decision-making and internal monitoring of compliance.
 - **Liquidity Standard** — applies to residential care providers in Category 6 only (excluding government and NATSIFAC providers).
-- **Investment Standard** — also applies to residential care providers in Category 6 only (excluding government and NATSIFAC providers). It requires a written investment management strategy, defined permitted assets and limits, and ongoing monitoring of investment risk.
+- **Investment Standard** — also applies to residential care providers in Category 6 only (excluding government and NATSIFAC providers). It requires a written investment management strategy that the provider develops and follows, staff responsible for it who have the right skills and experience, and regular review and updating of the strategy, including when investment objectives change or new risks emerge.
 
 Category 6 covers residential care (including respite), so a residential provider must meet all three standards, while home and community providers in Categories 4 and 5 must meet the Financial and Prudential Management Standard.
 
