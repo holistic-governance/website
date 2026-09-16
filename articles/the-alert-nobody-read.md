@@ -29,9 +29,7 @@ That was sixteen years ago. The underlying numbers have barely moved, and Austra
 
 ## The Australian evidence
 
-Start with the study most Australian boards have never heard of.
-
-Between them, researchers at the University of Sydney, Macquarie University, eHealth NSW and Queensland Health ran a quasi-experimental controlled pre-post study across five Australian hospitals^[3](https://pmc.ncbi.nlm.nih.gov/articles/PMC12703349/)^ in two states, published in *BMJ Quality and Safety* in 2025. Three hospitals ran electronic medication management with no drug interaction alerts. Two ran interruptive alerts at the point of order entry, requiring the prescriber to record a reason for any override.
+The most important Australian evidence on this has barely been discussed outside the research literature. Researchers at the University of Sydney, Macquarie University, eHealth NSW and Queensland Health ran a quasi-experimental controlled pre-post study across five Australian hospitals^[3](https://pmc.ncbi.nlm.nih.gov/articles/PMC12703349/)^ in two states, published in _BMJ Quality and Safety_ in 2025. Three hospitals ran electronic medication management with no drug interaction alerts. Two ran interruptive alerts at the point of order entry, requiring the prescriber to record a reason for any override.
 
 The design detail that matters most is this: the intervention hospitals had already done the responsible thing. They did not switch on everything. They restricted alerts to the most severe category, major and contraindicated interactions only, which still left roughly 7,500 interaction rules active in the vendor knowledge base.
 
@@ -153,7 +151,7 @@ Most organisations cannot answer the first of those questions. If nobody owns th
 
 Every argument above transfers directly to artificial intelligence, because a system that classifies, summarises and prioritises information is an alerting system. It decides what reaches a human and how urgently it is framed. The difference is that the decision is now probabilistic and largely invisible.
 
-The clinical literature has already made the connection. A commentary published in the *American Journal of Health-System Pharmacy*^[40](https://pubmed.ncbi.nlm.nih.gov/42531471/)^ in July 2026 is titled "Beyond alert fatigue: automation bias, deskilling, and clinical decision-making in the age of AI." The framing is exactly right. Alert fatigue was the problem of ignoring a system that cried wolf. Automation bias is the problem of believing a system that sounds confident. The same workforce, the same screens, the failure running in the opposite direction.
+The clinical literature has already made the connection. A commentary published in the _American Journal of Health-System Pharmacy_^[40](https://pubmed.ncbi.nlm.nih.gov/42531471/)^ in July 2026 is titled "Beyond alert fatigue: automation bias, deskilling, and clinical decision-making in the age of AI." The framing is exactly right. Alert fatigue was the problem of ignoring a system that cried wolf. Automation bias is the problem of believing a system that sounds confident. The same workforce, the same screens, the failure running in the opposite direction.
 
 That difference introduces three problems on top of the existing ones.
 

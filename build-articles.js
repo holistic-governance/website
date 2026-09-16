@@ -89,7 +89,7 @@ function takeawayInline(s) {
     .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2">$1</a>')
     .replace(/\^([^^]+)\^/g, '<sup>$1</sup>')
     .replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>')
-    .replace(/(^|\s)_([^_]+)_(?=\s|$|[.,;:!?])/g, '$1<em>$2</em>');
+    .replace(/(^|\s)_([^_]+)_(?=\s|$|[.,;:!?<])/g, '$1<em>$2</em>');
 }
 
 // Pull the first `## Key takeaways` section out of the body and return both
@@ -208,7 +208,7 @@ function mdToHtml(md) {
     .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2">$1</a>')
     .replace(/\^([^^]+)\^/g, '<sup>$1</sup>')
     .replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>')
-    .replace(/(^|\s)_([^_]+)_(?=\s|$|[.,;:!?])/g, '$1<em>$2</em>')
+    .replace(/(^|\s)_([^_]+)_(?=\s|$|[.,;:!?<])/g, '$1<em>$2</em>')
     .replace(/`([^`]+)`/g, '<code>$1</code>');
 
   while (i < lines.length) {
