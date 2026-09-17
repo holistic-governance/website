@@ -1,5 +1,24 @@
 [
   {
+    "slug": "the-alert-nobody-read",
+    "title": "The Alert Nobody Read",
+    "seoTitle": "",
+    "date": "2026-09-16",
+    "dateModified": "2026-09-17",
+    "author": "Naomi Alefelder",
+    "category": "Clinical Governance",
+    "featured": false,
+    "summary": "Australian researchers switched drug interaction alerts on across five hospitals, restricted to the most severe tier only, and measured the result in 2,078 patients. The alerts changed prescribing. They did not reduce clinically relevant interactions, and they did not reduce harm. The conclusion was blunt: alerts implemented without tailoring to clinical context are unlikely to reduce patient harm. Aged care boards are now required to monitor the safety and quality of clinical systems, and most have no way to tell whether their alerts are working.",
+    "metaDescription": "Alert fatigue is the best-documented failure in health technology, and the numbers have not improved in twenty years. What the Australian evidence says, and what boards should ask.",
+    "ogImage": "og-image-v3.png",
+    "topics": [
+      "clinical-ai-governance",
+      "ai-governance-aged-care",
+      "national-model-clinical-governance",
+      "strengthened-aged-care-quality-standards"
+    ]
+  },
+  {
     "slug": "ndis-banning-orders-certification-chain",
     "title": "The design flaw behind the NDIS's first auditor bans",
     "seoTitle": "The NDIS's First Auditor Bans",

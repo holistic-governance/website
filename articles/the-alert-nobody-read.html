@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Alert Nobody Read | Holistic Governance</title>
+  <meta name="description" content="Alert fatigue is the best-documented failure in health technology, and the numbers have not improved in twenty years. What the Australian evidence says, and what boards should ask." />
+  <meta name="robots" content="index,follow" />
+  <meta name="author" content="Naomi Alefelder" />
+  <link rel="canonical" href="https://hg-au.com/articles/the-alert-nobody-read.html" />
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="Holistic Governance" />
+  <meta property="og:locale" content="en_AU" />
+  <meta property="og:url" content="https://hg-au.com/articles/the-alert-nobody-read.html" />
+  <meta property="og:title" content="The Alert Nobody Read | Holistic Governance" />
+  <meta property="og:description" content="Alert fatigue is the best-documented failure in health technology, and the numbers have not improved in twenty years. What the Australian evidence says, and what boards should ask." />
+  <meta property="og:image" content="https://hg-au.com/og-image-v3.png" />
+  <meta property="og:image:width" content="2400" />
+  <meta property="og:image:height" content="1260" />
+  <meta property="article:published_time" content="2026-09-16" />
+  <meta property="article:modified_time" content="2026-09-17" />
+  <meta property="article:section" content="Clinical Governance" />
+  <meta property="article:author" content="Naomi Alefelder" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="The Alert Nobody Read | Holistic Governance" />
+  <meta name="twitter:description" content="Alert fatigue is the best-documented failure in health technology, and the numbers have not improved in twenty years. What the Australian evidence says, and what boards should ask." />
+  <meta name="twitter:image" content="https://hg-au.com/og-image-v3.png" />
+  <link rel="icon" type="image/png" href="../favicon.png" />
+  <link rel="preload" as="image" href="../logo-hg-trimmed.png" fetchpriority="high" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../styles.css" />
+  <style>
+    .article-page { padding: 10rem 4rem 5rem; background: var(--navy); max-width: 820px; margin: 0 auto; }
+    .article-page .breadcrumb { margin-bottom: 2rem; }
+    .article-page .article-tag { display: inline-block; padding: 0.3rem 0.8rem; background: rgba(56,189,248,0.08); border: 1px solid var(--border); color: var(--sky); font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; border-radius: 2px; margin-bottom: 1.2rem; }
+    .article-page h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 4vw, 3rem); font-weight: 300; color: var(--white); line-height: 1.15; margin-bottom: 1.2rem; }
+    .article-page .article-meta { font-size: 0.82rem; color: var(--text-light); margin-bottom: 2rem; padding-bottom: 1.5rem; border-bottom: 1px solid var(--border); }
+    .article-page .article-meta span { color: var(--sky); }
+    .article-page .article-republished { display: inline-block; margin: -0.75rem 0 2rem; padding: 0.45rem 0.9rem; background: rgba(56,189,248,0.08); border: 1px solid rgba(56,189,248,0.3); border-radius: 2px; font-size: 0.78rem; letter-spacing: 0.04em; color: var(--text-light); }
+    .article-page .article-republished a { color: var(--sky); text-decoration: none; border-bottom: 1px solid rgba(56,189,248,0.4); }
+    .article-page .article-republished a:hover { border-bottom-color: var(--sky); }
+    .article-body { color: #aab4c4; font-size: 1rem; line-height: 1.9; }
+    .article-body h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; font-weight: 400; color: var(--white); margin: 2.5rem 0 1rem; }
+    .article-body h3 { font-family: 'DM Sans', sans-serif; font-size: 1.15rem; font-weight: 500; color: var(--white); margin: 2rem 0 0.8rem; }
+    .article-body p { margin-bottom: 1.2rem; }
+    .article-body ul, .article-body ol { margin: 1rem 0 1.5rem 1.5rem; }
+    .article-body li { margin-bottom: 0.5rem; }
+    .article-body strong { color: var(--white); }
+    .article-body a { color: var(--sky); text-decoration: underline; }
+    /* Reference markers: sky accent, no underline on the tiny numeral, underline on hover. */
+    .article-body sup a, .key-takeaways sup a { color: var(--sky); text-decoration: none; font-weight: 700; font-size: 0.78em; padding-left: 0.1em; letter-spacing: 0.02em; }
+    .article-body sup a:hover, .key-takeaways sup a:hover { text-decoration: underline; color: #7dd3fc; }
+    .key-takeaways a { color: var(--sky); }
+    .article-body ol li { margin-bottom: 0.45rem; }
+    .article-body table { width: 100%; border-collapse: collapse; margin: 1.5rem 0 2rem; font-size: 0.92rem; }
+    .article-body th, .article-body td { border: 1px solid var(--border); padding: 0.65rem 0.85rem; text-align: left; vertical-align: top; line-height: 1.55; }
+    .article-body th { color: var(--white); font-weight: 500; background: rgba(56,189,248,0.06); }
+    .key-takeaways { margin: 0 0 2.5rem; padding: 1.5rem 1.75rem; background: rgba(56,189,248,0.06); border: 1px solid rgba(56,189,248,0.25); border-left: 3px solid var(--sky); border-radius: 4px; }
+    .key-takeaways h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.25rem; font-weight: 500; color: var(--white); margin: 0 0 0.75rem; letter-spacing: 0.02em; }
+    .key-takeaways ul { list-style: none; padding: 0; margin: 0; }
+    .key-takeaways li { color: #aab4c4; font-size: 0.95rem; line-height: 1.6; padding: 0.4rem 0 0.4rem 1.5rem; position: relative; }
+    .key-takeaways li::before { content: '→'; position: absolute; left: 0; top: 0.4rem; color: var(--sky); font-weight: 600; }
+    .related-solutions { margin-top: 3.5rem; padding: 1.75rem; background: rgba(56,189,248,0.04); border: 1px solid var(--border); border-radius: 4px; }
+    .related-solutions h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; font-weight: 400; color: var(--white); margin: 0 0 0.9rem; }
+    .related-solutions ul { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: 0.6rem; }
+    .related-solutions li { margin: 0; }
+    .related-solutions a { display: inline-block; color: var(--sky); font-size: 0.9rem; text-decoration: none; border: 1px solid rgba(56,189,248,0.3); padding: 0.5rem 1rem; border-radius: 2px; transition: all 0.2s; }
+    .related-solutions a:hover { background: rgba(56,189,248,0.12); border-color: var(--sky); }
+    .author-bio { margin-top: 2.5rem; padding: 1.75rem; background: var(--navy-mid); border: 1px solid var(--border); border-radius: 4px; }
+    .author-bio-header { display: flex; align-items: center; gap: 1.25rem; margin-bottom: 1rem; }
+    .author-bio-header img { width: 72px; height: 72px; border-radius: 50%; object-fit: cover; border: 1px solid var(--border); flex-shrink: 0; }
+    .author-bio-header h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; font-weight: 400; color: var(--white); margin: 0 0 0.2rem; }
+    .author-bio-role { font-size: 0.82rem; color: var(--sky); margin: 0; letter-spacing: 0.04em; }
+    .author-bio p { font-size: 0.92rem; color: #aab4c4; line-height: 1.7; margin: 0 0 0.8rem; }
+    .author-bio-links a { color: var(--sky); text-decoration: none; border-bottom: 1px solid rgba(56,189,248,0.4); }
+    .author-bio-links a:hover { border-bottom-color: var(--sky); }
+    .article-footer-nav { position: static; background: none; backdrop-filter: none; border-bottom: none; z-index: auto; margin-top: 2.5rem; padding: 2rem 0 0; border-top: 1px solid var(--border); display: flex; align-items: flex-start; justify-content: flex-start; gap: 1rem; flex-wrap: wrap; }
+    .article-footer-nav a { color: var(--sky); text-decoration: none; font-size: 0.85rem; letter-spacing: 0.06em; text-transform: uppercase; border: 1px solid var(--border); padding: 0.8rem 1.6rem; border-radius: 2px; transition: all 0.3s; }
+    .article-footer-nav a:hover { background: var(--sky); color: var(--navy); }
+    @media (max-width: 900px) { .article-page { padding: 8rem 1.5rem 3rem; } }
+  </style>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "The Alert Nobody Read",
+  "description": "Alert fatigue is the best-documented failure in health technology, and the numbers have not improved in twenty years. What the Australian evidence says, and what boards should ask.",
+  "image": "https://hg-au.com/og-image-v3.png",
+  "author": {
+    "@type": "Person",
+    "@id": "https://hg-au.com/about.html#naomi",
+    "name": "Naomi Alefelder",
+    "url": "https://hg-au.com/about.html"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "@id": "https://hg-au.com/#organization",
+    "name": "Holistic Governance",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://hg-au.com/logo-hg-trimmed.png"
+    }
+  },
+  "datePublished": "2026-09-16",
+  "dateModified": "2026-09-17",
+  "mainEntityOfPage": "https://hg-au.com/articles/the-alert-nobody-read.html",
+  "articleSection": "Clinical Governance",
+  "inLanguage": "en-AU",
+  "url": "https://hg-au.com/articles/the-alert-nobody-read.html",
+  "isPartOf": {
+    "@id": "https://hg-au.com/#website"
+  },
+  "about": [
+    {
+      "@type": "Thing",
+      "name": "Clinical AI Governance",
+      "url": "https://hg-au.com/topics/clinical-ai-governance.md"
+    },
+    {
+      "@type": "Thing",
+      "name": "AI Governance for Aged Care Providers",
+      "url": "https://hg-au.com/topics/ai-governance-aged-care.md"
+    },
+    {
+      "@type": "Thing",
+      "name": "National Model for Clinical Governance (2026)",
+      "url": "https://hg-au.com/topics/national-model-clinical-governance.md"
+    },
+    {
+      "@type": "Thing",
+      "name": "Strengthened Aged Care Quality Standards",
+      "url": "https://hg-au.com/topics/strengthened-aged-care-quality-standards.md"
+    }
+  ]
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": "https://hg-au.com/articles/the-alert-nobody-read.html#webpage",
+  "url": "https://hg-au.com/articles/the-alert-nobody-read.html",
+  "name": "The Alert Nobody Read | Holistic Governance",
+  "description": "Alert fatigue is the best-documented failure in health technology, and the numbers have not improved in twenty years. What the Australian evidence says, and what boards should ask.",
+  "isPartOf": {
+    "@id": "https://hg-au.com/#website"
+  },
+  "primaryImageOfPage": "https://hg-au.com/og-image-v3.png",
+  "inLanguage": "en-AU",
+  "speakable": {
+    "@type": "SpeakableSpecification",
+    "cssSelector": [
+      ".article-page h1",
+      ".article-meta",
+      "#key-takeaways"
+    ]
+  }
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://hg-au.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Resources",
+      "item": "https://hg-au.com/resources.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "The Alert Nobody Read",
+      "item": "https://hg-au.com/articles/the-alert-nobody-read.html"
+    }
+  ]
+}
+  </script>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-9PMGXF9Q9T"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-9PMGXF9Q9T');
+  </script>
+</head>
+<body>
+
+<a class="announce-banner" href="/ai-technology.html#hg-intel"><strong>HG Intel</strong> — <span class="ab-full">our healthcare governance intelligence platform is </span>launching in 2027 <span class="ab-go">Register your interest &rarr;</span></a>
+<nav>
+  <a href="/" class="logo"><img src="../logo-hg-trimmed.png" alt="Holistic Governance" width="351" height="524"><span class="logo-name">Holistic <span>Governance</span></span></a>
+  <button class="hamburger" onclick="this.nextElementSibling.classList.toggle('open')">&#9776;</button>
+  <ul>
+    <li><a href="/">Home</a></li>
+    <li><a href="../about.html">About</a></li>
+    <li><a href="../healthcare.html">Solutions</a></li>
+    <li><a href="../resources.html">Resources</a></li>
+    <li class="nav-contact-wrapper">
+      <button class="nav-cta" onclick="this.nextElementSibling.classList.toggle('open')">Contact</button>
+      <div class="nav-contact-popup">
+        <a href="tel:0405515300">0405 515 300</a>
+        <a href="mailto:info@hg-au.com">info@hg-au.com</a>
+        <a href="../proposal-enquiry.html">Submit a Proposal</a>
+      </div>
+    </li>
+  </ul>
+</nav>
+
+<article class="article-page">
+  <div class="breadcrumb"><a href="/">Home</a> / <a href="../resources.html">Resources</a> / The Alert Nobody Read</div>
+  <div class="article-tag">Clinical Governance</div>
+  <h1>The Alert Nobody Read</h1>
+  <div class="article-meta"><span>16 September 2026</span> &middot; Updated 17 September 2026 &middot; Naomi Alefelder</div>
+  <aside class="key-takeaways" id="key-takeaways" aria-label="Key takeaways">
+    <h2>Key takeaways</h2>
+    <ul>
+      <li><strong>Switching alerts on is not the same as reducing harm.</strong> Across five Australian hospitals and 2,078 patients, drug interaction alerts restricted to the most severe tier produced no reduction in clinically relevant interactions and no reduction in harm.</li>
+      <li><strong>The override numbers have not moved in twenty years</strong>, sitting between 49% and 96% since 2006. Volume reduction alone does not fix it; specificity does.</li>
+      <li><strong>Alert fatigue is three failures, not one</strong>: alerts never detected, alerts dismissed by learned shortcut, and alerts that cost too much to interpret. Counting volume addresses only the third.</li>
+      <li><strong>The opposite failure is equally real.</strong> A Tasmanian coroner found in June 2025 that an electronic reminder never fired, because it depended on a chart nobody created.</li>
+      <li><strong>This is now a governing-body duty.</strong> Under the strengthened Aged Care Quality Standards the governing body must monitor the safety and quality of clinical systems, not just clinical outcomes. Most organisations cannot say how many alerts their staff receive.</li>
+    </ul>
+  </aside>
+  <div class="article-body">
+<p>In January 2010<sup><a href="https://archive.boston.com/news/health/articles/2010/04/03/alarm_fatigue_linked_to_heart_patients_death_at_mass_general/">1</a></sup>, an 89 year old cardiac patient at Massachusetts General Hospital went into decline. His heart rate fell, and then it stopped. The monitoring system did what it was designed to do: it registered the change and it signalled. Over roughly twenty minutes, ten nurses were on duty. Not one of them could later recall hearing the beeps at the central station, or noticing the warning scrolling across the hallway display. The volume on the crisis alarm at the patient's bedside monitor had been switched off the night before, by someone never identified.</p>
+<p>Federal investigators<sup><a href="https://archive.boston.com/news/health/articles/2010/04/03/alarm_fatigue_linked_to_heart_patients_death_at_mass_general/">1</a></sup> concluded that alarm fatigue contributed to the death. The case settled for US$850,000<sup><a href="https://www.bostonglobe.com/metro/2011/11/28/suit-over-cardiac-monitor-settled/GajKUFUgsjltsKMNWDpsuN/story.html">2</a></sup>, and it became the reference point for a shift in how safety regulators think about alarms. The failure was not that the technology missed the event. The technology caught it. The failure was that the people had been taught, by thousands of previous signals that meant nothing, that this signal probably meant nothing either.</p>
+<p>That was sixteen years ago. The numbers have barely moved since, and Australia now has its own evidence on what happens when a health service switches alerts on and assumes the job is done.</p>
+<p>This article makes three arguments. That alert fatigue is a governed clinical risk rather than a usability complaint. That the Australian evidence on whether alerts actually reduce harm is more uncomfortable than the sector has absorbed. And that AI does not solve the problem but inverts it, at the precise moment aged care boards became accountable for the systems involved.</p>
+<h2>The Australian evidence</h2>
+<p>The most important Australian evidence on this has barely been discussed outside the research literature. Researchers at the University of Sydney, Macquarie University, eHealth NSW and Queensland Health ran a quasi-experimental controlled pre-post study across five Australian hospitals<sup><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12703349/">3</a></sup> in two states, published in <em>BMJ Quality and Safety</em> in 2025. Three hospitals ran electronic medication management with no drug interaction alerts. Two ran interruptive alerts at the point of order entry, requiring the prescriber to record a reason for any override.</p>
+<p>The design detail that matters most is this: the intervention hospitals had already done the responsible thing. They did not switch on everything. They restricted alerts to the most severe category, major and contraindicated interactions only, which still left roughly 7,500 interaction rules active in the vendor knowledge base.</p>
+<p>Independent clinical pharmacists then reviewed the records of 2,078 patients. They found potential drug interactions in 74.7% of admissions and clinically relevant interactions in 48.7%.</p>
+<p>The alerts worked, in the narrow sense. Potential interactions fell significantly (adjusted odds ratio 0.38, 95% CI 0.19 to 0.78). But clinically relevant interactions did not change (AOR 1.12), and neither did harm (AOR 2.42, 95% CI 0.47 to 12.31). That last confidence interval is very wide, so the honest reading is that the study found no harm reduction rather than proving alerts are harmless. The authors' conclusion is worth quoting exactly, because it is more direct than research conclusions usually are: implementation of these alerts "without tailoring alerts to clinical context, is unlikely to reduce patient harms," and organisations "should reconsider implementation of DDI alerts in EMRs where significant tailoring of alerts is not possible."</p>
+<p>Read that again with a governance hat on. Two hospitals bought the capability, configured it conservatively, imposed a real burden on prescribers, and generated no measurable safety benefit. Nobody did anything wrong in an obvious way. The system was on. The assurance report would have said so.</p>
+<h2>Alert fatigue is three failures, not one</h2>
+<p>Research published in February 2026<sup><a href="https://www.jmir.org/2026/1/e78676">4</a></sup> by the Digital Health Human Factors Group at the University of Sydney, working with Canberra Health Services, interviewed 20 junior doctors about their experience of alerts. It is the clearest conceptual account available, and it dismantles the idea that alert fatigue is simply "too many pop-ups."</p>
+<p>They described alert fatigue arising at three different stages of processing information.</p>
+<p><strong>Alerts that are never detected.</strong> The signal arrives and does not register at all. This is the Massachusetts General failure, and it is the one with the most direct line to patient harm.</p>
+<p><strong>Alerts processed by shortcut.</strong> The clinician sees the alert, recognises its shape, and dismisses it using a learned heuristic rather than reading it. The interaction looks like compliance. Every override is logged. Nothing was actually considered.</p>
+<p><strong>Alerts that demand too much effort.</strong> The clinician does engage, and the cost is the engagement itself: interruption, frustration, and time taken from the task in front of them.</p>
+<p>The impacts differ by type. Where alerts went undetected or were processed superficially, the doctors described consequences for patient safety and care quality through information they missed. Where alerts demanded excessive effort, the consequence was lost time and cognitive load. A governance response that only counts alert volume will address the third failure and miss the first two entirely.</p>
+<h2>The numbers that will not move</h2>
+<p>The international picture explains why Australian results look the way they do.</p>
+<p>In 2006, a review in the Journal of the American Medical Informatics Association<sup><a href="https://pubmed.ncbi.nlm.nih.gov/16357358/">5</a></sup> examined seventeen studies of prescriber responses to drug safety alerts and found override rates between 49% and 96%. In 2024, a meta-analysis of sixteen studies of drug interaction alerts<sup><a href="https://pubmed.ncbi.nlm.nih.gov/38899788/">6</a></sup> pooled the override rate at 90% (95% CI 85 to 95). Eighteen years of better software and considerably more money, and the number sits at the top of where it started. A systematic review of 23 studies<sup><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC7400042/">7</a></sup> found high override rates across every common alert type: interaction alerts 56.3% to 95.6% overridden, dose alerts 82% to 96.8%, renal alerts 74.4% to 97.1%, allergy alerts 46% to 95%.</p>
+<p>Physiologic monitoring tells the same story. A study of 461 intensive care patients<sup><a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0110274">8</a></sup> logged more than 2.5 million alarms in 31 days, which after filtering to audible alerts was 187 per bed per day. The Joint Commission's assessment<sup><a href="https://www.jointcommission.org/en-us/knowledge-library/newsletters/sentinel-event-alert/issue-50">9</a></sup> is that between 85% and 99% of alarm signals require no clinical intervention at all.</p>
+<p>The most useful finding is what happens as alerts accumulate at a single decision point. In an ambulatory cohort of 112 clinicians<sup><a href="https://doi.org/10.1186/s12911-017-0430-8">10</a></sup>, the likelihood of accepting a reminder fell by about 30% for each additional reminder received in the same encounter, and by 10% for each five percentage point rise in the proportion of repeated reminders. Notably, the same study found no effect from overall workload. It is alert density at the point of decision that does the damage, not how busy the day is. Notification volume is not a feature to be maximised. It is a budget being spent, usually without anyone tracking the balance.</p>
+<p>None of this is unique to healthcare, which rules out the comfortable explanations. Air traffic control<sup><a href="https://hf.tc.faa.gov/publications/2007-human-factors-analysis/full_text.pdf">11</a></sup> runs nuisance rates of 81% to 97% on its safety alerts. In cyber security, around half of security teams report being overwhelmed by alert volume<sup><a href="https://dl.acm.org/doi/10.1145/3723158">12</a></sup>. Different technology, different workforce, different regulator, same curve. What these systems share is a structure: high volume, low true-positive rate, finite human attention. Desensitisation is what that structure produces. It is not a training problem, and designing as though professionals will be immune to it has a body count.</p>
+<h2>The harm is documented, and so is the liability</h2>
+<p>Dismissing an alert is often correct, and the literature is careful to say so. A clinician who overrides an irrelevant warning is exercising judgement.</p>
+<p>The problem is the overrides that are not appropriate. In a prospective intensive care study<sup><a href="https://doi.org/10.1136/bmjqs-2017-007531">13</a></sup>, overrides judged inappropriate were followed by potential and definite adverse drug events roughly six times as often as appropriate ones: 16.5 against 2.74 per 100 overridden alerts. That is the authors' own multiple. Note the outcome is potential as well as realised harm, and note what it does not say: the finding is that overriding badly is dangerous, which is an argument for better alerts rather than simply fewer.</p>
+<p>Australian research established the cost of interruption itself. Johanna Westbrook's team observed 98 nurses<sup><a href="https://doi.org/10.1001/archinternmed.2010.65">14</a></sup> preparing and administering 4,271 medications across six wards of two major Sydney teaching hospitals. Each interruption was associated with a 12.1% increase in procedural failures and a 12.7% increase in clinical errors. Severity rose too: the estimated risk of a major error was 2.3% with no interruptions and 4.7% with four, a doubling in the authors' own word. Interruptive alerts are, by construction, interruptions.</p>
+<p>A 2026 meta-analysis<sup><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC13539284/">15</a></sup> of 28 studies covering 6,908 intensive care nurses found alarm fatigue at moderate levels, with directional evidence linking it to burnout and a greater tendency towards medical errors. Loss of trust in the alarm system tracked with higher fatigue. Nurses who have learned the alarms usually mean nothing respond accordingly.</p>
+<p>The regulatory consequence arrived internationally in 2013, when the Joint Commission documented 98 alarm-related sentinel events<sup><a href="https://www.jointcommission.org/en-us/knowledge-library/newsletters/sentinel-event-alert/issue-50">9</a></sup> over three and a half years, resulting in 80 deaths, and named alert fatigue the most common contributing factor. Alarm safety became a National Patient Safety Goal the following year, and survives today as NPG.01.05.01<sup><a href="https://digitalassets.jointcommission.org/api/public/content/9ca80055182b4274842a5780a94f2c82">16</a></sup> in the Joint Commission's National Performance Goals, which replaced the National Patient Safety Goals chapter for hospitals in January 2026.</p>
+<p>Australia has no direct equivalent. The Commission has never published a standalone alarm-management guideline, and there is no accreditation action covering alert burden. Guidance exists but is scattered and advisory: the 2019 electronic medication management guide<sup><a href="https://www.safetyandquality.gov.au/resources/electronic-medication-management-systems-guide-safe-implementation-third-edition">17</a></sup> names alert fatigue as a risk to manage, and the Guide for Hospitals<sup><a href="https://www.safetyandquality.gov.au/sites/default/files/resources/attachments/national-safety-and-quality-health-service-standards-guide-for-hospitals.pdf">18</a></sup> tells organisations to mitigate "alarm fatigue from frequent automatic alerts". None of it is something anyone is accredited against, which is why almost nobody reads it.</p>
+<p>The Medication Safety Standard<sup><a href="https://www.safetyandquality.gov.au/national-standards/nsqhs-standards/medication-safety-standard">19</a></sup> requires that decision support tools "be available to clinicians". No action in that Standard or the Clinical Governance Standard addresses whether they are tuned, whether anyone monitors their burden, or what happens when they stop working. The governance gap sits precisely between "available" and "usable".</p>
+<h2>The opposite failure: the alert that never fired</h2>
+<p>There is a mirror image of alert fatigue, and Australia has a recent coronial finding on it.</p>
+<p>In June 2025, Tasmanian Coroner Leigh Mackey handed down findings<sup><a href="https://www.magistratescourt.tas.gov.au/__data/assets/pdf_file/0005/823460/McDonald,-Maureen-June.pdf">20</a></sup> into the death of an 87-year-old woman at the Fairway Rise aged care facility at Lindisfarne in greater Hobart. Her sacral wound went unmonitored across two stretches of roughly a week each in January and February 2022, progressing to an infected stage four pressure injury that the coroner recorded as an antecedent cause of her death.</p>
+<p>The facility's own explanation was that staff had never created a new wound chart. No chart meant no task, and no task meant no automatic alert was ever generated. The coroner's observation is sharper than any summary of it: the system "provides an automated reminder system for individual client care however, as observed, it is dependent on the data having been entered into the system for the alert to be generated."</p>
+<p>The safety net was real, and it was conditional on a person remembering to create the record that would trigger it. Nothing anywhere in the system registered that a resident had fallen out of the care she was supposed to receive. A serious incident report identified neglect by the facility, and the provider entered a voluntary enforceable undertaking with the Aged Care Quality and Safety Commission in December 2023.</p>
+<p>One of the coroner's four recommendations was that a workflow system be considered and, if feasible, implemented, recording attendance to each resident's care needs and raising an alert where a care need is not attended to.</p>
+<p>That recommendation is correct and it also illustrates the trap. The remedy for a missed alert is almost always another alert, and each one is individually justified. This is the mechanism by which alert burden accumulates in every organisation that has ever accumulated it. Nobody adds a thousand alerts. People add one, for good reason, a thousand times.</p>
+<p>It is not the only recent Australian case. In 2023 the Aged Care Quality and Safety Commission issued a clinical alert<sup><a href="https://www.agedcarequality.gov.au/news-publications/clinical-alerts-and-advice/transcribing-and-dispensing-errors">21</a></sup> following the preventable death of a resident given medications not prescribed for them, which a coroner attributed to systemic failures during a transition from paper medication charts to an electronic medication management system. More recently the Commission issued an alert<sup><a href="https://www.agedcarequality.gov.au/news-publications/clinical-alerts-and-advice/unauthorised-prescribing-electronic-national-residential-medication-charts-enrmc">22</a></sup> after an unauthorised worker created a false prescriber profile in a provider's electronic residential medication chart and altered medications over an extended period. It was detected only when an external nurse practitioner noticed an unfamiliar prescriber name. The Commission records that the incident caused no significant harm to older people.</p>
+<p>Alerts that fire too often, alerts that never fire, and systems where nobody was watching who was using them. All three are clinical system governance failures, and all three are now squarely inside what an aged care governing body is accountable for.</p>
+<h2>What the Standards now require</h2>
+<p>This is the part that converts the evidence into an obligation.</p>
+<p>Under the strengthened Aged Care Quality Standards<sup><a href="https://www.agedcarequality.gov.au/strengthened-quality-standards/clinical-care/clinical-governance">23</a></sup>, in force since 1 November 2025, <strong>Action 5.1.1 requires the governing body to monitor the safety and quality of clinical systems and performance.</strong> Not clinical outcomes alone. Clinical systems. Action 5.1.5 requires the provider to work towards a digital clinical information system with national interoperability and lawful access controls.</p>
+<p>Read together, these say something specific: the board is accountable for the clinical information system, and for knowing whether it is performing. An alerting layer that has never been tuned, whose override rate nobody has measured, is a clinical system operating without oversight.</p>
+<p>There is also a fact about clinical software that few directors know: in Australia the alerting layer is regulated. The Therapeutic Goods Administration treats clinical decision support software as a medical device<sup><a href="https://www.tga.gov.au/resources/guidance/understanding-clinical-decision-support-system-software-regulation">24</a></sup>, and since its October 2025 rewrite the guidance states plainly that <strong>an AI-enabled CDSS cannot meet the exemption criteria</strong>, because the software must be transparent in how it generates recommendations and must not use proprietary analysis or AI to do so. A rules-based alert citing its source may be exempt. The same alert with a model behind it requires ARTG inclusion. Worth asking your vendor which side of that line they sit on, and when they last checked.</p>
+<p>One date belongs in the diary. From 10 December 2026, amendments to the Privacy Act<sup><a href="https://www.legislation.gov.au/C2024A00128">25</a></sup> require privacy policies to disclose automated decision-making. The provision catches a program that makes a decision <strong>or does something substantially and directly related to making it</strong>, which reaches triage, scoring and alerting even where a human makes the final call.</p>
+<h2>What actually works</h2>
+<p>The interventions with the strongest measured results are not the ones most organisations try first.</p>
+<p><strong>Volume reduction alone is not enough.</strong> The Australian five-hospital study is the cleanest demonstration. Those hospitals had already cut to the highest severity tier, which is volume reduction, and still recorded no reduction in clinically relevant interactions and no reduction in harm. Turning down the tap is not the same as improving the water.</p>
+<p><strong>Specificity succeeds.</strong> This is what the Australian five-hospital study meant by tailoring to clinical context. A pilot study at one centre, modelling patient-specific conditions on fourteen interaction algorithms, cut the resulting alerts by 11.3% to 93.5%<sup><a href="https://journals.sagepub.com/doi/10.1177/1060028019863419">26</a></sup> depending on the rule. A deployed example: a children's hospital that contextualised or suppressed 46.8% of its interaction alerts<sup><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC6398362/">27</a></sup> cut interruptive firings by 40% overall, and by 82% for attending physicians.</p>
+<p><strong>Severity tiering works, if the top tier stays scarce.</strong> Two hospitals sharing a single knowledge base offer a natural experiment: the one that tiered by severity<sup><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC2605599/">28</a></sup> achieved overall compliance of 29% against 10% at the hospital showing everything uniformly. Its most severe tier ran at 100% acceptance, though that figure is true by construction, because those alerts were hard stops that could not be overridden. The corollary matters as much: when one hospital made its least severe tier non-interruptive<sup><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC6206354/">29</a></sup>, total interaction-alert burden fell 50.5% and acceptance of the remaining top-tier alerts rose modestly, from 9.1% to 12.7%. Read the whole paper before leaning on it, though: the authors found the change decreased acceptance of interaction alerts overall and increased alert burden on users, and roughly 87% of top-tier alerts were still overridden. Pruning helps, but it is not a cure.</p>
+<p><strong>Role tailoring is the best-supported personalisation.</strong> A 2019 review of 39 studies<sup><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC6748819/">30</a></sup> of alternatives to interruptive alerts found only one that appeared to increase prescriber acceptance: role tailoring, routing different alerts to prescribers and pharmacists. The authors are careful to note the studies produced incomparable results, so treat this as the best-supported option rather than a proven one. Interruptive alerts tend to be noticed and resented; non-interruptive alerts tend to be liked and missed. Which trade-off is right depends on the role of the person receiving them.</p>
+<p><strong>Governance outperforms engineering.</strong> The most instructive case comes from Ng Teng Fong General Hospital in Singapore<sup><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10393867/">31</a></sup>, which established a multidisciplinary decision support committee, assigned a named clinical owner to every alert, and reviewed performance against data. Monthly interruptive alert volume fell 59.6%. Over the same period the number of distinct alert rules grew from 54 to 360. Action rates rose from 8% to 54.7% overall, and from 32.6% to 72.6% for the alerts they specifically optimised, saving an estimated 3,600 hours of providers' time a year. These were best practice advisories across the hospital rather than drug interaction alerts specifically, and the action rates are medians of monthly rates. More rules, far less noise, far more action, achieved by governance rather than by a better algorithm.</p>
+<h2>The measurement gap</h2>
+<p>Here is the finding that should trouble a governing body most.</p>
+<p>A systematic review published in 2026<sup><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC13385993/">32</a></sup> examined 22 systematic reviews of alert fatigue. Only one reported an operational definition or measure of the thing being studied, and that one used raw alert quantity as a proxy. The term has been in the clinical informatics literature for about two decades, and the field still has no agreed way to tell whether the problem is getting better or worse.</p>
+<p>The authors propose a candidate measure, and are careful to call it hypothetical and in need of empirical testing: a statistically significant, sustained decrease in appropriate response rates over time relative to a previously established baseline, after controlling for other determinants of engagement. Even as a proposal it requires knowing how many alerts you send, to whom, and what proportion are acted on, tracked over time.</p>
+<p>Most organisations cannot answer the first of those questions. If nobody owns the total number of alerts your staff receive across every system, then alert fatigue is not a risk you are managing. It is a risk you are accumulating.</p>
+<h2>What this means for AI</h2>
+<p>Every argument above transfers directly to artificial intelligence, because a system that classifies, summarises and prioritises information is an alerting system. It decides what reaches a human and how urgently it is framed. The difference is that the decision is now probabilistic and largely invisible.</p>
+<p>The clinical literature has already made the connection. A commentary published in the <em>American Journal of Health-System Pharmacy</em><sup><a href="https://pubmed.ncbi.nlm.nih.gov/42531471/">33</a></sup> in July 2026 is titled "Beyond alert fatigue: automation bias, deskilling, and clinical decision-making in the age of AI." The framing is exactly right. Alert fatigue was the problem of ignoring a system that cried wolf. Automation bias is the problem of believing a system that sounds confident. The same workforce, the same screens, the failure running in the opposite direction.</p>
+<p>That difference introduces three problems on top of the existing ones.</p>
+<p><strong>Automation bias is how human oversight quietly stops working.</strong> The Australian Commission on Safety and Quality in Health Care names the mechanism in its AI Clinical Use Guide<sup><a href="https://www.safetyandquality.gov.au/resources/ai-clinical-use-guide">34</a></sup>: errors of commission, where a person acts on incorrect AI output, and errors of omission, where a person fails to act because the AI did not flag something. Almost every AI governance framework leans on human review as its primary control, and automation bias is the documented process by which that control degrades. Alert fatigue is its accelerant, though the mechanism is more specific than queue length. Oversight degrades where the effort of genuinely verifying each item is high and the proportion of items that actually warrant action is low. Both are documented: automation bias tracks the cognitive load of verification rather than multitasking alone<sup><a href="https://pubmed.ncbi.nlm.nih.gov/27516495/">35</a></sup>, and people reliably miss rare targets when almost everything they inspect turns out to be fine<sup><a href="https://pubmed.ncbi.nlm.nih.gov/15917795/">36</a></sup>. A review gate over a high-volume, low-yield stream is therefore not made real by existing. It is made real by the signal density behind it.</p>
+<p>There is a finding that makes this concrete. In a study of 28 pathology experts<sup><a href="https://link.springer.com/chapter/10.1007/978-3-658-47422-5_27">37</a></sup>, erroneous AI advice overturned initially correct judgements 7% of the time. Time pressure did not make that happen more often, but it made it worse: under time pressure, participants leaned harder on the system's wrong answers and their performance declined further. So pressure does not create automation bias. It deepens it once it takes hold, which is a more uncomfortable finding for understaffed, alert-heavy environments than the simpler version would have been.</p>
+<p>This is why "a human reviews it" is only a genuine control when it is specified. The Commission's guidance does not stop at instructing clinicians to review AI outputs. It specifies when: ideally during or at the completion of the encounter, while the clinician's own memory can still catch what the tool fabricated or missed. Who reviews, at what point, accountable for what, and across how many items per shift. A review gate without those four answers is an organisational chart, not a safeguard. The Royal Australian College of General Practitioners<sup><a href="https://www.racgp.org.au/advocacy/position-statements/view-all-position-statements/clinical-and-practice-management/artificial-intelligence-in-primary-care">38</a></sup> names how such gates decay: <strong>task substitution</strong>. The tool does not remove work, it turns producing into checking, and checking is easier to stop doing properly when the day is busy.</p>
+<p><strong>Most AI governance frameworks do not actually govern.</strong> Researchers at Macquarie University's Australian Institute of Health Innovation reviewed 77 AI governance frameworks<sup><a href="https://www.nature.com/articles/s41746-026-02679-2">39</a></sup> in a study published in 2026. The frameworks were strong on principles: transparency appeared in 79.2%, data management in 74%, ongoing monitoring in 70.1%. They were weak on the machinery that makes principles bite. Only 45.5% considered the AI lifecycle, and just <strong>19.5% included an oversight mechanism</strong> such as an AI governance committee. Ten of the 77 frameworks, 13%, contained all four components the researchers treated as essential. A separate ten, also 13%, included contestability: a timely process letting someone affected challenge the use or outcome of an AI system.</p>
+<p>The implication for a board is direct. "Do we have an AI policy?" is the wrong question, because four out of five frameworks would answer yes while specifying nobody to oversee anything. The right question is who reviews this system's performance, how often, against what measure, and what happens when the measure moves.</p>
+<p>The Australian Government's 2025 review of AI regulation in health care<sup><a href="https://www.health.gov.au/resources/publications/safe-and-responsible-artificial-intelligence-in-health-care-legislation-and-regulation-review-final-report">40</a></sup> restated the conclusion of the government's whole-of-economy consultations, that "our current regulatory system is not fit for purpose". Its own finding about health legislation was narrower: that legislation is "largely able to accommodate AI", but a real gap exists around health products falling outside TGA regulation, "such as medical scribes and some wearable health products". A great deal of software that shapes clinical attention sits in exactly that space: not a regulated device, yet entirely capable of determining what a nurse sees on a Tuesday afternoon.</p>
+<p><strong>And no law is coming to close that gap.</strong> The mandatory guardrails the sector expected were set aside: the Department of Industry, Science and Resources still says the government "will not proceed at this time"<sup><a href="https://consult.industry.gov.au/ai-mandatory-guardrails">41</a></sup>. Legislation is coming, but not the kind most people assume. The Australian Standards for AI, due in early 2027, cover data centre energy and water obligations and AI-training copyright<sup><a href="https://www.pm.gov.au/media/ai-australias-interests">42</a></sup>. <strong>Nothing in them governs how a provider uses AI in care.</strong> Expect that distinction to blur in the selling. What remains are the duties that were always there: directors' care and diligence obligations, the Privacy Act, the Aged Care Act and the Therapeutic Goods Act. Nobody is going to hand you a checklist that discharges them.</p>
+<h2>What a governing body should ask</h2>
+<p>Alert load rarely reaches a board agenda, because no single alert is a governance issue and the aggregate has no owner. These questions surface it.</p>
+<ol><li><strong>Which of our systems generate alerts to staff, and who owns the total volume?</strong> Not each system individually. The total, as experienced by one nurse on one shift.</li><li><strong>What proportion of our alerts are dismissed without action, and do we measure it at all?</strong> If the answer is that nobody knows, that is the finding.</li><li><strong>When we last added an alert or a reminder, what did we retire?</strong> Alert sets grow in one direction unless something forces the trade-off.</li><li><strong>Where a task can be missed without anyone being told, what is our equivalent of the wound chart that was never created?</strong> The Tasmanian coronial finding is the template for this question.</li><li><strong>Where our software uses AI to prioritise or summarise, can a user see why an item was flagged?</strong> If the reasoning is not visible, the human cannot supervise it, and your human-in-the-loop control is nominal.</li><li><strong>Our human review control: who performs it, at what point, and how many items do they see per shift?</strong> The last answer determines whether the rest means anything.</li><li><strong>Is our clinical decision support software notified to the TGA, and in which category?</strong> If the vendor has added AI features since they last checked, the answer may have changed without anyone telling you.</li><li><strong>Does any system we use classify, score or triage information about individuals?</strong> If so, the December 2026 privacy disclosure obligation applies to your privacy policy, and someone needs to own that before the date.</li></ol>
+<h2>The point</h2>
+<p>The technology worked at Massachusetts General. It detected the event and it signalled. What failed was an organisational decision, made incrementally and without anyone owning it, to let the signal stream become dense enough that experienced clinicians had learned to tune it out. In Hobart, the technology was configured to help and never ran at all. In five Australian hospitals, it ran exactly as designed and changed nothing that mattered.</p>
+<p>Alert fatigue is not a usability complaint, and it is not a workforce resilience issue to be fixed with training. It is the predictable behaviour of human attention under a known set of conditions, it has a documented association with patient harm, and it is now being reproduced inside systems that use AI to decide what we see.</p>
+<p>The evidence on what to do is unusually clear. Fewer alerts is not the answer by itself. Alerts that are specific to the person receiving them, tiered so the top tier stays rare, owned by someone accountable, measured against whether anyone acts on them, and retired when they stop earning their place: that is the answer, and the organisations that have implemented it have the numbers to show for it.</p>
+<p>What none of it survives is nobody being in charge of the total.</p>
+<p>---</p>
+<h3>References</h3>
+<p>Numbered in order of first appearance. Each superscript numeral in the text links to the source.</p>
+<ol><li><a href="https://archive.boston.com/news/health/articles/2010/04/03/alarm_fatigue_linked_to_heart_patients_death_at_mass_general/">Kowalczyk L. 'Alarm fatigue' linked to heart patient's death at Mass. General. Boston Globe. 2010 Apr 3.</a></li><li><a href="https://www.bostonglobe.com/metro/2011/11/28/suit-over-cardiac-monitor-settled/GajKUFUgsjltsKMNWDpsuN/story.html">Kowalczyk L. Suit over cardiac monitor settled. Boston Globe. 2011 Nov 28.</a></li><li><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12703349/">Baysari MT, Hilmer SN, Day RO, Van Dort BA, Zheng WY, Quirk R, et al. Effectiveness of computerised alerts to reduce drug-drug interactions (DDIs) and DDI-related harm in hospitalised patients: a quasi-experimental controlled pre-post study. BMJ Qual Saf. 2025;34(12):788-97. doi:10.1136/bmjqs-2024-018243</a></li><li><a href="https://www.jmir.org/2026/1/e78676">Newton N, Bamgboje-Ayodele A, Forsyth R, Tariq A, Huang J, Yannam R, et al. Experiences of alert fatigue and its contributing factors in hospitals: qualitative study. J Med Internet Res. 2026;28:e78676. doi:10.2196/78676</a></li><li><a href="https://pubmed.ncbi.nlm.nih.gov/16357358/">van der Sijs H, Aarts J, Vulto A, Berg M. Overriding of drug safety alerts in computerized physician order entry. J Am Med Inform Assoc. 2006;13(2):138-47. doi:10.1197/jamia.M1809</a></li><li><a href="https://pubmed.ncbi.nlm.nih.gov/38899788/">Felisberto M, Lima GDS, Celuppi IC, Fantonelli MDS, Zanotto WL, Dias de Oliveira JM, et al. Override rate of drug-drug interaction alerts in clinical decision support systems: a brief systematic review and meta-analysis. Health Informatics J. 2024;30(2):14604582241263242. doi:10.1177/14604582241263242</a></li><li><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC7400042/">Poly TN, Islam MM, Yang HC, Li YC. Appropriateness of overridden alerts in computerized physician order entry: systematic review. JMIR Med Inform. 2020;8(7):e15653. doi:10.2196/15653</a></li><li><a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0110274">Drew BJ, Harris P, Zègre-Hemsey JK, Mammone T, Schindler D, Salas-Boni R, et al. Insights into the problem of alarm fatigue with physiologic monitor devices: a comprehensive observational study of consecutive intensive care unit patients. PLoS One. 2014;9(10):e110274. doi:10.1371/journal.pone.0110274</a></li><li><a href="https://www.jointcommission.org/en-us/knowledge-library/newsletters/sentinel-event-alert/issue-50">The Joint Commission. Sentinel Event Alert 50: medical device alarm safety in hospitals. 8 April 2013. Archived copy: web.archive.org/web/20250806153720</a></li><li><a href="https://doi.org/10.1186/s12911-017-0430-8">Ancker JS, Edwards A, Nosal S, Hauser D, Mauer E, Kaushal R. Effects of workload, work complexity, and repeated alerts on alert fatigue in a clinical decision support system. BMC Med Inform Decis Mak. 2017;17:36. doi:10.1186/s12911-017-0430-8</a></li><li><a href="https://hf.tc.faa.gov/publications/2007-human-factors-analysis/full_text.pdf">Allendoerfer K, Friedman-Berg F, Pai S. Human factors analysis of safety alerts in air traffic control. DOT/FAA/TC-07/22. Federal Aviation Administration; 2007.</a></li><li><a href="https://dl.acm.org/doi/10.1145/3723158">Tariq S, Baruwal Chhetri M, Nepal S, Paris C. Alert fatigue in security operations centres: research challenges and opportunities. ACM Comput Surv. 2025;57(9):1-38. doi:10.1145/3723158</a></li><li><a href="https://doi.org/10.1136/bmjqs-2017-007531">Wong A, Amato MG, Seger DL, et al. Prospective evaluation of medication-related clinical decision support over-rides in the intensive care unit. BMJ Qual Saf. 2018;27(9):718-24. doi:10.1136/bmjqs-2017-007531</a></li><li><a href="https://doi.org/10.1001/archinternmed.2010.65">Westbrook JI, Woods A, Rob MI, Dunsmuir WTM, Day RO. Association of interruptions with an increased risk and severity of medication administration errors. Arch Intern Med. 2010;170(8):683-90. doi:10.1001/archinternmed.2010.65</a></li><li><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC13539284/">Zhu L, Wei S, An Y, Hu W, Xie X. Severity and associated factors of alarm fatigue among intensive care unit nurses: a systematic review and meta-analysis. Nurs Crit Care. 2026;31(5):e70666. doi:10.1111/nicc.70666</a></li><li><a href="https://digitalassets.jointcommission.org/api/public/content/9ca80055182b4274842a5780a94f2c82">The Joint Commission. National Performance Goals, hospital program: NPG.01.05.01, clinical alarm safety. Effective January 2026.</a></li><li><a href="https://www.safetyandquality.gov.au/resources/electronic-medication-management-systems-guide-safe-implementation-third-edition">Australian Commission on Safety and Quality in Health Care. Electronic medication management systems: a guide to safe implementation. 3rd ed. 2019.</a></li><li><a href="https://www.safetyandquality.gov.au/sites/default/files/resources/attachments/national-safety-and-quality-health-service-standards-guide-for-hospitals.pdf">Australian Commission on Safety and Quality in Health Care. National Safety and Quality Health Service Standards: guide for hospitals.</a></li><li><a href="https://www.safetyandquality.gov.au/national-standards/nsqhs-standards/medication-safety-standard">Australian Commission on Safety and Quality in Health Care. NSQHS Medication Safety Standard, 2nd ed. Action 4.13.</a></li><li><a href="https://www.magistratescourt.tas.gov.au/__data/assets/pdf_file/0005/823460/McDonald,-Maureen-June.pdf">Mackey L, Coroner. Record of investigation into death (without inquest). Magistrates Court of Tasmania, Coronial Division. 16 June 2025. Archived copy: web.archive.org/web/20251116110057</a></li><li><a href="https://www.agedcarequality.gov.au/news-publications/clinical-alerts-and-advice/transcribing-and-dispensing-errors">Aged Care Quality and Safety Commission. Clinical alert: transcribing and dispensing errors. 20 June 2023.</a></li><li><a href="https://www.agedcarequality.gov.au/news-publications/clinical-alerts-and-advice/unauthorised-prescribing-electronic-national-residential-medication-charts-enrmc">Aged Care Quality and Safety Commission. Clinical alert: unauthorised prescribing on electronic National Residential Medication Charts. 13 August 2026.</a></li><li><a href="https://www.agedcarequality.gov.au/strengthened-quality-standards/clinical-care/clinical-governance">Aged Care Quality and Safety Commission. Strengthened Aged Care Quality Standards, Standard 5 Clinical care, Outcome 5.1 Clinical governance. Applied from 1 November 2025.</a></li><li><a href="https://www.tga.gov.au/resources/guidance/understanding-clinical-decision-support-system-software-regulation">Therapeutic Goods Administration. Understanding clinical decision support system software regulation. Updated 29 January 2026.</a></li><li><a href="https://www.legislation.gov.au/C2024A00128">Privacy and Other Legislation Amendment Act 2024 (Cth), Sch 1 Pt 15, inserting APP 1.7. Commencing 10 December 2026.</a></li><li><a href="https://journals.sagepub.com/doi/10.1177/1060028019863419">Horn J, Ueng S. The effect of patient-specific drug-drug interaction alerting on the frequency of alerts: a pilot study. Ann Pharmacother. 2019;53(11):1087-92. doi:10.1177/1060028019863419</a></li><li><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC6398362/">Daniels CC, Burlison JD, Baker DK, Robertson J, Sablauer A, Flynn PM, et al. Optimizing drug-drug interaction alerts using a multidimensional approach. Pediatrics. 2019;143(3):e20174111. doi:10.1542/peds.2017-4111</a></li><li><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC2605599/">Paterno MD, Maviglia SM, Gorman PN, Seger DL, Yoshida E, Seger AC, et al. Tiering drug-drug interaction alerts by severity increases compliance rates. J Am Med Inform Assoc. 2009;16(1):40-6. doi:10.1197/jamia.M2808</a></li><li><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC6206354/">Wright A, Aaron S, Seger DL, Samal L, Schiff GD, Bates DW. Reduced effectiveness of interruptive drug-drug interaction alerts after conversion to a commercial electronic health record. J Gen Intern Med. 2018;33(11):1868-76. doi:10.1007/s11606-018-4415-9</a></li><li><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC6748819/">Hussain MI, Reynolds TL, Zheng K. Medication safety alert fatigue may be reduced via interaction design and clinical role tailoring: a systematic review. J Am Med Inform Assoc. 2019;26(10):1141-9. doi:10.1093/jamia/ocz095</a></li><li><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10393867/">Ng HJH, Kansal A, Abdul Naseer JF, et al. Optimizing Best Practice Advisory alerts in electronic medical records with a multi-pronged strategy at a tertiary care hospital in Singapore. JAMIA Open. 2023;6(3):ooad056. doi:10.1093/jamiaopen/ooad056</a></li><li><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC13385993/">Ray CE, Wilson GM, Hughes AM, Cunningham Goedken C, Liu EP, Fitzpatrick MA, et al. Alert fatigue measurement in clinical decision support: a systematic review. J Am Med Inform Assoc. 2026;33(8):1523-31. doi:10.1093/jamia/ocag064</a></li><li><a href="https://pubmed.ncbi.nlm.nih.gov/42531471/">Nelson SD, Wright A. Beyond alert fatigue: automation bias, deskilling, and clinical decision-making in the age of AI. Am J Health Syst Pharm. 2026 Jul 30:zxag227. doi:10.1093/ajhp/zxag227. Epub ahead of print.</a></li><li><a href="https://www.safetyandquality.gov.au/resources/ai-clinical-use-guide">Australian Commission on Safety and Quality in Health Care. AI clinical use guide: guidance for clinicians. Version 1.0. August 2025.</a></li><li><a href="https://pubmed.ncbi.nlm.nih.gov/27516495/">Lyell D, Coiera E. Automation bias and verification complexity: a systematic review. J Am Med Inform Assoc. 2017;24(2):423-31. doi:10.1093/jamia/ocw105</a></li><li><a href="https://pubmed.ncbi.nlm.nih.gov/15917795/">Wolfe JM, Horowitz TS, Kenner NM. Rare items often missed in visual searches. Nature. 2005;435(7041):439-40. doi:10.1038/435439a</a></li><li><a href="https://link.springer.com/chapter/10.1007/978-3-658-47422-5_27">Rosbach E, Ganz J, Ammeling J, Riener A, Aubreville M. Automation bias in AI-assisted medical decision-making under time pressure in computational pathology. In: Palm C, Breininger K, Deserno T, et al., editors. Bildverarbeitung für die Medizin 2025. Wiesbaden: Springer Vieweg; 2025. p. 129-34. doi:10.1007/978-3-658-47422-5_27</a></li><li><a href="https://www.racgp.org.au/advocacy/position-statements/view-all-position-statements/clinical-and-practice-management/artificial-intelligence-in-primary-care">Royal Australian College of General Practitioners. Artificial intelligence in primary care (position statement). April 2024.</a></li><li><a href="https://www.nature.com/articles/s41746-026-02679-2">Wang A, Freeman S, Magrabi F. Governance for safe and responsible AI in healthcare organisations: a scoping review of frameworks. NPJ Digit Med. 2026;9(1):516. doi:10.1038/s41746-026-02679-2</a></li><li><a href="https://www.health.gov.au/resources/publications/safe-and-responsible-artificial-intelligence-in-health-care-legislation-and-regulation-review-final-report">Department of Health, Disability and Ageing. Safe and responsible artificial intelligence in health care: legislation and regulation review, final report. March 2025.</a></li><li><a href="https://consult.industry.gov.au/ai-mandatory-guardrails">Department of Industry, Science and Resources. Introducing mandatory guardrails for AI in high-risk settings: consultation page update.</a></li><li><a href="https://www.pm.gov.au/media/ai-australias-interests">Albanese A, Ayres T, Charlton A. AI in Australia's interests (media release). Prime Minister of Australia. 2026 Jul 15.</a></li></ol>
+<p><strong>A note on sources.</strong> Every figure and quotation has been checked against the primary document rather than a review or news report that cited it. References 8, 14, 17, 18, 19 and 33 sit behind publisher or firewall protection and may need a browser or institutional access; where an open-access copy exists it is linked instead, and the two primary documents that block automated access carry an archived copy in the citation.</p>
+  </div>
+  <aside class="author-bio" aria-label="About the author">
+    <div class="author-bio-header">
+      <img src="../headshotimage.png" alt="Naomi Alefelder" width="96" height="96" />
+      <div>
+        <h2>About the author</h2>
+        <p class="author-bio-role">Naomi Alefelder &middot; Founding Director, Holistic Governance</p>
+      </div>
+    </div>
+    <p>Registered nurse and governance specialist with over a decade of senior leadership across aged care, hospital, day surgery, disability and community health. MBA (Charles Sturt University), AICD Foundations of Directorship, Lead Auditor (Exemplar Global). Board Director, Caladenia Dementia Care.</p>
+    <p class="author-bio-links"><a href="../about.html">More about Naomi</a> &middot; <a href="https://www.linkedin.com/in/naomi-alefelder" target="_blank" rel="noopener">LinkedIn</a> &middot; <a href="../proposal-enquiry.html">Request a proposal</a></p>
+  </aside>
+  <aside class="related-solutions" aria-label="Related solutions">
+    <h2>Related Solutions</h2>
+    <ul>
+      <li><a href="../healthcare.html">Healthcare Governance</a></li>
+    </ul>
+  </aside>
+  <nav class="article-footer-nav" aria-label="Article navigation">
+    <a href="../resources.html">&larr; All articles</a>
+    <a href="../proposal-enquiry.html">Request a Proposal</a>
+    <a href="../healthcare.html">Our Solutions</a>
+  </nav>
+</article>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <a href="/" class="footer-logo" style="text-decoration:none;"><img src="../logo-hg-trimmed.png" alt="Holistic Governance" width="351" height="524"><span class="logo-name">Holistic <span>Governance</span></span></a>
+      <p class="footer-tagline">Improving clarity and confidence in governance through knowledge, data, and technology.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Navigate</h4>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="../about.html">About</a></li>
+        <li><a href="../healthcare.html">Solutions</a></li>
+        <li><a href="../resources.html">Resources</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Get in Touch</h4>
+      <div class="footer-contact-item"><a href="mailto:info@hg-au.com">info@hg-au.com</a></div>
+      <div class="footer-contact-item"><a href="tel:0405515300">0405 515 300</a></div>
+      <div class="footer-contact-item" style="margin-top: 0.5rem;"><a href="../proposal-enquiry.html">Request a Proposal</a></div>
+      <div class="footer-contact-item"><a href="https://www.linkedin.com/company/hg-au/" target="_blank" rel="noopener">LinkedIn</a></div>
+    </div>
+    <div class="footer-col">
+      <h4>Where We Work</h4>
+      <address style="font-style:normal; font-size:0.85rem; line-height:1.6; color:var(--text-light); margin-bottom:0.6rem;">Melbourne Metro and Regional</address>
+      <ul><li>Australia</li><li>New Zealand</li></ul>
+      <p style="font-size:0.8rem; color:var(--text-light); margin-top:0.8rem;">Remote &amp; on-site delivery</p>
+    </div>
+  </div>
+  <div class="footer-bottom"><p>&copy; 2026 Holistic Governance. All rights reserved.</p></div>
+</footer>
+
+<script>
+document.addEventListener('click', function(e) {
+  document.querySelectorAll('.nav-contact-popup.open').forEach(function(popup) {
+    if (!popup.parentElement.contains(e.target)) popup.classList.remove('open');
+  });
+});
+window.addEventListener('scroll', function() {
+  document.querySelector('nav').classList.toggle('scrolled', window.scrollY > 60);
+});
+</script>
+<script>
+// Auto-close mobile menu on scroll, outside tap, or link tap
+(function() {
+  var menu = document.querySelector('nav ul');
+  if (!menu) return;
+  window.addEventListener('scroll', function() { menu.classList.remove('open'); }, { passive: true });
+  document.addEventListener('click', function(e) {
+    if (!menu.classList.contains('open')) return;
+    if (e.target.closest('nav ul a') || !e.target.closest('nav')) menu.classList.remove('open');
+  });
+})();
+</script>
+</body>
+
+</html>
