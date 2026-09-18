@@ -78,7 +78,7 @@ Curated Holistic Governance reference documents on key regulatory and operationa
 - Phone: +61 405 515 300
 - LinkedIn (company): https://www.linkedin.com/company/hg-au/
 - LinkedIn (Naomi Alefelder): https://www.linkedin.com/in/naomi-alefelder
-- [Careers](https://hg-au.com/careers.html): Open roles. Currently hiring a Full Stack Developer (TypeScript / Next.js) on a flexible contract (remote, Australia, A$90 to A$120 per hour, equity pathway for the right person) to help build HG Intel ahead of its 2027 launch. Apply by email to info@hg-au.com.
+- [Careers](https://hg-au.com/careers.html): Open roles. Currently hiring a Full Stack Developer (TypeScript / Next.js) on a flexible contract (remote, Australia, A$80 to A$120 per hour, equity pathway for the right person) to help build HG Intel ahead of its 2027 launch. Apply by email to info@hg-au.com.
 - Address: Heidelberg, Victoria 3084, Australia
 - ABN: 62 639 441 557
 
