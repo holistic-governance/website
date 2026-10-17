@@ -1,6 +1,7 @@
 require('dotenv').config();
 const express = require('express');
 const session = require('express-session');
+const { rateLimit } = require('express-rate-limit');
 const bcrypt = require('bcryptjs');
 const crypto = require('crypto');
 const fs = require('fs');
@@ -9,6 +10,8 @@ const { buildAll } = require('./build-articles');
 
 const app = express();
 const PORT = 3000;
+// Loopback only by default: this is a local admin tool. Set HOST=0.0.0.0 to expose it deliberately.
+const HOST = process.env.HOST || '127.0.0.1';
 
 const articlesDir = path.join(__dirname, 'articles');
 const enquiriesDir = path.join(__dirname, 'enquiries');
@@ -96,6 +99,9 @@ app.use((req, res, next) => {
   }
   next();
 });
+
+// ── General rate limit (all routes; login keeps its stricter limiter below) ──
+app.use(rateLimit({ windowMs: 60 * 1000, limit: 300, standardHeaders: 'draft-8', legacyHeaders: false }));
 
 app.use(express.json({ limit: '1mb' }));
 
@@ -279,7 +285,25 @@ app.get('/admin.html', requireSession, (req, res) => {
   res.sendFile(path.join(__dirname, 'admin.html'));
 });
 
-app.use(express.static(__dirname));
+// The repo root is also the static root, and it holds admin data (user hashes +
+// TOTP secrets, enquiries, audit log) and server code. Refuse those before
+// express.static so they are never served without a session.
+const PRIVATE_FILES = new Set([
+  '/admin-users.json', '/admin-audit.log', '/server.js', '/manage-users.js',
+  '/generate-mfa.js', '/package.json', '/package-lock.json',
+  '/admin.html', // only via the session-gated route above, never an encoded-path static hit
+]);
+const PRIVATE_DIRS = ['/enquiries/', '/node_modules/', '/.claude/', '/.git/'];
+app.use((req, res, next) => {
+  let p;
+  try { p = path.posix.normalize(decodeURIComponent(req.path)).toLowerCase(); }
+  catch { return res.status(400).end(); }
+  if (PRIVATE_FILES.has(p) || PRIVATE_DIRS.some(d => p.startsWith(d) || p === d.slice(0, -1))) {
+    return res.status(404).end();
+  }
+  next();
+});
+app.use(express.static(__dirname, { dotfiles: 'deny' }));
 
 // ── Admin API ──
 
@@ -449,7 +473,7 @@ app.get('/api/subscribers', requireSession, (req, res) => {
 // ── Start ──
 rebuildArticles();
 
-app.listen(PORT, () => {
+app.listen(PORT, HOST, () => {
   console.log(`Server running at http://localhost:${PORT}`);
   console.log(`Dashboard at    http://localhost:${PORT}/admin.html`);
   console.log(`Login at        http://localhost:${PORT}/login.html`);
