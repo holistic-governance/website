@@ -380,7 +380,7 @@
             <div class="article-meta">${formatDate(featured.date)} · <span>${featured.author}</span></div>
             <h3>${featured.title}</h3>
             <p>${featured.summary}</p>
-            <a class="read-more" onclick="openArticle('${featured.slug}', '${featured.title.replace(/'/g, "\\'")}', '${formatDate(featured.date)}', '${featured.author}')">Read Article →</a>
+            <a class="read-more" onclick="openArticle('${featured.slug}', '${featured.title.replace(/\\/g, "\\\\").replace(/'/g, "\\'")}', '${formatDate(featured.date)}', '${featured.author}')">Read Article →</a>
           </div>
         </div>`;
     } else {
@@ -395,7 +395,7 @@
           <div class="article-meta" style="margin-bottom:0.8rem;">${formatDate(a.date)}</div>
           <h4>${a.title}</h4>
           <p>${a.summary}</p>
-          <a class="read-more" onclick="openArticle('${a.slug}', '${a.title.replace(/'/g, "\\'")}', '${formatDate(a.date)}', '${a.author}')">Read More →</a>
+          <a class="read-more" onclick="openArticle('${a.slug}', '${a.title.replace(/\\/g, "\\\\").replace(/'/g, "\\'")}', '${formatDate(a.date)}', '${a.author}')">Read More →</a>
         </div>
       </div>
     `).join('');
