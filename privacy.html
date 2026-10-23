@@ -111,7 +111,7 @@
 <div class="page-hero">
   <div class="breadcrumb"><a href="/">Home</a> / Privacy Policy</div>
   <h1>Privacy Policy</h1>
-  <p class="updated">Last updated: 5 September 2026</p>
+  <p class="updated">Last updated: 23 October 2026</p>
 </div>
 
 <section class="privacy-content">
@@ -122,11 +122,12 @@
     <h2>1. Information We Collect</h2>
     <table class="privacy-table">
       <tr><th>Category</th><th>Data Collected</th><th>How</th></tr>
-      <tr><td>Governance enquiries</td><td>Organisation name, contact name, email, phone, governance challenge, accreditation status</td><td>Website enquiry form</td></tr>
-      <tr><td>Proposals</td><td>Client name, email, proposal content, engagement notes</td><td>Created by Holistic Governance during engagement</td></tr>
+      <tr><td>Governance enquiries</td><td>Organisation name, type and size, contact name, email, phone, governance challenge, accreditation status, timeframe, and whether you agree to marketing emails</td><td>Website enquiry form</td></tr>
+      <tr><td>Proposals</td><td>Client name, email, proposal content, engagement notes. If you accept a proposal: the signer's name, role, signature and date, and the options you chose</td><td>Created by Holistic Governance during engagement</td></tr>
       <tr><td>Newsletter</td><td>Email address</td><td>Newsletter sign-up form</td></tr>
       <tr><td>Booking</td><td>Name, email (provided to Calendly)</td><td>Kickoff meeting booking</td></tr>
       <tr><td>Resource downloads</td><td>Name, work email, organisation, organisation type</td><td>Free-resource download forms (e.g. board dashboards, health checks)</td></tr>
+      <tr><td>Security and hosting logs</td><td>IP address and browser details</td><td>Automatically when you use our forms or open a proposal link</td></tr>
     </table>
 
     <h2>2. How We Use Your Information</h2>
@@ -136,10 +137,25 @@
       <li>To send newsletters you have opted into</li>
       <li>To schedule meetings and kickoff calls</li>
       <li>To deliver free resources you request (including emailing you the download link) and respond if you ask us to follow up</li>
+      <li>To keep our forms and systems secure, for example by limiting repeated submissions</li>
     </ul>
     <p>We do <strong>not</strong> sell, rent, or trade your personal information to third parties.</p>
 
-    <h2>3. How We Store and Protect Your Data</h2>
+    <h2>3. AI and Decisions Made by Computer Programs</h2>
+    <p><strong>In short:</strong> no computer program or AI makes significant decisions about you. People at Holistic Governance make every decision about enquiries, proposals, pricing and who we work with.</p>
+    <p>We align with the Privacy Act's transparency requirements on automated decisions. These ask organisations to explain when they use computer programs, including AI, with personal information to make or help make decisions that could significantly affect people. Here is how that applies to us.</p>
+    <p><strong>Everyday automatic rules.</strong> Our systems apply a few simple rules automatically:</p>
+    <table class="privacy-table">
+      <tr><th>Rule</th><th>Information used</th><th>What happens</th></tr>
+      <tr><td>Security limits on forms, sign-in and proposal responses</td><td>IP address</td><td>Too many attempts in a short time are paused for a short time (up to an hour). You can try again later or contact us.</td></tr>
+      <tr><td>Resource downloads and notifications</td><td>Name and email</td><td>When you request a free resource, the download link is emailed to you automatically.</td></tr>
+      <tr><td>Proposal deadlines</td><td>The proposal's expiry date</td><td>A proposal can no longer be accepted online after its expiry date, and signable proposal links stop working 90 days after they are sent. Contact us and we will reissue it.</td></tr>
+    </table>
+    <p>Our Board Reporting Health Check scores your organisation's reporting practice, not you. The score is calculated in your browser and is not sent to us.</p>
+    <p><strong>How we use AI.</strong> We use Anthropic's Claude to help us draft and review documents, such as marketing content, articles, proposals and reports. A person checks everything before it is used or sent. Our marketing tools see only summary counts of enquiries (for example, by organisation type), never your name, email, organisation name or the details you wrote. We do not use AI to assess you, your enquiry or your organisation, or to decide whether to work with you.</p>
+    <p>If you have questions about how a decision involving you was made, or want a person to review it, contact us using the details in section 10.</p>
+
+    <h2>4. How We Store and Protect Your Data</h2>
     <table class="privacy-table">
       <tr><th>Measure</th><th>Detail</th></tr>
       <tr><td>Encryption at rest</td><td>Google Cloud default encryption (AES-256)</td></tr>
@@ -152,7 +168,7 @@
     </table>
     <p><strong>Proposal links:</strong> Each proposal is accessible via a unique, cryptographically random URL (e.g. <code>/p/prop_&lt;32-hex&gt;</code>). Anyone who has the link can view the proposal and any signature captured on acceptance. Proposal links should be treated as confidential and not forwarded to third parties.</p>
 
-    <h2>4. Data Retention</h2>
+    <h2>5. Data Retention</h2>
     <table class="privacy-table">
       <tr><th>Data Type</th><th>Retention Period</th></tr>
       <tr><td>Governance enquiries</td><td>12 months from submission</td></tr>
@@ -165,7 +181,7 @@
     <p>When a proposal is accepted, a <strong>protected read-only copy</strong> is stored as a permanent record of the agreed terms. This snapshot cannot be edited after acceptance.</p>
     <p>After the retention period, your data is reviewed and deleted unless there is a legal or contractual reason to retain it.</p>
 
-    <h2>5. Third-Party Services</h2>
+    <h2>6. Third-Party Services</h2>
     <table class="privacy-table">
       <tr><th>Service</th><th>Purpose</th><th>Data Shared</th></tr>
       <tr><td>Google Cloud (Firestore)</td><td>Data storage</td><td>All collected data (encrypted, stored in Australia)</td></tr>
@@ -173,17 +189,18 @@
       <tr><td>Calendly</td><td>Meeting scheduling</td><td>Only a link — you provide your details directly to Calendly</td></tr>
       <tr><td>Google Analytics &amp; Google Ads tag</td><td>Website usage insights and conversion measurement</td><td>Browsing and conversion data (Google Analytics 4 does not log or store IP addresses)</td></tr>
       <tr><td>Microsoft Power BI</td><td>Embedded demo dashboard</td><td>None from us — the demo report loads directly from Microsoft, which may set its own cookies</td></tr>
+      <tr><td>Anthropic, PBC (USA)</td><td>AI assistance with drafting and reviewing documents (see section 3)</td><td>Document content we work on, which may include client contact details</td></tr>
     </table>
     <p>Each service operates under its own privacy policy. We encourage you to review them.</p>
-    <p><strong>Overseas disclosure:</strong> email delivery involves disclosing your name, email address and message content to Resend, Inc. in the United States. All other personal information is stored in Australia.</p>
+    <p><strong>Overseas disclosure:</strong> email delivery involves disclosing your name, email address and message content to Resend, Inc. in the United States. Documents we draft or review with AI assistance are processed by Anthropic in the United States. All other personal information is stored in Australia.</p>
 
-    <h2>6. Cookies</h2>
+    <h2>7. Cookies</h2>
     <p>Our main website uses <strong>Google Analytics</strong> cookies to understand how visitors use the site. These cookies collect anonymised data only.</p>
     <p>Our proposal management system uses a single <strong>session cookie</strong> for administrator authentication. This cookie contains no personal information, is HttpOnly and Secure, and expires after 7 days or on logout.</p>
     <p>Some pages also load the <strong>Google Ads</strong> tag for conversion measurement, which may set advertising cookies (e.g. <code>_gcl_*</code>). Beyond Google Analytics and the Google Ads tag, we do not use advertising or tracking cookies.</p>
     <p>Our demo dashboard page embeds a report from <strong>Microsoft Power BI</strong>. Microsoft may set its own cookies within that embedded frame; these are governed by Microsoft's privacy statement.</p>
 
-    <h2>7. Your Rights</h2>
+    <h2>8. Your Rights</h2>
     <p>Under the Australian Privacy Act, you have the right to:</p>
     <ul>
       <li><strong>Access</strong> the personal information we hold about you</li>
@@ -193,7 +210,7 @@
       <li><strong>Lodge a complaint</strong> with the <a href="https://www.oaic.gov.au/" target="_blank" rel="noopener">Office of the Australian Information Commissioner (OAIC)</a> if you believe your privacy has been breached</li>
     </ul>
 
-    <h2>8. Data Breach Response</h2>
+    <h2>9. Data Breach Response</h2>
     <p>In the event of a data breach that is likely to result in serious harm, we will:</p>
     <ul>
       <li>Notify affected individuals as soon as practicable</li>
@@ -201,7 +218,7 @@
       <li>Take immediate steps to contain and remediate the breach</li>
     </ul>
 
-    <h2>9. Contact</h2>
+    <h2>10. Contact</h2>
     <div class="contact-box">
       <p><strong>Privacy enquiries and data requests:</strong></p>
       <p>Naomi Alefelder — Founding Director, Holistic Governance</p>
@@ -210,8 +227,9 @@
     </div>
     <p>We will respond to all privacy-related requests within 30 days.</p>
 
-    <h2>10. Changes to This Policy</h2>
+    <h2>11. Changes to This Policy</h2>
     <p>We may update this policy from time to time. The "Last updated" date at the top reflects the most recent revision. Continued use of our services after changes constitutes acceptance of the updated policy.</p>
+    <p>We welcome feedback on this policy at <a href="mailto:info@hg-au.com">info@hg-au.com</a>.</p>
 
   </div>
 </section>
