@@ -1,18 +1,41 @@
 version: 2
+
+# Decided 2026-10-24 (Naomi, hg-au D41 open question 7): version updates
+# wait 7 days after a release before Dependabot proposes it (supply-chain
+# buffer). GitHub: cooldown applies to version updates only — security
+# updates are never delayed. Grouping copied from hg-intel-ingest: dev
+# tooling in one PR, production minor/patch in one, production majors one
+# each; GitHub Actions in one.
 updates:
   - package-ecosystem: "npm"
     directory: "/"
     schedule:
       interval: "weekly"
       day: "monday"
+    cooldown:
+      default-days: 7
     open-pull-requests-limit: 5
     labels:
       - "dependencies"
+    groups:
+      dev-dependencies:
+        dependency-type: "development"
+      production-minor-patch:
+        dependency-type: "production"
+        update-types:
+          - "minor"
+          - "patch"
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
       interval: "weekly"
       day: "monday"
+    cooldown:
+      default-days: 7
     open-pull-requests-limit: 3
     labels:
       - "dependencies"
+    groups:
+      github-actions:
+        patterns:
+          - "*"
