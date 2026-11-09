@@ -3,7 +3,7 @@ title: Support at Home
 topic: support-at-home
 type: HG Reference
 jurisdiction: Australia (national)
-lastReviewed: DRAFT — under revision 9 Nov 2026; previously reviewed 2026-05-22; parts no longer match current law or program settings
+lastReviewed: 2026-11-09
 publisher: Holistic Governance
 publisherUrl: https://hg-au.com
 canonicalUrl: https://hg-au.com/topics/support-at-home.md
@@ -11,119 +11,140 @@ canonicalUrl: https://hg-au.com/topics/support-at-home.md
 
 # Support at Home
 
-> **Under revision (9 Nov 2026).** A check against official sources found that parts of this page no longer match current law or program settings. Do not rely on it. Check the Aged Care Quality and Safety Commission (agedcarequality.gov.au) or health.gov.au for current requirements. An updated version is being prepared.
-
-> Support at Home is the new Australian Government home-based aged care program established under the Aged Care Act 2024. It commenced on 1 November 2025, consolidating the Home Care Packages program and Short-Term Restorative Care into a single, classification-based program with capped service prices, separated service streams, and a clearer distinction between clinical care, independence support, and everyday living. The Commonwealth Home Support Programme (CHSP) is scheduled to transition into Support at Home in a later stage.
+> Support at Home is the Australian Government's in-home aged care program. It started on 1 November 2025, when the Aged Care Act 2024 framework took effect, replacing the Home Care Packages Program and the Short-Term Restorative Care Programme. It funds ongoing services through 8 classifications and 3 short-term pathways, with contributions set by government. Price caps were paused in May 2026. From 1 October 2026 personal care moved into the fully funded clinical supports category. The Commonwealth Home Support Program (CHSP) was extended as a separate program to 30 June 2029.
 
 ## What is Support at Home?
 
-Support at Home is the single national program through which the Australian Government subsidises home-based aged care. It replaces the Home Care Packages program (HCP) and the Short-Term Restorative Care program (STRC), and over time will absorb the Commonwealth Home Support Programme (CHSP).
+Support at Home helps older people stay at home as they age by funding coordinated care and services that meet their assessed needs. The Department of Health, Disability and Ageing leads the program. The Aged Care Quality and Safety Commission registers and regulates the registered providers that deliver it.
 
-The program is built around three principles:
+The program has four main parts:
 
-- **Needs-based classification** — older people are assessed and assigned to a classification level that determines the value of their ongoing budget for services.
-- **Separated service streams** — services are grouped into Clinical Care, Independence Support, and Everyday Living, with different government funding shares and different participant co-contributions in each stream.
-- **Capped service prices** — the Government publishes maximum service prices that providers may charge, supporting consistency and transparency for older people.
+- **Ongoing services** — funded through one of 8 classifications. There are also 4 transitioned Home Care Package classifications, giving equivalent funding to people who moved across from the Home Care Packages Program.
+- **Short-term pathways** — the Assistive Technology and Home Modifications (AT-HM) scheme, the Restorative Care Pathway and the End-of-Life Pathway.
+- **Care management** — required for every older person in the program, delivered by care partners who plan and review care and services with them.
+- **Participant contributions** — set by government, based on the type of service and the older person's income and assets.
 
-Support at Home is funded and policy-set by the Department of Health, Disability and Ageing, regulated by the Aged Care Quality and Safety Commission, and accessed by older people through the new Single Assessment System.
+Older people first need an aged care assessment, under the Single Assessment System set up from 1 July 2024. After approval, funding is allocated when available, and the older person enters a service agreement with a registered provider they choose.
 
 ## What is the statutory basis?
 
-- **Aged Care Act 2024 (Cth)** — establishes the program, provider registration, participant rights, and funding framework.
-- **Aged Care Rules 2025** and Departmental instruments — operational detail including classification levels, service price caps, service-stream definitions, and contribution arrangements.
-- **Strengthened Aged Care Quality Standards** — apply to Support at Home providers (Standards 1, 2, 3, and 5 in scope, plus applicable parts of Standard 4).
-- **Aged Care Quality and Safety Commission Act 2018 (Cth)** — Commission's regulatory powers including assessment, compliance, and enforcement.
+- **Aged Care Act 2024 (Cth)** — the law under which providers are registered and regulated. The Strengthened Aged Care Quality Standards are part of it.
+- **Aged Care Rules 2025** — detailed requirements, including registration obligations and conditions.
+- **Support at Home program manual** — the department's guide for registered providers on program rules, procedures and obligations.
+- The **Aged Care Quality and Safety Commission Act 2018** is no longer in force. Its last compiled version applied until 31 October 2025.
+
+**Which Quality Standards apply** depends on registration category, not on the program:
+
+- **Categories 1 to 3** — the Quality Standards do not apply. All registered providers must still uphold the Statement of Rights, follow the Code of Conduct for Aged Care, report serious incidents and make sure older people and supporters know how to complain.
+- **Category 4** (personal and care support) — Standards 1 to 4, plus Outcome 5.1 (Clinical governance) for the care management and restorative care management service types.
+- **Category 5** (nursing and transition care) — Standards 1 to 5.
+
+Every Support at Home provider must hold Category 4 with care management, so every Support at Home provider is audited against the Quality Standards and must meet Outcome 5.1.
 
 ## Who does the program apply to?
 
-- Older people accessing home-based aged care services after the program's commencement.
-- Approved providers registered to deliver Support at Home services (in the relevant service categories).
-- Care managers and direct service providers (which may be the same organisation or different organisations).
-- Single Assessment System assessors performing the classification and care planning role.
+- **Older people** assessed and approved for Support at Home, and their **supporters**.
+- **Registered providers**. Under the single provider model, each older person is linked to one provider registered in Category 4 with the service type "care management". That provider oversees the service agreement and coordinates, delivers and claims for all of the older person's services, including those delivered by associated providers.
+- **Aged care workers** and responsible persons, who must follow the Code of Conduct for Aged Care.
+
+If an older person's assessed needs change and their provider is not registered for the new services, the older person would need to move to a provider that is.
 
 ## How is the program structured?
 
 ### Classification and budget
-Older people are assessed and assigned to a classification level that determines their ongoing quarterly budget. Higher-need classifications attract a larger budget. The funding model includes both ongoing budgets for routine care and short-term pathways for restorative and end-of-life support.
+An aged care needs assessment sets the older person's priority and classification for ongoing services. Budgets are quarterly, and 10% of each quarterly budget is deducted to fund care management. Supplements are paid into eligible budgets for specialised care.
 
-### Service streams
-- **Clinical Care** — nursing, allied health, and other clinical services. Fully funded by the Government for eligible participants, with no participant co-contribution.
-- **Independence Support** — services supporting independence and function (e.g., personal care, transport, social support, assistive technology). Government funds the majority of the cost, with a participant co-contribution determined by means-testing.
-- **Everyday Living** — services supporting day-to-day living (e.g., domestic assistance, gardening, home maintenance, meal preparation). The participant co-contribution share is highest in this stream.
+### Contribution categories
+- **Clinical supports** — for example nursing, physiotherapy and, from 1 October 2026, personal care. Fully funded by the Government, with no contribution.
+- **Independence** — for example respite, transport and support to attend appointments. Moderate contributions.
+- **Everyday living** — for example cleaning, gardening, shopping and meal preparation. The highest contributions.
+
+Services Australia assesses income and assets to set contribution rates. Full pensioners pay the lowest rates; self-funded retirees without a Commonwealth Seniors Health Card pay the highest. A lifetime cap on contributions is indexed each March and September, and financial hardship assistance is available to those eligible.
+
+Under the **no worse off principle**, people receiving or approved for a Home Care Package on or before 12 September 2024 pay grandfathered rates. Those who paid no income-tested care fee at 31 October 2025 will never be asked to contribute.
+
+### Personal care change (1 October 2026)
+Personal care (such as showering, dressing and non-clinical continence management) moved from independence to clinical supports on 1 October 2026. Older people with personal care in their support plan and available funding now receive it at no out-of-pocket cost. It is still paid from their Support at Home funding.
 
 ### Short-term pathways
-- **Restorative Care Pathway** — time-limited funding for goal-directed restorative care after a hospital admission, illness, or functional decline.
-- **End-of-Life Pathway** — time-limited additional funding to support older people who are in the last months of life to remain at home.
+- **AT-HM scheme** — separate funding for equipment and home changes, usually available for 12 months. Providers need Category 2 with the AT-HM service type.
+- **Restorative Care Pathway** — up to 16 weeks of intensive allied health and nursing services to regain function, set out in a goal plan. Providers need Category 4 with restorative care management and allied health and therapy.
+- **End-of-Life Pathway** — extra in-home support for older people with about 3 months or less to live who want to stay at home. It runs for 12 weeks, can continue for up to 16, and complements state and territory palliative care. From 8 March 2027, people still at home after the first 12 weeks will continue for a further 12 weeks with additional funding, without reassessment.
 
-### Assistive technology and home modifications
-Funded outside the ongoing budget, with means-tested co-contributions, to support participants to remain at home safely.
+### Prices
+No price caps are in force. In May 2026 the Government paused their implementation to give providers more time to adjust. Registered providers set their own prices, which must be all inclusive, reasonable (based on the cost of delivery) and transparent. Providers must publish their most frequently charged price for each service on My Aged Care and their website, agree prices before charging, and keep records of what prices include.
 
-### Service price caps
-The Department publishes maximum prices for each service type. Providers may charge less, but not more, than the published price cap.
+The Government also announced that the Commission will be empowered to order refunds where providers overcharge and to act against providers that do not issue monthly statements. The department publishes a quarterly National Summary of Support at Home Prices showing the median and range of prices charged, and providers are encouraged to raise prices no more than twice a year.
 
 ### Care management
-Care management is a distinct, funded function that supports the participant to navigate their plan, coordinate services, and review goals. It is separated from direct service delivery in the funding and reporting model.
+Care management is funded separately from direct services: from the 10% deduction for ongoing services, and claimed against the pathway budget for the Restorative Care and End-of-Life Pathways. Older people can self-manage parts of their care, but the provider stays responsible for the care and services delivered.
 
 ## What is the implementation timeline?
 
-- **2024** — Aged Care Act 2024 passed; program design finalised through subordinate instruments.
-- **1 November 2025** — Support at Home commenced; new participants entered Support at Home, and existing Home Care Package recipients began transitioning under the program's transition rules.
-- **2025–2027** — Transitional period for existing Home Care Package participants, with rules preserving budget continuity and participant choice during the transition.
-- **2027 (planned)** — Commonwealth Home Support Programme (CHSP) integration into Support at Home (the exact commencement date is set by Departmental policy and may be adjusted; providers should monitor Departmental updates).
+- **1 July 2024** — Single Assessment System established.
+- **1 November 2025** — Strengthened Quality Standards apply; Support at Home replaces the Home Care Packages Program and the Short-Term Restorative Care Programme.
+- **19–20 May 2026** — price caps paused; new consumer protections announced.
+- **21 August 2026** — CHSP extended as a separate program to 30 June 2029, with consultation on the long-term design of entry-level in-home care. Some department pages still say CHSP will transition "no earlier than 1 July 2027"; the August 2026 extension is the later announcement.
+- **1 October 2026** — personal care moves to clinical supports; Support at Home subsidy rates and some supplements increase.
+- **8 March 2027** — End-of-Life Pathway extension starts.
 
 ## What are common provider gaps?
 
-- **Service-stream classification of activities** — providers continue to deliver services in their pre-Support at Home configuration without re-mapping every service into the new Clinical Care / Independence Support / Everyday Living streams.
-- **Care management and service delivery not separated in pricing or reporting** — legacy operating models still bundle case management with service hours, creating compliance and pricing risk.
-- **Service price discipline** — operational pricing not consistently below or at price caps; risk of over-charging.
-- **Co-contribution calculation and communication** — participant co-contributions calculated correctly internally but not clearly communicated to older people and families, leading to complaints and trust erosion.
-- **Restorative and end-of-life pathways under-utilised** — providers do not actively identify participants who would benefit from short-term pathway funding, leaving outcomes and funding on the table.
-- **Transition management for existing HCP participants** — handover from HCP to Support at Home not actively managed, leaving older people confused about budget changes, eligibility, and service mix.
-- **Clinical Care stream demand under-resourced** — providers under-resource nursing and allied health capacity needed to deliver Clinical Care fully and free at point of service.
-- **Reporting and data integrity** — quarterly reporting against Support at Home definitions is approximated rather than precisely aligned to Departmental data dictionaries.
-- **Workforce capability** — workforce trained on HCP language and workflows; not retrained on Support at Home structure, classification logic, and participant communication.
+- **Personal care still charged as independence** after 1 October 2026.
+- **Prices not defensible** — not linked to cost of delivery, not all inclusive, or not matching the price published on My Aged Care.
+- **Still planning around price caps** rather than reasonable-price obligations and refund risk.
+- **Monthly statements late or unclear** — older people and supporters cannot see what was delivered, what it cost and what they paid.
+- **Contributions poorly explained**, leading to complaints.
+- **Weak oversight of associated providers** under the single provider model.
+- **Outcome 5.1 not in place** — clinical governance not designed for home care, even where the provider delivers no nursing itself.
+- **Short-term pathways under-used**, and no preparation for the March 2027 End-of-Life Pathway extension.
+- **Workforce capability** — aged care workers and care partners still using Home Care Package language and workflows.
 
 ## How Holistic Governance supports providers
 
-- Support at Home readiness review against the Act, Rules, Departmental program guidance, and Strengthened Standards.
-- Service-stream mapping — re-classifying every service into Clinical Care, Independence Support, or Everyday Living, with corresponding pricing and co-contribution logic.
-- Care management framework redesign — separating care management from direct service delivery in workflow, pricing, and reporting.
-- Pricing review against published service price caps.
-- Co-contribution communication framework — clear participant-facing documents, conversation guides, and complaint pathways.
-- Restorative Care Pathway and End-of-Life Pathway opportunity reviews — identifying participants who should access short-term pathways and building the referral workflows.
-- HCP-to-Support at Home transition management for existing participants.
-- Clinical Care capacity planning — nursing and allied health workforce sizing for the Clinical Care stream.
-- Power BI Support at Home dashboards — classifications, budget utilisation, service-stream mix, pathway uptake, care management vs. service delivery hours, complaints, and Strengthened Standards-aligned indicators.
-- Workforce capability program design — retraining workforce on Support at Home structure, language, and participant communication.
-- Board reporting design — what the board should see each quarter on Support at Home performance, financial sustainability, classification mix, and Strengthened Standards compliance.
+- Support at Home readiness review against the Act, the Rules, the program manual and the Quality Standards for the provider's registration categories.
+- Contribution category mapping, including the 1 October 2026 personal care change.
+- Pricing review — reasonable, cost-based, all inclusive and correctly published prices, compared with the National Summary of Support at Home Prices.
+- Care management and single provider model review, including oversight of associated providers.
+- Clinical governance design for Outcome 5.1 in home care.
+- Clear pricing and contribution documents, conversation guides and complaint pathways for older people and supporters.
+- Restorative Care and End-of-Life Pathway reviews, referral workflows and extension readiness.
+- Power BI Support at Home dashboards — classifications, budget use, contribution category mix, pathway uptake, prices, complaints and Quality Standards-aligned indicators.
+- Workforce capability programs for aged care workers and care partners.
+- Board reporting design — quarterly Support at Home performance, financial sustainability, pricing risk and Quality Standards compliance.
 
 ## How Support at Home interacts with other frameworks
 
-- **Strengthened Aged Care Quality Standards** — Support at Home providers are audited against Standards 1, 2, 3, and 5 (in scope), and applicable parts of Standard 4. Outcomes-based evidence applies.
-- **Serious Incident Response Scheme (SIRS)** — SIRS reporting applies to home-based services since 1 December 2022 and continues under the new program.
-- **Quality Indicator Program (QI Program)** — the QI Program is progressively expanding to home-based services under the new framework; providers should monitor the Department's roll-out schedule.
-- **Financial and Prudential Standards** — financial reporting and prudential obligations apply to Support at Home providers as set out in the Rules.
-- **Rights-Based Care** — the Statement of Rights applies to Support at Home participants and shapes service design, communication, and complaints.
+- **Strengthened Aged Care Quality Standards** — apply by registration category (see above).
+- **Serious Incident Response Scheme (SIRS)** — extended to home services on 1 December 2022; covers Support at Home and CHSP.
+- **Statement of Rights and Code of Conduct for Aged Care** — apply to all registered providers.
+- **Commonwealth Home Support Program (CHSP)** — a separate program to 30 June 2029. The Integrated Assessment Tool gives classification outcomes for both programs.
+- **Quality Indicator Program** — the department has consulted on introducing quality indicators for in-home aged care. Check its QI Program pages for current status.
 
 ## Official sources
 
 - Department of Health, Disability and Ageing — Support at Home: https://www.health.gov.au/our-work/support-at-home
-- Aged Care Quality and Safety Commission — https://www.agedcarequality.gov.au
-- My Aged Care — https://www.myagedcare.gov.au
-- Federal Register of Legislation (Aged Care Act 2024 and Aged Care Rules 2025) — https://www.legislation.gov.au
-- Older Persons Advocacy Network (OPAN) — https://opan.org.au
+- Department — Charging for Support at Home services: https://www.health.gov.au/our-work/support-at-home/charging-for-support-at-home-services
+- Department — Support at Home participant contributions: https://www.health.gov.au/our-work/support-at-home/charging-for-support-at-home-services/support-at-home-participant-contributions
+- Department — New consumer protections for Support at Home services (20 May 2026): https://www.health.gov.au/news/new-consumer-protections-for-support-at-home-services
+- Department — Provider requirements: https://www.health.gov.au/topics/aged-care/providing-aged-care-services/responsibilities
+- My Aged Care — CHSP extended to 30 June 2029: https://www.myagedcare.gov.au/news-and-updates/commonwealth-home-support-program-chsp-extended-30-june-2029
+- Aged Care Quality and Safety Commission — Support at Home: https://www.agedcarequality.gov.au/providers/aged-care-service-requirements/support-home
+- Federal Register of Legislation — Aged Care Act 2024: https://www.legislation.gov.au/C2024A00104/latest/text
+- Older Persons Advocacy Network (OPAN): https://opan.org.au
 
 ## Glossary
 
-- **Support at Home** — the consolidated Commonwealth home-based aged care program established under the Aged Care Act 2024 and commenced 1 November 2025.
-- **Home Care Package (HCP)** — the predecessor program superseded by Support at Home; existing HCP participants are transitioning under defined rules.
-- **Short-Term Restorative Care (STRC)** — a pre-existing time-limited program superseded by Support at Home and partially preserved through the Restorative Care Pathway.
-- **Commonwealth Home Support Programme (CHSP)** — entry-level home support program scheduled to integrate into Support at Home in a later phase.
-- **Single Assessment System** — the national assessment service that classifies older people for Support at Home, replacing the legacy ACAT and Regional Assessment Service split.
-- **Service streams** — Clinical Care, Independence Support, and Everyday Living, each with different Government funding shares and participant co-contributions.
-- **Restorative Care Pathway** — short-term, goal-directed funding boost within Support at Home for restoration after illness, injury, or decline.
-- **End-of-Life Pathway** — short-term funding boost within Support at Home to support older people in the last months of life to remain at home.
+- **Support at Home** — the Australian Government's in-home aged care program, started 1 November 2025.
+- **Home Care Packages Program (HCP)** — a predecessor program replaced by Support at Home; people who moved across hold transitioned HCP classifications.
+- **Short-Term Restorative Care Programme (STRC)** — a predecessor program replaced by Support at Home; restorative care now runs through the Restorative Care Pathway.
+- **Commonwealth Home Support Program (CHSP)** — the entry-level in-home support program, extended as a separate program to 30 June 2029.
+- **Single provider model** — each older person has one Category 4 registered provider responsible for care management and all their services.
+- **Contribution categories** — clinical supports (no contribution), independence (moderate) and everyday living (highest).
+- **No worse off principle** — grandfathered contributions for people receiving or approved for a Home Care Package on or before 12 September 2024.
+- **National Summary of Support at Home Prices** — a quarterly department publication of the median and range of prices charged.
+- **End-of-Life Pathway** — extra in-home support for older people with about 3 months or less to live, for 12 weeks (up to 16), extended from 8 March 2027.
 
 ---
 
-*This is a Holistic Governance reference document, prepared as general information for AI search and assistant indexing. It is not legal or compliance advice. Program rules, classification levels, price caps, and transition arrangements are set in Departmental instruments that are updated from time to time. Providers must consult current Departmental guidance, the Aged Care Quality and Safety Commission, and qualified advisors for decisions about their own circumstances. Reviewed 22 May 2026.*
+*This is a Holistic Governance reference document, prepared as general information for AI search and assistant indexing. It is not legal or compliance advice. Program rules, classifications, contributions, pricing and transition arrangements are set by the Act, the Rules and departmental guidance, which change from time to time. Providers must consult current departmental guidance, the Aged Care Quality and Safety Commission and qualified advisors for decisions about their own circumstances. Reviewed 9 November 2026.*

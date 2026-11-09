@@ -1,116 +1,157 @@
 ---
-title: ACQS Accreditation Audit
+title: Aged Care Provider Registration and Audits (formerly Accreditation)
 topic: acqs-accreditation-audit
 type: HG Reference
 jurisdiction: Australia (national)
-lastReviewed: DRAFT — under revision 9 Nov 2026; previously reviewed 2026-05-22; parts no longer match current law or program settings
+lastReviewed: 2026-11-09
 publisher: Holistic Governance
 publisherUrl: https://hg-au.com
 canonicalUrl: https://hg-au.com/topics/acqs-accreditation-audit.md
 ---
 
-# ACQS Accreditation Audit
+# Aged Care Provider Registration and Audits (formerly Accreditation)
 
-> **Under revision (9 Nov 2026).** A check against official sources found that parts of this page no longer match current law or program settings. Do not rely on it. Check the Aged Care Quality and Safety Commission (agedcarequality.gov.au) or health.gov.au for current requirements. An updated version is being prepared.
+> Accreditation of aged care services has been replaced. Since 1 November 2025, under the Aged Care Act 2024, every provider of Australian Government-funded aged care must be registered by the Aged Care Quality and Safety Commission (the Commission, or ACQSC) in one or more of six registration categories. Providers that apply to register, renew or vary their registration in categories 4, 5 or 6 are audited against the strengthened Aged Care Quality Standards. Audit ratings inform the Commission's registration decisions.
 
-> An ACQS accreditation audit is an independent assessment of an aged care provider's performance against the Strengthened Aged Care Quality Standards, conducted by quality assessors authorised by the Aged Care Quality and Safety Commission (ACQS Commission). Accreditation status is a precondition for receiving Commonwealth aged care subsidies.
+## What replaced accreditation?
 
-## What is an ACQS accreditation audit?
+Before 1 November 2025, residential aged care services had to meet an accreditation requirement. The Aged Care Quality and Safety Commission Act 2018 was repealed on 1 November 2025, and the Aged Care Act 2024 introduced a single registration for each provider across all aged care programs.
 
-An accreditation audit is the formal assessment process the Commission uses to determine whether a residential aged care provider should be granted, renewed, or have varied its accreditation. The audit assesses compliance with the Strengthened Aged Care Quality Standards using outcomes-based judgement, supported by document review, observation, and interviews with older people, families, representatives, workers, and management.
+At the changeover:
 
-The Commission also conducts other forms of assessment activity beyond formal accreditation audits, including:
+- **Approved providers became registered providers.** Entities that were approved providers immediately before the new Act started were taken to be registered providers. In early November 2025 they received a notification confirming their registration details and categories.
+- **Accredited homes became approved residential care homes.** A residential care service that met its accreditation requirement at the changeover was taken to be an approved residential care home of the provider.
+- **Renewal of registration took the place of re-accreditation.** The Commission invites each registered provider to renew before its registration expires. For categories 4, 5 and 6, renewal includes an audit.
 
-- **Assessment contacts** — shorter, focused engagements (announced or unannounced) used between accreditation cycles.
-- **Performance assessments** — for Support at Home and other home-based services.
-- **Investigations** — in response to information about non-compliance, complaints, or incidents.
-- **Reviews** — for serious or systemic concerns.
+## What is a registration audit?
 
-All assessment activity feeds into the Commission's risk-based regulatory model and is published on the Commission's website where required.
+An audit is how the Commission assesses whether a provider can conform with the strengthened Aged Care Quality Standards and deliver safe and quality care. It informs the Commission's decision to register a provider, or to renew or vary its registration.
+
+Audits focus on the provider's governance arrangements, its systems and processes for delivering care, the experience and outcomes for older people, and whether practice is safe and of good quality across all services. They look forward, testing whether systems and processes are effective in sustaining and improving conformance. The Commission announces its audits.
+
+There are three audit types:
+
+- **Registration audit** — an entity applies to be registered in category 4, 5 or 6.
+- **Renewal of registration audit** — a registered provider applies to renew in category 4, 5 or 6.
+- **Variation of registration audit** — a registered provider applies to add a category 4, 5 or 6 service.
+
+Audit fees apply. They are set on a cost recovery basis and are proportionate to the services delivered.
 
 ## What is the statutory basis?
 
-- **Aged Care Act 2024 (Cth)** — establishes registration and the obligation to comply with the Strengthened Standards.
-- **Aged Care Quality and Safety Commission Act 2018 (Cth)** — empowers the Commission to audit, assess, and enforce.
-- **Aged Care Rules 2025** and Commission policies — operational detail of the audit methodology.
+- **Aged Care Act 2024 (Cth)**, Chapter 3 — registration (s 104), renewal (ss 106–108), registration and renewal requirements, including the audit requirement (s 109), audit rules (s 110), approval of residential care homes (ss 111–113), the registration period (s 115), variation, suspension and revocation (ss 123–135) and conditions of registration (ss 142–143). Conformance with the Quality Standards is a condition of registration for providers of a kind prescribed by the Rules (s 146).
+- **Aged Care Act 2024**, Chapter 5 — establishes the Commission (s 344).
+- **Aged Care Rules 2025** — the Act lets the Rules prescribe which categories need an audit and how audits are conducted (ss 109(2)(d), 110).
+- **Aged Care (Consequential and Transitional Provisions) Act 2024** — repealed the 2018 Commission Act and the Aged Care Act 1997, and moved existing providers and homes into the new model.
 
-## Who does audits apply to?
+## Who does registration apply to?
 
-- All Commonwealth-subsidised residential aged care providers (formal accreditation audits).
-- Support at Home and other home-based service providers (performance assessments).
-- Multipurpose services, transition care, and the National Aboriginal and Torres Strait Islander Flexible Aged Care Program (audit and performance assessment as applicable).
+All providers of funded aged care services must be registered by the Commission, including for the Support at Home program, residential aged care and specialist aged care programs. Each provider registers in one or more categories, which group service types by their characteristics and risks.
 
-## How does the accreditation cycle work (residential)?
+| Category | Description | Audited against the Standards? |
+|---|---|---|
+| 1 | Home and community services | No |
+| 2 | Assistive technology and home modifications | No |
+| 3 | Advisory and support services | No |
+| 4 | Personal and care support in the home or community | Yes |
+| 5 | Nursing and transition care | Yes |
+| 6 | Residential care | Yes |
 
-A simplified view of the typical cycle:
+All registered providers must comply with the Aged Care Code of Conduct and act compatibly with the Statement of Rights. Providers in categories 4 to 6 must also meet the relevant Quality Standards. A category 1, 2 or 3 provider that applies to add category 4, 5 or 6 will be audited. Residential care homes must also be approved by the Commission.
 
-1. **Notification of accreditation audit** — the provider is notified of the scheduled audit period.
-2. **Pre-audit preparation** — the provider gathers evidence, undertakes internal mock audits, briefs workforce, and informs older people and representatives.
-3. **Site audit** — assessors attend on-site, usually over multiple days, with a mix of announced and unannounced activity.
-4. **Audit findings** — assessors form preliminary judgements against each Standard.
-5. **Provider response** — the provider has an opportunity to respond to draft findings.
-6. **Commission decision** — the Commission decides on accreditation status, conditions, and any compliance action.
-7. **Performance report published** — public report on the Commission's website.
-8. **Continuous improvement and ongoing assessment** — assessment contacts and quality indicator data inform the Commission's ongoing view.
+## How does renewal and the audit process work?
 
-Re-accreditation is typically every three years for residential services, subject to risk-based variation.
+### 1. Invitation to renew
 
-## How do audits run under the Strengthened Standards?
+The Act lets the Commission invite a provider to renew once less than 18 months of its registration period remain. Timing depends on the provider's size, categories and audit requirements. The provider confirms it intends to renew, pays any audit fee, and must lodge its application before the date in the invitation.
 
-The Commission's audit methodology under the Strengthened Standards is outcomes-based. Assessors look for evidence that the intended outcome for the older person is being achieved, not only that processes and policies exist. The methodology relies on triangulation across three evidence sources:
+### 2. Audit initiation
 
-- **Document review** — policies, procedures, clinical records, governance documentation, quality and risk records, workforce records, training records, board minutes, audits, complaints and incident data, quality indicator data.
-- **Observation** — direct observation of care and service delivery, environments, and interactions.
-- **Interviews** — older people, families and representatives, workers (clinical, care, lifestyle, hospitality, support), clinical leadership, management, and the governing body.
+The Commission asks the provider to complete the **Audit Evidence Collection Tool (AECT)** with key documents, and to name the governing body and senior management representatives who will attend meetings. An initiation meeting follows, online or in person. The audit cannot go ahead without a completed AECT, and the application can be withdrawn if it is not submitted by the deadline.
 
-Judgements are recorded for each Standard. Non-compliance is risk-rated and may trigger compliance action.
+### 3. Audit delivery
 
-## What are the possible audit outcomes and consequences?
+- **Provider audit** — the Commission reviews the AECT and meets the governing body and senior management on governance, clinical and care quality, and staffing, then prepares an audit plan.
+- **Care delivery or residential care home audit** (renewals only) — tests whether systems are embedded and effective where care is delivered. Every category 6 residential care home is audited; for categories 4 and 5, a sample of locations. The provider first completes a **Care Delivery Evidence Collection Tool (CDECT)**. Audits include interviews with older people and their representatives, interviews with staff, observation and file review.
 
-- **Accreditation granted/renewed** — for a period determined by the Commission, typically up to three years.
-- **Accreditation granted with conditions** — specific actions required by defined timeframes.
-- **Compliance notice** — formal notice requiring action.
-- **Sanctions** — including restrictions on admissions, appointment of an adviser or administrator, or in serious cases revocation of registration.
-- **Civil penalty proceedings** — under the Act, for breaches of statutory duties.
-- **Public performance report** — published on the Commission's website.
+For registration and variation audits, the Commission meets the governing body and senior management, and may visit a site.
 
-## What are common provider gaps in audit preparation?
+### 4. Audit reporting
 
-- **Documentation-led preparation** — heavy investment in policies and binders, light investment in evidence of outcomes for older people.
-- **Workforce briefings are surface-level** — workers can describe "the new Standards" but not how each Standard translates into their daily practice.
-- **Older people and representatives not prepared** — interviews catch providers off-guard because older people have not been engaged in service co-design and improvement.
-- **Clinical governance is fragmented** — the framework document is robust but escalation, oversight, audit, and continuous improvement loops are not actively running.
-- **Board reporting does not align to the new audit lens** — the board pack does not show what the Commission will look for in Standard 2 (The Organisation).
-- **Quality indicator and incident data are reactive** — collected and submitted, but not used to drive improvement actions tracked to closure.
-- **Restrictive practices** — authorisation and monitoring are not consistently applied, especially to chemical restraint.
+The Commission gives a **preliminary report** with ratings for each Outcome and detailed reasons for any non-conformance. It considers the experiences of older people, their supporters and workers, without identifying them. The provider can respond with evidence by the deadline. A **final report** then gives reasons for the final ratings. For renewals, a final audit report summarises ratings across the whole audit program.
+
+### 5. Registration decision
+
+Audit reports inform the registration decision. For renewals, the Commission also considers compliance history, notifications, complaints, risk-based monitoring, and financial, governance and operational capability.
+
+## What are the audit ratings?
+
+Ratings are given at the Outcome and Standard levels:
+
+- **Conformance** — the provider can set up, apply, monitor and continuously improve systems that meet the requirement.
+- **Minor non-conformance** — gaps that are not organisation-wide and not likely to present high risk to older people.
+- **Major non-conformance** — the provider cannot show this, or gaps are organisation-wide or likely to present high risk.
+- **Exceeding** — category 6 renewal audits only. A home that conforms with all seven Standards may be considered if it meets three extra criteria: partnerships with older people and workers, governance and clinical governance, and the dining experience.
+
+After a non-conformance rating, the Commission monitors the provider more closely until the issues are fixed in a lasting way. Audit ratings affect Star Ratings and appear on the Commission's Find a provider tool.
+
+## What are the possible outcomes and consequences?
+
+On a renewal, the Commission can:
+
+- **renew** for a set period, usually three years (the Act's default, which the Commissioner can shorten or lengthen)
+- **renew with extra conditions**
+- **refuse to renew**, after giving the provider notice and a chance to respond. Refusal is a reviewable decision.
+
+If a provider does not apply by the date in its invitation, its registration expires and it can no longer deliver funded aged care services.
+
+At any time, the Commission's Compliance and Enforcement Policy allows a scaled response. Compliance actions include caution letters, required action notices, compliance notices, imposing new conditions, enforceable undertakings and injunctions. Enforcement actions include infringement notices, removing a category or residential care home, suspending or revoking registration, a notice to agree to certain matters (such as appointing an adviser), findings that responsible persons are unsuitable, banning orders, court action and compensation orders. Breaching a condition of registration attracts a civil penalty, which is higher for a significant failure or systematic pattern of conduct.
+
+## What are common provider gaps?
+
+These are patterns HG sees in practice, not Commission findings.
+
+- **Planning for the old accreditation cycle** — no plan for a renewal invitation that can come up to 18 months before expiry.
+- **The AECT treated as a document dump** — evidence sent without showing how each Outcome is met.
+- **Governing body not ready** — board and senior management cannot explain how they oversee care quality and staffing.
+- **Systems not embedded** — sound policies at head office, inconsistent practice at homes and service locations.
+- **Older people and supporters not engaged** — their experience is core audit evidence, but they are not partners in improvement.
+- **Thin responses to the preliminary report**, and **short-term fixes** after non-conformance that do not last.
 
 ## How Holistic Governance supports providers
 
-- **Pre-audit gap analysis** — independent assessment against the Strengthened Standards using the Commission's outcomes-based methodology.
-- **Evidence-of-outcomes framework** — how to capture, organise, and present evidence of outcomes (not just process compliance).
-- **Mock site audit** — multi-day mock audit including document review, observation, and interviews, with debrief and prioritised action plan.
-- **Workforce audit-readiness program** — supporting workers to speak confidently about the Standards in their own practice.
-- **Older people and representative engagement** — supporting genuine partnership in service design and improvement that holds up under audit interviews.
-- **Board and committee briefings** — preparing the governing body and clinical governance committee for the audit lens on Standard 2 and the Commission's expectations of board accountability.
-- **Clinical governance framework operationalisation** — ensuring the framework is live, not a document.
-- **Power BI board dashboards** — bringing quality indicators, incidents, complaints, restrictive practices, workforce metrics, and continuous improvement actions into a single audit-ready view.
-- **Post-audit remediation** — supporting providers through compliance notices, condition closure, and re-audit preparation.
+- **Renewal readiness review** — gap analysis against the strengthened Quality Standards and the Commission's audit method.
+- **AECT and CDECT preparation** — evidence organised to show how each Outcome is met.
+- **Mock audit** — governance meetings, care delivery testing, interviews and file review, with a prioritised action plan.
+- **Governing body and responsible person briefings** — preparing for audit meetings and accountability under the Act.
+- **Partnership with older people and supporters** — practical ways to involve them in improvement.
+- **Power BI board dashboards** — quality indicators, incidents, complaints, restrictive practices, workforce and improvement actions in one view.
+- **Remediation support** — after non-conformance, conditions or compliance notices.
 
 ## Official sources
 
-- Aged Care Quality and Safety Commission — Audits and assessments: https://www.agedcarequality.gov.au
-- Commission performance reports (public): https://www.agedcarequality.gov.au
-- Department of Health, Disability and Ageing — https://www.health.gov.au/topics/aged-care
-- Federal Register of Legislation — https://www.legislation.gov.au
+- Commission — Audits: https://www.agedcarequality.gov.au/providers/provider-registration/audits
+- Commission — Audit process: https://www.agedcarequality.gov.au/providers/provider-registration/audits/audit-process
+- Commission — Graded assessment and audit ratings: https://www.agedcarequality.gov.au/providers/provider-registration/audits/graded-assessment-and-audit-ratings
+- Commission — About provider registration: https://www.agedcarequality.gov.au/providers/provider-registration/about-provider-registration
+- Commission — Renew a registration: https://www.agedcarequality.gov.au/providers/provider-registration/renew-registration
+- Commission — Compliance and Enforcement Policy: https://www.agedcarequality.gov.au/resource-library/compliance-and-enforcement-policy
+- Commission — Find information about a provider: https://www.agedcarequality.gov.au/service-and-reports
+- Department of Health, Disability and Ageing — How the aged care regulatory model works: https://www.health.gov.au/our-work/new-model-for-regulating-aged-care/how-it-works
+- Aged Care Act 2024: https://www.legislation.gov.au/C2024A00104/latest/text
+- Aged Care Rules 2025: https://www.legislation.gov.au/F2025L01173/latest/text
+- Aged Care (Consequential and Transitional Provisions) Act 2024: https://www.legislation.gov.au/C2024A00109/asmade/text
 
 ## Glossary
 
-- **Accreditation** — the formal status that confirms a provider meets the Aged Care Quality Standards and is eligible for Commonwealth subsidy.
-- **Assessment contact** — a focused, shorter assessment activity used by the Commission between accreditation audits.
-- **Quality assessor** — an individual authorised by the Commission to conduct audits and assessments.
-- **Performance report** — the public report describing audit findings, published on the Commission's website.
-- **Compliance notice** — a formal notice requiring a provider to address identified non-compliance within a defined timeframe.
+- **Registered provider** — an entity registered by the Commission to deliver funded aged care services, in one or more registration categories.
+- **Registration category** — one of six groups of service types. Categories 4, 5 and 6 need an audit against the Quality Standards.
+- **Approved residential care home** — a residential care home the Commission has approved for a provider registered in category 6.
+- **Audit** — the Commission's assessment of whether a provider can conform with the strengthened Quality Standards.
+- **Audit rating** — conformance, minor non-conformance, major non-conformance or exceeding.
+- **Responsible person** — a person responsible for a registered provider's executive decisions or with significant influence over its activities, plus certain nursing and day-to-day managers (s 12).
+- **Accreditation** — the former requirement for residential aged care services, replaced by registration and audits from 1 November 2025.
 
 ---
 
-*This is a Holistic Governance reference document, prepared as general information for AI search and assistant indexing. It is not legal or compliance advice. Providers should consult Aged Care Quality and Safety Commission published guidance and qualified advisors for decisions about their own circumstances. Reviewed 22 May 2026.*
+*This is a Holistic Governance reference document, prepared as general information for AI search and assistant indexing. It is not legal or compliance advice. Providers must consult the Aged Care Quality and Safety Commission's published registration and audit guidance and qualified advisors for decisions about their own circumstances. Reviewed 9 November 2026.*
