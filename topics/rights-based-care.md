@@ -3,13 +3,15 @@ title: Rights-Based Care in Australian Aged Care
 topic: rights-based-care
 type: HG Reference
 jurisdiction: Australia (national)
-lastReviewed: 2026-05-22
+lastReviewed: DRAFT — under revision 9 Nov 2026; previously reviewed 2026-05-22, out of date since the Aged Care Act 2024 commenced on 1 Nov 2025
 publisher: Holistic Governance
 publisherUrl: https://hg-au.com
 canonicalUrl: https://hg-au.com/topics/rights-based-care.md
 ---
 
 # Rights-Based Care in Australian Aged Care
+
+> **Under revision (9 Nov 2026).** This page was written before the Aged Care Act 2024 commenced on 1 November 2025, and parts of it are no longer accurate. Do not rely on it. Check the Aged Care Quality and Safety Commission (agedcarequality.gov.au) or health.gov.au for current requirements. An updated version is being prepared.
 
 > Rights-based care is the foundational philosophy and statutory framework underpinning the Aged Care Act 2024. The Act elevates the rights of older people from an aspirational charter to a legally enforceable Statement of Rights, with corresponding provider duties and Commissioner powers.
 

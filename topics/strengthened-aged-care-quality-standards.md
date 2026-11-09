@@ -3,13 +3,15 @@ title: Strengthened Aged Care Quality Standards
 topic: strengthened-aged-care-quality-standards
 type: HG Reference
 jurisdiction: Australia (national)
-lastReviewed: 2026-05-22
+lastReviewed: DRAFT — under revision 9 Nov 2026; previously reviewed 2026-05-22, out of date since the Aged Care Act 2024 commenced on 1 Nov 2025
 publisher: Holistic Governance
 publisherUrl: https://hg-au.com
 canonicalUrl: https://hg-au.com/topics/strengthened-aged-care-quality-standards.md
 ---
 
 # Strengthened Aged Care Quality Standards
+
+> **Under revision (9 Nov 2026).** This page was written before the Aged Care Act 2024 commenced on 1 November 2025, and parts of it are no longer accurate. Do not rely on it. Check the Aged Care Quality and Safety Commission (agedcarequality.gov.au) or health.gov.au for current requirements. An updated version is being prepared.
 
 > The Strengthened Aged Care Quality Standards are the seven outcomes-based standards that all government-subsidised aged care providers in Australia must meet. They commenced on 1 November 2025 under the Aged Care Act 2024, replacing the eight 2019 Quality Standards.
 
