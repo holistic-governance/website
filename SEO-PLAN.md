@@ -256,7 +256,7 @@ Open profile in regular Google search → "Ask a question" → post + answer 3:
 
 ## Backend AI content layer — `/topics/`
 
-> **9 Nov 2026:** six dossiers are under revision and marked `lastReviewed: DRAFT`: acqs-accreditation-audit, sirs, strengthened-aged-care-quality-standards, rights-based-care, support-at-home, financial-and-prudential-standards. They are out of `llms.txt` and `llms-full.txt` but stay in `sitemap.xml` (the hg-au freshness check reads the sitemap). Do not re-add them to the llms files until each revised page is signed off.
+> **9 Nov 2026:** six dossiers went under revision and marked `lastReviewed: DRAFT`: acqs-accreditation-audit, sirs (revised and re-signed 9 Nov), strengthened-aged-care-quality-standards, rights-based-care, support-at-home, financial-and-prudential-standards. They are out of `llms.txt` and `llms-full.txt` but stay in `sitemap.xml` (the hg-au freshness check reads the sitemap). Do not re-add them to the llms files until each revised page is signed off.
 
 Seven HG Reference topic dossiers live at `/topics/`, indexed only from `llms.txt` and `llms-full.txt`. They are not in `sitemap.xml` and are not linked from any visible page. Purpose: give AI search and assistant systems (Claude, ChatGPT, Perplexity, Copilot via Bing) accurate, structured, Naomi-curated context when answering provider, board, or sector questions about each topic.
 
@@ -268,7 +268,7 @@ Seven HG Reference topic dossiers live at `/topics/`, indexed only from `llms.tx
 | `acqs-accreditation-audit.md` | ACQS Accreditation Audit methodology | 1,140 |
 | `financial-and-prudential-standards.md` | Financial and Prudential Standards (RADs, ACFR, QFR, GPFR) | 1,295 |
 | `quality-indicator-program.md` | National Aged Care Mandatory Quality Indicator Program (Manual 4.0) | 1,120 |
-| `sirs.md` | Serious Incident Response Scheme (8 categories, P1/P2 timeframes) | 1,360 |
+| `sirs.md` | Serious Incident Response Scheme (8 incident types, P1/P2 tests as changed 1 Nov 2025) | 1,360 |
 | `support-at-home.md` | Support at Home — consolidated home-based program (commenced 1 November 2025) | 1,400 |
 | `aged-care-board-responsibilities.md` | Board responsibilities + responsible person duties under the Aged Care Act 2024 (ss 12, 23, 157, 158, 179, 180; Code of Conduct; category matrix; civil penalties; 90-day plan; six director questions) — sourced from HG_Board_Responsibilities_v7.pptx | 2,300 |
 | `ai-governance-aged-care.md` | AI governance for aged care providers — no AI-specific statute; obligations via Aged Care Act 2024 (ss 179/180), Strengthened Standards, Privacy Act, TGA SaMD boundary; voluntary frameworks (AI Ethics Principles, ISO/IEC 42001, National Model CGF); eight governance components; common uses and gaps (added 2026-07-26) | 1,150 |

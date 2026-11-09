@@ -293,6 +293,8 @@ The following Holistic Governance reference documents are published at `/topics/
 
 - **National Aged Care Quality Indicator Program** — https://hg-au.com/topics/quality-indicator-program.md — The current National Aged Care Quality Indicator Program Manual (Parts A and B, published 31 October 2025, superseding Manual 4.0), the 14-indicator set covering clinical care, function, dignity, and consumer voice, quarterly submission, Star Ratings interaction, and use of QI data for continuous improvement.
 
+- **Serious Incident Response Scheme (SIRS)** — https://hg-au.com/topics/sirs.md — The eight reportable incident types under s 16 of the Aged Care Act 2024, the Priority 1 (24-hour, with 5-day follow-up) and Priority 2 (30-day) notification tests as changed on 1 November 2025, the redefined neglect type, unexplained absence, incident management system obligations, and interaction with the Strengthened Standards.
+
 ---
 
 ## Careers
