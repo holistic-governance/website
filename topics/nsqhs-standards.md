@@ -44,7 +44,7 @@ All Australian **hospitals** (public and private) and **day procedure services**
 
 ## How do the NSQHS Standards relate to governing bodies and boards?
 
-Standard 1 (Clinical Governance) places named accountability on the **governing body**: setting the strategic direction for safety and quality, ensuring clinical governance systems exist and function, monitoring performance, and ensuring the workforce has the capability and environment to deliver safe care. Board-level evidence — quality and safety reporting, committee structures, escalation pathways, response to deterioration in performance — is examined at assessment. This is the same governing-body accountability logic that the aged care sector's [Strengthened Quality Standards](https://hg-au.com/topics/strengthened-aged-care-quality-standards.md) (under revision) and [Aged Care Act 2024 duties](https://hg-au.com/topics/aged-care-board-responsibilities.md) apply to aged care providers.
+Standard 1 (Clinical Governance) places named accountability on the **governing body**: setting the strategic direction for safety and quality, ensuring clinical governance systems exist and function, monitoring performance, and ensuring the workforce has the capability and environment to deliver safe care. Board-level evidence — quality and safety reporting, committee structures, escalation pathways, response to deterioration in performance — is examined at assessment. This is the same governing-body accountability logic that the aged care sector's [Strengthened Quality Standards](https://hg-au.com/topics/strengthened-aged-care-quality-standards.md) and [Aged Care Act 2024 duties](https://hg-au.com/topics/aged-care-board-responsibilities.md) apply to aged care providers.
 
 ## What does NSQHS readiness work involve?
 
@@ -72,7 +72,7 @@ Typical readiness support (as delivered by Holistic Governance and comparable co
 ## Related Holistic Governance references
 
 - [National Model for Clinical Governance (2026)](https://hg-au.com/topics/national-model-clinical-governance.md)
-- [Strengthened Aged Care Quality Standards](https://hg-au.com/topics/strengthened-aged-care-quality-standards.md) (under revision) — the aged care counterpart
+- [Strengthened Aged Care Quality Standards](https://hg-au.com/topics/strengthened-aged-care-quality-standards.md) — the aged care counterpart
 - Services: [NSQHS readiness and accreditation support](https://hg-au.com/healthcare.html)
 
 ## Sources

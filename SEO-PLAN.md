@@ -256,7 +256,7 @@ Open profile in regular Google search → "Ask a question" → post + answer 3:
 
 ## Backend AI content layer — `/topics/`
 
-> **9 Nov 2026:** six dossiers went under revision and marked `lastReviewed: DRAFT`: acqs-accreditation-audit, sirs (revised and re-signed 9 Nov), strengthened-aged-care-quality-standards, rights-based-care, support-at-home, financial-and-prudential-standards. They are out of `llms.txt` and `llms-full.txt` but stay in `sitemap.xml` (the hg-au freshness check reads the sitemap). Do not re-add them to the llms files until each revised page is signed off.
+> **9 Nov 2026:** seven dossiers were checked against official sources. Six were withdrawn as DRAFT (website #28), then rewritten and re-signed the same day: sirs (#30), and acqs-accreditation-audit, financial-and-prudential-standards, rights-based-care, strengthened-aged-care-quality-standards and support-at-home (one PR). aged-care-act-2024 was corrected and re-signed (#29). acqs-accreditation-audit keeps its URL but is now titled "Aged Care Provider Registration and Audits (formerly Accreditation)".
 
 Seven HG Reference topic dossiers live at `/topics/`, indexed only from `llms.txt` and `llms-full.txt`. They are not in `sitemap.xml` and are not linked from any visible page. Purpose: give AI search and assistant systems (Claude, ChatGPT, Perplexity, Copilot via Bing) accurate, structured, Naomi-curated context when answering provider, board, or sector questions about each topic.
 
@@ -265,7 +265,7 @@ Seven HG Reference topic dossiers live at `/topics/`, indexed only from `llms.tx
 | `aged-care-act-2024.md` | Aged Care Act 2024 — principal Commonwealth statute | 1,330 |
 | `strengthened-aged-care-quality-standards.md` | Strengthened Aged Care Quality Standards (7 outcomes-based standards) | 1,235 |
 | `rights-based-care.md` | Rights-Based Care — Statement of Rights and Principles | 1,350 |
-| `acqs-accreditation-audit.md` | ACQS Accreditation Audit methodology | 1,140 |
+| `acqs-accreditation-audit.md` | Provider registration and audits (replaced accreditation 1 Nov 2025) | 1,140 |
 | `financial-and-prudential-standards.md` | Financial and Prudential Standards (RADs, ACFR, QFR, GPFR) | 1,295 |
 | `quality-indicator-program.md` | National Aged Care Mandatory Quality Indicator Program (Manual 4.0) | 1,120 |
 | `sirs.md` | Serious Incident Response Scheme (8 incident types, P1/P2 tests as changed 1 Nov 2025) | 1,360 |

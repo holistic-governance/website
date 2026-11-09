@@ -3,7 +3,7 @@ title: Financial and Prudential Standards in Australian Aged Care
 topic: financial-and-prudential-standards
 type: HG Reference
 jurisdiction: Australia (national)
-lastReviewed: DRAFT — under revision 9 Nov 2026; previously reviewed 2026-05-22; parts no longer match current law or program settings
+lastReviewed: 2026-11-09
 publisher: Holistic Governance
 publisherUrl: https://hg-au.com
 canonicalUrl: https://hg-au.com/topics/financial-and-prudential-standards.md
@@ -11,106 +11,116 @@ canonicalUrl: https://hg-au.com/topics/financial-and-prudential-standards.md
 
 # Financial and Prudential Standards in Australian Aged Care
 
-> **Under revision (9 Nov 2026).** A check against official sources found that parts of this page no longer match current law or program settings. Do not rely on it. Check the Aged Care Quality and Safety Commission (agedcarequality.gov.au) or health.gov.au for current requirements. An updated version is being prepared.
-
-> The financial and prudential framework in Australian aged care exists to protect older people's money (especially Refundable Accommodation Deposits and other refundable amounts), to ensure providers are financially viable, and to give the regulator and the public visibility over provider financial performance. The framework is anchored in the Aged Care Act 2024 and operationalised through prudential standards, financial reporting, and oversight by the Department of Health, Disability and Ageing and the Aged Care Quality and Safety Commission.
+> The Aged Care Financial and Prudential Standards 2025 set minimum requirements for how registered providers manage their finances, liquidity and investments. The Aged Care Quality and Safety Commissioner made them under section 376 of the Aged Care Act 2024, and they apply from 1 November 2025. There are three standards: Financial and Prudential Management, Liquidity, and Investment. The management standard covers home and community providers, including Support at Home, as well as residential providers. Liquidity and Investment apply to residential providers. Compliance is a condition of registration.
 
 ## What are the financial and prudential standards?
 
-The financial and prudential framework is a layered regime covering:
+The Aged Care Financial and Prudential Standards 2025 are a legislative instrument with three operative parts:
 
-- **Prudential standards** for providers that hold refundable amounts (Refundable Accommodation Deposits, Refundable Accommodation Contributions, accommodation bonds, entry contributions).
-- **Financial reporting obligations** including the Aged Care Financial Report (ACFR), Quarterly Financial Report (QFR), and General Purpose Financial Report (GPFR).
-- **Provider viability and suitability** as preconditions for registration and ongoing approval.
-- **Public transparency** through publication of financial information by the regulator and via Star Ratings on My Aged Care.
+1. **Financial and Prudential Management Standard (Part 2)** — implement, maintain and review a financial and prudential management system.
+2. **Liquidity Standard (Part 3)** — each quarter, work out and hold a minimum liquidity amount, under a written liquidity management strategy.
+3. **Investment Standard (Part 4)** — have, follow and review a written investment management strategy.
 
-The framework's purpose is twofold: protect consumer money and protect the integrity of the aged care system from provider failure that disrupts care for older people.
+They replace the former Prudential Standards (Governance, Disclosure, Records and Liquidity).
 
 ## What is the statutory basis?
 
-- **Aged Care Act 2024 (Cth)** — provider registration, suitability, prudential obligations, financial reporting, and Commissioner oversight.
-- **Aged Care Rules 2025** and prudential standards instruments made under the Act — operational detail.
-- **Aged Care (Living Longer Living Better) Act 2013** and the prior **Aged Care Act 1997** — earlier framework, much of which has been carried into and modernised under the new Act.
-- **Accommodation Payment Security Act 2006** — government guarantee for refundable accommodation amounts in the event of provider default.
+- **Aged Care Act 2024 (Cth)** — section 376 lets the Commissioner make standards on financial and prudential matters, such as liquidity and capital adequacy, financial records, governance systems, disclosure and reporting, and investment management. Section 377 sets principles the Commissioner must consider, including that providers stay financially viable and that refundable deposits are safeguarded. Section 150 makes compliance with the standards that apply to a provider a condition of registration.
+- **Aged Care Financial and Prudential Standards 2025** (F2025L01306) — made 23 October 2025, in force from 1 November 2025.
+- **Aged Care Rules 2025** — detail on reporting, refundable deposits and other prudential matters.
+- **Aged Care (Accommodation Payment Security) Act 2006** — the basis of the Accommodation Payment Guarantee Scheme. It remains in force, with amendments from 1 November 2025.
 
-## Who does the Standards apply to?
+## Who do the Standards apply to?
 
-- All registered providers that hold or seek to hold refundable accommodation amounts from older people.
-- Residential aged care providers (financial reporting under ACFR/QFR/GPFR).
-- Support at Home providers (financial reporting at the level set by the Rules).
-- Responsible persons of registered providers (suitability and statutory duty).
-- Approved providers transitioning under the new Act.
+| Standard | Applies to | Does not apply to |
+|---|---|---|
+| Financial and Prudential Management (Part 2) | Non-government registered providers in categories 4, 5 or 6: personal and care support in the home or community, nursing and transition care, and residential care. This includes Support at Home providers, non-government multi-purpose services and NATSIFACP providers. | Government entities and local government authorities |
+| Liquidity (Part 3) | Non-government registered providers in category 6 (residential care), even if they hold no refundable deposits | Government entities, local government authorities, NATSIFACP providers |
+| Investment (Part 4) | Non-government registered providers in category 6 (residential care), even if they hold no refundable deposits | Government entities, local government authorities, NATSIFACP providers |
+
+The registered provider must also make sure its relevant responsible persons are aware of and understand its financial and prudential management system, the standards, and the Rules on financial and prudential matters (section 8(5) of the Standards).
 
 ## What are the key prudential obligations?
 
-The detailed prudential standards are set out in instruments under the Act, but the key obligation categories include:
+**Financial and prudential management system.** Its objects must include financial viability, sound financial management, decisions focused on the safety, health, wellbeing and quality of life of older people, and compliance. For residential providers it must also cover the management, use and refund of refundable deposits. It must set out roles and accountabilities, control delegation and outsourcing, include internal reporting, and detect, record and respond to non-compliance. It must be reviewed at least once each financial year, and when new financial risks emerge.
 
-- **Liquidity** — sufficient liquid assets to meet refundable amount obligations and short-term financial commitments. Historically expressed through a liquidity standard requiring providers to hold a defined proportion of liquid assets.
-- **Governance** — appropriate governance arrangements for prudential matters, including board oversight of refundable amount management, investment policy, and risk.
-- **Investment** — refundable amounts may only be invested in permitted uses and asset classes as defined by the Rules; restrictions on related-party transactions and prohibited investments.
-- **Disclosure** — disclosure to older people and the regulator about refundable amounts, fees, accommodation pricing, and financial position.
-- **Refundable amount management** — accurate accounting, segregation, refund obligations, and protection against misuse.
+**Liquidity.** Each quarter a residential provider must work out two amounts, within 35 days of the quarter starting (45 days for the January quarter):
+
+- the **default minimum liquidity amount** — 35% of the previous quarter's cash expenses, plus 10% of refundable deposit, accommodation bond and entry contribution balances, plus 2% of refundable retirement village entry contributions if it runs a retirement village
+- the **evaluated minimum liquidity amount** — what the provider assesses it needs to meet obligations as they fall due, refund balances expected to fall due in the next 12 months, keep delivering safe and quality care, and withstand a sudden financial shock.
+
+The provider holds the default amount unless it elects to hold the evaluated amount, and must notify the Commissioner of an election, a revocation or a re-determined evaluated amount. The liquidity management strategy must cover liquidity risks, forecasting, contingency planning and what happens if liquidity falls short, and include a statement that the governing body is satisfied it will achieve its objects. It is reviewed at least once each financial year. Any loan the provider makes must be on a commercial basis with a written agreement.
+
+**Investment.** A residential provider must follow a written investment management strategy. Its objectives must include sound selection, management and monitoring of investments, safe and quality care, and protecting refundable deposits. It must set out roles and the skills and experience they need, and be reviewed at least once each financial year.
+
+**Refundable deposits.** A refundable deposit is a refundable accommodation deposit (RAD) or refundable accommodation contribution (RAC). Section 310 of the Act limits use to permitted purposes: prescribed capital expenditure and related debt, certain financial products, commercial loans meeting set conditions, refunding deposit balances, and uses prescribed by the Rules. The Commission states they cannot be used for day-to-day operating costs such as wages. Under section 178, a non-permitted use can be an offence for the provider, and for a responsible person who knew or was reckless or negligent, if an insolvency event follows within 5 years with balances still owing.
+
+**Retention and refunds.** For older people the retention rules cover (mainly those entering care from 1 November 2025), the provider must deduct a retention amount at 2% a year, calculated daily, for up to 5 years from the day the deposit was first paid. Retained amounts are not refunded and must be recorded in the refundable deposit register. Balances must be refunded within the periods in section 311, generally within 14 days of the older person leaving care or of the provider being shown probate or letters of administration. Interest may be payable.
 
 ## What are the key reporting obligations?
 
-- **Aged Care Financial Report (ACFR)** — annual statutory return providing detailed financial information about the provider's aged care operations. Submitted to the Department.
-- **Quarterly Financial Report (QFR)** — for residential providers, a quarterly return covering income, expenditure, care minutes, food spend, and other operational financial measures. Several elements feed into Star Ratings.
-- **General Purpose Financial Report (GPFR)** — audited general purpose financial statements aligned with Australian Accounting Standards, required from a defined provider population.
-- **Annual operational and prudential disclosures** under the Act.
-- **Auditor obligations** — independent audit of relevant financial information, with auditor independence requirements.
+- **Quarterly Financial Report (QFR)** — due 4 November, 14 February, 5 May and 4 August, with no extensions. Residential and Support at Home providers answer viability and prudential compliance questions and give year-to-date financial statements. The Commission uses these to assess compliance with the standards, and QFR data informs Star Ratings. Support at Home labour cost reporting stops from Quarter 1 2026–27.
+- **Aged Care Financial Report (ACFR)** — due 31 October each year, with no extensions. Residential providers include an Annual Prudential Compliance Statement. Support at Home providers report program-level income and expenses and a Consolidated Segment Report.
+- **General Purpose Financial Report (GPFR)** — for a standard financial year, an audited GPFR is included with the ACFR. A provider required to submit one must publish it on its website.
+- **Annual Prudential Compliance Statement (APCS)** — part of the ACFR, for providers that held a refundable deposit in the reporting period.
+- **Sign-off** — a member of the governing body must sign the ACFR and QFR.
+
+Providers that only deliver Commonwealth Home Support Programme (CHSP) services do not submit a QFR or ACFR.
 
 ## How does the government guarantee work?
 
-Refundable accommodation amounts paid by older people to residential providers are guaranteed by the Commonwealth in the event of provider default. If a provider becomes insolvent or otherwise unable to refund, the Commonwealth refunds the amounts to the older person (or estate) and pursues recovery from the failed provider. This guarantee is a backstop, not a substitute for prudential compliance.
+Under the Accommodation Payment Guarantee Scheme, if a provider becomes bankrupt or insolvent and cannot refund an older person's lump sum, the Australian Government guarantees to pay it, including interest due since the person left care. It covers residents of Australian Government-subsidised aged care who paid a lump sum. The guarantee is a backstop, not a substitute for prudential compliance.
 
 ## How are the Standards implemented under the Aged Care Act 2024?
 
-The Aged Care Act 2024 carries forward and modernises the prudential framework. Key features under the new framework include:
+The Commission regulates compliance. Breaching a condition of registration is a civil penalty provision: up to 250 penalty units, or 500 for a significant failure or systematic pattern of conduct (section 142). The Commissioner's safeguarding functions include monitoring providers' financial and prudential compliance (section 349).
 
-- Provider registration in service categories, with prudential obligations attached to the categories that involve refundable amounts.
-- Enhanced public transparency and Commissioner powers in relation to financial and prudential conduct.
-- Continued and strengthened reporting obligations (ACFR, QFR, GPFR).
-- Explicit statutory duty on providers and responsible persons to exercise care and diligence, with civil penalty exposure.
+The Commission runs prudential reviews of residential and Support at Home providers, and targeted reviews of each standard. Its listed targeted reviews under the new Act cover the Financial and Prudential Management Standard (January to March 2026) and the Investment Standard (April to June 2026). It announced a targeted review of the Liquidity Standard from July 2026.
 
-The detailed prudential standards under the new Act are set out in instruments made under the Act and are administered by the Department of Health, Disability and Ageing and the Aged Care Quality and Safety Commission. Providers should refer to current Departmental and Commission guidance for the operative standards in any given reporting period.
+**Support at Home prudential review, January to June 2026.** The Commission reviewed 25 Support at Home providers on pricing transparency, service agreements, financial reporting and the Financial and Prudential Management Standard. Four were fully compliant; 18 had issues they then fixed; three did not reach compliance in the agreed time. Only 36% complied with the management standard. Common problems: systems not documented or not updated for the new Act, and no formal process to respond to non-compliance.
 
 ## What are common provider gaps?
 
-- **Board does not own the prudential agenda** — refundable amounts, liquidity, and investment policy are treated as Finance/CFO matters without board-level oversight or risk appetite.
-- **Liquidity reporting is reactive** — providers run close to liquidity floors without forward-looking forecasting and stress testing.
-- **Investment policy out of date** — investment policies and permitted use settings still reflect prior frameworks; related-party transaction restrictions are not actively monitored.
-- **Reporting integrity gaps** — QFR data quality issues drive variance investigations, Star Rating risk, and Departmental queries.
-- **GPFR and ACFR not reconciled** — financial statements and statutory reporting are produced from separate sources with inconsistencies.
-- **Disclosure to older people is opaque** — accommodation pricing, fee disclosures, and refundable amount terms are technically compliant but practically unclear.
-- **Statutory duty not embedded for directors** — boards have not received briefings on personal accountability under the new duty.
+- **Home providers unaware they are covered** — assuming the standards apply only to providers holding refundable deposits.
+- **System not written down or not updated** — undocumented, still based on the old Prudential Standards, or with no breach process.
+- **Board does not own the prudential agenda** — liquidity, refundable deposits and investments are left to finance without governing body oversight.
+- **Liquidity calculated but not managed** — quarterly amounts are not linked to forecasting, stress scenarios or contingency plans.
+- **Retention and register errors** — wrong rate or timing, or amounts not recorded in the register.
+- **Late or inconsistent reporting** — QFR, ACFR and GPFR drawn from separate sources, or lodged late, which the Commission treats as non-compliance.
+- **Responsible persons not briefed** — they cannot show they understand the system and the standards.
 
 ## How Holistic Governance supports providers
 
-- **Prudential framework gap analysis** against the Act and prudential standards instruments.
-- **Board prudential agenda design** — what a board should be seeing each quarter and each year on liquidity, refundable amounts, investments, financial performance, and prudential risk.
-- **Investment policy review** — permitted uses, related-party controls, and alignment to the current prudential framework.
-- **Liquidity stress testing and forecasting** — moving from reactive monitoring to forward-looking scenario planning.
-- **Reporting integrity reviews** — reconciliation between operational data, QFR, ACFR, and GPFR.
-- **Disclosure and consumer-facing financial communication review** — accommodation pricing, fee schedules, refundable amount documents.
-- **Power BI board dashboards** — liquidity, refundable amount movements, investment exposure, QFR readiness, Star Rating financial inputs, audit findings.
-- **Director and responsible person briefings** on the statutory duty of care.
+- **Gap analysis against the 2025 Standards**, the Act and the Rules, for residential and Support at Home providers.
+- **Financial and prudential management system design** — roles, delegations, internal reporting, breach process and annual review.
+- **Board prudential agenda design** — what the governing body should see each quarter and year on liquidity, refundable deposits, investments and prudential risk.
+- **Liquidity management strategy review** — default and evaluated amounts, forecasting, stress scenarios and contingency planning.
+- **Investment management strategy review** — objectives, roles and skills, permitted uses and related-party controls.
+- **Refundable deposit controls** — retention, refunds and the refundable deposit register.
+- **Reporting integrity reviews** — reconciling operational data, QFR, ACFR, GPFR and APCS.
+- **Power BI board dashboards** — liquidity against the minimum amount, refundable deposit movements, investment exposure and reporting deadlines.
+- **Responsible person briefings** on the standards and their obligations under the Act.
 
 ## Official sources
 
-- Department of Health, Disability and Ageing — Aged care financial reporting: https://www.health.gov.au/topics/aged-care
-- Aged Care Quality and Safety Commission — https://www.agedcarequality.gov.au
-- Federal Register of Legislation — https://www.legislation.gov.au
-- Australian Accounting Standards Board — https://www.aasb.gov.au
+- Aged Care Financial and Prudential Standards 2025: https://www.legislation.gov.au/F2025L01306/latest/text
+- Aged Care Act 2024: https://www.legislation.gov.au/C2024A00104/latest/text
+- Aged Care (Accommodation Payment Security) Act 2006: https://www.legislation.gov.au/C2006A00026/latest/text
+- Aged Care Quality and Safety Commission — Financial and Prudential Standards: https://www.agedcarequality.gov.au/providers/financial-prudential-standards
+- Aged Care Quality and Safety Commission — Provider financial reporting requirements: https://www.agedcarequality.gov.au/providers/financial-prudential-standards/provider-financial-reporting-requirements
+- Aged Care Quality and Safety Commission — Prudential review of Support at Home providers, January to June 2026: https://www.agedcarequality.gov.au/prudential-review-support-home-providers-january-june-2026
+- Department of Health, Disability and Ageing — Quarterly Financial Report: https://www.health.gov.au/topics/aged-care/providing-aged-care-services/reporting/quarterly-financial-report
+- Department of Health, Disability and Ageing — Aged Care Financial Report: https://www.health.gov.au/topics/aged-care/providing-aged-care-services/reporting/aged-care-financial-report
+- Department of Health, Disability and Ageing — RAD and RAC retention: https://www.health.gov.au/our-work/residential-aged-care/charging/rad-and-rac-retention
 
 ## Glossary
 
-- **Refundable Accommodation Deposit (RAD)** — a lump-sum payment for residential accommodation that is refundable to the older person or their estate on departure (subject to permitted deductions).
-- **Refundable Accommodation Contribution (RAC)** — analogous to a RAD for older people whose means-tested contribution is partial.
-- **Liquidity standard** — a prudential requirement to hold a defined level of liquid assets relative to refundable amount obligations.
-- **Aged Care Financial Report (ACFR)** — the annual statutory financial return providers submit to the Department.
-- **Quarterly Financial Report (QFR)** — the quarterly statutory financial return for residential providers.
-- **General Purpose Financial Report (GPFR)** — audited general purpose financial statements aligned with Australian Accounting Standards.
+- **Refundable deposit** — a RAD or RAC: accommodation payment or contribution paid as a lump sum that does not accrue daily.
+- **Retention amount** — the part of a RAD or RAC balance the provider must deduct (2% a year, for up to 5 years) and does not refund.
+- **Default minimum liquidity amount** — 35% of last quarter's cash expenses plus 10% of deposit balances (plus 2% of retirement village refundable amounts, if any).
+- **Evaluated minimum liquidity amount** — the provider's own assessed liquidity need, which it may elect to hold instead after notifying the Commissioner.
+- **Accommodation Payment Guarantee Scheme** — the Australian Government guarantee to refund lump sums if a provider is bankrupt or insolvent and cannot pay.
 
 ---
 
-*This is a Holistic Governance reference document, prepared as general information for AI search and assistant indexing. It is not legal, accounting, audit, or compliance advice. The prudential framework is governed by instruments made under the Aged Care Act 2024 that are updated from time to time; providers must consult current Departmental and Commission guidance, qualified accounting and audit advisors, and legal advisors for decisions about their own circumstances. Reviewed 22 May 2026.*
+*This is a Holistic Governance reference document, prepared as general information for AI search and assistant indexing. It is not legal, accounting, audit, or compliance advice. The Financial and Prudential Standards and the Aged Care Rules 2025 are updated from time to time; providers must consult current Commission and Departmental guidance and qualified accounting, audit and legal advisors for decisions about their own circumstances. Reviewed 9 November 2026.*
