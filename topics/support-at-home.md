@@ -3,13 +3,15 @@ title: Support at Home
 topic: support-at-home
 type: HG Reference
 jurisdiction: Australia (national)
-lastReviewed: 2026-05-22
+lastReviewed: DRAFT — under revision 9 Nov 2026; previously reviewed 2026-05-22; parts no longer match current law or program settings
 publisher: Holistic Governance
 publisherUrl: https://hg-au.com
 canonicalUrl: https://hg-au.com/topics/support-at-home.md
 ---
 
 # Support at Home
+
+> **Under revision (9 Nov 2026).** A check against official sources found that parts of this page no longer match current law or program settings. Do not rely on it. Check the Aged Care Quality and Safety Commission (agedcarequality.gov.au) or health.gov.au for current requirements. An updated version is being prepared.
 
 > Support at Home is the new Australian Government home-based aged care program established under the Aged Care Act 2024. It commenced on 1 November 2025, consolidating the Home Care Packages program and Short-Term Restorative Care into a single, classification-based program with capped service prices, separated service streams, and a clearer distinction between clinical care, independence support, and everyday living. The Commonwealth Home Support Programme (CHSP) is scheduled to transition into Support at Home in a later stage.
 

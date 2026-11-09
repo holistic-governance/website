@@ -52,7 +52,7 @@ The 2017 components remain practically relevant for now: the assessable actions 
 Directly, it is an acute-sector document. But its logic is sector-portable, and Australian aged care regulation now runs on the same principles:
 
 - The [Aged Care Act 2024](https://hg-au.com/topics/aged-care-act-2024.md) places statutory duties on providers (s 179) and personal due diligence duties on certain responsible persons — governing body members and executive decision-makers (s 180, s 12(1)(a)–(b)) — the "governing body carries ultimate accountability" principle given legislative force.
-- The [Strengthened Aged Care Quality Standards](https://hg-au.com/topics/strengthened-aged-care-quality-standards.md) require governance arrangements (Standard 2, The Organisation) and clinical governance for clinical care (Standard 5, Clinical Care) that map closely onto the model's foundations.
+- The [Strengthened Aged Care Quality Standards](https://hg-au.com/topics/strengthened-aged-care-quality-standards.md) (under revision) require governance arrangements (Standard 2, The Organisation) and clinical governance for clinical care (Standard 5, Clinical Care) that map closely onto the model's foundations.
 - The 2026 model's culture-first shift mirrors where aged care regulation is heading: outcomes and organisational culture over checklist conformity.
 
 The model is also a reference point for governing emerging clinical risks: clinical AI oversight, for example, sits naturally inside the foundations of enabling high-quality clinical practice, managing and reducing risk, and using data for better care (see [Clinical AI Governance](https://hg-au.com/topics/clinical-ai-governance.md)).
@@ -82,7 +82,7 @@ The recurring board-level failure is the gap between *receiving reports* and *be
 ## Related Holistic Governance references
 
 - [NSQHS Standards (Second Edition)](https://hg-au.com/topics/nsqhs-standards.md)
-- [Strengthened Aged Care Quality Standards](https://hg-au.com/topics/strengthened-aged-care-quality-standards.md)
+- [Strengthened Aged Care Quality Standards](https://hg-au.com/topics/strengthened-aged-care-quality-standards.md) (under revision)
 - [Board Responsibilities and Responsible Person Duties under the Aged Care Act 2024](https://hg-au.com/topics/aged-care-board-responsibilities.md)
 - [Clinical AI Governance](https://hg-au.com/topics/clinical-ai-governance.md)
 - Services: [Clinical governance framework design](https://hg-au.com/healthcare.html)

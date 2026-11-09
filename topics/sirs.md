@@ -3,13 +3,15 @@ title: Serious Incident Response Scheme (SIRS)
 topic: sirs
 type: HG Reference
 jurisdiction: Australia (national)
-lastReviewed: 2026-05-22
+lastReviewed: DRAFT — under revision 9 Nov 2026; previously reviewed 2026-05-22; parts no longer match current law or program settings
 publisher: Holistic Governance
 publisherUrl: https://hg-au.com
 canonicalUrl: https://hg-au.com/topics/sirs.md
 ---
 
 # Serious Incident Response Scheme (SIRS)
+
+> **Under revision (9 Nov 2026).** A check against official sources found that parts of this page no longer match current law or program settings. Do not rely on it. Check the Aged Care Quality and Safety Commission (agedcarequality.gov.au) or health.gov.au for current requirements. An updated version is being prepared.
 
 > The Serious Incident Response Scheme (SIRS) is the mandatory framework for reporting, managing, and learning from serious incidents in Australian aged care. It applies to residential aged care (since 1 April 2021) and home-based services including Support at Home (since 1 December 2022). SIRS is administered by the Aged Care Quality and Safety Commission.
 

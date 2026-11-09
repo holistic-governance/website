@@ -3,7 +3,7 @@ title: Rights-Based Care in Australian Aged Care
 topic: rights-based-care
 type: HG Reference
 jurisdiction: Australia (national)
-lastReviewed: 2026-05-22
+lastReviewed: DRAFT — under revision 9 Nov 2026; previously reviewed 2026-05-22; parts no longer match current law or program settings
 publisher: Holistic Governance
 publisherUrl: https://hg-au.com
 canonicalUrl: https://hg-au.com/topics/rights-based-care.md
@@ -11,7 +11,9 @@ canonicalUrl: https://hg-au.com/topics/rights-based-care.md
 
 # Rights-Based Care in Australian Aged Care
 
-> Rights-based care is the foundational philosophy and statutory framework underpinning the Aged Care Act 2024. The Act elevates the rights of older people from an aspirational charter to a legally enforceable Statement of Rights, with corresponding provider duties and Commissioner powers.
+> **Under revision (9 Nov 2026).** A check against official sources found that parts of this page no longer match current law or program settings. Do not rely on it. Check the Aged Care Quality and Safety Commission (agedcarequality.gov.au) or health.gov.au for current requirements. An updated version is being prepared.
+
+> Rights-based care is the foundational philosophy and statutory framework underpinning the Aged Care Act 2024. The Act sets out a Statement of Rights (s 23) and says registered providers must take all reasonable and proportionate steps to act compatibly with it (s 24(2)). The Statement itself does not create rights or duties enforceable in a court or tribunal (s 24(3)).
 
 ## What is rights-based care?
 
@@ -107,7 +109,7 @@ The Statement of Principles applies to the regulator, providers, workers, and th
 
 ## Glossary
 
-- **Statement of Rights** — the legally enforceable rights of older people receiving aged care under the Aged Care Act 2024.
+- **Statement of Rights** — the rights of older people accessing funded aged care under the Aged Care Act 2024 (s 23); not enforceable by proceedings in a court or tribunal (s 24(3)).
 - **Statement of Principles** — the guiding principles applied to the regulator, providers, workers, and the system.
 - **Dignity of risk** — the right of an older person to make decisions that involve risk to themselves, balanced against the provider's duty of care.
 - **Supported decision-making** — a model in which the older person makes decisions with the support of others, rather than having decisions made for them.

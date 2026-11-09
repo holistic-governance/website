@@ -3,13 +3,15 @@ title: Financial and Prudential Standards in Australian Aged Care
 topic: financial-and-prudential-standards
 type: HG Reference
 jurisdiction: Australia (national)
-lastReviewed: 2026-05-22
+lastReviewed: DRAFT — under revision 9 Nov 2026; previously reviewed 2026-05-22; parts no longer match current law or program settings
 publisher: Holistic Governance
 publisherUrl: https://hg-au.com
 canonicalUrl: https://hg-au.com/topics/financial-and-prudential-standards.md
 ---
 
 # Financial and Prudential Standards in Australian Aged Care
+
+> **Under revision (9 Nov 2026).** A check against official sources found that parts of this page no longer match current law or program settings. Do not rely on it. Check the Aged Care Quality and Safety Commission (agedcarequality.gov.au) or health.gov.au for current requirements. An updated version is being prepared.
 
 > The financial and prudential framework in Australian aged care exists to protect older people's money (especially Refundable Accommodation Deposits and other refundable amounts), to ensure providers are financially viable, and to give the regulator and the public visibility over provider financial performance. The framework is anchored in the Aged Care Act 2024 and operationalised through prudential standards, financial reporting, and oversight by the Department of Health, Disability and Ageing and the Aged Care Quality and Safety Commission.
 

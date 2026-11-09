@@ -47,7 +47,7 @@ The governance question this raises for any certification system: *can the indep
 
 ## How does aged care's audit model differ?
 
-Aged care providers do pay registration and audit fees under the **Aged Care Quality and Safety Commission (ACQSC)**'s cost-recovery arrangements — but they pay the **regulator**, not an auditor of their choosing. The ACQSC arranges the audit against the **Strengthened Aged Care Quality Standards** and supplies the assessor: the provider cannot select, shop between, or contract the body that audits it. The structural conflict at the heart of the NDIS matter — auditor selection by the audited party, with a direct commercial relationship between them — does not exist in the aged care registration pathway. (See the companion reference: [ACQS Accreditation Audit](https://hg-au.com/topics/acqs-accreditation-audit.md).)
+Aged care providers do pay registration and audit fees under the **Aged Care Quality and Safety Commission (ACQSC)**'s cost-recovery arrangements — but they pay the **regulator**, not an auditor of their choosing. The ACQSC arranges the audit against the **Strengthened Aged Care Quality Standards** and supplies the assessor: the provider cannot select, shop between, or contract the body that audits it. The structural conflict at the heart of the NDIS matter — auditor selection by the audited party, with a direct commercial relationship between them — does not exist in the aged care registration pathway. (See the companion reference: [ACQS Accreditation Audit](https://hg-au.com/topics/acqs-accreditation-audit.md) (under revision).)
 
 This structural difference is why the two schemes should not be treated as equivalent when audit independence is the subject.
 

@@ -102,7 +102,7 @@ Eight behaviours that bind providers, responsible persons (including directors),
 
 The Act puts older people at the centre. Providers must take all reasonable and proportionate steps to act compatibly with the rights set out in section 23 (s 24(2)). The Statement of Rights covers independence and autonomy (s 23(1)–(3)), equitable access (s 23(4)), quality and safe services (s 23(5)), privacy and information (s 23(6)), voice without reprisal (s 23(7)–(9)), and advocates and connections (s 23(10)–(12)).
 
-The Statement of Rights is **not directly enforceable in court** (s 24(3)) — but providers must demonstrate they have taken all reasonable and proportionate steps to act compatibly with these rights. See `/topics/rights-based-care.md` for the full rights framework.
+The Statement of Rights is **not directly enforceable in court** (s 24(3)) — but providers must demonstrate they have taken all reasonable and proportionate steps to act compatibly with these rights. See `/topics/rights-based-care.md` (under revision) for the full rights framework.
 
 ## What are the governing body composition requirements? (section 157)
 
@@ -133,7 +133,7 @@ The Strengthened Standards apply only to Categories 4, 5, and 6:
 - **Category 6:** must meet all of Standards 1–7.
 - **Categories 1–3:** not subject to the Quality Standards.
 
-**Standard 2 (The Organisation)** is the explicit governance standard and carries the heaviest board-level accountability. Standards 1, 3, and 5 carry the strongest clinical-quality oversight obligations for boards. See `/topics/strengthened-aged-care-quality-standards.md` for the full Standards set.
+**Standard 2 (The Organisation)** is the explicit governance standard and carries the heaviest board-level accountability. Standards 1, 3, and 5 carry the strongest clinical-quality oversight obligations for boards. See `/topics/strengthened-aged-care-quality-standards.md` (under revision) for the full Standards set.
 
 ## Financial and Prudential Standards
 
@@ -143,7 +143,7 @@ A separate compliance regime — three standards consolidating the previous four
 - **Liquidity Standard** — applies to non-government Category 6 providers only (including those that hold no refundable deposits). Calculate default and evaluated Minimum Liquidity Amounts each quarter; written Liquidity Management Strategy approved by the board.
 - **Investment Standard** — applies to non-government Category 6 providers only. Written Investment Management Strategy approved by the board, with risk controls and triggers, even where no refundable deposits are held.
 
-**Expanded scope** — the F&P Management Standard now applies to home care, personal care and nursing/transition providers (Cat 4 and 5) for the first time. The provider's annual statement of compliance covers both care quality AND financial standards — directors sign one document accepting accountability for both. See `/topics/financial-and-prudential-standards.md` for the full prudential framework.
+**Expanded scope** — the F&P Management Standard now applies to home care, personal care and nursing/transition providers (Cat 4 and 5) for the first time. The provider's annual statement of compliance covers both care quality AND financial standards — directors sign one document accepting accountability for both. See `/topics/financial-and-prudential-standards.md` (under revision) for the full prudential framework.
 
 ## What are the obligations by provider category?
 

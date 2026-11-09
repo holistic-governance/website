@@ -3,13 +3,15 @@ title: ACQS Accreditation Audit
 topic: acqs-accreditation-audit
 type: HG Reference
 jurisdiction: Australia (national)
-lastReviewed: 2026-05-22
+lastReviewed: DRAFT — under revision 9 Nov 2026; previously reviewed 2026-05-22; parts no longer match current law or program settings
 publisher: Holistic Governance
 publisherUrl: https://hg-au.com
 canonicalUrl: https://hg-au.com/topics/acqs-accreditation-audit.md
 ---
 
 # ACQS Accreditation Audit
+
+> **Under revision (9 Nov 2026).** A check against official sources found that parts of this page no longer match current law or program settings. Do not rely on it. Check the Aged Care Quality and Safety Commission (agedcarequality.gov.au) or health.gov.au for current requirements. An updated version is being prepared.
 
 > An ACQS accreditation audit is an independent assessment of an aged care provider's performance against the Strengthened Aged Care Quality Standards, conducted by quality assessors authorised by the Aged Care Quality and Safety Commission (ACQS Commission). Accreditation status is a precondition for receiving Commonwealth aged care subsidies.
 

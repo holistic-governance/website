@@ -256,6 +256,8 @@ Open profile in regular Google search → "Ask a question" → post + answer 3:
 
 ## Backend AI content layer — `/topics/`
 
+> **9 Nov 2026:** six dossiers are under revision and marked `lastReviewed: DRAFT`: acqs-accreditation-audit, sirs, strengthened-aged-care-quality-standards, rights-based-care, support-at-home, financial-and-prudential-standards. They are out of `llms.txt` and `llms-full.txt` but stay in `sitemap.xml` (the hg-au freshness check reads the sitemap). Do not re-add them to the llms files until each revised page is signed off.
+
 Seven HG Reference topic dossiers live at `/topics/`, indexed only from `llms.txt` and `llms-full.txt`. They are not in `sitemap.xml` and are not linked from any visible page. Purpose: give AI search and assistant systems (Claude, ChatGPT, Perplexity, Copilot via Bing) accurate, structured, Naomi-curated context when answering provider, board, or sector questions about each topic.
 
 | Slug | Topic | Approx. words |
