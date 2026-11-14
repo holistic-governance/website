@@ -34,6 +34,7 @@ Naomi Alefelder is a registered nurse (AHPRA NMW000180905) with an MBA (Charles 
 - [Risk management framework design](https://hg-au.com/healthcare.html): ISO 31000-aligned enterprise risk frameworks for healthcare and regulated organisations.
 - [Quality Indicator Program reporting support](https://hg-au.com/healthcare.html): Practical support for the Aged Care Quality Indicator Program 4.0 — data collection, validation, and improvement.
 - [Interim quality and compliance leadership](https://hg-au.com/healthcare.html): Acting quality manager, clinical governance and compliance lead roles during recruitment, leave or transitions.
+- [Governance mentoring](https://hg-au.com/healthcare.html#mentoring): One-to-one mentoring for professionals across all health care sectors (including hospitals, day procedure, primary care, mental health, aged care, disability and community health) who are new to quality, risk or compliance roles, or building governance capability. Program length and session rhythm are set around the mentee's needs; goals set by the mentee; the organisation sees sessions held and progress the mentee shares, not session content. Supports development; does not guarantee any compliance or accreditation outcome.
 
 ## Articles
 
