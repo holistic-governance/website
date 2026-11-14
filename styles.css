@@ -197,6 +197,11 @@ footer {
 .hamburger { display: none; background: none; border: 1px solid var(--border); color: var(--sky); width: 40px; height: 40px; font-size: 1.4rem; cursor: pointer; border-radius: 2px; }
 
 /* ── RESPONSIVE ── */
+/* Tighter menu spacing on small laptops so all items and Contact fit before the hamburger takes over */
+@media (min-width: 901px) and (max-width: 1180px) {
+  nav ul { gap: 1.4rem; }
+}
+
 @media (max-width: 900px) {
   .announce-banner{ font-size:0.7rem; letter-spacing:0.03em; gap:0.35rem; padding:0 0.75rem; }
   .announce-banner .ab-full{ display:none; }
