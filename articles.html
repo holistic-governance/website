@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Articles &amp; Press | Holistic Governance</title>
+  <meta name="description" content="Articles and published opinion by Naomi Alefelder on clinical governance, aged care regulation, AI governance and data governance in Australian health and aged care." />
+  <meta name="robots" content="index,follow" />
+  <meta name="author" content="Naomi Alefelder" />
+  <link rel="canonical" href="https://hg-au.com/articles.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Holistic Governance" />
+  <meta property="og:locale" content="en_AU" />
+  <meta property="og:url" content="https://hg-au.com/articles.html" />
+  <meta property="og:title" content="Articles &amp; Press | Holistic Governance" />
+  <meta property="og:description" content="Articles and published opinion by Naomi Alefelder on clinical governance, aged care regulation, AI governance and data governance in Australian health and aged care." />
+  <meta property="og:image" content="https://hg-au.com/og-image-v3.png" />
+  <meta property="og:image:width" content="2400" />
+  <meta property="og:image:height" content="1260" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Articles &amp; Press | Holistic Governance" />
+  <meta name="twitter:description" content="Articles and published opinion by Naomi Alefelder on clinical governance, aged care regulation, AI governance and data governance in Australian health and aged care." />
+  <meta name="twitter:image" content="https://hg-au.com/og-image-v3.png" />
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="preload" as="image" href="logo-hg-trimmed.png" fetchpriority="high">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    section { padding: 5rem 4rem; }
+
+    .interest-form { display: flex; gap: 0.8rem; margin-top: 1.5rem; }
+    .interest-form input { flex: 1; padding: 0.8rem 1rem; background: var(--navy-mid); border: 1px solid var(--border); color: var(--cream); font-size: 0.85rem; border-radius: 2px; font-family: 'DM Sans', sans-serif; outline: none; transition: border-color 0.3s; }
+    .interest-form input:focus { border-color: var(--sky); }
+    .interest-form input::placeholder { color: var(--text-light); }
+    .interest-form button { padding: 0.8rem 1.5rem; background: var(--sky); color: var(--navy); font-size: 0.78rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; border: none; border-radius: 2px; cursor: pointer; white-space: nowrap; font-family: 'DM Sans', sans-serif; transition: background 0.3s; }
+    .interest-form button:hover { background: var(--sky-light); }
+
+    /* IN THE PRESS — external publications band (green = published elsewhere) */
+    :root { --green: #34d399; --green-pale: rgba(52,211,153,0.12); }
+    .press-list { display: grid; gap: 1.25rem; }
+    .press-card { display: grid; grid-template-columns: minmax(220px, 340px) 1fr; border: 1px solid var(--green); border-radius: 3px; overflow: hidden; text-decoration: none; color: inherit; transition: box-shadow 0.3s; }
+    .press-card:hover { box-shadow: 0 0 0 1px var(--green); }
+    .press-cover { position: relative; background: var(--green-pale); min-height: 190px; }
+    .press-cover img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; }
+    .press-outlet-chip { position: absolute; left: 0.9rem; bottom: 0.9rem; background: rgba(15,23,42,0.85); border: 1px solid rgba(52,211,153,0.5); padding: 0.35rem 0.7rem; border-radius: 2px; font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 1.05rem; color: var(--white); }
+    .press-body { padding: 1.5rem 1.8rem; }
+    .press-kicker { font-size: 0.66rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--green); margin-bottom: 0.5rem; }
+    .press-body h3 { font-family: 'Cormorant Garamond', serif; font-weight: 400; font-size: 1.45rem; color: var(--white); margin: 0 0 0.6rem; line-height: 1.25; }
+    .press-desc { font-size: 0.9rem; color: var(--text-mid); line-height: 1.7; margin: 0 0 0.8rem; }
+    .press-date { font-size: 0.78rem; color: var(--text-light); margin-bottom: 0.9rem; }
+    .press-go { font-size: 0.74rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--green); border-bottom: 1px solid rgba(52,211,153,0.5); padding-bottom: 2px; }
+
+    /* ARTICLE CARDS */
+    .article-grid { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr)); gap: 1.25rem; }
+    .article-card { display: flex; flex-direction: column; height: 100%; box-sizing: border-box; padding: 1.5rem; border: 1px solid var(--border); border-radius: 3px; text-decoration: none; color: inherit; transition: border-color 0.2s; }
+    .article-card:hover { border-color: var(--sky); }
+    .article-cat { font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--sky); }
+    .article-card h3 { font-family: 'Cormorant Garamond', serif; font-weight: 400; font-size: 1.3rem; margin: 0.5rem 0; color: var(--white); line-height: 1.3; }
+    .article-card p { font-size: 0.86rem; color: var(--text-mid); line-height: 1.7; margin: 0 0 1rem; flex: 1; }
+    .article-date { font-size: 0.78rem; color: var(--text-light); }
+
+    @media (max-width: 900px) {
+      .page-hero, section { padding: 6rem 1.5rem 3rem; }
+      .interest-form { flex-direction: column; }
+      .press-card { grid-template-columns: 1fr; }
+      .press-cover { min-height: 0; aspect-ratio: 1386 / 756; }
+    }
+  </style>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-9PMGXF9Q9T"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-9PMGXF9Q9T');
+    gtag('config', 'AW-18073082985');
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "CollectionPage",
+      "@id": "https://hg-au.com/articles.html#collection",
+      "url": "https://hg-au.com/articles.html",
+      "name": "Articles & Press",
+      "description": "Articles and published opinion by Naomi Alefelder on clinical governance, aged care regulation, AI governance and data governance in Australian health and aged care.",
+      "isPartOf": {
+        "@id": "https://hg-au.com/#website"
+      },
+      "inLanguage": "en-AU",
+      "author": {
+        "@id": "https://hg-au.com/about.html#naomi"
+      },
+      "mainEntity": {
+        "@type": "ItemList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "url": "https://hg-au.com/articles/the-alert-nobody-read.html",
+            "name": "The Alert Nobody Read"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "url": "https://hg-au.com/articles/ndis-banning-orders-certification-chain.html",
+            "name": "The design flaw behind the NDIS's first auditor bans"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "url": "https://hg-au.com/articles/what-ai-guardrails-actually-mean.html",
+            "name": "\"AI Guardrails\" — Everyone Says It. Almost Nobody Can Point at One."
+          },
+          {
+            "@type": "ListItem",
+            "position": 4,
+            "url": "https://hg-au.com/articles/ai-governance-aged-care.html",
+            "name": "AI Governance for Aged Care — A Provider's Practical Framework"
+          },
+          {
+            "@type": "ListItem",
+            "position": 5,
+            "url": "https://hg-au.com/articles/asd-post-quantum-vendor-questions.html",
+            "name": "Post-Quantum Cryptography — ASD's New Vendor Questions: What Buyers and Software Vendors Need to Know"
+          },
+          {
+            "@type": "ListItem",
+            "position": 6,
+            "url": "https://hg-au.com/articles/liquidity-standard-targeted-review.html",
+            "name": "Targeted Review on the New Liquidity Standard — What Category 6 Providers Need to Know"
+          },
+          {
+            "@type": "ListItem",
+            "position": 7,
+            "url": "https://hg-au.com/articles/reform-without-reporting.html",
+            "name": "Reform Without Reporting — The Visibility Gap Six Months into the New Aged Care Act"
+          },
+          {
+            "@type": "ListItem",
+            "position": 8,
+            "url": "https://hg-au.com/articles/strengthened-aged-care-quality-standards.html",
+            "name": "Understanding the New Strengthened Aged Care Quality Standards"
+          },
+          {
+            "@type": "ListItem",
+            "position": 9,
+            "url": "https://hg-au.com/articles/ai-reshaping-competitive-intelligence.html",
+            "name": "How AI is Reshaping Competitive Intelligence in 2025"
+          },
+          {
+            "@type": "ListItem",
+            "position": 10,
+            "url": "https://hg-au.com/articles/fhir-interoperability.html",
+            "name": "FHIR Interoperability: What Healthcare Leaders Need to Know"
+          },
+          {
+            "@type": "ListItem",
+            "position": 11,
+            "url": "https://hg-au.com/articles/data-governance-framework-from-scratch.html",
+            "name": "Building a Data Governance Framework From Scratch"
+          },
+          {
+            "@type": "ListItem",
+            "position": 12,
+            "url": "https://hg-au.com/articles/quality-indicator-program-manual-4.html",
+            "name": "The Quality Indicator Program — Manual 4.0 Explained"
+          },
+          {
+            "@type": "ListItem",
+            "position": 13,
+            "url": "https://hg-au.com/articles/data-quality-foundation-of-ai.html",
+            "name": "Why Data Quality Is the Foundation of Every AI Initiative"
+          }
+        ]
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://hg-au.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Articles",
+          "item": "https://hg-au.com/articles.html"
+        }
+      ]
+    }
+  ]
+}
+  </script>
+</head>
+<body>
+
+<div class="announce-banner"><a class="ab-name" href="https://hg-intel.com.au" target="_blank" rel="noopener"><strong>HG Intel</strong></a> — <span class="ab-full">our healthcare governance intelligence platform is </span>launching in 2027 <a class="ab-go" href="/ai-technology.html#hg-intel">Register your interest &rarr;</a></div>
+<nav>
+  <a href="/" class="logo"><img src="logo-hg-trimmed.png" alt="Holistic Governance" width="351" height="524"><span class="logo-name">Holistic <span>Governance</span></span></a>
+  <button class="hamburger" onclick="this.nextElementSibling.classList.toggle('open')">&#9776;</button>
+  <ul>
+    <li><a href="/">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="healthcare.html">Solutions</a></li>
+    <li><a href="articles.html" class="active">Articles</a></li>
+    <li><a href="resources.html">Resources</a></li>
+    <li class="nav-contact-wrapper">
+      <button class="nav-cta" onclick="this.nextElementSibling.classList.toggle('open')">Contact</button>
+      <div class="nav-contact-popup">
+        <a href="tel:0405515300"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>0405 515 300</a>
+        <a href="mailto:info@hg-au.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>info@hg-au.com</a>
+        <a href="proposal-enquiry.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>Submit a Proposal</a>
+      </div>
+    </li>
+  </ul>
+</nav>
+
+<div class="page-hero">
+  <div class="breadcrumb"><a href="/">Home</a> / Articles</div>
+  <h1>Articles &amp; Press</h1>
+  <p>Analysis and opinion on clinical governance, aged care regulation, AI governance and data governance &mdash; written for boards, executives and quality leaders in Australian health and aged care.</p>
+</div>
+
+<section class="fade-in" style="padding:4rem clamp(1.5rem, 5vw, 4rem); background:var(--navy-mid);">
+  <div style="max-width:1100px; margin:0 auto;">
+    <!-- IN THE PRESS (external publications) -->
+    <div id="press" style="margin-bottom:3.5rem;">
+      <div class="section-label">In The Press</div>
+      <div class="press-list">
+        <a class="press-card" href="https://www.pulseit.news/australian-digital-health/opinion-software-in-your-service-is-already-making-decisions-about-patients-in-december-youll-have-to-disclose-which-ones/" target="_blank" rel="noopener">
+          <div class="press-cover">
+            <img src="https://www.pulseit.news/wp-content/uploads/2026/11/iStock-2178194155.jpg" alt="" loading="lazy">
+            <span class="press-outlet-chip">Pulse+IT</span>
+          </div>
+          <div class="press-body">
+            <div class="press-kicker">Naomi Alefelder &middot; Opinion &middot; Australian Digital Health</div>
+            <h3>Software in your service is already making decisions about patients. In December, you&rsquo;ll have to disclose which ones</h3>
+            <p class="press-desc">From 10 December 2026, private and not-for-profit health care providers must disclose the kinds of significant decisions their software makes or substantially shapes. Size is no exemption.</p>
+            <div class="press-date">13 November 2026</div>
+            <span class="press-go">Read at pulseit.news &#8599;</span>
+          </div>
+        </a>
+        <a class="press-card" href="https://johnmenadue.com/post/2026/08/ndis-auditor-bans-shows-a-deeper-problem-with-provider-paid-audits/" target="_blank" rel="noopener">
+          <div class="press-cover">
+            <img src="https://pearlsandirritations.com/wp-content/uploads/2026/08/ndis-geelong-c.jpg" alt="" loading="lazy">
+            <span class="press-outlet-chip">Pearls and&nbsp;Irritations</span>
+          </div>
+          <div class="press-body">
+            <div class="press-kicker">Naomi Alefelder &middot; Health &middot; Politics</div>
+            <h3>NDIS auditor bans shows a deeper problem with provider-paid audits</h3>
+            <p class="press-desc">The NDIS has introduced new powers to ban auditors and consultants after more than 200 providers were allegedly registered using false or misleading information. The case raises concerns about a system in which providers choose and pay the auditors who assess them.</p>
+            <div class="press-date">24 August 2026</div>
+            <span class="press-go">Read at johnmenadue.com &#8599;</span>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <div class="section-label">Articles &amp; Analysis</div>
+    <h2 style="margin-bottom:2rem;">Sector insights and explainers</h2>
+    <ul class="article-grid">
+      <li><a class="article-card" href="articles/the-alert-nobody-read.html"><span class="article-cat">Clinical Governance</span><h3>The Alert Nobody Read</h3><p>Australian researchers switched drug interaction alerts on across five hospitals, restricted to the most severe tier only, and measured the result in 2,078 patients. The alerts changed prescribing&hellip;</p><span class="article-date">16 September 2026</span></a></li>
+      <li><a class="article-card" href="articles/ndis-banning-orders-certification-chain.html"><span class="article-cat">Health Care</span><h3>The design flaw behind the NDIS&#x27;s first auditor bans</h3><p>NDIS providers find, choose and pay the auditor who judges them, a conflict wired into the scheme&#x27;s design. The first banning orders against a consultant and an auditor show what that invites, and&hellip;</p><span class="article-date">14 August 2026</span></a></li>
+      <li><a class="article-card" href="articles/what-ai-guardrails-actually-mean.html"><span class="article-cat">AI Governance</span><h3>&quot;AI Guardrails&quot; — Everyone Says It. Almost Nobody Can Point at One.</h3><p>&quot;Guardrails&quot; has become the most load-bearing word in AI — used by vendors, regulators and boards to mean anything from a sentence in a prompt to a legal obligation. We separate the two meanings that&hellip;</p><span class="article-date">30 July 2026</span></a></li>
+      <li><a class="article-card" href="articles/ai-governance-aged-care.html"><span class="article-cat">AI Governance</span><h3>AI Governance for Aged Care — A Provider&#x27;s Practical Framework</h3><p>AI is already inside most aged care organisations — in scribes, rostering tools, chatbots and the features switched on inside software you already own. What providers are missing is not enthusiasm&hellip;</p><span class="article-date">26 July 2026</span></a></li>
+      <li><a class="article-card" href="articles/asd-post-quantum-vendor-questions.html"><span class="article-cat">Industry News</span><h3>Post-Quantum Cryptography — ASD&#x27;s New Vendor Questions: What Buyers and Software Vendors Need to Know</h3><p>On 16 July 2026 the Australian Signals Directorate released &quot;Post-quantum questions to ask your vendors&quot; — 31 questions across five phases for assessing supplier readiness for post-quantum&hellip;</p><span class="article-date">24 July 2026</span></a></li>
+      <li><a class="article-card" href="articles/liquidity-standard-targeted-review.html"><span class="article-cat">Industry News</span><h3>Targeted Review on the New Liquidity Standard — What Category 6 Providers Need to Know</h3><p>From July 2026, the Aged Care Quality and Safety Commission begins a targeted review of the Liquidity Standard — one of three new Financial and Prudential Standards that took effect with the Aged&hellip;</p><span class="article-date">2 July 2026</span></a></li>
+      <li><a class="article-card" href="articles/reform-without-reporting.html"><span class="article-cat">Industry News</span><h3>Reform Without Reporting — The Visibility Gap Six Months into the New Aged Care Act</h3><p>Six months into the most significant aged care reform in a generation, the Aged Care Quality and Safety Commission&#x27;s analytical Sector Performance Report has not been published for any period under&hellip;</p><span class="article-date">23 May 2026</span></a></li>
+      <li><a class="article-card" href="articles/strengthened-aged-care-quality-standards.html"><span class="article-cat">Health Care</span><h3>Understanding the New Strengthened Aged Care Quality Standards</h3><p>The Aged Care Quality and Safety Commission has introduced strengthened quality standards that represent a significant shift in how aged care providers are assessed and held accountable. We break&hellip;</p><span class="article-date">15 February 2025</span></a></li>
+      <li><a class="article-card" href="articles/ai-reshaping-competitive-intelligence.html"><span class="article-cat">Competitor Analytics</span><h3>How AI is Reshaping Competitive Intelligence in 2025</h3><p>The way businesses monitor competitors is evolving rapidly. We explore how AI-powered tools are transforming competitive intelligence from reactive reporting to proactive strategy.</p><span class="article-date">20 January 2025</span></a></li>
+      <li><a class="article-card" href="articles/fhir-interoperability.html"><span class="article-cat">Health Care</span><h3>FHIR Interoperability: What Healthcare Leaders Need to Know</h3><p>Fast Healthcare Interoperability Resources (FHIR) is becoming the backbone of digital health. We explain what it means for your organisation and how to prepare.</p><span class="article-date">18 December 2024</span></a></li>
+      <li><a class="article-card" href="articles/data-governance-framework-from-scratch.html"><span class="article-cat">Data Governance</span><h3>Building a Data Governance Framework From Scratch</h3><p>Where do you start when your organisation has never had a formal data governance program? Our step-by-step guide to building foundations that actually work.</p><span class="article-date">5 December 2024</span></a></li>
+      <li><a class="article-card" href="articles/quality-indicator-program-manual-4.html"><span class="article-cat">Industry News</span><h3>The Quality Indicator Program — Manual 4.0 Explained</h3><p>The National Aged Care Mandatory Quality Indicator Program Manual 4.0 introduces new indicators and reporting requirements. Here is what has changed.</p><span class="article-date">22 November 2024</span></a></li>
+      <li><a class="article-card" href="articles/data-quality-foundation-of-ai.html"><span class="article-cat">Data Governance</span><h3>Why Data Quality Is the Foundation of Every AI Initiative</h3><p>Organisations rushing to adopt AI are discovering a hard truth — AI is only as good as the data behind it. We explore why data quality governance is more critical than ever.</p><span class="article-date">10 November 2024</span></a></li>
+    </ul>
+  </div>
+</section>
+
+<!-- STAY INFORMED -->
+<section style="background:var(--navy); padding:4rem 4rem;" class="fade-in">
+  <div style="max-width:600px; margin:0 auto; text-align:center;">
+    <div class="section-label" style="justify-content:center;">Stay Informed</div>
+    <h2>Get Sector Updates Delivered</h2>
+    <p style="color:#ffffff; font-size:0.95rem; line-height:1.8; margin-top:1rem; margin-bottom:2rem;">Subscribe to receive regulatory updates, sector insights, and new resource alerts directly to your inbox. No spam — just relevant, timely information.</p>
+    <div class="interest-form" style="justify-content:center;">
+      <input type="email" id="subscribeEmail" placeholder="Your email address" autocomplete="email" onkeydown="if(event.key==='Enter'){event.preventDefault();subscribeNewsletter()}" />
+      <button type="button" onclick="subscribeNewsletter()">Subscribe</button>
+    </div>
+    <p id="subscribeMsg" style="display:none;margin-top:0.8rem;font-size:0.82rem;"></p>
+  </div>
+</section>
+
+<div class="cta-band">
+  <h2>Want to talk through what this means for your organisation?</h2>
+  <div class="contact-wrapper">
+    <button class="btn-dark" onclick="this.nextElementSibling.classList.toggle('open')">Get in Touch</button>
+    <div class="contact-popup">
+      <a href="tel:0405515300">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+        0405 515 300
+      </a>
+      <a href="mailto:info@hg-au.com">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        info@hg-au.com
+      </a>
+      <a href="proposal-enquiry.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+        Submit a Proposal
+      </a>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <a href="/" class="footer-logo" style="text-decoration:none;"><img src="logo-hg-trimmed.png" alt="Holistic Governance" width="351" height="524"><span class="logo-name">Holistic <span>Governance</span></span></a>
+      <p class="footer-tagline">Improving clarity and confidence in governance through knowledge, data, and technology.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Navigate</h4>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="healthcare.html">Solutions</a></li>
+        <li><a href="assurance-briefing.html">Briefings</a></li>
+        <li><a href="resources.html">Resources</a></li>
+        <li><a href="careers.html">Careers</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Get in Touch</h4>
+      <div class="footer-contact-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        <a href="mailto:info@hg-au.com">info@hg-au.com</a>
+      </div>
+      <div class="footer-contact-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+        <a href="tel:0405515300">0405 515 300</a>
+      </div>
+      <div class="footer-contact-item" style="margin-top: 0.5rem;">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+        <a href="proposal-enquiry.html">Request a Proposal</a>
+      </div>
+      <div class="footer-contact-item">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.48-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 11.01-4.12 2.06 2.06 0 010 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z"/></svg>
+        <a href="https://www.linkedin.com/company/hg-au/" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Where We Work</h4>
+      <address style="font-style:normal; font-size:0.85rem; line-height:1.6; color:var(--text-light); margin-bottom:0.6rem;">Melbourne Metro and Regional</address>
+      <ul>
+        <li>Australia</li>
+        <li>New Zealand</li>
+      </ul>
+      <p style="font-size:0.8rem; color:var(--text-light); margin-top:0.8rem;">Remote & on-site delivery</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2026 Holistic Governance. All rights reserved. · <a href="/privacy.html" style="color:rgba(255,255,255,0.5);text-decoration:none">Privacy Policy</a></p>
+  </div>
+</footer>
+
+<button class="back-to-top" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 15l-6-6-6 6"/></svg>
+</button>
+
+<script>
+var API_BASE = 'https://app.hg-au.com';
+
+function subscribeNewsletter() {
+  var email = document.getElementById('subscribeEmail').value.trim();
+  var msg = document.getElementById('subscribeMsg');
+  if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+    msg.textContent = 'Please enter a valid email address.';
+    msg.style.color = '#f87171';
+    msg.style.display = 'block';
+    return;
+  }
+  fetch(API_BASE + '/api/subscribe', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ email: email })
+  })
+  .then(function(res) {
+    if (res.ok) {
+      msg.textContent = 'Thank you — you\'re subscribed!';
+      msg.style.color = 'var(--sky)';
+      msg.style.display = 'block';
+      document.getElementById('subscribeEmail').value = '';
+    } else { throw new Error(); }
+  })
+  .catch(function() {
+    msg.textContent = 'Something went wrong. Please try again.';
+    msg.style.color = '#f87171';
+    msg.style.display = 'block';
+  });
+}
+
+// Fade in
+var observer = new IntersectionObserver(function(entries) {
+  entries.forEach(function(entry) { if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); } });
+}, { threshold: 0.1 });
+document.querySelectorAll('.fade-in').forEach(function(el) { observer.observe(el); });
+
+// Close contact popup on click outside
+document.addEventListener('click', function(e) {
+  document.querySelectorAll('.contact-popup.open, .nav-contact-popup.open').forEach(function(popup) {
+    if (!popup.parentElement.contains(e.target)) popup.classList.remove('open');
+  });
+});
+
+// Nav shrink + back to top
+window.addEventListener('scroll', function() {
+  document.querySelector('nav').classList.toggle('scrolled', window.scrollY > 60);
+  document.querySelector('.back-to-top').classList.toggle('visible', window.scrollY > 400);
+});
+// Fade in
+var observer = new IntersectionObserver(function(entries) {
+  entries.forEach(function(entry) { if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); } });
+}, { threshold: 0.1 });
+document.querySelectorAll('.fade-in').forEach(function(el) { observer.observe(el); });
+
+// Close contact popup on click outside
+document.addEventListener('click', function(e) {
+  document.querySelectorAll('.contact-popup.open, .nav-contact-popup.open').forEach(function(popup) {
+    if (!popup.parentElement.contains(e.target)) popup.classList.remove('open');
+  });
+});
+
+// Nav shrink + back to top
+window.addEventListener('scroll', function() {
+  document.querySelector('nav').classList.toggle('scrolled', window.scrollY > 60);
+  document.querySelector('.back-to-top').classList.toggle('visible', window.scrollY > 400);
+});
+</script>
+
+<script>
+// Auto-close mobile menu on scroll, outside tap, or link tap
+(function() {
+  var menu = document.querySelector('nav ul');
+  if (!menu) return;
+  window.addEventListener('scroll', function() { menu.classList.remove('open'); }, { passive: true });
+  document.addEventListener('click', function(e) {
+    if (!menu.classList.contains('open')) return;
+    if (e.target.closest('nav ul a') || !e.target.closest('nav')) menu.classList.remove('open');
+  });
+})();
+</script>
+</body>
+
+</html>

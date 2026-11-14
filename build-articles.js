@@ -388,7 +388,7 @@ function renderArticlePage(meta, body, takeaways = []) {
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Home', item: `${SITE_URL}/` },
-      { '@type': 'ListItem', position: 2, name: 'Resources', item: `${SITE_URL}/resources.html` },
+      { '@type': 'ListItem', position: 2, name: 'Articles', item: `${SITE_URL}/articles.html` },
       { '@type': 'ListItem', position: 3, name: meta.title, item: canonical }
     ]
   };
@@ -503,6 +503,7 @@ ${JSON.stringify(breadcrumb, null, 2)}
     <li><a href="/">Home</a></li>
     <li><a href="../about.html">About</a></li>
     <li><a href="../healthcare.html">Solutions</a></li>
+    <li><a href="../articles.html">Articles</a></li>
     <li><a href="../resources.html">Resources</a></li>
     <li class="nav-contact-wrapper">
       <button class="nav-cta" onclick="this.nextElementSibling.classList.toggle('open')">Contact</button>
@@ -516,7 +517,7 @@ ${JSON.stringify(breadcrumb, null, 2)}
 </nav>
 
 <article class="article-page">
-  <div class="breadcrumb"><a href="/">Home</a> / <a href="../resources.html">Resources</a> / ${escapeAttr(meta.title)}</div>
+  <div class="breadcrumb"><a href="/">Home</a> / <a href="../articles.html">Articles</a> / ${escapeAttr(meta.title)}</div>
   <div class="article-tag">${escapeAttr(meta.category)}</div>
   <h1>${escapeAttr(meta.title)}</h1>
   <div class="article-meta"><span>${formatDate(meta.date)}</span>${dateModified !== meta.date ? ` &middot; Updated ${formatDate(dateModified)}` : ''} &middot; ${escapeAttr(meta.author)}</div>
@@ -527,7 +528,7 @@ ${bodyHtml}
 ${renderAuthorBio()}
 ${renderRelatedSolutions(meta.category)}
   <nav class="article-footer-nav" aria-label="Article navigation">
-    <a href="../resources.html">&larr; All articles</a>
+    <a href="../articles.html">&larr; All articles</a>
     <a href="../proposal-enquiry.html">Request a Proposal</a>
     <a href="../healthcare.html">Our Solutions</a>
   </nav>
@@ -545,6 +546,7 @@ ${renderRelatedSolutions(meta.category)}
         <li><a href="/">Home</a></li>
         <li><a href="../about.html">About</a></li>
         <li><a href="../healthcare.html">Solutions</a></li>
+        <li><a href="../articles.html">Articles</a></li>
         <li><a href="../resources.html">Resources</a></li>
         <li><a href="../careers.html">Careers</a></li>
       </ul>

@@ -68,28 +68,11 @@
     .interest-form button { padding: 0.8rem 1.5rem; background: var(--sky); color: var(--navy); font-size: 0.78rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; border: none; border-radius: 2px; cursor: pointer; white-space: nowrap; font-family: 'DM Sans', sans-serif; transition: background 0.3s; }
     .interest-form button:hover { background: var(--sky-light); }
 
-    /* IN THE PRESS — external publications band (green = published elsewhere) */
-    :root { --green: #34d399; --green-pale: rgba(52,211,153,0.12); }
-    .press-list { display: grid; gap: 1.25rem; }
-    .press-card { display: grid; grid-template-columns: minmax(220px, 340px) 1fr; border: 1px solid var(--green); border-radius: 3px; overflow: hidden; text-decoration: none; color: inherit; transition: box-shadow 0.3s; }
-    .press-card:hover { box-shadow: 0 0 0 1px var(--green); }
-    .press-cover { position: relative; background: var(--green-pale); min-height: 190px; }
-    .press-cover img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; }
-    .press-outlet-chip { position: absolute; left: 0.9rem; bottom: 0.9rem; background: rgba(15,23,42,0.85); border: 1px solid rgba(52,211,153,0.5); padding: 0.35rem 0.7rem; border-radius: 2px; font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 1.05rem; color: var(--white); }
-    .press-body { padding: 1.5rem 1.8rem; }
-    .press-kicker { font-size: 0.66rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--green); margin-bottom: 0.5rem; }
-    .press-body h3 { font-family: 'Cormorant Garamond', serif; font-weight: 400; font-size: 1.45rem; color: var(--white); margin: 0 0 0.6rem; line-height: 1.25; }
-    .press-desc { font-size: 0.9rem; color: var(--text-mid); line-height: 1.7; margin: 0 0 0.8rem; }
-    .press-date { font-size: 0.78rem; color: var(--text-light); margin-bottom: 0.9rem; }
-    .press-go { font-size: 0.74rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--green); border-bottom: 1px solid rgba(52,211,153,0.5); padding-bottom: 2px; }
-
     @media (max-width: 900px) {
       .page-hero, section { padding: 6rem 1.5rem 3rem; }
       .resources-section { padding-top: 2.5rem; }
       .resources-grid { grid-template-columns: 1fr; }
       .interest-form { flex-direction: column; }
-      .press-card { grid-template-columns: 1fr; }
-      .press-cover { min-height: 0; aspect-ratio: 1386 / 756; }
     }
   </style>
   <!-- Google tag (gtag.js) -->
@@ -1211,6 +1194,7 @@
     <li><a href="/">Home</a></li>
     <li><a href="about.html">About</a></li>
     <li><a href="healthcare.html">Solutions</a></li>
+    <li><a href="articles.html">Articles</a></li>
     <li><a href="resources.html" class="active">Resources</a></li>
     <li class="nav-contact-wrapper">
       <button class="nav-cta" onclick="this.nextElementSibling.classList.toggle('open')">Contact</button>
@@ -1929,59 +1913,14 @@ Find the latest cyber security advice, guidance and publications</p>
   </div>
 </section>
 
-<!-- ARTICLES & ANALYSIS -->
-<section class="articles-section fade-in" style="padding:4rem clamp(1.5rem, 5vw, 4rem); background:var(--navy-mid);">
-  <div style="max-width:1100px; margin:0 auto;">
-    <!-- IN THE PRESS (external publications) -->
-    <div style="margin-bottom:3.5rem;">
-      <div class="section-label">In The Press</div>
-      <div class="press-list">
-        <a class="press-card" href="https://www.pulseit.news/australian-digital-health/opinion-software-in-your-service-is-already-making-decisions-about-patients-in-december-youll-have-to-disclose-which-ones/" target="_blank" rel="noopener">
-          <div class="press-cover">
-            <img src="https://www.pulseit.news/wp-content/uploads/2026/11/iStock-2178194155.jpg" alt="" loading="lazy">
-            <span class="press-outlet-chip">Pulse+IT</span>
-          </div>
-          <div class="press-body">
-            <div class="press-kicker">Naomi Alefelder &middot; Opinion &middot; Australian Digital Health</div>
-            <h3>Software in your service is already making decisions about patients. In December, you&rsquo;ll have to disclose which ones</h3>
-            <p class="press-desc">From 10 December 2026, private and not-for-profit health care providers must disclose the kinds of significant decisions their software makes or substantially shapes. Size is no exemption.</p>
-            <div class="press-date">13 November 2026</div>
-            <span class="press-go">Read at pulseit.news &#8599;</span>
-          </div>
-        </a>
-        <a class="press-card" href="https://johnmenadue.com/post/2026/08/ndis-auditor-bans-shows-a-deeper-problem-with-provider-paid-audits/" target="_blank" rel="noopener">
-          <div class="press-cover">
-            <img src="https://pearlsandirritations.com/wp-content/uploads/2026/08/ndis-geelong-c.jpg" alt="" loading="lazy">
-            <span class="press-outlet-chip">Pearls and&nbsp;Irritations</span>
-          </div>
-          <div class="press-body">
-            <div class="press-kicker">Naomi Alefelder &middot; Health &middot; Politics</div>
-            <h3>NDIS auditor bans shows a deeper problem with provider-paid audits</h3>
-            <p class="press-desc">The NDIS has introduced new powers to ban auditors and consultants after more than 200 providers were allegedly registered using false or misleading information. The case raises concerns about a system in which providers choose and pay the auditors who assess them.</p>
-            <div class="press-date">24 August 2026</div>
-            <span class="press-go">Read at johnmenadue.com &#8599;</span>
-          </div>
-        </a>
-      </div>
+<!-- ARTICLES (moved to articles.html) -->
+<section class="fade-in" style="padding:3rem clamp(1.5rem, 5vw, 4rem); background:var(--navy-mid);">
+  <div style="max-width:1100px; margin:0 auto; display:flex; flex-wrap:wrap; gap:1rem 2rem; align-items:center; justify-content:space-between;">
+    <div>
+      <div class="section-label">Articles &amp; Press</div>
+      <p style="color:var(--text-mid); margin:0; line-height:1.7;">Naomi Alefelder&rsquo;s articles and published opinion now have their own page.</p>
     </div>
-
-    <div class="section-label">Articles &amp; Analysis</div>
-    <h2 style="margin-bottom:2rem;">Sector insights and explainers</h2>
-    <ul style="list-style:none; padding:0; margin:0; display:grid; grid-template-columns:repeat(auto-fit, minmax(min(280px, 100%), 1fr)); gap:1.25rem;">
-      <li><a href="articles/the-alert-nobody-read.html" style="display:block; padding:1.25rem; border:1px solid var(--border); border-radius:3px; text-decoration:none; color:inherit; transition:border-color 0.2s;"><span style="font-size:0.7rem; letter-spacing:0.15em; text-transform:uppercase; color:var(--sky);">Clinical Governance</span><h3 style="font-family:'Cormorant Garamond',serif; font-weight:400; font-size:1.2rem; margin:0.5rem 0; color:var(--white);">The Alert Nobody Read</h3><span style="font-size:0.78rem; color:var(--text-light);">16 September 2026</span></a></li>
-      <li><a href="articles/ndis-banning-orders-certification-chain.html" style="display:block; padding:1.25rem; border:1px solid var(--border); border-radius:3px; text-decoration:none; color:inherit; transition:border-color 0.2s;"><span style="font-size:0.7rem; letter-spacing:0.15em; text-transform:uppercase; color:var(--sky);">Health Care</span><h3 style="font-family:'Cormorant Garamond',serif; font-weight:400; font-size:1.2rem; margin:0.5rem 0; color:var(--white);">The design flaw behind the NDIS's first auditor bans</h3><span style="font-size:0.78rem; color:var(--text-light);">14 August 2026</span></a></li>
-      <li><a href="articles/ai-governance-aged-care.html" style="display:block; padding:1.25rem; border:1px solid var(--border); border-radius:3px; text-decoration:none; color:inherit; transition:border-color 0.2s;"><span style="font-size:0.7rem; letter-spacing:0.15em; text-transform:uppercase; color:var(--sky);">AI Governance</span><h3 style="font-family:'Cormorant Garamond',serif; font-weight:400; font-size:1.2rem; margin:0.5rem 0; color:var(--white);">AI Governance for Aged Care — A Provider's Practical Framework</h3><span style="font-size:0.78rem; color:var(--text-light);">26 July 2026</span></a></li>
-      <li><a href="articles/asd-post-quantum-vendor-questions.html" style="display:block; padding:1.25rem; border:1px solid var(--border); border-radius:3px; text-decoration:none; color:inherit; transition:border-color 0.2s;"><span style="font-size:0.7rem; letter-spacing:0.15em; text-transform:uppercase; color:var(--sky);">Industry News</span><h3 style="font-family:'Cormorant Garamond',serif; font-weight:400; font-size:1.2rem; margin:0.5rem 0; color:var(--white);">Post-Quantum Cryptography — ASD's New Vendor Questions: What Buyers and Software Vendors Need to Know</h3><span style="font-size:0.78rem; color:var(--text-light);">24 July 2026</span></a></li>
-      <li><a href="articles/liquidity-standard-targeted-review.html" style="display:block; padding:1.25rem; border:1px solid var(--border); border-radius:3px; text-decoration:none; color:inherit; transition:border-color 0.2s;"><span style="font-size:0.7rem; letter-spacing:0.15em; text-transform:uppercase; color:var(--sky);">Industry News</span><h3 style="font-family:'Cormorant Garamond',serif; font-weight:400; font-size:1.2rem; margin:0.5rem 0; color:var(--white);">Targeted Review on the New Liquidity Standard — What Category 6 Providers Need to Know</h3><span style="font-size:0.78rem; color:var(--text-light);">2 July 2026</span></a></li>
-      <li><a href="articles/reform-without-reporting.html" style="display:block; padding:1.25rem; border:1px solid var(--border); border-radius:3px; text-decoration:none; color:inherit; transition:border-color 0.2s;"><span style="font-size:0.7rem; letter-spacing:0.15em; text-transform:uppercase; color:var(--sky);">Industry News</span><h3 style="font-family:'Cormorant Garamond',serif; font-weight:400; font-size:1.2rem; margin:0.5rem 0; color:var(--white);">Reform Without Reporting — The Visibility Gap Six Months into the New Aged Care Act</h3><span style="font-size:0.78rem; color:var(--text-light);">23 May 2026</span></a></li>
-      <li><a href="articles/strengthened-aged-care-quality-standards.html" style="display:block; padding:1.25rem; border:1px solid var(--border); border-radius:3px; text-decoration:none; color:inherit; transition:border-color 0.2s;"><span style="font-size:0.7rem; letter-spacing:0.15em; text-transform:uppercase; color:var(--sky);">Health Care</span><h3 style="font-family:'Cormorant Garamond',serif; font-weight:400; font-size:1.2rem; margin:0.5rem 0; color:var(--white);">Understanding the New Strengthened Aged Care Quality Standards</h3><span style="font-size:0.78rem; color:var(--text-light);">15 February 2025</span></a></li>
-      <li><a href="articles/ai-reshaping-competitive-intelligence.html" style="display:block; padding:1.25rem; border:1px solid var(--border); border-radius:3px; text-decoration:none; color:inherit;"><span style="font-size:0.7rem; letter-spacing:0.15em; text-transform:uppercase; color:var(--sky);">Competitor Analytics</span><h3 style="font-family:'Cormorant Garamond',serif; font-weight:400; font-size:1.2rem; margin:0.5rem 0; color:var(--white);">How AI is Reshaping Competitive Intelligence in 2025</h3><span style="font-size:0.78rem; color:var(--text-light);">20 January 2025</span></a></li>
-      <li><a href="articles/fhir-interoperability.html" style="display:block; padding:1.25rem; border:1px solid var(--border); border-radius:3px; text-decoration:none; color:inherit;"><span style="font-size:0.7rem; letter-spacing:0.15em; text-transform:uppercase; color:var(--sky);">Health Care</span><h3 style="font-family:'Cormorant Garamond',serif; font-weight:400; font-size:1.2rem; margin:0.5rem 0; color:var(--white);">FHIR Interoperability: What Healthcare Leaders Need to Know</h3><span style="font-size:0.78rem; color:var(--text-light);">18 December 2024</span></a></li>
-      <li><a href="articles/data-governance-framework-from-scratch.html" style="display:block; padding:1.25rem; border:1px solid var(--border); border-radius:3px; text-decoration:none; color:inherit;"><span style="font-size:0.7rem; letter-spacing:0.15em; text-transform:uppercase; color:var(--sky);">Data Governance</span><h3 style="font-family:'Cormorant Garamond',serif; font-weight:400; font-size:1.2rem; margin:0.5rem 0; color:var(--white);">Building a Data Governance Framework From Scratch</h3><span style="font-size:0.78rem; color:var(--text-light);">5 December 2024</span></a></li>
-      <li><a href="articles/quality-indicator-program-manual-4.html" style="display:block; padding:1.25rem; border:1px solid var(--border); border-radius:3px; text-decoration:none; color:inherit;"><span style="font-size:0.7rem; letter-spacing:0.15em; text-transform:uppercase; color:var(--sky);">Industry News</span><h3 style="font-family:'Cormorant Garamond',serif; font-weight:400; font-size:1.2rem; margin:0.5rem 0; color:var(--white);">The Quality Indicator Program — Manual 4.0 Explained</h3><span style="font-size:0.78rem; color:var(--text-light);">22 November 2024</span></a></li>
-      <li><a href="articles/data-quality-foundation-of-ai.html" style="display:block; padding:1.25rem; border:1px solid var(--border); border-radius:3px; text-decoration:none; color:inherit;"><span style="font-size:0.7rem; letter-spacing:0.15em; text-transform:uppercase; color:var(--sky);">Data Governance</span><h3 style="font-family:'Cormorant Garamond',serif; font-weight:400; font-size:1.2rem; margin:0.5rem 0; color:var(--white);">Why Data Quality Is the Foundation of Every AI Initiative</h3><span style="font-size:0.78rem; color:var(--text-light);">10 November 2024</span></a></li>
-    </ul>
-
+    <a href="articles.html" class="resource-link" style="margin-top:0;">Read articles &amp; press &rarr;</a>
   </div>
 </section>
 
@@ -2033,6 +1972,7 @@ Find the latest cyber security advice, guidance and publications</p>
         <li><a href="about.html">About</a></li>
         <li><a href="healthcare.html">Solutions</a></li>
         <li><a href="assurance-briefing.html">Briefings</a></li>
+        <li><a href="articles.html">Articles</a></li>
         <li><a href="resources.html">Resources</a></li>
         <li><a href="careers.html">Careers</a></li>
       </ul>
