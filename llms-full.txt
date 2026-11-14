@@ -210,6 +210,10 @@ You work directly with a senior consultant — not a junior associate. Deep clin
 
 ## Article library
 
+### Software in your service is already making decisions about patients. In December, you'll have to disclose which ones
+Opinion by Naomi Alefelder, published in Pulse+IT ("Your leading voice in digital health news"), 13 November 2026 — https://www.pulseit.news/australian-digital-health/opinion-software-in-your-service-is-already-making-decisions-about-patients-in-december-youll-have-to-disclose-which-ones/
+From 10 December 2026, private and not-for-profit health care providers must disclose the kinds of significant decisions their software makes or substantially shapes. Size is no exemption: the small business carve-out does not apply to anyone who provides a health service and holds health information. Published externally only; there is no copy on hg-au.com. Related reference: https://hg-au.com/topics/clinical-ai-governance.md
+
 ### The design flaw behind the NDIS's first auditor bans
 Published 14 August 2026 — https://hg-au.com/articles/ndis-banning-orders-certification-chain.html
 Published in Pearls and Irritations, John Menadue's public policy journal, 24 August 2026 — https://johnmenadue.com/post/2026/08/ndis-auditor-bans-shows-a-deeper-problem-with-provider-paid-audits/
