@@ -137,6 +137,9 @@ Development and review of clinical, quality and governance policies aligned to N
 ### Governance mentoring
 One-to-one mentoring for professionals across all health care sectors (including hospitals, day procedure, primary care, mental health, aged care, disability and community health) who are stepping into quality, risk or compliance roles, or building governance capability. Program length and session rhythm are flexible and set around the mentee's needs. The program moves from contracting and self-assessment through work on live challenges to a closing review. Goals are set by the mentee. The organisation sees sessions held, the goals and ratings the mentee chooses to share, and a closing summary in the mentee's words; what is said in sessions stays confidential, within written limits. Mentoring supports a person's development and does not guarantee any outcome, compliance result or accreditation decision.
 
+### Business coaching for health care businesses
+One-to-one business coaching for owners, founders and leaders of health care businesses, including general practice and primary care, allied health, mental health, day procedure, aged care, home care and disability (NDIS) providers. Four areas: growth and strategy (business planning, new service lines, pricing and positioning); governance, risk and quality systems that grow with the business; readiness to register, tender or be audited; and leadership and operations (team structure, workflows and reporting). Coaching supports the decisions the business makes and does not guarantee any business, compliance or accreditation outcome. Service page: https://hg-au.com/healthcare.html#business-coaching
+
 ### Interim quality and compliance leadership
 Flexible agency and interim support for quality, safety and compliance leadership roles. Includes acting in quality manager, clinical governance and compliance lead positions during recruitment, leave or organisational transitions.
 
@@ -315,6 +318,8 @@ The following Holistic Governance reference documents are published at `/topics/
 ---
 
 - **Governance Mentoring for Health Care Professionals** — https://hg-au.com/topics/governance-mentoring-health-care.md — One-to-one mentoring from Naomi Alefelder for professionals in any health care sector stepping into quality, risk, compliance or clinical governance roles: sectors and roles it suits, the standards mentees work with (NSQHS, Primary and Community Healthcare, RACGP, mental health, Strengthened Aged Care Quality Standards, NDIS Practice Standards), the contract–diagnose–develop–review–close path, and the confidentiality split between mentee and employer.
+- **Business Coaching for Health Care Businesses** — https://hg-au.com/topics/business-coaching-health-care.md — Business coaching from Naomi Alefelder for owners and leaders of health care businesses: who it suits, the four coaching areas (growth and strategy; governance, risk and quality set-up; regulatory readiness; leadership and operations), how engagements run, and how coaching differs from governance mentoring.
+
 
 ## Careers
 
