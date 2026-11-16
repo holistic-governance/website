@@ -65,6 +65,7 @@
         gap: 1.5rem;
       }
       .hc-card-wide { grid-column: 1 / -1; }
+      .hc-pair { grid-column: 1 / -1; display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
       .hc-card {
         background: var(--navy-mid);
         border: 1px solid var(--border);
@@ -183,6 +184,7 @@
           padding: 6rem 1.5rem 3rem;
         }
         .hc-grid,
+        .hc-pair,
         .specialty-grid {
           grid-template-columns: 1fr;
         }
@@ -591,7 +593,8 @@
             on paper.
           </p>
         </div>
-        <a href="mailto:info@hg-au.com?subject=Governance%20Mentoring" class="hc-card hc-card-link hc-card-wide" id="mentoring">
+        <div class="hc-pair">
+        <a href="mailto:info@hg-au.com?subject=Governance%20Mentoring" class="hc-card hc-card-link" id="mentoring">
           <svg
             viewBox="0 0 24 24"
             fill="none"
@@ -616,7 +619,7 @@
           </ul>
           <span class="hc-card-cta">Start with a conversation &rarr;</span>
         </a>
-        <a href="mailto:info@hg-au.com?subject=Business%20Coaching" class="hc-card hc-card-link hc-card-wide" id="business-coaching">
+        <a href="mailto:info@hg-au.com?subject=Business%20Coaching" class="hc-card hc-card-link" id="business-coaching">
           <svg
             viewBox="0 0 24 24"
             fill="none"
@@ -642,6 +645,7 @@
           </ul>
           <span class="hc-card-cta">Start with a conversation &rarr;</span>
         </a>
+        </div>
         <!-- TEMPORARILY HIDDEN (July 2026): FHIR Advisory service. Re-add around October 2026.
              Also restore when re-adding: FHIR Standards specialty card, FHIR FAQ item + FAQ schema entry,
              FHIR mentions in meta description / og:description / twitter:description / Service schema.
