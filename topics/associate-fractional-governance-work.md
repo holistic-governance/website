@@ -31,6 +31,7 @@ canonicalUrl: https://hg-au.com/topics/associate-fractional-governance-work.md
 
 - Interim or fractional quality and risk lead roles, for leave cover, vacancies or accreditation preparation.
 - Interim or fractional General Manager and CEO roles.
+- General and clinical management support.
 - Mock accreditation audits, gap analysis and internal audit against the NSQHS, Aged Care Quality and NDIS Practice Standards.
 - Governance framework and committee reviews.
 - Policy and procedure review and writing.
