@@ -125,9 +125,6 @@ ISO 31000-aligned enterprise risk management frameworks for healthcare and regul
 ### Quality Indicator Program reporting support
 Practical support for the Aged Care Quality Indicator Program 4.0 — data collection, reporting, validation and using QI data to drive quality improvement rather than tick-box compliance.
 
-### FHIR interoperability advisory
-Strategic and technical advisory on FHIR (Fast Healthcare Interoperability Resources) for digital health and aged care providers planning system integration, data sharing or My Health Record alignment.
-
 ### Board and executive governance coaching
 One-on-one and group coaching for boards, CEOs and senior executives on clinical and corporate governance, accountability, regulatory engagement, and translating data into confident decisions.
 
@@ -176,9 +173,6 @@ Power BI and Excel-based dashboards tailored to your organisation, covering qual
 
 ### Does Holistic Governance provide interim quality and compliance support?
 Yes — flexible agency and interim support for quality, safety and compliance leadership roles. Includes acting quality manager, clinical governance and compliance lead positions during recruitment, leave or organisational transitions.
-
-### What is FHIR advisory and how does Holistic Governance help?
-FHIR (Fast Healthcare Interoperability Resources) is the leading global standard for healthcare data exchange. Clinical-technical translation and advisory services help organisations understand, plan for and implement FHIR-based interoperability across their digital health systems.
 
 ### What training does Holistic Governance offer?
 Validated assessment tool training, bespoke education programs tailored to team-specific gaps, and governance training covering the Strengthened Aged Care Quality Standards, NSQHS Standards, clinical governance and continuous improvement frameworks.
