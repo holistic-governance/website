@@ -18,18 +18,18 @@ canonicalUrl: https://hg-au.com/topics/associate-fractional-governance-work.md
 
 - **Associate or subcontract work:** a consultancy, audit firm or provider brings Holistic Governance in to deliver part of an engagement, for a project or a set period.
 - **Interim leadership:** an acting quality, clinical governance or compliance lead during recruitment, leave or an organisational transition.
-- **Fractional leadership:** a senior quality lead role held part-time on an ongoing basis, for organisations that need the expertise but not a full-time role.
+- **Fractional leadership:** a senior quality or risk lead role held part-time on an ongoing basis, for organisations that need the expertise but not a full-time role.
 
 ## Who is it for?
 
 - **Consultancies and audit firms** that need extra senior clinical governance capacity for a project.
 - **Hospitals and day procedure services** preparing for accreditation or covering a vacant quality role.
-- **Aged care and disability providers** that need quality leadership without a full-time appointment.
+- **Aged care and disability providers** that need quality and risk leadership without a full-time appointment.
 - **Digital health companies** that need clinical and AI governance advice.
 
 ## What work is offered?
 
-- Interim or fractional quality lead roles, for leave cover, vacancies or accreditation preparation.
+- Interim or fractional quality and risk lead roles, for leave cover, vacancies or accreditation preparation.
 - Mock accreditation audits, gap analysis and internal audit against the NSQHS, Aged Care Quality and NDIS Practice Standards.
 - Governance framework and committee reviews.
 - Policy and procedure review and writing.
