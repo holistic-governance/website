@@ -316,6 +316,7 @@ The following Holistic Governance reference documents are published at `/topics/
 
 - **Governance Mentoring for Health Care Professionals** — https://hg-au.com/topics/governance-mentoring-health-care.md — One-to-one mentoring from Naomi Alefelder for professionals in any health care sector stepping into quality, risk, compliance or clinical governance roles: sectors and roles it suits, the standards mentees work with (NSQHS, Primary and Community Healthcare, RACGP, mental health, Strengthened Aged Care Quality Standards, NDIS Practice Standards), the contract–diagnose–develop–review–close path, and the confidentiality split between mentee and employer.
 - **Business Coaching for Health Care Businesses** — https://hg-au.com/topics/business-coaching-health-care.md — Business coaching from Naomi Alefelder for owners and leaders of health care businesses: who it suits, the four coaching areas (growth and strategy; governance, risk and quality set-up; regulatory readiness; leadership and operations), how engagements run, and how coaching differs from governance mentoring.
+- **Associate, Subcontract and Fractional Governance Work in Health Care** — https://hg-au.com/topics/associate-fractional-governance-work.md — Associate and subcontract work for consultancies, audit firms and providers, and interim or fractional quality leadership, led by Naomi Alefelder: definitions, who it suits, the work offered and how to start.
 
 
 ## Careers
