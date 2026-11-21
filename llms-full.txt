@@ -10,7 +10,7 @@ This document is the full machine-readable content map of hg-au.com, intended fo
 
 **Legal name:** Holistic Governance Pty Ltd
 **Trading name:** Holistic Governance
-**ABN:** 62 639 441 557
+**ABN:** 52 698 725 558
 **Founder & Principal Consultant:** Naomi Alefelder
 **Founded:** 2024
 **Head office:** Heidelberg, Victoria 3084, Australia

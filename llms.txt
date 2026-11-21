@@ -86,7 +86,7 @@ Curated Holistic Governance reference documents on key regulatory and operationa
 - LinkedIn (Naomi Alefelder): https://www.linkedin.com/in/naomi-alefelder
 - [Careers](https://hg-au.com/careers.html): No open roles right now. Experienced full stack developers (TypeScript / Next.js, remote anywhere in Australia) interested in helping build HG Intel ahead of its 2027 launch are welcome to get in touch at info@hg-au.com.
 - Address: Heidelberg, Victoria 3084, Australia
-- ABN: 62 639 441 557
+- ABN: 52 698 725 558
 
 ## Optional
 
